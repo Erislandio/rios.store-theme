@@ -1,0 +1,93 @@
+/* stylelint-disable declaration-property-value-allowed-list */
+
+:root {
+  /* Brand */
+  --color-primary-default: #ffe600;
+  --color-primary-1: #fff380;
+  --color-primary-2: #ffeb33;
+  --color-primary-3: #ccb800;
+  --color-secondary-default: #0c2749;
+  --color-secondary-1: #ced4db;
+  --color-secondary-2: #6d7d92;
+  --color-secondary-3: #07172c;
+  --color-tertiary-default: #ed1c24;
+  --color-tertiary-1: #fbd2d3;
+  --color-tertiary-2: #f4777c;
+  --color-tertiary-3: #8e1116;
+
+  /* Neutral */
+  --color-neutral-0: #fff;
+  --color-neutral-1: #f2f2f2;
+  --color-neutral-2: #bebebe;
+  --color-neutral-3: #a7a7a7;
+  --color-neutral-4: #898989;
+  --color-neutral-5: #7c7c7c;
+  --color-neutral-6: #5f5f5f;
+  --color-neutral-7: #252525;
+
+  /* Support */
+  --support-success-faded: #c4ffd5;
+  --support-warning-faded: #fff7d7;
+  --support-danger-faded: #ffdbdb;
+  --support-info-faded: #e3f3ff;
+  --support-success-default: #40aa60;
+  --support-warning-default: #ffc42c;
+  --support-danger-default: #e81e26;
+  --support-info-default: #2134df;
+  --support-success-dark: #1e6433;
+  --support-warning-dark: #a15c20;
+  --support-danger-dark: #ae171d;
+  --support-info-dark: #0c1678;
+
+  /* Transparências tem que ser somente essas, não adicionar novos. */
+  --color-transparency-25: 25%;
+  --color-transparency-50: 50%;
+  --color-transparency-75: 75%;
+
+  /*
+    font-weight: tem que ser somente bold ou regular, não adicionar novos.
+    font-family: é no máximo essas duas, headings e outra para o body.
+  */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-family-headings: 'fonte-x1';
+  --font-family-body: 'fonte-x2';
+
+  /* Displays são usados somentes em banners, se necessário. Fontfamily é a mesma do heading */
+  --display1-font-size: 3rem;
+  --display1-line-height: 3rem;
+  --display2-font-size: 3rem;
+  --display2-line-height: 3rem;
+
+  /* Headings */
+  --heading1-font-size: 3rem;
+  --heading1-line-height: 4rem;
+  --heading2-font-size: 2.5rem;
+  --heading2-line-height: 3.5rem;
+  --heading3-font-size: 2rem;
+  --heading3-line-height: 2.5rem;
+  --heading4-font-size: 1.5rem;
+  --heading4-line-height: 2rem;
+
+  /* Body é no minimo 16px, menor não */
+  --font-size-body: 1.5rem;
+  --line-height-body: 1.5rem;
+
+  /* Small = 12px ou 14px */
+  --font-size-small: 0.75rem;
+  --line-height-small: 1rem;
+
+  /* XSmall = 10px ou 12px */
+  --font-size-xsmall: 0.625rem;
+  --line-height-xsmall: 0.875rem;
+
+  /* Spacing */
+
+  /* Não existir mais espaçamentos/border-radius além desses, mudar somente os valores */
+  --spacing-and-border-xxs: 0.25rem;
+  --spacing-and-border-xs: 0.5rem;
+  --spacing-and-border-s: 1rem;
+  --spacing-and-border-m: 1.5rem;
+  --spacing-and-border-l: 2rem;
+  --spacing-and-border-xl: 2.5rem;
+}
