@@ -1,0 +1,23 @@
+{
+  "vendor": "qualitydigital",
+  "name": "graphql-example",
+  "version": "0.0.0",
+  "title": "GraphQL Example",
+  "description": "GraphQL Example",
+  "mustUpdateAt": "2023-03-10",
+  "builders": {
+    "docs": "0.x",
+    "graphql": "1.x",
+    "node": "6.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,10 @@
+node/**/__tests__/**
+node/**/__mocks__/**
+node/**/__snapshots__/**
+node/**/*.test.js
+node/**/*.test.ts
+node_modules/
+.editorconfig
+.eslintrc
+.gitignore
+README.md

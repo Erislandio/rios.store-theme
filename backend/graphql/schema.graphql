@@ -1,0 +1,3 @@
+type Query {
+  status(statusCode: Int!): Status @cacheControl(maxAge: MEDIUM)
+}

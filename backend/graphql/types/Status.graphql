@@ -1,0 +1,4 @@
+type Status {
+  code: Int
+  description: String
+}
