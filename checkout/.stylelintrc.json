@@ -1,0 +1,18 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": null,
+    "value-no-vendor-prefix": null,
+    "no-descending-specificity": null,
+    "media-feature-range-notation": "prefix",
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true,
+    "media-feature-name-disallowed-list": [
+      "max-width",
+      {
+        "message": "Use min-width for a mobile-first approach"
+      }
+    ]
+  }
+}

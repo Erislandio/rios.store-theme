@@ -1,0 +1,5 @@
+node_modules
+checkout-ui-custom
+coverage
+*.config.*
+**/__mocks__/jquery.js

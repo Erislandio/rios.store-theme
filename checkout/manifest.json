@@ -1,0 +1,12 @@
+{
+  "vendor": "acctglobal",
+  "name": "checkout-ui-settings",
+  "version": "1.0.0",
+  "title": "Checkout UI Settings",
+  "description": "Declare custom settings to be used by Checkout UI",
+  "builders": {
+    "checkout-ui-custom": "0.x"
+  },
+  "credentialType": "absolute",
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

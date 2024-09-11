@@ -1,0 +1,3 @@
+checkout-ui-custom
+**/coverage
+**/__mocks__/jquery.js

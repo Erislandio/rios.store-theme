@@ -1,0 +1,68 @@
+{
+  "name": "acctglobal.checkout-ui-settings",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "concurrently -k \"webpack --watch --progress\" \"vtex link -c\"",
+    "commit": "cz",
+    "lint": "eslint \"**/*.{ts,js,tsx,jsx}\"",
+    "lint:fix": "eslint --fix \"**/*.{ts,js,tsx,jsx}\"",
+    "format": "prettier --write \"**/*.{ts,js,tsx,jsx}\"",
+    "stylelint": "stylelint \"**/*.scss\"",
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix",
+    "test": "jest test",
+    "test:coverage": "jest test --coverage",
+    "test:watch": "jest test --watch",
+    "postinstall": "husky install"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@types/jest": "^29.5.1",
+    "@types/jquery": "^3.5.16",
+    "@vtex/prettier-config": "^1.0.0",
+    "@vtex/tsconfig": "^0.6.0",
+    "commitizen": "^4.3.0",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-vtex": "^15.0.2",
+    "eslint-webpack-plugin": "^4.0.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "husky": "^8.0.3",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.8",
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-webpack-plugin": "^4.1.1",
+    "ts-jest": "^29.1.1",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.scss": "stylelint --fix",
+    "*.html": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
