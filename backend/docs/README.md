@@ -22,6 +22,7 @@ Change app vendor in `manifest.json` file:
 {
   "vendor": "{{store-account}}"
 }
+```
 
 ## Status Query Example
 
