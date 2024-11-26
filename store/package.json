@@ -10,7 +10,7 @@
     "stylelint": "stylelint \"**/*.css\"",
     "stylelint:fix": "stylelint --fix \"**/*.css\"",
     "v-run": "vtex unlink --all && vtex link --clean",
-    "v-gulp": "gulp mount && gulp watch",
+    "v-gulp": "gulp watch",
     "v-publish": "vtex use prod --production -y && vtex publish -y",
     "v-deploy": "vtex deploy -y && vtex promote -y"
   },
@@ -26,11 +26,14 @@
     "gulp-sass": "^5.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
+    "mini-css-extract-plugin": "^2.9.2",
     "prettier": "^2.8.7",
     "sass": "^1.53.0",
     "stylelint": "^15.4.0",
     "stylelint-config-standard": "^32.0.0",
-    "stylelint-order": "^6.0.3"
+    "stylelint-order": "^6.0.3",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   },
   "config": {
     "commitizen": {
