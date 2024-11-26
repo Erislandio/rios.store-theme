@@ -40,5 +40,8 @@
   "lint-staged": {
     "*.css": "stylelint --fix",
     "*.{json,jsonc}": "prettier --write"
+  },
+  "dependencies": {
+    "yarn": "^1.22.22"
   }
 }

@@ -1,73 +1,118 @@
 {
   "flex-layout.row#deals": {
     "children": [
-      "flex-layout.col#deals1",
-      "flex-layout.col#deals2",
-      "flex-layout.col#deals3",
-      "flex-layout.col#deals4"
+      "flex-layout.row#deals1",
+      "flex-layout.row#deals2",
+      "flex-layout.row#deals3",
+      "flex-layout.row#deals4"
     ],
     "props": {
       "blockClass": "deals"
     }
   },
 
-  "flex-layout.col#deals1": {
-    "children": ["image#deal1", "rich-text#deal1"]
+  "flex-layout.row#deals1": {
+    "children": ["image#deal1", "flex-layout.col#deals1"]
   },
   "image#deal1": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/box.png",
-      "maxHeight": "24px"
+      "src": "https://romazi.vteximg.com.br/arquivos/deals-secure.png",
+      "maxHeight": "39px"
     }
   },
+
+  "flex-layout.col#deals1": {
+    "children": ["rich-text#deal1", "rich-text#subtext-deals1"]
+  },
+
   "rich-text#deal1": {
     "props": {
-      "text": "Free shipping",
+      "text": "Compra Protegida",
       "blockClass": "deals"
     }
   },
-  "flex-layout.col#deals2": {
-    "children": ["image#deal2", "rich-text#deal2"]
+
+  "rich-text#subtext-deals1": {
+    "props": {
+      "text": "Site 100% seguro",
+      "blockClass": "deals"
+    }
+  },
+  "flex-layout.row#deals2": {
+    "children": ["image#deal2", "flex-layout.col#deals2"]
   },
   "image#deal2": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/delivery-fast.png",
-      "maxHeight": "24px"
+      "src": "https://romazi.vteximg.com.br/arquivos/bx_box.png",
+      "maxHeight": "39px"
     }
   },
+  "flex-layout.col#deals2": {
+    "children": ["rich-text#deal2", "rich-text#subtext-deals2"]
+  },
+
   "rich-text#deal2": {
     "props": {
-      "text": "One day delivery",
+      "text": "Frete Grátis",
       "blockClass": "deals"
     }
   },
-  "flex-layout.col#deals3": {
-    "children": ["image#deal3", "rich-text#deal3"]
+
+  "rich-text#subtext-deals2": {
+    "props": {
+      "text": "Acima de R$ 300",
+      "blockClass": "deals"
+    }
+  },
+  "flex-layout.row#deals3": {
+    "children": ["image#deal3", "flex-layout.col#deals3"]
   },
   "image#deal3": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/store.png",
-      "maxHeight": "24px"
+      "src": "https://romazi.vteximg.com.br/arquivos/deals-credit-card.png",
+      "maxHeight": "39px"
     }
   },
+  "flex-layout.col#deals3": {
+    "children": ["rich-text#deal3", "rich-text#subtext-deals3"]
+  },
+
   "rich-text#deal3": {
     "props": {
-      "text": "Pick up in store",
+      "text": "Parcele em até 12x",
       "blockClass": "deals"
     }
   },
-  "flex-layout.col#deals4": {
-    "children": ["image#deal4", "rich-text#deal4"]
+
+  "rich-text#subtext-deals3": {
+    "props": {
+      "text": "No cartão de crédito",
+      "blockClass": "deals"
+    }
+  },
+  "flex-layout.row#deals4": {
+    "children": ["image#deal4", "flex-layout.col#deals4"]
   },
   "image#deal4": {
     "props": {
-      "src": "https://storecomponents.vteximg.com.br/arquivos/coupon.png",
-      "maxHeight": "24px"
+      "src": "https://romazi.vteximg.com.br/arquivos/deals-whatsapp.png",
+      "maxHeight": "39px"
     }
   },
+  "flex-layout.col#deals4": {
+    "children": ["rich-text#deal4", "rich-text#subtext-deals4"]
+  },
+
   "rich-text#deal4": {
     "props": {
-      "text": "Exclusive deals",
+      "text": "Compre pelo Whatsapp",
+      "blockClass": "deals"
+    }
+  },
+
+  "rich-text#subtext-deals4": {
+    "props": {
+      "text": "Clique aqui para se atendido",
       "blockClass": "deals"
     }
   }

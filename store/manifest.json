@@ -1,7 +1,7 @@
 {
-  "vendor": "weonne",
+  "vendor": "romazi",
   "name": "store-theme",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "mustUpdateAt": "2023-01-11",
   "builders": {
     "styles": "2.x",
@@ -63,8 +63,6 @@
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x"
   },
-  "peerDependencies": {
-    "vtex.reviews-and-ratings": "3.x"
-  },
+  "peerDependencies": {},
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

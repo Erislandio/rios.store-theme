@@ -1,0 +1,392 @@
+{
+  "submenu#submenu-all-departments-new": {
+    "children": [
+      "menu-item#all-romazi-products"
+      // "menu-item#all-agro",
+      // "menu-item#all-ventilation",
+      // "menu-item#all-automotivo",
+      // "menu-item#all-health",
+      // "menu-item#all-toys",
+      // "menu-item#all-home-decor",
+      // "menu-item#all-home-appliances",
+      // "menu-item#all-eletronics",
+      // "menu-item#all-eletro-port",
+      // "menu-item#all-sports",
+      // "menu-item#all-tools-build",
+      // "menu-item#all-books",
+      // "menu-item#all-fashion",
+      // "menu-item#all-pet"
+    ],
+    "props": {
+      "blockClass": "submenu-all-departments"
+    }
+  },
+  "menu-item#all-romazi-products": {
+    "props": {
+      "id": "menu-item-smartphone",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/romazi-premium",
+        "noFollow": false,
+        "tagTitle": "Romazi Premium",
+        "text": "Romazi Premium"
+      },
+      "iconProps": {
+        "id": "nav-caret--right",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "blockClass": "submenu-with-submenu"
+    },
+    "blocks": [
+      "submenu#all-romazi-products"
+    ]
+  }
+  // "menu-item#all-home-appliances": {
+  //   "props": {
+  //     "id": "menu-item-home-appliances",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/eletrodomesticos",
+  //       "noFollow": false,
+  //       "tagTitle": "Eletrodomésticos",
+  //       "text": "Eletrodomésticos"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-home-appliances"
+  //   ]
+  // },
+  // "menu-item#all-ventilation": {
+  //   "props": {
+  //     "id": "menu-item-ventilation",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/ar-e-ventilacao",
+  //       "noFollow": false,
+  //       "tagTitle": "Ar e Ventilação",
+  //       "text": "Ar e Ventilação"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-ventilation"
+  //   ]
+  // },
+  // "menu-item#all-eletro-port": {
+  //   "props": {
+  //     "id": "menu-item-eletro-port",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/eletroportateis",
+  //       "noFollow": false,
+  //       "tagTitle": "Eletroportáteis",
+  //       "text": "Eletroportáteis"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-eletro-port"
+  //   ]
+  // },
+  // "menu-item#all-home-decor": {
+  //   "props": {
+  //     "id": "menu-item-home-decor",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/casa-e-decoracao",
+  //       "noFollow": false,
+  //       "tagTitle": "Casa e Decoração",
+  //       "text": "Casa e Decoração"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-home-decor"
+  //   ]
+  // },
+  // "menu-item#all-eletronics": {
+  //   "props": {
+  //     "id": "menu-item-eletronics",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/eletronicos-e-tecnologia",
+  //       "noFollow": false,
+  //       "tagTitle": "Eletrônicos e Tecnologia",
+  //       "text": "Eletrônicos e Tecnologia"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-eletronics"
+  //   ]
+  // },
+  // "menu-item#all-health": {
+  //   "props": {
+  //     "id": "menu-item-health",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/beleza-e-saude",
+  //       "noFollow": false,
+  //       "tagTitle": "Beleza e Saúde",
+  //       "text": "Beleza e Saúde"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-health"
+  //   ]
+  // },
+  // "menu-item#all-sports": {
+  //   "props": {
+  //     "id": "menu-item-sports",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/esporte-e-lazer",
+  //       "noFollow": false,
+  //       "tagTitle": "Esporte e Lazer",
+  //       "text": "Esporte e Lazer"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-sports"
+  //   ]
+  // },
+  // "menu-item#all-books": {
+  //   "props": {
+  //     "id": "menu-item-books",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/livros",
+  //       "noFollow": false,
+  //       "tagTitle": "Livros",
+  //       "text": "Livros"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-books"
+  //   ]
+  // },
+  // "menu-item#all-fashion": {
+  //   "props": {
+  //     "id": "menu-item-fashion",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/moda",
+  //       "noFollow": false,
+  //       "tagTitle": "Moda",
+  //       "text": "Moda"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-fashion"
+  //   ]
+  // },
+  // "menu-item#all-tools-build": {
+  //   "props": {
+  //     "id": "menu-item-smartphone",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/ferramentas-e-construcao",
+  //       "noFollow": false,
+  //       "tagTitle": "Ferramentas e Construção",
+  //       "text": "Ferramentas e Construção"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-tools-build"
+  //   ]
+  // },
+  // "menu-item#all-automotivo": {
+  //   "props": {
+  //     "id": "menu-item-smartphone",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/automotivo",
+  //       "noFollow": false,
+  //       "tagTitle": "Automotivo",
+  //       "text": "Automotivo"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-automotivo"
+  //   ]
+  // },
+  // "menu-item#all-pet": {
+  //   "props": {
+  //     "id": "menu-item-pet",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/pet-shop",
+  //       "noFollow": false,
+  //       "tagTitle": "Pet Shop",
+  //       "text": "Pet Shop"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-pet"
+  //   ]
+  // },
+  // "menu-item#all-toys": {
+  //   "props": {
+  //     "id": "menu-item-toys",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/brinquedos-e-jogos",
+  //       "noFollow": false,
+  //       "tagTitle": "Brinquedos e Jogos",
+  //       "text": "Brinquedos e Jogos"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-toys"
+  //   ]
+  // },
+  // "menu-item#all-agro": {
+  //   "props": {
+  //     "id": "menu-item-agro",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/agro",
+  //       "noFollow": false,
+  //       "tagTitle": "Agro",
+  //       "text": "Agro"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-agro"
+  //   ]
+  // },
+  // "menu-item#all-supermarket": {
+  //   "props": {
+  //     "id": "menu-item-supermarket",
+  //     "type": "custom",
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/supermercado",
+  //       "noFollow": false,
+  //       "tagTitle": "Supermercado",
+  //       "text": "Supermercado"
+  //     },
+  //     "iconProps": {
+  //       "id": "nav-caret--right",
+  //       "size": 16,
+  //       "viewBox": "0 0 16 16"
+  //     },
+  //     "blockClass": "submenu-with-submenu"
+  //   },
+  //   "blocks": [
+  //     "submenu#all-supermarket-item"
+  //   ]
+  // }
+}
