@@ -1,5 +1,5 @@
 {
-  "name": "acctglobal.store-theme",
+  "name": "weonne.store-theme",
   "version": "0.0.0",
   "private": true,
   "license": "UNLICENSED",
@@ -8,7 +8,11 @@
     "commit": "cz",
     "format": "prettier --write \"**/*.{json,jsonc}\"",
     "stylelint": "stylelint \"**/*.css\"",
-    "stylelint:fix": "stylelint --fix \"**/*.css\""
+    "stylelint:fix": "stylelint --fix \"**/*.css\"",
+    "v-run": "vtex unlink --all && vtex link --clean",
+    "v-gulp": "gulp mount && gulp watch",
+    "v-publish": "vtex use prod --production -y && vtex publish -y",
+    "v-deploy": "vtex deploy -y && vtex promote -y"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
@@ -16,9 +20,14 @@
     "@vtex/prettier-config": "^1.0.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-sass": "^5.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
+    "sass": "^1.53.0",
     "stylelint": "^15.4.0",
     "stylelint-config-standard": "^32.0.0",
     "stylelint-order": "^6.0.3"

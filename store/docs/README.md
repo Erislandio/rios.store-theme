@@ -2,8 +2,6 @@
 
 Store Theme Template.
 
-[![Version](https://img.shields.io/badge/version-0.0.0-blue)](https://github.com/ACCT-global/template.store-theme/releases) [![VTEX IO](https://img.shields.io/badge/VTEX%20IO-f71963.svg?logo=vtex&logoColor=white)](https://developers.vtex.com/vtex-developer-docs/docs/welcome) [![Stylelint](https://img.shields.io/badge/Stylelint-f2f2f2?logo=stylelint&logoColor=black)](https://stylelint.io/) [![Prettier](https://img.shields.io/badge/Prettier-c596c7?logo=prettier&logoColor=white)](https://prettier.io/) [![Commitlint](https://img.shields.io/badge/Commitlint-121212?logo=commitlint)](https://commitlint.js.org/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-ff69b4.svg?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/en/v1.0.0/) [![Node](https://img.shields.io/node/v/husky)](https://nodejs.org/en/)
-
 ## Getting Started
 
 ### Install all dependencies with

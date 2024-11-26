@@ -2,8 +2,6 @@
 
 React App Template for VTEX IO.
 
-[![Version](https://img.shields.io/badge/version-0.0.0-blue)](https://github.com/ACCT-global/template.react-app/releases) [![VTEX IO](https://img.shields.io/badge/VTEX%20IO-f71963.svg?logo=vtex&logoColor=white)](https://developers.vtex.com/vtex-developer-docs/docs/welcome) [![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](https://pt-br.reactjs.org/) [![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![ESLint](https://img.shields.io/badge/ESLint-4B3263?logo=eslint&logoColor=white)](https://eslint.org/) [![Stylelint](https://img.shields.io/badge/Stylelint-f2f2f2?logo=stylelint&logoColor=black)](https://stylelint.io/) [![Prettier](https://img.shields.io/badge/Prettier-c596c7?logo=prettier&logoColor=white)](https://prettier.io/) [![Commitlint](https://img.shields.io/badge/Commitlint-121212?logo=commitlint)](https://commitlint.js.org/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-ff69b4.svg?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/en/v1.0.0/) [![Jest](https://img.shields.io/badge/-Jest%2FVTEX%20Test%20Tools-%23C21325?logo=jest&logoColor=white)](https://github.com/vtex/test-tools) [![Node](https://img.shields.io/node/v/husky)](https://nodejs.org/en/)
-
 ## Getting Started
 
 Install all dependencies with:
