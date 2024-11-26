@@ -22,20 +22,6 @@ Change app vendor in `manifest.json` file:
 {
   "vendor": "{{store-account}}"
 }
-```
-
-### Setup Workflows
-
-This repository uses [reusable workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows). See the complete setup guide at "[Quality Digital Reusable Workflows](https://github.com/quality-digital/reusable-workflows#readme)".
-
-### Update SonarCloud
-
-Update the `sonar.projectKey` and `sonar.organization` properties in the `sonar-project.properties` file to run unit tests with SonarCloud and generate a coverage metric.
-
-```properties
-sonar.projectKey=your-project-key
-sonar.organization=your-project-organization
-```
 
 ## Status Query Example
 
