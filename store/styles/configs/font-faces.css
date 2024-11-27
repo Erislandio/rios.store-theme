@@ -1,0 +1,32 @@
+/* @font-face {
+  font-family: 'Source Sans Pro';
+  src: url(assets/fonts/SourceSansPro-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6267779b-648d-453d-8a00-8fea1da5c6b1___5e1d162e634a102d7da8db597825a764.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Bold';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/e314b633-75d3-433a-8b76-b34e56af5c9a___1a2a157bfd94b250884c09f1bd57a0bb.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro SemiBold';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f49a9c8a-b54b-4eb7-90b2-5ee35f6dd538___78667e5e4b54fea9bb8552482b39cf2e.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c50afd3d-18c8-4d2d-8442-a0dc6de854fb___779f3bf41b852b5582d41cd866ca3ddc.otf);
+  font-weight: 300;
+}

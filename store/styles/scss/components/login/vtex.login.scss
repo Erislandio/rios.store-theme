@@ -1,0 +1,54 @@
+.label {
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: none !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.label::after {
+  content: 'Meus pedidos';
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize !important;
+}
+
+.container :global(.vtex-button) {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.container :global(.vtex-button__label) {
+  padding-left: 0;
+}
+
+.container :global(.vtex-button):hover {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container :global(.vtex-button)::before {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cg id='Peoples/classroom' clip-path='url(%23clip0_643_2165)'%3E%3Cg id='Vector'%3E%3Cpath d='M15 3.4375C12.4112 3.4375 10.3125 5.53616 10.3125 8.125C10.3125 10.7138 12.4112 12.8125 15 12.8125C17.5888 12.8125 19.6875 10.7138 19.6875 8.125C19.6875 5.53616 17.5888 3.4375 15 3.4375ZM8.4375 8.125C8.4375 4.50063 11.3756 1.5625 15 1.5625C18.6244 1.5625 21.5625 4.50063 21.5625 8.125C21.5625 11.7494 18.6244 14.6875 15 14.6875C11.3756 14.6875 8.4375 11.7494 8.4375 8.125Z' fill='white'/%3E%3Cpath d='M10.9337 15.6085L11.0662 15.7502C11.1514 15.8414 11.2749 15.9738 11.4286 16.1393C11.736 16.4702 12.1644 16.9334 12.6488 17.4629C13.3814 18.2637 14.2471 19.2217 15.0165 20.1043L19.0534 15.6226C19.26 15.3932 19.5663 15.2802 19.8723 15.3205C20.7955 15.442 21.7394 15.9869 22.5897 16.6935C23.4603 17.417 24.3237 18.3857 25.0875 19.4989C26.606 21.7121 27.8125 24.6191 27.8125 27.5H25.9375C25.9375 25.1074 24.9174 22.5652 23.5414 20.5597C22.8579 19.5635 22.1071 18.7304 21.3913 18.1356C20.8827 17.7129 20.4321 17.4438 20.066 17.3L15.6966 22.1509C15.5153 22.3521 15.2558 22.4651 14.985 22.4608C14.7142 22.4565 14.4585 22.3352 14.2837 22.1283C13.4057 21.0885 12.2286 19.7815 11.2653 18.7285C10.7848 18.2033 10.3597 17.7437 10.0548 17.4154C10.0357 17.3948 10.0171 17.3748 9.999 17.3553C8.75642 17.9329 7.37288 19.1495 6.23841 20.8197C4.94932 22.7176 4.0625 25.0862 4.0625 27.5H2.1875C2.1875 24.6404 3.23037 21.9113 4.68737 19.7662C6.13174 17.6397 8.0646 15.9706 9.96187 15.3579C10.307 15.2464 10.6855 15.344 10.9337 15.6085Z' fill='white'/%3E%3Cpath d='M0.3125 27.5C0.3125 26.9822 0.732233 26.5625 1.25 26.5625H28.75C29.2678 26.5625 29.6875 26.9822 29.6875 27.5C29.6875 28.0178 29.2678 28.4375 28.75 28.4375H1.25C0.732233 28.4375 0.3125 28.0178 0.3125 27.5Z' fill='white'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_643_2165'%3E%3Crect width='30' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  display: block;
+  width: 30px;
+  height: 30px;
+}

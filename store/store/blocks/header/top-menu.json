@@ -1,6 +1,6 @@
 {
   "menu#header-all-departments": {
-    "children": ["menu-item#all-departments-new"],
+    "children": [],
     "props": {
       "blockClass": "all-departments"
     }
@@ -83,21 +83,5 @@
         }
       ]
     }
-  },
-  "menu-item#all-departments-new": {
-    "props": {
-      "id": "menu-all-departments",
-      "blockClass": "all-departments",
-      "type": "custom",
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "#",
-        "noFollow": false,
-        "tagTitle": "Todos departamento",
-        "text": "Todos departamento"
-      }
-    },
-    "blocks": ["submenu#submenu-all-departments-new"]
   }
 }

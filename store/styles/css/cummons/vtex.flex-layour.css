@@ -1,0 +1,20 @@
+.flexRowContent--container {
+  max-width: 1200px;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1441px) {
+  .flexRowContent--container {
+    max-width: 1441px;
+  }
+}
+
+.flexRow--container :global(.vtex-store-components-3-x-container) {
+  padding: 0px;
+}
+@media screen and (max-width: 768px) {
+  .flexRow--container .flexRowContent--container {
+    padding: 0px 0.5rem !important;
+  }
+}

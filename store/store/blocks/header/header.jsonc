@@ -34,18 +34,28 @@
       "width": "grow"
     }
   },
+  "flex-layout.row#header-container": {
+    "props": {
+      "blockClass": "container"
+    },
+    "children": []
+  },
   "sticky-layout#4-desktop": {
     "props": {
       "blockClass": "sticky-header"
     },
     "children": [
-      "flex-layout.row#4-desktop",
-      "header-row#menus"
+      "flex-layout.row#main-header",
+      "flex-layout.row#menus"
+      // "header-row#menus"
     ]
   },
-  "flex-layout.row#4-desktop": {
+  "flex-layout.row#main-header": {
     "props": {
-      "blockClass": "main-header",
+      "blockClass": [
+        "main-header",
+        "container"
+      ],
       "verticalAlign": "center",
       "preventHorizontalStretch": true,
       "preventVerticalStretch": true,
@@ -58,11 +68,32 @@
     ]
   },
   "flex-layout.row#header-right-components": {
+    "props": {
+      "blockClass": "header-right-components",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
     "children": [
       "login",
-      "minicart.v2",
+      "link#wishlist-header",
       "minicart.v2"
     ]
+  },
+  "minicart.v2": {
+    "props": {
+      "MinicartIcon": "icon-cart#minicart-icon"
+    }
+  },
+  "link#wishlist-header": {
+    "title": "Favoritos",
+    "children": [
+      "icon#wishlist"
+    ],
+    "props": {
+      "href": "/account#/wishlist",
+      "target": "_top",
+      "blockClass": "wishlist-header"
+    }
   },
   "login": {
     "props": {
@@ -98,13 +129,28 @@
       "height": "60"
     }
   },
+  "flex-layout.row#menus": {
+    "props": {
+      "blockClass": [
+        "menus",
+        "container"
+      ],
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "header-row#menus"
+    ]
+  },
   "header-row#menus": {
     "props": {
       "fullWidth": true,
       "blockClass": "header-menus"
     },
     "children": [
-      "menu#header-all-departments",
+      "custom-menu-drawer",
       "menu#header-offer"
     ]
   },

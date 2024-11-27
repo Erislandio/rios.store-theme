@@ -1,0 +1,13 @@
+.searchBarContainer {
+  display: flex;
+  width: 600px;
+  padding: 9px 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchBarContainer :global(.vtex-input-prefix__group) {
+  border-radius: 110px;
+  border-bottom: 1px solid var(--Bombay-500, #91989e);
+  background: var(--BG-FF, #fff);
+}

@@ -1,0 +1,16 @@
+{
+  "icon#wishlist": {
+    "props": {
+      "id": "hpa-wishlist",
+      "viewBox": "0 0 30 30",
+      "size": 30
+    }
+  },
+  "icon-cart#minicart-icon": {
+    "props": {
+      "id": "minicart-icon",
+      "viewBox": "0 0 30 30",
+      "size": 30
+    }
+  }
+}
