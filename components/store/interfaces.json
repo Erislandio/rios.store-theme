@@ -1,5 +1,5 @@
 {
-  "example-component": {
-    "component": "Example"
+  "custom-menu-drawer": {
+    "component": "CustomMenuDrawer"
   }
 }
