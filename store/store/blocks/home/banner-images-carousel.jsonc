@@ -1,0 +1,137 @@
+  {
+    "responsive-layout.desktop#background-banner-our-lines": {
+      "children": [
+        "flex-layout.row#banner-our-lines-container"
+      ]
+    },
+    "responsive-layout.mobile#background-banner-our-lines": {
+      "children": [
+        "flex-layout.row#banner-our-lines-container-mobile"
+      ]
+    },
+    "flex-layout.row#banner-our-lines-container": {
+      "props": {
+        "blockClass": [
+          "banner-our-lines",
+          "container"
+        ]
+      },
+      "children": [
+        "flex-layout.col#title-content",
+        "image#desktop-background-banner-our-lines"
+      ]
+    },
+    "flex-layout.row#banner-our-lines-container-mobile": {
+      "props": {
+        "blockClass": [
+          "banner-our-lines",
+          "container"
+        ]
+      },
+      "children": [
+        "flex-layout.col#title-content",
+        "image#mobile-background-banner-our-lines",
+        "flex-layout.row#banner-our-lines-carousel-container"
+      ]
+    },
+    "image#desktop-background-banner-our-lines": {
+      "title": "banner desktop nossas linhas background",
+      "props": {
+        "src": "https://romazi.vteximg.com.br/arquivos/nossas-linhas-banner.png"
+      }
+    },
+    "image#mobile-background-banner-our-lines": {
+      "title": "banner mobile nossas linhas background",
+      "props": {
+        "src": "https://romazi.vteximg.com.br/arquivos/nossas-linhas-banner-mobile.png"
+      }
+    },
+    "flex-layout.col#title-content": {
+      "children": [
+        "rich-text#banner-title",
+        "rich-text#banner-text"
+      ]
+    },
+    "rich-text#banner-title": {
+      "props": {
+        "blockClass": "banner-title",
+        "text": "## Nossas linhas"
+      }
+    },
+    "rich-text#banner-text": {
+      "props": {
+        "blockClass": "banner-text",
+        "text": "Arcu maecenas ut id nunc. Convallis nisi in nulla<br> consequat in nunc. Augue facilisis nulla cras vel."
+      }
+    },
+    "flex-layout.row#banner-our-lines-carousel-container": {
+      "props": {
+        "blockClass": [
+          "banner-our-lines-carousel-container",
+          "container"
+        ]
+      },
+      "children": [
+        "list-context.image-list#carousel-banner-our-lines"
+      ]
+    },
+    "list-context.image-list#carousel-banner-our-lines": {
+      "children": [
+        "slider-layout#our-lines-carousel-images"
+      ],
+      "props": {
+        "height": 313,
+        "preload": true,
+        "images": [
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          },
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          },
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          },
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          },
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          },
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          },
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          },
+          {
+            "image": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png",
+            "mobileImage": "https://romazi.vteximg.com.br/arquivos/soul-line-banner.png"
+          }
+        ]
+      }
+    },
+    "slider-layout#our-lines-carousel-images": {
+      "props": {
+        "itemsPerPage": {
+          "desktop": 5,
+          "tablet": 3,
+          "phone": 1
+        },
+        "arrowSize": {
+          "mobile": 32
+        },
+        "centerMode": "to-the-left",
+        "infinite": true,
+        "showNavigationArrows": "always",
+        "blockClass": "carousel-main-banner"
+      }
+    }
+  }

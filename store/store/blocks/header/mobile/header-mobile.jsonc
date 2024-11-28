@@ -1,0 +1,81 @@
+{
+  "header-layout.mobile": {
+    "children": [
+      "sticky-layout#1-mobile"
+    ]
+  },
+  "sticky-layout#1-mobile": {
+    "props": {
+      "blockClass": "sticky-mobile"
+    },
+    "children": [
+      "flex-layout.row#1-mobile",
+      "flex-layout.row#search-bar"
+    ]
+  },
+  "flex-layout.row#search-bar": {
+    "children": [
+      "search-bar"
+    ]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": [
+      "drawer",
+      "logo#mobile",
+      "flex-layout.row#wishlist-minicart"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#wishlist-minicart": {
+    "props": {
+      "blockClass": "wishlist-minicart",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "link#wishlist-header",
+      "minicart.v2"
+    ]
+  },
+  "link#wishlist-header-mobile": {
+    "title": "Favoritos",
+    "children": [
+      "icon#wishlist-mobile"
+    ],
+    "props": {
+      "href": "/account#/wishlist",
+      "target": "_top",
+      "blockClass": "wishlist-header"
+    }
+  },
+  "drawer": {
+    "children": [
+      "menu#drawer"
+    ]
+  },
+  "menu#drawer": {
+    "children": [
+      "menu-item#category-apparel",
+      "menu-item#category-home",
+      "menu-item#more"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://romazi.vteximg.com.br/arquivos/logo-mobile.png",
+      "width": "169.82",
+      "height": "45"
+    }
+  }
+}

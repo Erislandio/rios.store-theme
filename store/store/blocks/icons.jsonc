@@ -3,7 +3,8 @@
     "props": {
       "id": "hpa-wishlist",
       "viewBox": "0 0 30 30",
-      "size": 30
+      "size": 30,
+      "blockClass": "wishlist-icon"
     }
   },
   "icon-cart#minicart-icon": {
@@ -11,6 +12,13 @@
       "id": "minicart-icon",
       "viewBox": "0 0 30 30",
       "size": 30
+    }
+  },
+  "icon#wishlist-mobile": {
+    "props": {
+      "id": "hpa-wishlist",
+      "viewBox": "0 0 24 24",
+      "size": 24
     }
   }
 }

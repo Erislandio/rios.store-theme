@@ -13,6 +13,9 @@
 .flexRow--container :global(.vtex-store-components-3-x-container) {
   padding: 0px;
 }
+.flexRow--container :global(.vtex-store-components-3-x-container) {
+  max-width: 100% !important;
+}
 @media screen and (max-width: 768px) {
   .flexRow--container .flexRowContent--container {
     padding: 0px 0.5rem !important;

@@ -1,0 +1,145 @@
+{
+  "header-layout.desktop": {
+    "children": [
+      "sticky-layout#4-desktop"
+    ]
+  },
+  "flex-layout.row#3-desktop": {
+    "props": {
+      "blockClass": "menu-link",
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      // "vtex.menu@2.x:menu#websites",
+      "flex-layout.col#spacer"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.row#header-container": {
+    "props": {
+      "blockClass": "container"
+    },
+    "children": []
+  },
+  "sticky-layout#4-desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#main-header",
+      "flex-layout.row#menus"
+      // "header-row#menus"
+    ]
+  },
+  "flex-layout.row#main-header": {
+    "props": {
+      "blockClass": [
+        "main-header",
+        "container"
+      ],
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar",
+      "flex-layout.row#header-right-components"
+    ]
+  },
+  "flex-layout.row#header-right-components": {
+    "props": {
+      "blockClass": "header-right-components",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "login",
+      "link#wishlist-header",
+      "minicart.v2"
+    ]
+  },
+  "minicart.v2": {
+    "props": {
+      "MinicartIcon": "icon-cart#minicart-icon"
+    }
+  },
+  "link#wishlist-header": {
+    "title": "Favoritos",
+    "children": [
+      "icon#wishlist"
+    ],
+    "props": {
+      "href": "/account#/wishlist",
+      "target": "_top",
+      "blockClass": "wishlist-header"
+    }
+  },
+  "login": {
+    "props": {
+      "emailAndPasswordTitle": "LOG-IN",
+      "accessCodeTitle": "Acess Code LOG-IN",
+      "emailPlaceholder": "e-mail",
+      "passwordPlaceholder": "password",
+      "showPasswordVerificationIntoTooltip": true
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "logo#desktop"
+    ]
+  },
+  "flex-layout.col#category-menu": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#category-menu"
+    ]
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://romazi.vteximg.com.br/arquivos/romazi-logo.png",
+      "width": "225",
+      "height": "60"
+    }
+  },
+  "flex-layout.row#menus": {
+    "props": {
+      "blockClass": [
+        "menus",
+        "container"
+      ],
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "header-row#menus"
+    ]
+  },
+  "header-row#menus": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "header-menus"
+    },
+    "children": [
+      // "custom-menu-drawer",
+      "menu#header-offer"
+    ]
+  }
+}

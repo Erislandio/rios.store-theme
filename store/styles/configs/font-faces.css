@@ -30,3 +30,27 @@
   src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c50afd3d-18c8-4d2d-8442-a0dc6de854fb___779f3bf41b852b5582d41cd866ca3ddc.otf);
   font-weight: 300;
 }
+
+@font-face {
+  font-family: 'Mulish';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6be2200a-1f16-436d-8132-a59abebd0e6d___5416a925ffafb775c6bffd116d87deb0.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Mulish Bold';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f274b963-fa4c-4867-a5f9-f6445215fae1___b7fa867b7522c7629eca3c4b9f31d3c8.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mulish ExtraBold';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/94cdc43f-3014-4953-a815-a669f509fb04___2000e3092f7d4527368cb41d357fe356.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/43967844-427a-4967-ac62-4b06b1317e03___b83ce9c59c73ade26bb7871143fd76bb.ttf);
+  font-weight: 400;
+}

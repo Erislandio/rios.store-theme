@@ -1,0 +1,52 @@
+.paragraph--deals-title {
+  color: #bc1818;
+  font-family: 'Mulish ExtraBold', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.paragraph--deals {
+  color: #5c5c5c;
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.heading--banner-title {
+  color: #fff;
+  font-family: Arial;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: stretch;
+  margin: 8px 0;
+}
+
+.paragraph--banner-text {
+  color: #fff;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 00;
+  line-height: normal;
+  align-self: stretch;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .paragraph--deals-title {
+    font-size: 18px;
+  }
+  .paragraph--deals {
+    font-size: 16px;
+  }
+}
