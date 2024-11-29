@@ -1,3 +1,8 @@
+.imageElement--banner-img,
+.imageElement--double-banner-img {
+  width: 100%;
+}
+
 @media (min-width: 1024px) {
   .imageElement--deals-img {
     width: 50px;

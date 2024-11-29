@@ -36,23 +36,23 @@
       "orientation": "vertical"
     },
     "children": [
-      "menu-item#category-apparel-clothing",
+      "menu-item#category-apparel-institucional",
       "menu-item#category-apparel-accessories",
       "menu-item#category-apparel-eyeglasses"
     ]
   },
-  "menu-item#category-apparel-clothing": {
+  "menu-item#category-apparel-institucional": {
     "props": {
-      "id": "menu-item-category-apparel-clothing",
+      "id": "menu-item-category-apparel-institucional",
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/apparel---accessories/clothing/",
+        "href": "/apparel---accessories/institucional/",
         "noFollow": false,
-        "tagTitle": "Clothing",
-        "text": "Clothing"
+        "tagTitle": "institucional",
+        "text": "institucional"
       }
     }
   },

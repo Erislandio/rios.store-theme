@@ -42,11 +42,37 @@
   margin: 0;
 }
 
+.heading--newsletter-title {
+  color: #fff;
+  text-align: center;
+  font-family: 'REM SemiBold', sans-serif;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.16px;
+  margin: 0;
+}
+
+.paragraph--newsletter-subtitle {
+  color: #fff;
+  font-family: 'REM', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-top: 14px;
+}
+
 @media (min-width: 1024px) {
   .paragraph--deals-title {
     font-size: 18px;
   }
   .paragraph--deals {
     font-size: 16px;
+  }
+  .paragraph--newsletter-subtitle {
+    margin-top: 6px;
   }
 }

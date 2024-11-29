@@ -1,0 +1,294 @@
+{
+  "footer": {
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
+  },
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#contact",
+      "flex-layout.row#footer-1-desktop",
+      "flex-layout.row#footer-2-desktop"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop": {
+    "children": [
+      "flex-layout.col#romazi-address-desktop",
+      "vtex.menu@2.x:menu#footer-institucional-desktop",
+      "vtex.menu@2.x:menu#footer-ajuda-desktop",
+      "vtex.menu@2.x:menu#footer-politics-desktop",
+      "flex-layout.col#payments-selos-footer"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "menu-row",
+        "container"
+      ],
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "flex-layout.col#payments-selos-footer": {
+    "children": [
+      "flex-layout.col#footer-mobile-payments",
+      "flex-layout.row#footer-mobile-security"
+    ]
+  },
+  "flex-layout.row#footer-2-desktop": {
+    "children": [
+      "flex-layout.row#footer-mobile-poweredBy"
+    ],
+    "props": {
+      "blockClass": "payment-methods"
+    }
+  },
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#contact",
+      "flex-layout.row#romazi-address",
+      "flex-layout.row#footer-mobile-menu",
+      "flex-layout.row#footer-mobile-payments-container",
+      "flex-layout.row#footer-mobile-security",
+      "flex-layout.row#footer-mobile-poweredBy"
+    ]
+  },
+  "flex-layout.row#footer-mobile-menu": {
+    "props": {
+      "paddingTop": 4,
+      "paddingBottom": 4
+    },
+    "children": [
+      "vtex.menu@2.x:menu#footer-mobile"
+    ]
+  },
+  "flex-layout.row#romazi-address": {
+    "title": "Logo e endereço - conteúdo",
+    "props": {
+      "blockClass": [
+        "romazi-address",
+        "flex"
+      ]
+    },
+    "children": [
+      "image#logo-footer",
+      "rich-text#address"
+    ]
+  },
+  "flex-layout.col#romazi-address-desktop": {
+    "title": "Logo e endereço desktop - conteúdo",
+    "props": {
+      "blockClass": [
+        "romazi-address",
+        "flex"
+      ]
+    },
+    "children": [
+      "image#logo-footer",
+      "rich-text#address-desktop"
+    ]
+  },
+  "rich-text#address-desktop": {
+    "title": "Endereço - Desktop",
+    "props": {
+      "text": "ROMAZI – Comercio e Industria de Plasticos Ltda.<br> CNPJ: 73.770.273/0001-99<br> Rua João Bezerra Campos, 55<br> Parque Tijuca<br> Maracanaú / CE",
+      "blockClass": "address"
+    }
+  },
+  "rich-text#address": {
+    "title": "Endereço - Desktop",
+    "props": {
+      "text": "Rua João Bezerra Campos, 55 – Parque Tijuca Maracanaú /<br> CE ROMAZI – Comercio e Industria de Plasticos Ltda.<br> CNPJ: 73.770.273/0001-99",
+      "blockClass": "address"
+    }
+  },
+  "image#logo-footer": {
+    "props": {
+      "src": "https://romazi.vteximg.com.br/arquivos/logo-footer1.png",
+      "maxWidth": "300px",
+      "maxHeight": "62px",
+      "blockClass": "logo-footer-img"
+    }
+  },
+  "flex-layout.row#footer-mobile-payments-container": {
+    "children": [
+      "flex-layout.col#footer-mobile-payments"
+    ],
+    "props": {
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4
+    }
+  },
+  "flex-layout.col#footer-mobile-payments": {
+    "title": "formas de Pagamento",
+    "children": [
+      "rich-text#footer-payments-text",
+      "flex-layout.row#payments-methods"
+    ],
+    "props": {
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "rowGap": 4
+    }
+  },
+  "flex-layout.row#payments-methods": {
+    "title": "Imagens formas de pagamento",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "paddingBottom": 0,
+      "blockClass": "payments-methods-row"
+    },
+    "children": [
+      "image#payment1",
+      "image#payment2",
+      "image#payment3",
+      "image#payment4",
+      "image#payment5",
+      "image#payment6",
+      "image#payment7"
+      // "image#payment8"
+    ]
+  },
+  "image#payment1": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/cee809f0-bf18-485b-9c76-a621871fb3b8___5c306e9df75d2b7eb86ae92f3278946e.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "image#payment2": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/2c1bce25-ca9b-4a12-af9a-2156fb6fb32e___63bdc57915240db0f77edeae56037f8c.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "image#payment3": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/2c1bce25-ca9b-4a12-af9a-2156fb6fb32e___63bdc57915240db0f77edeae56037f8c.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "image#payment4": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/25fb16eb-59b7-4591-a2c2-c82f0212e820___d2905d7e7e64c254853d347953eb2e36.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "image#payment5": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/217c0d1e-dc4c-40ee-83a3-6ee4e8ee4325___a5c9a93d96f83df13c43d8a9f82b8012.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "image#payment6": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6ee17c63-e408-4967-be33-b59c42012d80___c592137652cce38ecc77f807f6d41bdc.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "image#payment7": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/1231d30d-153e-4a63-9447-61b3f2f2b5e5___2c410d3a2de92375370ee57026077b30.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "image#payment8": {
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/ba95e430-51a5-424c-912e-560247936fba___5210646a1edfd5e620b07a7d9d8c4dbb.svg",
+      "maxWidth": "44px",
+      "maxHeight": "30px",
+      "blockClass": "payments-img"
+    }
+  },
+  "rich-text#footer-payments-text": {
+    "props": {
+      "text": "Formas de pagamento",
+      "blockClass": "footer-titles"
+    }
+  },
+  "flex-layout.row#footer-mobile-security": {
+    "title": "Selos de segurança - conteúdo",
+    "props": {
+      "blockClass": "footer-mobile-security-content"
+    },
+    "children": [
+      "rich-text#footer-security-text",
+      "flex-layout.row#security-selos-content"
+    ]
+  },
+  "rich-text#footer-security-text": {
+    "props": {
+      "text": "Selos de Segurança",
+      "blockClass": "footer-titles"
+    }
+  },
+  "flex-layout.row#security-selos-content": {
+    "title": "selos de segurança - Linha",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": "security-selos-content"
+    },
+    "children": [
+      "image#selo-vtex",
+      "image#selo-google"
+    ]
+  },
+  "image#selo-vtex": {
+    "props": {
+      "src": "https://romazi.vteximg.com.br/arquivos/selo-vtex.png",
+      "blockClass": "selo-img"
+    }
+  },
+  "image#selo-google": {
+    "props": {
+      "src": "https://romazi.vteximg.com.br/arquivos/selo-google.png",
+      "blockClass": "selo-img"
+    }
+  },
+  "flex-layout.row#footer-mobile-poweredBy": {
+    "title": "Powered By Conteúdo",
+    "props": {
+      "blockClass": "footer-poweredBy"
+    },
+    "children": [
+      "rich-text#poweredBy-text",
+      "image#weonne",
+      "image#vtex"
+    ]
+  },
+  "rich-text#poweredBy-text": {
+    "props": {
+      "text": "Powered By",
+      "blockClass": "poweredby-titles"
+    }
+  },
+  "image#weonne": {
+    "props": {
+      "src": "https://romazi.vteximg.com.br/arquivos/weonne.png"
+    }
+  },
+  "image#vtex": {
+    "props": {
+      "src": "https://romazi.vteximg.com.br/arquivos/vtex.png"
+    }
+  }
+}

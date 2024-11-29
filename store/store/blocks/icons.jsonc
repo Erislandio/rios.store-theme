@@ -20,5 +20,40 @@
       "viewBox": "0 0 24 24",
       "size": 24
     }
+  },
+  "icon#linkedin": {
+    "props": {
+      "id": "linkedin",
+      "viewBox": "0 0 34 34",
+      "size": 34
+    }
+  },
+  "icon#youtube": {
+    "props": {
+      "id": "youtube",
+      "viewBox": "0 0 34 34",
+      "size": 34
+    }
+  },
+  "icon#facebook": {
+    "props": {
+      "id": "facebook",
+      "viewBox": "0 0 34 34",
+      "size": 34
+    }
+  },
+  "icon#instagram": {
+    "props": {
+      "id": "instagram",
+      "viewBox": "0 0 34 34",
+      "size": 34
+    }
+  },
+  "icon#pix": {
+    "props": {
+      "id": "pix",
+      "viewBox": "0 0 43 30",
+      "size": 43
+    }
   }
 }

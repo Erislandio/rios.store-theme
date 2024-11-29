@@ -50,6 +50,10 @@
   gap: 1.3rem;
 }
 
+.slide--deals-carousel:last-child {
+  width: 20% !important;
+}
+
 @media (min-width: 1024px) {
   .sliderArrows--carousel-main-banner {
     width: 48px;

@@ -62,7 +62,8 @@
     "vtex.tab-layout": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x",
-    "romazi.components": "0.x"
+    "romazi.components": "0.x",
+    "vtex.store-newsletter": "1.x"
   },
   "peerDependencies": {},
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"

@@ -34,7 +34,7 @@
 @font-face {
   font-family: 'Mulish';
   src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6be2200a-1f16-436d-8132-a59abebd0e6d___5416a925ffafb775c6bffd116d87deb0.ttf);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @font-face {
@@ -53,4 +53,22 @@
   font-family: 'Nunito';
   src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/43967844-427a-4967-ac62-4b06b1317e03___b83ce9c59c73ade26bb7871143fd76bb.ttf);
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/2ae8e611-9670-49f5-ac28-8fe22d05e90d___122dd68d69fe9587e062d20d9ff5de2a.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'REM';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c376f5c1-0175-4149-b16e-3e1f210bfe74___98f8435cdad21310dc9f8b41523d4e7a.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'REM SemiBold';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/b855e9cf-639b-4660-999e-b497741a7372___a7a2028ccae3f31bbed15f3d034188a3.ttf);
+  font-weight: 500;
 }

@@ -1,17 +1,26 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#main-banner",
+      "flex-layout.row#main-banner",
       "flex-layout.row#deals",
       // "responsive-layout.desktop#background-banner-our-lines",
       // "responsive-layout.mobile#background-banner-our-lines",
-      "__fold__",
-      // "rich-text#shelf-title",
       "flex-layout.row#shelf",
-      "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
-      "newsletter"
+      // "info-card#home",
+      "responsive-layout.desktop#double-banner",
+      "responsive-layout.phone#double-banner",
+      "responsive-layout.tablet#double-banner",
+      "__fold__",
+      "flex-layout.row#triple-banner",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "flex-layout.row#main-banner": {
+    "props": {
+      "blockClass": "container"
+    },
+    "children": [
+      "list-context.image-list#main-banner"
     ]
   },
   "list-context.image-list#main-banner": {
@@ -48,12 +57,6 @@
       "blockClass": "carousel-main-banner"
     }
   },
-  "rich-text#shelf-title": {
-    "props": {
-      "text": "## Summer",
-      "blockClass": "shelfTitle"
-    }
-  },
   "flex-layout.row#shelf": {
     "children": [
       "list-context.product-list#demo1"
@@ -86,25 +89,12 @@
     "props": {
       "id": "info-card-home",
       "isFullModeStyle": false,
-      "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
+      "textPosition": "center",
+      "imageUrl": "https://romazi.vteximg.com.br/arquivos/nossas-linhas-banner.png",
+      "headline": "Nossas Linhas",
       "callToActionUrl": "/sale/d",
       "blockClass": "info-card-home",
       "textAlignment": "center"
-    }
-  },
-  "rich-text#question": {
-    "props": {
-      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
-      "blockClass": "question"
-    }
-  },
-  "rich-text#link": {
-    "props": {
-      "text": "\n**Reach us at**\nwww.vtex.com.br",
-      "blockClass": "link"
     }
   }
 }

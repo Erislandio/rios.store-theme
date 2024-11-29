@@ -1,0 +1,112 @@
+{
+  "responsive-layout.phone#double-banner": {
+    "children": [
+      "flex-layout.row#double-banner-mobile"
+    ]
+  },
+  "responsive-layout.desktop#double-banner": {
+    "children": [
+      "flex-layout.row#double-banner"
+    ]
+  },
+  "responsive-layout.tablet#double-banner": {
+    "children": [
+      "flex-layout.row#double-banner"
+    ]
+  },
+  "flex-layout.row#double-banner": {
+    "title": "Banner Duplo - desktop",
+    "props": {
+      "blockClass": [
+        "double-banner",
+        "container"
+      ]
+    },
+    "children": [
+      "image#double-banner-1",
+      "image#double-banner-2"
+    ]
+  },
+  "flex-layout.row#double-banner-mobile": {
+    "title": "Banner Duplo - mobile",
+    "props": {
+      "blockClass": [
+        "double-banner-mobile"
+      ]
+    },
+    "children": [
+      "image#double-banner-1-mobile",
+      "image#double-banner-2-mobile"
+    ]
+  },
+  "image#double-banner-1": {
+    "title": "banner 1",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/08893c8a-10fc-4560-a8cc-ef5a6f96ba5a___23a72a1a7e7caf12266f620c88d9fb7f.png",
+      "maxWidth": "868px",
+      "maxHeight": "400px",
+      "blockClass": "double-banner-img"
+    }
+  },
+  "image#double-banner-2": {
+    "title": "banner 2",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/17a41a78-9997-4350-b100-261b2bb492a4___a65095b21daa38d381fe6c90ff8bbb5d.png",
+      "maxWidth": "868px",
+      "maxHeight": "400px",
+      "blockClass": "double-banner-img"
+    }
+  },
+  "image#double-banner-1-mobile": {
+    "title": "banner 1",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/7562d5d6-4e81-4f89-aeb0-a4e45b8cf30b___f25b9f2db75c006950eb576077304f98.png",
+      "blockClass": "double-banner-img"
+    }
+  },
+  "image#double-banner-2-mobile": {
+    "title": "banner 2",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/8d682da1-54a0-4a41-998a-cad253ce2359___22cab3d7b0ae8fd8ea3bb7692bbc8013.png",
+      "blockClass": "double-banner-img"
+    }
+  },
+  "flex-layout.row#triple-banner": {
+    "title": "Banner triplo - Conteúdo",
+    "props": {
+      "blockClass": [
+        "triple-banner",
+        "container"
+      ]
+    },
+    "children": [
+      "image#triple-banner-1",
+      "image#triple-banner-2",
+      "image#triple-banner-3"
+    ]
+  },
+  "image#triple-banner-1": {
+    "title": "banner 1",
+    "props": {
+      "maxWidth": "570px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/645731b6-01ac-4a96-8a6c-9ca2c40950a5___a9b567ac0a2e352d0715196eb2ac9a7a.png",
+      "blockClass": "banner-img"
+    }
+  },
+  "image#triple-banner-2": {
+    "title": "banner 2",
+    "props": {
+      "maxWidth": "570px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/8a8c3009-c697-429f-b55b-0f7af7a2bcec___0fe57c53dc21e9a967a3ea0275c3cc03.png",
+      "blockClass": "banner-img"
+    }
+  },
+  "image#triple-banner-3": {
+    "title": "banner 3",
+    "props": {
+      "maxWidth": "570px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/d06ae85f-bc3a-46f9-ba31-8ef7cdeca2b8___7b0ef82b2ef823b6a2c01f9344d10d51.png",
+      "blockClass": "banner-img"
+    }
+  }
+}

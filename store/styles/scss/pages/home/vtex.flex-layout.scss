@@ -10,7 +10,7 @@
 .flexCol--deals-col {
   display: flex;
   align-items: baseline;
-  margin-left: 16px;
+  margin-left: 8px;
 }
 
 .flexRow--banner-our-lines {
@@ -21,4 +21,104 @@
 .flexRowContent--banner-our-lines .stretchChildrenWidth:last-child,
 .flexRowContent--banner-our-lines .stretchChildrenWidth:first-child {
   position: absolute;
+}
+
+.flexRow--newsletter {
+  background-color: #060028;
+  margin-bottom: 0px;
+}
+
+.flexCol--newsletter-texts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexCol--newsletter-texts {
+  margin: 30px 0 56px 0;
+}
+
+.flexCol--newsletter-col {
+  margin: 0 24px;
+  margin-bottom: 30px;
+}
+
+.flexRow--double-banner-mobile {
+  margin: 64px 16px;
+}
+
+.flexRowContent--double-banner-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flexRowContent--double-banner {
+  display: flex;
+  gap: 24px;
+}
+
+.flexRowContent--triple-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flexRowContent--triple-banner .stretchChildrenWidth {
+  width: 100% !important;
+}
+
+.flexRow--triple-banner :global(.vtex-store-components-3-x-container) {
+  padding: 0 !important;
+}
+
+@media (min-width: 640px) {
+  .flexRowContent--newsletter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0 0 0;
+  }
+
+  .flexRowContent--newsletter .stretchChildrenWidth {
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 1026px) {
+  .flexCol--newsletter-texts {
+    margin: 0;
+  }
+
+  .flexColChild--newsletter-texts {
+    height: auto !important;
+  }
+  .flexRowContent--triple-banner {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1400px) {
+  .flexRowContent--newsletter {
+    flex-direction: row;
+    padding: 0;
+    width: 84%;
+  }
+
+  .flexCol--newsletter-texts {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .flexRowContent--newsletter .stretchChildrenWidth:first-child {
+    width: 40% !important;
+  }
+
+  .flexRowContent--newsletter .stretchChildrenWidth:last-child {
+    width: 60% !important;
+  }
+  .flexRow--newsletter {
+    padding: 24px 0;
+  }
 }
