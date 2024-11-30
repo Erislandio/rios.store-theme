@@ -18,9 +18,8 @@
   position: relative;
   margin-bottom: 9rem;
 }
-
-.flexRowContent--banner-our-lines .stretchChildrenWidth:last-child,
-.flexRowContent--banner-our-lines .stretchChildrenWidth:first-child {
+.flexRow--banner-our-lines .stretchChildrenWidth:last-child,
+.flexRow--banner-our-lines .stretchChildrenWidth:first-child {
   position: absolute;
 }
 
@@ -64,13 +63,43 @@
   flex-direction: column;
   gap: 24px;
 }
-
 .flexRowContent--triple-banner .stretchChildrenWidth {
   width: 100% !important;
 }
 
 .flexRow--triple-banner :global(.vtex-store-components-3-x-container) {
   padding: 0 !important;
+}
+
+.flexRow--about-us-mobile :global(.vtex-store-components-3-x-container) {
+  padding: 0 !important;
+}
+
+.flexRow--about-us-mobile {
+  position: relative;
+}
+
+.flexRow--about-us-desktop {
+  position: relative;
+}
+
+.flexRow--about-us-desktop :global(.vtex-store-components-3-x-container) {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.flexRowContent--about-us-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexRowContent--about-us-desktop .stretchChildrenWidth {
+  width: 50% !important;
+  display: block;
+}
+.flexRowContent--about-us-desktop .stretchChildrenWidth:last-child {
+  width: 0 !important;
 }
 
 @media (min-width: 640px) {
@@ -94,6 +123,10 @@
   .flexRowContent--triple-banner {
     flex-direction: row;
   }
+  .flexCol--about-us-mobile {
+    width: 50% !important;
+    margin-left: 24px;
+  }
 }
 @media (min-width: 1400px) {
   .flexRowContent--newsletter {
@@ -101,18 +134,23 @@
     padding: 0;
     width: 84%;
   }
-  .flexCol--newsletter-texts {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
   .flexRowContent--newsletter .stretchChildrenWidth:first-child {
     width: 40% !important;
   }
   .flexRowContent--newsletter .stretchChildrenWidth:last-child {
     width: 60% !important;
   }
+  .flexCol--newsletter-texts {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
   .flexRow--newsletter {
     padding: 24px 0;
+  }
+  .flexRowContent--about-us-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

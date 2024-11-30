@@ -1,0 +1,87 @@
+{
+  "responsive-layout.desktop#about-us": {
+    "children": [
+      "flex-layout.row#about-us-desktop"
+    ]
+  },
+  "responsive-layout.phone#about-us": {
+    "children": [
+      "flex-layout.row#about-us-mobile"
+    ]
+  },
+  "flex-layout.row#about-us-desktop": {
+    "title": "sobre nós - conteúdo",
+    "props": {
+      "blockClass": [
+        "about-us-desktop"
+      ]
+    },
+    "children": [
+      "flex-layout.col#about-us-text",
+      "image#about-us-desktop",
+      "video#about-us"
+    ]
+  },
+  "flex-layout.row#about-us-mobile": {
+    "title": "sobre nós - conteúdo",
+    "props": {
+      "blockClass": "about-us-mobile"
+    },
+    "children": [
+      "flex-layout.col#about-us-text",
+      "image#about-us-mobile",
+      "video#about-us"
+    ]
+  },
+  "flex-layout.col#about-us-text": {
+    "title": "Sobre nós - conteúdo",
+    "props": {
+      "blockClass": "about-us-mobile"
+    },
+    "children": [
+      "rich-text#about-us-title",
+      "rich-text#about-us-text"
+    ]
+  },
+  "rich-text#about-us-title": {
+    "title": "Sobre nós - titulo",
+    "props": {
+      "blockClass": "about-us-title",
+      "text": "## SOBRE NÓS"
+    }
+  },
+  "rich-text#about-us-text": {
+    "title": "Sobre nós - texto",
+    "props": {
+      "blockClass": "about-us-text",
+      "text": "Sapien sem id molestie imperdiet laoreet semper nibh sapien velit. Congue purus donec fringilla sollicitudin nunc pharetra cum tellus arcu. Nulla neque faucibus at lorem volutpat. Urna eget feugiat purus morbi bibendum pulvinar magna rhoncus. Integer condimentum nunc sodales."
+    }
+  },
+  "image#about-us-mobile": {
+    "title": "Sobre nós - Imagem",
+    "props": {
+      "maxWidth": "",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/7979439e-bc99-4f56-8174-69c7b16c70af___3560723612f20a06223cba4bd1e8d6df.png",
+      "blockClass": "about-us-img"
+    }
+  },
+  "image#about-us-desktop": {
+    "title": "Sobre nós - Imagem",
+    "props": {
+      "maxWidth": "",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/da640ac7-35b3-425d-8445-19e66f2c49e1___17ad40b06357e919a177a331a57e8c9b.png",
+      "blockClass": "about-us-img"
+    }
+  },
+  "video#about-us": {
+    "props": {
+      "width": "100%",
+      "height": "206px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": true,
+      "src": "https://www.youtube.com/watch?v=frW9Bx-4M4Y&t=4s",
+      "blockClass": "video-about-us"
+    }
+  }
+}

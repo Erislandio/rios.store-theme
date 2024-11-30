@@ -69,6 +69,15 @@
   margin-top: 0;
 }
 
+.paragraph--poweredby-titles {
+  color: #91989e;
+  font-family: "Futura Bk BT", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
 @media (min-width: 1025px) {
   .paragraph--address {
     text-align: left;

@@ -26,7 +26,6 @@
 .accordionIcon--footer-menu-title--isClosed {
   font-size: 0;
 }
-
 .accordionIcon--footer-menu-title--isOpen::before,
 .accordionIcon--footer-menu-title--isClosed::before {
   content: "";

@@ -65,7 +65,35 @@
   margin-top: 14px;
 }
 
-@media (min-width: 1024px) {
+.wrapper--about-us-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading--about-us-title {
+  color: #222;
+  font-family: 'Mulish Bold', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.paragraph--about-us-text {
+  color: #222;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 24px;
+  margin-bottom: 86px;
+}
+
+@media (min-width: 1025px) {
   .paragraph--deals-title {
     font-size: 18px;
   }
@@ -74,5 +102,15 @@
   }
   .paragraph--newsletter-subtitle {
     margin-top: 6px;
+  }
+
+  .wrapper--about-us-title {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .paragraph--about-us-text {
+    margin-left: 0;
+    padding-right: 30px;
   }
 }

@@ -61,10 +61,10 @@
 
 .flexRowContent--romazi-address {
   flex-direction: column;
-}
 
-.flexRowContent--romazi-address .stretchChildrenWidth {
-  width: 100% !important;
+  .stretchChildrenWidth {
+    width: 100% !important;
+  }
 }
 
 .flexRow--romazi-address {
@@ -81,10 +81,12 @@
 @media (min-width: 641px) {
   .flexRowContent--footer-contact {
     align-items: center;
+
+    .stretchChildrenWidth {
+      width: 70% !important;
+    }
   }
-  .flexRowContent--footer-contact .stretchChildrenWidth {
-    width: 70% !important;
-  }
+
   .flexCol--contact-content {
     max-width: none;
     min-width: unset;

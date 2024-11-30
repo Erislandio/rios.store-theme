@@ -63,7 +63,6 @@
 .flexRowContent--romazi-address {
   flex-direction: column;
 }
-
 .flexRowContent--romazi-address .stretchChildrenWidth {
   width: 100% !important;
 }

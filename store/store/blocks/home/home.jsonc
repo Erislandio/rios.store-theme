@@ -11,7 +11,10 @@
       "responsive-layout.phone#double-banner",
       "responsive-layout.tablet#double-banner",
       "__fold__",
+      "flex-layout.row#categories",
       "flex-layout.row#triple-banner",
+      "responsive-layout.desktop#about-us",
+      "responsive-layout.phone#about-us",
       "flex-layout.row#newsletter"
     ]
   },

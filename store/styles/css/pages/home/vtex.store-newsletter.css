@@ -24,12 +24,10 @@
 .confirmationCheckboxContainer {
   margin-bottom: 40px;
 }
-
 .confirmationCheckboxContainer :global(.vtex-checkbox__line-container) {
   display: flex;
   align-items: center;
 }
-
 .confirmationCheckboxContainer :global(.vtex-checkbox__label) {
   color: #fff;
   font-family: "Mulish", sans-serif;
@@ -45,7 +43,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .formSubmitContainer--newsletter-submit :global(.vtex-button) {
   display: flex;
   width: 307px;
@@ -59,7 +56,6 @@
   background: #bc1818;
   border: none;
 }
-
 .formSubmitContainer--newsletter-submit :global(.vtex-button__label) {
   color: #fff;
   text-align: center;
@@ -95,5 +91,9 @@
   .emailInputContainer--newsletter-input {
     width: 100%;
     max-width: 508px;
+  }
+  .formSubmitContainer--newsletter-submit {
+    position: relative;
+    top: 13px;
   }
 }

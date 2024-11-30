@@ -23,54 +23,54 @@
 
 .confirmationCheckboxContainer {
   margin-bottom: 40px;
-}
 
-.confirmationCheckboxContainer :global(.vtex-checkbox__line-container) {
-  display: flex;
-  align-items: center;
-}
+  :global(.vtex-checkbox__line-container) {
+    display: flex;
+    align-items: center;
+  }
 
-.confirmationCheckboxContainer :global(.vtex-checkbox__label) {
-  color: #fff;
-  font-family: 'Mulish', sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-  margin-left: 8px;
+  :global(.vtex-checkbox__label) {
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-left: 8px;
+  }
 }
 
 .formSubmitContainer--newsletter-submit {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.formSubmitContainer--newsletter-submit :global(.vtex-button) {
-  display: flex;
-  width: 307px;
-  height: 58px;
-  padding: 12px 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  :global(.vtex-button) {
+    display: flex;
+    width: 307px;
+    height: 58px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
 
-  border-radius: 16px;
-  background: #bc1818;
-  border: none;
-}
+    border-radius: 16px;
+    background: #bc1818;
+    border: none;
+  }
 
-.formSubmitContainer--newsletter-submit :global(.vtex-button__label) {
-  color: #fff;
-  text-align: center;
-  font-family: 'REM', sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.96px;
-  text-transform: capitalize;
+  :global(.vtex-button__label) {
+    color: #fff;
+    text-align: center;
+    font-family: 'REM', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    text-transform: capitalize;
+  }
 }
 
 @media (min-width: 1026px) {
@@ -100,5 +100,10 @@
   .emailInputContainer--newsletter-input {
     width: 100%;
     max-width: 508px;
+  }
+
+  .formSubmitContainer--newsletter-submit {
+    position: relative;
+    top: 13px;
   }
 }
