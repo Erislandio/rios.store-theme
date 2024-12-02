@@ -3,16 +3,15 @@
     "blocks": [
       "flex-layout.row#main-banner",
       "flex-layout.row#deals",
-      // "responsive-layout.desktop#background-banner-our-lines",
-      // "responsive-layout.mobile#background-banner-our-lines",
+      "flex-layout.row#banner-our-lines",
       "flex-layout.row#shelf",
-      // "info-card#home",
+      "__fold__",
       "responsive-layout.desktop#double-banner",
       "responsive-layout.phone#double-banner",
       "responsive-layout.tablet#double-banner",
-      "__fold__",
       "flex-layout.row#categories",
       "flex-layout.row#triple-banner",
+      "flex-layout.row#romazi-premium",
       "responsive-layout.desktop#about-us",
       "responsive-layout.phone#about-us",
       "flex-layout.row#newsletter"
@@ -86,18 +85,6 @@
       "infinite": true,
       "fullWidth": false,
       "blockClass": "shelf"
-    }
-  },
-  "info-card#home": {
-    "props": {
-      "id": "info-card-home",
-      "isFullModeStyle": false,
-      "textPosition": "center",
-      "imageUrl": "https://romazi.vteximg.com.br/arquivos/nossas-linhas-banner.png",
-      "headline": "Nossas Linhas",
-      "callToActionUrl": "/sale/d",
-      "blockClass": "info-card-home",
-      "textAlignment": "center"
     }
   }
 }

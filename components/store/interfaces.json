@@ -1,5 +1,11 @@
 {
-  "custom-menu-drawer": {
-    "component": "CustomMenuDrawer"
+  "custom-categories-slider": {
+    "component": "CategoriesSlider"
+  },
+  "custom-banner-text": {
+    "component": "BannerOurLines"
+  },
+  "custom-romazi-premium": {
+    "component": "RomaziPremium"
   }
 }

@@ -34,7 +34,11 @@
   height: 33px;
 }
 
-.sliderArrows {
+.slide {
+  padding: 0 12px;
+}
+
+.categoryContainerWrapper .sliderArrows {
   top: 26%;
 }
 
@@ -51,4 +55,80 @@
   height: 8px !important;
   border-radius: 12px;
   background-color: rgba(13, 22, 53, 0.6);
+}
+
+// --------------------- Banner Our Lines -------------------------------------
+
+.carouselImage,
+.bannerOurLinesImage {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerOurLinesContainer {
+  position: relative;
+}
+
+.textsContainer {
+  position: absolute;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+.bannerOurLines,
+.bannerOurLinesTitle {
+  color: #fff;
+  font-family: Arial;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.bannerOurLines {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.bannerOurLinesContainer .sliderLayoutContainer {
+  position: absolute;
+  top: 50%;
+  // margin-left: 16px;
+}
+
+.bannerOurLinesContainer .slide {
+  max-width: 335px;
+  max-width: 335px;
+}
+
+.bannerOurLinesContainer .paginationDotsContainer {
+  bottom: -10%;
+}
+
+.bannerOurLinesContainer .sliderArrows {
+  // background: #e2e2e2 !important;
+  // border-radius: 50%;
+  // padding: 10px;
+}
+
+.bannerOurLinesContainer .caretIcon::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  background: #e2e2e2;
+  // opacity: 0.3;
+  display: flex;
+}
+
+.carouselImageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1025px) {
+  .bannerOurLinesContainer .sliderLayoutContainer {
+    top: 55%;
+  }
 }

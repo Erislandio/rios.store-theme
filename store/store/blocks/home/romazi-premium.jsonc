@@ -1,0 +1,50 @@
+{
+  "flex-layout.row#romazi-premium": {
+    "title": "",
+    "props": {
+      "blockClass": [
+        "romazi-premium",
+        "container"
+      ]
+    },
+    "children": [
+      "custom-romazi-premium#home"
+    ]
+  },
+  "custom-romazi-premium#home": {
+    "props": {
+      "lines": [
+        {
+          "backgroundImage": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/9e6d0ac4-5616-46bd-9309-f5649bd7afa2___0a1a3a59afa016f378dae8b97dac665f.png",
+          "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/dc9ac514-996b-420d-8f6e-c6e72be23c02___56fb507d800dd75905149ea3d1ee4387.png",
+          "title": "BRANCO ACETINADO",
+          "text": "A linha Romazi Premium, com acabamento branco acetinado, traz sofisticação e elegância, evitando reflexos excessivos. Esse toque fosco oferece modernidade e requinte, mantendo a versatilidade e discrição do branco clássico em qualquer ambiente.",
+          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/a8db5efc-9dbe-4920-a228-2caea4e5adf0___891c267f69447350f184b189820fe68c.png",
+          "harmonizeColors": [
+            "#FFF",
+            "#D3D2CE",
+            "#C5BEBE",
+            "#DFE4BA",
+            "#DDC8AA",
+            "#676767"
+          ]
+        },
+        {
+          "backgroundImage": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/9fb7b35a-1980-40fa-a444-52c7e9fe27cf___45583c261d891c44a969c1b202f99221.png",
+          "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/dc9ac514-996b-420d-8f6e-c6e72be23c02___56fb507d800dd75905149ea3d1ee4387.png",
+          "title": "OFF WHITE",
+          "text": "A linha Romazi Premium, com acabamento branco acetinado, traz sofisticação e elegância, evitando reflexos excessivos. Esse toque fosco oferece modernidade e requinte, mantendo a versatilidade e discrição do branco clássico em qualquer ambiente.",
+          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/7492c4d7-9729-4c01-914d-b7396f058189___98f692ad88a11332fad464b8462a02a7.png",
+          "harmonizeColors": [
+            "#FFF",
+            "#DFE4BA",
+            "#DDC8AA",
+            "#676767",
+            "#D3D2CE",
+            "#C5BEBE"
+          ]
+        }
+      ]
+    }
+  }
+}

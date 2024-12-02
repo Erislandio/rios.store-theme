@@ -8,10 +8,10 @@
       ]
     },
     "children": [
-      "custom-categories-slider#default2"
+      "custom-categories-slider#home"
     ]
   },
-  "custom-categories-slider#default2": {
+  "custom-categories-slider#home": {
     "props": {
       "title": "Nossas categorias",
       "categories": [

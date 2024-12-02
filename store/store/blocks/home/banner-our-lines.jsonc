@@ -1,0 +1,50 @@
+  {
+    "flex-layout.row#banner-our-lines": {
+      "title": "Nossas linhas",
+      "props": {
+        "blockClass": [
+          "banner-our-lines",
+          "container"
+        ]
+      },
+      "children": [
+        "custom-banner-text#home"
+      ]
+    },
+    "custom-banner-text#home": {
+      "props": {
+        "bannerData": {
+          "title": "Nossas linhas",
+          "text": "Arcu maecenas ut id nunc. Convallis nisi in nulla consequat in nunc. Augue facilisis nulla cras vel.",
+          "imageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c1c99521-efad-4889-9185-164e4825019c___95239542387c20fe167c64d60d9b0382.png",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/4ef74275-a35a-4098-8d6c-1647d1c1a231___41cb84c1a1cabf6c647f21f65450715d.png",
+          "imagesCarousel": [
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c5bd0ed5-5c1e-4e92-8321-84e1af1f9eff___3ee63057bcc610ddb7caa6969f5e637b.png"
+            },
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/16eef7b0-3d41-423b-bfc3-4a99a14f2c9c___017526d8f4c2cc059e4ef7be8914ca64.png"
+            },
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6ab5e524-94b7-4a10-a3ca-eeb6dbbe6f02___0ff7daa569ec53fb6a449fcc4c3daf83.png"
+            },
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/83f7a91a-91c4-4f68-8dbd-3f30f5ac8b26___d969d4553e4d0fa6398208dcdf60e80d.png"
+            },
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f6c0c6d9-3cda-49ff-8cc6-3a33e34f101e___7b5dfb995fc5ef4fa5ab94b782b7e13c.png"
+            },
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c5bd0ed5-5c1e-4e92-8321-84e1af1f9eff___3ee63057bcc610ddb7caa6969f5e637b.png"
+            },
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/16eef7b0-3d41-423b-bfc3-4a99a14f2c9c___017526d8f4c2cc059e4ef7be8914ca64.png"
+            },
+            {
+              "imageOurLines": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6ab5e524-94b7-4a10-a3ca-eeb6dbbe6f02___0ff7daa569ec53fb6a449fcc4c3daf83.png"
+            }
+          ]
+        }
+      }
+    }
+  }
