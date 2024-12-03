@@ -1,7 +1,8 @@
 import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { Slide, Slider } from 'vtex.slider'
+import { useDevice } from 'vtex.device-detector'
+import { Dots, Slide, Slider } from 'vtex.slider'
 import { IconCaret } from 'vtex.store-icons'
 
 interface RomaziPremiumLines {
@@ -10,27 +11,52 @@ interface RomaziPremiumLines {
   title: string
   text: string
   imagesCarousel: string
-  harmonizeColors: HarmonizeColors[]
+  harmonizeColors: string[]
 }
 
-interface HarmonizeColors {
-  colors: string
-}
+// interface HarmonizeColors {
+//   colors: string
+// }
 
-const CSS_HANDLES = ['romaziPremiumContainer'] as const
+const CSS_HANDLES = [
+  'romaziPremiumContainer',
+  'romaziPremiumLogoContainer',
+  'romaziPremiumTextsContainer',
+  'romaziPremiumLogo',
+  'romaziPremiumTitle',
+  'romaziPremiumText',
+  'romaziPremiumButton',
+  'romaziPremiumBackgroundImageContainer',
+  'romaziPremiumBackgroundImage',
+  'romaziPremiumSlider',
+  'romaziPremiumHarmonizeContainer',
+  'romaziPremiumHarmonizeTitle',
+  'harmonizeColors',
+  'harmonizeColorsContainer',
+  'logoSoulsContainer',
+  'logoSouls',
+  'dots',
+  'dotsActive',
+] as const
 
 const RomaziPremium: StoreFrontFC<{
   lines: RomaziPremiumLines[]
 }> = ({ lines = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const [currentLine, setCurrentLine] = useState<RomaziPremiumLines>(lines[0])
-  const [currentSlide, setCurrentSlide] = useState(1)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const { isMobile } = useDevice()
 
   useEffect(() => {
     if (lines.length) {
       setCurrentLine(lines[0])
     }
   }, [lines])
+
+  const handleChangeSlide = (i: number) => {
+    setCurrentSlide(i)
+    setCurrentLine(lines[i])
+  }
 
   const perPage = {
     1300: 1,
@@ -57,25 +83,34 @@ const RomaziPremium: StoreFrontFC<{
 
   return (
     <div className={handles.romaziPremiumContainer}>
-      <div>
+      <div className={handles.romaziPremiumLogoContainer}>
         <img
+          className={handles.romaziPremiumLogo}
           src="https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/5c594b09-11c0-4fdd-ac1b-9824f9e91aa1___59c1bbdcaa3e0347247b07044821a8aa.png"
           alt="Romazi Premium Logo"
         />
       </div>
-      <div>
-        <img src={currentLine.backgroundImage} alt="backgroundImage" />
+      <div className={handles.romaziPremiumBackgroundImageContainer}>
+        <img
+          className={handles.romaziPremiumBackgroundImage}
+          src={
+            isMobile
+              ? currentLine.backgroundImageMobile
+              : currentLine.backgroundImage
+          }
+          alt="backgroundImage"
+        />
       </div>
-      <div>
+      <div className={handles.romaziPremiumSlider}>
         <Slider
           currentSlide={currentSlide}
-          onChangeSlide={setCurrentSlide}
+          onChangeSlide={handleChangeSlide}
           easing="ease"
           perPage={perPage}
           arrowRender={arrowRender}
         >
-          {lines.map((item) => (
-            <Slide>
+          {lines.map((item, index) => (
+            <Slide key={index} sliderTransitionDuration={500} className="teste">
               <img
                 // className={}
                 // alt={item.__editorItemTitle}
@@ -86,15 +121,50 @@ const RomaziPremium: StoreFrontFC<{
             </Slide>
           ))}
         </Slider>
+        <Dots
+          // perPage={perPage
+          showDotsPerPage
+          currentSlide={currentSlide}
+          totalSlides={lines.length}
+          onChangeSlide={handleChangeSlide}
+          classes={{
+            root: 'pv4',
+            dot: `${handles.dots}`,
+            activeDot: `${handles.dotsActive}`,
+          }}
+        />
       </div>
-      <div>
-        <h3>{currentLine.title}</h3>
-        <p>{currentLine.text}</p>
-        <button>Conhecer a linha</button>
-        <div>
-          <p>cores que harmonizam</p>
+      <div className={handles.romaziPremiumTextsContainer}>
+        <h3 className={handles.romaziPremiumTitle}>{currentLine.title}</h3>
+        <p className={handles.romaziPremiumText}>{currentLine.text}</p>
+        <button className={handles.romaziPremiumButton}>
+          Conhecer a linha
+        </button>
+      </div>
+      <div className={handles.romaziPremiumHarmonizeContainer}>
+        <p className={handles.romaziPremiumHarmonizeTitle}>
+          cores que harmonizam
+        </p>
+        <div className={handles.harmonizeColorsContainer}>
+          {currentLine.harmonizeColors.map((item) => (
+            <div
+              className={handles.harmonizeColors}
+              style={{
+                backgroundColor: item,
+              }}
+            ></div>
+          ))}
         </div>
       </div>
+      {!isMobile && (
+        <div className={handles.logoSoulsContainer}>
+          <img
+            className={handles.logoSouls}
+            src="https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/9868e06a-d824-42ad-ae1e-9965254758ab___64f449dbe45c3b3b4319214ccb31c05d.png"
+            alt="Linha Souls Logo"
+          />
+        </div>
+      )}
     </div>
   )
 }

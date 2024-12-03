@@ -7,5 +7,8 @@
   },
   "custom-romazi-premium": {
     "component": "RomaziPremium"
+  },
+  "custom-podcast": {
+    "component": "PodCast"
   }
 }
