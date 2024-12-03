@@ -102,6 +102,19 @@
   padding: 0 !important;
 }
 
+.flexRow--deals {
+  margin-top: 0;
+}
+
+.flexRow--romazi-premium {
+  background-color: #222;
+  padding: 56px 0;
+}
+.flexRow--romazi-premium :global(.vtex-store-components-3-x-container) {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 @media (min-width: 640px) {
   .flexRowContent--newsletter {
     flex-direction: column;
@@ -111,6 +124,13 @@
   }
   .flexRowContent--newsletter .stretchChildrenWidth {
     width: 90% !important;
+  }
+  .flexRowContent--about-us-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .flexRowContent--about-us-mobile .stretchChildrenWidth {
+    width: 100% !important;
   }
 }
 @media (min-width: 1026px) {

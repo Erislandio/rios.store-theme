@@ -3,8 +3,7 @@
     "title": "",
     "props": {
       "blockClass": [
-        "romazi-premium",
-        "container"
+        "romazi-premium"
       ]
     },
     "children": [
@@ -19,7 +18,7 @@
           "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/dc9ac514-996b-420d-8f6e-c6e72be23c02___56fb507d800dd75905149ea3d1ee4387.png",
           "title": "BRANCO ACETINADO",
           "text": "A linha Romazi Premium, com acabamento branco acetinado, traz sofisticação e elegância, evitando reflexos excessivos. Esse toque fosco oferece modernidade e requinte, mantendo a versatilidade e discrição do branco clássico em qualquer ambiente.",
-          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/a8db5efc-9dbe-4920-a228-2caea4e5adf0___891c267f69447350f184b189820fe68c.png",
+          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f78fd3f0-28f6-4cc6-a37b-9da9c8f6c8a1___09d2cf4db5b87390ac7171903c08ac69.png",
           "harmonizeColors": [
             "#FFF",
             "#D3D2CE",
@@ -31,10 +30,55 @@
         },
         {
           "backgroundImage": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/9fb7b35a-1980-40fa-a444-52c7e9fe27cf___45583c261d891c44a969c1b202f99221.png",
-          "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/dc9ac514-996b-420d-8f6e-c6e72be23c02___56fb507d800dd75905149ea3d1ee4387.png",
+          "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/ce69ba5a-e806-4c7d-8bd6-ccc00f02fb95___8c7901e2fc2b65fa610341c7b695e377.png",
           "title": "OFF WHITE",
           "text": "A linha Romazi Premium, com acabamento branco acetinado, traz sofisticação e elegância, evitando reflexos excessivos. Esse toque fosco oferece modernidade e requinte, mantendo a versatilidade e discrição do branco clássico em qualquer ambiente.",
-          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/7492c4d7-9729-4c01-914d-b7396f058189___98f692ad88a11332fad464b8462a02a7.png",
+          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/e69c6656-5312-4130-8036-2fe0298317a4___8261670a3bca6a087a6b68581dd5a04b.png",
+          "harmonizeColors": [
+            "#DFE4BA",
+            "#DDC8AA",
+            "#676767",
+            "#FFF",
+            "#D3D2CE",
+            "#C5BEBE"
+          ]
+        },
+        {
+          "backgroundImage": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/b835d9e5-134e-4d6f-a93d-c0a2eed468a2___e17439fd45812b0f336fe63ba99ef08e.png",
+          "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/1fd29a7b-6075-40cd-b5ab-eabb51e8c20d___7868a9a9935e6e9113f0ca5ef0b9b6ad.png",
+          "title": "FENDI",
+          "text": "A linha Romazi Premium, com acabamento branco acetinado, traz sofisticação e elegância, evitando reflexos excessivos. Esse toque fosco oferece modernidade e requinte, mantendo a versatilidade e discrição do branco clássico em qualquer ambiente.",
+          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/bcfeb810-066b-4b53-aeb7-8fcf83703e4b___ed183f04eb34ecd1732422f6827a72dd.png",
+          "harmonizeColors": [
+            "#FFF",
+            "#DFE4BA",
+            "#DDC8AA",
+            "#676767",
+            "#D3D2CE",
+            "#C5BEBE"
+          ]
+        },
+        {
+          "backgroundImage": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/1d25b0a9-53dc-4850-a492-96396cdc8739___e7032e9480a6df25a8a4812705c9bca9.png",
+          "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6af80f24-2a4b-48ef-b8b2-d9af686aaa79___dbd21ea84e1a4d57f06ad4e056dbfe39.png",
+          "title": "GRAFITE",
+          "text": "A linha Romazi Premium, com acabamento branco acetinado, traz sofisticação e elegância, evitando reflexos excessivos. Esse toque fosco oferece modernidade e requinte, mantendo a versatilidade e discrição do branco clássico em qualquer ambiente.",
+          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/fd47182b-ff7c-48a8-8353-57e0ae04b766___60e52b59c9844376e952e046465a5108.png",
+          "harmonizeColors": [
+            "#FFF",
+            "#DFE4BA",
+            "#DDC8AA",
+            "#676767",
+            "#D3D2CE",
+            "#C5BEBE"
+          ]
+        },
+        {
+          "backgroundImage": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/a510f7bc-8611-42f5-a449-491669084d75___8510beaa8ee354943d8469473fbe4509.png",
+          "backgroundImageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/a51987b6-ef58-4cc7-889a-c5d914eff1f7___88d2294c8b5ec907a05542c2a3a7bcc4.png",
+          "title": "BLACK PIANO",
+          "text": "A linha Romazi Premium, com acabamento branco acetinado, traz sofisticação e elegância, evitando reflexos excessivos. Esse toque fosco oferece modernidade e requinte, mantendo a versatilidade e discrição do branco clássico em qualquer ambiente.",
+          "imagesCarousel": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/4b66bbdf-f369-4ecc-af1c-3efadc1ec6ae___d2b45bc179e6c271fe696d5306318bbb.png",
           "harmonizeColors": [
             "#FFF",
             "#DFE4BA",

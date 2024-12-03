@@ -78,7 +78,7 @@
 .bannerOurLines,
 .bannerOurLinesTitle {
   color: #fff;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -130,5 +130,208 @@
 @media (min-width: 1025px) {
   .bannerOurLinesContainer .sliderLayoutContainer {
     top: 55%;
+  }
+}
+
+// --------------------------- Romazi Premium ------------------------------------
+
+.romaziPremiumLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding-bottom: 56px;
+}
+
+.romaziPremiumLogo {
+  width: 216px;
+  height: 58px;
+}
+
+.romaziPremiumTextsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.romaziPremiumTitle {
+  color: #fff;
+  font-family: 'REM', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px; /* 100% */
+  letter-spacing: 1.28px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.romaziPremiumText {
+  color: #fff;
+  text-align: justify;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 25.2px */
+  width: 100%;
+  margin: 0;
+}
+
+.romaziPremiumButton {
+  background-color: transparent;
+  display: flex;
+  width: 226px;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 136px;
+  border: 1px solid #fff;
+
+  color: #fff;
+  text-align: center;
+  font-family: 'REM', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  margin: 24px 0;
+  cursor: pointer;
+}
+
+.romaziPremiumHarmonizeTitle {
+  color: #fff;
+  font-family: 'REM', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  margin-top: 4px;
+}
+
+.harmonizeColorsContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.harmonizeColors {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.romaziPremiumHarmonizeContainer {
+  padding: 0 24px;
+  margin-top: 32px;
+}
+
+.romaziPremiumContainer {
+  position: relative;
+}
+
+.romaziPremiumBackgroundImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6.25rem;
+}
+
+.romaziPremiumSlider {
+  position: absolute;
+  top: 21%;
+  right: cal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: calc(50% - 125px);
+
+  :global(.vtex-shelf-1-x-arrow) {
+    background-color: #676767;
+    padding: 8px 8px;
+    border-radius: 50%;
+    top: 55%;
+  }
+
+  :global(.vtex-shelf-1-x-arrowRight) {
+    right: 5%;
+  }
+  :global(.vtex-shelf-1-x-arrowLeft) {
+    left: -20%;
+  }
+
+  .caretIcon {
+    color: #f2f2f2;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+  }
+
+  :global(.vtex-slider-0-x-dotsContainer) {
+    gap: 16px;
+  }
+}
+
+.dots {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #4b4b4b;
+}
+
+.dotsActive {
+  background-color: #a5a5a5;
+}
+
+@media (min-width: 1025px) {
+  .romaziPremiumSlider {
+    position: absolute;
+    left: 60%;
+    top: 36%;
+
+    :global(.vtex-shelf-1-x-arrow) {
+      top: 105%;
+    }
+    :global(.vtex-shelf-1-x-arrowRight) {
+      right: 65%;
+    }
+    :global(.vtex-shelf-1-x-arrowLeft) {
+      left: 5%;
+    }
+
+    :global(.vtex-slider-0-x-dotsContainer) {
+      display: flex;
+      top: 105%;
+      left: 20%;
+      gap: 16px;
+    }
+  }
+
+  .romaziPremiumLogoContainer {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .romaziPremiumLogo {
+    width: 316px;
+    height: 85px;
+  }
+  .romaziPremiumTextsContainer {
+    max-width: 606px;
+    align-items: flex-start;
+    margin-left: 8.75rem;
+  }
+  .romaziPremiumLogoContainer {
+    margin-left: 8.75rem;
+  }
+  .romaziPremiumHarmonizeContainer {
+    margin-left: 10.75rem;
+  }
+  .logoSoulsContainer {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
   }
 }

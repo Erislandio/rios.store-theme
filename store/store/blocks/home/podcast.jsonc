@@ -1,0 +1,76 @@
+{
+  "flex-layout.row#podcast": {
+    "title": "Carousel - conteúdo exclusivo",
+    "props": {
+      "blockClass": [
+        "podcast",
+        "container"
+      ]
+    },
+    "children": [
+      "custom-podcast#home"
+    ]
+  },
+  "custom-podcast#home": {
+    "props": {
+      "podCast": [
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Libero urna vulputate mauris et a sed vitae. Adipiscing volutpat arcu eget lobortis elementum est. Donec elementum orci metus scelerisque vestibulum tellus.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/1271a628-ead0-465c-83d5-bdbef5b5af66___695fb07e0ff9a15bafc2c6621d3759fe.png"
+        },
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Quam fusce in lectus amet. Eget turpis elementum aliquet et cum hendrerit in id quam. Magna habitant dignissim donec maecenas rhoncus tempor.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/01c5ae3a-b2e8-421c-8dd8-c135b48f3b66___a023be8715a8459ab28856efd883a933.png"
+        },
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Tempus ac molestie orci nulla enim risus. Lacus neque sollicitudin dictum dui tincidunt tempus scelerisque.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/042f837a-e6ff-4197-b4b0-c7d227928732___23b975a6ffe73d9df7ddf6060be0589d.png"
+        },
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Leo dignissim sit aliquam maecenas nibh eu curabitur. Et aliquam lacus odio dignissim faucibus enim. Tincidunt id semper fusce sed elit.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/325b8ca1-25fc-42c4-b48f-6da2c60b2b5f___79d7dee44eb1210a2ec19ddd868dc50d.png"
+        },
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Libero urna vulputate mauris et a sed vitae. Adipiscing volutpat arcu eget lobortis elementum est. Donec elementum orci metus scelerisque vestibulum tellus.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/1271a628-ead0-465c-83d5-bdbef5b5af66___695fb07e0ff9a15bafc2c6621d3759fe.png"
+        },
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Quam fusce in lectus amet. Eget turpis elementum aliquet et cum hendrerit in id quam. Magna habitant dignissim donec maecenas rhoncus tempor.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/01c5ae3a-b2e8-421c-8dd8-c135b48f3b66___a023be8715a8459ab28856efd883a933.png"
+        },
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Tempus ac molestie orci nulla enim risus. Lacus neque sollicitudin dictum dui tincidunt tempus scelerisque.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/042f837a-e6ff-4197-b4b0-c7d227928732___23b975a6ffe73d9df7ddf6060be0589d.png"
+        },
+        {
+          "__editorItemTitle": "Facilisis eu pretium porta enim.",
+          "date": "05/09/2024",
+          "description": "Leo dignissim sit aliquam maecenas nibh eu curabitur. Et aliquam lacus odio dignissim faucibus enim. Tincidunt id semper fusce sed elit.",
+          "url": "/",
+          "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/325b8ca1-25fc-42c4-b48f-6da2c60b2b5f___79d7dee44eb1210a2ec19ddd868dc50d.png"
+        }
+      ]
+    }
+  }
+}

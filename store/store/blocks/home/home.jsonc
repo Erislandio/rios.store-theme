@@ -13,7 +13,8 @@
       "flex-layout.row#triple-banner",
       "flex-layout.row#romazi-premium",
       "responsive-layout.desktop#about-us",
-      "responsive-layout.phone#about-us",
+      "responsive-layout.mobile#about-us",
+      "flex-layout.row#podcast",
       "flex-layout.row#newsletter"
     ]
   },

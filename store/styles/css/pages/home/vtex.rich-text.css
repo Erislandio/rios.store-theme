@@ -22,7 +22,7 @@
 
 .heading--banner-title {
   color: #fff;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -33,7 +33,7 @@
 
 .paragraph--banner-text {
   color: #fff;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 0;
@@ -93,6 +93,11 @@
   margin-bottom: 86px;
 }
 
+@media (min-width: 640px) {
+  .paragraph--about-us-text {
+    text-align: center;
+  }
+}
 @media (min-width: 1025px) {
   .paragraph--deals-title {
     font-size: 18px;
@@ -110,5 +115,6 @@
   .paragraph--about-us-text {
     margin-left: 0;
     padding-right: 30px;
+    text-align: left;
   }
 }

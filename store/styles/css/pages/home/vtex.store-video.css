@@ -5,6 +5,18 @@
   left: 5%;
 }
 
+@media (min-width: 640px) {
+  .videoContainer--video-about-us {
+    max-width: 520px;
+    height: 300px;
+    left: calc(50% - 260px);
+    top: 35%;
+  }
+  .videoElement--video-about-us {
+    height: 100%;
+    width: 100%;
+  }
+}
 @media (min-width: 1025px) {
   .videoContainer--video-about-us {
     width: 628px !important;

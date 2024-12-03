@@ -4,7 +4,7 @@
       "flex-layout.row#about-us-desktop"
     ]
   },
-  "responsive-layout.phone#about-us": {
+  "responsive-layout.mobile#about-us": {
     "children": [
       "flex-layout.row#about-us-mobile"
     ]
@@ -19,7 +19,7 @@
     "children": [
       "flex-layout.col#about-us-text",
       "image#about-us-desktop",
-      "video#about-us"
+      "video#about-us-home"
     ]
   },
   "flex-layout.row#about-us-mobile": {
@@ -30,7 +30,7 @@
     "children": [
       "flex-layout.col#about-us-text",
       "image#about-us-mobile",
-      "video#about-us"
+      "video#about-us-home"
     ]
   },
   "flex-layout.col#about-us-text": {
@@ -73,7 +73,7 @@
       "blockClass": "about-us-img"
     }
   },
-  "video#about-us": {
+  "video#about-us-home": {
     "props": {
       "width": "100%",
       "height": "206px",
