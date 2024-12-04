@@ -165,6 +165,7 @@
   letter-spacing: 1.28px;
   width: 100%;
   margin-bottom: 16px;
+  margin-top: 55px;
 }
 
 .romaziPremiumText {
@@ -272,6 +273,10 @@
 
   :global(.vtex-slider-0-x-dotsContainer) {
     gap: 16px;
+    display: flex;
+
+    bottom: -10%;
+    left: 40%;
   }
 }
 
@@ -309,29 +314,133 @@
       gap: 16px;
     }
   }
-
-  .romaziPremiumLogoContainer {
-    width: 100%;
-    align-items: flex-start;
-  }
   .romaziPremiumLogo {
     width: 316px;
     height: 85px;
   }
+
   .romaziPremiumTextsContainer {
     max-width: 606px;
     align-items: flex-start;
     margin-left: 8.75rem;
   }
+
   .romaziPremiumLogoContainer {
     margin-left: 8.75rem;
   }
   .romaziPremiumHarmonizeContainer {
     margin-left: 10.75rem;
+    padding: 0;
   }
+
+  .romaziPremiumLogoContainer {
+    width: 100%;
+    align-items: flex-start;
+  }
+
   .logoSoulsContainer {
     position: absolute;
     right: 25px;
     bottom: 20px;
   }
+
+  .romaziPremiumTitle {
+    margin-top: 0;
+  }
+
+  .romaziPremiumBackgroundImageContainer {
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .romaziPremiumSlider {
+    left: 64%;
+    top: 45%;
+  }
+}
+
+// --------------------------- Exclusive Content ------------------------------------
+
+.categoryContainerTitleh2 {
+  color: #000;
+  font-family: 'Mulish Bold', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.48px;
+  padding-left: 8px;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.podCastContainerLink {
+  text-decoration: none;
+}
+
+.podCastContainerTitle {
+  color: var(--Bombay-900, #505257);
+  font-family: 'Mulish Bold', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.34px;
+}
+
+.podCastContainerDate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #3f3f3f;
+  font-family: 'Mulish', sans-serif;
+  font-size: 14.254px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14.254px; /* 100% */
+  letter-spacing: 0.285px;
+}
+
+.podCastContainerDescription {
+  color: #505257;
+  font-family: 'Mulish', sans-serif;
+  font-size: 14.254px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.285px;
+}
+
+.podCastContainer {
+  .paginationDotsContainer {
+    bottom: -5%;
+  }
+  .sliderArrows {
+    bottom: 60%;
+    background: #e2e2e2 !important;
+    padding: 12px;
+    border-radius: 50%;
+  }
+
+  .sliderLeftArrow {
+    left: -16px;
+  }
+
+  .sliderRightArrow {
+    right: -16px;
+  }
+
+  .caretIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.podCastArrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5px;
 }

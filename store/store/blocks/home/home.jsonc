@@ -20,7 +20,10 @@
   },
   "flex-layout.row#main-banner": {
     "props": {
-      "blockClass": "container"
+      "blockClass": [
+        "container",
+        "main-banner"
+      ]
     },
     "children": [
       "list-context.image-list#main-banner"

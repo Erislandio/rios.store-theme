@@ -8,10 +8,10 @@
       ]
     },
     "children": [
-      "custom-podcast#home"
+      "custom-exclusive-content#home"
     ]
   },
-  "custom-podcast#home": {
+  "custom-exclusive-content#home": {
     "props": {
       "podCast": [
         {
