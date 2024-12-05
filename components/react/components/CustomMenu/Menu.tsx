@@ -4,7 +4,7 @@ import { Link } from 'vtex.render-runtime'
 
 import type { MenuItem } from './CustomMenu'
 import { CSS_HANDLES } from './CustomMenu'
-import { Arrow } from './icons'
+import { Arrow } from './Icons'
 
 export default function Menu({ menu }: { menu: MenuItem }) {
   const { handles } = useCssHandles(CSS_HANDLES)

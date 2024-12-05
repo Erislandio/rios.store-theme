@@ -12,6 +12,6 @@
     "component": "ExclusiveContent"
   },
   "custom-dynamic-menu": {
-    "component": "DynamicMenu"
+    "component": "CustomMenu"
   }
 }

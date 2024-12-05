@@ -1,41 +1,16 @@
 {
   "header-layout.desktop": {
     "children": [
-      "sticky-layout#4-desktop"
+      "sticky-layout#desktop"
     ]
   },
-  "flex-layout.row#3-desktop": {
-    "props": {
-      "blockClass": "menu-link",
-      "horizontalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": true
-    },
-    "children": [
-      // "vtex.menu@2.x:menu#websites",
-      "flex-layout.col#spacer"
-    ]
-  },
-  "flex-layout.col#spacer": {
-    "props": {
-      "width": "grow"
-    }
-  },
-  "flex-layout.row#header-container": {
-    "props": {
-      "blockClass": "container"
-    },
-    "children": []
-  },
-  "sticky-layout#4-desktop": {
+  "sticky-layout#desktop": {
     "props": {
       "blockClass": "sticky-header"
     },
     "children": [
       "flex-layout.row#main-header",
       "flex-layout.row#menus"
-      // "header-row#menus"
     ]
   },
   "flex-layout.row#main-header": {
@@ -100,14 +75,6 @@
       "logo#desktop"
     ]
   },
-  "flex-layout.col#category-menu": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": [
-      "vtex.menu@2.x:menu#category-menu"
-    ]
-  },
   "logo#desktop": {
     "props": {
       "title": "Logo",
@@ -129,16 +96,7 @@
       "fullWidth": true
     },
     "children": [
-      "header-row#menus"
-    ]
-  },
-  "header-row#menus": {
-    "props": {
-      "fullWidth": true,
-      "blockClass": "header-menus"
-    },
-    "children": [
-      // "custom-menu-drawer",
+      "custom-dynamic-menu#top-custom",
       "menu#header-offer"
     ]
   }

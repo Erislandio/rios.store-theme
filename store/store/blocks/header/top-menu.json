@@ -1,10 +1,4 @@
 {
-  "menu#header-all-departments": {
-    "children": [],
-    "props": {
-      "blockClass": "all-departments"
-    }
-  },
   "menu#header-offer": {
     "props": {
       "blockClass": "offers",

@@ -1,5 +1,5 @@
 {
-  "flex-layout.row#shelf": {
+  "flex-layout.row#shelf1": {
     "title": "Vitrine",
     "props": {
       "blockClass": [
@@ -8,18 +8,49 @@
       ]
     },
     "children": [
-      "rich-text#shelf-tile",
+      "rich-text#shelf-title1",
       "list-context.product-list#default"
     ]
   },
-  "rich-text#shelf-tile": {
+  "rich-text#shelf-title1": {
     "title": "Título da vitrine",
     "props": {
       "text": "## Mais vendidos",
       "blockClass": "shelf-title"
     }
   },
+  "flex-layout.row#shelf2": {
+    "title": "Vitrine",
+    "props": {
+      "blockClass": [
+        "shelf",
+        "container"
+      ]
+    },
+    "children": [
+      "rich-text#shelf-title2",
+      "list-context.product-list#default2"
+    ]
+  },
+  "rich-text#shelf-title2": {
+    "title": "Título da vitrine",
+    "props": {
+      "text": "## Novidades",
+      "blockClass": "shelf-title"
+    }
+  },
   "list-context.product-list#default": {
+    "blocks": [
+      "product-summary.shelf#default"
+    ],
+    "children": [
+      "slider-layout#default-products"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "list-context.product-list#default2": {
     "blocks": [
       "product-summary.shelf#default"
     ],

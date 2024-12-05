@@ -1,0 +1,2869 @@
+{
+  "custom-dynamic-menu#top-custom": {
+    "props": {
+      "others": [
+        {
+          "__editorItemTitle": "Lista de desejos",
+          "url": "/account/#wishlist"
+          // "icon": "assets/icons/fav2.svg"
+        },
+        {
+          "__editorItemTitle": "Cesta de compras",
+          "url": "/checkout"
+          // "icon": "assets/icons/cart2.svg"
+        },
+        {
+          "__editorItemTitle": "Minha Conta",
+          "url": "/account"
+          // "icon": "assets/icons/profile2.svg"
+        }
+      ],
+      "departments": [
+        {
+          "__editorItemTitle": "Tomadas e interruptores",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/da5d41af-912c-4635-beec-a1367e8f8000___6f4c7464011f1d08aac5bbe4d4a84add.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Canaletas",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/5dfce147-ef2d-4f45-9de5-f705b44881e4___eecfd72f49c16bfeca70293273cca3c5.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Chuveiros",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/7a8e029c-461d-4f30-acac-fca77ec9540f___068995e1e1f5f6ffc7d78953390cf293.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Extensões",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/5391dd12-cf10-4aca-890d-44f21910bc40___890e801f67ddb82ca3524fefa1604cf8.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Fitas isolantes",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/4add019a-2773-4edf-8ccf-3b7cc9f6bed1___354195f1e9f6b1c5d2f359a1880736ee.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Iluminação",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/32e0a0ff-83bc-435b-b2a6-bb1c73dfc86d___18ad8899b960431182812d14e752acc4.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Módulos",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/cc7d465b-2c31-4e20-8bd9-3a7ad6fe41da___501b2b0f12f0cd03a80b101fb0c6d4ee.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Plugues e Adaptadores",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/dafa4e15-f108-4ab6-a05d-43ea6f5b4ea5___c807391192564185b7719bddf34bab9e.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Potes",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/82812325-2151-4bf1-8073-c18b839a71e5___198086a323c2584b139b8b652ecf92c0.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Quadros de distribuição",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/9f97927a-c1e7-47ac-9b87-018247f7625b___7e4bc6c2c2aca5dd28703d7d638409c9.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Sobrepor",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/96e18fd1-5a8a-4ee0-a04b-83357da8b620___b582ae5fa1be34be3ecdb4095f325755.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "__editorItemTitle": "Tomadas e interruptores",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/32e0a0ff-83bc-435b-b2a6-bb1c73dfc86d___18ad8899b960431182812d14e752acc4.svg",
+          "sections": [
+            {
+              "__editorItemTitle": "Título Categoria 1",
+              "links": [
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 2",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 3",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 4",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 5",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 6",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Título Categoria 7",
+              "links": [
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                },
+                {
+                  "__editorItemTitle": "Nome da categoria",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Ver todos os produtos",
+              "url": "#"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

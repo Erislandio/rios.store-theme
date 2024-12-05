@@ -4,7 +4,7 @@ import { Link } from 'vtex.render-runtime'
 import { Drawer, DrawerCloseButton, DrawerTrigger } from 'vtex.store-drawer'
 
 import type { MenuItem, MenuLink } from './CustomMenu'
-import { Arrow } from './icons'
+import { Arrow } from './Icons'
 
 import './CustomMenu.styles.css'
 
