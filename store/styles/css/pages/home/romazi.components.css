@@ -66,6 +66,36 @@
 .bannerOurLinesContainer {
   position: relative;
 }
+.bannerOurLinesContainer .sliderLayoutContainer {
+  position: absolute;
+  top: 50%;
+}
+.bannerOurLinesContainer .slide {
+  max-width: 335px;
+  max-width: 335px;
+}
+.bannerOurLinesContainer .paginationDotsContainer {
+  bottom: -10%;
+}
+.bannerOurLinesContainer .caretIcon {
+  width: 16px;
+  height: 16px;
+}
+.bannerOurLinesContainer .caretIcon::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background: #e2e2e2;
+  display: flex;
+}
+.bannerOurLinesContainer .sliderArrows {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #f2f2f2 !important;
+  border-radius: 50%;
+  opacity: 0.5;
+}
 
 .textsContainer {
   position: absolute;
@@ -88,28 +118,6 @@
   font-size: 16px;
   font-weight: 400;
   margin-top: 5px;
-}
-
-.bannerOurLinesContainer .sliderLayoutContainer {
-  position: absolute;
-  top: 50%;
-}
-
-.bannerOurLinesContainer .slide {
-  max-width: 335px;
-  max-width: 335px;
-}
-
-.bannerOurLinesContainer .paginationDotsContainer {
-  bottom: -10%;
-}
-
-.bannerOurLinesContainer .caretIcon::before {
-  content: "";
-  width: 48px;
-  height: 48px;
-  background: #e2e2e2;
-  display: flex;
 }
 
 .carouselImageContainer {

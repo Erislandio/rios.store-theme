@@ -4,8 +4,8 @@
       "flex-layout.row#main-banner",
       "flex-layout.row#deals",
       "flex-layout.row#banner-our-lines",
-      "flex-layout.row#shelf",
       "__fold__",
+      "flex-layout.row#shelf",
       "responsive-layout.desktop#double-banner",
       "responsive-layout.phone#double-banner",
       "responsive-layout.tablet#double-banner",
@@ -17,78 +17,5 @@
       "flex-layout.row#podcast",
       "flex-layout.row#newsletter"
     ]
-  },
-  "flex-layout.row#main-banner": {
-    "props": {
-      "blockClass": [
-        "container",
-        "main-banner"
-      ]
-    },
-    "children": [
-      "list-context.image-list#main-banner"
-    ]
-  },
-  "list-context.image-list#main-banner": {
-    "children": [
-      "slider-layout#demo-images"
-    ],
-    "props": {
-      "height": 570,
-      "preload": true,
-      "images": [
-        {
-          "image": "https://romazi.vteximg.com.br/arquivos/main-banner-desktop2.png",
-          "mobileImage": "https://romazi.vteximg.com.br/arquivos/main-banner-mobile2.png"
-        },
-        {
-          "image": "https://romazi.vteximg.com.br/arquivos/main-banner-desktop2.png",
-          "mobileImage": "https://romazi.vteximg.com.br/arquivos/main-banner-mobile2.png"
-        }
-      ]
-    }
-  },
-  "slider-layout#demo-images": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "arrowSize": {
-        "mobile": 32
-      },
-      "infinite": true,
-      "showNavigationArrows": "always",
-      "blockClass": "carousel-main-banner"
-    }
-  },
-  "flex-layout.row#shelf": {
-    "children": [
-      "list-context.product-list#demo1"
-    ]
-  },
-  "list-context.product-list#demo1": {
-    "blocks": [
-      "product-summary.shelf"
-    ],
-    "children": [
-      "slider-layout#demo-products"
-    ],
-    "props": {
-      "orderBy": "OrderByTopSaleDESC"
-    }
-  },
-  "slider-layout#demo-products": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 4,
-        "tablet": 3,
-        "phone": 1
-      },
-      "infinite": true,
-      "fullWidth": false,
-      "blockClass": "shelf"
-    }
   }
 }

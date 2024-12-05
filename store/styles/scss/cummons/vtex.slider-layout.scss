@@ -1,0 +1,35 @@
+.caretIcon {
+  width: 16px;
+  height: 16px;
+
+  &::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    background: #e2e2e2;
+    // opacity: 0.3;
+    display: flex;
+  }
+}
+
+.sliderArrows {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #dbdbdb !important;
+  border-radius: 50%;
+}
+
+.paginationDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #d9d9d9;
+  transition: ease 0.3s;
+}
+.paginationDot--isActive {
+  width: 24px !important;
+  height: 8px !important;
+  border-radius: 12px;
+  background: rgba(13, 22, 53, 0.6);
+}

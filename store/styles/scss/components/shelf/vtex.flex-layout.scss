@@ -1,0 +1,32 @@
+.flexCol--productRating {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.flexColChild--productRating:empty {
+  display: none;
+}
+
+.flexRowContent--list-price-savings,
+.flexRowContent--selling-price-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.flexRow--selling-price-content {
+  margin-top: 10px;
+}
+
+.flexRowContent--list-price-savings {
+  align-items: flex-start;
+}
+
+.flexRowContent--shelf {
+  display: flex;
+  flex-direction: column;
+
+  .stretchChildrenWidth {
+    width: 100% !important;
+  }
+}

@@ -10,5 +10,8 @@
   },
   "custom-exclusive-content": {
     "component": "ExclusiveContent"
+  },
+  "custom-dynamic-menu": {
+    "component": "DynamicMenu"
   }
 }

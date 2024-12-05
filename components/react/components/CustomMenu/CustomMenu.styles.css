@@ -37,7 +37,6 @@
 .submenu {
   position: fixed;
   background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 99;
   width: 100%;
   max-width: 1480px;
@@ -135,7 +134,6 @@
   transform: none;
   width: auto;
   min-width: 331px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 28px 21px 10px 0px rgba(0, 0, 0, 0.00), 18px 13px 9px 0px rgba(0, 0, 0, 0.01), 10px 8px 8px 0px rgba(0, 0, 0, 0.05), 4px 3px 6px 0px rgba(0, 0, 0, 0.09), 1px 1px 3px 0px rgba(0, 0, 0, 0.10);
 }
 
 .submenu--megamenu>ul {
