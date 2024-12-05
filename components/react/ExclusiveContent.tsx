@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { useDevice } from 'vtex.device-detector'
+// import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
 import { SliderLayout } from 'vtex.slider-layout'
 
@@ -65,7 +65,7 @@ const ExclusiveContent: StoreFrontFC<{
   title: string
 }> = ({ podCast = [], title = 'Conteúdo exclusivo' }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const { isMobile } = useDevice()
+  // const { isMobile } = useDevice()
 
   return (
     <section className={handles.podCastContainer}>
@@ -74,8 +74,8 @@ const ExclusiveContent: StoreFrontFC<{
         showNavigationArrows="desktopOnly"
         showPaginationDots="always"
         fullWidth
-        centerMode={isMobile ? 'to-the-left' : 'disabled'}
-        centerModeSlidesGap={18}
+        // centerMode={isMobile ? 'to-the-left' : 'disabled'}
+        // centerModeSlidesGap={18}
         navigationStep={'page'}
         itemsPerPage={{
           desktop: 4,

@@ -47,6 +47,7 @@ const BannerOurLines: StoreFrontFC<{
         fullWidth={true}
         showNavigationArrows="always"
         showPaginationDots="always"
+        navigationStep={'page'}
         infinite={true}
         itemsPerPage={{
           desktop: 5,
