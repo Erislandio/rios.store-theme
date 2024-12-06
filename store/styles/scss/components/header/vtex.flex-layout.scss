@@ -16,6 +16,9 @@
 
 .flexRowContent--menus {
   padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .flexRowContent--menu-link {

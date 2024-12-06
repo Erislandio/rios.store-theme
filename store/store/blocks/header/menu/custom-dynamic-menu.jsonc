@@ -3,19 +3,26 @@
     "props": {
       "others": [
         {
-          "__editorItemTitle": "Lista de desejos",
-          "url": "/account/#wishlist"
-          // "icon": "assets/icons/fav2.svg"
+          "__editorItemTitle": "Meus favoritos",
+          "url": "/account/#wishlist",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/d689dba1-4316-45d0-8ee1-ccfa42a1a12b___03d621b792b6397528b7487fd5b20ad4.svg"
         },
         {
-          "__editorItemTitle": "Cesta de compras",
-          "url": "/checkout"
-          // "icon": "assets/icons/cart2.svg"
+          "__editorItemTitle": "Meus pedidos",
+          "url": "/checkout",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/4bb99eef-f813-41af-afa5-a485c14954c8___9c24a817164c139d4b280da20dca17d6.svg"
         },
         {
-          "__editorItemTitle": "Minha Conta",
-          "url": "/account"
-          // "icon": "assets/icons/profile2.svg"
+          "__editorItemTitle": "Minha conta",
+          "url": "/account",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/875edbaf-2c0e-4375-a9fb-32bc0f49c79a___5eb32985029d3678e4c8b69de499b41a.svg"
+        }
+      ],
+      "moreItems": [
+        {
+          "__editorItemTitle": "Central de Atendimento",
+          "url": "#",
+          "icon": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/11249720-23fb-4394-82ab-91e8802b29c4___e665cbe0daa68d50b261aa1e634d8df4.svg"
         }
       ],
       "departments": [

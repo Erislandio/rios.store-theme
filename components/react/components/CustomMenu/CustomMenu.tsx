@@ -5,6 +5,7 @@ import { canUseDOM } from 'vtex.render-runtime'
 
 import './CustomMenu.styles.css'
 import CustomMenuMobile from './CustomMenuMobile'
+import CustomMenuOthers from './CustomMenuOthers'
 import { MenuIcon } from './Icons'
 import Menu from './Menu'
 import MenuWrapper from './MenuContainer'
@@ -31,6 +32,8 @@ export const CSS_HANDLES = [
   'menuContainerItem',
   'allDepartamentBottom',
   'allDepartamentBottomDevider',
+  'allDepartamentBottom',
+  'allMoreItems',
 ] as const
 
 export interface MenuLink {
@@ -48,17 +51,17 @@ interface Section {
 }
 
 export interface MenuItem {
-  __editorItemTitle: string // Título do item do menu
-  banner?: string // URL do banner (opcional)
+  __editorItemTitle: string
+  banner?: string
   sections?: Section[]
   icon: string
-  moreItems: MenuLink[]
 }
 
 const DynamicMenu: StoreFrontFC<{
   departments: MenuItem[]
   others: MenuLink[]
-}> = ({ departments = [], others }) => {
+  moreItems: MenuLink[]
+}> = ({ departments = [], others = [], moreItems = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const [headerHeight, setHeaderHeight] = useState(0)
 
@@ -75,7 +78,13 @@ const DynamicMenu: StoreFrontFC<{
   const { device } = useDevice()
 
   if (device === 'phone' || device === 'tablet') {
-    return <CustomMenuMobile others={others} departments={departments} />
+    return (
+      <CustomMenuMobile
+        others={others}
+        departments={departments}
+        moreItems={moreItems}
+      />
+    )
   }
 
   return (
@@ -96,6 +105,20 @@ const DynamicMenu: StoreFrontFC<{
               <Menu key={index} menu={item} />
             ))}
           </ul>
+          <div className={handles.allDepartamentBottom}>
+            <ul>
+              {others.map((item) => (
+                <CustomMenuOthers others={item} />
+              ))}
+            </ul>
+          </div>
+          <div className={handles.allMoreItems}>
+            <ul>
+              {moreItems.map((item) => (
+                <CustomMenuOthers others={item} />
+              ))}
+            </ul>
+          </div>
         </MenuWrapper>
       </div>
     </div>
@@ -134,6 +157,38 @@ DynamicMenu.schema = {
             type: 'string',
             title: 'URL',
             default: '',
+          },
+        },
+      },
+    },
+    moreItems: {
+      type: 'array',
+      title: 'links - Central de ajuda',
+      items: {
+        type: 'object',
+        properties: {
+          __editorItemTitle: {
+            title: 'title',
+            type: 'string',
+            default: '',
+          },
+          icon: {
+            type: 'string',
+            title: 'Icone URL',
+            default: '',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+            url: {
+              type: 'string',
+              title: 'URL',
+              default: '',
+            },
+            text: {
+              type: 'string',
+              title: 'texto do link',
+              default: '',
+            },
           },
         },
       },

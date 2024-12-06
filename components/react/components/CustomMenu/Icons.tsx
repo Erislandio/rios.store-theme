@@ -26,21 +26,15 @@ export const Arrow = () => (
 
 export const MenuIcon = () => (
   <svg
-    width="21"
-    height="18"
-    viewBox="0 0 21 18"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="14"
+    viewBox="0 0 20 14"
+    fill="none"
   >
-    <g id="Menu Hamburger">
-      <path
-        id="Vector"
-        d="M1.1665 17H19.8332M1.1665 1H19.8332M1.1665 9H19.8332"
-        stroke="#505257"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </g>
+    <rect width="20" height="2" rx="1" fill="#F0F6FE" />
+    <rect y="6" width="20" height="2" rx="1" fill="#F0F6FE" />
+    <rect y="12" width="20" height="2" rx="1" fill="#F0F6FE" />
   </svg>
 )
 

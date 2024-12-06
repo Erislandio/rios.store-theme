@@ -8,6 +8,15 @@
   position: relative;
 }
 
+.menuContainerItem {
+  color: #f0f6fe !important;
+  font-family: 'Source Sans Pro SemiBold', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
 .menuItem:hover .submenu {
   display: block;
 }
@@ -166,11 +175,6 @@
   background: #D1DAE0;
 }
 
-.menuItem:hover>span {
-  color: #0073e6;
-  text-shadow: 0 0 0 #0073e6;
-}
-
 .allDepartamentWrapperLevel1 {
   position: absolute;
   left: 330px;
@@ -260,16 +264,6 @@ a.menuLink:hover {
 
 .allDepartamentWrapperLevel1--level2 {
   left: 329px;
-}
-
-.menuContainer--mobile h3 {
-  color: var(--Bombay-800, #60656B);
-  font-family: "Source Sans Pro SemiBold", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 16px;
-  letter-spacing: 0.4px;
 }
 
 .openIconContainer ul,
@@ -434,17 +428,21 @@ a.menuLink:hover {
   margin: 16px 0px;
 }
 
+.allMoreItems ul,
+.menuContainer--mobile ul,
 .allDepartamentBottom ul {
-  padding: 0px;
-  padding-bottom: 2rem;
-  margin: 0px;
+  background-color: #fff;
+  margin: 8px;
+  padding: 16px;
 }
 
+.allMoreItems ul li,
 .allDepartamentBottom ul li {
   padding: 11px 24px;
   transition: all .2s ease-in-out;
 }
 
+.allMoreItems ul li span,
 .allDepartamentBottom ul li span {
   color: var(--Bombay-800, #60656B);
   font-family: "Source Sans Pro", sans-serif;
@@ -460,6 +458,7 @@ a.menuLink:hover {
   gap: 10px;
 }
 
+.allMoreItems ul li a,
 .allDepartamentBottom ul li a {
   list-style: none;
   display: flex;
@@ -468,14 +467,46 @@ a.menuLink:hover {
   text-decoration: none;
 }
 
+.allMoreItems ul li:hover,
 .allDepartamentBottom ul li:hover {
   background: #D1DAE0;
 }
 
-@media screen and (max-width: 1024px) {
+.allMoreItems ul li {
+  padding: 0;
+}
 
+.menuContainer--mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+
+
+@media screen and (max-width: 1025px) {
+
+  .moreitems ul li,
   .allDepartamentBottom h4,
   .allDepartamentBottom ul li {
     padding: 11px 0px;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  .allMoreItems ul,
+  .allDepartamentBottom ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .allDepartamentBottom {
+    border-top: 1px solid rgba(81, 81, 81, 0.3);
+    margin-top: 4px;
+  }
+
+  .allMoreItems ul li {
+    padding: 11px 24px;
   }
 }

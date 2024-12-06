@@ -38,20 +38,45 @@ const CSS_HANDLES = [
   'drawerLi',
   'allDepartamentBottom',
   'allDepartamentBottomDevider',
+  'allMoreItems',
 ] as const
 
 export default function CustomMenuMobile({
   departments,
   others = [],
+  moreItems = [],
 }: {
   departments: MenuItem[]
   others: MenuLink[]
+  moreItems: MenuLink[]
 }) {
   const { handles } = useCssHandles(CSS_HANDLES)
 
   return (
     <section className={applyModifiers(handles.menuContainer, 'mobile')}>
-      <h3>Todos os departamentos</h3>
+      <div className={handles.allDepartamentBottom}>
+        <ul>
+          {others.map((element) => (
+            <li key={element.__editorItemTitle}>
+              <Link to={element.url} fetchPage>
+                <span>
+                  {element.icon && (
+                    <img
+                      loading="eager"
+                      src={element.icon}
+                      alt={`Icon for ${element.__editorItemTitle}`}
+                      width={24}
+                      height={24}
+                    />
+                  )}
+                  {element.__editorItemTitle}
+                </span>
+                <Arrow />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
       <ul>
         {departments.map((item) => {
           return (
@@ -158,11 +183,9 @@ export default function CustomMenuMobile({
           )
         })}
       </ul>
-      <div className={handles.allDepartamentBottomDevider} />
-      <div className={handles.allDepartamentBottom}>
-        <h4>Minha Conta</h4>
+      <div className={handles.allMoreItems}>
         <ul>
-          {others.map((element) => (
+          {moreItems.map((element) => (
             <li key={element.__editorItemTitle}>
               <Link to={element.url} fetchPage>
                 <span>

@@ -20,7 +20,7 @@
   },
   "flex-layout.row#1-mobile": {
     "children": [
-      "drawer",
+      "drawer#menu-mobile",
       "logo#mobile",
       "flex-layout.row#wishlist-minicart"
     ],
@@ -29,6 +29,50 @@
       "preventHorizontalStretch": true,
       "preserveLayoutOnMobile": true,
       "fullWidth": true
+    }
+  },
+  "drawer#menu-mobile": {
+    "title": "Menu drawer mobile",
+    "props": {
+      "blockClass": [
+        "menu-mobile"
+      ]
+    },
+    "blocks": [
+      "drawer-trigger#menu-mobile",
+      "drawer-header#my-drawer"
+    ],
+    "children": [
+      "custom-dynamic-menu#top-custom"
+    ]
+  },
+  "drawer-header#my-drawer": {
+    "props": {
+      "blockClass": [
+        "drawer-header--menu"
+      ]
+    },
+    "children": [
+      "drawer-close-button"
+    ]
+  },
+  "drawer-trigger#menu-mobile": {
+    "title": "Menu mobile - trigger",
+    "props": {
+      "blockClass": [
+        "menu-mobile"
+      ]
+    },
+    "children": [
+      "image#menu"
+    ]
+  },
+  "image#menu": {
+    "title": "Icone menu",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/a62e4c47-597a-4035-acf1-1beb5c9244dd___0a0b8d42ad8043fbb7c2776a5f9d0169.svg",
+      "width": 24,
+      "height": 15
     }
   },
   "flex-layout.row#wishlist-minicart": {
