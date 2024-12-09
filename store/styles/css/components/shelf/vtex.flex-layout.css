@@ -29,3 +29,9 @@
 .flexRowContent--shelf .stretchChildrenWidth {
   width: 100% !important;
 }
+
+@media (max-width: 1025px) {
+  .flexRow--shelf {
+    margin: 24px 0 50px 0 !important;
+  }
+}

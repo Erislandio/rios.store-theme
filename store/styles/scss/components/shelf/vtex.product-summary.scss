@@ -36,11 +36,8 @@
   .element {
     :global(.vtex-button) {
       display: none;
-      position: absolute;
-      bottom: 0;
       max-width: 232px;
-      left: calc(50% - 116px);
-      margin: 0 auto;
+      margin: 12px auto 16px auto;
 
       border-radius: 4px;
       background: #1a3eb8;
@@ -81,6 +78,11 @@
     line-height: normal;
     white-space: nowrap;
   }
+}
+
+.image {
+  max-width: 280px !important;
+  max-height: 280px !important;
 }
 
 @media (max-width: 1025px) {

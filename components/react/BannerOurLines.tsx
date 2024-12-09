@@ -55,8 +55,8 @@ const BannerOurLines: StoreFrontFC<{
           phone: 1,
         }}
       >
-        {bannerData.imagesCarousel.map((item) => (
-          <div className={handles.carouselImageContainer}>
+        {bannerData.imagesCarousel.map((item, index) => (
+          <div key={index} className={handles.carouselImageContainer}>
             <img
               className={handles.carouselImage}
               // alt={item.__editorItemTitle}

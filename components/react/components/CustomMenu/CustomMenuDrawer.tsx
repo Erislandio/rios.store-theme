@@ -73,9 +73,9 @@ export default function CustomMenuDrawer({
     <section className={applyModifiers(handles.menuContainer, 'mobile')}>
       <h3>Todos os departamentos</h3>
       <ul>
-        {departments.map((item) => {
+        {departments.map((item, index) => {
           return (
-            <li>
+            <li key={index}>
               <DrawerTrigger customPixelEventId={item.__editorItemTitle}>
                 <span>
                   {item.icon && (
@@ -109,10 +109,10 @@ export default function CustomMenuDrawer({
                 }
               >
                 <ul className={handles.drawerUl}>
-                  {item?.sections?.map((section) => {
+                  {item?.sections?.map((section, index) => {
                     return (
                       <li
-                        key={section.__editorItemTitle}
+                        key={section.__editorItemTitle + index}
                         className={handles.drawerLi}
                       >
                         {section.url ? (
@@ -152,11 +152,11 @@ export default function CustomMenuDrawer({
                           }
                         >
                           <ul className={handles.drawerUl}>
-                            {section?.links?.map((link) => {
+                            {section?.links?.map((link, index) => {
                               return (
                                 <li
                                   className={handles.drawerLi}
-                                  key={link.__editorItemTitle}
+                                  key={link.__editorItemTitle + index}
                                 >
                                   <Link
                                     to={link.url}
@@ -181,8 +181,8 @@ export default function CustomMenuDrawer({
       <div className={handles.allDepartamentBottomDevider}></div>
       <div className={handles.allDepartamentBottom}>
         <ul>
-          {others.map((element) => (
-            <li key={element.__editorItemTitle}>
+          {others.map((element, index) => (
+            <li key={element.__editorItemTitle + index}>
               <Link to={element.url} fetchPage>
                 <span>
                   {element.icon && (

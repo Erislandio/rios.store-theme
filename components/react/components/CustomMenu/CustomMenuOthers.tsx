@@ -16,7 +16,7 @@ export default function CustomMenuOthers({
   others: MenuLink
 }) {
   return (
-    <li key={others.__editorItemTitle}>
+    <li>
       <Link to={others.url} fetchPage>
         <span>
           {others.icon && (

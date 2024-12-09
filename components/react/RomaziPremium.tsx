@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
-import { Dots, Slide, Slider } from 'vtex.slider'
+import { Dots, Slide, Slider, SliderContainer } from 'vtex.slider'
 import { IconCaret } from 'vtex.store-icons'
 
 interface RomaziPremiumLines {
@@ -37,6 +37,8 @@ const CSS_HANDLES = [
   'logoSouls',
   'dots',
   'dotsActive',
+  'romaziPremiumSlide',
+  'romaziPremiumCustomSlider',
 ] as const
 
 const RomaziPremium: StoreFrontFC<{
@@ -45,6 +47,8 @@ const RomaziPremium: StoreFrontFC<{
   const { handles } = useCssHandles(CSS_HANDLES)
   const [currentLine, setCurrentLine] = useState<RomaziPremiumLines>(lines[0])
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isLastSlide, setIsLastSlide] = useState(false)
+  const [isFirstSlide, setIsFirstSlide] = useState(false)
   const { isMobile } = useDevice()
 
   useEffect(() => {
@@ -53,17 +57,32 @@ const RomaziPremium: StoreFrontFC<{
     }
   }, [lines])
 
-  const handleChangeSlide = (i: number) => {
-    setCurrentSlide(i)
-    setCurrentLine(lines[i])
-  }
+  useEffect(() => {
+    setCurrentLine(lines[currentSlide])
+
+    setIsFirstSlide(currentSlide === 0)
+    setIsLastSlide(currentSlide === lines.length - 1)
+  }, [currentSlide])
 
   const perPage = {
-    1300: 1,
-    1100: 1,
+    1025: 3,
     900: 1,
     700: 1,
     300: 1,
+  }
+
+  const setSlideByOrientation = (orientation: string) => {
+    if (!isFirstSlide && orientation === 'left') {
+      setCurrentSlide((prevState) => prevState - 1)
+
+      return
+    }
+
+    if (!isLastSlide && orientation === 'right') {
+      setCurrentSlide((prevState) => prevState + 1)
+
+      return
+    }
   }
 
   const arrowRender = ({ orientation, onClick }: any) => {
@@ -75,7 +94,13 @@ const RomaziPremium: StoreFrontFC<{
         orientation === 'right',
     })
     return (
-      <div className={containerClasses} onClick={onClick}>
+      <div
+        className={containerClasses}
+        onClick={() => {
+          onClick()
+          setSlideByOrientation(orientation)
+        }}
+      >
         <IconCaret orientation={orientation} thin size={20} />
       </div>
     )
@@ -102,37 +127,50 @@ const RomaziPremium: StoreFrontFC<{
         />
       </div>
       <div className={handles.romaziPremiumSlider}>
-        <Slider
-          currentSlide={currentSlide}
-          onChangeSlide={handleChangeSlide}
-          easing="ease"
-          perPage={perPage}
-          arrowRender={arrowRender}
-        >
-          {lines.map((item, index) => (
-            <Slide key={index} sliderTransitionDuration={500} className="teste">
-              <img
-                // className={}
-                // alt={item.__editorItemTitle}
-                // title={item.__editorItemTitle}
-                src={item.imagesCarousel}
-                loading="eager"
-              />
-            </Slide>
-          ))}
-        </Slider>
-        <Dots
-          // perPage={perPage
-          showDotsPerPage
-          currentSlide={currentSlide}
-          totalSlides={lines.length}
-          onChangeSlide={handleChangeSlide}
-          classes={{
-            root: 'pv4',
-            dot: `${handles.dots}`,
-            activeDot: `${handles.dotsActive}`,
-          }}
-        />
+        <SliderContainer infinite={true}>
+          <Slider
+            infinite={true}
+            className={handles.romaziPremiumCustomSlider}
+            currentSlide={currentSlide}
+            onChangeSlide={() => {}}
+            easing="ease"
+            perPage={perPage}
+            arrowRender={arrowRender}
+            centerMode={'center'}
+          >
+            {lines.map((item, index) => (
+              <Slide
+                key={index}
+                sliderTransitionDuration={500}
+                className={handles.romaziPremiumSlide}
+                classes={{
+                  active: `${handles.dotsActive}`,
+                }}
+              >
+                <img
+                  // className={}
+                  // alt={item.__editorItemTitle}
+                  // title={item.__editorItemTitle}
+                  src={item.imagesCarousel}
+                  loading="eager"
+                />
+              </Slide>
+            ))}
+          </Slider>
+          <Dots
+            // perPage={perPage
+            showDotsPerPage
+            currentSlide={currentSlide}
+            totalSlides={lines.length}
+            onChangeSlide={() => {}}
+            // onChangeSlide={handleChangeSlide}
+            classes={{
+              root: 'pv4',
+              dot: `${handles.dots}`,
+              activeDot: `${handles.dotsActive}`,
+            }}
+          />
+        </SliderContainer>
       </div>
       <div className={handles.romaziPremiumTextsContainer}>
         <h3 className={handles.romaziPremiumTitle}>{currentLine.title}</h3>

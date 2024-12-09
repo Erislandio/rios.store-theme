@@ -107,15 +107,15 @@ const DynamicMenu: StoreFrontFC<{
           </ul>
           <div className={handles.allDepartamentBottom}>
             <ul>
-              {others.map((item) => (
-                <CustomMenuOthers others={item} />
+              {others.map((item, index) => (
+                <CustomMenuOthers key={index} others={item} />
               ))}
             </ul>
           </div>
           <div className={handles.allMoreItems}>
             <ul>
-              {moreItems.map((item) => (
-                <CustomMenuOthers others={item} />
+              {moreItems.map((item, index) => (
+                <CustomMenuOthers others={item} key={index} />
               ))}
             </ul>
           </div>

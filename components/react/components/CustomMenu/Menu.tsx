@@ -30,14 +30,14 @@ export default function Menu({ menu }: { menu: MenuItem }) {
           {menu.sections?.map((item) => {
             if (item.url) {
               return (
-                <Link to={item.url} key={item.title} fetchPage>
+                <Link to={item.url} fetchPage>
                   {item.__editorItemTitle}
                 </Link>
               )
             }
 
             return (
-              <li key={item.__editorItemTitle}>
+              <li>
                 {item.__editorItemTitle} <Arrow />
                 <section
                   className={applyModifiers(
@@ -56,7 +56,7 @@ export default function Menu({ menu }: { menu: MenuItem }) {
                         <Link
                           to={link.url}
                           fetchPage
-                          key={link.__editorItemTitle}
+                          // key={link.__editorItemTitle}
                         >
                           {link.__editorItemTitle}
                         </Link>

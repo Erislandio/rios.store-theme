@@ -284,6 +284,10 @@
     bottom: -10%;
     left: 40%;
   }
+
+  :global(.vtex-slider-0-x-sliderFrame) {
+    transition: ease 0.3s !important;
+  }
 }
 
 .dots {
@@ -300,8 +304,8 @@
 @media (min-width: 1025px) {
   .romaziPremiumSlider {
     position: absolute;
-    left: 60%;
-    top: 36%;
+    left: 50%;
+    top: 44%;
 
     :global(.vtex-shelf-1-x-arrow) {
       top: 105%;
@@ -319,7 +323,16 @@
       left: 20%;
       gap: 16px;
     }
+
+    :global(.vtex-slider-0-x-sliderFrame) {
+      margin-left: 15%;
+    }
+
+    .romaziPremiumSlide {
+      margin: 0 20px !important;
+    }
   }
+
   .romaziPremiumLogo {
     width: 316px;
     height: 85px;
@@ -361,7 +374,7 @@
 
 @media (min-width: 1500px) {
   .romaziPremiumSlider {
-    left: 64%;
+    left: 56%;
     top: 45%;
   }
 }

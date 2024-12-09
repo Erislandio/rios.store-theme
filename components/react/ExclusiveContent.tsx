@@ -73,10 +73,12 @@ const ExclusiveContent: StoreFrontFC<{
       <SliderLayout
         showNavigationArrows="desktopOnly"
         showPaginationDots="always"
-        fullWidth
-        // centerMode={isMobile ? 'to-the-left' : 'disabled'}
-        // centerModeSlidesGap={18}
-        navigationStep={'page'}
+        // centerMode={{
+        //   phone: 'to-the-left',
+        // }}
+        usePagination
+        navigationStep="page"
+        // centerModeSlidesGap={3}
         itemsPerPage={{
           desktop: 4,
           tablet: 2,

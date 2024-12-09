@@ -56,8 +56,8 @@ export default function CustomMenuMobile({
     <section className={applyModifiers(handles.menuContainer, 'mobile')}>
       <div className={handles.allDepartamentBottom}>
         <ul>
-          {others.map((element) => (
-            <li key={element.__editorItemTitle}>
+          {others.map((element, index) => (
+            <li key={element.__editorItemTitle + index}>
               <Link to={element.url} fetchPage>
                 <span>
                   {element.icon && (
@@ -78,9 +78,9 @@ export default function CustomMenuMobile({
         </ul>
       </div>
       <ul>
-        {departments.map((item) => {
+        {departments.map((item, index) => {
           return (
-            <li key={item.icon}>
+            <li key={item.icon + index}>
               <DrawerTrigger customPixelEventId={item.__editorItemTitle}>
                 <span>
                   {item.icon && (
@@ -114,10 +114,10 @@ export default function CustomMenuMobile({
                 }
               >
                 <ul className={handles.drawerUl}>
-                  {item?.sections?.map((section) => {
+                  {item?.sections?.map((section, index) => {
                     return (
                       <li
-                        key={section.__editorItemTitle}
+                        key={section.__editorItemTitle + index}
                         className={handles.drawerLi}
                       >
                         {section.url ? (
@@ -157,11 +157,11 @@ export default function CustomMenuMobile({
                           }
                         >
                           <ul className={handles.drawerUl}>
-                            {section?.links?.map((link) => {
+                            {section?.links?.map((link, index) => {
                               return (
                                 <li
                                   className={handles.drawerLi}
-                                  key={link.__editorItemTitle}
+                                  key={link.__editorItemTitle + index}
                                 >
                                   <Link
                                     to={link.url}
@@ -185,8 +185,8 @@ export default function CustomMenuMobile({
       </ul>
       <div className={handles.allMoreItems}>
         <ul>
-          {moreItems.map((element) => (
-            <li key={element.__editorItemTitle}>
+          {moreItems.map((element, index) => (
+            <li key={element.__editorItemTitle + index}>
               <Link to={element.url} fetchPage>
                 <span>
                   {element.icon && (
