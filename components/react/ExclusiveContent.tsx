@@ -71,6 +71,7 @@ const ExclusiveContent: StoreFrontFC<{
     <section className={handles.podCastContainer}>
       <h3 className={handles.categoryContainerTitleh2}>{title}</h3>
       <SliderLayout
+        infinite
         showNavigationArrows="desktopOnly"
         showPaginationDots="always"
         // centerMode={{

@@ -78,3 +78,9 @@
   src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/69763557-b323-4fd8-adff-04350260b8a9___ead5c28b0b3c60d481994292f7418a7d.ttf);
   font-weight: 500;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/e39db220-60f3-4ffb-85fa-4d8a1aa575e6___37dcabff629c3690303739be2e0b3524.ttf);
+  font-weight: 400;
+}

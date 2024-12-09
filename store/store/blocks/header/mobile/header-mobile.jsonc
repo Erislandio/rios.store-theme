@@ -84,7 +84,7 @@
     },
     "children": [
       "link#wishlist-header",
-      "minicart.v2"
+      "minicart.v2#custom"
     ]
   },
   "link#wishlist-header-mobile": {

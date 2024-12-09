@@ -21,6 +21,8 @@
 @media (min-width: 1025px) {
   .videoContainer--video-about-us {
     width: 628px !important;
+    max-width: 628px !important;
+
     height: 355px !important;
     position: absolute;
     bottom: 20%;

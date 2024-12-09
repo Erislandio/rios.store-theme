@@ -76,7 +76,8 @@
     "props": {
       "blockClass": [
         "triple-banner",
-        "container"
+        "container",
+        "margin"
       ]
     },
     "children": [

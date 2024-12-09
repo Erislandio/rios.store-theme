@@ -16,6 +16,12 @@
   }
 }
 
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .flexRow--margin {
+    margin: 24px !important;
+  }
+}
+
 .flexRow--container {
   :global(.vtex-store-components-3-x-container) {
     padding: 0px;

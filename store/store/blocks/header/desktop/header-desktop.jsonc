@@ -39,13 +39,8 @@
     "children": [
       "login",
       "link#wishlist-header",
-      "minicart.v2"
+      "minicart.v2#custom"
     ]
-  },
-  "minicart.v2": {
-    "props": {
-      "MinicartIcon": "icon-cart#minicart-icon"
-    }
   },
   "link#wishlist-header": {
     "title": "Favoritos",

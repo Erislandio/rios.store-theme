@@ -1,0 +1,12 @@
+.summaryItemContainer {
+  color: #6e6e73;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.summaryItemContainer:last-child {
+  color: #1d1d1f;
+  font-size: 24px;
+}

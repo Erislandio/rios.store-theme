@@ -52,3 +52,185 @@
   width: 30px;
   height: 30px;
 }
+
+.content--emailAndPassword {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  margin-top: 70px;
+  max-width: 100% !important;
+}
+.content--emailAndPassword .contentAlwaysWithOptions {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 70px 0 0 0;
+  max-width: 100% !important;
+}
+.content--emailAndPassword .formTitle {
+  color: #1d1d1f;
+  font-family: "Source Sans Pro SemiBold", sans-serif;
+  font-size: 16px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.content--emailAndPassword .loginOptionsContainer {
+  width: 100%;
+  padding-bottom: 56px;
+  border-bottom: 2px solid #cedae0;
+}
+.content--emailAndPassword .contentForm {
+  width: 100%;
+  padding: 54px 0;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.content--emailAndPassword .emailAndPasswordForm .formTitle {
+  margin-bottom: 24px;
+}
+.content--emailAndPassword .inputContainer :global(.vtex-input-prefix__group) {
+  border-radius: 8px;
+  border: 1px solid var(--Bombay-400, #a8b2b7);
+  background: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+.content--emailAndPassword .inputContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+  padding: 0 24px;
+}
+.content--emailAndPassword .forgotPasswordLink {
+  color: #4d5156;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.content--emailAndPassword .formFooter {
+  border: none;
+  padding-top: 0;
+}
+.content--emailAndPassword .sendButton :global(.vtex-button) {
+  display: flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  background-color: #2643a8;
+}
+.content--emailAndPassword .sendButton :global(.vtex-button) :global(.vtex-button__label) {
+  color: #fff;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px !important;
+}
+.content--emailAndPassword .formLinkContainer .dontHaveAccount {
+  margin-top: 56px;
+  color: #2643a8;
+  text-align: center;
+  font-family: "Source Sans Pro SemiBold", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+@media (min-width: 1025px) {
+  .content--emailAndPassword {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content--emailAndPassword .contentAlwaysWithOptions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .content--emailAndPassword .loginOptionsContainer,
+  .content--emailAndPassword .contentForm {
+    width: 50%;
+  }
+  .content--emailAndPassword .loginOptionsContainer {
+    border-bottom: none;
+    padding-bottom: 0;
+    display: flex;
+    width: auto;
+    padding-right: 90px;
+    margin-right: 45px;
+    border-right: 2px solid #cedae0;
+  }
+  .content--emailAndPassword .contentForm {
+    margin: 0;
+  }
+  .content--emailAndPassword .formTitle {
+    margin: 8px 0;
+    padding: 0;
+  }
+  .content--emailAndPassword .emailAndPasswordForm .formTitle {
+    margin-bottom: 48px;
+  }
+  .content--emailAndPassword .contentFormVisible {
+    margin-left: 45px;
+  }
+  .content--emailAndPassword .formLinkContainer .dontHaveAccount {
+    position: relative;
+    right: 75%;
+  }
+}
+
+.button :global(.vtex-button) {
+  display: flex;
+  height: 44px;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #a8b2b7;
+  background: #fff;
+  max-width: 350px;
+  margin: 0 auto;
+  transition: ease 0.4s;
+}
+.button :global(.vtex-button):hover {
+  background-color: #2643a8;
+  border: 1px solid #2643a8;
+}
+.button :global(.vtex-button):hover :global(.vtex-button__label) {
+  color: #fff;
+}
+
+.button :global(.vtex-button__label) {
+  color: #4d5156;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+:global(.vtex-minicart-2-x-minicartProductListContainer) :global(.vtex-product-list-0-x-quantitySelectorButton) svg {
+  color: #2643a8;
+}
