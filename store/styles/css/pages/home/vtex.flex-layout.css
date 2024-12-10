@@ -130,6 +130,10 @@
   padding: 0 !important;
 }
 
+.flexRowContent--romazi-premium .stretchChildrenWidth {
+  overflow: hidden;
+}
+
 @media (min-width: 640px) {
   .flexRowContent--newsletter {
     flex-direction: column;

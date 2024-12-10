@@ -38,7 +38,10 @@ const CSS_HANDLES = [
   'dots',
   'dotsActive',
   'romaziPremiumSlide',
+  'romaziPremiumSlideActive',
   'romaziPremiumCustomSlider',
+  'romaziPremiumSliderImage',
+  'romaziImageContainer',
 ] as const
 
 const RomaziPremium: StoreFrontFC<{
@@ -143,13 +146,14 @@ const RomaziPremium: StoreFrontFC<{
               <Slide
                 key={index}
                 sliderTransitionDuration={500}
-                className={handles.romaziPremiumSlide}
-                classes={{
-                  active: `${handles.dotsActive}`,
-                }}
+                className={
+                  currentSlide === index
+                    ? handles.romaziPremiumSlideActive
+                    : handles.romaziPremiumSlide
+                }
               >
                 <img
-                  // className={}
+                  className={handles.romaziPremiumSliderImage}
                   // alt={item.__editorItemTitle}
                   // title={item.__editorItemTitle}
                   src={item.imagesCarousel}

@@ -102,18 +102,6 @@
     }
   }
 
-  .inputContainer :global(.vtex-input-prefix__group) {
-    border-radius: 8px;
-    border: 1px solid var(--Bombay-400, #a8b2b7);
-    background: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-
-    :global(.vtex-styleguide-9-x-input) {
-      padding: 0 24px;
-    }
-  }
-
   .forgotPasswordLink {
     color: #4d5156;
     text-align: center;
@@ -172,7 +160,7 @@
   }
 
   @media (min-width: 1025px) {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 
@@ -223,6 +211,19 @@
   }
 }
 
+.box {
+  .content--emailAndPassword {
+    margin: 0;
+    .contentFormVisible {
+      margin-left: 0;
+    }
+  }
+
+  .formLinkContainer .dontHaveAccount {
+    position: initial;
+  }
+}
+
 .button :global(.vtex-button) {
   display: flex;
   height: 44px;
@@ -258,6 +259,18 @@
   line-height: normal;
   text-transform: none;
   white-space: nowrap;
+}
+
+.inputContainer :global(.vtex-input-prefix__group) {
+  border-radius: 8px;
+  border: 1px solid var(--Bombay-400, #a8b2b7);
+  background: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+
+  :global(.vtex-styleguide-9-x-input) {
+    padding: 0 24px;
+  }
 }
 
 :global(.vtex-minicart-2-x-minicartProductListContainer) {

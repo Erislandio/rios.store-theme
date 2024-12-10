@@ -17,5 +17,8 @@
   "custom-div": {
     "component": "Div",
     "composition": "children"
+  },
+  "custom-regionalization": {
+    "component": "Regionalization"
   }
 }

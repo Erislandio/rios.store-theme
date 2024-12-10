@@ -92,7 +92,7 @@ const DynamicMenu: StoreFrontFC<{
       <div className={applyModifiers(handles.menuItem, 'megamenu')}>
         <span className={handles.menuContainerItem}>
           <MenuIcon />
-          Todos as categorias
+          Todas as categorias
         </span>
         <MenuWrapper
           isLoading={!canUseDOM}

@@ -1,6 +1,6 @@
 .drawer {
-  max-width: 414px !important;
-  width: 100% !important;
+  max-width: 414px;
+  width: 100%;
 }
 
 .minicartTitle {
@@ -25,6 +25,7 @@
   display: block;
   order: 1;
   margin-right: 8px;
+  min-width: 24px;
 }
 .closeIconContainer::after {
   content: "Carrinho de compra";
@@ -61,9 +62,13 @@
   padding: 0;
 }
 
-.drawerContent,
-.minicartSideBarContentWrapper {
+.childrenContainer,
+.drawerContent {
   height: 100% !important;
+}
+
+.drawerContent {
+  overflow: hidden;
 }
 
 .minicartCheckoutButton--go-checkout :global(.vtex-button) {

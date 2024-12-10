@@ -92,7 +92,8 @@
     },
     "children": [
       "custom-dynamic-menu#top-custom",
-      "menu#header-offer"
+      "menu#header-offer",
+      "custom-regionalization"
     ]
   }
 }

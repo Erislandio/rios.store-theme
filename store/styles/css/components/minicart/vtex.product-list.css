@@ -71,3 +71,6 @@
   line-height: normal;
   text-decoration-line: strikethrough;
 }
+:global(.vtex-minicart-2-x-minicartProductListContainer) .price {
+  text-align: right;
+}
