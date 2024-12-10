@@ -14,13 +14,6 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "",
-        "path": "/*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
         "host": "{{account}}.vtexcommercestable.com.br",
         "path": "/*"
       }
@@ -29,13 +22,6 @@
       "name": "outbound-access",
       "attrs": {
         "host": "portal.vtexcommercestable.com.br",
-        "path": "/*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "{{workspace}}--{{account}}.myvtex.com",
         "path": "/*"
       }
     },

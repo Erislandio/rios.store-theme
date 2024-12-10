@@ -8,13 +8,10 @@ export default class Regions extends JanusClient {
     })
   }
 
-  public async getRegionId(
-    postalCode: string,
-    country: string,
-    sc: string
-  ): Promise<any> {
+  public async getRegionId(postalCode: string): Promise<any> {
+    console.log('🚀 ~ Regions ~ getRegionId ~ postalCode:', postalCode)
     return this.http.get(
-      `/api/pub/checkout/regions?country=${country}&postalCode=${postalCode}&sc=${sc}`,
+      `/api/checkout/pub/regions?country=BRA&postalCode=12922090&sc=1`,
       {
         headers: {
           'Content-type': 'application/json',

@@ -7,12 +7,11 @@ export async function getRegionId(ctx: Context, next: () => Promise<any>) {
   try {
     const { postalCode } = state
 
-    const regionId = await Regions.getRegionId(postalCode, 'BRA', '1')
-
-    console.log('🚀 ~ regionId:', regionId)
+    const regionIdresponse = await Regions.getRegionId(postalCode)
+    console.log('🚀 ~ getRegionId ~ regionIdresponse:', regionIdresponse)
 
     await next()
   } catch (error) {
-    console.log(error)
+    console.log('=========================================>', error)
   }
 }
