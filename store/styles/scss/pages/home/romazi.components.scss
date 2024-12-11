@@ -325,7 +325,7 @@
     }
 
     :global(.vtex-slider-0-x-sliderFrame) {
-      margin-left: 30%;
+      margin-left: 20%;
     }
 
     :global(.vtex-slider-0-x-sliderFrame) {
@@ -335,12 +335,19 @@
     }
   }
 
+  .romaziPremiumPrevSlide,
   .romaziPremiumSlide {
-    margin-right: -7%;
+    // margin-right: -7%;
     .romaziPremiumSliderImage {
-      width: 164px !important;
+      width: 90% !important;
       transition: all 0.3s;
+      filter: blur(2px);
     }
+  }
+
+  .romaziPremiumPrevSlide {
+    overflow: visible !important;
+    margin-right: -16px;
   }
 
   .romaziPremiumSlideActive {

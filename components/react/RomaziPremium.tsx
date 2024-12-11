@@ -42,6 +42,7 @@ const CSS_HANDLES = [
   'romaziPremiumCustomSlider',
   'romaziPremiumSliderImage',
   'romaziImageContainer',
+  'romaziPremiumPrevSlide',
 ] as const
 
 const RomaziPremium: StoreFrontFC<{
@@ -146,9 +147,12 @@ const RomaziPremium: StoreFrontFC<{
               <Slide
                 key={index}
                 sliderTransitionDuration={500}
+                style={{ overflow: 'visible' }}
                 className={
                   currentSlide === index
                     ? handles.romaziPremiumSlideActive
+                    : currentSlide - 1 === index
+                    ? handles.romaziPremiumPrevSlide
                     : handles.romaziPremiumSlide
                 }
               >

@@ -305,19 +305,22 @@
     gap: 16px;
   }
   .romaziPremiumSlider :global(.vtex-slider-0-x-sliderFrame) {
-    margin-left: 30%;
+    margin-left: 20%;
   }
   .romaziPremiumSlider :global(.vtex-slider-0-x-sliderFrame) {
     display: flex;
     align-items: flex-end;
     gap: 40px;
   }
-  .romaziPremiumSlide {
-    margin-right: -7%;
-  }
+  .romaziPremiumPrevSlide .romaziPremiumSliderImage,
   .romaziPremiumSlide .romaziPremiumSliderImage {
-    width: 164px !important;
+    width: 90% !important;
     transition: all 0.3s;
+    filter: blur(2px);
+  }
+  .romaziPremiumPrevSlide {
+    overflow: visible !important;
+    margin-right: -16px;
   }
   .romaziPremiumSlideActive {
     margin-right: 0;

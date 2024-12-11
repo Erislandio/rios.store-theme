@@ -21,6 +21,8 @@ declare global {
 
   interface State extends RecorderState {
     postalCode: string
+    regionId: string
+    userAddress: VtexPostalCodeResponse
   }
 }
 export default new Service({

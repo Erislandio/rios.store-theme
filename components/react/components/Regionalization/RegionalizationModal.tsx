@@ -5,9 +5,9 @@ import InputMask from 'react-input-mask'
 import Modal from 'react-modal'
 import { useCssHandles } from 'vtex.css-handles'
 
-// import { useRegionalizationContext } from '../../../contexts/RegionalizationContext'
 import { useRegionalizationContext } from './context'
 import './Regionalization.styles.css'
+import { getRegionId } from './utils/getRegionId'
 import { searchPostalCode } from './utils/searchPostalCode'
 
 const CSS_HANDLES: readonly string[] = [
@@ -45,13 +45,13 @@ export const CloseIcon = () => (
 
 export const RegionalizationModal = () => {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const { isOpenModal, setIsOpenModal } = useRegionalizationContext()
+  const { isOpenModal, setIsOpenModal, setRegionId, regionId } =
+    useRegionalizationContext()
+  console.log('🚀 ~ RegionalizationModal ~ regionId:', regionId)
   const [postalCode, setPostalCode] = useState<string>('')
   const [error, setError] = useState<boolean>(false)
-  console.log('🚀 ~ RegionalizationModal ~ error:', error)
   const [address, setAddress] = useState<VtexPostalCodeResponse>()
   const [disabledButton, setDisabledButton] = useState<boolean>(true)
-  console.log('🚀 ~ RegionalizationModal ~ address:', address)
 
   // const [zipCode, setZipCode] = useState<string>('')
   // const { setUserZipCode, setIsOpenModal, isOpenModal } =
@@ -84,6 +84,23 @@ export const RegionalizationModal = () => {
         setError(true)
       } catch {
         setError(true)
+      }
+    },
+    [postalCode]
+  )
+
+  const confirmationClick = useCallback(
+    async (event: any) => {
+      event.preventDefault()
+      try {
+        const region = await getRegionId(postalCode)
+
+        if (region.regionId) {
+          const { regionId } = region
+          setRegionId(regionId)
+        }
+      } catch (error) {
+        console.error(error)
       }
     },
     [postalCode]
@@ -158,6 +175,7 @@ export const RegionalizationModal = () => {
             <div>
               <button
                 disabled={disabledButton}
+                onClick={confirmationClick}
                 className={classNames(
                   handles.confirmZipcode,
                   'flex justify-center items-center fw7 pointer'
