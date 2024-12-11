@@ -15,6 +15,12 @@
     ]
   },
   "custom-div#region": {
+    "props": {
+      "className": "region-mobile",
+      "justifyContent": "flex-start",
+      "alignItems": "flex-start",
+      "background": "#fff"
+    },
     "children": [
       "custom-regionalization"
     ]

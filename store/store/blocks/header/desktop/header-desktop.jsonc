@@ -79,6 +79,16 @@
       "height": "60"
     }
   },
+  "custom-div#menus": {
+    "props": {
+      "className": "div-menu",
+      "alignItems": "center"
+    },
+    "children": [
+      "custom-dynamic-menu#top-custom",
+      "menu#header-offer"
+    ]
+  },
   "flex-layout.row#menus": {
     "props": {
       "blockClass": [
@@ -91,8 +101,7 @@
       "fullWidth": true
     },
     "children": [
-      "custom-dynamic-menu#top-custom",
-      "menu#header-offer",
+      "custom-div#menus",
       "custom-regionalization"
     ]
   }

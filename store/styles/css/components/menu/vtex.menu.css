@@ -6,3 +6,12 @@
   font-weight: 600;
   line-height: normal;
 }
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .styledLinkContainer--offers {
+    margin: 0 8px !important;
+  }
+  .styledLink--offers {
+    font-size: 16px;
+  }
+}

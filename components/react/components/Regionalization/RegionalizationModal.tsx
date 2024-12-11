@@ -24,6 +24,8 @@ const CSS_HANDLES: readonly string[] = [
   'searchZipcode',
   'modalTitle',
   'secondModal',
+  'errorMessage',
+  'addressCity',
 ]
 
 const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
@@ -153,13 +155,11 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
               </div>
               <div>
                 {address && (
-                  <span>
+                  <p className={handles.addressCity}>
                     {address.city}-{address.state}
-                  </span>
+                  </p>
                 )}
-                {error && (
-                  <span className={handles.errorMessage}>CEP Inválido</span>
-                )}
+                {error && <p className={handles.errorMessage}>CEP Inválido</p>}
               </div>
             </div>
             <div>

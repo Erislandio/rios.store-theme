@@ -66,26 +66,21 @@
 .bannerOurLinesContainer {
   position: relative;
 }
-
 .bannerOurLinesContainer .sliderLayoutContainer {
   position: absolute;
   top: 50%;
 }
-
 .bannerOurLinesContainer .slide {
   max-width: 335px;
   max-width: 335px;
 }
-
 .bannerOurLinesContainer .paginationDotsContainer {
   bottom: -10%;
 }
-
 .bannerOurLinesContainer .caretIcon {
   width: 16px;
   height: 16px;
 }
-
 .bannerOurLinesContainer .caretIcon::before {
   content: "";
   width: 48px;
@@ -93,7 +88,6 @@
   background: #e2e2e2;
   display: flex;
 }
-
 .bannerOurLinesContainer .sliderArrows {
   width: 32px;
   height: 32px;
@@ -136,7 +130,6 @@
     top: 55%;
   }
 }
-
 .romaziPremiumLogoContainer {
   display: flex;
   align-items: center;
@@ -163,8 +156,7 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
-  line-height: 32px;
-  /* 100% */
+  line-height: 32px; /* 100% */
   letter-spacing: 1.28px;
   width: 100%;
   margin-bottom: 16px;
@@ -178,8 +170,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: 140%;
-  /* 25.2px */
+  line-height: 140%; /* 25.2px */
   width: 100%;
   margin: 0;
 }
@@ -253,36 +244,30 @@
   justify-content: center;
   left: calc(50% - 125px);
 }
-
 .romaziPremiumSlider :global(.vtex-shelf-1-x-arrow) {
   background-color: #676767;
   padding: 8px 8px;
   border-radius: 50%;
   top: 55%;
 }
-
 .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowRight) {
   right: 5%;
 }
-
 .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowLeft) {
   left: -20%;
 }
-
 .romaziPremiumSlider .caretIcon {
   color: #f2f2f2;
   opacity: 0.5;
   width: 16px;
   height: 16px;
 }
-
 .romaziPremiumSlider :global(.vtex-slider-0-x-dotsContainer) {
   gap: 16px;
   display: flex;
   bottom: -10%;
   left: 40%;
 }
-
 .romaziPremiumSlider :global(.vtex-slider-0-x-sliderFrame) {
   transition: ease 0.3s !important;
 }
@@ -304,128 +289,104 @@
     left: 55%;
     top: 44%;
   }
-
   .romaziPremiumSlider :global(.vtex-shelf-1-x-arrow) {
     top: 105%;
   }
-
   .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowRight) {
     right: 35%;
   }
-
   .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowLeft) {
     left: 28%;
   }
-
   .romaziPremiumSlider :global(.vtex-slider-0-x-dotsContainer) {
     display: flex;
     top: 105%;
     left: 46%;
     gap: 16px;
   }
-
   .romaziPremiumSlider :global(.vtex-slider-0-x-sliderFrame) {
-    margin-left: 20%;
+    margin-left: 30%;
   }
-
   .romaziPremiumSlider :global(.vtex-slider-0-x-sliderFrame) {
     display: flex;
     align-items: flex-end;
     gap: 40px;
     padding-left: 2rem;
   }
-
+  .romaziPremiumPrevSlide .romaziPremiumSliderImage,
   .romaziPremiumSlide .romaziPremiumSliderImage {
     width: 150px !important;
     transition: all 0.3s;
     filter: blur(2px);
   }
-
   .romaziPremiumPrevSlide {
     overflow: visible !important;
     margin-right: -16px;
   }
-
   .romaziPremiumSlideActive {
     margin-right: 0;
   }
-
   .romaziPremiumSlideActive .romaziPremiumSliderImage {
     width: 100% !important;
   }
-
   .romaziPremiumLogo {
     width: 316px;
     height: 85px;
   }
-
   .romaziPremiumTextsContainer {
     max-width: 606px;
     align-items: flex-start;
     margin-left: 8.75rem;
   }
-
   .romaziPremiumLogoContainer {
     margin-left: 8.75rem;
   }
-
   .romaziPremiumHarmonizeContainer {
     margin-left: 10.75rem;
     padding: 0;
   }
-
   .romaziPremiumLogoContainer {
     width: 100%;
     align-items: flex-start;
   }
-
   .logoSoulsContainer {
     position: absolute;
     right: 25px;
     bottom: 20px;
   }
-
   .romaziPremiumTitle {
     margin-top: 0;
   }
-
   .romaziPremiumBackgroundImageContainer {
     margin-bottom: 26px;
     width: 100%;
   }
-
   .romaziPremiumBackgroundImageContainer .romaziPremiumBackgroundImage {
     width: 100%;
   }
 }
-
 @media (min-width: 1025px) and (max-width: 1300px) {
   .romaziPremiumTextsContainer {
     margin-left: 2rem;
     padding-left: 0;
   }
-
   .romaziPremiumHarmonizeContainer {
     margin-left: 2rem;
   }
 }
-
 @media (min-width: 1500px) {
   .romaziPremiumSlider {
     left: 56%;
     top: 45%;
   }
 }
-
 @media (min-width: 1700px) {
   .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowRight) {
     right: 41%;
   }
-
   .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowLeft) {
     left: 32%;
   }
-
   .romaziPremiumSlider :global(.vtex-slider-0-x-dotsContainer) {
     display: flex;
     top: 105%;
@@ -433,7 +394,6 @@
     gap: 16px;
   }
 }
-
 .categoryContainerTitleh2 {
   color: #000;
   font-family: "Mulish Bold", sans-serif;
@@ -476,8 +436,7 @@
   font-size: 14.254px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14.254px;
-  /* 100% */
+  line-height: 14.254px; /* 100% */
   letter-spacing: 0.285px;
 }
 
@@ -494,22 +453,18 @@
 .podCastContainer .paginationDotsContainer {
   bottom: -5%;
 }
-
 .podCastContainer .sliderArrows {
   bottom: 60%;
   background: #e2e2e2 !important;
   padding: 12px;
   border-radius: 50%;
 }
-
 .podCastContainer .sliderLeftArrow {
   left: -16px;
 }
-
 .podCastContainer .sliderRightArrow {
   right: -16px;
 }
-
 .podCastContainer .caretIcon {
   width: 20px;
   height: 20px;
@@ -526,7 +481,6 @@
   display: flex;
   justify-content: flex-end;
 }
-
 .romaziPremiumSlidePrev .romaziPremiumSliderImage {
   width: 150px !important;
   transition: all 0.3s;

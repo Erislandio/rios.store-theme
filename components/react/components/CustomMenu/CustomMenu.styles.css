@@ -17,6 +17,8 @@
   line-height: normal;
 }
 
+
+
 .menuItem:hover .submenu {
   display: block;
 }
@@ -508,5 +510,11 @@ a.menuLink:hover {
 
   .allMoreItems ul li {
     padding: 11px 24px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .menuContainerItem {
+    font-size: 16px !important;
   }
 }
