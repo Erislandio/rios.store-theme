@@ -332,14 +332,14 @@
       display: flex;
       align-items: flex-end;
       gap: 40px;
+      padding-left: 2rem;
     }
   }
 
   .romaziPremiumPrevSlide,
   .romaziPremiumSlide {
-    // margin-right: -7%;
     .romaziPremiumSliderImage {
-      width: 90% !important;
+      width: 150px !important;
       transition: all 0.3s;
       filter: blur(2px);
     }
@@ -394,6 +394,11 @@
 
   .romaziPremiumBackgroundImageContainer {
     margin-bottom: 26px;
+    width: 100%;
+
+    .romaziPremiumBackgroundImage {
+      width: 100%;
+    }
   }
 }
 
@@ -450,6 +455,12 @@
 
 .podCastContainerLink {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.podCastContainerLi {
+  height: 100%;
 }
 
 .podCastContainerTitle {
@@ -516,4 +527,22 @@
   align-items: center;
   justify-content: flex-end;
   margin-right: 5px;
+}
+
+.romaziPremiumSlidePrev {
+  display: flex;
+  justify-content: flex-end;
+
+  .romaziPremiumSliderImage {
+    width: 150px !important;
+    transition: all 0.3s;
+  }
+}
+
+.dotsContainer {
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    top: 2rem;
+    left: 1.5rem;
+  }
 }
