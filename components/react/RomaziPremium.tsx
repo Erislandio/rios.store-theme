@@ -1,9 +1,7 @@
-import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
 import { Dots, Slide, Slider, SliderContainer } from 'vtex.slider'
-import { IconCaret } from 'vtex.store-icons'
 
 interface RomaziPremiumLines {
   backgroundImage: string
@@ -42,6 +40,8 @@ const CSS_HANDLES = [
   'romaziPremiumCustomSlider',
   'romaziPremiumSliderImage',
   'romaziImageContainer',
+  'dotsContainer',
+  'romaziPremiumSlidePrev',
 ] as const
 
 const RomaziPremium: StoreFrontFC<{
@@ -89,26 +89,26 @@ const RomaziPremium: StoreFrontFC<{
     }
   }
 
-  const arrowRender = ({ orientation, onClick }: any) => {
-    // const { gap, cssHandles } = this.props
-    const containerClasses = classNames('pointer z-1 flex absolute', {
-      [`vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowLeft left-0 ph3`]:
-        orientation === 'left',
-      [`vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowRight right-0 ph3`]:
-        orientation === 'right',
-    })
-    return (
-      <div
-        className={containerClasses}
-        onClick={() => {
-          onClick()
-          setSlideByOrientation(orientation)
-        }}
-      >
-        <IconCaret orientation={orientation} thin size={20} />
-      </div>
-    )
-  }
+  // const arrowRender = ({ orientation, onClick }: any) => {
+  //   // const { gap, cssHandles } = this.props
+  //   const containerClasses = classNames('pointer z-1 flex absolute', {
+  //     [`vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowLeft left-0 ph3`]:
+  //       orientation === 'left',
+  //     [`vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowRight right-0 ph3`]:
+  //       orientation === 'right',
+  //   })
+  //   return (
+  //     <div
+  //       className={containerClasses}
+  //       onClick={() => {
+  //         onClick()
+  //         setSlideByOrientation(orientation)
+  //       }}
+  //     >
+  //       <IconCaret orientation={orientation} thin size={20} />
+  //     </div>
+  //   )
+  // }
 
   return (
     <div className={handles.romaziPremiumContainer}>
@@ -139,7 +139,6 @@ const RomaziPremium: StoreFrontFC<{
             onChangeSlide={() => {}}
             easing="ease"
             perPage={perPage}
-            arrowRender={arrowRender}
             centerMode={'center'}
           >
             {lines.map((item, index) => (
@@ -149,6 +148,8 @@ const RomaziPremium: StoreFrontFC<{
                 className={
                   currentSlide === index
                     ? handles.romaziPremiumSlideActive
+                    : currentSlide - 1 === index
+                    ? handles.romaziPremiumSlidePrev
                     : handles.romaziPremiumSlide
                 }
               >
@@ -158,23 +159,68 @@ const RomaziPremium: StoreFrontFC<{
                   // title={item.__editorItemTitle}
                   src={item.imagesCarousel}
                   loading="eager"
+                  style={{
+                    width: currentSlide === index ? '100%' : '75%',
+                  }}
                 />
               </Slide>
             ))}
           </Slider>
-          <Dots
-            // perPage={perPage
-            showDotsPerPage
-            currentSlide={currentSlide}
-            totalSlides={lines.length}
-            onChangeSlide={() => {}}
-            // onChangeSlide={handleChangeSlide}
-            classes={{
-              root: 'pv4',
-              dot: `${handles.dots}`,
-              activeDot: `${handles.dotsActive}`,
-            }}
-          />
+          <div className={handles.dotsContainer}>
+            <button
+              onClick={() => {
+                setSlideByOrientation('left')
+              }}
+              style={{
+                border: 'none',
+              }}
+              className="pointer z-1 flex absolute vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowLeft left-0 ph3"
+            >
+              <svg
+                fill="none"
+                width="20"
+                height="20"
+                viewBox="0 0 16 16"
+                className=" romazi-components-0-x-caretIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="#nav-thin-caret--left"></use>
+              </svg>
+            </button>
+            <Dots
+              // perPage={perPage
+              showDotsPerPage
+              currentSlide={currentSlide}
+              totalSlides={lines.length}
+              onChangeSlide={() => {}}
+              // onChangeSlide={handleChangeSlide}
+              classes={{
+                root: 'pv4',
+                dot: `${handles.dots}`,
+                activeDot: `${handles.dotsActive}`,
+              }}
+            />
+            <button
+              className="pointer z-1 flex absolute vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowRight right-0 ph3"
+              style={{
+                border: 'none',
+              }}
+              onClick={() => {
+                setSlideByOrientation('right')
+              }}
+            >
+              <svg
+                fill="none"
+                width="20"
+                height="20"
+                viewBox="0 0 16 16"
+                className="romazi-components-0-x-caretIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="#nav-thin-caret--right"></use>
+              </svg>
+            </button>
+          </div>
         </SliderContainer>
       </div>
       <div className={handles.romaziPremiumTextsContainer}>

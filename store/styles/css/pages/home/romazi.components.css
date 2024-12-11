@@ -311,12 +311,10 @@
     display: flex;
     align-items: flex-end;
     gap: 40px;
-  }
-  .romaziPremiumSlide {
-    margin-right: -7%;
+    padding-left: 2rem;
   }
   .romaziPremiumSlide .romaziPremiumSliderImage {
-    width: 164px !important;
+    width: 150px !important;
     transition: all 0.3s;
   }
   .romaziPremiumSlideActive {
@@ -355,6 +353,10 @@
   }
   .romaziPremiumBackgroundImageContainer {
     margin-bottom: 26px;
+    width: 100%;
+  }
+  .romaziPremiumBackgroundImageContainer .romaziPremiumBackgroundImage {
+    width: 100%;
   }
 }
 @media (min-width: 1025px) and (max-width: 1300px) {
@@ -401,6 +403,12 @@
 
 .podCastContainerLink {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.podCastContainerLi {
+  height: 100%;
 }
 
 .podCastContainerTitle {
@@ -461,4 +469,21 @@
   align-items: center;
   justify-content: flex-end;
   margin-right: 5px;
+}
+
+.romaziPremiumSlidePrev {
+  display: flex;
+  justify-content: flex-end;
+}
+.romaziPremiumSlidePrev .romaziPremiumSliderImage {
+  width: 150px !important;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 1024px) {
+  .dotsContainer {
+    position: relative;
+    top: 2rem;
+    left: 1.5rem;
+  }
 }
