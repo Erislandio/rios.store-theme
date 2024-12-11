@@ -1,6 +1,7 @@
 import classNames from 'classnames'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+import { SessionSuccess, useFullSession } from 'vtex.session-client'
 import { useRegionalizationContext } from './context'
 import RegionalizationModal from './RegionalizationModal'
 
@@ -32,11 +33,19 @@ const RegionalizationPin = () => (
 
 const RegionalizationHeader: StoreFrontFC = () => {
   const { handles } = useCssHandles(CSS_HANDLES)
+  const { data: sessionData } = useFullSession()
+
+  const session = sessionData?.session as SessionSuccess
   const { setIsOpenModal } = useRegionalizationContext()
+  const [userLastAddress, setUserLastAddress] = useState<string>('')
 
   const handleOpenModal = () => {
     setIsOpenModal(true)
   }
+
+  useEffect(() => {
+    setUserLastAddress(session?.namespaces?.public?.cityName?.value)
+  }, [session])
 
   return (
     <div
@@ -54,10 +63,12 @@ const RegionalizationHeader: StoreFrontFC = () => {
         onClick={handleOpenModal}
       >
         <RegionalizationPin />
-        <span className={`${handles.regionaliseCity}`}>São Paulo - SP</span>
+        <span className={`${handles.regionaliseCity}`}>
+          {!userLastAddress ? 'São Paulo - SP' : userLastAddress}
+        </span>
         <span className={handles.regionaliseChange}>Alterar</span>
       </button>
-      <RegionalizationModal />
+      <RegionalizationModal userLastAddress={userLastAddress} />
     </div>
   )
 }

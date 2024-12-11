@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import type { FormEvent } from 'react'
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import InputMask from 'react-input-mask'
 import Modal from 'react-modal'
 import { useCssHandles } from 'vtex.css-handles'
@@ -26,36 +26,18 @@ const CSS_HANDLES: readonly string[] = [
   'secondModal',
 ]
 
-export const CloseIcon = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M12.7071 12L21.8536 21.1464C22.0488 21.3417 22.0488 21.6583 21.8536 21.8536C21.6583 22.0488 21.3417 22.0488 21.1464 21.8536L12 12.7071L2.85355 21.8536C2.65829 22.0488 2.34171 22.0488 2.14645 21.8536C1.95118 21.6583 1.95118 21.3417 2.14645 21.1464L11.2929 12L2.14645 2.85355C1.95118 2.65829 1.95118 2.34171 2.14645 2.14645C2.34171 1.95118 2.65829 1.95118 2.85355 2.14645L12 11.2929L21.1464 2.14645C21.3417 1.95118 21.6583 1.95118 21.8536 2.14645C22.0488 2.34171 22.0488 2.65829 21.8536 2.85355L12.7071 12Z"
-      fill="#000"
-    />
-  </svg>
-)
-
-export const RegionalizationModal = () => {
+const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
+  userLastAddress,
+}) => {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const { isOpenModal, setIsOpenModal, setRegionId, regionId } =
+  const { isOpenModal, setIsOpenModal, setRegionId, setCityName } =
     useRegionalizationContext()
-  console.log('🚀 ~ RegionalizationModal ~ regionId:', regionId)
   const [postalCode, setPostalCode] = useState<string>('')
   const [error, setError] = useState<boolean>(false)
+  const [showConfirmationModal, setShowConfirmationModal] =
+    useState<boolean>(false)
   const [address, setAddress] = useState<VtexPostalCodeResponse>()
   const [disabledButton, setDisabledButton] = useState<boolean>(true)
-
-  // const [zipCode, setZipCode] = useState<string>('')
-  // const { setUserZipCode, setIsOpenModal, isOpenModal } =
-  //   useRegionalizationContext()
 
   const handleCloseModal = () => {
     setIsOpenModal(false)
@@ -89,6 +71,10 @@ export const RegionalizationModal = () => {
     [postalCode]
   )
 
+  useEffect(() => {
+    setShowConfirmationModal(true)
+  }, [userLastAddress])
+
   const confirmationClick = useCallback(
     async (event: any) => {
       event.preventDefault()
@@ -99,14 +85,18 @@ export const RegionalizationModal = () => {
           const { regionId } = region
           setRegionId(regionId)
         }
+
+        if (address) {
+          setCityName(`${address.city} - ${address.state}`)
+        }
       } catch (error) {
         console.error(error)
       }
     },
-    [postalCode]
+    [postalCode, address]
   )
 
-  const test = true
+  // const test = true
 
   return (
     <Modal
@@ -117,7 +107,7 @@ export const RegionalizationModal = () => {
       ariaHideApp={false}
     >
       <div className={handles.regionalizationModal}>
-        {!!test ? (
+        {!showConfirmationModal ? (
           <>
             <div>
               <h3 className={handles.modalTitle}>Escolha sua Localização</h3>
@@ -201,6 +191,7 @@ export const RegionalizationModal = () => {
               </div>
               <div>
                 <button
+                  onClick={handleCloseModal}
                   className={classNames(
                     handles.useMyLocalizationButton,
                     'flex justify-center items-center fw7 pointer'
@@ -209,6 +200,7 @@ export const RegionalizationModal = () => {
                   Não alterar
                 </button>
                 <button
+                  onClick={() => setShowConfirmationModal(false)}
                   className={classNames(
                     handles.confirmZipcode,
                     'flex justify-center items-center fw7 pointer'

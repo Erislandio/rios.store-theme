@@ -13,6 +13,7 @@ interface RegionalizationProps {
   isOpenModal: boolean
   setIsOpenModal: (isOpenModal: boolean) => void
   setRegionId: (regionId: string) => void
+  setCityName: (city: string) => void
   regionId: string
 }
 
@@ -21,8 +22,18 @@ const RegionalizationContext = createContext<RegionalizationProps | null>(null)
 export const RegionalizationProvider: FC = ({ children }) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const updateSession = useUpdateSession()
+  // const { data: sessionData } = useFullSession()
   const [regionId, setRegionId] = useState<string>('')
-  // const [sessionAddress, setSessionAddress] = useState<VtexPostalCodeResponse>()
+  const [cityName, setCityName] = useState<string>('')
+
+  useEffect(() => {
+    const hasModalBeenShown = localStorage.getItem('hasModalBeenShown')
+
+    if (!hasModalBeenShown) {
+      setIsOpenModal(true)
+      localStorage.setItem('hasModalBeenShown', 'true')
+    }
+  }, [])
 
   const setRegionIdSession = useCallback(async () => {
     if (!regionId) return
@@ -34,9 +45,20 @@ export const RegionalizationProvider: FC = ({ children }) => {
     })
   }, [regionId])
 
+  const setAddressInSession = useCallback(async () => {
+    if (!cityName) return
+
+    await updateSession({
+      variables: {
+        fields: { cityName },
+      },
+    })
+  }, [cityName])
+
   useEffect(() => {
     setRegionIdSession().catch((error) => console.error(error))
-  }, [regionId])
+    setAddressInSession().catch((error) => console.error(error))
+  }, [regionId, cityName])
 
   const regionalizationProviderValue = useMemo(
     () => ({
@@ -44,6 +66,7 @@ export const RegionalizationProvider: FC = ({ children }) => {
       setIsOpenModal,
       setRegionId,
       regionId,
+      setCityName,
     }),
     [isOpenModal, setIsOpenModal]
   )
