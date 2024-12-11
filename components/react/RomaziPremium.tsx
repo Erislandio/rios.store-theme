@@ -145,6 +145,7 @@ const RomaziPremium: StoreFrontFC<{
               <Slide
                 key={index}
                 sliderTransitionDuration={500}
+                style={{ overflow: 'visible' }}
                 className={
                   currentSlide === index
                     ? handles.romaziPremiumSlideActive

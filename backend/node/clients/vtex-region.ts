@@ -8,15 +8,24 @@ export default class Regions extends JanusClient {
     })
   }
 
-  public async getRegionId(postalCode: string): Promise<any> {
-    console.log('🚀 ~ Regions ~ getRegionId ~ postalCode:', postalCode)
+  public async getRegionId(postalCode: string): Promise<RegionResponse[]> {
     return this.http.get(
-      `/api/checkout/pub/regions?country=BRA&postalCode=12922090&sc=1`,
+      `/api/checkout/pub/regions?country=BRA&postalCode=${postalCode}&sc=1`,
       {
         headers: {
           'Content-type': 'application/json',
         },
       }
     )
+  }
+
+  public async getUserAddress(
+    postalCode: string
+  ): Promise<VtexPostalCodeResponse> {
+    return this.http.get(`/api/checkout/pub/postal-code/BRA/${postalCode}`, {
+      headers: {
+        'Content-type': 'application/json',
+      },
+    })
   }
 }

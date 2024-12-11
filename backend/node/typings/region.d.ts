@@ -1,3 +1,14 @@
+interface RegionResponse {
+  id: string
+  sellers: Seller[]
+}
+
+interface Seller {
+  id: string
+  name: string
+  logo: string
+}
+
 interface VtexPostalCodeResponse {
   postalCode: string
   city: string
@@ -9,8 +20,4 @@ interface VtexPostalCodeResponse {
   complement: string
   reference: string
   geoCoordinates: number[]
-}
-
-interface RegionIdResponse {
-  regionId: string
 }
