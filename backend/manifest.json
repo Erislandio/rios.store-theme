@@ -1,7 +1,7 @@
 {
   "vendor": "romazi",
   "name": "service",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Romazi Service",
   "description": "Romazi Service",
   "mustUpdateAt": "2023-03-10",

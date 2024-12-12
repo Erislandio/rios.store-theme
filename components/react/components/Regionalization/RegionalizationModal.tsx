@@ -74,7 +74,9 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
   )
 
   useEffect(() => {
-    setShowConfirmationModal(true)
+    if (!!userLastAddress) {
+      setShowConfirmationModal(true)
+    }
   }, [userLastAddress])
 
   const confirmationClick = useCallback(
@@ -134,15 +136,25 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
                   onSubmit={handleClick}
                   className="flex justify-between items-start w-100"
                 >
-                  <InputMask
-                    className={handles.zipCodeInput}
-                    mask="99999-999"
-                    placeholder="CEP"
-                    // value={postalCode}
-                    onChange={(event) => setPostalCode(event.target.value)}
-                    alwaysShowMask={false}
-                    maskChar=""
-                  />
+                  <div className="flex flex-column w-60 mr2">
+                    <InputMask
+                      className={handles.zipCodeInput}
+                      mask="99999-999"
+                      placeholder="CEP"
+                      // value={postalCode}
+                      onChange={(event) => setPostalCode(event.target.value)}
+                      alwaysShowMask={false}
+                      maskChar=""
+                    />
+                    <a
+                      className={handles.modalText}
+                      href="https://buscacepinter.correios.com.br/app/endereco/index.php?t"
+                      target="_blank"
+                    >
+                      Não sei meu CEP
+                    </a>
+                  </div>
+
                   <button
                     className={classNames(
                       handles.searchZipcode,

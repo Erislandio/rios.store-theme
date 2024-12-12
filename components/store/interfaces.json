@@ -20,5 +20,8 @@
   },
   "custom-regionalization": {
     "component": "Regionalization"
+  },
+  "custom-share": {
+    "component": "CustomSharePdp"
   }
 }
