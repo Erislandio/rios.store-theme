@@ -30,13 +30,13 @@ const Shareicon = () => (
     />
     <path
       fillRule="evenodd"
-      clip-rule="evenodd"
+      clipRule="evenodd"
       d="M11.0659 17.03C11.3421 16.5627 11.9447 16.4077 12.412 16.6838L21.1523 21.8486C21.6195 22.1247 21.7745 22.7273 21.4984 23.1946C21.2222 23.6619 20.6196 23.8168 20.1523 23.5407L11.4121 18.376C10.9448 18.0999 10.7898 17.4972 11.0659 17.03Z"
       fill="#2643A8"
     />
     <path
       fillRule="evenodd"
-      clipRule-rule="evenodd"
+      clipRule="evenodd"
       d="M23.483 22.0742C22.2165 22.0742 21.1899 23.1009 21.1899 24.3673C21.1899 25.6338 22.2165 26.6604 23.483 26.6604C24.7494 26.6604 25.7761 25.6338 25.7761 24.3673C25.7761 23.1009 24.7494 22.0742 23.483 22.0742ZM19.2243 24.3673C19.2243 22.0154 21.131 20.1087 23.483 20.1087C25.8349 20.1087 27.7416 22.0154 27.7416 24.3673C27.7416 26.7193 25.8349 28.6259 23.483 28.6259C21.131 28.6259 19.2243 26.7193 19.2243 24.3673Z"
       fill="#2643A8"
     />
@@ -69,7 +69,7 @@ const CustomSharePdp: React.FC<WithToastProps> = ({ showToast }) => {
     <div className={handles.customShare}>
       <Button disabled={false} onClick={() => handleCopy()}>
         <Shareicon />
-        {/* Compartilhar */}
+        Compartilhar
       </Button>
     </div>
   )

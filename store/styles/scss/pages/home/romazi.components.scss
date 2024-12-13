@@ -547,6 +547,8 @@
   }
 }
 
+// ----------------------------------- custom div ------------------------------------
+
 .divContainer--list-price-savings-pdp {
   flex-direction: row !important;
   :global(.vtex-product-price-1-x-listPrice) {
@@ -579,6 +581,11 @@
 
 .divContainer--buy-button-container {
   flex-direction: row !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100% !important;
 
   :global(.vtex-button) {
     margin-left: 8px;
@@ -616,4 +623,26 @@
 
 .divContainer--share {
   margin: 24px;
+  flex-direction: row !important;
+}
+
+// ----------------------------- custom share -------------------------
+
+.customShare {
+  :global(.vtex-button) {
+    background-color: transparent;
+    border: none;
+  }
+
+  :global(.vtex-button__label) {
+    gap: 8px;
+    padding: 0;
+    color: var(--Cobalto-800, #2643a8);
+    font-family: 'Mulish Bold', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
 }

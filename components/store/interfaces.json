@@ -23,5 +23,8 @@
   },
   "custom-share": {
     "component": "CustomSharePdp"
+  },
+  "custom-buy-together": {
+    "component": "BuyTogether"
   }
 }

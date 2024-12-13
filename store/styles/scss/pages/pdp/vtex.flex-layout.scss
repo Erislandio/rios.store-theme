@@ -1,15 +1,24 @@
 .flexRowContent--breadcrumb-container {
   margin-top: 24px;
 }
+.flexRowContent--specification,
+.flexRowContent--description {
+  padding: 0 24px;
+}
+.flexRowContent--product-main {
+  .stretchChildrenWidth:last-child {
+    padding: 0 24px;
+  }
+}
 
-// .flexRowContent--product-main {
-//   .stretchChildrenWidth:last-child {
-//     padding: 0 24px;
-//   }
-// }
+.flexRow--specification,
+.flexRow--description,
+.flexRow--product-main {
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+}
 
-// .flexRow--product-main {
-//   :global(.vtex-store-components-3-x-container) {
-//     padding: 0;
-//   }
-// }
+.flexRow--specification {
+  margin-bottom: 24px;
+}

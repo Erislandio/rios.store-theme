@@ -1,0 +1,29 @@
+query productSearch($category: String) {
+  productSearch(query: "", category: $category, to: 20, from: 0)
+    @context(provider: "vtex.search-graphql@0.x") {
+    products {
+      productId
+      productName
+      link
+      clusterHighlights {
+        id
+        name
+      }
+      items {
+        name
+        itemId
+        nameComplete
+        sellers {
+          commertialOffer {
+            Price
+            ListPrice
+            spotPrice
+          }
+        }
+        images(quantity: 1) {
+          imageUrl
+        }
+      }
+    }
+  }
+}

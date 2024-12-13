@@ -1,0 +1,19 @@
+{
+  "flex-layout.row#shelf-pdp": {
+    "title": "Vitrine",
+    "props": {
+      "blockClass": ["shelf", "container"]
+    },
+    "children": [
+      "rich-text#shelf-title-pdp",
+      "list-context.product-list#default"
+    ]
+  },
+  "rich-text#shelf-title-pdp": {
+    "title": "Título da vitrine",
+    "props": {
+      "text": "## Novidades",
+      "blockClass": "shelf-title"
+    }
+  }
+}

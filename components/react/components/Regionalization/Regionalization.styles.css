@@ -177,8 +177,9 @@
 .regionaliseCity {
   margin: 0 8px;
   display: -webkit-box !important;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  white-space: nowrap;
 }
 
 .regionaliseChange {
@@ -206,6 +207,7 @@
   line-height: normal;
   margin: 32px 0;
 }
+
 
 @media (max-width: 1025px) {
   .regionalizationButton {

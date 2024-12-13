@@ -2,10 +2,21 @@
   margin-top: 24px;
 }
 
+.flexRowContent--specification,
+.flexRowContent--description {
+  padding: 0 24px;
+}
+
 .flexRowContent--product-main .stretchChildrenWidth:last-child {
   padding: 0 24px;
 }
 
+.flexRow--specification :global(.vtex-store-components-3-x-container),
+.flexRow--description :global(.vtex-store-components-3-x-container),
 .flexRow--product-main :global(.vtex-store-components-3-x-container) {
   padding: 0;
+}
+
+.flexRow--specification {
+  margin-bottom: 24px;
 }
