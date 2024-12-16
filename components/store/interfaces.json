@@ -30,5 +30,8 @@
   "custom-reviews": {
     "component": "CustomReviews",
     "composition": "children"
+  },
+  "custom-reviews-average": {
+    "component": "CustomReviewsAverage"
   }
 }

@@ -1,6 +1,6 @@
 .drawer {
-  max-width: 414px;
-  width: 100%;
+  max-width: 414px !important;
+  width: 100% !important;
 }
 
 .minicartTitle {
@@ -40,7 +40,7 @@
     font-weight: 400;
     line-height: normal;
     white-space: nowrap;
-    margin-right: 155px;
+    margin-right: 37%;
   }
 
   .closeIconButton {

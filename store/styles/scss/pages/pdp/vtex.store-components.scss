@@ -219,3 +219,49 @@
   font-weight: 400;
   line-height: normal;
 }
+
+.skuSelectorName {
+  color: var(--Bombay-950, #1d1d1f);
+  font-family: 'Mulish', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.skuSelectorItemTextValue {
+  color: var(--Bombay-800, #4d5156);
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.skuSelectorItem {
+  // height: 20px;
+  &--selected {
+    .skuSelectorItemTextValue {
+      color: #2643a8;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .shippingContainer {
+    margin-top: 24px;
+    width: 100%;
+
+    :global(.vtex-address-form__postalCode) {
+      width: 50%;
+    }
+
+    :global(.vtex-button) {
+      width: 50%;
+    }
+
+    :global(.vtex-input__label) {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -223,8 +223,16 @@ const BuyTogether: React.FC = () => {
   const changeIndex = useCallback(
     (index: number) => {
       const searchableProducts = data?.productSearch?.products ?? []
+
+      const searchableProductsFormatted = searchableProducts.map((product) => {
+        return {
+          ...product,
+          quantity: 1,
+        }
+      })
+
       const productIds = products.map((item) => item.productId)
-      const newData = searchableProducts.filter(
+      const newData = searchableProductsFormatted.filter(
         (item) => !productIds.includes(item.productId)
       )
 
@@ -241,7 +249,6 @@ const BuyTogether: React.FC = () => {
     },
     [data, products]
   )
-
   ///-------------
 
   const handleCheck = useCallback((index: number) => {

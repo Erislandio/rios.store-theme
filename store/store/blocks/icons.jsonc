@@ -55,5 +55,13 @@
       "viewBox": "0 0 43 30",
       "size": 43
     }
+  },
+  "icon#minicart": {
+    "props": {
+      "blockClass": "empty-cart-icon",
+      "id": "hpa-cart",
+      "viewBox": "0 0 24 24",
+      "size": 64
+    }
   }
 }

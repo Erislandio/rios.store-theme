@@ -15,6 +15,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  white-space: nowrap;
 }
 
 
@@ -145,6 +146,7 @@
   transform: none;
   width: auto;
   min-width: 331px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 28px 21px 10px 0px rgba(0, 0, 0, 0.00), 18px 13px 9px 0px rgba(0, 0, 0, 0.01), 10px 8px 8px 0px rgba(0, 0, 0, 0.05), 4px 3px 6px 0px rgba(0, 0, 0, 0.09), 1px 1px 3px 0px rgba(0, 0, 0, 0.10);
 }
 
 .submenu--megamenu>ul {
@@ -182,11 +184,12 @@
   left: 330px;
   top: 0px;
   background-color: #fff;
-  min-height: -webkit-fill-available;
   height: fit-content;
   border-left: 1px solid rgba(0, 0, 0, 0.20);
   display: none;
   min-width: 331px;
+  height: auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 28px 21px 10px 0px rgba(0, 0, 0, 0.00), 18px 13px 9px 0px rgba(0, 0, 0, 0.01), 10px 8px 8px 0px rgba(0, 0, 0, 0.05), 4px 3px 6px 0px rgba(0, 0, 0, 0.09), 1px 1px 3px 0px rgba(0, 0, 0, 0.10);
 }
 
 .allDepartamentItem:hover>.allDepartamentWrapperLevel1 {
@@ -501,6 +504,7 @@ a.menuLink:hover {
   .allDepartamentBottom ul {
     padding: 0;
     margin: 0;
+    list-style: none;
   }
 
   .allDepartamentBottom {

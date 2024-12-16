@@ -42,4 +42,15 @@
     font-size: 20px;
     color: #2643a8;
   }
+
+  @media (min-width: 1025px) {
+    height: 56px;
+    min-width: 107px;
+
+    :global(.vtex-numeric-stepper__minus-button__text),
+    :global(.vtex-numeric-stepper__plus-button__text) {
+      font-size: 29px;
+      font-weight: 400;
+    }
+  }
 }

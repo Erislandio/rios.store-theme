@@ -264,7 +264,7 @@ export default function CustomReviews({ children }: { children: ReactNode }) {
             </span>
           </span>
           <p className={handles.reviewsContainerMetadata1Total}>
-            ({total} avaliações)
+            {total === 1 ? `(${total} Avaliação)` : `(${total} Avaliações)`}
           </p>
         </div>
         <div className={handles.reviewsContainerMetadata2}>

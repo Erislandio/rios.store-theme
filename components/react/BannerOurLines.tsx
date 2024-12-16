@@ -50,7 +50,7 @@ const BannerOurLines: StoreFrontFC<{
         navigationStep={'page'}
         infinite={true}
         itemsPerPage={{
-          desktop: 5,
+          desktop: 4,
           tablet: 2,
           phone: 1,
         }}

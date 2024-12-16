@@ -1,6 +1,6 @@
 .searchBarContainer {
   display: flex;
-  width: 600px;
+  max-width: 600px;
   padding: 9px 12px;
   justify-content: space-between;
   align-items: center;
@@ -19,4 +19,9 @@
   .searchIcon {
     display: block;
   }
+}
+
+.logoLink {
+  min-width: 237px;
+  margin-right: 24px;
 }

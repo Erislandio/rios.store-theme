@@ -40,3 +40,14 @@
   font-size: 20px;
   color: #2643a8;
 }
+@media (min-width: 1025px) {
+  .quantitySelectorContainer {
+    height: 56px;
+    min-width: 107px;
+  }
+  .quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button__text),
+  .quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button__text) {
+    font-size: 29px;
+    font-weight: 400;
+  }
+}

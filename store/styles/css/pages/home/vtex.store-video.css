@@ -21,10 +21,10 @@
   .videoContainer--video-about-us {
     width: 628px !important;
     max-width: 628px !important;
+    margin-top: 0;
     height: 355px !important;
     position: absolute;
-    bottom: 20%;
-    top: initial;
+    top: calc(50% - 178px);
     left: calc(50% - 314px);
   }
   .videoElement--video-about-us {

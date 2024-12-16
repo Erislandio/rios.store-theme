@@ -16,3 +16,9 @@
 .flexRow--minicart-footer {
   padding-bottom: 32px;
 }
+
+.flexColChild--minicart-empty:first-child {
+  background-color: #2643a8;
+  padding: 24px;
+  border-radius: 50%;
+}

@@ -58,6 +58,7 @@
 
 .buyTogetherItemImage {
   margin-left: -15px;
+  min-width: 228px;
 }
 
 .buyTogettherListPriceContainer {
@@ -172,7 +173,7 @@
   font-family: 'Mulish', sans-serif;
   font-size: 21px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   text-transform: none;
   transition: all 0.2s;
@@ -223,4 +224,53 @@
 .buyTogetherFooterItem :global(.vtex-numeric-stepper__minus-button__text) {
   font-size: 24px;
   color: #2643A8;
+}
+
+
+
+@media (min-width: 1025px) {
+  .buyTogetherWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .buyTogetherUl {
+    flex-direction: row;
+  }
+
+  .buyTogetherLi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 492px;
+    max-width: 280px;
+  }
+
+  .buyTogetherLi :global(.vtex-checkbox__line-container) {
+    top: 16px;
+    left: 16px;
+  }
+
+  .buyTogetherLi :global(.vtex-numeric-stepper-container) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .buyTogetherFooterItem {
+    padding: 24px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .buyTogetherUl {
+    margin-right: 30px;
+  }
+
+  .buyTogetherFinish :global(.vtex-button) {
+    font-size: 17px;
+  }
 }

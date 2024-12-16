@@ -94,9 +94,12 @@
   },
   "flex-layout.col#empty-state": {
     "children": [
-      "icon-cart#minicart-empty-state"
+      // "icon-cart#minicart-empty-state",
+      "icon#minicart",
+      "rich-text#minicart-default-empty-state"
     ],
     "props": {
+      "blockClass": "minicart-empty",
       "horizontalAlign": "center",
       "verticalAlign": "middle"
     }
@@ -104,12 +107,14 @@
   "icon-cart#minicart-empty-state": {
     "props": {
       "size": 64,
+      "viewBox": "0 0 64 64",
       "blockClass": "minicart-empty-state"
     }
   },
   "rich-text#minicart-default-empty-state": {
     "props": {
-      "text": "Carrinho vazio"
+      "blockClass": "minicart-empty-text",
+      "text": "Seu carrinho está vazio"
     }
   }
 }

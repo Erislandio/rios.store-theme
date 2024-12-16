@@ -116,8 +116,11 @@
   padding: 56px 0;
 }
 .flexRow--romazi-premium :global(.vtex-store-components-3-x-container) {
-  max-width: 1920px;
-  margin: 0 auto;
+  max-width: 1441px;
+}
+
+.flexRowContent--deals {
+  margin-top: 24px;
 }
 
 .flexRow--podcast {
@@ -132,6 +135,17 @@
 
 .flexRowContent--romazi-premium .stretchChildrenWidth {
   overflow: hidden;
+}
+
+.flexColChild--productRating :global(.vtex-reviews-and-ratings-3-x-inlineContainer) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  margin-bottom: 4px;
+}
+.flexColChild--productRating :global(.vtex-reviews-and-ratings-3-x-inlineContainer):empty {
+  padding: 12px 0;
 }
 
 @media (min-width: 640px) {

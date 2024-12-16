@@ -9,8 +9,22 @@
       "blockClass": "sticky-header"
     },
     "children": [
-      "flex-layout.row#main-header",
+      "custom-div#main-header",
+      // "flex-layout.row#main-header",
       "flex-layout.row#menus"
+    ]
+  },
+  "custom-div#main-header": {
+    "props": {
+      "alignItems": "center",
+      "width": "100%",
+      "justifyContent": "space-between",
+      "blockClass": "main-header"
+    },
+    "children": [
+      "logo#desktop",
+      "search-bar",
+      "flex-layout.row#header-right-components"
     ]
   },
   "flex-layout.row#main-header": {
@@ -20,8 +34,6 @@
         "container"
       ],
       "verticalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
       "fullWidth": true
     },
     "children": [

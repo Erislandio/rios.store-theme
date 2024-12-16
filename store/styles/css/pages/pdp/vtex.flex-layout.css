@@ -20,3 +20,50 @@
 .flexRow--specification {
   margin-bottom: 24px;
 }
+
+.flexColChild--left-col-desktop {
+  padding-bottom: 0;
+}
+
+.flexRow--product-main-desktop {
+  margin-top: 0;
+}
+
+.flexRowContent--reviews-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0;
+}
+
+.flexRowContent--product-main-desktop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.flexColChild--right-col-desktop {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.flexCol--right-col-desktop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (min-width: 1025px) {
+  .flexRowContent--description {
+    padding: 0;
+  }
+  .flexRowContent--specification {
+    padding: 0;
+    margin-top: 74px;
+  }
+}

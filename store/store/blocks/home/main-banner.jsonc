@@ -2,7 +2,6 @@
   "flex-layout.row#main-banner": {
     "props": {
       "blockClass": [
-        "container",
         "main-banner"
       ]
     },

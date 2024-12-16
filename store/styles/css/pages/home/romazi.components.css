@@ -336,13 +336,13 @@
   .romaziPremiumTextsContainer {
     max-width: 606px;
     align-items: flex-start;
-    margin-left: 8.75rem;
+    margin-left: 33px;
   }
   .romaziPremiumLogoContainer {
-    margin-left: 8.75rem;
+    margin-left: 7.75rem;
   }
   .romaziPremiumHarmonizeContainer {
-    margin-left: 10.75rem;
+    margin-left: 64px;
     padding: 0;
   }
   .romaziPremiumLogoContainer {
@@ -528,7 +528,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 99;
   width: 100% !important;
 }
 .divContainer--buy-button-container :global(.vtex-button) {
@@ -543,7 +543,7 @@
   font-family: "Mulish", sans-serif;
   font-size: 21px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   text-transform: initial;
   transition: all 0.3s;
@@ -566,6 +566,46 @@
   flex-direction: row !important;
 }
 
+.divContainer--main-header {
+  max-width: 1200px;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1441px) {
+  .divContainer--main-header {
+    max-width: 1441px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .divContainer--share {
+    margin: 16px 0 24px 0;
+    justify-content: flex-start !important;
+  }
+  .divContainer--buy-button-container {
+    position: relative;
+    padding: 32px 0 !important;
+    border-bottom: 1px solid #bbc6cb;
+    z-index: 1;
+  }
+  .divContainer--buy-button-container :global(.vtex-button) {
+    height: 56px;
+    transition: all 0.3s;
+  }
+  .divContainer--buy-button-container :global(.vtex-button):hover {
+    filter: brightness(0.9);
+  }
+  .divContainer--buy-button-container :global(.vtex-numeric-stepper-container) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .divContainer--buy-button-container :global(.vtex-product-quantity-1-x-quantitySelectorStepper) {
+    width: 100%;
+    padding: 0 4px;
+  }
+}
 .customShare :global(.vtex-button) {
   background-color: transparent;
   border: none;
@@ -580,6 +620,47 @@
   font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
+}
+@media (min-width: 1025px) {
+  .customShare {
+    margin-left: 24px;
+  }
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild) .reviewsContainerMetadata1,
+:global(.vtex-flex-layout-0-x-flexRowContent--reviews-summary) .reviewsContainerMetadata1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+:global(.vtex-flex-layout-0-x-flexColChild) .reviewsContainerMetadata1 .starContainer,
+:global(.vtex-flex-layout-0-x-flexRowContent--reviews-summary) .reviewsContainerMetadata1 .starContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+:global(.vtex-flex-layout-0-x-flexColChild) .reviewsContainerMetadata1 .star--filed,
+:global(.vtex-flex-layout-0-x-flexRowContent--reviews-summary) .reviewsContainerMetadata1 .star--filed {
+  color: #007acb;
+}
+:global(.vtex-flex-layout-0-x-flexColChild) .reviewsContainerMetadata1 .reviewsContainerMetadata1MediaValue,
+:global(.vtex-flex-layout-0-x-flexColChild) .reviewsContainerMetadata1 .reviewsContainerMetadata1Total,
+:global(.vtex-flex-layout-0-x-flexRowContent--reviews-summary) .reviewsContainerMetadata1 .reviewsContainerMetadata1MediaValue,
+:global(.vtex-flex-layout-0-x-flexRowContent--reviews-summary) .reviewsContainerMetadata1 .reviewsContainerMetadata1Total {
+  margin: 0;
+  padding: 0;
+  color: #4d5156;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .reviewsContainer {
@@ -596,23 +677,29 @@
   }
 }
 .reviewsContainer .reviewsContainerTitle {
+  text-align: center;
   color: var(--Bombay-900, #505257);
   text-align: center;
-  font-family: "Mulish ExtraBold", sans-serif;
-  font-size: 29px;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Mulish", sans-serif;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
-  margin: 0;
+  line-height: 22px; /* 68.75% */
+  letter-spacing: 0.64px;
+  margin-top: 0px;
 }
 .reviewsContainer .reviewsContainerDescription {
   color: var(--Bombay-900, #505257);
-  text-align: center;
   font-family: "Mulish", sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 22px; /* 122.222% */
+  letter-spacing: 0.36px;
+  margin-top: 34px;
+  text-align: center;
 }
 .reviewsContainer .reviewsContainerMetadata {
   display: flex;
@@ -750,7 +837,7 @@
   color: var(--Bombay-900, #505257);
   leading-trim: both;
   text-edge: cap;
-  font-family: "Source Sans Pro";
+  font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -807,7 +894,7 @@
   color: var(--Bombay-900, #505257);
   leading-trim: both;
   text-edge: cap;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -826,7 +913,7 @@
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -838,7 +925,7 @@
   color: var(--Bombay-900, #505257);
   leading-trim: both;
   text-edge: cap;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -851,7 +938,7 @@
   color: var(--Bombay-700, #6e6e73);
   leading-trim: both;
   text-edge: cap;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -865,7 +952,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   max-width: 75%;
   margin: 0 auto;
   padding: 1rem;
@@ -881,12 +967,13 @@
 .reviewsContainer .reviewsContainerFooter .reviewsContainerFooterTitle {
   color: var(--Bombay-900, #505257);
   text-align: center;
+  /* Mulish/Semibold 17 */
   font-family: "Mulish", sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 0;
+  margin: 8px 0;
 }
 .reviewsContainer .reviewsContainerFooter :global(.vtex-button) {
   border-radius: 8px;

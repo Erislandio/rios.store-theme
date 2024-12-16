@@ -81,7 +81,7 @@ const ExclusiveContent: StoreFrontFC<{
         navigationStep="page"
         // centerModeSlidesGap={3}
         itemsPerPage={{
-          desktop: 4,
+          desktop: 3,
           tablet: 2,
           phone: 1,
         }}
