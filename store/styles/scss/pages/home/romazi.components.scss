@@ -646,3 +646,360 @@
     text-transform: capitalize;
   }
 }
+
+.reviewsContainer {
+  margin-top: 47px;
+  max-width: unset;
+  padding: 40px 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--Bombay-200, #cedae0);
+  background: #fff;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 1rem;
+  }
+
+  .reviewsContainerTitle {
+    color: var(--Bombay-900, #505257);
+    text-align: center;
+    font-family: 'Mulish ExtraBold', sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .reviewsContainerDescription {
+    color: var(--Bombay-900, #505257);
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .reviewsContainerMetadata {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 75%;
+    margin: 40px auto 0px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+
+      .reviewsContainerMetadata1Title {
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      .reviewsContainerMetadata2 {
+        margin-top: 1rem;
+      }
+    }
+
+    .reviewsContainerMetadata1Title {
+      color: var(--Bombay-900, #505257);
+      font-family: 'Mulish', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 137.5% */
+      letter-spacing: 0.32px;
+    }
+  }
+
+  .reviewsContainerMetadata1Media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .starContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3px;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+
+    .star {
+      list-style: none;
+      color: #ddd;
+    }
+
+    .star--filed {
+      color: #0062a6;
+    }
+  }
+
+  .reviewsContainerMetadata1MediaValue {
+    color: var(--Bombay-600, #80888e);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: 0.32px;
+    margin-left: 5px;
+  }
+
+  .reviewsContainerMetadata1Total {
+    margin: 0px;
+    text-align: center;
+    color: var(--Bombay-600, #80888e);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: 0.32px;
+  }
+
+  .reviewsContainerMetadata2Percentage {
+    min-width: 120px;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Bombay-900, #505257);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Mulish', sans-serif;
+    font-size: 33.455px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px; /* 137.5% */
+    letter-spacing: 0.669px;
+    padding: 0.5rem;
+    border: 5px solid #0062a6;
+    border-radius: 100%;
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .reviewsContainerMetadata2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reviewsContainerMetadata2Description {
+    color: var(--Bombay-900, #505257);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px; /* 287.5% */
+    letter-spacing: 0.32px;
+  }
+
+  .starListUl {
+    margin: 0px;
+    padding: 0px;
+
+    .star--metadata {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .starContainer {
+        margin-left: 1rem;
+      }
+
+      .starCountValue,
+      .starCount {
+        color: var(--Bombay-900, #505257);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Source Sans Pro';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+        letter-spacing: 0.32px;
+      }
+
+      .starCountValue {
+        display: block;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .reviewsContainerMetadata1 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .starList {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .starList,
+  .reviewsContainerMetadata2,
+  .reviewsContainerMetadata1 {
+    width: 33%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .reviewsContainerUsers {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    .reviewsContainerUser {
+      list-style: none;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--Bombay-200, #cedae0);
+      background: #fff;
+      display: flex;
+      align-items: baseline;
+      gap: 2rem;
+      justify-content: flex-start;
+
+      .reviewsContainerUserName {
+        margin: 0px;
+        color: var(--Bombay-900, #505257);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+        letter-spacing: 0.32px;
+      }
+
+      .reviewsContainerUser1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .reviewsContainerUserDate {
+        margin: 0px;
+        color: var(--Bombay-600, #80888e);
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+        letter-spacing: 0.32px;
+      }
+    }
+
+    .reviewsContainerUserInfoTitle {
+      margin-top: 0px;
+      color: var(--Bombay-900, #505257);
+      leading-trim: both;
+      text-edge: cap;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px; /* 100% */
+      letter-spacing: 0.44px;
+      margin-bottom: 1rem;
+    }
+
+    .reviewsContainerUserInfoDescription {
+      margin: 0px;
+      color: var(--Bombay-700, #6e6e73);
+      leading-trim: both;
+      text-edge: cap;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 122.222% */
+      letter-spacing: 0.36px;
+
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  .reviewsContainerFooter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 2rem;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+      max-width: unset;
+      padding: 1rem 0px;
+    }
+
+    .reviewsContainerFooterTitle {
+      color: var(--Bombay-900, #505257);
+      text-align: center;
+      font-family: 'Mulish', sans-serif;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+
+    :global(.vtex-button) {
+      border-radius: 8px;
+      border: 1px solid #2643a8;
+      background-color: #fff;
+      width: 100%;
+      max-width: 335px;
+
+      :global(.vtex-button__label) {
+        color: #2643a8;
+        text-align: center;
+        font-family: 'Mulish', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: none;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

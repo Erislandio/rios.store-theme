@@ -4633,9 +4633,9 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-"romazi.components@https://home--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@0.1.6-beta.1+build1733929948/public/@types/romazi.components":
-  version "0.1.6-beta.1"
-  resolved "https://home--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@0.1.6-beta.1+build1733929948/public/@types/romazi.components#8dc8dcd76edf31e60158a9bbefe6d50b4d122eac"
+"romazi.components@https://home--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@0.1.9+build1734117928/public/@types/romazi.components":
+  version "0.1.9"
+  resolved "https://home--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@0.1.9+build1734117928/public/@types/romazi.components#f05aa167ed25768f4ae0aae38aaf895b56a37650"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -5328,9 +5328,9 @@ verror@1.10.0:
   version "0.5.6"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.locale-switcher@0.5.6/public/@types/vtex.locale-switcher#5db8558af5593d65e4fff3da0903d0081dfcab42"
 
-"vtex.login@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.login@2.65.1/public/@types/vtex.login":
-  version "2.65.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.login@2.65.1/public/@types/vtex.login#5ffb38ed5dd800b20a6202820b135f865df410b8"
+"vtex.login@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.login@2.66.0/public/@types/vtex.login":
+  version "2.66.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.login@2.66.0/public/@types/vtex.login#b43620ca5b04d71e7f3823be3f68e77d5ee852bb"
 
 "vtex.menu@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.menu@2.35.3/public/@types/vtex.menu":
   version "2.35.3"
@@ -5431,6 +5431,10 @@ verror@1.10.0:
 "vtex.responsive-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.responsive-layout@0.1.4/public/@types/vtex.responsive-layout":
   version "0.1.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.responsive-layout@0.1.4/public/@types/vtex.responsive-layout#e67d61ec1e308accb4e0ef2bd172fe04a41bf662"
+
+"vtex.reviews-and-ratings@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.reviews-and-ratings@3.15.1/public/@types/vtex.reviews-and-ratings":
+  version "3.15.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.reviews-and-ratings@3.15.1/public/@types/vtex.reviews-and-ratings#ef79cbad38154fbd6ad3431d173e21b6ca70ffaa"
 
 "vtex.rich-text@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.16.0/public/@types/vtex.rich-text":
   version "0.16.0"

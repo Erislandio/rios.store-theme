@@ -50,7 +50,6 @@ const RomaziPremium: StoreFrontFC<{
   const { handles } = useCssHandles(CSS_HANDLES)
   const [currentLine, setCurrentLine] = useState<RomaziPremiumLines>(lines[0])
   const [currentSlide, setCurrentSlide] = useState(0)
-  console.log('🚀 ~ currentSlide:', currentSlide)
   const [isLastSlide, setIsLastSlide] = useState(false)
   const [isFirstSlide, setIsFirstSlide] = useState(false)
   const { isMobile } = useDevice()

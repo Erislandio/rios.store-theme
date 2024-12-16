@@ -12,6 +12,7 @@
       "flex-layout.row#description",
       "flex-layout.row#specifications",
       "flex-layout.row#buy-together",
+      "flex-layout.row#reviews",
       "flex-layout.row#shelf-pdp"
     ]
   },
@@ -248,6 +249,23 @@
     },
     "children": [
       "availability-subscriber"
+    ]
+  },
+  "flex-layout.row#reviews": {
+    "title": "Reviews",
+    "props": {
+      "blockClass": [
+        "container",
+        "reviews"
+      ]
+    },
+    "children": [
+      "custom-reviews#custom"
+    ]
+  },
+  "custom-reviews#custom": {
+    "children": [
+      "product-reviews"
     ]
   }
 }

@@ -109,7 +109,6 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = React.memo(
   ({ item, index, onCheck, onChangeIndex, onChangeQuantity }) => {
-    console.log('🚀 ~ item:', item.clusterHighlights)
     const { handles } = useCssHandles(CSS_HANDLES)
     const [{ images, sellers }] = item.items
 

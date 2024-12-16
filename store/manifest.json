@@ -64,10 +64,12 @@
     "vtex.css-handles": "1.x",
     "romazi.components": "0.x",
     "romazi.service": "0.x",
-    "vtex.store-newsletter": "1.x"
+    "vtex.store-newsletter": "1.x",
+    "vtex.store-graphql": "2.x"
   },
   "peerDependencies": {
-    "vtex.wish-list": "1.x"
+    "vtex.wish-list": "1.x",
+    "vtex.reviews-and-ratings": "3.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -26,5 +26,9 @@
   },
   "custom-buy-together": {
     "component": "BuyTogether"
+  },
+  "custom-reviews": {
+    "component": "CustomReviews",
+    "composition": "children"
   }
 }
