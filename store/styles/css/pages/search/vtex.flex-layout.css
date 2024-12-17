@@ -1,0 +1,19 @@
+.flexRowContent--search-info-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.flexRowContent--search-info-mobile .stretchChildrenWidth {
+  width: 50% !important;
+}
+.flexRowContent--search-info-mobile .stretchChildrenWidth:last-child {
+  display: none;
+}
+.flexRowContent--search-info-mobile .stretchChildrenWidth:first-child {
+  order: 2;
+}
+
+.flexRow--search-info-mobile {
+  margin-top: 16px;
+}

@@ -90,10 +90,13 @@
   }
   .emailInputContainer--newsletter-input {
     width: 100%;
-    max-width: 508px;
+    max-width: 430px;
   }
   .formSubmitContainer--newsletter-submit {
     position: relative;
     top: 13px;
+  }
+  .confirmationCheckboxContainer {
+    max-width: 430px;
   }
 }

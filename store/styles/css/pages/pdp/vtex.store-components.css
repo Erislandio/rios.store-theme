@@ -26,6 +26,17 @@
 }
 .shippingContainer :global(.vtex-address-form__postalCode) {
   width: 35%;
+  position: relative;
+}
+.shippingContainer :global(.vtex-input__error) {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1025px) {
+  .shippingContainer :global(.vtex-input__error) {
+    bottom: 8px;
+    left: 0;
+  }
 }
 .shippingContainer :global(.vtex-input__label) {
   font-size: 0;

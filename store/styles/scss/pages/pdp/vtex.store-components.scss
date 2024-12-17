@@ -30,6 +30,17 @@
 
   :global(.vtex-address-form__postalCode) {
     width: 35%;
+    position: relative;
+  }
+
+  :global(.vtex-input__error) {
+    position: absolute;
+    right: 0;
+
+    @media (max-width: 1025px) {
+      bottom: 8px;
+      left: 0;
+    }
   }
 
   :global(.vtex-input__label) {

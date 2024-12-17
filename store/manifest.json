@@ -1,7 +1,7 @@
 {
   "vendor": "romazi",
   "name": "store-theme",
-  "version": "0.1.0-beta.12",
+  "version": "0.1.0-beta.15",
   "mustUpdateAt": "2023-01-11",
   "builders": {
     "styles": "2.x",
@@ -62,7 +62,7 @@
     "vtex.tab-layout": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x",
-    "romazi.components": "0.x",
+    "romazi.components": "1.x",
     "romazi.service": "0.x",
     "vtex.store-newsletter": "1.x",
     "vtex.store-graphql": "2.x",

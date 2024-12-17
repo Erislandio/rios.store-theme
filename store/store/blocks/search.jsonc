@@ -82,10 +82,20 @@
     ],
     "props": {
       "preserveLayoutOnMobile": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "blockClass": [
+        "searchbread",
+        "container"
+      ]
     }
   },
   "flex-layout.row#searchtitle": {
+    "props": {
+      "blockClass": [
+        "searchtitle",
+        "container"
+      ]
+    },
     "children": [
       "search-title.v2"
     ]
@@ -97,12 +107,16 @@
     ],
     "props": {
       "preventHorizontalStretch": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "blockClass": [
+        "result",
+        "container"
+      ]
     }
   },
   "flex-layout.col#filter": {
     "children": [
-      "filter-navigator.v3"
+      "filter-navigator.v3#default"
     ],
     "props": {
       "blockClass": "filterCol"
@@ -185,9 +199,10 @@
   },
   "search-result-layout.mobile": {
     "children": [
-      "flex-layout.row#searchinfomobile",
       "flex-layout.row#searchbread",
+      "flex-layout.row#searchtitle",
       "flex-layout.row#productCountMobile",
+      "flex-layout.row#searchinfomobile",
       "flex-layout.row#fetchprevious",
       "flex-layout.row#contentmobile",
       "flex-layout.row#fetchmore"
@@ -218,7 +233,8 @@
     "props": {
       "preserveLayoutOnMobile": true,
       "colSizing": "auto",
-      "colJustify": "around"
+      "colJustify": "around",
+      "blockClass": "search-info-mobile"
     }
   },
   "flex-layout.col#orderByMobile": {
@@ -239,7 +255,7 @@
   },
   "flex-layout.col#filterMobile": {
     "children": [
-      "filter-navigator.v3"
+      "filter-navigator.v3#default"
     ],
     "props": {
       "blockClass": "filterMobileCol"
@@ -258,6 +274,22 @@
       "flex-layout.row#searchbread",
       "flex-layout.row#notfound"
     ]
+  },
+  "filter-navigator.v3#default": {
+    "blocks": [
+      "sidebar-close-button"
+    ],
+    "props": {
+      "truncateFilters": true,
+      "showClearByFilter": true,
+      "fullWidthOnMobile": true,
+      "navigationTypeOnMobile": "collapsible",
+      "appliedFiltersOverview": "hide",
+      "totalProductsOnMobile": "hide",
+      "updateOnFilterSelectionOnMobile": true,
+      "priceRangeLayout": "inputAndSlider",
+      "initiallyCollapsed": true
+    }
   },
   "flex-layout.row#notfound": {
     "children": [

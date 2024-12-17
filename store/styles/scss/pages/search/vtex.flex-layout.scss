@@ -1,0 +1,20 @@
+.flexRowContent--search-info-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  .stretchChildrenWidth {
+    width: 50% !important;
+    &:last-child {
+      display: none;
+    }
+
+    &:first-child {
+      order: 2;
+    }
+  }
+}
+
+.flexRow--search-info-mobile {
+  margin-top: 16px;
+}

@@ -1,0 +1,120 @@
+.galleryTitle--layout {
+  color: #4a4a4a;
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.totalProducts--layout {
+  border-top: none;
+  padding: 0;
+  color: #4d5156;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-align: left;
+}
+.totalProducts--layout .totalProductsMessage {
+  color: #4d5156;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+}
+
+.orderByButton,
+.filterPopupButton {
+  border-radius: 4px;
+  border: 0.7px solid rgba(0, 0, 0, 0.5);
+  background: #fff;
+  display: flex;
+  padding: 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.filterPopupTitle {
+  margin-left: 0;
+  order: 2;
+  color: #0c4a81;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+}
+
+.filterPopupArrowIcon {
+  margin: 0;
+  padding: 0;
+}
+
+.filterIcon {
+  overflow: visible !important;
+}
+
+.orderByButton {
+  padding: 0;
+  min-height: 52px;
+  justify-content: space-around;
+}
+.orderByButton .filterPopupTitle {
+  color: #505257;
+}
+.orderByButton .filterPopupArrowIcon {
+  order: 2;
+}
+
+.orderByText {
+  display: none;
+}
+
+.filterAccordionBreadcrumbs {
+  background-color: var(--Cobalto-800, #2643a8);
+}
+.filterAccordionBreadcrumbs .filterBreadcrumbsText {
+  color: var(--Cobalto-50, #f0f6fe);
+  font-family: "Mulish", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.closeIcon {
+  overflow: visible !important;
+  width: 20px;
+  height: 20px;
+}
+
+.accordionFilterItemTitle {
+  color: var(--Bombay-800, #4d5156);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.54px;
+}
+
+.filterAccordionItemBox :global(.vtex-checkbox__label) {
+  color: var(--Bombay-900, #505257);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
+}
+.filterAccordionItemBox :global(.vtex-checkbox__inner-container) {
+  border-radius: 50%;
+}
