@@ -26,3 +26,25 @@
 .flexRow--searchtitle {
   margin-top: 0;
 }
+
+@media (min-width: 1025px) {
+  .flexRowContent--filter-result {
+    .stretchChildrenWidth:first-child {
+      min-width: 15rem;
+    }
+  }
+
+  .flexRowContent--orderByAndSwitcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flexRowContent--search-info {
+    margin-left: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

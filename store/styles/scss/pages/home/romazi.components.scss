@@ -671,6 +671,21 @@
   }
 }
 
+.divContainer--region-summary {
+  .regionalizationButton {
+    background-color: transparent;
+    border: none;
+  }
+
+  .regionaliseCity {
+    margin-right: 0;
+  }
+
+  .regionaliseChange {
+    color: #0c4a81 !important;
+  }
+}
+
 // ----------------------------- custom share -------------------------
 
 .customShare {
@@ -1096,5 +1111,21 @@
         opacity: 0.8;
       }
     }
+  }
+}
+
+:global(.vtex-product-summary-2-x-container) {
+  .reviewsContainerMetadata1Total {
+    display: none;
+  }
+
+  .reviewsContainerMetadata1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .star--filed {
+    color: #0f2a85 !important;
   }
 }

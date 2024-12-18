@@ -606,6 +606,17 @@
     padding: 0 4px;
   }
 }
+.divContainer--region-summary .regionalizationButton {
+  background-color: transparent;
+  border: none;
+}
+.divContainer--region-summary .regionaliseCity {
+  margin-right: 0;
+}
+.divContainer--region-summary .regionaliseChange {
+  color: #0c4a81 !important;
+}
+
 .customShare :global(.vtex-button) {
   background-color: transparent;
   border: none;
@@ -994,4 +1005,16 @@
 }
 .reviewsContainer .reviewsContainerFooter :global(.vtex-button):hover {
   opacity: 0.8;
+}
+
+:global(.vtex-product-summary-2-x-container) .reviewsContainerMetadata1Total {
+  display: none;
+}
+:global(.vtex-product-summary-2-x-container) .reviewsContainerMetadata1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:global(.vtex-product-summary-2-x-container) .star--filed {
+  color: #0f2a85 !important;
 }

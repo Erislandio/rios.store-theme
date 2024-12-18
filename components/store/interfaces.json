@@ -21,6 +21,9 @@
   "custom-regionalization": {
     "component": "Regionalization"
   },
+  "custom-region-summary": {
+    "component": "RegionSummary"
+  },
   "custom-share": {
     "component": "CustomSharePdp"
   },
@@ -33,5 +36,8 @@
   },
   "custom-reviews-average": {
     "component": "CustomReviewsAverage"
+  },
+  "teste": {
+    "component": "Teste"
   }
 }

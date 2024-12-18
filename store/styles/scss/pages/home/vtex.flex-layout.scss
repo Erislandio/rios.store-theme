@@ -154,6 +154,12 @@
   }
 }
 
+.flexRowContent--add-to-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 640px) {
   .flexRowContent--newsletter {
     flex-direction: column;

@@ -5,6 +5,7 @@
     ],
     "props": {
       "context": {
+        "maxItemsPerPage": 16,
         "skusFilter": "ALL",
         "simulationBehavior": "skip"
       }
@@ -18,7 +19,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "hideUnavailableItems": true,
-        "maxItemsPerPage": 10,
+        "maxItemsPerPage": 16,
         "skusFilter": "ALL",
         "simulationBehavior": "skip"
       }
@@ -31,6 +32,7 @@
     "props": {
       "context": {
         "skusFilter": "ALL",
+        "maxItemsPerPage": 16,
         "simulationBehavior": "skip"
       }
     }
@@ -42,6 +44,7 @@
     "props": {
       "context": {
         "skusFilter": "ALL",
+        "maxItemsPerPage": 16,
         "simulationBehavior": "skip"
       }
     }
@@ -53,6 +56,7 @@
     "props": {
       "context": {
         "skusFilter": "ALL",
+        "maxItemsPerPage": 16,
         "simulationBehavior": "skip"
       }
     }
@@ -106,10 +110,9 @@
       "flex-layout.col#content"
     ],
     "props": {
-      "preventHorizontalStretch": true,
       "fullWidth": true,
       "blockClass": [
-        "result",
+        "filter-result",
         "container"
       ]
     }
@@ -135,15 +138,30 @@
     }
   },
   "flex-layout.row#searchinfo": {
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "blockClass": [
+        "search-info"
+      ]
+    },
     "children": [
-      "flex-layout.col#productCount",
+      "custom-div#region-summary",
       "flex-layout.row#orderByAndSwitcher"
+    ]
+  },
+  "custom-div#region-summary": {
+    "props": {
+      "blockClass": "region-summary"
+    },
+    "children": [
+      "custom-region-summary"
     ]
   },
   "flex-layout.row#orderByAndSwitcher": {
     "children": [
-      "order-by.v2",
-      "gallery-layout-switcher"
+      "total-products.v2",
+      "order-by.v2"
     ],
     "props": {
       "horizontalAlign": "right",
@@ -288,7 +306,7 @@
       "totalProductsOnMobile": "hide",
       "updateOnFilterSelectionOnMobile": true,
       "priceRangeLayout": "inputAndSlider",
-      "initiallyCollapsed": true,
+      "initiallyCollapsed": false,
       "padding": 0
     }
   },
@@ -313,7 +331,7 @@
           "name": "grid",
           "component": "GridSummary",
           "itemsPerRow": {
-            "(min-width:1300px)": 4,
+            "(min-width: 1440px)": 4,
             "desktop": 3,
             "tablet": 3,
             "phone": 2
@@ -325,7 +343,7 @@
           "itemsPerRow": 1
         }
       ],
-      "ListSummary": "product-summary.shelf#listLayout",
+      "ListSummary": "product-summary.shelf#default",
       "GridSummary": "product-summary.shelf#default"
     }
   },
