@@ -78,7 +78,7 @@
   },
   "flex-layout.row#searchbread": {
     "children": [
-      "breadcrumb.search"
+      "breadcrumb.search#default"
     ],
     "props": {
       "preserveLayoutOnMobile": true,
@@ -288,7 +288,8 @@
       "totalProductsOnMobile": "hide",
       "updateOnFilterSelectionOnMobile": true,
       "priceRangeLayout": "inputAndSlider",
-      "initiallyCollapsed": true
+      "initiallyCollapsed": true,
+      "padding": 0
     }
   },
   "flex-layout.row#notfound": {
@@ -299,8 +300,9 @@
       "fullWidth": true
     }
   },
-  "breadcrumb": {
+  "breadcrumb.search#default": {
     "props": {
+      "blockClass": "search-breadcrumb",
       "showOnMobile": true
     }
   },

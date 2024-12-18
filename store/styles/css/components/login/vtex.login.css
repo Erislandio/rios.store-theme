@@ -245,3 +245,10 @@
 :global(.vtex-minicart-2-x-minicartProductListContainer) :global(.vtex-product-list-0-x-quantitySelectorButton) svg {
   color: #2643a8;
 }
+
+:global(.vtex-search-result-3-x-accordionFilter) :global(.ReactCollapse--collapse) {
+  transition: all 0.4s;
+}
+:global(.vtex-search-result-3-x-accordionFilter) :global(.ReactCollapse--collapse) :global(.pl8) {
+  padding: 0;
+}

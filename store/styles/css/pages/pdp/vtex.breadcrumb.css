@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   display: flex;
   align-items: center;
@@ -37,6 +38,33 @@
 .term {
   color: #1d1d1d;
   font-family: "Source Sans Pro SemiBold", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.667px;
+  letter-spacing: 0.32px;
+}
+
+.homeLink--search-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeLink--search-breadcrumb::after {
+  content: "Página inicial";
+  color: var(--Bombay-800, #4d5156);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.667px;
+  letter-spacing: 0.32px;
+  margin-left: 4px;
+}
+
+.link--search-breadcrumb {
+  color: #1d1d1d;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
