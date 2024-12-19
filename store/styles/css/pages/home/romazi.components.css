@@ -26,7 +26,7 @@
 .categoryContainerTitle {
   color: #737373;
   text-align: center;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish Bold", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -511,7 +511,7 @@
 }
 .divContainer--selling-price-content-pdp :global(.vtex-product-price-1-x-sellingPriceValue) {
   color: #38434d;
-  font-family: "Mulish Bold", sans-serif;
+  font-family: "Mulish ExtraBold", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 800;
@@ -571,6 +571,7 @@
   padding-left: 1rem !important;
   padding-right: 1rem !important;
   margin: 0 auto;
+  margin-top: 20px;
 }
 @media screen and (min-width: 1441px) {
   .divContainer--main-header {
@@ -625,7 +626,7 @@
   gap: 8px;
   padding: 0;
   color: var(--Cobalto-800, #2643a8);
-  font-family: "Mulish Bold", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
@@ -693,7 +694,7 @@
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish Bold", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -801,7 +802,7 @@
   color: var(--Bombay-900, #505257);
   leading-trim: both;
   text-edge: cap;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish Bold", sans-serif;
   font-size: 33.455px;
   font-style: normal;
   font-weight: 700;
@@ -936,7 +937,7 @@
   color: var(--Bombay-900, #505257);
   leading-trim: both;
   text-edge: cap;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
@@ -979,7 +980,7 @@
   color: var(--Bombay-900, #505257);
   text-align: center;
   /* Mulish/Semibold 17 */
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
@@ -996,7 +997,7 @@
 .reviewsContainer .reviewsContainerFooter :global(.vtex-button) :global(.vtex-button__label) {
   color: #2643a8;
   text-align: center;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -1005,6 +1006,46 @@
 }
 .reviewsContainer .reviewsContainerFooter :global(.vtex-button):hover {
   opacity: 0.8;
+}
+.reviewsContainer .filterDropdownContainer {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.reviewsContainer .filterDropdownContainer .filterTitle {
+  color: var(--Bombay-900, #505257);
+  font-family: "Source Sans Pro SemiBold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+  margin-right: 24px;
+}
+.reviewsContainer .filterDropdownContainer :global(.vtex-styleguide-9-x-dropdown) {
+  min-width: 200px;
+  height: 50px;
+}
+.reviewsContainer .filterDropdownContainer :global(.vtex-styleguide-9-x-dropdown) :global(.vtex-styleguide-9-x-container) {
+  height: 100%;
+}
+.reviewsContainer .filterDropdownContainer :global(.vtex-styleguide-9-x-dropdown) :global(.vtex-dropdown__button) {
+  color: var(--Bombay-800, #4d5156);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  border-radius: 4px;
+}
+@media (min-width: 1025px) {
+  .reviewsContainer .filterDropdownContainer {
+    max-width: 75%;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
 }
 
 :global(.vtex-product-summary-2-x-container) .reviewsContainerMetadata1Total {

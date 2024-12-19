@@ -120,6 +120,6 @@
 }
 @media (min-width: 1400px) {
   .heading--newsletter-title {
-    white-space: nowrap;
+    text-align: left;
   }
 }

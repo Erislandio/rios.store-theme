@@ -1,12 +1,12 @@
 /* eslint-disable react/jsx-pascal-case */
 import type { ReactNode } from 'react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useQuery } from 'react-apollo'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { useProduct } from 'vtex.product-context'
 import type { ProductContextState } from 'vtex.product-context/react/ProductTypes'
 import { useRuntime } from 'vtex.render-runtime'
-import { Button, EXPERIMENTAL_Modal } from 'vtex.styleguide'
+import { Button, Dropdown, EXPERIMENTAL_Modal } from 'vtex.styleguide'
 
 import GET_REVIEWS from './getReviews.gql'
 import PROFILE from './profile.gql'
@@ -110,6 +110,8 @@ const CSS_HANDLES = [
   'reviewsContainerUserInfo',
   'reviewsContainerUserInfoTitle',
   'reviewsContainerFooterTitle',
+  'filterDropdownContainer',
+  'filterTitle',
 ] as const
 
 function RenderStars({ star }: { star: number }) {
@@ -167,6 +169,9 @@ export default function CustomReviews({ children }: { children: ReactNode }) {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { navigate } = useRuntime()
   const [isOpen, setOpen] = useState(false)
+  const [filterReviews, setFilterReviews] = useState<Review[]>()
+  const [dropdownValue, setDropdownValue] = useState<string>('old')
+
   const { data: profile, loading: loadingProfile } = useQuery<{
     profile: { email: string; firstName: string; lastName: string }
   }>(PROFILE, {
@@ -201,6 +206,56 @@ export default function CustomReviews({ children }: { children: ReactNode }) {
       orderBy: 'ASC',
     },
   })
+
+  useEffect(() => {
+    let newData: Review[] = [...data.reviewsByProductId.data]
+
+    const newArray = newData?.sort(
+      (a, b) =>
+        new Date(a.reviewDateTime).getTime() -
+        new Date(b.reviewDateTime).getTime()
+    )
+    setFilterReviews(newArray)
+  }, [data])
+
+  const options = [
+    { value: 'old', label: 'Mais antigos primeiro', disabled: false },
+    { value: 'recent', label: 'Mais recentes primeiro', disabled: false },
+    {
+      value: 'bestRating',
+      label: 'Melhores avaliações primeiro',
+      disabled: false,
+    },
+    {
+      value: 'worstRating',
+      label: 'Piores avaliações primeiro',
+      disabled: false,
+    },
+  ]
+
+  const handleFilter = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const { value } = event.target
+    setDropdownValue(value)
+
+    if (!filterReviews) return
+
+    const sortFunctions: { [key: string]: (a: Review, b: Review) => number } = {
+      old: (a, b) =>
+        new Date(a.reviewDateTime).getTime() -
+        new Date(b.reviewDateTime).getTime(),
+      recent: (a, b) =>
+        new Date(b.reviewDateTime).getTime() -
+        new Date(a.reviewDateTime).getTime(),
+      bestRating: (a, b) => b.rating - a.rating,
+      worstRating: (a, b) => a.rating - b.rating,
+    }
+
+    const sortFunction = sortFunctions[value]
+    if (sortFunction) {
+      const newArray = [...filterReviews].sort(sortFunction)
+      setFilterReviews(newArray)
+    }
+  }
 
   const {
     average = 0,
@@ -290,9 +345,19 @@ export default function CustomReviews({ children }: { children: ReactNode }) {
           </ul>
         </div>
       </div>
+      <div className={handles.filterDropdownContainer}>
+        <span className={handles.filterTitle}>Organizar por</span>
+        <Dropdown
+          options={options}
+          value={dropdownValue}
+          onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
+            handleFilter(event)
+          }
+        />
+      </div>
       <ul className={handles.reviewsContainerUsers}>
-        {data?.reviewsByProductId?.data?.map((item) => (
-          <li className={handles.reviewsContainerUser} key={item.id}>
+        {filterReviews?.map((item, index) => (
+          <li className={handles.reviewsContainerUser} key={item.id + index}>
             <div className={handles.reviewsContainerUser1}>
               <UserProfileIcon />
               <p className={handles.reviewsContainerUserName}>

@@ -7,8 +7,14 @@
   padding: 0 24px;
 }
 
+.flexRowContent--product-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .flexRowContent--product-main .stretchChildrenWidth:last-child {
   padding: 0 24px;
+  width: 100% !important;
 }
 
 .flexRow--specification :global(.vtex-store-components-3-x-container),

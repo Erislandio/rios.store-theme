@@ -38,9 +38,15 @@
 }
 
 @font-face {
+  font-family: 'Mulish SemiBold';
+  src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/fd06959c-aaec-41b9-bb79-08ef1e3c0413___a4e6f571273de05494ef24d6fb65c885.ttf);
+  font-weight: 600;
+}
+
+@font-face {
   font-family: 'Mulish Bold';
   src: url(https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f274b963-fa4c-4867-a5f9-f6445215fae1___b7fa867b7522c7629eca3c4b9f31d3c8.ttf);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @font-face {

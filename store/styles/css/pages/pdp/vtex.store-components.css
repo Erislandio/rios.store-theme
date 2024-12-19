@@ -17,7 +17,7 @@
 .shippingContainer :global(.vtex-input)::before {
   content: "Calcule o frete e prazo:";
   color: #1d1d1f;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
@@ -68,7 +68,7 @@
 .shippingContainer :global(.vtex-button__label) {
   color: #2643a8;
   text-align: center;
-  font-family: "Mulish Bold", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -107,7 +107,7 @@
   width: 100%;
   grid-row: 1;
   color: #4d5156;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -131,7 +131,7 @@
   text-align: right;
   color: #4d5156;
   text-align: right;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish Bold", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -200,7 +200,7 @@
 
 .productDescriptionTitle {
   color: #1d1d1f;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
@@ -218,7 +218,7 @@
 
 .skuSelectorName {
   color: var(--Bombay-950, #1d1d1f);
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
@@ -252,4 +252,71 @@
   .shippingContainer :global(.vtex-input__label) {
     margin-bottom: 16px;
   }
+}
+.subscriberContainer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+}
+@media (max-width: 1025px) {
+  .subscriberContainer {
+    margin-top: 32px;
+  }
+  .subscriberContainer .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.subscriberContainer .title {
+  color: #ed1b34;
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+.subscriberContainer .subscribeLabel {
+  color: var(--Bombay, #38434d);
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.subscriberContainer .inputEmail,
+.subscriberContainer .inputName {
+  margin-right: 0;
+  margin-top: 12px;
+}
+.subscriberContainer .inputEmail :global(.vtex-input-prefix__group),
+.subscriberContainer .inputName :global(.vtex-input-prefix__group) {
+  border: none;
+  border-bottom: 1px solid #a8b2b7;
+  border-radius: 0;
+}
+.subscriberContainer .submit {
+  width: 100%;
+  margin-top: 8px;
+}
+.subscriberContainer .submit :global(.vtex-button) {
+  width: 100%;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--Cobalto-800, #2643a8);
+}
+.subscriberContainer .submit :global(.vtex-button__label) {
+  color: var(--Cobalto-50, #f0f6fe);
+  text-align: center;
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: normal;
 }

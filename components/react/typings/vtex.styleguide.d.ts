@@ -126,7 +126,7 @@ declare module 'vtex.styleguide' {
   // Declaração dos componentes
   export const Collapsible: React.FC<CollapsibleProps>
   export const Button: React.FC<ButtonProps>
-  export const DropDown: React.FC<DropdownOption>
+  export const Dropdown: React.FC<DropdownProps>
   export const Spinner: React.FC<SpinnerProps>
   export const Checkbox: React.FC<CheckboxProps>
   interface ToastMessage {

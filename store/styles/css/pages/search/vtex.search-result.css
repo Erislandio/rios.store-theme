@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .galleryTitle--layout {
   color: #4a4a4a;
-  font-family: "Mulish", sans-serif;
+  font-family: "Mulish SemiBold", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -212,6 +212,17 @@
   letter-spacing: 0.4px;
 }
 
+.orderByOptionItem {
+  color: var(--Bombay-800, #60656b);
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.36px;
+  padding: 16px;
+}
+
 @media (min-width: 1025px) {
   .galleryTitle--layout {
     font-size: 30px;
@@ -277,7 +288,7 @@
   }
   .filterMessage {
     color: #1d1d1d;
-    font-family: "Mulish Bold", sans-serif;
+    font-family: "Mulish SemiBold", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -307,7 +318,10 @@
     margin-right: 12px;
   }
   .orderBy--layout .orderByDropdown {
-    width: 230px;
+    min-width: 230px;
+  }
+  .orderBy--layout .orderByDropdown .orderByButton {
+    padding: 0 10px;
   }
   .orderBy--layout .filterPopupTitle {
     color: var(--Bombay-800, #60656b);

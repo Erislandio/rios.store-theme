@@ -154,10 +154,14 @@ const ProductItem: React.FC<ProductItemProps> = React.memo(
           </div>
           <h4 className={handles.buyTogetherItemTitle}>{item.productName}</h4>
           <div className={handles.buyTogettherListPriceContainer}>
-            <FormattedPrice value={ListPrice} />
-            <span className={handles.buyTogetherSavingPrice}>
-              {Math.round(((ListPrice - Price) / ListPrice) * 100)}%
-            </span>
+            {ListPrice !== Price && (
+              <>
+                <FormattedPrice value={ListPrice} />
+                <span className={handles.buyTogetherSavingPrice}>
+                  {Math.round(((ListPrice - Price) / ListPrice) * 100)}%
+                </span>
+              </>
+            )}
           </div>
           <div className="flex flex-row items-end mt1 mb4">
             <FormattedPrice value={Price} />
