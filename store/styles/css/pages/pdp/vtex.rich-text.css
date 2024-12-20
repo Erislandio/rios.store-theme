@@ -6,3 +6,30 @@
   font-weight: 600;
   line-height: normal;
 }
+
+.paragraph--payment-methods-title {
+  color: var(--Bombay, #38434d);
+  font-family: "Mulish SemiBold";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 0;
+}
+
+.paragraph--payments-way {
+  color: #808e9b;
+  text-align: right;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.697px; /* 140.692% */
+  letter-spacing: 0.28px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}

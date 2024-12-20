@@ -197,6 +197,7 @@
       "custom-div#share",
       "custom-div#list-price-savings",
       "custom-div#selling-price",
+      "modal-trigger#payment-methods",
       "custom-div#buy-button",
       "product-installments",
       "shipping-simulator",
@@ -213,6 +214,7 @@
     "children": [
       "custom-div#list-price-savings",
       "custom-div#selling-price",
+      "modal-trigger#payment-methods",
       // "availability-subscriber",
       "sku-selector",
       // "similar-products-variants",

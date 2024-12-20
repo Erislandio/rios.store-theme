@@ -1,0 +1,26 @@
+.paper--pdpPaymentMethodsModal {
+  width: 572px;
+  padding: 24px;
+
+  .headerContainer {
+    border: none;
+  }
+
+  .closeButtonContainer {
+    display: none;
+  }
+
+  @media (max-width: 1025px) {
+    margin: 0 !important;
+    height: 80%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .triggerContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

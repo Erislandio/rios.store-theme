@@ -22,7 +22,7 @@
     "@types/react-input-mask": "^3.0.2",
     "@types/react-modal": "^3.16.0",
     "@vtex/test-tools": "^3.4.3",
-    "@vtex/tsconfig": "^0.6.0",
+    "@vtex/tsconfig": "^0.4.4",
     "romazi.components": "https://home--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@0.1.9+build1734117928/public/@types/romazi.components",
     "typescript": "3.9.7",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.30.2/public/@types/vtex.add-to-cart-button",

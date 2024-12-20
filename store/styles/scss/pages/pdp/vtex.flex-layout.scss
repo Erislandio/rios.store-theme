@@ -64,6 +64,11 @@
   justify-content: center;
 }
 
+.flexRow--tabListPaymentsModalPdp {
+  margin: 32px 0;
+  border-bottom: 1.5px solid #ccc;
+}
+
 @media (min-width: 1025px) {
   .flexRowContent--description {
     padding: 0;

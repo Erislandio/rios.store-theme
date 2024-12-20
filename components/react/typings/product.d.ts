@@ -14,6 +14,15 @@ interface Product {
   quantity: number
 }
 
+interface Installments {
+  Value: number
+  InterestRate: number
+  TotalValuePlusInterestRate: number
+  NumberOfInstallments: number
+  Name: string
+  PaymentSystemName: string
+}
+
 interface ClusterHighlights {
   id: string
   name: string

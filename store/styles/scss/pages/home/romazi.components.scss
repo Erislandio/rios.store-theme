@@ -422,13 +422,6 @@
 
 @media (min-width: 1700px) {
   .romaziPremiumSlider {
-    :global(.vtex-shelf-1-x-arrowRight) {
-      right: 41%;
-    }
-    :global(.vtex-shelf-1-x-arrowLeft) {
-      left: 32%;
-    }
-
     :global(.vtex-slider-0-x-dotsContainer) {
       display: flex;
       top: 105%;
@@ -536,6 +529,20 @@
   .romaziPremiumSliderImage {
     width: 150px !important;
     transition: all 0.3s;
+  }
+}
+
+@media (max-width: 1025px) {
+  .romaziPremiumSliderImage {
+    max-width: 222px;
+    margin-left: 17px;
+  }
+
+  .dotsContainer {
+    :global(.vtex-slider-0-x-dotsContainer) {
+      left: 50%;
+      right: calc(50% - 50px);
+    }
   }
 }
 
@@ -1173,4 +1180,137 @@
   .star--filed {
     color: #0f2a85 !important;
   }
+}
+
+// ----------------------- credit card payment method -----------------------
+
+.payment-methods__container {
+  padding: 16px;
+}
+
+.payment-methods__container:nth-child(odd),
+.bankinvoice-payment-methods__container,
+.pix-payment-methods__container {
+  background-color: #f5f6f6;
+}
+
+.payment-methods__container:nth-child(even) {
+  background-color: #fff;
+}
+
+@media (min-width: 769px) {
+  .payment-methods__quantity,
+  .payment-methods__value,
+  .payment-methods__interest,
+  .payment-methods__total {
+    font-size: 16px;
+    color: #323c32;
+  }
+}
+
+.pixPaymentValue,
+.payment-methods__value {
+  color: var(--Dark-Shark-700, #4c5052);
+  font-family: 'Mulish SemiBold', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 32px;
+}
+
+.pixPaymentInterest,
+.payment-methods__interest {
+  color: var(--Dark-Shark-400, #84898c);
+  text-align: center;
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.installmentsContainer {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--Dark-Shark-300, #adb1b3);
+}
+
+.pixPaymentText {
+  color: var(--Dark-Shark-700, #4c5052);
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pixPaymentInfoContainer {
+  margin-top: 24px;
+}
+
+.pixPaymentContainer {
+  .pixPaymentValue {
+    margin-right: 16px;
+  }
+}
+
+.pixTextImage {
+  color: var(--Dark-Shark-900, #3b3c3e);
+  font-size: 18px;
+  font-family: 'Mulish SemiBold', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.pixPaymentImageContainer {
+  margin-bottom: 56px;
+}
+
+.pixPaymentStepByStepContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.pixPaymentInfoContainer {
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid #00bdae;
+}
+
+.pixStepContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pixStepNumber {
+  color: #00bdae;
+  font-family: 'Mulish Bold', sans-serif;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: 32px;
+}
+
+.pixInfoStep {
+  color: var(--Dark-Shark-700, #4c5052);
+  font-family: 'Mulish SemiBold', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.pixInfoStepStrong {
+  color: #00bdae;
+  font-family: 'Mulish SemiBold', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }

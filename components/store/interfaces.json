@@ -39,5 +39,11 @@
   },
   "teste": {
     "component": "Teste"
+  },
+  "credit-card-payment-methods": {
+    "component": "CreditCardPaymentMethods"
+  },
+  "pix-payment-methods": {
+    "component": "PixPaymentMethods"
   }
 }
