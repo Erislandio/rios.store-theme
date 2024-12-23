@@ -10,7 +10,8 @@
       "flex-layout.row#newsletter",
       "flex-layout.row#contact",
       "flex-layout.row#footer-1-desktop",
-      "flex-layout.row#footer-2-desktop"
+      "flex-layout.row#payments-selos-footer",
+      "flex-layout.row#footer-3-desktop"
     ]
   },
   "flex-layout.row#footer-1-desktop": {
@@ -18,8 +19,7 @@
       "flex-layout.col#romazi-address-desktop",
       "vtex.menu@2.x:menu#footer-institucional-desktop",
       "vtex.menu@2.x:menu#footer-ajuda-desktop",
-      "vtex.menu@2.x:menu#footer-politics-desktop",
-      "flex-layout.col#payments-selos-footer"
+      "vtex.menu@2.x:menu#footer-politics-desktop"
     ],
     "props": {
       "preventHorizontalStretch": true,
@@ -32,13 +32,19 @@
       "paddingBottom": 3
     }
   },
-  "flex-layout.col#payments-selos-footer": {
+  "flex-layout.row#payments-selos-footer": {
+    "props": {
+      "blockClass": [
+        "payments-selos-footer",
+        "container"
+      ]
+    },
     "children": [
       "flex-layout.col#footer-mobile-payments",
       "flex-layout.row#footer-mobile-security"
     ]
   },
-  "flex-layout.row#footer-2-desktop": {
+  "flex-layout.row#footer-3-desktop": {
     "children": [
       "flex-layout.row#footer-mobile-poweredBy"
     ],

@@ -120,10 +120,13 @@
     padding-right: 30px;
     text-align: left;
   }
-}
-
-@media (min-width: 1400px) {
   .heading--newsletter-title {
     text-align: left;
+  }
+}
+
+@media (min-width: 1120px) {
+  .paragraph--newsletter-subtitle {
+    white-space: nowrap;
   }
 }

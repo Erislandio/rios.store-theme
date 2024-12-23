@@ -52,7 +52,7 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  border-radius: 16px;
+  border-radius: 8px;
   background: #bc1818;
   border: none;
 }
@@ -68,15 +68,7 @@
   text-transform: capitalize;
 }
 
-@media (min-width: 1026px) {
-  .newsletterForm--newsletter-form {
-    flex-direction: column;
-  }
-  .confirmationCheckboxContainer {
-    margin-bottom: 36px;
-  }
-}
-@media (min-width: 1400px) {
+@media (min-width: 1025px) {
   .newsletterForm--newsletter-form {
     position: relative;
     display: flex;
@@ -90,7 +82,8 @@
   }
   .emailInputContainer--newsletter-input {
     width: 100%;
-    max-width: 430px;
+    max-width: 630px;
+    margin-right: 24px;
   }
   .formSubmitContainer--newsletter-submit {
     position: relative;
