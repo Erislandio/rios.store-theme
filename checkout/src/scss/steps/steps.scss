@@ -1,0 +1,124 @@
+.checkout-steps-custom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 60px;
+  max-width: 1320px;
+  padding: 10px;
+
+  @media screen and (min-width: 769px) {
+    padding: 20px 40px;
+  }
+
+  .step {
+    align-items: center;
+    background: #bcc4bf;
+    border: none;
+    border-radius: 50% !important;
+    display: flex;
+    height: 57px !important;
+    justify-content: center;
+    margin: 0;
+    min-width: 57px !important;
+    padding: 0;
+    position: relative;
+    width: 57px !important;
+
+    &--line {
+      background: #bcc4bf;
+      height: 2px;
+      width: 100%;
+    }
+
+    &.active {
+      background: #bc1818;
+
+      span.step-label {
+        color: #4f4f4f;
+      }
+    }
+  }
+
+  span.step-label {
+    bottom: -20px;
+    color: #bcc4bf;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: left;
+  }
+}
+
+.checkout-header {
+  img.logo-checkout {
+    left: 0;
+    padding: 1rem;
+    position: relative;
+    top: 0;
+    width: 100px;
+
+    @media screen and (min-width: 769px) {
+      padding: 0;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.checkout-right {
+  &-desk {
+    display: none;
+
+    @media screen and (min-width: 769px) {
+      display: block;
+    }
+  }
+
+  &-mobile {
+    display: block;
+
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+  }
+}
+
+/* Displays the option to enter a foreign document */
+.document-box {
+  display: block;
+}
+
+/* Displays the option to enter an international phone */
+.phone-box {
+  display: block;
+}
+
+#custom-items {
+  margin: 0;
+}
+
+a#pdf {
+  background-color: #fff;
+  border: 1px solid rgb(0 0 0 / 20%);
+  color: var(--Bombay-800, #60656b);
+  font-family: 'Source Sans Pro SemiBold', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+  line-height: 14px;
+  max-height: 47px;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  top: 3px;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: 100%;
+  }
+}

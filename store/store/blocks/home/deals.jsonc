@@ -43,7 +43,7 @@
   },
   "image#deal1": {
     "props": {
-      "src": "https://romazi.vteximg.com.br/arquivos/deals-secure.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/68c3dada-ae05-47c7-aa02-c928c987f110___be0091195a3315f7652912c204b411a6.png",
       "maxWidth": "28px",
       "blockClass": "deals-img"
     }
@@ -82,7 +82,7 @@
   },
   "image#deal2": {
     "props": {
-      "src": "https://romazi.vteximg.com.br/arquivos/bx_box.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/3fa56a49-0edd-45b7-be82-a82cbc71d0c8___7241e0062f1b3107995da77f0e67950c.png",
       "maxWidth": "36px",
       "blockClass": "deals-img"
     }
@@ -121,7 +121,7 @@
   },
   "image#deal3": {
     "props": {
-      "src": "https://romazi.vteximg.com.br/arquivos/deals-credit-card.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/3c3721d5-3a69-492a-ba18-6b7275f5e08b___a5b02a4156d5869526135e0471c8372a.png",
       "maxWidth": "36px"
     }
   },
@@ -159,7 +159,7 @@
   },
   "image#deal4": {
     "props": {
-      "src": "https://romazi.vteximg.com.br/arquivos/deals-whatsapp.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/66199bf5-4239-4824-a9ff-4e7346a499dd___a756c0ca105424fd5a007d9ecb4ca5b5.png",
       "maxWidth": "36px",
       "blockClass": "deals-img"
     }

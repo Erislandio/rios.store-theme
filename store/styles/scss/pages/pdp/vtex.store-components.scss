@@ -198,11 +198,13 @@
   border-radius: 8px;
   background: #d9d9d9;
   transition: ease 0.3s;
+  right: 12%;
 }
 
 .swiperCaretPrev {
   border-radius: 12px;
   background: rgba(13, 22, 53, 0.6);
+  left: 12%;
 
   &::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Ccircle cx='12.0022' cy='12.0223' r='11.4207' fill='%23E2E2E2'/%3E%3Cpath d='M13.7938 7.99023L10.2426 11.3546C9.86379 11.7134 9.87241 12.3193 10.2613 12.6672L13.7938 15.828' stroke='%23171717' stroke-width='1.78448' stroke-linecap='round'/%3E%3C/svg%3E") !important;

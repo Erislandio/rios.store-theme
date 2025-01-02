@@ -58,6 +58,7 @@ const CSS_HANDLES = [
   'podCastContainerLink',
   'podCastContainerDescriptionSeeMore',
   'podCastArrowContainer',
+  'podCastDescriptionContainer',
 ] as const
 
 const ExclusiveContent: StoreFrontFC<{
@@ -117,15 +118,17 @@ const ExclusiveContent: StoreFrontFC<{
                       </div>
                     ) : null}
                   </div>
-                  <p className={handles.podCastContainerDescription}>
-                    {podCast.description}
-                  </p>
-                  <div className={handles.podCastArrowContainer}>
-                    <span
-                      className={handles.podCastContainerDescriptionSeeMore}
-                    >
-                      <Arrow />
-                    </span>
+                  <div className={handles.podCastDescriptionContainer}>
+                    <p className={handles.podCastContainerDescription}>
+                      {podCast.description}
+                    </p>
+                    <div className={handles.podCastArrowContainer}>
+                      <span
+                        className={handles.podCastContainerDescriptionSeeMore}
+                      >
+                        <Arrow />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>

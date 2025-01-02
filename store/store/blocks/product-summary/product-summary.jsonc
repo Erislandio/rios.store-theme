@@ -26,8 +26,8 @@
       "preventHorizontalStretch": true
     },
     "children": [
-      "product-selling-price",
-      "rich-text#price-text"
+      "product-selling-price"
+      // "rich-text#price-text"
     ]
   },
   "rich-text#price-text": {

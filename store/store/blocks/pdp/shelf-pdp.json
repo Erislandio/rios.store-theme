@@ -12,7 +12,7 @@
   "rich-text#shelf-title-pdp": {
     "title": "Título da vitrine",
     "props": {
-      "text": "## Novidades",
+      "text": "## Produtos similares",
       "blockClass": "shelf-title"
     }
   }

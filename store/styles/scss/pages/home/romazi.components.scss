@@ -65,8 +65,25 @@
   height: 100%;
 }
 
+.iconOurLines {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+}
+
 .bannerOurLinesContainer {
   position: relative;
+
+  .sliderTrackContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1441px) {
+    .sliderTrackContainer {
+      max-width: 1300px;
+    }
+  }
 
   .sliderLayoutContainer {
     position: absolute;
@@ -82,8 +99,8 @@
     bottom: -10%;
   }
   .caretIcon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 
     &::before {
       content: '';
@@ -96,12 +113,19 @@
   }
 
   .sliderArrows {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
     background-color: #f2f2f2 !important;
     border-radius: 50%;
-    opacity: 0.5;
+  }
+
+  .sliderLeftArrow {
+    left: -30px;
+  }
+
+  .sliderRightArrow {
+    right: -30px;
   }
 }
 
@@ -129,6 +153,7 @@
 }
 
 .carouselImageContainer {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -532,6 +557,11 @@
   }
 }
 
+.podCastDescriptionContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
 @media (max-width: 1025px) {
   .romaziPremiumSliderImage {
     max-width: 222px;
@@ -543,6 +573,20 @@
       left: 50%;
       right: calc(50% - 50px);
     }
+  }
+
+  .podCastDescriptionContainer {
+    position: relative;
+
+    .podCastArrowContainer {
+      position: absolute;
+      right: -17px;
+      bottom: -15px;
+    }
+  }
+
+  .slideChildrenContainer {
+    padding-bottom: 24px;
   }
 }
 
@@ -572,7 +616,7 @@
   flex-direction: row !important;
   :global(.vtex-product-price-1-x-sellingPriceValue) {
     color: #38434d;
-    font-family: 'Mulish ExtraBold', sans-serif;
+    font-family: 'Mulish ExtraBold';
     font-size: 40px;
     font-style: normal;
     font-weight: 800;
@@ -739,7 +783,11 @@
     }
 
     .star--filed {
-      color: #007acb;
+      color: #3065e0;
+    }
+
+    .star--empty {
+      color: #bbc6cb;
     }
 
     .reviewsContainerMetadata1MediaValue,

@@ -241,8 +241,8 @@
       "alignItems": "flex-end"
     },
     "children": [
-      "product-selling-price",
-      "rich-text#price-text"
+      "product-selling-price"
+      // "rich-text#price-text"
     ]
   },
   "custom-div#buy-button": {

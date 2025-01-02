@@ -19,6 +19,20 @@
   font-weight: 700;
   line-height: 19.697px;
   letter-spacing: 0.4px;
+
+  .currencyContainer {
+    &::after {
+      content: ' à vista';
+      color: #38434d;
+      text-align: center;
+      font-family: 'Source Sans Pro SemiBold', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 19.697px; /* 140.692% */
+      letter-spacing: 0.28px;
+    }
+  }
 }
 
 .savings {

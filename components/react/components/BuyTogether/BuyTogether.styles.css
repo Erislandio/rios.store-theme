@@ -103,6 +103,10 @@
   text-decoration: line-through
 }
 
+.buyTogetherFinish .price {
+  font-size: 24px;
+}
+
 .buyTogetherFooterItem {
   margin-left: -15px;
 }
@@ -174,6 +178,7 @@
   font-size: 21px;
   font-style: normal;
   font-weight: 400;
+  min-height: 56px;
   line-height: normal;
   text-transform: none;
   transition: all 0.2s;

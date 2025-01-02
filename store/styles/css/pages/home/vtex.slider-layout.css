@@ -55,13 +55,13 @@
 
 @media (min-width: 1025px) {
   .sliderArrows--carousel-main-banner {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
   }
   .sliderArrows--carousel-main-banner::before {
     content: "";
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='49' viewBox='0 0 48 49' fill='none'%3E%3Cpath d='M27.7644 16.0293L20.006 23.3794C19.3692 23.9827 19.3837 25.0013 20.0374 25.5862L27.7644 32.4999' stroke='%23171717' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-size: 50px;
+    background-size: 40px;
   }
   .sliderRightArrow--carousel-main-banner {
     margin-right: 40px;

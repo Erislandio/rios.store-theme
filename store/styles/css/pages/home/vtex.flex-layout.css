@@ -5,6 +5,9 @@
 .flexRow--main-banner {
   margin-top: 0;
 }
+.flexRow--main-banner :global(.vtex-store-components-3-x-container) {
+  max-width: 100% !important;
+}
 
 .flexRowContent--deals-item {
   display: flex;
@@ -77,12 +80,6 @@
 
 .flexRow--about-us-desktop {
   position: relative;
-}
-
-.flexRow--about-us-desktop :global(.vtex-store-components-3-x-container) {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0;
 }
 
 .flexRowContent--about-us-desktop {
@@ -172,6 +169,10 @@
     width: 100% !important;
   }
 }
+.flexRow--about-us-desktop {
+  margin: 0 !important;
+}
+
 @media (min-width: 1026px) {
   .flexColChild--newsletter-texts {
     height: auto !important;
@@ -180,7 +181,7 @@
     flex-direction: row;
   }
   .flexCol--about-us-mobile {
-    width: 50% !important;
+    width: 70% !important;
     margin-left: 24px;
   }
   .flexRowContent--newsletter {

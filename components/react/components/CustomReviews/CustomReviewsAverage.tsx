@@ -35,7 +35,7 @@ function RenderStars({ star }: { star: number }) {
 
         return (
           <li key={index} className={applyModifiers(handles.star, 'empty')}>
-            ☆
+            {item}
           </li>
         )
       })}

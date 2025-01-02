@@ -1,0 +1,73 @@
+.empty-cart-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &::before {
+    align-items: center;
+    background: #bc1818;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='81' viewBox='0 0 80 81' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.22119 13.6602C5.22119 12.9971 5.48458 12.3612 5.95342 11.8924C6.42227 11.4235 7.05815 11.1602 7.72119 11.1602H11.6579C13.4662 11.1603 15.2135 11.8137 16.5782 13.0001C17.9429 14.1866 18.833 15.8261 19.0845 17.6168L19.2879 19.0668H65.8379C67.0826 19.0668 68.3077 19.3766 69.4028 19.9683C70.4979 20.5599 71.4285 21.4148 72.1107 22.4559C72.793 23.497 73.2054 24.6915 73.3108 25.9317C73.4162 27.1719 73.2113 28.4189 72.7145 29.5602L63.8212 49.9868C63.2383 51.326 62.277 52.4658 61.0554 53.2664C59.8338 54.067 58.4051 54.4935 56.9445 54.4935H25.7412C23.9329 54.4934 22.1855 53.84 20.8208 52.6535C19.4562 51.4671 18.5661 49.8275 18.3145 48.0368L14.1345 18.3135C14.0509 17.7162 13.7541 17.1693 13.299 16.7735C12.8438 16.3778 12.261 16.16 11.6579 16.1602H7.72452C7.06148 16.1602 6.4256 15.8968 5.95676 15.4279C5.48792 14.9591 5.22452 14.3232 5.22452 13.6602M19.9945 24.0668L23.2679 47.3402C23.3515 47.9375 23.6482 48.4844 24.1034 48.8801C24.5585 49.2758 25.1414 49.4937 25.7445 49.4935H56.9479C57.4346 49.4939 57.911 49.3522 58.3184 49.0857C58.7257 48.8192 59.0465 48.4396 59.2412 47.9935L68.1312 27.5602C68.2957 27.1801 68.3633 26.7651 68.3278 26.3525C68.2923 25.9399 68.1549 25.5426 67.9278 25.1962C67.7008 24.8499 67.3912 24.5653 67.027 24.3682C66.6628 24.1711 66.2553 24.0675 65.8412 24.0668H19.9945Z' fill='white'/%3E%3Cpath d='M20.1138 65.3294C20.1138 63.7823 20.7284 62.2986 21.8223 61.2046C22.9163 60.1107 24.4 59.4961 25.9471 59.4961C27.4942 59.4961 28.9779 60.1107 30.0719 61.2046C31.1659 62.2986 31.7804 63.7823 31.7804 65.3294C31.7804 66.8765 31.1659 68.3603 30.0719 69.4542C28.9779 70.5482 27.4942 71.1628 25.9471 71.1628C24.4 71.1628 22.9163 70.5482 21.8223 69.4542C20.7284 68.3603 20.1138 66.8765 20.1138 65.3294ZM54.4004 59.4961C52.8533 59.4961 51.3696 60.1107 50.2756 61.2046C49.1817 62.2986 48.5671 63.7823 48.5671 65.3294C48.5671 66.8765 49.1817 68.3603 50.2756 69.4542C51.3696 70.5482 52.8533 71.1628 54.4004 71.1628C55.9475 71.1628 57.4313 70.5482 58.5252 69.4542C59.6192 68.3603 60.2338 66.8765 60.2338 65.3294C60.2338 63.7823 59.6192 62.2986 58.5252 61.2046C57.4313 60.1107 55.9475 59.4961 54.4004 59.4961Z' fill='white'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 125px;
+    border-radius: 100%;
+    border-radius: 108.409px;
+    content: '';
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    min-height: 150px;
+    min-width: 150px;
+    padding: 1rem;
+    width: 150px;
+  }
+
+  h2 {
+    color: #1d1d1f;
+    font-family: Mulish, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px; /* 120% */
+    text-align: center;
+  }
+
+  .empty-cart-message {
+    p {
+      color: #80888e;
+      font-family: Mulish, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      line-height: normal;
+      text-align: center;
+    }
+  }
+
+  #cart-choose-products {
+    align-items: center;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #80888e;
+    border-radius: 8px;
+    color: #80888e;
+    display: flex;
+    font-family: 'Mulish SemiBold', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    gap: 10px;
+    justify-content: center;
+    letter-spacing: 0.4px;
+    line-height: normal;
+    padding: 14px 56px;
+    text-align: center;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+#cart-title {
+  display: none !important;
+}
