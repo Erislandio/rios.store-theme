@@ -15,9 +15,9 @@
 
   .cart-template-holder {
     .cart {
-      background: var(--BG-FF, #fff);
+      background: #fff;
       background-color: #fff;
-      border: 1px solid var(--Bombay-300, #bbc6cb);
+      border: 1px solid #bbc6cb;
       border-radius: 8px;
       padding: 15px;
 
@@ -29,7 +29,7 @@
     table {
       tr {
         th {
-          color: var(--Bombay-900, #505257);
+          color: #505257;
           font-family: 'Mulish SemiBold', sans-serif;
           font-size: 18px;
           font-style: normal;
@@ -57,7 +57,7 @@
         }
 
         a {
-          color: var(--Bombay-900, #505257);
+          color: #505257;
           font-family: Mulish, sans-serif;
           font-size: 14px;
           font-style: normal;
@@ -72,7 +72,7 @@
 
       td.shipping-date {
         * {
-          color: var(--Bombay-900, #505257);
+          color: #505257;
           font-family: Arial;
           font-size: 12px;
           font-style: normal;
@@ -95,7 +95,7 @@
 
       td.quantity-price {
         span.total-selling-price {
-          color: var(--Bombay-900, #505257);
+          color: #505257;
           font-family: 'Mulish SemiBold', sans-serif;
           font-style: normal;
           font-weight: 600;
@@ -114,7 +114,7 @@
 
       td.product-price {
         del.old-product-price {
-          color: var(--Bombay-400, #a8b2b7);
+          color: #a8b2b7;
           font-family: Mulish, sans-serif;
           font-size: 14px;
           font-style: normal;
@@ -129,7 +129,7 @@
         }
 
         span.new-product-price {
-          color: var(--Bombay-900, #505257);
+          color: #505257;
           font-family: 'Mulish Bold', sans-serif;
           font-size: 18px;
           font-style: normal;
@@ -146,7 +146,7 @@
       td.quantity {
         align-items: center;
         background: #fff;
-        border: 1px solid var(--Bombay-400, #a8b2b7);
+        border: 1px solid #a8b2b7;
         border-radius: 2px;
         display: flex;
         justify-content: center;
@@ -171,7 +171,7 @@
 
         input {
           border: none;
-          color: var(--Bombay-900, #505257);
+          color: #505257;
           font-family: 'Mulish SemiBold';
           font-size: 16px;
           font-style: normal;
@@ -276,7 +276,7 @@
           font-size: 0 !important;
 
           &::before {
-            color: var(--Cinza-37, #373737);
+            color: #373737;
             content: 'Adicionar cupom de desconto';
             font-family: Mulish, sans-serif;
             font-size: 16px !important;
@@ -324,7 +324,7 @@
         input {
           background: #fff;
           background-color: #fff;
-          border: 1px solid var(--Bombay-300, #bbc6cb);
+          border: 1px solid #bbc6cb;
           border-radius: 8px;
           height: 43px;
           padding: 0 1rem;
@@ -360,19 +360,20 @@
     }
 
     td.info {
-      color: var(--Bombay-700, #6e6e73);
+      color: #6e6e73;
       font-family: 'Mulish SemiBold';
-      font-size: 18px;
+      font-size: 17px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
       padding-left: 0;
+      text-align: left;
     }
 
     td.monetary {
-      color: var(--Bombay-700, #6e6e73);
+      color: #6e6e73;
       font-family: 'Mulish SemiBold';
-      font-size: 18px;
+      font-size: 17px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -392,12 +393,13 @@
       font-weight: 700;
       line-height: normal;
       padding-left: 0;
+      text-align: left;
     }
 
     td.monetary {
       color: #bc1818;
       font-family: 'Mulish Bold', sans-serif;
-      font-size: 26px;
+      font-size: 25px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -410,7 +412,7 @@
 .cart-links-bottom {
   a#cart-choose-more-products {
     align-items: center;
-    color: var(--Bombay-800, #4d5156);
+    color: #4d5156;
     display: flex;
     font-family: 'Source Sans Pro SemiBold';
     font-size: 16px;
@@ -433,7 +435,7 @@
 
   a#cart-to-orderform {
     align-items: center;
-    background: var(--Matisse-600, #2643a8);
+    background: #2643a8;
     border: none;
     border-radius: 8px;
     display: flex;
@@ -444,7 +446,7 @@
     padding: 0;
 
     &::before {
-      color: var(--Cobalto-50, #f0f6fe);
+      color: #f0f6fe;
       content: 'Finalizar Pedido';
       font-family: Mulish;
       font-size: 21px !important;
