@@ -1,0 +1,10 @@
+.divContainer--container {
+  max-width: 1200px;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1441px) {
+    max-width: 1441px;
+  }
+}

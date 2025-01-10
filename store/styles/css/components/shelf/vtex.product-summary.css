@@ -43,7 +43,7 @@
 }
 @media (min-width: 1025px) {
   .container {
-    min-height: 525px;
+    min-height: 565px;
   }
   .container :global(.vtex-wish-list-1-x-wishlistIcon) {
     display: none;

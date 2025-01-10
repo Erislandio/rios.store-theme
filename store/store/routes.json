@@ -1,6 +1,18 @@
 {
-  "store.custom#about-us": {
-    "path": "/about-us"
+  "store.custom#quem-somos": {
+    "path": "/quem-somos"
+  },
+  "store.custom#troca-devolucoes": {
+    "path": "/troca-devolucoes"
+  },
+  "store.custom#politica-privacidade": {
+    "path": "/politica-privacidade"
+  },
+  "store.custom#politica-pagamentos": {
+    "path": "/politica-pagamentos"
+  },
+  "store.custom#trabalhe-conosco": {
+    "path": "/trabalhe-conosco"
   },
   "store.custom#faq": {
     "path": "/faq"

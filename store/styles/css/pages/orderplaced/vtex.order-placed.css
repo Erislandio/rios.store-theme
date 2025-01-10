@@ -1,0 +1,287 @@
+.confirmationIconWrapper {
+  display: none;
+}
+
+.section--confirmation {
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #bbc6cb;
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.orderPlacedWrapper {
+  width: 100%;
+  border: 1px solid #bbc6cb;
+  border-radius: 8px;
+  margin-top: 60px;
+  padding: 0 32px;
+}
+.orderPlacedWrapper .confirmationTitle {
+  color: var(--Bombay-950, #1d1d1f);
+  text-align: center;
+  font-family: "Mulish Bold";
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.orderPlacedWrapper .confirmationMessage {
+  color: #4f4f4f;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.orderPlacedWrapper .orderPlacedHeader :global(.vtex-button) {
+  border-radius: 8px;
+  background: var(--Matisse-600, #2643a8);
+  border: none;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: var(--Matisse-50, #f0f8ff);
+  color: var(--Cobalto-50, #f0f6fe);
+  text-align: center;
+  /* Mulish/Semibold 17 */
+  font-family: "Mulish SemiBold";
+  font-size: 17px;
+  font-style: normal;
+  text-transform: none;
+  font-weight: 600;
+  line-height: normal;
+  width: 100%;
+  max-width: 250px;
+  display: block;
+}
+.orderPlacedWrapper .orderPlacedHeader :global(.vtex-button):hover {
+  opacity: 0.8;
+}
+
+.section--notices {
+  display: none;
+}
+
+.orderPlacedMainWrapper {
+  width: 100%;
+  max-width: unset;
+  margin: 0px;
+}
+.orderPlacedMainWrapper .orderNumber {
+  color: var(--Bombay-950, #1d1d1f);
+  font-family: "Source Sans Pro Bold", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+.orderPlacedMainWrapper .customerInfoListEmail,
+.orderPlacedMainWrapper .customerInfoListName,
+.orderPlacedMainWrapper .customerInfoListDocument,
+.orderPlacedMainWrapper .customerInfoListPhone,
+.orderPlacedMainWrapper .orderSeller,
+.orderPlacedMainWrapper .orderSoldBy,
+.orderPlacedMainWrapper .orderDatetime {
+  color: var(--Bombay-600, #80888e);
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.customerInfoListEmail,
+.customerInfoListName,
+.customerInfoListDocument {
+  margin-bottom: 24px;
+}
+
+.pickupPackages {
+  background-color: #fff;
+  border: none;
+}
+
+.section--pickupPackages,
+.section--deliveryPackages {
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 40px;
+  margin-top: 2rem;
+  border-bottom: 1px solid #bbc6cb;
+}
+.section--pickupPackages:empty,
+.section--deliveryPackages:empty {
+  display: none;
+}
+
+.productWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.productWrapper .productQuantity {
+  position: absolute;
+  left: 50%;
+  color: var(--Bombay-800, #4d5156);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.totalListWrapper {
+  background-color: #fff;
+  padding: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+.totalListWrapper .totalList {
+  margin: 0px;
+  width: 100%;
+}
+.totalListWrapper .totalList .totalListItemValue,
+.totalListWrapper .totalList .totalListItemLabel {
+  color: var(--Bombay-700, #6e6e73);
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.totalListWrapper .totalList .totalListItem {
+  padding: 0px;
+  padding-bottom: 24px;
+}
+.totalListWrapper .totalList .totalListItem:last-child .totalListItemValue,
+.totalListWrapper .totalList .totalListItem:last-child .totalListItemLabel {
+  color: var(--Matisse-600, #bc1818);
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.myOrdersButton,
+.updateOrderButton {
+  color: var(--Cobalto-800, #2643a8);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.myOrdersButton :global(.vtex-button),
+.updateOrderButton :global(.vtex-button) {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  text-transform: none;
+  border: 2px solid var(--Matisse-500, #2643a8);
+}
+.myOrdersButton :global(.vtex-button):hover,
+.updateOrderButton :global(.vtex-button):hover {
+  opacity: 0.7;
+}
+
+.cancelOrderButton {
+  display: none;
+}
+
+.attachmentWrapper {
+  display: none;
+}
+
+.orderOptionsWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.package {
+  margin: 0px;
+}
+.package .packageHeaderColumn {
+  display: none;
+}
+.package .productList {
+  width: 100%;
+}
+.package .productListItem {
+  width: 100%;
+}
+.package .productImageWrapper {
+  width: 4rem;
+  height: auto;
+}
+.package .productPrice {
+  color: var(--Bombay-800, #4d5156);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.package .productInfoColumn {
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.package .productInfoColumn .productName {
+  color: var(--Bombay-800, #4d5156);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 1024px) {
+  .section--confirmation {
+    padding: 24px 0;
+  }
+  .productWrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .productWrapper .productInfoColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .productWrapper .productQuantity {
+    position: static;
+  }
+  .productWrapper .productPrice {
+    margin-left: 0;
+  }
+  .totalListWrapper {
+    padding: 2rem 0;
+  }
+  .orderOptionsWrapper {
+    gap: 16px;
+  }
+  .orderOptionsWrapper .myOrdersButton :global(.vtex-button),
+  .orderOptionsWrapper .updateOrderButton :global(.vtex-button) {
+    min-height: 50px;
+  }
+}

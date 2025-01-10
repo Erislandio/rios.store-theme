@@ -1362,3 +1362,214 @@
   font-weight: 600;
   line-height: normal;
 }
+
+.flowUl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px;
+
+  .flowLi {
+    list-style: none;
+    position: relative;
+  }
+
+  .flowIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flowLiLine {
+    width: 100%;
+    height: 2px;
+    background-color: #bc1818;
+    list-style: none;
+  }
+
+  .flowIcon {
+    background-color: #bc1818;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flowText {
+    position: absolute;
+    bottom: -2rem;
+    color: var(--Bombay-600, #80888e);
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--last {
+      font-family: 'Mulish Bold', sans-serif;
+      font-weight: 700;
+      color: #1d1d1f;
+    }
+  }
+}
+
+.divContainer--orderplaced-info {
+  border-bottom: 1px solid #bbc6cb;
+
+  @media (max-width: 1025px) {
+    padding: 0 !important;
+  }
+}
+
+// ----------------------------- Banner Not Found --------------------------
+
+.bannerNotFoundContainer {
+  position: relative;
+  .notFoundTextsContainer {
+    position: absolute;
+    left: calc(50% - 311px);
+    top: calc(50% - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .text404 {
+      color: var(--Cobalto-900, #243c84);
+      text-align: center;
+      font-family: 'Nico Moji', sans-serif;
+      font-size: 126px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 10.08px;
+      text-align: center;
+      margin: 0;
+    }
+    .bannerNotFoundTitle {
+      color: #5a5f74;
+      font-family: 'Mulish ExtraBold', sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      letter-spacing: 3.2px;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 14px;
+    }
+    .bannerNotFoundText {
+      color: #484848;
+      text-align: center;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+      max-width: 624px;
+      margin: 0;
+      margin-bottom: 56px;
+    }
+
+    .notFoundLink {
+      display: flex;
+      height: 44px;
+      padding: 16px 56px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      background: var(--Cobalto-800, #2643a8);
+
+      color: var(--Cobalto-50, #f0f6fe);
+      text-align: center;
+      font-family: 'Mulish', sans-serif;
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .notFoundTextsContainer {
+      left: 0;
+      padding: 0 16px;
+      width: 100%;
+
+      .bannerNotFoundTitle {
+        font-size: 22px;
+      }
+
+      .bannerNotFoundText {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .bannerNotFoundImage {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .divContainer--not-found-container {
+    padding: 0 !important;
+
+    max-width: unset !important;
+    width: 100% !important;
+  }
+}
+
+.divContainer--wishlist-container {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 641px) and (max-width: 1025px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  :global(.vtex-product-summary-2-x-container) {
+    max-height: auto;
+  }
+
+  :global(.vtex-wish-list-1-x-wishlistIcon--add-to-wishlist) {
+    display: flex !important;
+  }
+  :global(.vtex-flex-layout-0-x-flexRow--add-to-cart-container) {
+    :global(.vtex-button) {
+      display: flex !important;
+
+      @media (max-width: 640px) {
+        :global(.vtex-button__label) {
+          &::before {
+            display: none !important;
+          }
+          :global(.vtex-add-to-cart-button-0-x-buttonText) {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.divContainer--menu-img-institucionais {
+  @media (max-width: 1025px) {
+    gap: 24px !important;
+  }
+}

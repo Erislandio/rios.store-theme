@@ -65,7 +65,7 @@
     "blocks": [
       "search-result-layout.desktop",
       "search-result-layout.mobile",
-      "search-not-found-layout"
+      "search-not-found-layout#custom"
     ]
   },
   "search-result-layout.desktop": {
@@ -287,12 +287,6 @@
       "verticalAlign": "middle"
     }
   },
-  "search-not-found-layout": {
-    "children": [
-      "flex-layout.row#searchbread",
-      "flex-layout.row#notfound"
-    ]
-  },
   "filter-navigator.v3#default": {
     "blocks": [
       "sidebar-close-button"
@@ -397,6 +391,56 @@
       "text": "List",
       "textColor": "c-auto",
       "blockClass": "layout-option"
+    }
+  },
+  // ----------------------- NOT FOUND PAGE ---------------------------------------
+  "search-not-found-layout#custom": {
+    "title": "Página de produto não encontrado",
+    "children": [
+      "flex-layout.row#searchbread",
+      "custom-div#not-found-container",
+      "flex-layout.row#shelf-notFound"
+    ]
+  },
+  "custom-div#not-found-container": {
+    "props": {
+      "blockClass": [
+        "container",
+        "not-found-container"
+      ]
+    },
+    "children": [
+      "custom-not-found-banner"
+    ]
+  },
+  "custom-not-found-banner": {
+    "props": {
+      "bannerData": {
+        "title": "Página Não encontrada",
+        "text": "Parece que o fio foi cortado, e a página que você está procurando perdeu a conexão. Não se preocupe, você pode retornar para à página inicial:",
+        "imageMobile": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/38c551d0-0578-408e-ad19-763bfe96668c___db2e84a354235880f81a33baa561a6ba.png",
+        "image": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/5d421217-8c32-4870-af79-15f0d2242fe3___7cae81b8b86590d2c9615f2c222636de.png"
+      }
+    }
+  },
+  "flex-layout.row#shelf-notFound": {
+    "title": "Vitrine",
+    "props": {
+      "blockClass": [
+        "shelf",
+        "container"
+      ]
+    },
+    "children": [
+      "rich-text#shelf-title-notFound",
+      "list-context.product-list#default"
+    ]
+  },
+  "rich-text#shelf-title-notFound": {
+    "title": "Título da vitrine",
+    "props": {
+      "text": "## Você pode gostar",
+      "blockClass": "shelf-title"
     }
   }
 }

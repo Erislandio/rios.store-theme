@@ -45,5 +45,11 @@
   },
   "pix-payment-methods": {
     "component": "PixPaymentMethods"
+  },
+  "custom-orderplaced-flow": {
+    "component": "OrderPlacedFlow"
+  },
+  "custom-not-found-banner": {
+    "component": "NotFoundBanner"
   }
 }

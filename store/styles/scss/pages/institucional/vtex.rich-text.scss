@@ -1,0 +1,43 @@
+.wrapper--institucional-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragraph--institucional-text {
+  color: #4f4f4f;
+  font-family: 'Mulish', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.51px;
+
+  text-align: left;
+  width: 100%;
+}
+
+.headingLevel2--institucional-text {
+  color: var(--Blue-Romazi, #0d1635);
+  text-align: center;
+  font-family: 'Mulish Bold';
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.headingLevel4--institucional-text {
+  color: var(--Blue-Romazi, #0d1635);
+  font-family: 'Mulish Bold';
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin: 0;
+  margin-top: 24px;
+  width: 100%;
+  text-align: left;
+}

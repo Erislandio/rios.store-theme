@@ -1,6 +1,7 @@
 .flexCol--productRating {
   height: auto;
   margin-bottom: 0;
+  min-height: 21px;
 }
 
 .flexColChild--productRating:empty {
@@ -15,7 +16,11 @@
 }
 
 .flexRow--selling-price-content {
-  margin-top: 10px;
+  margin-top: 5px;
+}
+
+.flexRow--list-price-savings {
+  min-height: 20px;
 }
 
 .flexRowContent--list-price-savings {

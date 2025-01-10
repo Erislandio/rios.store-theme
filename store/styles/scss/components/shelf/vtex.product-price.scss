@@ -58,6 +58,43 @@
   margin-top: 3px;
 }
 
+.installments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 5px;
+  white-space: nowrap;
+
+  color: #38434d;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.697px;
+  letter-spacing: 0.28px;
+
+  .installmentValue,
+  .installmentsNumber {
+    color: #38434d;
+    font-family: 'Source Sans Pro Bold', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.697px;
+    letter-spacing: 0.28px;
+  }
+
+  .installmentValue {
+    &::before {
+      content: 'de ';
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+    }
+  }
+}
+
 @media (min-width: 640px) {
   .listPrice {
     font-size: 16px;

@@ -1,11 +1,48 @@
 {
-  "order-placed": {
-    "blocks": ["op-header", "op-order"]
+  "store.orderplaced": {
+    "children": [
+      "custom-div#orderplaced-top",
+      "custom-div#orderplaced"
+    ]
   },
+  "custom-div#orderplaced-top": {
+    "props": {
+      "margin": "0 auto",
+      "padding": "2rem 0px 0px",
+      "width": "100%",
+      "justifyContent": "center",
+      "blockClass": [
+        "container",
+        "orderplaced-top"
+      ]
+    },
+    "children": [
+      "custom-orderplaced-flow"
+    ]
+  },
+  "custom-div#orderplaced": {
+    "props": {
+      "margin": "0 auto",
+      "width": "100%",
+      "justifyContent": "center",
+      "blockClass": [
+        "container"
+      ]
+    },
+    "children": [
+      "order-placed#default"
+    ]
+  },
+  "order-placed#default": {
+    "blocks": [
+      "op-header",
+      "op-order#default"
+    ]
+  },
+  "flex-layout.row": {},
   "op-header": {
     "children": [
       "op-section#confirmation",
-      "op-section#notices",
       "op-summary-section",
       "op-bank-invoice-section"
     ]
@@ -20,22 +57,8 @@
       "op-confirmation-icon",
       "op-confirmation-title",
       "op-confirmation-message",
-      "flex-layout.row#confirmation-buttons"
+      "op-print-button"
     ]
-  },
-  "flex-layout.row#confirmation-buttons": {
-    "props": {
-      "blockClass": "confirmationButtons",
-      "marginTop": 8,
-      "marginBottom": 8,
-      "horizontalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preserveLayoutOnMobile": true
-    },
-    "children": ["flex-layout.col#confirmation-buttons"]
-  },
-  "flex-layout.col#confirmation-buttons": {
-    "children": ["op-print-button"]
   },
   "op-section#notices": {
     "props": {
@@ -43,15 +66,32 @@
       "marginBottom": 9,
       "borderless": true
     },
-    "children": ["op-notices"]
+    "children": [
+      // "op-notices"
+    ]
   },
   // each order section
-  "op-order": {
+  "custom-div#order-info": {
+    "props": {
+      "flexDirection": "column",
+      "width": "100%",
+      "background": "#fff",
+      "padding": "2rem",
+      "blockClass": [
+        "orderplaced-info"
+      ]
+    },
     "children": [
       "flex-layout.row#order-header",
       "op-order-split-notice",
       "op-order-customer",
-      "op-section#payments",
+      "op-order-options"
+      // "op-section#payments"
+    ]
+  },
+  "op-order#default": {
+    "children": [
+      "custom-div#order-info",
       "op-section#pickup-packages",
       "op-section#delivery-packages",
       "op-order-takeaway-packages",
@@ -67,18 +107,25 @@
       "marginBottom": 5
     },
     "children": [
-      "flex-layout.col#order-header-info",
-      "flex-layout.col#order-header-options"
+      "flex-layout.col#order-header-info"
     ]
   },
   "flex-layout.col#order-header-info": {
-    "children": ["op-order-number", "op-order-datetime", "op-order-seller"]
+    "children": [
+      "op-order-number",
+      "op-order-datetime",
+      "op-order-seller"
+    ]
   },
   "flex-layout.col#order-header-options": {
-    "children": ["responsive-layout.desktop#order-options-desktop"]
+    "children": [
+      "responsive-layout.desktop#order-options-desktop"
+    ]
   },
   "responsive-layout.desktop#order-options-desktop": {
-    "children": ["op-order-options"]
+    "children": [
+      "op-order-options"
+    ]
   },
   // payment section
   "op-section#payments": {
@@ -92,7 +139,9 @@
   },
   // bottom of top section of order header
   "responsive-layout.mobile#order-options-mobile": {
-    "children": ["op-order-options#mobile"]
+    "children": [
+      "op-order-options#mobile"
+    ]
   },
   "op-order-options#mobile": {
     "props": {
@@ -104,12 +153,16 @@
     "props": {
       "name": "pickupPackages"
     },
-    "children": ["op-order-pickup-packages"]
+    "children": [
+      "op-order-pickup-packages"
+    ]
   },
   "op-section#delivery-packages": {
     "props": {
       "name": "deliveryPackages"
     },
-    "children": ["op-order-delivery-packages"]
+    "children": [
+      "op-order-delivery-packages"
+    ]
   }
 }

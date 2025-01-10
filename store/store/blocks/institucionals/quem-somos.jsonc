@@ -1,0 +1,230 @@
+{
+  "store.custom#quem-somos": {
+    "children": [
+      "flex-layout.row#institucional-container-quem-somos"
+    ]
+  },
+  "flex-layout.row#institucional-container-quem-somos": {
+    "title": "institucional conteúdo",
+    "props": {
+      "blockClass": [
+        "container",
+        "institucional-container"
+      ]
+    },
+    "children": [
+      "custom-div#menu-container",
+      "custom-div#institucional-container-texts-quem-somos"
+    ]
+  },
+  "custom-div#institucional-container-texts-quem-somos": {
+    "props": {
+      "blockClass": "institucional-text-container",
+      "flexDirection": "column",
+      "alignItems": "center",
+      "justifyContent": "center"
+    },
+    "children": [
+      "image#institucional-logo",
+      "rich-text#texto-1-quem-somos",
+      "responsive-layout.desktop#institucional-img",
+      "responsive-layout.mobile#institucional-img",
+      "rich-text#texto-2-quem-somos",
+      "custom-div#menu-container-images-2-quem-somos",
+      "rich-text#texto-3-quem-somos"
+    ]
+  },
+  "image#institucional-logo": {
+    "title": "Logo",
+    "props": {
+      "blockClass": "logo-institucional-quem-somos",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/08ef6839-ab77-49d9-92d3-285036169341___851264e955676e6b7b6353152d94f7fe.png"
+    }
+  },
+  "rich-text#texto-1-quem-somos": {
+    "title": "texto 1",
+    "props": {
+      "blockClass": "institucional-text",
+      "text": "Nec vulputate massa sed sociis sit neque nec porta pellentesque. Nunc in vitae eu vitae elit nulla a. Ultricies diam neque vel laoreet mattis morbi venenatis. Commodo elit lobortis neque nisl mi id augue dictum eu. Lorem viverra pellentesque pellentesque at sit scelerisque id ut. Diam nec mi id velit auctor. Cursus nunc adipiscing auctor quam. Elit tellus nulla rutrum nulla in. Tellus sit luctus duis fermentum eu vitae nec malesuada. Amet convallis egestas aliquam varius mauris egestas imperdiet. Fringilla rhoncus a lectus adipiscing elementum fringilla. Tortor semper consequat tempus vitae donec. Ipsum euismod sed elit nunc. Turpis odio massa tincidunt eget eu scelerisque. Mattis sem mattis quis pellentesque gravida."
+    }
+  },
+  "responsive-layout.desktop#institucional-img": {
+    "title": "Imagens - desktop",
+    "children": [
+      "custom-div#menu-container-images-1-quem-somos"
+    ]
+  },
+  "responsive-layout.mobile#institucional-img": {
+    "title": "Imagens - mobile",
+    "children": [
+      "custom-div#menu-container-images-1-quem-somos-mobile"
+    ]
+  },
+  "custom-div#menu-container-images-1-quem-somos": {
+    "props": {
+      "blockClass": "menu-img-institucionais",
+      "alignItems": "center",
+      "justifyContent": "space-between",
+      "width": "100%"
+    },
+    "children": [
+      "image#quem-somos-1",
+      "image#quem-somos-2",
+      "image#quem-somos-3"
+    ]
+  },
+  "custom-div#menu-container-images-1-quem-somos-mobile": {
+    "props": {
+      "blockClass": "menu-img-institucionais",
+      "alignItems": "center",
+      "justifyContent": "space-between",
+      "width": "100%"
+    },
+    "children": [
+      "image#quem-somos-1-mobile",
+      "image#quem-somos-2-mobile",
+      "image#quem-somos-3-mobile"
+    ]
+  },
+  "image#quem-somos-1": {
+    "title": "imagem 1",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/b48a13a1-4448-4dd9-8942-a4c1a63eee71___a90d358f21ef659144e02520fe52f644.png"
+    }
+  },
+  "image#quem-somos-2": {
+    "title": "imagem 2",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/616f81bd-ef5b-49a3-83cf-eac9283a017e___0d6ece3c7b81222e4c7d8f019c21faf3.png"
+    }
+  },
+  "image#quem-somos-3": {
+    "title": "imagem 3",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/4574b83e-11d7-46e3-8143-d2df6401e9ae___dd3166778eca45ae089ea09daf53e32a.png"
+    }
+  },
+  "image#quem-somos-1-mobile": {
+    "title": "imagem 1",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/16b4068e-907f-47e0-bef0-8ba8d1d20c2d___5a48dffef3fbbd87779bc4d28692dc7e.png"
+    }
+  },
+  "image#quem-somos-2-mobile": {
+    "title": "imagem 2",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f3b912f0-47f0-4878-9a29-8079f145071f___d8210f3a78343edaeba6ba94a22a7300.png"
+    }
+  },
+  "image#quem-somos-3-mobile": {
+    "title": "imagem 3",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/3cb4acbe-4dd5-472c-b639-46a7e430c12b___762860a86b5117cee1a5ef583b3de99b.png"
+    }
+  },
+  "rich-text#texto-2-quem-somos": {
+    "title": "texto 2",
+    "props": {
+      "blockClass": "institucional-text",
+      "text": "Denean pharetra tincidunt at mauris viverra rhoncus cras quis sodales. Tempus risus ullamcorper commodo curabitur dictum proin mauris. Nunc blandit lectus vitae aliquam at orci. Nulla ullamcorper a sit facilisis eget. Dictum cursus morbi cursus vitae ultrices fermentum porttitor neque. Pellentesque molestie nam nec faucibus pretium ornare. Tincidunt tristique sagittis neque pretium. Vel dolor dui elit ipsum. Orci tellus enim ac lacinia congue aenean odio lorem. Quam nec tincidunt sed viverra dolor.<br><br>Velit adipiscing vitae sodales lectus id pulvinar arcu. Cursus mattis scelerisque venenatis hendrerit. Euismod et dui scelerisque auctor proin varius venenatis. Quis purus bibendum tempus consectetur id purus enim tristique. Amet scelerisque phasellus felis sagittis tortor sapien aliquet condimentum. Porta ornare est velit lacus sit cursus est. Pulvinar vitae mauris aliquet ut integer sit mattis. Non fermentum fringilla dolor eget. Sed consectetur arcu id suspendisse sodales ultrices est cursus. Lacus imperdiet bibendum consectetur vitae vestibulum eget sit venenatis."
+    }
+  },
+  "custom-div#menu-container-images-2-quem-somos": {
+    "props": {
+      "blockClass": "menu-img-institucionais",
+      "alignItems": "center",
+      "justifyContent": "space-between",
+      "width": "100%"
+    },
+    "children": [
+      "image#quem-somos-4",
+      "image#quem-somos-5"
+    ]
+  },
+  "image#quem-somos-4": {
+    "title": "imagem 4",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/d8ecb27b-d10a-4b67-b57b-a4c30d1993af___b21d8cc619f425822c41088f5a7a35b9.png"
+    }
+  },
+  "image#quem-somos-5": {
+    "title": "imagem 5",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/73f096e6-fbd4-4e7f-b95a-389432483289___5078b757820b0532163d2629921a32f7.png"
+    }
+  },
+  "rich-text#texto-3-quem-somos": {
+    "title": "texto 3",
+    "props": {
+      "blockClass": "institucional-text",
+      "text": "editar texto no site-editor"
+    }
+  },
+  "custom-div#menu-container": {
+    "props": {
+      "blockClass": "menu-links-institucionais",
+      "flexDirection": "column",
+      "width": "100%",
+      "gap": "24px"
+    },
+    "children": [
+      "link#quem-somos",
+      "link#troca-devolucao",
+      "link#politica-privacidade",
+      "link#politica-pagamentos",
+      "link#perguntas-frequentes",
+      "link#trabalhe-conosco"
+    ]
+  },
+  "link#quem-somos": {
+    "title": "menu link institucionais",
+    "props": {
+      "href": "/quem-somos",
+      "label": "Quem somos",
+      "blockClass": [
+        "link-menu-institucional",
+        "link-menu-institucional--active"
+      ]
+    }
+  },
+  "link#troca-devolucao": {
+    "title": "menu link institucionais",
+    "props": {
+      "href": "/troca-devolucoes",
+      "label": "Troca e devoluções",
+      "blockClass": "link-menu-institucional"
+    }
+  },
+  "link#politica-privacidade": {
+    "title": "menu link institucionais",
+    "props": {
+      "href": "/politica-privacidade",
+      "label": "Política de Privacidade",
+      "blockClass": "link-menu-institucional"
+    }
+  },
+  "link#politica-pagamentos": {
+    "title": "menu link institucionais",
+    "props": {
+      "href": "/politica-pagamentos",
+      "label": "Política de pagamentos",
+      "blockClass": "link-menu-institucional"
+    }
+  },
+  "link#perguntas-frequentes": {
+    "title": "menu link institucionais",
+    "props": {
+      "href": "/perguntas-frequentes",
+      "label": "Perguntas frequentes",
+      "blockClass": "link-menu-institucional"
+    }
+  },
+  "link#trabalhe-conosco": {
+    "title": "menu link institucionais",
+    "props": {
+      "href": "/trabalhe-conosco",
+      "label": "Trabalhe conosco",
+      "blockClass": "link-menu-institucional"
+    }
+  }
+}
