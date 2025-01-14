@@ -14,10 +14,10 @@
   "store.custom#trabalhe-conosco": {
     "path": "/trabalhe-conosco"
   },
-  "store.custom#faq": {
+  "store.custom#faq-custom": {
     "path": "/faq"
   },
-  "store.custom#contact-us": {
-    "path": "/contact-us"
+  "store.custom#fale-conosco": {
+    "path": "/fale-conosco"
   }
 }

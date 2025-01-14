@@ -1573,3 +1573,152 @@
     gap: 24px !important;
   }
 }
+
+.divContainer--faq-banner-container {
+  margin-top: 56px;
+  @media (max-width: 1025px) {
+    flex-direction: column-reverse !important;
+    padding: 32px !important;
+    align-items: center !important;
+  }
+}
+
+.sectionFaq {
+  .faqItem {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+    padding: 0 16px;
+    &--active {
+      background-color: #f3f5f7;
+    }
+
+    .faqItemTitle {
+      color: var(--Bombay-950, #1d1d1f);
+      font-family: 'Mulish SemiBold', sans-serif;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-left: 16;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .faqItemIcon {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .faqItemIcon--active {
+        transform: rotate(180deg);
+      }
+    }
+
+    .faqItemContent {
+      padding: 0 0 16px 0 !important;
+      max-width: 70%;
+
+      .faqItemContentText {
+        margin: 0;
+        color: var(--Bombay-800, #60656b);
+        font-family: 'Mulish', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.48px;
+      }
+    }
+  }
+
+  :global(.vtex__icon-caret-up),
+  :global(.vtex__icon-caret-down) {
+    display: none;
+  }
+}
+
+.divContainer--container-fale-conosco {
+  max-width: 920px !important;
+  margin: 0 auto;
+}
+
+.divContainer--fale-conosco-form {
+  margin: 80px auto !important;
+  border-bottom: 1px solid #1d1d1f;
+
+  @media (max-width: 720px) {
+    margin: 56px 24px !important;
+    padding: 0 !important;
+  }
+}
+
+.divContainer--contacts-container {
+  margin-bottom: 120px;
+
+  @media (max-width: 720px) {
+    padding: 0 24px !important;
+  }
+}
+
+.faleConoscoForm {
+  padding: 48px 0px 80px;
+
+  :global(.vtex-textarea__label),
+  :global(.vtex-input__label) {
+    color: var(--Bombay-950, #1d1d1f);
+    font-family: 'Mulish SemiBold', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  :global(.vtex-input) {
+    margin-bottom: 1rem;
+    display: block;
+
+    :global(.vtex-input-prefix__group) {
+      border: none;
+      border-bottom: 1px solid var(--Bombay-400, #a8b2b7);
+      background-color: transparent;
+      border-radius: 0px;
+    }
+
+    :global(.vtex-styleguide-9-x-input) {
+      background: transparent;
+      border: none;
+      border-radius: 0px;
+    }
+  }
+
+  :global(.vtex-textarea__input) {
+    min-height: 210px;
+    background-color: #fff;
+    border: 1px solid var(--Bombay-400, #a8b2b7);
+  }
+
+  :global(.vtex-textarea) {
+    margin-top: 1rem;
+    display: block;
+  }
+
+  :global(.vtex-button) {
+    min-width: 208px;
+    border-radius: 8px;
+    background: var(--Cobalto-800, #2643a8);
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-family: 'Mulish';
+    font-size: 18px;
+    font-style: normal;
+
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

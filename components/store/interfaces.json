@@ -51,5 +51,11 @@
   },
   "custom-not-found-banner": {
     "component": "NotFoundBanner"
+  },
+  "custom-faq": {
+    "component": "CustomFaq"
+  },
+  "custom-fac-form": {
+    "component": "FaleConoscoForm"
   }
 }
