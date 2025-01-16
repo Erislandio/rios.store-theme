@@ -69,21 +69,21 @@
   max-width: 100% !important;
 }
 .content--emailAndPassword .formTitle {
-  color: #1d1d1f;
-  font-family: "Source Sans Pro SemiBold", sans-serif;
+  color: var(--Bombay-950, #1d1d1f);
+  font-family: "Source Sans Pro SemiBold";
   font-size: 16px;
-  text-align: left;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  max-width: 350px;
-  margin: 0 auto;
-  margin-bottom: 16px;
+  text-align: left;
+  padding-left: 0;
 }
 .content--emailAndPassword .loginOptionsContainer {
   width: 100%;
   padding-bottom: 56px;
   border-bottom: 2px solid #cedae0;
+  max-width: 350px;
+  margin: 0 auto;
 }
 .content--emailAndPassword .contentForm {
   width: 100%;
@@ -93,6 +93,29 @@
 }
 .content--emailAndPassword .emailAndPasswordForm .formTitle {
   margin-bottom: 24px;
+}
+.content--emailAndPassword .emailAndPasswordForm .sendButton :global(.vtex-button) {
+  display: flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  background-color: #2643a8;
+}
+.content--emailAndPassword .emailAndPasswordForm .sendButton :global(.vtex-button) :global(.vtex-button__label) span {
+  font-size: 0;
+}
+.content--emailAndPassword .emailAndPasswordForm .sendButton :global(.vtex-button) :global(.vtex-button__label) span::before {
+  content: "Entrar";
+  color: #fff;
+  text-align: center;
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 17px !important;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .content--emailAndPassword .forgotPasswordLink {
   color: #4d5156;
@@ -106,26 +129,7 @@
 .content--emailAndPassword .formFooter {
   border: none;
   padding-top: 0;
-}
-.content--emailAndPassword .sendButton :global(.vtex-button) {
-  display: flex;
-  padding: 10px 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  border-radius: 4px;
-  background-color: #2643a8;
-}
-.content--emailAndPassword .sendButton :global(.vtex-button) :global(.vtex-button__label) {
-  color: #fff;
-  text-align: center;
-  font-family: "Source Sans Pro", sans-serif !important;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1px !important;
+  margin-top: 24px;
 }
 .content--emailAndPassword .formLinkContainer .dontHaveAccount {
   margin-top: 56px;
@@ -164,8 +168,10 @@
     display: flex;
     width: auto;
     padding-right: 90px;
-    margin-right: 45px;
     border-right: 2px solid #cedae0;
+    max-width: unset;
+    margin: 0;
+    margin-right: 45px;
   }
   .content--emailAndPassword .contentForm {
     margin: 0;
@@ -173,6 +179,7 @@
   .content--emailAndPassword .formTitle {
     margin: 8px 0;
     padding: 0;
+    text-align: left;
   }
   .content--emailAndPassword .emailAndPasswordForm .formTitle {
     margin-bottom: 48px;
@@ -186,6 +193,126 @@
   }
 }
 
+.content--recoveryPassword,
+.content--beginCreatePass,
+.content--codeConfirmation,
+.content--emailVerification {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content--recoveryPassword .formTitle,
+.content--beginCreatePass .formTitle,
+.content--codeConfirmation .formTitle,
+.content--emailVerification .formTitle {
+  color: var(--Bombay-950, #1d1d1f);
+  font-family: "Source Sans Pro SemiBold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  padding-left: 0;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.content--recoveryPassword .inputContainerEmail,
+.content--beginCreatePass .inputContainerEmail,
+.content--codeConfirmation .inputContainerEmail,
+.content--emailVerification .inputContainerEmail {
+  margin-top: 20px;
+}
+.content--recoveryPassword .loginOptionsContainer,
+.content--recoveryPassword .contentForm,
+.content--beginCreatePass .loginOptionsContainer,
+.content--beginCreatePass .contentForm,
+.content--codeConfirmation .loginOptionsContainer,
+.content--codeConfirmation .contentForm,
+.content--emailVerification .loginOptionsContainer,
+.content--emailVerification .contentForm {
+  width: 100%;
+  max-width: 350px;
+  padding: 0;
+}
+.content--recoveryPassword .loginOptionsContainer,
+.content--beginCreatePass .loginOptionsContainer,
+.content--codeConfirmation .loginOptionsContainer,
+.content--emailVerification .loginOptionsContainer {
+  border-bottom: none;
+  padding-bottom: 0;
+  display: flex;
+  width: auto;
+  padding-right: 90px;
+  border-right: 2px solid #cedae0;
+  max-width: unset;
+  margin: 0;
+  margin-right: 45px;
+  padding-bottom: 56px;
+  border-bottom: 2px solid #cedae0;
+  margin-bottom: 56px;
+}
+.content--recoveryPassword .formFooter .sendButton :global(.vtex-button),
+.content--beginCreatePass .formFooter .sendButton :global(.vtex-button),
+.content--codeConfirmation .formFooter .sendButton :global(.vtex-button),
+.content--emailVerification .formFooter .sendButton :global(.vtex-button) {
+  display: flex;
+  height: 44px;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+.content--recoveryPassword .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) span,
+.content--beginCreatePass .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) span,
+.content--codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) span,
+.content--emailVerification .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) span {
+  color: #fff;
+  text-align: center;
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media (min-width: 1025px) {
+  .content--recoveryPassword,
+  .content--beginCreatePass,
+  .content--codeConfirmation,
+  .content--emailVerification {
+    flex-direction: row;
+    align-items: center;
+  }
+  .content--recoveryPassword .loginOptionsContainer,
+  .content--beginCreatePass .loginOptionsContainer,
+  .content--codeConfirmation .loginOptionsContainer,
+  .content--emailVerification .loginOptionsContainer {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-right: 90px;
+    margin-right: 45px;
+    border-bottom: none;
+  }
+  .content--recoveryPassword .contentForm,
+  .content--beginCreatePass .contentForm,
+  .content--codeConfirmation .contentForm,
+  .content--emailVerification .contentForm {
+    margin-left: 45px;
+  }
+  .content--recoveryPassword .codeConfirmation .formTitle,
+  .content--recoveryPassword .emailVerification .formTitle,
+  .content--beginCreatePass .codeConfirmation .formTitle,
+  .content--beginCreatePass .emailVerification .formTitle,
+  .content--codeConfirmation .codeConfirmation .formTitle,
+  .content--codeConfirmation .emailVerification .formTitle,
+  .content--emailVerification .codeConfirmation .formTitle,
+  .content--emailVerification .emailVerification .formTitle {
+    margin-bottom: 48px;
+  }
+}
 .box .content--emailAndPassword {
   margin: 0;
 }
@@ -194,6 +321,31 @@
 }
 .box .formLinkContainer .dontHaveAccount {
   position: initial;
+}
+.box .formTitle {
+  margin-bottom: 16px !important;
+}
+.box .contentForm {
+  padding: 16px 8px 24px 8px;
+}
+.box .formFooter {
+  display: flex;
+  align-items: center;
+}
+.box .dontHaveAccount {
+  margin-top: 16px !important;
+}
+.box .content--recoveryPassword,
+.box .content--beginCreatePass,
+.box .content--codeConfirmation,
+.box .content--emailVerification {
+  margin-top: 0;
+}
+.box .content--recoveryPassword .contentForm,
+.box .content--beginCreatePass .contentForm,
+.box .content--codeConfirmation .contentForm,
+.box .content--emailVerification .contentForm {
+  margin-left: 0;
 }
 
 .button :global(.vtex-button) {
@@ -240,6 +392,25 @@
 }
 .inputContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
   padding: 0 24px;
+}
+
+.formError {
+  text-align: center;
+  font-family: "Mulish SemiBold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.profile {
+  color: var(--Cobalto-50, #f0f6fe);
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
 }
 
 :global(.vtex-minicart-2-x-minicartProductListContainer) :global(.vtex-product-list-0-x-quantitySelectorButton) svg {

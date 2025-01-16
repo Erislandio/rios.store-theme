@@ -71,22 +71,22 @@
   }
 
   .formTitle {
-    color: #1d1d1f;
-    font-family: 'Source Sans Pro SemiBold', sans-serif;
+    color: var(--Bombay-950, #1d1d1f);
+    font-family: 'Source Sans Pro SemiBold';
     font-size: 16px;
-    text-align: left;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    max-width: 350px;
-    margin: 0 auto;
-    margin-bottom: 16px;
+    text-align: left;
+    padding-left: 0;
   }
 
   .loginOptionsContainer {
     width: 100%;
     padding-bottom: 56px;
     border-bottom: 2px solid #cedae0;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .contentForm {
@@ -99,6 +99,33 @@
   .emailAndPasswordForm {
     .formTitle {
       margin-bottom: 24px;
+    }
+
+    .sendButton :global(.vtex-button) {
+      display: flex;
+      padding: 10px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+
+      border-radius: 8px;
+      background-color: #2643a8;
+
+      :global(.vtex-button__label) span {
+        font-size: 0;
+
+        &::before {
+          content: 'Entrar';
+          color: #fff;
+          text-align: center;
+          font-family: 'Mulish SemiBold', sans-serif;
+          font-size: 17px !important;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
     }
   }
 
@@ -115,29 +142,7 @@
   .formFooter {
     border: none;
     padding-top: 0;
-  }
-
-  .sendButton :global(.vtex-button) {
-    display: flex;
-    padding: 10px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-
-    border-radius: 4px;
-    background-color: #2643a8;
-
-    :global(.vtex-button__label) {
-      color: #fff;
-      text-align: center;
-      font-family: 'Source Sans Pro', sans-serif !important;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 1px !important;
-    }
+    margin-top: 24px;
   }
 
   .formLinkContainer {
@@ -181,8 +186,10 @@
       display: flex;
       width: auto;
       padding-right: 90px;
-      margin-right: 45px;
       border-right: 2px solid #cedae0;
+      max-width: unset;
+      margin: 0;
+      margin-right: 45px;
     }
 
     .contentForm {
@@ -192,6 +199,7 @@
     .formTitle {
       margin: 8px 0;
       padding: 0;
+      text-align: left;
     }
 
     .emailAndPasswordForm {
@@ -211,6 +219,112 @@
   }
 }
 
+// codigo de verificação
+
+.content--recoveryPassword,
+.content--beginCreatePass,
+.content--codeConfirmation,
+.content--emailVerification {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .formTitle {
+    color: var(--Bombay-950, #1d1d1f);
+    font-family: 'Source Sans Pro SemiBold';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    padding-left: 0;
+
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .inputContainerEmail {
+    margin-top: 20px;
+  }
+
+  .loginOptionsContainer,
+  .contentForm {
+    width: 100%;
+    max-width: 350px;
+    padding: 0;
+  }
+
+  .loginOptionsContainer {
+    border-bottom: none;
+    padding-bottom: 0;
+    display: flex;
+    width: auto;
+    padding-right: 90px;
+    border-right: 2px solid #cedae0;
+    max-width: unset;
+    margin: 0;
+    margin-right: 45px;
+    padding-bottom: 56px;
+    border-bottom: 2px solid #cedae0;
+    margin-bottom: 56px;
+  }
+
+  .formFooter {
+    .sendButton {
+      :global(.vtex-button) {
+        display: flex;
+        height: 44px;
+        padding: 10px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+
+        :global(.vtex-button__label) span {
+          color: #fff;
+          text-align: center;
+          font-family: 'Mulish SemiBold', sans-serif;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .content--recoveryPassword,
+  .content--beginCreatePass,
+  .content--codeConfirmation,
+  .content--emailVerification {
+    flex-direction: row;
+    align-items: center;
+
+    .loginOptionsContainer {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      padding-right: 90px;
+      margin-right: 45px;
+      border-bottom: none;
+    }
+
+    .contentForm {
+      margin-left: 45px;
+    }
+
+    .codeConfirmation,
+    .emailVerification {
+      .formTitle {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
 .box {
   .content--emailAndPassword {
     margin: 0;
@@ -221,6 +335,33 @@
 
   .formLinkContainer .dontHaveAccount {
     position: initial;
+  }
+
+  .formTitle {
+    margin-bottom: 16px !important;
+  }
+
+  .contentForm {
+    padding: 16px 8px 24px 8px;
+  }
+
+  .formFooter {
+    display: flex;
+    align-items: center;
+  }
+
+  .dontHaveAccount {
+    margin-top: 16px !important;
+  }
+
+  .content--recoveryPassword,
+  .content--beginCreatePass,
+  .content--codeConfirmation,
+  .content--emailVerification {
+    margin-top: 0;
+    .contentForm {
+      margin-left: 0;
+    }
   }
 }
 
@@ -272,6 +413,27 @@
     padding: 0 24px;
   }
 }
+
+.formError {
+  text-align: center;
+  font-family: 'Mulish SemiBold', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.profile {
+  color: var(--Cobalto-50, #f0f6fe);
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+// -----------------------------------------------------------------------------------------------------------
 
 :global(.vtex-minicart-2-x-minicartProductListContainer) {
   :global(.vtex-product-list-0-x-quantitySelectorButton) {

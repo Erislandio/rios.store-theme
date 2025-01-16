@@ -67,10 +67,10 @@
   },
   "login": {
     "props": {
-      "emailAndPasswordTitle": "LOG-IN",
-      "accessCodeTitle": "Acess Code LOG-IN",
-      "emailPlaceholder": "e-mail",
-      "passwordPlaceholder": "password",
+      "emailAndPasswordTitle": "Entrar",
+      "accessCodeTitle": "Código de acesso",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Senha",
       "showPasswordVerificationIntoTooltip": true
     }
   },
