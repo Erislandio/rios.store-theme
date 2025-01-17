@@ -1,0 +1,43 @@
+{
+  "to": [
+    {
+      "name": "E*************",
+      "email": "e******.s*****@w*****.c**"
+    }
+  ],
+  "aditionalData": {
+    "accessKey": "7*****",
+    "locale": "pt-BR",
+    "userAgent": "Chrome, Windows"
+  },
+  "_accountInfo": {
+    "MainAccountName": "r*****",
+    "AccountName": "r*****",
+    "Cnpj": null,
+    "Id": "cd3145b2-6624-44a2-a7b3-fbc4afec38e2",
+    "AppId": null,
+    "IsActive": true,
+    "IsOperating": false,
+    "CreationDate": "2024-10-16T18:52:29.3599315Z",
+    "OperationDate": null,
+    "CompanyName": "R********************************************",
+    "TradingName": "R**********",
+    "City": null,
+    "Complement": null,
+    "Country": null,
+    "State": null,
+    "Address": null,
+    "District": null,
+    "Number": null,
+    "PostalCode": null,
+    "Licenses": [7],
+    "ParentAccountId": null,
+    "ParentAccountName": null,
+    "InactivationDate": null,
+    "Platform": "vtex",
+    "Privacy": null,
+    "HasPiiRestriction": false,
+    "Infra": null,
+    "Sponsor": "0ec6013d-e849-4403-a527-3c9526e3e935"
+  }
+}
