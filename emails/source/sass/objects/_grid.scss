@@ -1,0 +1,36 @@
+/**
+ * Grid (objects/_grid.scss)
+ */
+
+/* ----- Container ----- */
+
+/**
+ * 1. All emails should have a container element. This gives the email a maximum
+ *    width for email clients on larger screens. It also orients the email in
+ *    the center.
+ */
+.container {
+  /* 1 */
+  background: $color-container-bg;
+  margin: 0 auto;
+  width: $grid-container-width;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100% !important;
+  }
+
+  td {
+    @media (max-width: $breakpoint-mobile) {
+      box-sizing: border-box;
+      display: block;
+      width: 100% !important;
+    }
+  }
+}
+
+/* ----- Columns ----- */
+
+/**
+ * 1. Generate columns. You can find this mixin inside tools/_grid.scss.
+ */
+@include grid-columns; /* 1 */

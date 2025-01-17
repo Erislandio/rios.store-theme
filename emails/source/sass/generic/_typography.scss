@@ -1,0 +1,156 @@
+/**
+ * Typography (generic/_typography.scss)
+ */
+
+/* ----- General ----- */
+
+/**
+ * 1. Base typography settings.
+ * 2. System fonts stack.
+ */
+td {
+  /* 1 */
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+body,
+table,
+td {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif !important; /* 2 */
+}
+
+/* ----- Headings ----- */
+
+/**
+ * 1. Reset margins.
+ * 2. Base headings typography settings.
+ */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0; /* 1 */
+}
+
+h1,
+.h1 {
+  /* 2 */
+  line-height: $line-height-h1;
+  color: #0d1635;
+  font-family: "Mulish Bold", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 24px 0;
+}
+
+h2,
+.h2 {
+  color: #0d1635;
+  font-family: "Mulish Bold", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h3,
+.h3,
+h3 span {
+  color: #0d1635;
+  font-family: "Mulish Bold", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h4,
+.h4,
+h4 span {
+  color: #0d1635;
+  font-family: "Mulish Bold", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h5,
+.h5 {
+  /* 2 */
+  font-size: $font-size-h5;
+  line-height: $line-height-h5;
+}
+
+h6,
+.h6 {
+  /* 2 */
+  font-size: $font-size-h6;
+  line-height: $line-height-h6;
+}
+
+p {
+  color: #4f4f4f;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /*
+    125% */
+  letter-spacing: 0.48px;
+}
+
+div {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px !important;
+}
+
+/* ----- Lists ----- */
+
+/**
+ * 1. Reset margins.
+ * 2. Adding padding on list wrapper when used for Outlook fix.
+ * 3. Removing padding on lists inside list wrapper when used for Outlook fix.
+ */
+ul,
+ol {
+  margin: 0; /* 1 */
+}
+
+.have-list {
+  padding-left: 25px; /* 2 */
+
+  ul,
+  ol {
+    padding: 0; /* 3 */
+  }
+}
+
+/* ----- Etc ----- */
+.fw3 {
+  font-weight: 300;
+}
+
+.fw5 {
+  font-weight: 500;
+}
+
+@media (min-width: 23rem) {
+  .ph4-ns {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}

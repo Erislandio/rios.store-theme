@@ -37,9 +37,6 @@
   "custom-reviews-average": {
     "component": "CustomReviewsAverage"
   },
-  "teste": {
-    "component": "Teste"
-  },
   "credit-card-payment-methods": {
     "component": "CreditCardPaymentMethods"
   },
@@ -57,5 +54,8 @@
   },
   "custom-fac-form": {
     "component": "FaleConoscoForm"
+  },
+  "custom-menu-institucional": {
+    "component": "CustomMenuInstitucional"
   }
 }

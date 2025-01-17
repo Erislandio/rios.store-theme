@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
-
 import classNames from 'classnames'
 import type { FunctionComponent } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { useProduct } from 'vtex.product-context'
 
@@ -20,7 +19,6 @@ const CSS_HANDLES = [
 
 const CreditCardPaymentMethods: FunctionComponent = () => {
   const productContext = useProduct()
-  console.log('🚀 ~ productContext:', productContext)
   const { handles } = useCssHandles(CSS_HANDLES)
   const [productInstallments, setProductInstallments] =
     useState<Installments[]>()

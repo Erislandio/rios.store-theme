@@ -1,0 +1,60 @@
+{
+  "name": "template.emails",
+  "version": "1.0.0",
+  "scripts": {
+    "commit": "cz",
+    "dev": "node ./node_modules/gulp/bin/gulp.js dev",
+    "build": "node ./node_modules/gulp/bin/gulp.js dist",
+    "format": "prettier --write \"**/*.{scss,json,jsonc}\"",
+    "stylelint": "stylelint \"**/*.scss\"",
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@akzhan/gulp-juice": "^0.1.6",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-data": "^1.3.1",
+    "gulp-email-remove-unused-css": "^3.9.0",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-hb": "^8.0.0",
+    "gulp-i18n-localize": "^1.4.0",
+    "gulp-inject-partials": "^1.0.5",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-util": "^3.0.8",
+    "handlebars-helpers": "^0.10.0",
+    "husky": "^8.0.3",
+    "juice": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard-scss": "^9.0.0",
+    "stylelint-order": "^6.0.3",
+    "tachyons-sass": "^4.9.5",
+    "through2": "^4.0.2",
+    "web-resource-inliner": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,jsonc}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

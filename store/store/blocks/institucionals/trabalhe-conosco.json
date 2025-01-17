@@ -8,7 +8,7 @@
       "blockClass": ["container", "institucional-container"]
     },
     "children": [
-      "custom-div#menu-container",
+      "custom-menu-institucional",
       "custom-div#institucional-container-texts-trabalhe-conosco"
     ]
   },

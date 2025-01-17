@@ -423,3 +423,13 @@
 :global(.vtex-search-result-3-x-accordionFilter) :global(.ReactCollapse--collapse) :global(.pl8) {
   padding: 0;
 }
+
+:global(.vtex-flex-layout-0-x-flexRowContent--institucional-container) :global(.vtex-dropdown__container) select {
+  color: var(--Bombay-800, #60656b);
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.36px;
+}

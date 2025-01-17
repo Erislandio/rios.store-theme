@@ -76,7 +76,7 @@ const PlusIcon: React.FC = React.memo(() => (
       fill="#BC1818"
     />
     <path
-      fill-rule="evenodd"
+      fillRule="evenodd"
       clipRule="evenodd"
       d="M5.46191 15.0092C5.46191 14.4994 5.87519 14.0861 6.38499 14.0861H23.6158C24.1256 14.0861 24.5388 14.4994 24.5388 15.0092C24.5388 15.519 24.1256 15.9322 23.6158 15.9322H6.38499C5.87519 15.9322 5.46191 15.519 5.46191 15.0092Z"
       fill="#BC1818"
@@ -219,6 +219,7 @@ const BuyTogether: React.FC = () => {
             }
           }
         )
+
         setProducts(productsData.slice(0, 3))
       }
     },
@@ -253,7 +254,7 @@ const BuyTogether: React.FC = () => {
     },
     [data, products]
   )
-  ///-------------
+  // /-------------
 
   const handleCheck = useCallback((index: number) => {
     setProducts((prevProducts) => {

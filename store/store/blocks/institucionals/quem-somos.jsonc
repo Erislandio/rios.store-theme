@@ -13,7 +13,8 @@
       ]
     },
     "children": [
-      "custom-div#menu-container",
+      // "custom-div#menu-container",
+      "custom-menu-institucional",
       "custom-div#institucional-container-texts-quem-somos"
     ]
   },
@@ -160,71 +161,34 @@
       "text": "editar texto no site-editor"
     }
   },
-  "custom-div#menu-container": {
+  "custom-menu-institucional": {
     "props": {
-      "blockClass": "menu-links-institucionais",
-      "flexDirection": "column",
-      "width": "100%",
-      "gap": "24px"
-    },
-    "children": [
-      "link#quem-somos",
-      "link#troca-devolucao",
-      "link#politica-privacidade",
-      "link#politica-pagamentos",
-      "link#perguntas-frequentes",
-      "link#trabalhe-conosco"
-    ]
-  },
-  "link#quem-somos": {
-    "title": "menu link institucionais",
-    "props": {
-      "href": "/quem-somos",
-      "label": "Quem somos",
-      "blockClass": [
-        "link-menu-institucional",
-        "link-menu-institucional--active"
+      "menuInstitucional": [
+        {
+          "menuTitle": "Quem somos",
+          "url": "/quem-somos"
+        },
+        {
+          "menuTitle": "Troca e devoluções",
+          "url": "/troca-devolucoes"
+        },
+        {
+          "menuTitle": "Política de Privacidade",
+          "url": "/politica-privacidade"
+        },
+        {
+          "menuTitle": "Política de de pagamentos",
+          "url": "/politica-pagamentos"
+        },
+        {
+          "menuTitle": "Perguntas frequentes",
+          "url": "/faq"
+        },
+        {
+          "menuTitle": "Trabalhe conosco",
+          "url": "/trabalhe-conosco"
+        }
       ]
-    }
-  },
-  "link#troca-devolucao": {
-    "title": "menu link institucionais",
-    "props": {
-      "href": "/troca-devolucoes",
-      "label": "Troca e devoluções",
-      "blockClass": "link-menu-institucional"
-    }
-  },
-  "link#politica-privacidade": {
-    "title": "menu link institucionais",
-    "props": {
-      "href": "/politica-privacidade",
-      "label": "Política de Privacidade",
-      "blockClass": "link-menu-institucional"
-    }
-  },
-  "link#politica-pagamentos": {
-    "title": "menu link institucionais",
-    "props": {
-      "href": "/politica-pagamentos",
-      "label": "Política de pagamentos",
-      "blockClass": "link-menu-institucional"
-    }
-  },
-  "link#perguntas-frequentes": {
-    "title": "menu link institucionais",
-    "props": {
-      "href": "/perguntas-frequentes",
-      "label": "Perguntas frequentes",
-      "blockClass": "link-menu-institucional"
-    }
-  },
-  "link#trabalhe-conosco": {
-    "title": "menu link institucionais",
-    "props": {
-      "href": "/trabalhe-conosco",
-      "label": "Trabalhe conosco",
-      "blockClass": "link-menu-institucional"
     }
   }
 }

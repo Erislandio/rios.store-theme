@@ -13,7 +13,7 @@
       ]
     },
     "children": [
-      "custom-div#menu-container",
+      "custom-menu-institucional",
       "custom-div#institucional-container-texts-troca-devolucoes"
     ]
   },
