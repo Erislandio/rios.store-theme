@@ -19,6 +19,7 @@ const CSS_HANDLES = [
 
 const CreditCardPaymentMethods: FunctionComponent = () => {
   const productContext = useProduct()
+
   const { handles } = useCssHandles(CSS_HANDLES)
   const [productInstallments, setProductInstallments] =
     useState<Installments[]>()
@@ -51,92 +52,9 @@ const CreditCardPaymentMethods: FunctionComponent = () => {
     return InterestRate > 0
   }
 
-  const installmentsFiltered = [
-    {
-      Value: 1000,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 1,
-      Name: 'Installment 1',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 500,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 2,
-      Name: 'Installment 2',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 333.33,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 3,
-      Name: 'Installment 3',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 250,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 4,
-      Name: 'Installment 4',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 200,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 5,
-      Name: 'Installment 4',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 166.66,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 6,
-      Name: 'Installment 5',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 142.85,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 7,
-      Name: 'Installment 6',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 125,
-      InterestRate: 0,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 8,
-      Name: 'Installment 7',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 111.11,
-      InterestRate: 0.2,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 9,
-      Name: 'Installment 8',
-      PaymentSystemName: 'Credit Card',
-    },
-    {
-      Value: 100,
-      InterestRate: 0.2,
-      TotalValuePlusInterestRate: 1000,
-      NumberOfInstallments: 10,
-      Name: 'Installment 9',
-      PaymentSystemName: 'Credit Card',
-    },
-  ]
-
   return (
     <div className={handles.installmentsContainer}>
-      {installmentsFiltered?.map((paymentCondition: Installments) => {
+      {productInstallments?.map((paymentCondition: Installments) => {
         return (
           <div
             key={paymentCondition?.Name}

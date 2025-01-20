@@ -120,7 +120,8 @@
   },
   "product-installments#summary": {
     "props": {
-      "blockClass": "summary"
+      "blockClass": "summary",
+      "message": "em até {installmentsNumber}x de {installmentValue}"
     }
   },
   "product-selling-price#summary": {
