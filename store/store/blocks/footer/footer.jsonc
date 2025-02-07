@@ -10,8 +10,7 @@
       "flex-layout.row#newsletter",
       "flex-layout.row#contact",
       "flex-layout.row#footer-1-desktop",
-      "flex-layout.row#payments-selos-footer",
-      "flex-layout.row#footer-3-desktop"
+      "flex-layout.row#payments-selos-footer"
     ]
   },
   "flex-layout.row#footer-1-desktop": {
@@ -34,23 +33,19 @@
   },
   "flex-layout.row#payments-selos-footer": {
     "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
       "blockClass": [
         "payments-selos-footer",
+        "payments-selos-footer-desktop",
         "container"
       ]
     },
     "children": [
-      "flex-layout.col#footer-mobile-payments",
-      "flex-layout.row#footer-mobile-security"
+      "flex-layout.row#footer-desktop-security",
+      "flex-layout.col#footer-desktop-payments",
+      "flex-layout.row#footer-desktop-poweredBy"
     ]
-  },
-  "flex-layout.row#footer-3-desktop": {
-    "children": [
-      "flex-layout.row#footer-mobile-poweredBy"
-    ],
-    "props": {
-      "blockClass": "payment-methods"
-    }
   },
   "footer-layout.mobile": {
     "children": [
@@ -143,6 +138,18 @@
       "rowGap": 4
     }
   },
+  "flex-layout.col#footer-desktop-payments": {
+    "title": "formas de Pagamento",
+    "children": [
+      "flex-layout.row#payments-methods"
+    ],
+    "props": {
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "rowGap": 4
+    }
+  },
   "flex-layout.row#payments-methods": {
     "title": "Imagens formas de pagamento",
     "props": {
@@ -158,71 +165,71 @@
       "image#payment4",
       "image#payment5",
       "image#payment6",
-      "image#payment7"
-      // "image#payment8"
+      "image#payment7",
+      "image#payment8"
     ]
   },
   "image#payment1": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/cee809f0-bf18-485b-9c76-a621871fb3b8___5c306e9df75d2b7eb86ae92f3278946e.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/13da9dc0-f846-49e7-aeef-5d1cfd067d03___d37f0b5949422b723ef143ac6e70f4ce.png",
+      "maxWidth": "37px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
   "image#payment2": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/2c1bce25-ca9b-4a12-af9a-2156fb6fb32e___63bdc57915240db0f77edeae56037f8c.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/e4d302f1-2aff-48be-898e-b52bad929a7b___3d6709dee151ce35b476d034de737165.png",
+      "maxWidth": "38px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
   "image#payment3": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/2c1bce25-ca9b-4a12-af9a-2156fb6fb32e___63bdc57915240db0f77edeae56037f8c.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/5a90a2cc-8e4b-460a-8c9f-4f54f2f3d94c___d315ad0206e5a5dda8a22548475807a3.png",
+      "maxWidth": "38px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
   "image#payment4": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/25fb16eb-59b7-4591-a2c2-c82f0212e820___d2905d7e7e64c254853d347953eb2e36.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/a8d85ddd-8fe1-4f03-acbb-aeea37d2f4db___bb1cfb9670a7c4086c79e89d3680e8e2.png",
+      "maxWidth": "38px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
   "image#payment5": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/217c0d1e-dc4c-40ee-83a3-6ee4e8ee4325___a5c9a93d96f83df13c43d8a9f82b8012.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/e155d7f9-3184-4d0a-b929-53441c0205bf___910af90009b1a62574c4a1c75e818997.png",
+      "maxWidth": "38px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
   "image#payment6": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6ee17c63-e408-4967-be33-b59c42012d80___c592137652cce38ecc77f807f6d41bdc.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/614698ce-901e-4ad7-b7a9-30781f26d3d9___ccd6435e4e4484af77f8bf215468f22d.png",
+      "maxWidth": "38px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
   "image#payment7": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/1231d30d-153e-4a63-9447-61b3f2f2b5e5___2c410d3a2de92375370ee57026077b30.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/1e5a18dc-e30d-4f5d-b946-dbb342cea74d___0c066795986152db00873877bec1cfde.png",
+      "maxWidth": "38px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
   "image#payment8": {
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/ba95e430-51a5-424c-912e-560247936fba___5210646a1edfd5e620b07a7d9d8c4dbb.svg",
-      "maxWidth": "44px",
-      "maxHeight": "30px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/09fe643c-f678-43fa-b2d5-907730a880e3___6d61c019fab861311dc6c8daab8c2b2a.png",
+      "maxWidth": "22px",
+      "maxHeight": "24px",
       "blockClass": "payments-img"
     }
   },
@@ -239,6 +246,15 @@
     },
     "children": [
       "rich-text#footer-security-text",
+      "flex-layout.row#security-selos-content"
+    ]
+  },
+  "flex-layout.row#footer-desktop-security": {
+    "title": "Selos de segurança - conteúdo",
+    "props": {
+      "blockClass": "footer-mobile-security-content"
+    },
+    "children": [
       "flex-layout.row#security-selos-content"
     ]
   },
@@ -283,6 +299,28 @@
       "image#vtex"
     ]
   },
+  "flex-layout.row#footer-desktop-poweredBy": {
+    "title": "Powered By Conteúdo",
+    "props": {
+      "blockClass": [
+        "footer-poweredBy",
+        "footer-poweredBy-desktop"
+      ]
+    },
+    "children": [
+      "rich-text#poweredBy-text",
+      "custom-div#power-by-logos"
+    ]
+  },
+  "custom-div#power-by-logos": {
+    "props": {
+      "gap": "32px"
+    },
+    "children": [
+      "image#weonne",
+      "image#vtex"
+    ]
+  },
   "rich-text#poweredBy-text": {
     "props": {
       "text": "Powered By",
@@ -291,7 +329,7 @@
   },
   "image#weonne": {
     "props": {
-      "src": "https://romazi.vteximg.com.br/arquivos/weonne.png"
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/8e4fbbc9-2773-4156-aa18-9f481dc0002e___d26345c6c43a13549de2448be4a9c0f8.png"
     }
   },
   "image#vtex": {

@@ -22,7 +22,6 @@ const RegionalizationContext = createContext<RegionalizationProps | null>(null)
 export const RegionalizationProvider: FC = ({ children }) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const updateSession = useUpdateSession()
-  // const { data: sessionData } = useFullSession()
   const [regionId, setRegionId] = useState<string>('')
   const [cityName, setCityName] = useState<string>('')
 

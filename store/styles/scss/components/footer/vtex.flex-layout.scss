@@ -59,6 +59,12 @@
   gap: 16px;
 }
 
+.flexRowContent--footer-poweredBy-desktop {
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+
 .flexRowContent--romazi-address {
   flex-direction: column;
 
@@ -134,8 +140,12 @@
 
   .flexRowContent--payments-selos-footer {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     border-top: 1px solid #cccccc;
-    padding: 32px 0 !important;
+    padding: 32px 24px !important;
+
+    &-desktop {
+      justify-content: space-between;
+    }
   }
 }

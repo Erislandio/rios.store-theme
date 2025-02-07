@@ -15,10 +15,6 @@
   display: flex;
 }
 
-.categoryContainerImage {
-  width: 91px;
-}
-
 .categoryContainer {
   text-decoration: none;
 }

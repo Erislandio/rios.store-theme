@@ -2,13 +2,11 @@ import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
-import { SessionSuccess, useFullSession } from 'vtex.session-client'
+import type { SessionSuccess } from 'vtex.session-client'
+import { useFullSession } from 'vtex.session-client'
+
 import { useRegionalizationContext } from './context'
 import RegionalizationModal from './RegionalizationModal'
-
-// import { useRegionalizationContext } from '../../../contexts/RegionalizationContext'
-// import RegionalizationModal from '../Modal'
-// import './styles.css'
 
 const CSS_HANDLES: readonly string[] = [
   'regionalizationHeaderContainer',

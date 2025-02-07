@@ -73,13 +73,14 @@ const CategorySlider: StoreFrontFC<{
   title: string
 }> = ({ categories, title }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
+
   return (
     <section className={handles.categoryContainerWrapper}>
       <h3 className={handles.categoryContainerTitleh2}>{title}</h3>
       <SliderLayout
         showNavigationArrows="desktopOnly"
         showPaginationDots="always"
-        infinite={true}
+        infinite
         itemsPerPage={{
           desktop: 8,
           tablet: 5,
@@ -97,15 +98,15 @@ const CategorySlider: StoreFrontFC<{
               gridArea: `item-${index + 1}`,
             }}
           >
-            <div className={handles.categoryImageDiv}>
-              <img
-                className={handles.categoryContainerImage}
-                alt={item.__editorItemTitle}
-                title={item.__editorItemTitle}
-                src={item.image}
-                loading="eager"
-              />
-            </div>
+            {/* <div className={handles.categoryImageDiv}> */}
+            <img
+              className={handles.categoryContainerImage}
+              alt={item.__editorItemTitle}
+              title={item.__editorItemTitle}
+              src={item.image}
+              loading="eager"
+            />
+            {/* </div> */}
             <h5
               className={handles.categoryContainerTitle}
               style={{

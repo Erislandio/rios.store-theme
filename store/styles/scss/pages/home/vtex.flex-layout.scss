@@ -84,11 +84,11 @@
   position: relative;
 }
 
-// .flexRow--about-us-desktop :global(.vtex-store-components-3-x-container) {
-//   max-width: 1920px;
-//   margin: 0 auto;
-//   padding: 0;
-// }
+.flexRow--about-us-desktop :global(.vtex-store-components-3-x-container) {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+}
 
 .flexRowContent--about-us-desktop {
   display: flex;
