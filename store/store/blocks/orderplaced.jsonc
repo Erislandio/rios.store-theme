@@ -44,7 +44,8 @@
     "children": [
       "op-section#confirmation",
       "op-summary-section",
-      "op-bank-invoice-section"
+      "op-bank-invoice-section",
+      "add-tolstoy-script"
     ]
   },
   "op-section#confirmation": {

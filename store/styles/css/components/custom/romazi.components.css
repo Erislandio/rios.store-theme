@@ -112,6 +112,18 @@
 .bannerOurLinesContainer .sliderRightArrow {
   right: -30px;
 }
+@media (max-width: 1025px) {
+  .bannerOurLinesContainer .sliderArrows {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .bannerOurLinesContainer .sliderLeftArrow {
+    left: 10px !important;
+  }
+  .bannerOurLinesContainer .sliderRightArrow {
+    right: 10px !important;
+  }
+}
 
 .textsContainer {
   position: absolute;

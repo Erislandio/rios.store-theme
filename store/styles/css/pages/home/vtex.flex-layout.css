@@ -7,6 +7,7 @@
 }
 .flexRow--main-banner :global(.vtex-store-components-3-x-container) {
   max-width: 100% !important;
+  padding: 0;
 }
 
 .flexRowContent--deals-item {

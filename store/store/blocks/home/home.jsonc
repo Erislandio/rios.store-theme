@@ -5,6 +5,7 @@
       "flex-layout.row#deals",
       "flex-layout.row#banner-our-lines",
       "__fold__",
+      "flex-layout.row#toystoy",
       "flex-layout.row#shelf1",
       "responsive-layout.desktop#double-banner",
       "responsive-layout.phone#double-banner",
@@ -16,6 +17,16 @@
       "responsive-layout.desktop#about-us",
       "responsive-layout.mobile#about-us",
       "flex-layout.row#podcast"
+    ]
+  },
+  "flex-layout.row#toystoy": {
+    "props": {
+      "blockClass": [
+        "container"
+      ]
+    },
+    "children": [
+      "tolstoy-custom"
     ]
   }
 }

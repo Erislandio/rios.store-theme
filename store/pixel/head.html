@@ -3,4 +3,49 @@
     .vtex-account__page {
     width: 100% !important;
   }
+
+  .tolstoy-next-button,
+  .tolstoy-previous-button {
+    width: 33px;
+    height: 33px;
+    flex-shrink: 0;
+    background-color: #f2f2f2 !important;
+    border-radius: 50%;
+  }
+
+  .tolstoy-next-button svg,
+  .tolstoy-previous-button svg {
+    display: none;
+  }
+
+  .tolstoy-carousel-arrows-container {
+    gap: 56px;
+  }
+
+  .tolstoy-next-button::after,
+  .tolstoy-previous-button::after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='33' viewBox='0 0 32 33' fill='none'%3E%3Cpath d='M18.5096 11.2402L13.3373 16.1403C12.9128 16.5425 12.9224 17.2216 13.3583 17.6115L18.5096 22.2206' stroke='black' stroke-opacity='0.5' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    width: 32px;
+    height: 33px;
+    display: flex;
+  }
 </style>
+
+<script>
+  tolstoyAppKey = '74f7e0fe-eae9-4055-b40c-5b818b681b15'
+</script>
+<script
+  type="module"
+  async
+  src="https://widget.gotolstoy.com/we/widget.js"
+></script>
+<script
+  type="text/javascript"
+  nomodule
+  async
+  src="https://widget.gotolstoy.com/widget/widget.js"
+></script>

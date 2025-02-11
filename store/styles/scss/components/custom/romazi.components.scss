@@ -126,6 +126,21 @@
   .sliderRightArrow {
     right: -30px;
   }
+
+  @media (max-width: 1025px) {
+    .sliderArrows {
+      width: 32px !important;
+      height: 32px !important;
+    }
+
+    .sliderLeftArrow {
+      left: 10px !important;
+    }
+
+    .sliderRightArrow {
+      right: 10px !important;
+    }
+  }
 }
 
 .textsContainer {
