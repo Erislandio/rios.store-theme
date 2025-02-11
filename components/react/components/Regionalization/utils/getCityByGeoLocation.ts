@@ -12,7 +12,6 @@ export async function getCityByGeoLocation(
   )
     .then(async (resp) => resp.json())
     .then(async (resp) => {
-      console.log('🚀 ~ .then ~ resp:', resp)
       const { city, postcode } = resp.address
 
       const uf = resp.address['ISO3166-2-lvl4'].split('-')[1]

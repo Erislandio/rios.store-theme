@@ -156,9 +156,7 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
     [postalCode, address]
   )
 
-  const [state, dispatch] = useReducer(reducer, initialState)
-
-  console.log('🚀 ~ state:', state)
+  const [, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
     const savedPermission = localStorage.getItem('locationAllowed')

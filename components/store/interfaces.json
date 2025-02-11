@@ -57,5 +57,11 @@
   },
   "custom-menu-institucional": {
     "component": "CustomMenuInstitucional"
+  },
+  "tolstoy-custom": {
+    "component": "TolstoyCarrousel"
+  },
+  "add-tolstoy-script": {
+    "component": "AddTolstoyScript"
   }
 }
