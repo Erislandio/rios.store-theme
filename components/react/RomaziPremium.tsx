@@ -8,6 +8,7 @@ interface RomaziPremiumLines {
   backgroundImageMobile: string
   title: string
   text: string
+  text2?: string
   imagesCarousel: string
   harmonizeColors: string[]
 }
@@ -83,8 +84,6 @@ const RomaziPremium: StoreFrontFC<{
 
     if (!isLastSlide && orientation === 'right') {
       setCurrentSlide((prevState) => prevState + 1)
-
-      return
     }
   }
 
@@ -130,15 +129,14 @@ const RomaziPremium: StoreFrontFC<{
         />
       </div>
       <div className={handles.romaziPremiumSlider}>
-        <SliderContainer infinite={true}>
+        <SliderContainer>
           <Slider
-            infinite={true}
             className={handles.romaziPremiumCustomSlider}
             currentSlide={currentSlide}
             onChangeSlide={() => {}}
             easing="ease"
             perPage={perPage}
-            centerMode={'center'}
+            centerMode="center"
           >
             {lines.map((item, index) => (
               <Slide
@@ -155,7 +153,7 @@ const RomaziPremium: StoreFrontFC<{
               >
                 <img
                   className={handles.romaziPremiumSliderImage}
-                  // alt={item.__editorItemTitle}
+                  alt={item.imagesCarousel}
                   // title={item.__editorItemTitle}
                   src={item.imagesCarousel}
                   loading="eager"
@@ -184,7 +182,7 @@ const RomaziPremium: StoreFrontFC<{
                 className=" romazi-components-0-x-caretIcon"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use href="#nav-thin-caret--left"></use>
+                <use href="#nav-thin-caret--left" />
               </svg>
             </button>
             <Dots
@@ -217,7 +215,7 @@ const RomaziPremium: StoreFrontFC<{
                 className="romazi-components-0-x-caretIcon"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <use href="#nav-thin-caret--right"></use>
+                <use href="#nav-thin-caret--right" />
               </svg>
             </button>
           </div>
@@ -226,6 +224,9 @@ const RomaziPremium: StoreFrontFC<{
       <div className={handles.romaziPremiumTextsContainer}>
         <h3 className={handles.romaziPremiumTitle}>{currentLine.title}</h3>
         <p className={handles.romaziPremiumText}>{currentLine.text}</p>
+        {currentLine.text2 && (
+          <p className={handles.romaziPremiumText}>{currentLine.text2}</p>
+        )}
         <button className={handles.romaziPremiumButton}>
           Conhecer a linha
         </button>
@@ -241,7 +242,7 @@ const RomaziPremium: StoreFrontFC<{
               style={{
                 backgroundColor: item,
               }}
-            ></div>
+            />
           ))}
         </div>
       </div>
@@ -294,6 +295,12 @@ RomaziPremium.schema = {
         },
         text: {
           title: 'Texto',
+          type: 'string',
+          default: '',
+        },
+        text2: {
+          title: 'Texto 2',
+          type: 'string',
           default: '',
         },
         imagesCarousel: {

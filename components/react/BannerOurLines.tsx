@@ -46,6 +46,7 @@ const BannerOurLines: StoreFrontFC<{
 }> = ({ bannerData }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { isMobile } = useDevice()
+
   return (
     <div className={handles.bannerOurLinesContainer}>
       <div className={handles.textsContainer}>
@@ -60,11 +61,11 @@ const BannerOurLines: StoreFrontFC<{
         loading="eager"
       />
       <SliderLayout
-        fullWidth={true}
+        fullWidth
         showNavigationArrows="always"
         showPaginationDots="always"
         navigationStep={1}
-        infinite={true}
+        infinite
         itemsPerPage={{
           desktop: 4,
           tablet: 2,
@@ -128,6 +129,7 @@ BannerOurLines.schema = {
         },
         text: {
           title: 'Texto',
+          type: 'string',
           default: '',
         },
         imagesCarousel: {
