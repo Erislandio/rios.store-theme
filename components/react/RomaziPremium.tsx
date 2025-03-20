@@ -48,6 +48,7 @@ const CSS_HANDLES = [
 const RomaziPremium: StoreFrontFC<{
   lines: RomaziPremiumLines[]
 }> = ({ lines = [] }) => {
+  console.log('🚀 ~ lines:', lines)
   const { handles } = useCssHandles(CSS_HANDLES)
   const [currentLine, setCurrentLine] = useState<RomaziPremiumLines>(lines[0])
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -66,13 +67,17 @@ const RomaziPremium: StoreFrontFC<{
 
     setIsFirstSlide(currentSlide === 0)
     setIsLastSlide(currentSlide === lines.length - 1)
-  }, [currentSlide])
+  }, [currentSlide, lines])
 
   const perPage = {
     1025: 3,
     900: 1,
     700: 1,
     300: 1,
+  }
+
+  if (!lines.length) {
+    return null
   }
 
   const setSlideByOrientation = (orientation: string) => {
@@ -236,8 +241,9 @@ const RomaziPremium: StoreFrontFC<{
           cores que harmonizam
         </p>
         <div className={handles.harmonizeColorsContainer}>
-          {currentLine.harmonizeColors.map((item) => (
+          {currentLine.harmonizeColors.map((item, index) => (
             <div
+              key={index}
               className={handles.harmonizeColors}
               style={{
                 backgroundColor: item,
@@ -260,64 +266,66 @@ const RomaziPremium: StoreFrontFC<{
 }
 
 // RomaziPremium.defaultProps = {
-//   bannerData: {},
-//   title: 'Banner com texto',
+//   lines: [],
 // }
 
 RomaziPremium.schema = {
-  title: 'Banner com texto - Conteúdo',
+  title: 'Romazi Premium - Conteúdo',
   type: 'object',
   properties: {
     lines: {
       type: 'array',
       title: 'Romazi premium - linhas',
       items: {
-        backgroundImage: {
-          type: 'string',
-          title: 'Image de fundo - Desktop',
-          default: '',
-          widget: {
-            'ui:widget': 'image-uploader',
-          },
-        },
-        backgroundImageMobile: {
-          type: 'string',
-          title: 'Image de fundo - Mobile',
-          default: '',
-          widget: {
-            'ui:widget': 'image-uploader',
-          },
-        },
-        title: {
-          title: 'titulo',
-          type: 'string',
-          default: '',
-        },
-        text: {
-          title: 'Texto',
-          type: 'string',
-          default: '',
-        },
-        text2: {
-          title: 'Texto 2',
-          type: 'string',
-          default: '',
-        },
-        imagesCarousel: {
-          type: 'string',
-          title: 'Carrosel de imagens',
-          default: '',
-          widget: {
-            'ui:widget': 'image-uploader',
-          },
-        },
-        harmonizeColors: {
-          type: 'array',
-          title: 'Cores que Harmonizam',
-          items: {
+        type: 'object',
+        properties: {
+          backgroundImage: {
             type: 'string',
-            title: 'Cores',
+            title: 'Image de fundo - Desktop',
             default: '',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          backgroundImageMobile: {
+            type: 'string',
+            title: 'Image de fundo - Mobile',
+            default: '',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          title: {
+            title: 'titulo',
+            type: 'string',
+            default: '',
+          },
+          text: {
+            title: 'Texto',
+            type: 'string',
+            default: '',
+          },
+          text2: {
+            title: 'Texto 2',
+            type: 'string',
+            default: '',
+          },
+          imagesCarousel: {
+            type: 'string',
+            title: 'Carrosel de imagens',
+            default: '',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          harmonizeColors: {
+            type: 'array',
+            title: 'Cores que Harmonizam',
+            items: {
+              type: 'string',
+              title: 'Cores',
+              default: '',
+            },
           },
         },
       },

@@ -1,7 +1,7 @@
 {
   "vendor": "romazi",
   "name": "store-theme",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "mustUpdateAt": "2023-01-11",
   "builders": {
     "styles": "2.x",

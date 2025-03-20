@@ -77,7 +77,7 @@ const BannerOurLines: StoreFrontFC<{
             <>
               <img
                 className={handles.carouselImage}
-                // alt={item.__editorItemTitle}
+                alt={item.imageOurLines}
                 // title={item.__editorItemTitle}
                 src={item.imageOurLines}
                 loading="eager"

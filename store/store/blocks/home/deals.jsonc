@@ -1,5 +1,6 @@
 {
   "flex-layout.row#deals": {
+    "title": "Carrosel - Beneficios",
     "children": [
       "slider-layout#text-test"
     ],

@@ -329,6 +329,7 @@
   },
   "image#weonne": {
     "props": {
+      "blockClass": "logo-weonne",
       "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/8e4fbbc9-2773-4156-aa18-9f481dc0002e___d26345c6c43a13549de2448be4a9c0f8.png"
     }
   },

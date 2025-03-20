@@ -1,3 +1,6 @@
+.cartIcon {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .cartIcon {
     width: 24px;
