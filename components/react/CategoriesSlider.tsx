@@ -81,6 +81,9 @@ const CategorySlider: StoreFrontFC<{
         showNavigationArrows="desktopOnly"
         showPaginationDots="always"
         infinite
+        centerMode={{
+          phone: 'to-the-left'
+        }}
         itemsPerPage={{
           desktop: 8,
           tablet: 5,

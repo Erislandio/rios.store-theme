@@ -42,7 +42,7 @@
   "image#double-banner-1": {
     "title": "banner 1",
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/08893c8a-10fc-4560-a8cc-ef5a6f96ba5a___23a72a1a7e7caf12266f620c88d9fb7f.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/66b5fa38-0df3-4133-9d36-41c6cbe3ff92___22a7ed5a656537f30bbec734ec17dcc8.png",
       "maxWidth": "868px",
       "maxHeight": "400px",
       "blockClass": "double-banner-img"
@@ -51,7 +51,7 @@
   "image#double-banner-2": {
     "title": "banner 2",
     "props": {
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/17a41a78-9997-4350-b100-261b2bb492a4___a65095b21daa38d381fe6c90ff8bbb5d.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/97f31deb-13d9-4a88-8fca-0597386778fd___9ce7290a5999717e8edaa6d03547485a.png",
       "maxWidth": "868px",
       "maxHeight": "400px",
       "blockClass": "double-banner-img"
@@ -71,6 +71,18 @@
       "blockClass": "double-banner-img"
     }
   },
+  "responsive-layout.mobile#triple-banner": {
+    "title": "banner triplo - Mobile",
+    "children": [
+      "flex-layout.row#triple-banner-mobile"
+    ]
+  },
+  "responsive-layout.desktop#triple-banner": {
+    "title": "banner triplo - Desktop",
+    "children": [
+      "flex-layout.row#triple-banner"
+    ]
+  },
   "flex-layout.row#triple-banner": {
     "title": "Banner triplo - Conteúdo",
     "props": {
@@ -86,27 +98,63 @@
       "image#triple-banner-3"
     ]
   },
+  "flex-layout.row#triple-banner-mobile": {
+    "title": "Banner triplo - Conteúdo",
+    "props": {
+      "blockClass": [
+        "triple-banner",
+        "container",
+        "margin"
+      ]
+    },
+    "children": [
+      "image#triple-banner-1-mobile",
+      "image#triple-banner-2-mobile",
+      "image#triple-banner-3-mobile"
+    ]
+  },
   "image#triple-banner-1": {
     "title": "banner 1",
     "props": {
-      "maxWidth": "570px",
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/645731b6-01ac-4a96-8a6c-9ca2c40950a5___a9b567ac0a2e352d0715196eb2ac9a7a.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f6e3f4c6-536a-443e-80c4-1f552b90e123___f6d183bd00338cffaa8565b1012259bf.png",
       "blockClass": "banner-img"
     }
   },
   "image#triple-banner-2": {
     "title": "banner 2",
     "props": {
-      "maxWidth": "570px",
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/8a8c3009-c697-429f-b55b-0f7af7a2bcec___0fe57c53dc21e9a967a3ea0275c3cc03.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/14fcc3e1-fc9f-420c-bb00-550d4c4fd24a___03e39b0d4a4dc732f92576fc1ac929a5.png",
       "blockClass": "banner-img"
     }
   },
   "image#triple-banner-3": {
     "title": "banner 3",
     "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/51f03db5-56a8-406f-ad82-f66c37a807ee___13d802793b5a94356e9c8533c4132f3c.png",
+      "blockClass": "banner-img"
+    }
+  },
+  "image#triple-banner-1-mobile": {
+    "title": "banner 1",
+    "props": {
       "maxWidth": "570px",
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/d06ae85f-bc3a-46f9-ba31-8ef7cdeca2b8___7b0ef82b2ef823b6a2c01f9344d10d51.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/4f095ddc-9288-45fe-8bd2-4717b081bd86___66a03a184741c90445210d10dea30c0f.png",
+      "blockClass": "banner-img"
+    }
+  },
+  "image#triple-banner-2-mobile": {
+    "title": "banner 2",
+    "props": {
+      "maxWidth": "570px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/d57bbf4e-c56d-44cd-b838-d181b519b029___d57c35fb988754caa85646712227d9b3.png",
+      "blockClass": "banner-img"
+    }
+  },
+  "image#triple-banner-3-mobile": {
+    "title": "banner 3",
+    "props": {
+      "maxWidth": "570px",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/d42bba1a-e238-4af5-818e-cc0ff64a3be2___86c33bffdc0a411d3f945d3375331582.png",
       "blockClass": "banner-img"
     }
   }

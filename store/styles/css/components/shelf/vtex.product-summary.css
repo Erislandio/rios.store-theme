@@ -8,8 +8,8 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.32px;
+  height: 69px;
   display: -webkit-box !important;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -42,9 +42,6 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Crect width='24' height='24' transform='translate(0.601562)' fill='white'/%3E%3Cpath d='M12.6016 21.35L11.1516 20.03C6.00156 15.36 2.60156 12.27 2.60156 8.5C2.60156 5.41 5.02156 3 8.10156 3C9.84156 3 11.5116 3.81 12.6016 5.08C13.6916 3.81 15.3616 3 17.1016 3C20.1816 3 22.6016 5.41 22.6016 8.5C22.6016 12.27 19.2016 15.36 14.0516 20.03L12.6016 21.35Z' fill='%23BC1818'/%3E%3C/svg%3E") !important;
 }
 @media (min-width: 1025px) {
-  .container {
-    min-height: 565px;
-  }
   .container :global(.vtex-wish-list-1-x-wishlistIcon) {
     display: none;
   }

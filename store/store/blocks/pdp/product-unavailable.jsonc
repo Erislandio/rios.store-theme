@@ -43,8 +43,7 @@
       "marginTop": 4,
       "paddingTop": 7,
       "blockClass": [
-        "product-main-desktop",
-        "container"
+        "product-main-desktop"
       ]
     },
     "children": [

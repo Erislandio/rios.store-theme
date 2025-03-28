@@ -187,6 +187,10 @@
         {
           "menuTitle": "Trabalhe conosco",
           "url": "/trabalhe-conosco"
+        },
+        {
+          "menuTitle": "Termos de uso",
+          "url": "/termos-de-uso"
         }
       ]
     }

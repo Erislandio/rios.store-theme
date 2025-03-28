@@ -34,7 +34,6 @@
     "title": "Compre junto",
     "props": {
       "blockClass": [
-        "container",
         "buy-together"
       ]
     },
@@ -44,11 +43,13 @@
   },
   "flex-layout.row#specifications": {
     "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
       "blockClass": "specification"
     },
     "children": [
       "rich-text#specifications",
-      "product-specification-group#table"
+      "custom-specification-table"
     ]
   },
   "rich-text#specifications": {
@@ -95,8 +96,7 @@
       "marginTop": 4,
       "paddingTop": 7,
       "blockClass": [
-        "product-main-desktop",
-        "container"
+        "product-main-desktop"
       ]
     },
     "children": [
@@ -281,7 +281,6 @@
     "title": "Reviews",
     "props": {
       "blockClass": [
-        "container",
         "reviews"
       ]
     },

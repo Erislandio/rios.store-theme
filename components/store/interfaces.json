@@ -63,5 +63,8 @@
   },
   "add-tolstoy-script": {
     "component": "AddTolstoyScript"
+  },
+  "custom-specification-table": {
+    "component": "CustomSpecificationTable"
   }
 }

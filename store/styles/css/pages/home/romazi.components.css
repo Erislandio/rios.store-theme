@@ -666,17 +666,8 @@
 }
 
 .divContainer--main-header {
-  max-width: 1200px;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  margin: 0 auto;
   margin-top: 20px;
-}
-
-@media screen and (min-width: 1441px) {
-  .divContainer--main-header {
-    max-width: 1441px;
-  }
+  margin-bottom: 20px;
 }
 
 @media (min-width: 1025px) {

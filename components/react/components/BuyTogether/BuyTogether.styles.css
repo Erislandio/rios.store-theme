@@ -58,7 +58,8 @@
 
 .buyTogetherItemImage {
   margin-left: -15px;
-  min-width: 228px;
+  min-width: 212px;
+  height: auto;
 }
 
 .buyTogettherListPriceContainer {
@@ -231,7 +232,9 @@
   color: #2643A8;
 }
 
-
+.buyTogetherpriceContainer :global(.vtex-button__label) {
+  white-space: nowrap;
+}
 
 @media (min-width: 1025px) {
   .buyTogetherWrapper {
@@ -249,7 +252,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    min-height: 492px;
+    min-height: 400px;
     max-width: 280px;
   }
 

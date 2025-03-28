@@ -16,10 +16,13 @@
   },
   "custom-div#main-header": {
     "props": {
-      "alignItems": "center",
+      "alignItems": "flex-end",
       "width": "100%",
       "justifyContent": "space-between",
-      "blockClass": "main-header"
+      "blockClass": [
+        "main-header",
+        "container"
+      ]
     },
     "children": [
       "logo#desktop",
@@ -71,7 +74,17 @@
       "accessCodeTitle": "Código de acesso",
       "emailPlaceholder": "E-mail",
       "passwordPlaceholder": "Senha",
-      "showPasswordVerificationIntoTooltip": true
+      "showPasswordVerificationIntoTooltip": true,
+      "accountOptionLinks": [
+        {
+          "label": "Meus pedidos",
+          "path": "/account/#/my-orders"
+        },
+        {
+          "label": "Alterar senha",
+          "path": "/account/#/authentication"
+        }
+      ]
     }
   },
   "flex-layout.col#logo-desktop": {

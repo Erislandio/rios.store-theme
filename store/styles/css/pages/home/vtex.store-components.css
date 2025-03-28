@@ -8,4 +8,10 @@
   .imageElement--deals-img {
     width: 50px;
   }
+  .imageElement--about-us-img {
+    height: 612px;
+  }
+}
+.imageElement--carousel-main-banner {
+  max-height: unset !important;
 }

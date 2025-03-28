@@ -4,6 +4,10 @@
   padding: 9px 12px;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 1025px) and (max-width: 1439px) {
+    max-width: 450px;
+  }
 }
 
 .searchBarContainer :global(.vtex-input-prefix__group) {

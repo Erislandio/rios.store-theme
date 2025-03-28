@@ -8,9 +8,9 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.32px;
+  height: 69px;
 
   display: -webkit-box !important;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -48,8 +48,6 @@
   }
 
   @media (min-width: 1025px) {
-    min-height: 565px;
-
     :global(.vtex-wish-list-1-x-wishlistIcon) {
       display: none;
     }

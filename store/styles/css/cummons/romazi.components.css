@@ -1,11 +1,16 @@
-.divContainer--container {
-  max-width: 1200px;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  margin: 0 auto;
-}
-@media screen and (min-width: 1441px) {
+@media (min-width: 1025px) and (max-width: 1439px) {
   .divContainer--container {
-    max-width: 1441px;
+    max-width: 1200px;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .divContainer--container {
+    max-width: 1440px;
+    padding-left: 3.5rem !important;
+    padding-right: 3.5rem !important;
+    margin: 0 auto;
   }
 }

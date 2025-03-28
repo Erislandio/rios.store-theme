@@ -18,7 +18,19 @@
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1170px) {
+  .videoContainer--video-about-us {
+    width: 528px !important;
+    max-width: 628px !important;
+    margin-top: 0;
+    height: 355px !important;
+    position: absolute;
+    top: calc(50% - 178px);
+    left: calc(50% - 150px);
+  }
+}
+
+@media (min-width: 1171px) {
   .videoContainer--video-about-us {
     width: 628px !important;
     max-width: 628px !important;

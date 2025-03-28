@@ -43,3 +43,6 @@
     justify-content: space-between;
   }
 }
+.flexRowContent--filter-result :global(.vtex-product-summary-2-x-container) {
+  min-height: 565px;
+}

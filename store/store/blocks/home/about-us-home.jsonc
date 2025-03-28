@@ -13,6 +13,7 @@
     "title": "sobre nós - conteúdo",
     "props": {
       "blockClass": [
+        "container",
         "about-us-desktop"
       ]
     },
@@ -69,7 +70,7 @@
     "title": "Sobre nós - Imagem",
     "props": {
       "maxWidth": "",
-      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/be3d90a1-d01d-47f3-bdaa-ff94bd62778f___8fd5882ec16792a32eb2f6af41652e7c.png",
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/4dcec2fc-cff9-422c-b902-009e476533f8___1fbbdbbad2202c78b831522261f1cb85.png",
       "blockClass": "about-us-img"
     }
   },
