@@ -480,10 +480,14 @@
   left: 40%;
   position: absolute;
   width: 315px;
+
+  .content {
+    border-radius: 10px;
+  }
 }
 
 .options {
-  min-width: none;
+  min-width: 200px !important;
 }
 
 .codeConfirmation {

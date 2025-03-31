@@ -1,7 +1,7 @@
 .searchBarContainer {
   display: flex;
   max-width: 600px;
-  padding: 9px 12px;
+  padding: 6px 12px;
   justify-content: space-between;
   align-items: center;
 
@@ -25,4 +25,10 @@
 .logoLink {
   min-width: 237px;
   margin-right: 24px;
+}
+
+.logoContainer {
+  @media (min-width: 1025px) {
+    padding-left: 16px;
+  }
 }

@@ -29,3 +29,16 @@
     }
   }
 }
+
+@media (min-width: 1025px) {
+  .minicartWrapperContainer {
+    margin-left: 24px;
+    .openIconContainer {
+      padding: 0;
+
+      :global(.vtex-button__label) {
+        padding: 0;
+      }
+    }
+  }
+}

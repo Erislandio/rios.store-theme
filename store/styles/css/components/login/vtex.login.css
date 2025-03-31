@@ -455,9 +455,12 @@
   position: absolute;
   width: 315px;
 }
+.contentContainer .content {
+  border-radius: 10px;
+}
 
 .options {
-  min-width: none;
+  min-width: 200px !important;
 }
 
 .codeConfirmation .inputContainerAccessCode :global(.vtex-styleguide-9-x-input)::placeholder {

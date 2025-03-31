@@ -47,3 +47,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.flexRow--header-right-components {
+  padding-bottom: 3px;
+}
