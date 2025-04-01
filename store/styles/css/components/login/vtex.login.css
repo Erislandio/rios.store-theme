@@ -454,6 +454,7 @@
   left: 40%;
   position: absolute;
   width: 315px;
+  border-radius: 10px;
 }
 .contentContainer .content {
   border-radius: 10px;

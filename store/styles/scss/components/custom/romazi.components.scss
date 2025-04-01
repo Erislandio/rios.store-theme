@@ -428,7 +428,9 @@
 
   .romaziPremiumTextsContainer {
     max-width: 606px;
+    display: flex;
     align-items: flex-start;
+    justify-content: flex-start !important;
     margin-left: 33px;
     min-height: 380px;
   }
