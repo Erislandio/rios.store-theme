@@ -5,6 +5,8 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
 .totalProducts--layout {
@@ -105,6 +107,8 @@
 .filterAccordionBreadcrumbs {
   background-color: var(--Cobalto-800, #2643a8);
   margin-bottom: 3.5rem;
+  position: fixed;
+  z-index: 3;
 
   .filterBreadcrumbsText {
     color: var(--Cobalto-50, #f0f6fe);
@@ -114,6 +118,10 @@
     font-weight: 400;
     line-height: normal;
   }
+}
+
+.closeIconButton {
+  z-index: 99;
 }
 
 .closeIcon {
@@ -130,6 +138,10 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.54px;
+}
+
+.accordionFilter {
+  padding-bottom: 150px;
 }
 
 .filterAccordionItemBox {
@@ -184,6 +196,12 @@
 
 .filterButtonsBox {
   border: none;
+  height: auto;
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .filterApplyButtonWrapper {
@@ -210,7 +228,10 @@
 }
 
 .filterClearButtonWrapper {
-  display: none;
+  width: 100%;
+  order: 2;
+  margin-bottom: 16px;
+  padding: 0 25px;
   :global(.vtex-button) {
     border: 1px solid #2643a8;
     height: 50px;
@@ -226,6 +247,7 @@
     font-weight: 400;
     line-height: 14.845px; /* 74.226% */
     letter-spacing: 0.4px;
+    text-transform: none;
   }
 }
 
@@ -240,10 +262,23 @@
   padding: 16px;
 }
 
+.seeMoreButton {
+  color: var(--Bombay-900, #505257);
+  text-align: center;
+  font-family: 'Source Sans Pro SemiBold', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.28px;
+
+  background-color: transparent;
+  width: 100%;
+}
+
 @media (min-width: 1025px) {
   .galleryTitle--layout {
     font-size: 30px;
-    margin-left: 24px;
   }
   .filtersWrapper {
     display: flex;
@@ -255,6 +290,7 @@
 
     .filter__container--title {
       order: 1;
+      border: none;
     }
     .filter__container--priceRange {
       order: 2;

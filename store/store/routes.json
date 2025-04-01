@@ -9,6 +9,9 @@
     "path": "/politica-privacidade"
   },
   "store.custom#politica-pagamentos": {
+    "path": "/politica-pagamentos"
+  },
+  "store.custom#politica-entrega": {
     "path": "/politica-de-entrega"
   },
   "store.custom#trabalhe-conosco": {

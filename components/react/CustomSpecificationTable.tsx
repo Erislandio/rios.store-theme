@@ -126,8 +126,6 @@ export default function CustomSpecificationTable() {
 
   const specs = product?.properties as ProductSpecification[]
 
-  console.log('🚀 ~ CustomSpecificationTable ~ specs:', specs)
-
   return (
     <Table
       data={[

@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import type { FormEvent } from 'react'
-import React, { useCallback, useEffect, useReducer, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import InputMask from 'react-input-mask'
 import Modal from 'react-modal'
 import { useCssHandles } from 'vtex.css-handles'
@@ -8,7 +8,7 @@ import { Spinner } from 'vtex.styleguide'
 
 import { useRegionalizationContext } from './context'
 import './Regionalization.styles.css'
-import { getCityByGeoLocation } from './utils/getCityByGeoLocation'
+import UseMyLocationButton from './useMyLocationButton'
 import { getRegionId } from './utils/getRegionId'
 import { searchPostalCode } from './utils/searchPostalCode'
 
@@ -29,52 +29,6 @@ const CSS_HANDLES: readonly string[] = [
   'errorMessage',
   'addressCity',
 ]
-
-enum ActionTypes {
-  SET_LOCATION = 'SET_LOCATION',
-  SET_PERMISSION = 'SET_PERMISSION',
-  SET_ADDRESS = 'SET_ADDRESS',
-}
-interface State {
-  location: { latitude: number | null; longitude: number | null }
-  locationAllowed: boolean | null
-  address: string | null
-}
-interface Action {
-  type: ActionTypes
-  payload?: any
-}
-
-const initialState: State = {
-  location: { latitude: null, longitude: null },
-  locationAllowed: null,
-  address: null,
-}
-
-const reducer = (state: State, action: Action): State => {
-  switch (action.type) {
-    case ActionTypes.SET_LOCATION:
-      return {
-        ...state,
-        location: action.payload,
-      }
-
-    case ActionTypes.SET_PERMISSION:
-      return {
-        ...state,
-        locationAllowed: action.payload,
-      }
-
-    case ActionTypes.SET_ADDRESS:
-      return {
-        ...state,
-        address: action.payload,
-      }
-
-    default:
-      return state
-  }
-}
 
 const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
   userLastAddress,
@@ -153,64 +107,8 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
         setIsLoading(false)
       }
     },
-    [postalCode, address]
+    [postalCode, address, setCityName, setRegionId]
   )
-
-  const [, dispatch] = useReducer(reducer, initialState)
-
-  useEffect(() => {
-    const savedPermission = localStorage.getItem('locationAllowed')
-
-    if (savedPermission === 'true') {
-      dispatch({
-        type: ActionTypes.SET_PERMISSION,
-        payload: JSON.parse(savedPermission),
-      })
-    }
-  }, [])
-
-  const checkGeolocationPermission = () => {
-    navigator?.geolocation?.getCurrentPosition(
-      async (position) => {
-        dispatch({ type: ActionTypes.SET_PERMISSION, payload: true })
-        dispatch({
-          type: ActionTypes.SET_LOCATION,
-          payload: {
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          },
-        })
-        localStorage.setItem('locationAllowed', 'true')
-
-        try {
-          const geoLocationData = await getCityByGeoLocation(
-            position.coords.latitude,
-            position.coords.longitude
-          )
-
-          const { cityName, postalCodeLocation } = geoLocationData
-          const region = await getRegionId(postalCodeLocation)
-
-          if (region.regionId) {
-            const { regionId } = region
-
-            setRegionId(regionId)
-          }
-
-          setCityName(cityName)
-        } catch (err) {
-          console.error(err)
-        }
-      },
-      (errorLocation) => {
-        // eslint-disable-next-line vtex/prefer-early-return
-        if (errorLocation.code === errorLocation.PERMISSION_DENIED) {
-          dispatch({ type: ActionTypes.SET_PERMISSION, payload: false })
-          localStorage.setItem('locationAllowed', 'false')
-        }
-      }
-    )
-  }
 
   return (
     <Modal
@@ -231,15 +129,10 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
               </p>
             </div>
             <div>
-              <button
-                className={classNames(
-                  handles.useMyLocalizationButton,
-                  'flex justify-center items-center fw7 pointer'
-                )}
-                onClick={checkGeolocationPermission}
-              >
-                Utilizar localização automática
-              </button>
+              <UseMyLocationButton
+                setCityName={setCityName}
+                setRegionId={setRegionId}
+              />
             </div>
             <div className="relative">
               <div className="flex justify-between items-center mb7">

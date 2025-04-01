@@ -48,7 +48,6 @@ const CSS_HANDLES = [
 const RomaziPremium: StoreFrontFC<{
   lines: RomaziPremiumLines[]
 }> = ({ lines = [] }) => {
-  console.log('🚀 ~ lines:', lines)
   const { handles } = useCssHandles(CSS_HANDLES)
   const [currentLine, setCurrentLine] = useState<RomaziPremiumLines>(lines[0])
   const [currentSlide, setCurrentSlide] = useState(0)

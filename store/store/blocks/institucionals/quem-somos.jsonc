@@ -177,8 +177,12 @@
           "url": "/politica-privacidade"
         },
         {
-          "menuTitle": "Política de de pagamentos",
+          "menuTitle": "Política de pagamentos",
           "url": "/politica-pagamentos"
+        },
+        {
+          "menuTitle": "Política de entrega",
+          "url": "/politica-de-entrega"
         },
         {
           "menuTitle": "Perguntas frequentes",
