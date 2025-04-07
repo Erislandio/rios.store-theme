@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useCssHandles } from 'vtex.css-handles'
+import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
 import { Dots, Slide, Slider, SliderContainer } from 'vtex.slider'
 
@@ -52,6 +52,9 @@ const RomaziPremium: StoreFrontFC<{
   const [currentLine, setCurrentLine] = useState<RomaziPremiumLines>(lines[0])
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isLastSlide, setIsLastSlide] = useState(false)
+  const [classAnimation, setClassAnimation] = useState(false)
+
+  console.log('🚀 ~ classAnimation:', classAnimation)
   const [isFirstSlide, setIsFirstSlide] = useState(false)
   const { isMobile } = useDevice()
 
@@ -83,34 +86,25 @@ const RomaziPremium: StoreFrontFC<{
     if (!isFirstSlide && orientation === 'left') {
       setCurrentSlide((prevState) => prevState - 1)
 
+      setClassAnimation(true)
+
+      setTimeout(() => {
+        setClassAnimation(false)
+      }, 100)
+
       return
     }
 
     if (!isLastSlide && orientation === 'right') {
       setCurrentSlide((prevState) => prevState + 1)
+
+      setClassAnimation(true)
+
+      setTimeout(() => {
+        setClassAnimation(false)
+      }, 100)
     }
   }
-
-  // const arrowRender = ({ orientation, onClick }: any) => {
-  //   // const { gap, cssHandles } = this.props
-  //   const containerClasses = classNames('pointer z-1 flex absolute', {
-  //     [`vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowLeft left-0 ph3`]:
-  //       orientation === 'left',
-  //     [`vtex-shelf-1-x-arrow pointer z-1 flex absolute vtex-shelf-1-x-arrowRight right-0 ph3`]:
-  //       orientation === 'right',
-  //   })
-  //   return (
-  //     <div
-  //       className={containerClasses}
-  //       onClick={() => {
-  //         onClick()
-  //         setSlideByOrientation(orientation)
-  //       }}
-  //     >
-  //       <IconCaret orientation={orientation} thin size={20} />
-  //     </div>
-  //   )
-  // }
 
   return (
     <div className={handles.romaziPremiumContainer}>
@@ -123,7 +117,11 @@ const RomaziPremium: StoreFrontFC<{
       </div>
       <div className={handles.romaziPremiumBackgroundImageContainer}>
         <img
-          className={handles.romaziPremiumBackgroundImage}
+          key={currentSlide}
+          className={applyModifiers(
+            handles.romaziPremiumBackgroundImage,
+            !classAnimation ? 'fade-in' : ''
+          )}
           src={
             isMobile
               ? currentLine.backgroundImageMobile
@@ -162,7 +160,7 @@ const RomaziPremium: StoreFrontFC<{
                   src={item.imagesCarousel}
                   loading="eager"
                   style={{
-                    width: currentSlide === index ? '100%' : '75%',
+                    width: currentSlide === index ? '100%' : '55%',
                   }}
                 />
               </Slide>
@@ -225,7 +223,12 @@ const RomaziPremium: StoreFrontFC<{
           </div>
         </SliderContainer>
       </div>
-      <div className={handles.romaziPremiumTextsContainer}>
+      <div
+        className={applyModifiers(
+          handles.romaziPremiumTextsContainer,
+          !classAnimation ? 'fade-in' : ''
+        )}
+      >
         <h3 className={handles.romaziPremiumTitle}>{currentLine.title}</h3>
         <p className={handles.romaziPremiumText}>{currentLine.text}</p>
         {currentLine.text2 && (

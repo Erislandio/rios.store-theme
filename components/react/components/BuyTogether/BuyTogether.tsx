@@ -220,7 +220,22 @@ const BuyTogether: React.FC = () => {
           }
         )
 
-        setProducts(productsData.slice(0, 3))
+        const productFormatted = productsData
+          .slice(0, 3)
+          .map((product, index) => {
+            if (index === 0) {
+              return {
+                ...product,
+                selected: true,
+              }
+            }
+
+            return product
+          })
+
+        console.log(productFormatted)
+
+        setProducts(productFormatted)
       }
     },
   })
@@ -371,7 +386,9 @@ const BuyTogether: React.FC = () => {
         <div className={handles.buyTogetherFinish}>
           {selecteds.length ? (
             <p className={handles.buyTogetherFinishP}>
-              Compre os {selecteds.length} produtos por
+              {selecteds.length > 1
+                ? `Compre os ${selecteds.length} produtos por:`
+                : `Compre o produto por:`}
             </p>
           ) : (
             <p className={handles.buyTogetherFinishP}>

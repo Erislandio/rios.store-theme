@@ -24,20 +24,42 @@
       color: #bc1818;
     }
   }
+
+  @media (max-width: 1025px) {
+    width: 32px;
+    height: 32px;
+
+    &:hover {
+      .caretIcon--shelf {
+        color: #060606;
+      }
+    }
+  }
 }
 
 .sliderLeftArrow--shelf {
   left: -30px;
+
+  @media (max-width: 1025px) {
+    left: -22px;
+  }
 }
 
 .sliderRightArrow--shelf {
   right: -30px;
+  @media (max-width: 1025px) {
+    right: -22px;
+  }
 }
 
 .caretIcon--shelf {
   width: 20px;
   height: 20px;
   transition: all 0.3s;
+
+  @media (max-width: 1025px) {
+    width: 12px;
+  }
 }
 
 .paginationDot {

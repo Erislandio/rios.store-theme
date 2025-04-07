@@ -16,6 +16,8 @@
 }
 
 .categoryContainerImage {
+  min-width: 87px;
+  min-height: 87px;
 }
 
 .categoryContainer {
@@ -303,6 +305,10 @@
 
 .romaziPremiumContainer {
   position: relative;
+
+  @media (min-width: 1025px) {
+    height: 1052px;
+  }
 }
 
 .romaziPremiumBackgroundImageContainer {
@@ -310,6 +316,15 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 6.25rem;
+
+  .romaziPremiumBackgroundImage {
+    opacity: 0;
+
+    &--fade-in {
+      opacity: 1;
+      transition: opacity 0.8s ease-in-out;
+    }
+  }
 }
 
 .romaziPremiumSlider {
@@ -321,20 +336,24 @@
   justify-content: center;
   left: calc(50% - 125px);
 
+  .caretIcon {
+    color: #f2f2f2 !important;
+    opacity: 0.5;
+  }
+
   :global(.vtex-shelf-1-x-arrow) {
     background-color: #676767;
     padding: 8px 8px;
     border-radius: 50%;
     top: 55%;
-
-    .caretIcon {
-      color: #f2f2f2 !important;
-      opacity: 0.5;
-    }
   }
 
   :global(.vtex-shelf-1-x-arrowRight) {
     right: 5%;
+
+    @media (max-width: 445px) {
+      right: calc(2% + 2px);
+    }
   }
   :global(.vtex-shelf-1-x-arrowLeft) {
     left: -20%;
@@ -368,7 +387,7 @@
   .romaziPremiumSlider {
     position: absolute;
     left: 55%;
-    top: 44%;
+    top: 39%;
 
     :global(.vtex-shelf-1-x-arrow) {
       top: 105%;
@@ -402,7 +421,7 @@
   .romaziPremiumSlidePrev,
   .romaziPremiumSlide {
     .romaziPremiumSliderImage {
-      width: 150px !important;
+      width: 130px !important;
       transition: all 0.3s;
       filter: blur(2px);
     }
@@ -427,12 +446,16 @@
   }
 
   .romaziPremiumTextsContainer {
-    max-width: 606px;
+    max-width: 600px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start !important;
     margin-left: 33px;
-    min-height: 380px;
+    min-height: 343px;
+
+    @media (min-width: 1290px) {
+      max-width: 720px;
+    }
   }
 
   .romaziPremiumLogoContainer {
@@ -476,13 +499,6 @@
 
   .romaziPremiumHarmonizeContainer {
     margin-left: 2rem;
-  }
-}
-
-@media (min-width: 1500px) {
-  .romaziPremiumSlider {
-    left: 56%;
-    top: 45%;
   }
 }
 
@@ -588,7 +604,7 @@
   justify-content: flex-end;
 
   .romaziPremiumSliderImage {
-    width: 150px !important;
+    width: 130px !important;
     transition: all 0.3s;
   }
 }
@@ -606,8 +622,8 @@
 
   .dotsContainer {
     :global(.vtex-slider-0-x-dotsContainer) {
-      left: 50%;
-      right: calc(50% - 50px);
+      left: 48%;
+      right: 50%;
     }
   }
 
@@ -1857,6 +1873,10 @@
   transition: all 0.3s;
   width: 20px !important;
   height: 20px !important;
+
+  @media (max-width: 1025px) {
+    width: 12px !important;
+  }
 }
 
 .sliderArrows {

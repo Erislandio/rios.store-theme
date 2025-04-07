@@ -83,8 +83,8 @@
     "title": "Icone menu",
     "props": {
       "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/a62e4c47-597a-4035-acf1-1beb5c9244dd___0a0b8d42ad8043fbb7c2776a5f9d0169.svg",
-      "width": 24,
-      "height": 15
+      "width": 32,
+      "height": 19
     }
   },
   "flex-layout.row#wishlist-minicart": {

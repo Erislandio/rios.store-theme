@@ -1,8 +1,19 @@
 .cart-template.mini-cart {
-  border: 1px solid #bbc6cb;
-  border-radius: 8px;
-  margin-left: 22px;
-  padding: 0 16px;
+  .cart-fixed.cart-fixed-transition {
+    border: 1px solid #bbc6cb;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    position: relative;
+
+    @media (max-width: 989px) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 1296px) {
+      max-width: 344px !important;
+    }
+  }
 
   h2 {
     background-color: transparent;
@@ -39,6 +50,10 @@
   .cart-fixed {
     height: auto !important;
     width: 100%;
+
+    @media (min-width: 980) and (max-width: 1055px) {
+      max-width: 280px;
+    }
   }
 
   .quantity.badge {

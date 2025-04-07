@@ -542,3 +542,20 @@
     }
   }
 }
+
+:global(.romazi-components-1-x-romaziPremiumSlider .relative) {
+  @media (max-width: 1024px) {
+    max-width: 340px;
+  }
+}
+
+:global(.romazi-components-1-x-romaziPremiumSlider) {
+  :global(.romazi-components-0-x-caretIcon) {
+    color: #fff;
+
+    @media (max-width: 1025px) {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

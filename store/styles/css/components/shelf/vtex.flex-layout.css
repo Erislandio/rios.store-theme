@@ -38,5 +38,6 @@
 @media (max-width: 1025px) {
   .flexRow--shelf {
     padding: 24px 24px 50px 24px !important;
+    overflow: hidden;
   }
 }

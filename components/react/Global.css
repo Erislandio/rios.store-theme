@@ -17,7 +17,7 @@
 .mapAutocompleteInput .findAddressLabel {
   color: var(--Cinza-37, #373737);
   margin: 0px;
-  font-family: "Source Sans Pro Regular", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -33,7 +33,7 @@
 .mapAutocompleteInput input {
   color: var(--Bombay-400, #A8B2B7);
   text-align: center;
-  font-family: "Source Sans Pro Regular", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;

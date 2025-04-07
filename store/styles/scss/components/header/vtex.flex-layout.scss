@@ -38,7 +38,8 @@
 
 .flexRowContent--main-header-mobile {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  margin-bottom: 16px;
   justify-content: space-between;
 }
 
@@ -50,4 +51,10 @@
 
 .flexRow--header-right-components {
   padding-bottom: 3px;
+}
+
+.flexRow--wishlist-minicart {
+  @media (max-width: 1025px) {
+    margin-right: 16px;
+  }
 }

@@ -30,6 +30,11 @@
   min-width: 237px;
   margin-right: 24px;
 }
+@media (max-width: 1024px) {
+  .logoLink {
+    margin-right: 0;
+  }
+}
 
 @media (min-width: 1025px) {
   .logoContainer {

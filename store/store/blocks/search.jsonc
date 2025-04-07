@@ -300,7 +300,7 @@
       "totalProductsOnMobile": "hide",
       "updateOnFilterSelectionOnMobile": true,
       "priceRangeLayout": "inputAndSlider",
-      "initiallyCollapsed": false,
+      "initiallyCollapsed": true,
       "padding": 0
     }
   },

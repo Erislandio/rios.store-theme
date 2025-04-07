@@ -25,6 +25,10 @@
 .logoLink {
   min-width: 237px;
   margin-right: 24px;
+
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
 }
 
 .logoContainer {

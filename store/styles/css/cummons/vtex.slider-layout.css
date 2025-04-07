@@ -20,19 +20,43 @@
 .sliderArrows:hover .caretIcon--shelf {
   color: #bc1818;
 }
+@media (max-width: 1025px) {
+  .sliderArrows {
+    width: 32px;
+    height: 32px;
+  }
+  .sliderArrows:hover .caretIcon--shelf {
+    color: #060606;
+  }
+}
 
 .sliderLeftArrow--shelf {
   left: -30px;
 }
+@media (max-width: 1025px) {
+  .sliderLeftArrow--shelf {
+    left: -22px;
+  }
+}
 
 .sliderRightArrow--shelf {
   right: -30px;
+}
+@media (max-width: 1025px) {
+  .sliderRightArrow--shelf {
+    right: -22px;
+  }
 }
 
 .caretIcon--shelf {
   width: 20px;
   height: 20px;
   transition: all 0.3s;
+}
+@media (max-width: 1025px) {
+  .caretIcon--shelf {
+    width: 12px;
+  }
 }
 
 .paginationDot {

@@ -701,3 +701,14 @@ label[for='payment-discounts-code'] {
     font-size: 14px !important;
   }
 }
+
+@media (min-width: 678px) and (max-width: 1055px) {
+  #client-profile-data,
+  #shipping-data {
+    width: 100% !important;
+  }
+}
+
+.srp-summary-result.hide {
+  display: none !important;
+}

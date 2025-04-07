@@ -19,7 +19,10 @@
   },
   "custom-div#product": {
     "props": {
-      "blockClass": "container",
+      "blockClass": [
+        "container",
+        "product-page-container"
+      ],
       "flexDirection": "column"
     },
     "children": [

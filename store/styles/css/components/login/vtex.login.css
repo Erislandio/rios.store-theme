@@ -492,3 +492,19 @@
   line-height: 14px;
   letter-spacing: 0.36px;
 }
+
+@media (max-width: 1024px) {
+  :global(.romazi-components-1-x-romaziPremiumSlider .relative) {
+    max-width: 340px;
+  }
+}
+
+:global(.romazi-components-1-x-romaziPremiumSlider) :global(.romazi-components-0-x-caretIcon) {
+  color: #fff;
+}
+@media (max-width: 1025px) {
+  :global(.romazi-components-1-x-romaziPremiumSlider) :global(.romazi-components-0-x-caretIcon) {
+    width: 13px;
+    height: 13px;
+  }
+}

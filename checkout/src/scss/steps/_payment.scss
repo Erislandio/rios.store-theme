@@ -12,29 +12,72 @@ div#payment-data {
   .step.accordion-group {
     border: 1px solid #bbc6cb;
     margin-top: 22px;
-    max-width: 698px;
+    max-width: 798px;
     padding: 16px;
   }
 
-  .payment-group-item {
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid rgb(0 0 0 / 20%);
-    border-radius: 8px;
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
+  .payment-group {
+    width: 35%;
 
-    .payment-group-item-text {
-      color: var(--Bombay-800, #4d5156);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px; /* 100% */
+    .payment-group-item {
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid rgb(0 0 0 / 20%);
+      border-radius: 8px;
+      box-sizing: border-box;
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 0 !important;
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+
+      .payment-group-item-text {
+        color: var(--Bombay-800, #4d5156);
+        display: flex;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        justify-content: space-between;
+        line-height: 16px; /* 100% */
+        width: 100%;
+      }
     }
   }
+
+  @media (min-width: 678px) and (max-width: 1055px) {
+    .step.accordion-group.store-country-BRA {
+      box-sizing: border-box;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .payment-group {
+      width: 100%;
+    }
+
+    .steps-view {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    #client-profile-data,
+    #shipping-data {
+      width: 100% !important;
+    }
+  }
+
+  // @media (min-width: 980px) and (max-width: 1055px) {
+  //   .payment-group {
+  //     width: 100%;
+  //   }
+
+  //   .steps-view {
+  //     box-sizing: border-box;
+  //     margin-left: 24px;
+  //     width: 100%;
+  //   }
+  // }
 
   .pg-transferencia-bancaria {
     &::before {

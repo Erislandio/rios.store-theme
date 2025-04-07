@@ -179,16 +179,11 @@ DynamicMenu.schema = {
             widget: {
               'ui:widget': 'image-uploader',
             },
-            url: {
-              type: 'string',
-              title: 'URL',
-              default: '',
-            },
-            text: {
-              type: 'string',
-              title: 'texto do link',
-              default: '',
-            },
+          },
+          url: {
+            type: 'string',
+            title: 'URL',
+            default: '',
           },
         },
       },
