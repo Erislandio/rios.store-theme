@@ -53,8 +53,13 @@
   padding-bottom: 3px;
 }
 
+.flexRow--main-header-mobile {
+  overflow: hidden;
+}
+
 @media (max-width: 1025px) {
   .flexRow--wishlist-minicart {
     margin-right: 16px;
+    margin-bottom: 3px;
   }
 }

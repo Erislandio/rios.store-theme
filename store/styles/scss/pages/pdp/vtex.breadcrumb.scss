@@ -1,17 +1,22 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
 }
 
 .link {
   color: #4d5156;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 21.667px;
   letter-spacing: 0.32px;
+  margin-right: -5px;
+
+  @media (max-width: 641px) {
+    font-size: 12px;
+  }
 }
 
 .arrow {
@@ -21,15 +26,24 @@
 }
 
 .homeLink {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+
   &::before {
     content: '';
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M3.75033 17.5V7.5L1.66699 9.16667L10.0003 2.5L18.3337 9.16667L16.2503 7.5V17.5H3.75033Z' stroke='%234D5156' stroke-linejoin='round'/%3E%3Cpath d='M7.91699 12.0833V17.5H12.0837V12.0833H7.91699Z' stroke='%234D5156' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
-    width: 20px;
+    width: 34px;
     height: 20px;
     display: block;
+  }
+
+  &::after {
+    content: 'Página inicial';
+    margin-left: 4px;
   }
 
   .homeIcon {
@@ -40,11 +54,21 @@
 .term {
   color: #1d1d1d;
   font-family: 'Source Sans Pro SemiBold', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: 21.667px;
   letter-spacing: 0.32px;
+  padding: 0;
+
+  @media (max-width: 641px) {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
 }
 
 .homeLink--search-breadcrumb {
@@ -55,7 +79,7 @@
     content: 'Página inicial';
     color: var(--Bombay-800, #4d5156);
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 21.667px;
@@ -67,7 +91,7 @@
 .link--search-breadcrumb {
   color: #1d1d1d;
   font-family: 'Source Sans Pro SemiBold', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: 21.667px;

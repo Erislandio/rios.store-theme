@@ -69,3 +69,7 @@
 .listContainer--tabsPaymentsMethodsPdp .listItemActive :global(.vtex-button__label) {
   color: var(--Cobalto-800, #2643a8);
 }
+
+.container {
+  padding: 0 24px 24px 24px;
+}

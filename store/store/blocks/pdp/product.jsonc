@@ -70,8 +70,13 @@
       ]
     },
     "children": [
-      "breadcrumb"
+      "breadcrumb#product"
     ]
+  },
+  "breadcrumb#product": {
+    "props": {
+      "showOnMobile": true
+    }
   },
   "flex-layout.row#description": {
     "props": {

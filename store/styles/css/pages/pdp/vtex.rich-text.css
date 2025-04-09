@@ -9,13 +9,12 @@
 }
 
 .paragraph--payment-methods-title {
-  color: var(--Bombay, #38434d);
+  color: var(--Bombay, #fff);
   font-family: "Mulish SemiBold";
   font-size: 21px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-top: 0;
 }
 
 .paragraph--payments-way {

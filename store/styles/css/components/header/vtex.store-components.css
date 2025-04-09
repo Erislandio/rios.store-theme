@@ -5,6 +5,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1025px) {
+  .searchBarContainer {
+    padding-bottom: 24px;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1439px) {
   .searchBarContainer {
     max-width: 450px;
@@ -33,6 +38,9 @@
 @media (max-width: 1024px) {
   .logoLink {
     margin-right: 0;
+  }
+  .logoLink .logoImage {
+    margin-left: 1.4rem;
   }
 }
 

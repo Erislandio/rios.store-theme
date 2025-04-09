@@ -236,6 +236,20 @@
   white-space: nowrap;
 }
 
+@media (max-width: 1024px) {
+  .buyTogetherFooterItem :global(.vtex-numeric-stepper-wrapper) {
+    max-width: 157px;
+  }
+
+  .buyTogetherLi {
+    width: 100%;
+  }
+
+  .buyTogetherItemImage {
+    max-width: 500px;
+  }
+}
+
 @media (min-width: 1025px) {
   .buyTogetherWrapper {
     display: flex;

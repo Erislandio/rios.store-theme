@@ -58,7 +58,8 @@
   transition: all 0.3s;
 
   @media (max-width: 1025px) {
-    width: 12px;
+    width: 12px !important;
+    height: 12px !important;
   }
 }
 

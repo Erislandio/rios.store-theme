@@ -53,8 +53,12 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 20px;
   letter-spacing: 0.32px;
+}
+
+.orderByButton .filterPopupTitle {
+  padding-left: 18px;
 }
 
 .filterPopupArrowIcon {

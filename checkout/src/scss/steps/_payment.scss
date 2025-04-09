@@ -104,8 +104,9 @@ div#payment-data {
   }
 
   .gift-card-section.form-step.box-default {
+    box-sizing: border-box;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
     margin-top: 0.5rem;
     width: 100%;
 
@@ -136,6 +137,24 @@ div#payment-data {
 
     input {
       padding: 1rem;
+    }
+  }
+
+  a#show-gift-card-group::after {
+    content: 'Adicionar Voucher';
+  }
+
+  label[for='payment-discounts-code']::after {
+    content: 'Voucher';
+  }
+
+  #btn-add-gift-card {
+    background-color: #2643a8;
+  }
+
+  .payment-group {
+    @media (max-width: 678px) {
+      width: 100%;
     }
   }
 }

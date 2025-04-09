@@ -62,7 +62,7 @@ const CustomRegionSummary: StoreFrontFC = () => {
       >
         <RegionalizationPin />
         <>
-          <span className={handles.regionaliseCity}>Preços validos: </span>
+          <span className={handles.regionaliseCity}>Preços válidos: </span>
           <span className={`${handles.regionaliseChange}`}>
             {!userLastAddress ? 'São Paulo - SP' : userLastAddress}
           </span>

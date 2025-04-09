@@ -198,8 +198,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0 24px;
+}
+@media (max-width: 640px) {
+  .romaziPremiumTextsContainer {
+    min-height: 630px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .romaziPremiumTextsContainer {
+    min-height: 450px;
+  }
 }
 
 .romaziPremiumTitle {
@@ -301,7 +311,7 @@
 
 .romaziPremiumSlider {
   position: absolute;
-  top: 21%;
+  top: 18%;
   right: cal;
   display: flex;
   align-items: center;
@@ -328,6 +338,11 @@
 }
 .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowLeft) {
   left: -20%;
+}
+@media (max-width: 390px) {
+  .romaziPremiumSlider :global(.vtex-shelf-1-x-arrowLeft) {
+    left: -15%;
+  }
 }
 .romaziPremiumSlider :global(.vtex-slider-0-x-dotsContainer) {
   gap: 16px;
@@ -558,7 +573,7 @@
     margin-left: 17px;
   }
   .dotsContainer :global(.vtex-slider-0-x-dotsContainer) {
-    left: 48%;
+    left: 50%;
     right: 50%;
   }
   .podCastDescriptionContainer {
@@ -623,6 +638,14 @@
   height: 46px;
   border-radius: 8px;
   background: #1a3eb8;
+}
+@media (max-width: 414px) {
+  .divContainer--buy-button-container :global(.vtex-button) {
+    min-width: 100px;
+  }
+  .divContainer--buy-button-container :global(.vtex-button) :global(.vtex-button__label) {
+    font-size: 16px;
+  }
 }
 .divContainer--buy-button-container :global(.vtex-button__label) {
   color: #fff;
@@ -1178,6 +1201,12 @@
   margin-right: 32px;
 }
 
+@media (max-width: 641px) {
+  .payment-methods__value {
+    margin-right: 0;
+  }
+}
+
 .pixPaymentInterest,
 .payment-methods__interest {
   color: var(--Dark-Shark-400, #84898c);
@@ -1651,7 +1680,7 @@
 }
 
 .specificationTable {
-  width: 100%;
+  width: 380px;
 }
 .specificationTable .specificationTableTdName {
   color: var(--Bombay-800, #4d5156);
@@ -1661,6 +1690,8 @@
   font-weight: 400;
   line-height: normal;
   padding: 8px 0;
+  min-width: 143px;
+  width: 143px;
 }
 .specificationTable .specificationTableTd {
   color: var(--Cobalto-800, #2643a8);
@@ -1669,6 +1700,19 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  min-width: 233px;
+  width: 233px;
+}
+@media (max-width: 1025px) {
+  .specificationTable {
+    width: 100%;
+  }
+  .specificationTable .specificationTableTdName {
+    min-width: 123px;
+  }
+  .specificationTable .specificationTableTd {
+    min-width: 213px;
+  }
 }
 
 .collapsibleTextDescriptionButton {
@@ -1698,6 +1742,7 @@
 @media (max-width: 1025px) {
   .caretIcon {
     width: 12px !important;
+    height: 12px !important;
   }
 }
 

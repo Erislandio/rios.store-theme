@@ -43,18 +43,21 @@ const CreditCardPaymentMethods: FunctionComponent = () => {
     return null
   }
 
-  // const installmentsFiltered =
-  //   productInstallments?.filter(
-  //     (installment: Installments) => installment.PaymentSystemName === 'Visa'
-  //   ) ?? []
-
-  const checkIfITHasInterest = (InterestRate: number) => {
+  const checkIfHasInterest = (InterestRate: number) => {
     return InterestRate > 0
   }
 
+  const uniqueByInstallments = productInstallments.filter(
+    (item, index, self) =>
+      index ===
+      self.findIndex(
+        (t) => t.NumberOfInstallments === item.NumberOfInstallments
+      )
+  )
+
   return (
     <div className={handles.installmentsContainer}>
-      {productInstallments?.map((paymentCondition: Installments) => {
+      {uniqueByInstallments?.map((paymentCondition: Installments) => {
         return (
           <div
             key={paymentCondition?.Name}
@@ -80,7 +83,7 @@ const CreditCardPaymentMethods: FunctionComponent = () => {
                   handles['payment-methods__interest']
                 )}
               >
-                {checkIfITHasInterest(paymentCondition?.InterestRate)
+                {checkIfHasInterest(paymentCondition?.InterestRate)
                   ? 'Com juros'
                   : 'Sem juros'}
               </span>

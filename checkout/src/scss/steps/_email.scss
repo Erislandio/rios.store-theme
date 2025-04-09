@@ -5,7 +5,7 @@
 }
 
 .client-pre-email {
-  border-top: none;
+  flex-direction: column;
 
   #client-pre-email {
     font-family: Mulish, sans-serif;
@@ -21,6 +21,8 @@
     font-weight: 400;
     letter-spacing: 0.32px;
     line-height: 14px;
+    position: absolute;
+    right: 18px;
   }
 
   #btn-client-pre-email {
@@ -52,5 +54,25 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 979px) {
+  .client-pre-email {
+    align-items: center;
+    border: 1px solid #bbc6cb;
+    display: flex;
+    flex-direction: column;
+    height: 208% !important;
+    overflow: hidden;
+  }
+
+  fieldset.pre-email.row-fluid {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  #client-profile-data {
+    position: relative;
   }
 }

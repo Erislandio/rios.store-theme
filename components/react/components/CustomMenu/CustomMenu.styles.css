@@ -330,6 +330,7 @@ a.menuLink:hover {
 .drawerHeaderCloseContainer .closeIconButton {
   padding-right: 1rem;
   margin-bottom: 4px;
+  overflow: visible !important;
 }
 
 .drawerHeaderClose .closeIconButton {
@@ -374,7 +375,7 @@ a.menuLink:hover {
   width: 15px;
   height: 15px;
   border-radius: 7.5px;
-  overflow: visible;
+  overflow: visible !important;
   display: flex;
   justify-content: center;
   align-items: center;

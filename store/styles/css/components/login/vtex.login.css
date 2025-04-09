@@ -253,6 +253,23 @@
   border-bottom: 2px solid #cedae0;
   margin-bottom: 56px;
 }
+@media (max-width: 1024px) {
+  .content--recoveryPassword .loginOptionsContainer,
+  .content--beginCreatePass .loginOptionsContainer,
+  .content--codeConfirmation .loginOptionsContainer,
+  .content--emailVerification .loginOptionsContainer {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+    width: 100%;
+  }
+  .content--recoveryPassword .loginOptionsContainer .optionsSticky,
+  .content--beginCreatePass .loginOptionsContainer .optionsSticky,
+  .content--codeConfirmation .loginOptionsContainer .optionsSticky,
+  .content--emailVerification .loginOptionsContainer .optionsSticky {
+    width: 100%;
+  }
+}
 .content--recoveryPassword .formFooter .sendButton :global(.vtex-button),
 .content--beginCreatePass .formFooter .sendButton :global(.vtex-button),
 .content--codeConfirmation .formFooter .sendButton :global(.vtex-button),

@@ -269,6 +269,17 @@
     padding-bottom: 56px;
     border-bottom: 2px solid #cedae0;
     margin-bottom: 56px;
+
+    @media (max-width: 1024px) {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: 0;
+      width: 100%;
+
+      .optionsSticky {
+        width: 100%;
+      }
+    }
   }
 
   .formFooter {
