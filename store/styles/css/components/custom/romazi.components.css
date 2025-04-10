@@ -571,6 +571,10 @@
   .romaziPremiumSliderImage {
     max-width: 222px;
     margin-left: 17px;
+    width: 100% !important;
+  }
+  .romaziPremiumSlidePrev .romaziPremiumSliderImage {
+    width: 100% !important;
   }
   .dotsContainer :global(.vtex-slider-0-x-dotsContainer) {
     left: 50%;

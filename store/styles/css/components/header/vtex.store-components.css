@@ -39,9 +39,6 @@
   .logoLink {
     margin-right: 0;
   }
-  .logoLink .logoImage {
-    margin-left: 1.4rem;
-  }
 }
 
 @media (min-width: 1025px) {
