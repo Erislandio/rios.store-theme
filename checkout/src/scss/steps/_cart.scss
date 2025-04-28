@@ -546,6 +546,9 @@
               }
 
               &.quantity {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
                 margin-left: 60px;
                 padding: 5px 1rem;
                 width: 81px;
@@ -711,4 +714,13 @@ label[for='payment-discounts-code'] {
 
 .srp-summary-result.hide {
   display: none !important;
+}
+
+.item-link-remove {
+  width: 30px;
+}
+
+.item-multiplier-label,
+.item-unit-label {
+  display: none;
 }

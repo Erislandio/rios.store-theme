@@ -128,16 +128,6 @@
   .paginationDotsContainer {
     bottom: -10%;
   }
-  .caretIcon {
-    &::before {
-      content: '';
-      width: 48px;
-      height: 48px;
-      background: #e2e2e2;
-      // opacity: 0.3;
-      display: flex;
-    }
-  }
 
   .sliderArrows {
     width: 48px;
@@ -1263,6 +1253,10 @@
       min-width: 200px;
       height: 50px;
 
+      @media (max-width: 414px) {
+        min-width: 150px;
+      }
+
       :global(.vtex-styleguide-9-x-container) {
         height: 100%;
       }
@@ -1926,6 +1920,7 @@
   @media (max-width: 1025px) {
     width: 12px !important;
     height: 12px !important;
+    overflow: visible !important;
   }
 }
 

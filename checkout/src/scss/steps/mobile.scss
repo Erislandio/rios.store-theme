@@ -21,8 +21,13 @@
     margin-top: 22px;
 
     .accordion-group.shipping-data.vtex-omnishipping-1-x-shippingDataDev {
-      padding: 0 16px;
-      padding-top: 16px;
+      .accordion-heading {
+        margin: 16px;
+      }
+
+      .accordion-inner.shipping-container {
+        margin: 0 16px;
+      }
     }
   }
 

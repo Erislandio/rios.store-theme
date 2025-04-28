@@ -214,6 +214,7 @@
 .buyTogetherFooterItem :global(.vtex-numeric-stepper__input) {
   border: none;
   height: 24px;
+  min-width: 20px;
 }
 
 .buyTogetherFooterItem :global(.vtex-numeric-stepper__minus-button),
@@ -294,5 +295,24 @@
 
   .buyTogetherFinish :global(.vtex-button) {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 414px) {
+  .buyTogetherFooterItem {
+    width: 118px;
+  }
+
+  .buyTogetherFooterItem :global(.vtex-numeric-stepper__input) {
+    min-width: 20px;
+  }
+
+  .buyTogetherItemTitle {
+    font-size: 12px;
+  }
+
+  .buyTogetherFooterItem :global(.vtex-button)::after {
+    font-size: 12px;
+    margin-left: 3px;
   }
 }

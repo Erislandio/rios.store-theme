@@ -20,13 +20,6 @@
   width: 30px;
   display: flex;
 }
-@media (max-width: 1025px) {
-  .minicartIconContainer::before {
-    background-size: 26px;
-    height: 26px;
-    width: 26px;
-  }
-}
 
 @media (min-width: 1025px) {
   .minicartWrapperContainer {
