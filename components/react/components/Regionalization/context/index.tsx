@@ -23,6 +23,8 @@ export const RegionalizationProvider: FC = ({ children }) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const updateSession = useUpdateSession()
   const [regionId, setRegionId] = useState<string>('')
+
+  console.log('🚀 ~ regionId:', regionId)
   const [cityName, setCityName] = useState<string>('')
 
   useEffect(() => {
@@ -42,7 +44,7 @@ export const RegionalizationProvider: FC = ({ children }) => {
         fields: { regionId },
       },
     })
-  }, [regionId])
+  }, [regionId, updateSession])
 
   const setAddressInSession = useCallback(async () => {
     if (!cityName) return

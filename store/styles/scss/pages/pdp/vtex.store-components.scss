@@ -69,11 +69,15 @@
     position: relative;
     bottom: 17px;
     height: 40px;
-    margin-top: 11px;
+    margin-top: 3px;
 
     border-radius: 8px;
     border: 1px solid #2643a8;
     background-color: #fff;
+
+    @media (min-width: 1025px) {
+      margin-top: 11px;
+    }
   }
 
   :global(.vtex-button__label) {

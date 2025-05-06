@@ -48,6 +48,7 @@ export const Cart = {
           inactiveStep(item.name)
         }
 
+        // eslint-disable-next-line vtex/prefer-early-return
         if (index === findIndex) {
           const element: JQuery = $(`#${item.name}`)
 

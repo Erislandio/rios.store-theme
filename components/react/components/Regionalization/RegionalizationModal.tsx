@@ -28,7 +28,49 @@ const CSS_HANDLES: readonly string[] = [
   'secondModal',
   'errorMessage',
   'addressCity',
+  'buttonCloseContainer',
+  'warningText',
+  'warningContainer',
 ]
+
+type CloseButtonProps = {
+  handleCloseModal: () => void
+}
+
+const CloseButtonRegionalizationModal = ({
+  handleCloseModal,
+}: CloseButtonProps) => {
+  return (
+    <button onClick={handleCloseModal}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M0.25 11C0.25 5.06294 5.06294 0.25 11 0.25C16.9371 0.25 21.75 5.06294 21.75 11C21.75 16.9371 16.9371 21.75 11 21.75C5.06294 21.75 0.25 16.9371 0.25 11ZM11 1.75C5.89136 1.75 1.75 5.89136 1.75 11C1.75 16.1086 5.89136 20.25 11 20.25C16.1086 20.25 20.25 16.1086 20.25 11C20.25 5.89136 16.1086 1.75 11 1.75Z"
+          fill="#38434D"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M14.3588 7.64124C14.6517 7.93413 14.6517 8.40901 14.3588 8.7019L8.70196 14.3587C8.40907 14.6516 7.93419 14.6516 7.6413 14.3587C7.34841 14.0659 7.34841 13.591 7.6413 13.2981L13.2982 7.64124C13.591 7.34835 14.0659 7.34835 14.3588 7.64124Z"
+          fill="#38434D"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M7.6413 7.64124C7.93419 7.34835 8.40907 7.34835 8.70196 7.64124L14.3588 13.2981C14.6517 13.591 14.6517 14.0659 14.3588 14.3587C14.0659 14.6516 13.591 14.6516 13.2982 14.3587L7.6413 8.7019C7.34841 8.40901 7.34841 7.93413 7.6413 7.64124Z"
+          fill="#38434D"
+        />
+      </svg>
+    </button>
+  )
+}
 
 const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
   userLastAddress,
@@ -121,6 +163,11 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
       <div className={handles.regionalizationModal}>
         {!showConfirmationModal ? (
           <>
+            <div className={handles.buttonCloseContainer}>
+              <CloseButtonRegionalizationModal
+                handleCloseModal={handleCloseModal}
+              />
+            </div>
             <div>
               <h3 className={handles.modalTitle}>Escolha sua Localização</h3>
               <p className={handles.modalText}>
@@ -195,6 +242,11 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
         ) : (
           <>
             <div className={handles.secondModal}>
+              <div className={handles.buttonCloseContainer}>
+                <CloseButtonRegionalizationModal
+                  handleCloseModal={handleCloseModal}
+                />
+              </div>
               <div>
                 <h3 className={handles.modalTitle}>
                   Deseja alterar sua região?
@@ -225,6 +277,12 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
                 >
                   Alterar minha região
                 </button>
+              </div>
+              <div className={handles.warningContainer}>
+                <p className={handles.warningText}>
+                  Ao realizar alteração de CEP, os itens já adicionados poderão
+                  sofrer indisponibilidade ou alteração de preço
+                </p>
               </div>
             </div>
           </>

@@ -19,15 +19,19 @@
 
   #shipping-data {
     margin-top: 22px;
+    padding: 16px;
 
     .accordion-group.shipping-data.vtex-omnishipping-1-x-shippingDataDev {
-      .accordion-heading {
-        margin: 16px;
-      }
+      padding: 0;
 
-      .accordion-inner.shipping-container {
-        margin: 0 16px;
-      }
+      // .accordion-heading {
+      //   padding: 16px;
+      //   padding-bottom: 0;
+      // }
+
+      // .accordion-inner.shipping-container {
+      //   padding: 0 16px;
+      // }
     }
   }
 

@@ -525,3 +525,8 @@
     height: 13px;
   }
 }
+
+:global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode-forgottenURL) a {
+  display: flex;
+  white-space: nowrap;
+}

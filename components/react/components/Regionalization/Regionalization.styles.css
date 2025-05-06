@@ -106,6 +106,15 @@
   outline: none;
   padding: 20px;
   padding-top: 0;
+  position: relative;
+}
+
+.buttonCloseContainer button {
+  position: absolute;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .regionalizationModalContainer__overlay {
@@ -206,6 +215,24 @@
   font-weight: 400;
   line-height: normal;
   margin: 32px 0;
+}
+
+.warningContainer {
+  background-color: #f9eecc;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.warningText {
+  color: #bc1818;
+  margin: 0;
+  margin-top: 0;
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 

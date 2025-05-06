@@ -245,10 +245,6 @@
     }
   }
 
-  .cart-more-options {
-    display: none;
-  }
-
   .coupon.summary-coupon {
     display: flex;
     float: right;
@@ -710,10 +706,6 @@ label[for='payment-discounts-code'] {
   #shipping-data {
     width: 100% !important;
   }
-}
-
-.srp-summary-result.hide {
-  display: none !important;
 }
 
 .item-link-remove {
