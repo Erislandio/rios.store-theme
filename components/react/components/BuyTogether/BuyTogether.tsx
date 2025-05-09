@@ -233,8 +233,6 @@ const BuyTogether: React.FC = () => {
             return product
           })
 
-        console.log(productFormatted)
-
         setProducts(productFormatted)
       }
     },

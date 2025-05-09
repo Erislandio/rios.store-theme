@@ -75,7 +75,6 @@ const CloseButtonRegionalizationModal = ({
 const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
   userLastAddress,
 }) => {
-  console.log('🚀 ~ userLastAddress:', userLastAddress)
   const { handles } = useCssHandles(CSS_HANDLES)
   const { isOpenModal, setIsOpenModal, setRegionId, setCityName } =
     useRegionalizationContext()

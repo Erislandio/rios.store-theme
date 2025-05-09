@@ -1,7 +1,7 @@
 {
   "vendor": "romazi",
   "name": "components",
-  "version": "1.9.0",
+  "version": "1.9.2",
   "title": "React App Template",
   "builders": {
     "docs": "0.x",

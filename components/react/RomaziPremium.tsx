@@ -53,8 +53,6 @@ const RomaziPremium: StoreFrontFC<{
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isLastSlide, setIsLastSlide] = useState(false)
   const [classAnimation, setClassAnimation] = useState(false)
-
-  console.log('🚀 ~ classAnimation:', classAnimation)
   const [isFirstSlide, setIsFirstSlide] = useState(false)
   const { isMobile } = useDevice()
 
