@@ -3,7 +3,7 @@ import type { FormEvent } from 'react'
 import React, { useCallback, useEffect, useState } from 'react'
 import InputMask from 'react-input-mask'
 import Modal from 'react-modal'
-import { useCssHandles } from 'vtex.css-handles'
+import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { Spinner } from 'vtex.styleguide'
 
 import { useRegionalizationContext } from './context'
@@ -75,6 +75,7 @@ const CloseButtonRegionalizationModal = ({
 const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
   userLastAddress,
 }) => {
+  console.log('🚀 ~ userLastAddress:', userLastAddress)
   const { handles } = useCssHandles(CSS_HANDLES)
   const { isOpenModal, setIsOpenModal, setRegionId, setCityName } =
     useRegionalizationContext()
@@ -87,6 +88,13 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
   const [address, setAddress] = useState<VtexPostalCodeResponse>()
   const [disabledButton, setDisabledButton] = useState<boolean>(true)
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isFirstAccess, setIsFirstAccess] = useState<boolean>(false)
+
+  useEffect(() => {
+    const hasModalBeenShown = localStorage?.getItem('hasModalBeenShown')
+
+    setIsFirstAccess(!!hasModalBeenShown)
+  }, [])
 
   const handleCloseModal = () => {
     setIsOpenModal(false)
@@ -155,19 +163,25 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
   return (
     <Modal
       className={handles.regionalizationModalContainer}
-      overlayClassName={handles.regionalizationModalContainer__overlay}
+      overlayClassName={applyModifiers(
+        handles.regionalizationModalContainer__overlay,
+        !isFirstAccess ? '' : 'first-access'
+      )}
       isOpen={isOpenModal}
       onRequestClose={handleCloseModal}
+      shouldCloseOnOverlayClick={!!userLastAddress}
       ariaHideApp={false}
     >
       <div className={handles.regionalizationModal}>
         {!showConfirmationModal ? (
           <>
-            <div className={handles.buttonCloseContainer}>
-              <CloseButtonRegionalizationModal
-                handleCloseModal={handleCloseModal}
-              />
-            </div>
+            {!!userLastAddress && (
+              <div className={handles.buttonCloseContainer}>
+                <CloseButtonRegionalizationModal
+                  handleCloseModal={handleCloseModal}
+                />
+              </div>
+            )}
             <div>
               <h3 className={handles.modalTitle}>Escolha sua Localização</h3>
               <p className={handles.modalText}>
@@ -242,11 +256,6 @@ const RegionalizationModal: StoreFrontFC<{ userLastAddress: string }> = ({
         ) : (
           <>
             <div className={handles.secondModal}>
-              <div className={handles.buttonCloseContainer}>
-                <CloseButtonRegionalizationModal
-                  handleCloseModal={handleCloseModal}
-                />
-              </div>
               <div>
                 <h3 className={handles.modalTitle}>
                   Deseja alterar sua região?

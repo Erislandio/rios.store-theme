@@ -24,17 +24,7 @@ export const RegionalizationProvider: FC = ({ children }) => {
   const updateSession = useUpdateSession()
   const [regionId, setRegionId] = useState<string>('')
 
-  console.log('🚀 ~ regionId:', regionId)
   const [cityName, setCityName] = useState<string>('')
-
-  useEffect(() => {
-    const hasModalBeenShown = localStorage.getItem('hasModalBeenShown')
-
-    if (!hasModalBeenShown) {
-      setIsOpenModal(true)
-      localStorage.setItem('hasModalBeenShown', 'true')
-    }
-  }, [])
 
   const setRegionIdSession = useCallback(async () => {
     if (!regionId) return

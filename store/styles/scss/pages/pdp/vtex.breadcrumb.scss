@@ -64,7 +64,9 @@
 }
 
 .container--search-breadcrumb {
-  display: flex;
+  @media (min-width: 1025px) {
+    display: flex;
+  }
 }
 
 .link--search-breadcrumb {

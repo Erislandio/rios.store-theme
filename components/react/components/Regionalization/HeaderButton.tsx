@@ -4,6 +4,7 @@ import { useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
 import type { SessionSuccess } from 'vtex.session-client'
 import { useFullSession } from 'vtex.session-client'
+import { Spinner } from 'vtex.styleguide'
 
 import { useRegionalizationContext } from './context'
 import RegionalizationModal from './RegionalizationModal'
@@ -39,6 +40,7 @@ const RegionalizationHeader: StoreFrontFC = () => {
   const session = sessionData?.session as SessionSuccess
   const { setIsOpenModal } = useRegionalizationContext()
   const [userLastAddress, setUserLastAddress] = useState<string>('')
+  const [loading, setLoading] = useState<boolean>(true)
 
   const handleOpenModal = () => {
     setIsOpenModal(true)
@@ -46,7 +48,19 @@ const RegionalizationHeader: StoreFrontFC = () => {
 
   useEffect(() => {
     setUserLastAddress(session?.namespaces?.public?.cityName?.value)
-  }, [session])
+
+    if (!userLastAddress && session) {
+      setIsOpenModal(true)
+
+      return
+    }
+
+    if (!!userLastAddress && session) {
+      setLoading(false)
+    }
+
+    setIsOpenModal(false)
+  }, [session, userLastAddress, setIsOpenModal])
 
   return (
     <div
@@ -68,13 +82,21 @@ const RegionalizationHeader: StoreFrontFC = () => {
           <>
             <span className={handles.regionaliseCity}>Preços válidos: </span>
             <span className={`${handles.regionaliseChange}`}>
-              {!userLastAddress ? 'São Paulo - SP' : userLastAddress}
+              {loading ? (
+                <Spinner color="#1a3eb8" size={24} />
+              ) : (
+                userLastAddress
+              )}
             </span>
           </>
         ) : (
           <>
             <span className={`${handles.regionaliseCity}`}>
-              {!userLastAddress ? 'São Paulo - SP' : userLastAddress}
+              {loading ? (
+                <Spinner color="#1a3eb8" size={24} />
+              ) : (
+                userLastAddress
+              )}
             </span>
             <span className={handles.regionaliseChange}>Alterar</span>
           </>
