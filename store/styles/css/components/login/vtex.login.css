@@ -529,4 +529,19 @@
 :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode-forgottenURL) a {
   display: flex;
   white-space: nowrap;
+  color: var(--Bombay-800, #4d5156);
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+:global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode-forgottenURL) a span {
+  display: none;
 }

@@ -74,6 +74,7 @@
   line-height: normal;
   text-transform: initial;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 .container .element :global(.vtex-flex-layout-0-x-flexRowContent--add-to-cart-container) :global(.vtex-button__label)::before {
   content: "";
@@ -121,5 +122,10 @@
     min-height: 45px;
     max-width: 232px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 1025px) {
+  .containerNormal {
+    width: 247px;
   }
 }

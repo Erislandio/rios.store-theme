@@ -31,16 +31,13 @@
   :global(.vtex-address-form__postalCode) {
     width: 35%;
     position: relative;
+    padding-bottom: 1rem;
   }
 
   :global(.vtex-input__error) {
     position: absolute;
-    right: 0;
-
-    @media (max-width: 1025px) {
-      bottom: 8px;
-      left: 0;
-    }
+    left: 0;
+    bottom: 8px;
   }
 
   :global(.vtex-input__label) {
@@ -67,16 +64,15 @@
   :global(.vtex-button) {
     width: 75%;
     position: relative;
-    bottom: 17px;
+    bottom: 7px;
     height: 40px;
-    margin-top: 3px;
 
     border-radius: 8px;
     border: 1px solid #2643a8;
     background-color: #fff;
 
     @media (min-width: 1025px) {
-      margin-top: 11px;
+      margin-top: 5px;
     }
   }
 
@@ -105,18 +101,43 @@
 }
 
 .shippingTable {
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-top: 0;
+  padding-top: 0;
+
+  &::before {
+    content: 'A escolha do tipo de entrega é feita no carrinho. Os prazos começam a ser contados a partir da confirmação de pagamento.';
+    color: var(--Bombay-800, #4d5156);
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @media (max-width: 1025px) {
+    margin-bottom: 24px;
+  }
 }
 
 .shippingTableRadioBtn {
   display: none;
 }
 
+.shippingTableBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 28px;
+}
+
 .shippingTableRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
+  border: 1px solid #bbc6cb;
+  border-radius: 8px;
+  padding: 6px 2px;
 }
 
 .shippingTableCellDeliveryName {
@@ -129,6 +150,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  padding-bottom: 0;
 }
 
 .shippingTableCellDeliveryEstimate {
@@ -140,6 +162,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: 0;
 }
 
 .shippingTableCellDeliveryPrice {
@@ -276,6 +299,7 @@
 
     :global(.vtex-button) {
       width: 50%;
+      cursor: pointer;
     }
 
     :global(.vtex-input__label) {
