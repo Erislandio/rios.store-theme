@@ -1,0 +1,8 @@
+.imageElement--logo-weonne {
+  height: 15px;
+}
+@media (min-width: 1025px) {
+  .imageElement--logo-weonne {
+    margin-top: 8px;
+  }
+}

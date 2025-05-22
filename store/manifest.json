@@ -1,12 +1,13 @@
 {
-  "vendor": "weonne",
+  "vendor": "romazi",
   "name": "store-theme",
-  "version": "0.0.0",
+  "version": "0.7.4",
   "mustUpdateAt": "2023-01-11",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
-    "docs": "0.x"
+    "docs": "0.x",
+    "pixel": "0.x"
   },
   "scripts": {
     "postreleasy": "vtex publish --verbose"
@@ -61,9 +62,16 @@
     "vtex.product-specifications": "1.x",
     "vtex.tab-layout": "0.x",
     "vtex.condition-layout": "2.x",
-    "vtex.css-handles": "1.x"
+    "vtex.css-handles": "1.x",
+    "romazi.components": "1.x",
+    "romazi.service": "0.x",
+    "vtex.store-newsletter": "1.x",
+    "vtex.store-graphql": "2.x",
+    "vtex.similar-products-variants": "0.x",
+    "vtex.list-context": "0.x"
   },
   "peerDependencies": {
+    "vtex.wish-list": "1.x",
     "vtex.reviews-and-ratings": "3.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"

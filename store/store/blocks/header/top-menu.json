@@ -1,38 +1,81 @@
 {
-  "vtex.menu@2.x:menu#websites": {
-    "children": ["menu-item#shop", "menu-item#about-us"]
-  },
-  "menu-item#shop": {
+  "menu#header-offer": {
     "props": {
-      "id": "menu-item-shop",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "#",
-        "noFollow": false,
-        "tagTitle": "Shop",
-        "text": "Shop"
-      }
-    }
-  },
-  "vtex.menu@2.x:menu#institutional": {
-    "children": ["menu-item#vtex-website"]
-  },
-  "menu-item#vtex-website": {
-    "props": {
-      "id": "menu-item-vtex-website",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "external",
-        "href": "http://vtex.com",
-        "noFollow": false,
-        "tagTitle": "visit vtex.com",
-        "text": "visit vtex.com"
-      }
+      "blockClass": "offers",
+      "items": [
+        {
+          "id": "menu-item-produtos-romazi",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/romazi-premium",
+            "noFollow": false,
+            "tagTitle": "Romazi Premium",
+            "text": "Romazi Premium"
+          }
+        },
+        {
+          "id": "menu-item-tomadas-interruptores",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Tomadas e Interruptores",
+            "text": "Tomadas e Interruptores"
+          }
+        },
+        {
+          "id": "menu-item-extensoes",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Extensões",
+            "text": "Extensões"
+          }
+        },
+        {
+          "id": "menu-item-plugs-adapdatores",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Plugs e Adapdatores",
+            "text": "Plugs e Adapdatores"
+          }
+        },
+        {
+          "id": "menu-item-acessorios-eletronicos",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Acessórios Elétricos",
+            "text": "Acessórios Elétricos"
+          }
+        },
+        {
+          "id": "menu-item-ofertas",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/ofertas",
+            "noFollow": false,
+            "tagTitle": "Ofertas",
+            "text": "Ofertas"
+          }
+        }
+      ]
     }
   }
 }

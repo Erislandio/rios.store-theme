@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.link {
+  color: #4d5156;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.667px;
+  letter-spacing: 0.32px;
+  margin-right: -5px;
+}
+@media (min-width: 1025px) {
+  .link {
+    font-size: 16px;
+  }
+}
+
+.homeLink {
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+.homeLink::after {
+  content: "Início";
+  margin-left: 4px;
+}
+.homeLink .homeIcon {
+  display: none;
+}
+@media (min-width: 1025px) {
+  .homeLink {
+    margin-bottom: 3px;
+  }
+}
+
+.term {
+  color: #1d1d1d;
+  font-family: "Source Sans Pro SemiBold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.667px;
+  letter-spacing: 0.32px;
+  padding: 0;
+}
+@media (min-width: 1025px) {
+  .term {
+    font-size: 16px;
+  }
+}
+
+.arrow--search-breadcrumb:last-child .link {
+  color: #1d1d1d;
+  font-family: "Source Sans Pro SemiBold", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.667px;
+  letter-spacing: 0.32px;
+  padding: 0;
+}
+@media (min-width: 1025px) {
+  .arrow--search-breadcrumb:last-child .link {
+    font-size: 16px;
+  }
+}
+
+.link--search-breadcrumb {
+  margin-left: 6px;
+}
+
+.homeLink--search-breadcrumb {
+  margin-right: 3px;
+  margin-left: -4px;
+  margin-top: 1px;
+  padding-left: 0;
+}
+
+.container--search-breadcrumb {
+  padding-top: 0;
+}
+@media (max-width: 1025px) {
+  .container--search-breadcrumb {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .container--search-breadcrumb .homeLink--search-breadcrumb {
+    margin-top: 2px;
+  }
+}

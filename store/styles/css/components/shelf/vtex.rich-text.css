@@ -1,0 +1,27 @@
+.paragraph--price-text {
+  color: #38434d;
+  text-align: center;
+  font-family: "Source Sans Pro SemiBold", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  margin: 0;
+  margin-left: 3px;
+}
+
+.heading--shelf-title {
+  color: #000;
+  font-family: "Mulish Bold", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0;
+}
+@media (min-width: 640px) {
+  .heading--shelf-title {
+    font-size: 36px;
+  }
+}

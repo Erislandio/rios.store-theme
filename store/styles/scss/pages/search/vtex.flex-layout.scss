@@ -1,0 +1,61 @@
+.flexRowContent--search-info-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  .stretchChildrenWidth {
+    width: 50% !important;
+    &:last-child {
+      display: none;
+    }
+
+    &:first-child {
+      order: 2;
+    }
+  }
+}
+
+.flexRow--search-info-mobile {
+  margin-top: 16px;
+}
+
+.flexRowContent--searchbread {
+  margin-top: -8px;
+}
+
+.flexRow--searchtitle {
+  margin-top: 0;
+}
+
+@media (min-width: 1025px) {
+  .flexRowContent--filter-result {
+    .stretchChildrenWidth:first-child {
+      min-width: 15rem;
+    }
+  }
+
+  .flexRowContent--orderByAndSwitcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flexRowContent--search-info {
+    margin-left: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+  }
+
+  .flexRow--searchtitle {
+    margin-bottom: 0;
+  }
+}
+
+.flexRowContent--filter-result {
+  :global(.vtex-product-summary-2-x-container) {
+    min-height: 525px;
+  }
+}

@@ -1,0 +1,25 @@
+/**
+ * Preheader (components/_preheader.scss)
+ */
+
+/* ----- General ----- */
+
+/**
+ * 1. Hiding preheader.
+ *    More info: https://litmus.com/blog/the-ultimate-guide-to-preview-text-support
+ */
+#preheader {
+  td {
+    /* 1 */
+    color: $color-white;
+    display: none !important;
+    font-size: 1px;
+    line-height: 1px;
+    max-height: 0;
+    max-width: 0;
+    mso-hide: all;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,74 @@
+@media (max-width: 979px) {
+  .cart-template.mini-cart.span4 {
+    display: flex;
+    margin: 0 16px;
+    margin-top: 22px;
+    width: auto;
+  }
+
+  .orderform-template-holder .row-fluid {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px;
+    width: auto;
+  }
+
+  .box-client-info .row-fluid {
+    margin: 0 !important;
+  }
+
+  #shipping-data {
+    margin-top: 22px;
+    padding: 16px;
+
+    .accordion-group.shipping-data.vtex-omnishipping-1-x-shippingDataDev {
+      padding: 0;
+
+      // .accordion-heading {
+      //   padding: 16px;
+      //   padding-bottom: 0;
+      // }
+
+      // .accordion-inner.shipping-container {
+      //   padding: 0 16px;
+      // }
+    }
+  }
+
+  #payment-data {
+    .payment-group {
+      margin: 0 !important;
+    }
+
+    .accordion-heading {
+      margin-bottom: 16px;
+    }
+
+    .box-step {
+      .form-step {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .container-main.container-cart {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto !important;
+
+    .cart-template-holder {
+      margin: 0 16px;
+    }
+
+    .summary-template-holder {
+      margin: 0 16px;
+      width: auto;
+    }
+  }
+}
+
+#checkoutMainContainer {
+  padding: 0 !important;
+}

@@ -1,0 +1,61 @@
+{
+  "custom-div#product-unavailable": {
+    "props": {
+      "blockClass": "container",
+      "flexDirection": "column"
+    },
+    "children": [
+      "responsive-layout.mobile#product-main-unavailable",
+      "responsive-layout.desktop#product-main-unavailable",
+      "flex-layout.row#shelf-pdp",
+      "flex-layout.row#reviews"
+    ]
+  },
+  "responsive-layout.mobile#product-main-unavailable": {
+    "children": [
+      "flex-layout.row#product-main-unavailable",
+      "flex-layout.row#description",
+      "flex-layout.row#specifications"
+    ]
+  },
+  "responsive-layout.desktop#product-main-unavailable": {
+    "children": [
+      "flex-layout.row#product-main-desktop-unavailable"
+    ]
+  },
+  "flex-layout.row#product-main-unavailable": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "paddingTop": 7,
+      "blockClass": "product-main"
+    },
+    "children": [
+      "flex-layout.row#product-image",
+      "availability-subscriber"
+    ]
+  },
+  "flex-layout.row#product-main-desktop-unavailable": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "paddingTop": 7,
+      "blockClass": [
+        "product-main-desktop"
+      ]
+    },
+    "children": [
+      "flex-layout.col#left-col",
+      "flex-layout.row#product-image",
+      "availability-subscriber"
+    ]
+  },
+  "flex-layout.row#availability": {
+    "props": {
+      "blockClass": "message-availability"
+    },
+    "children": []
+  }
+}

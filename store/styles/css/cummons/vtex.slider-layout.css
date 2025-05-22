@@ -1,0 +1,77 @@
+.caretIcon {
+  width: 16px;
+  height: 16px;
+}
+.caretIcon::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background: #e2e2e2;
+  display: flex;
+}
+
+.sliderArrows {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background-color: #e0e0e0 !important;
+  border-radius: 50%;
+}
+.sliderArrows:hover .caretIcon--shelf {
+  color: #bc1818;
+}
+@media (max-width: 1025px) {
+  .sliderArrows {
+    width: 32px;
+    height: 32px;
+  }
+  .sliderArrows:hover .caretIcon--shelf {
+    color: #060606;
+  }
+}
+
+.sliderLeftArrow--shelf {
+  left: -30px;
+}
+@media (max-width: 1025px) {
+  .sliderLeftArrow--shelf {
+    left: -22px;
+  }
+}
+
+.sliderRightArrow--shelf {
+  right: -30px;
+}
+@media (max-width: 1025px) {
+  .sliderRightArrow--shelf {
+    right: -22px;
+  }
+}
+
+.caretIcon--shelf {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s;
+}
+@media (max-width: 1025px) {
+  .caretIcon--shelf {
+    width: 12px !important;
+    height: 12px !important;
+    overflow: visible !important;
+  }
+}
+
+.paginationDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #d9d9d9;
+  transition: ease 0.3s;
+}
+
+.paginationDot--isActive {
+  width: 24px !important;
+  height: 8px !important;
+  border-radius: 12px;
+  background: rgba(13, 22, 53, 0.6);
+}

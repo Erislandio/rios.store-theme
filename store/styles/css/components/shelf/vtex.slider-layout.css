@@ -1,0 +1,30 @@
+.sliderLayoutContainer--shelf {
+  padding: 0 !important;
+}
+
+.sliderTrack--shelf {
+  display: flex;
+  gap: 8px;
+}
+
+.slideChildrenContainer--shelf {
+  height: auto;
+}
+
+.paginationDotsContainer--shelf {
+  bottom: -5%;
+}
+
+@media (min-width: 1025px) {
+  .slide--shelf {
+    height: 540px;
+  }
+  .slideChildrenContainer--shelf {
+    min-height: 332px;
+    height: auto;
+    transition: all 0.3s;
+  }
+  .sliderTrack--shelf {
+    margin: 10px 0 10px 0;
+  }
+}

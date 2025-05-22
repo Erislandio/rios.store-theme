@@ -1,1 +1,78 @@
 // Client email
+
+#orderform-title {
+  display: none !important;
+}
+
+.client-pre-email {
+  flex-direction: column;
+
+  #client-pre-email {
+    font-family: Mulish, sans-serif;
+  }
+
+  #orderform-to-cart {
+    align-items: center;
+    color: #4d5156;
+    display: flex;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    line-height: 14px;
+    position: absolute;
+    right: 18px;
+  }
+
+  #btn-client-pre-email {
+    background: #2643a8;
+    border-radius: 8px;
+  }
+
+  .client-pre-email-h * {
+    color: #60656b;
+    font-family: Mulish, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .emailInfo {
+    h3 {
+      font-family: 'Mulish SemiBold', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    ul {
+      li {
+        span {
+          font-family: Mulish, sans-serif;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 979px) {
+  .client-pre-email {
+    align-items: center;
+    border: 1px solid #bbc6cb;
+    display: flex;
+    flex-direction: column;
+    height: 208% !important;
+    overflow: hidden;
+  }
+
+  fieldset.pre-email.row-fluid {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  #client-profile-data {
+    position: relative;
+  }
+}

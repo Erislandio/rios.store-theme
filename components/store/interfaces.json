@@ -1,5 +1,70 @@
 {
-  "example-component": {
-    "component": "Example"
+  "custom-categories-slider": {
+    "component": "CategoriesSlider"
+  },
+  "custom-banner-text": {
+    "component": "BannerOurLines"
+  },
+  "custom-romazi-premium": {
+    "component": "RomaziPremium"
+  },
+  "custom-exclusive-content": {
+    "component": "ExclusiveContent"
+  },
+  "custom-dynamic-menu": {
+    "component": "CustomMenu"
+  },
+  "custom-div": {
+    "component": "Div",
+    "composition": "children"
+  },
+  "custom-regionalization": {
+    "component": "Regionalization"
+  },
+  "custom-region-summary": {
+    "component": "RegionSummary"
+  },
+  "custom-share": {
+    "component": "CustomSharePdp"
+  },
+  "custom-buy-together": {
+    "component": "BuyTogether"
+  },
+  "custom-reviews": {
+    "component": "CustomReviews",
+    "composition": "children"
+  },
+  "custom-reviews-average": {
+    "component": "CustomReviewsAverage"
+  },
+  "credit-card-payment-methods": {
+    "component": "CreditCardPaymentMethods"
+  },
+  "pix-payment-methods": {
+    "component": "PixPaymentMethods"
+  },
+  "custom-orderplaced-flow": {
+    "component": "OrderPlacedFlow"
+  },
+  "custom-not-found-banner": {
+    "component": "NotFoundBanner"
+  },
+  "custom-faq": {
+    "component": "CustomFaq"
+  },
+  "custom-fac-form": {
+    "component": "FaleConoscoForm"
+  },
+  "custom-menu-institucional": {
+    "component": "CustomMenuInstitucional"
+  },
+  "tolstoy-custom": {
+    "component": "TolstoyCarrousel"
+  },
+  "add-tolstoy-script": {
+    "component": "AddTolstoyScript"
+  },
+  "custom-specification-table": {
+    "component": "CustomSpecificationTable"
   }
 }

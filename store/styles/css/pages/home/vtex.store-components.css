@@ -1,0 +1,17 @@
+.imageElement--banner-img,
+.imageElement--about-us-img,
+.imageElement--double-banner-img {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .imageElement--deals-img {
+    width: 50px;
+  }
+  .imageElement--about-us-img {
+    height: 612px;
+  }
+}
+.imageElement--carousel-main-banner {
+  max-height: unset !important;
+}

@@ -1,0 +1,95 @@
+.emailInputContainer--newsletter-input {
+  margin-bottom: 8px;
+}
+
+.emailInputContainer--newsletter-input :global(.vtex-styleguide-9-x-input),
+.emailInputContainer--newsletter-input :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #fff;
+  font-family: "REM", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.emailInputContainer--newsletter-input :global(.vtex-input-prefix__group) {
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+}
+
+.confirmationCheckboxContainer {
+  margin-bottom: 40px;
+}
+.confirmationCheckboxContainer :global(.vtex-checkbox__line-container) {
+  display: flex;
+  align-items: center;
+}
+.confirmationCheckboxContainer :global(.vtex-checkbox__label) {
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-left: 8px;
+}
+
+.formSubmitContainer--newsletter-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formSubmitContainer--newsletter-submit :global(.vtex-button) {
+  display: flex;
+  width: 307px;
+  height: 58px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #bc1818;
+  border: none;
+}
+.formSubmitContainer--newsletter-submit :global(.vtex-button__label) {
+  color: #fff;
+  text-align: center;
+  font-family: "REM", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1025px) {
+  .newsletterForm--newsletter-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .confirmationCheckboxContainer {
+    position: absolute;
+    top: 87%;
+  }
+  .emailInputContainer--newsletter-input {
+    width: 100%;
+    max-width: 630px;
+    margin-right: 24px;
+  }
+  .formSubmitContainer--newsletter-submit {
+    position: relative;
+    top: 13px;
+  }
+  .confirmationCheckboxContainer {
+    max-width: 430px;
+  }
+}

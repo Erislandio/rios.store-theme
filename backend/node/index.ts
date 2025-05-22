@@ -1,26 +1,31 @@
-import type { ParamsContext, RecorderState, ServiceContext } from '@vtex/api'
+import type { ClientsConfig, RecorderState, ServiceContext } from '@vtex/api'
 import { Service } from '@vtex/api'
+import { routes } from './routes'
+
 import { Clients } from './clients'
-import { resolvers } from './resolvers'
 
-const TIMEOUT_MS = 10 * 1000
+const TIMEOUT_MS = 20000
 
-declare global {
-  type Context = ServiceContext<Clients>
-}
-
-// Export a service that defines resolvers and clients options
-export default new Service<Clients, RecorderState, ParamsContext>({
-  clients: {
-    implementation: Clients,
-    options: {
-      default: {
-        retries: 2,
-        timeout: TIMEOUT_MS,
-      },
+const clients: ClientsConfig<Clients> = {
+  implementation: Clients,
+  options: {
+    default: {
+      retries: 2,
+      timeout: TIMEOUT_MS,
     },
   },
-  graphql: {
-    resolvers,
-  },
+}
+
+declare global {
+  type Context = ServiceContext<Clients, State>
+
+  interface State extends RecorderState {
+    postalCode: string
+    regionId: string
+    userAddress: VtexPostalCodeResponse
+  }
+}
+export default new Service({
+  clients,
+  routes,
 })

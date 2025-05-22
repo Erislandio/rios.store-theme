@@ -1,0 +1,38 @@
+{
+  "store.custom#troca-devolucoes": {
+    "children": [
+      "flex-layout.row#institucional-container-troca-devolucoes"
+    ]
+  },
+  "flex-layout.row#institucional-container-troca-devolucoes": {
+    "title": "institucional conteúdo",
+    "props": {
+      "blockClass": [
+        "container",
+        "institucional-container"
+      ]
+    },
+    "children": [
+      "custom-menu-institucional",
+      "custom-div#institucional-container-texts-troca-devolucoes"
+    ]
+  },
+  "custom-div#institucional-container-texts-troca-devolucoes": {
+    "props": {
+      "blockClass": "institucional-text-container",
+      "flexDirection": "column",
+      "alignItems": "center",
+      "justifyContent": "center"
+    },
+    "children": [
+      "rich-text#texto-1-troca-devolucoes"
+    ]
+  },
+  "rich-text#texto-1-troca-devolucoes": {
+    "title": "texto 1",
+    "props": {
+      "blockClass": "institucional-text",
+      "text": "editar texto no site-editor"
+    }
+  }
+}

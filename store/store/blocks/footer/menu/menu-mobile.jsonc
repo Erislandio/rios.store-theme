@@ -1,0 +1,290 @@
+{
+  "vtex.menu@2.x:menu#footer-mobile": {
+    "props": {
+      "blockClass": "menu-footer",
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#institucional-mobile",
+      "menu-item#ajuda-mobile",
+      "menu-item#politics-mobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#footer-institucional": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#institucional",
+      "menu-item#sobre-nos",
+      "menu-item#fale-conosco",
+      "menu-item#revenda-rozami",
+      "menu-item#blog"
+    ]
+  },
+  "menu-item#institucional-mobile": {
+    "props": {
+      "blockClass": "footer-menu-title",
+      "id": "menu-item-category-institucional",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/d",
+        "noFollow": true,
+        "tagTitle": "institucional",
+        "text": "institucional"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu.accordion#institucional"
+    ]
+  },
+  "vtex.menu@2.x:submenu.accordion#institucional": {
+    "children": [
+      "vtex.menu@2.x:menu#institucional-accordion"
+    ]
+  },
+  "vtex.menu@2.x:menu#institucional-accordion": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#sobre-nos",
+      "menu-item#fale-conosco",
+      "menu-item#revenda-rozami",
+      "menu-item#blog"
+    ]
+  },
+  "menu-item#ajuda-mobile": {
+    "props": {
+      "blockClass": "footer-menu-title",
+      "itemProps": {
+        "tagTitle": "Ajuda",
+        "text": "Ajuda"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu.accordion#ajuda"
+    ]
+  },
+  "vtex.menu@2.x:submenu.accordion#ajuda": {
+    "children": [
+      "vtex.menu@2.x:menu#footer-ajuda-mobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#footer-ajuda-mobile": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#minha-conta",
+      "menu-item#meus-pedidos",
+      "menu-item#troca-devolucao"
+    ]
+  },
+  "menu-item#politics-mobile": {
+    "props": {
+      "blockClass": "footer-menu-title",
+      "itemProps": {
+        "tagTitle": "Políticas",
+        "text": "Políticas"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu.accordion#politics"
+    ]
+  },
+  "vtex.menu@2.x:submenu.accordion#politics": {
+    "children": [
+      "vtex.menu@2.x:menu#footer-politics-mobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#footer-politics-mobile": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#privacy",
+      "menu-item#terms",
+      "menu-item#delivery"
+    ]
+  },
+  "menu-item#privacy": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-category-privacy",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/privacy/d",
+        "noFollow": true,
+        "tagTitle": "Política de privacidade",
+        "text": "Política de privacidade"
+      }
+    }
+  },
+  "menu-item#terms": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-category-terms",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/terms/d",
+        "noFollow": true,
+        "tagTitle": "Termos de uso",
+        "text": "Termos de uso"
+      }
+    }
+  },
+  "menu-item#delivery": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-category-delivery",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/delivery/d",
+        "noFollow": true,
+        "tagTitle": "Política de entrega",
+        "text": "Política de entrega"
+      }
+    }
+  },
+  "menu-item#institucional": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-category-institucional",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/d",
+        "noFollow": true,
+        "tagTitle": "institucional",
+        "text": "institucional"
+      }
+    }
+  },
+  "menu-item#sobre-nos": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-sobre-nos",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/sobre-nos",
+        "noFollow": false,
+        "tagTitle": "Sobre nós",
+        "text": "Sobre nós"
+      }
+    }
+  },
+  "menu-item#fale-conosco": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-fale-conosco",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/fale-conosco",
+        "noFollow": false,
+        "tagTitle": "Fale Conosco",
+        "text": "Fale Conosco"
+      }
+    }
+  },
+  "menu-item#revenda-rozami": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-revenda-rozami",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/revenda-rozami",
+        "noFollow": false,
+        "tagTitle": "Revenda Romazi",
+        "text": "Revenda Romazi"
+      }
+    }
+  },
+  "menu-item#blog": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-blog",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/blog",
+        "noFollow": false,
+        "tagTitle": "Blog",
+        "text": "Blog"
+      }
+    }
+  },
+  "menu-item#minha-conta": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-minha-conta",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/ajuda/minha-conta",
+        "noFollow": true,
+        "tagTitle": "Minha conta",
+        "text": "Minha conta"
+      }
+    }
+  },
+  "menu-item#meus-pedidos": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-meus-pedidos",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/ajuda/meus-pedidos",
+        "noFollow": true,
+        "tagTitle": "Meus pedidos",
+        "text": "Meus pedidos"
+      }
+    }
+  },
+  "menu-item#troca-devolucao": {
+    "props": {
+      "blockClass": "footer-menu-item",
+      "id": "menu-item-troca-devolucao",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/ajuda/troca-devolucao",
+        "noFollow": true,
+        "tagTitle": "Troca e devoluções",
+        "text": "Troca e devoluções"
+      }
+    }
+  }
+}

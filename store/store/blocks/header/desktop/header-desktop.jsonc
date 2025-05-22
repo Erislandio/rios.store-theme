@@ -1,0 +1,133 @@
+{
+  "header-layout.desktop": {
+    "children": [
+      "sticky-layout#desktop"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "custom-div#main-header",
+      // "flex-layout.row#main-header",
+      "flex-layout.row#menus"
+    ]
+  },
+  "custom-div#main-header": {
+    "props": {
+      "alignItems": "flex-end",
+      "width": "100%",
+      "justifyContent": "space-between",
+      "blockClass": [
+        "main-header",
+        "container"
+      ]
+    },
+    "children": [
+      "logo#desktop",
+      "search-bar",
+      "flex-layout.row#header-right-components"
+    ]
+  },
+  "flex-layout.row#main-header": {
+    "props": {
+      "blockClass": [
+        "main-header",
+        "container"
+      ],
+      "verticalAlign": "center",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar",
+      "flex-layout.row#header-right-components"
+    ]
+  },
+  "flex-layout.row#header-right-components": {
+    "props": {
+      "blockClass": "header-right-components",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "login",
+      "link#wishlist-header",
+      "minicart.v2#custom"
+    ]
+  },
+  "link#wishlist-header": {
+    "title": "Favoritos",
+    "children": [
+      "icon#wishlist"
+    ],
+    "props": {
+      "href": "/account#/wishlist",
+      "target": "_top",
+      "blockClass": "wishlist-header"
+    }
+  },
+  "login": {
+    "props": {
+      "emailAndPasswordTitle": "Entrar",
+      "accessCodeTitle": "Código de acesso",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Senha",
+      "showPasswordVerificationIntoTooltip": true,
+      "accountOptionLinks": [
+        {
+          "label": "Meus pedidos",
+          "path": "/account/#/my-orders"
+        },
+        {
+          "label": "Alterar senha",
+          "path": "/account/#/authentication"
+        }
+      ]
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "logo#desktop"
+    ]
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://romazi.vteximg.com.br/arquivos/romazi-logo.png",
+      "width": "225",
+      "height": "60"
+    }
+  },
+  "custom-div#menus": {
+    "props": {
+      "className": "div-menu",
+      "alignItems": "center"
+    },
+    "children": [
+      "custom-dynamic-menu#top-custom",
+      "menu#header-offer"
+    ]
+  },
+  "flex-layout.row#menus": {
+    "props": {
+      "blockClass": [
+        "menus",
+        "container"
+      ],
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "custom-div#menus",
+      "custom-regionalization"
+    ]
+  }
+}

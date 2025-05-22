@@ -1,0 +1,129 @@
+.paragraph--deals-title {
+  color: #bc1818;
+  font-family: "Mulish ExtraBold", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.paragraph--deals {
+  color: #5c5c5c;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.heading--banner-title {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: stretch;
+  margin: 8px 0;
+}
+
+.paragraph--banner-text {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 0;
+  line-height: normal;
+  align-self: stretch;
+  margin: 0;
+}
+
+.heading--newsletter-title {
+  color: #fff;
+  text-align: center;
+  font-family: "REM SemiBold", sans-serif;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.16px;
+  margin: 0;
+}
+
+.paragraph--newsletter-subtitle {
+  color: #fff;
+  font-family: "REM", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-top: 14px;
+}
+
+.wrapper--about-us-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading--about-us-title {
+  color: #222;
+  font-family: "Mulish Bold", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.paragraph--about-us-text {
+  color: #222;
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 24px;
+  margin-bottom: 86px;
+}
+
+@media (min-width: 640px) {
+  .paragraph--about-us-text {
+    text-align: center;
+  }
+}
+@media (min-width: 1025px) {
+  .paragraph--deals-title {
+    font-size: 18px;
+  }
+  .paragraph--deals {
+    font-size: 16px;
+  }
+  .paragraph--newsletter-subtitle {
+    margin-top: 6px;
+  }
+  .wrapper--about-us-title {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .paragraph--about-us-text {
+    margin-left: 0;
+    padding-right: 80px;
+    text-align: justify;
+    margin-top: 12px;
+  }
+  .heading--newsletter-title {
+    text-align: left;
+  }
+}
+@media (min-width: 1120px) {
+  .paragraph--newsletter-subtitle {
+    white-space: nowrap;
+  }
+}

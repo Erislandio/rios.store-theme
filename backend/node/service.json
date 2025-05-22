@@ -1,7 +1,14 @@
 {
   "memory": 256,
-  "ttl": 10,
-  "timeout": 1,
+  "ttl": 60,
+  "timeout": 60,
   "minReplicas": 2,
-  "maxReplicas": 5
+  "maxReplicas": 4,
+  "workers": 3,
+  "routes": {
+    "setRegionId": {
+      "path": "/_v/private/set-region",
+      "public": true
+    }
+  }
 }

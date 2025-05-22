@@ -1,0 +1,36 @@
+/**
+ * Hero (components/_hero.scss)
+ */
+
+/* ----- General ----- */
+.hero {
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  vertical-align: middle;
+  width: 600px;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: auto !important;
+    padding: $grid-gutter * 2;
+  }
+}
+
+/* ----- Inner ----- */
+.hero__inner {
+  height: 350px;
+  vertical-align: middle;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: auto !important;
+  }
+
+  > table {
+    margin: 0 auto;
+    width: 520px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100% !important;
+    }
+  }
+}

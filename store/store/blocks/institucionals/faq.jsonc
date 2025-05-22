@@ -1,0 +1,142 @@
+{
+  "store.custom#faq-custom": {
+    "children": [
+      "flex-layout.row#institucional-container-faq"
+    ]
+  },
+  "flex-layout.row#institucional-container-faq": {
+    "title": "institucional conteúdo",
+    "props": {
+      "blockClass": [
+        "container",
+        "institucional-container"
+      ]
+    },
+    "children": [
+      "custom-menu-institucional",
+      "custom-div#institucional-container-texts-faq"
+    ]
+  },
+  "custom-div#institucional-container-texts-faq": {
+    "props": {
+      "blockClass": "institucional-text-container",
+      "flexDirection": "column",
+      "alignItems": "center",
+      "justifyContent": "center"
+    },
+    "children": [
+      "rich-text#faq",
+      "custom-faq#default",
+      "custom-div#faq-banner-container"
+    ]
+  },
+  "rich-text#faq": {
+    "title": "Faq titulo",
+    "props": {
+      "blockClass": "institucional-text",
+      "text": "## Perguntas frequentes"
+    }
+  },
+  "custom-faq#default": {
+    "props": {
+      "faqs": [
+        {
+          "__editorItemTitle": "1. Como criar uma conta?",
+          "response": "O registo no site é o primeiro passo para efectuar uma encomenda. Basta fazê-lo uma vez. A partir de então todo processo de compra é mais rápido e permite acompanhar todos os estados das tuas encomendas. Para criar uma conta, clica em «Registar/Entrar», preenche o formulário com o teu email e palavra passe e confirma em **Entrar**."
+        },
+        {
+          "__editorItemTitle": "2. Como recupero a minha Senha?",
+          "response": "Caso tenha esquecido a sua palavra-passe, clica em 'REGISTAR/ENTRAR'. Clica no link 'Esqueceste-te da palavra-passe?' Insere o teu endereço de email. \n De seguida, receberás um e-mail da NCR com um link para actualizar a sua palavra-passe. \n Página de instrução na recuperação da password: "
+        },
+        {
+          "__editorItemTitle": "3. Que formas de pagamento aceita a Romazi?",
+          "response": "Transferência Bancária / Depósito / Pagamento por Referência Multicaixa."
+        },
+        {
+          "__editorItemTitle": "4. Qual a diferença entre endereço de expedição e de facturação?",
+          "response": "**O endereço de expedição** é o endereço onde pretendes receber as tuas encomendas (que podes gravar na tua lista de endereços). Para criar um endereço, deves colocar o teu Nome, Morada, Localidade e Código Postal. A qualquer momento, poderás consultar ou alterar a tua lista de endereços. Podes ter vários endereços disponíveis na tua lista, tais como: casa, emprego, etc. \n \n  **O endereço de facturação** é o endereço que constará na factura. Alertamos para o facto de ser imprescindível que o nome do titular da factura seja o titular do número fiscal que facultar. Para escolher os dados de Facturação: Durante a sua encomenda, na página pagamento, clica em « Alterar endereço ». A partir da página « A Minha Conta », clica em « Lista de Endereços », e de seguida em “Adicionar um Endereço”."
+        },
+        {
+          "__editorItemTitle": "5. Quais são as condições para trocar ou devolver artigos?",
+          "response": "O Cliente dispõe de um prazo de 7 dias para resolver o contrato sem pagamento de indemnização e sem necessidade de indicar o motivo, prazo que se conta a partir do dia da recepção da encomenda pelo Cliente. Para tal deverá solicitar o número de devolução e as devidas instruções através do endereço de e-mail [encomendas.online@ncrangola.com](mailto:encomendas.online@ncrangola.com), ou através do serviço de Apoio ao Cliente (Chat) do Sítio www.ncrangola.com, ou através da linha telefónica de apoio +244 222 638 620. \n Encontrarás todos os detalhes da política de devoluções no menu [Termos e condições](/termos-e-condicoes)."
+        },
+        {
+          "__editorItemTitle": "6. Fazem entregas em todo o Brasil?",
+          "response": "Sim, realizamos entregas nas capitais de Província de todo o País. \n Em Luanda as entregas são realizadas em 24 horas e são grátis, após confirmação do pagamento. Na maioria dos casos se a encomenda for confirmada até às 12 horas, conseguimos entregar no mesmo dia. \n Para as Províncias temos um prazo de entrega de 3 a 5 dias úteis, após a confirmação do pagamento."
+        }
+      ]
+    }
+  },
+  "responsive-layout.desktop#faq-banner": {
+    "props": {},
+    "children": [
+      "image#faq"
+    ]
+  },
+  "responsive-layout.mobile#faq-banner": {
+    "props": {},
+    "children": [
+      "image#faq-mobile"
+    ]
+  },
+  "custom-div#faq-banner-container": {
+    "props": {
+      "blockClass": "faq-banner-container",
+      "background": "#e6eaed",
+      "justifyContent": "center",
+      "alignItems": "flex-start",
+      "gap": "32px",
+      "padding": "32px 97px 0 97px"
+    },
+    "children": [
+      "responsive-layout.desktop#faq-banner",
+      "responsive-layout.mobile#faq-banner",
+      "custom-div#faq-banner-text-container"
+    ]
+  },
+  "custom-div#faq-banner-text-container": {
+    "props": {
+      "flexDirection": "column"
+    },
+    "children": [
+      "rich-text#faq-title-banner",
+      "rich-text#faq-text-banner",
+      "link#faq-link-banner"
+    ]
+  },
+  "rich-text#faq-title-banner": {
+    "title": "Titulo banner Faq",
+    "props": {
+      "blockClass": "faq-title-banner",
+      "text": "### Não encontrou o que procurava?"
+    }
+  },
+  "rich-text#faq-text-banner": {
+    "title": "Texto Banner Faq",
+    "props": {
+      "blockClass": "faq-text-banner",
+      "text": "Se sua dúvida não foi respondida, clique abaixo e nos envie sua pergunta. Nossa equipe de atendimento está pronta para ajudar!"
+    }
+  },
+  "link#faq-link-banner": {
+    "title": "Link Banner Faq",
+    "props": {
+      "href": "/",
+      "target": "_top",
+      "blockClass": "faq-link",
+      "label": "Clique aqui para falar conosco"
+    }
+  },
+  "image#faq": {
+    "title": "",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/95d57b2e-63bd-4864-8e15-733695789878___ff5fd16e9d049e12c0d88b1004412018.png"
+    }
+  },
+  "image#faq-mobile": {
+    "title": "",
+    "props": {
+      "src": "https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/9dd7d447-d999-485b-b4ce-4d356d6db342___fff54a3add39e9f77272fe6c570ac6b3.png"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{{#if orders.0.giftRegistryData}}
+  {{orders.0.giftRegistryData.description}}
+{{else}}
+  {{#each ../../shippingData.availableAddresses}}
+    {{#eq ../addressId AddressId}}
+      <strong style="margin-top: 16px;">{{receiverName}}</strong>
+      <p style="font-size: 14px !important; margin: 0;">{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}</p>
+      <p style="font-size: 14px !important; margin: 0;">{{neighborhood}} - {{city}} - {{state}}</p>
+      <p style="font-size: 14px !important; margin: 0;">((i18n.shipping.postalCode)) {{postalCode}}</p>
+    {{/eq}}
+  {{/each}}
+{{/if}}

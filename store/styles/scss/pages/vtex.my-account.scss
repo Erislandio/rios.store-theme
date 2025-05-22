@@ -1,0 +1,761 @@
+:global(.vtex-account) {
+  position: relative;
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    position: relative;
+    top: 20px;
+
+    .userName,
+    .userGreeting {
+      color: #1d1d1d;
+      font-family: 'Mulish Bold';
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .userImage {
+      &::before {
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='32' viewBox='0 0 33 32' fill='none'%3E%3Cg clip-path='url(%23clip0_1108_35051)'%3E%3Cpath d='M22.5029 12C22.5029 13.5913 21.8708 15.1174 20.7456 16.2426C19.6204 17.3679 18.0942 18 16.5029 18C14.9116 18 13.3855 17.3679 12.2603 16.2426C11.1351 15.1174 10.5029 13.5913 10.5029 12C10.5029 10.4087 11.1351 8.88258 12.2603 7.75736C13.3855 6.63214 14.9116 6 16.5029 6C18.0942 6 19.6204 6.63214 20.7456 7.75736C21.8708 8.88258 22.5029 10.4087 22.5029 12Z' fill='%231D1D1F'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.50293 16C0.50293 11.7565 2.18864 7.68687 5.18922 4.68629C8.1898 1.68571 12.2595 0 16.5029 0C20.7464 0 24.8161 1.68571 27.8166 4.68629C30.8172 7.68687 32.5029 11.7565 32.5029 16C32.5029 20.2435 30.8172 24.3131 27.8166 27.3137C24.8161 30.3143 20.7464 32 16.5029 32C12.2595 32 8.1898 30.3143 5.18922 27.3137C2.18864 24.3131 0.50293 20.2435 0.50293 16ZM16.5029 2C13.8665 2.00014 11.2837 2.74473 9.05173 4.14806C6.81981 5.55139 5.0295 7.55642 3.88686 9.93239C2.74422 12.3084 2.2957 14.9587 2.59293 17.5783C2.89015 20.198 3.92104 22.6804 5.56693 24.74C6.98693 22.452 10.1129 20 16.5029 20C22.8929 20 26.0169 22.45 27.4389 24.74C29.0848 22.6804 30.1157 20.198 30.4129 17.5783C30.7102 14.9587 30.2616 12.3084 29.119 9.93239C27.9764 7.55642 26.1861 5.55139 23.9541 4.14806C21.7222 2.74473 19.1394 2.00014 16.5029 2Z' fill='%231D1D1F'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1108_35051'%3E%3Crect width='32' height='32' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        background-position: center;
+        background-size: 33px;
+        background-repeat: no-repeat;
+        width: 33px;
+        height: 33px;
+        display: flex;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      gap: 4px;
+    }
+  }
+
+  .menuLinks {
+    margin-top: 30px;
+    :global(.vtex-account_menu-link) {
+      padding: 6px;
+      color: #373939;
+      font-size: 15px;
+      font-family: 'Mulish', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: normal;
+
+      &:global(.b--action-primary) {
+        border-color: #bc1818 !important;
+        font-family: 'Mulish SemiBold', sans-serif;
+        font-weight: 600;
+      }
+    }
+
+    .menuLink {
+      color: var(--Bombay-700, #6e6e73);
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0.36px;
+      padding: 6px 7px;
+    }
+  }
+
+  .boxContainer {
+    border-radius: 8px;
+    border: 1px solid var(--Bombay-400, #a8b2b7);
+    background: var(--BG-FF, #fff);
+
+    .boxContainerBody {
+      padding-bottom: 0;
+
+      :global(.vtex-dropdown__label),
+      :global(.vtex-input__label),
+      .newsletterContainerTitle,
+      .dataEntryLabel {
+        color: #1d1d1d;
+        font-family: 'Mulish Bold', sans-serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      :global(.vtex-dropdown__button),
+      :global(.vtex-input-prefix__group) input,
+      .newsletterContainerMessage,
+      .dataEntryChildren {
+        color: var(--Bombay-700, #6e6e73);
+        font-family: 'Mulish', sans-serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .passwordBox {
+        margin-bottom: 24px;
+
+        :global(.vtex-checkbox__line-container) {
+          display: flex;
+          align-items: center;
+        }
+
+        :global(.vtex-checkbox__label) {
+          color: var(--Bombay-700, #6e6e73);
+          font-family: 'Mulish', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .firstNameSubContainer,
+      .lastNameSubContainer,
+      .emailContainer,
+      .documentsSubContainer,
+      .genderSubContainer,
+      .dateOfBirthSubContainer,
+      .phoneNumberSubContainer {
+        margin-bottom: 2rem;
+      }
+
+      :global(.vtex-profile-form-3-x-profileContainer) {
+        :global(.vtex-button) {
+          display: flex;
+          height: 44px;
+          padding: 12.371px 14.845px;
+          justify-content: center;
+          align-items: center;
+          gap: 6.186px;
+          align-self: stretch;
+          border-radius: 4px;
+          background: var(--Cobalto-800, #2643a8);
+          margin-bottom: 24px;
+
+          :global(.vtex-button__label) {
+            color: #fff;
+            text-align: center;
+            font-family: 'Source Sans Pro SemiBold', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 14.845px; /* 74.226% */
+            letter-spacing: 0.4px;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      :global(.vtex-profile-form-3-x-profileContainer) {
+        :global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper) {
+          :global(.vtex-button) {
+            background-color: #fff !important;
+            border: 1px solid #2643a8 !important;
+            color: #2643a8 !important;
+          }
+        }
+      }
+    }
+
+    .boxContainerFooter {
+      padding-bottom: 24px;
+      :global(.vtex-button) {
+        display: flex;
+        height: 44px;
+        padding: 12.371px 14.845px;
+        justify-content: center;
+        align-items: center;
+        gap: 6.186px;
+        align-self: stretch;
+        border-radius: 4px;
+        background: var(--Cobalto-800, #2643a8);
+        width: 208px;
+        margin-right: 20%;
+
+        :global(.vtex-button__label) {
+          color: #fff;
+          text-align: center;
+          font-family: 'Source Sans Pro SemiBold', sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 14.845px; /* 74.226% */
+          letter-spacing: 0.4px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  :global(.vtex-pageHeader__container) {
+    padding: 1rem;
+  }
+
+  :global(.vtex-pageHeader__title) {
+    color: #1d1d1d;
+    font-family: 'Mulish Bold';
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  :global(.vtex-pageHeader-link__container) {
+    :global(.vtex__icon-arrow-back) {
+      display: none;
+    }
+    :global(.vtex-button) span {
+      color: var(--Cobalto-800, #2643a8);
+      font-family: 'Source Sans Pro SemiBold', sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px; /* 80% */
+      letter-spacing: 0.4px;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+
+      @media (min-width: 721px) {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M15.0303 18.5303C14.7374 18.8232 14.2626 18.8232 13.9697 18.5303L7.96967 12.5303C7.67678 12.2374 7.67678 11.7626 7.96967 11.4697L13.9697 5.46967C14.2626 5.17678 14.7374 5.17678 15.0303 5.46967C15.3232 5.76256 15.3232 6.23744 15.0303 6.53033L9.56066 12L15.0303 17.4697C15.3232 17.7626 15.3232 18.2374 15.0303 18.5303Z' fill='%232643A8'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+      }
+    }
+  }
+
+  // endereços
+
+  :global(.vtex-account__page) {
+    .addressList__header {
+      :global(.vtex-pageHeader__container) {
+        :global(.vtex-pageHeader__children) {
+          // position: absolute;
+          // top: 55%;
+          // left: 50%;
+
+          :global(.vtex-button) {
+            padding: 12.371px 14.845px;
+
+            :global(.vtex-button__label) {
+              color: #fff;
+              text-align: center;
+              font-family: 'Source Sans Pro SemiBold', sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 14.845px; /* 74.226% */
+              letter-spacing: 0.4px;
+              text-transform: none;
+            }
+          }
+        }
+      }
+    }
+
+    :global(.vtex-account__page-body.vtex-my-account-1-x-addressList) {
+      :global(.flex.items-center.h-100.c-muted-2) {
+        span:global(.t-heading-4.mt0) {
+          color: #1d1d1d;
+          font-family: 'Mulish Bold', sans-serif;
+          font-size: 29px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    :global(.address-summary) {
+      span {
+        color: var(--Bombay-700, #6e6e73);
+        font-family: 'Mulish', sans-serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .boxContainerBody {
+      :global(.vtex-button) {
+        display: flex;
+        height: 44px;
+        padding: 12.371px 14.845px;
+        justify-content: center;
+        align-items: center;
+        gap: 6.186px;
+        align-self: stretch;
+        border-radius: 4px;
+        background: var(--Cobalto-800, #2643a8);
+        margin-bottom: 24px;
+
+        &:disabled {
+          background-color: #b3b3b3;
+        }
+
+        :global(.vtex-button__label) {
+          color: #fff;
+          text-align: center;
+          font-family: 'Source Sans Pro SemiBold', sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 14.845px;
+          letter-spacing: 0.4px;
+          text-transform: capitalize;
+        }
+      }
+
+      div:global(.mt5) {
+        :global(.vtex-button) {
+          background-color: #fff;
+          border-color: #2643a8;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: #2643a8;
+
+            :global(.vtex-button__label) {
+              color: #fff;
+            }
+          }
+
+          :global(.vtex-button__label) {
+            color: #2643a8;
+          }
+        }
+      }
+    }
+
+    .addressBox {
+      .boxContainer {
+        .boxContainerBody {
+          padding: 16px 16px 0 16px;
+        }
+        .boxContainerFooter {
+          :global(.vtex-button) {
+            margin: 0 auto;
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  // Pedidos
+
+  :global(.vtex-account__orders-list) {
+    :global(.vtex-my-orders-app-3-x-orderId) {
+      color: #1d1d1d;
+      font-family: 'Mulish', sans-serif;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    :global(.vtex-my-orders-app-3-x-orderHeaderLabel) {
+      color: var(--Bombay-700, #6e6e73);
+      font-family: 'Mulish';
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    :global(.vtex-my-orders-app-3-x-orderProductQuantityValue),
+    :global(.vtex-my-orders-app-3-x-orderHeaderValue) {
+      color: #000;
+      font-family: 'Mulish SemiBold';
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    :global(.vtex-my-orders-app-3-x-font),
+    :global(.vtex-my-orders-app-3-x-orderProductName) {
+      font-family: 'Mulish';
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #2643a8;
+    }
+
+    :global(.vtex-my-orders-app-3-x-orderProductShipping) {
+      color: var(--Bombay-600, #80888e);
+      font-family: 'Mulish';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    :global(.vtex-my-orders-app-3-x-detailsBtn) {
+      border-radius: 8px;
+      background: var(--Cobalto-800, #2643a8);
+      color: #fff;
+      color: var(--Cobalto-50, #f0f6fe);
+      text-align: center;
+      font-family: 'Mulish', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderDetails) {
+    h3,
+    h2,
+    strong {
+      color: #1d1d1d;
+      font-family: 'Mulish', sans-serif;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    time {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    div:global(.bg-danger) {
+      background-color: #bc1818;
+    }
+
+    div {
+      color: var(--Bombay-700, #6e6e73);
+      font-family: 'Mulish';
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    :global(.vtex-my-orders-app-3-x-productName) {
+      font-family: 'Mulish';
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #2643a8;
+    }
+
+    :global(.vtex-my-orders-app-3-x-sellerName) {
+      font-family: 'Mulish';
+      font-weight: 400;
+    }
+
+    span:global(
+        .dib.br2.pv2.mt2.ph3.f7.f6-xl.fw5.nowrap.bg-muted-1.c-on-muted-1
+      ) {
+      background-color: #2643a8;
+    }
+
+    span {
+      font-family: 'Mulish', sans-serif;
+    }
+  }
+
+  //cartões
+
+  :global(.vtex-render__container-id-my-cards) {
+    :global(.vtex-account__cards-list) {
+      span {
+        color: #1d1d1d;
+        font-family: 'Mulish Bold', sans-serif;
+        font-size: 29px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    :global(.vtex-account__cards-list__header) {
+      :global(.vtex-pageHeader__children) {
+        :global(.vtex-my-cards-1-x-newCardButton) {
+          text-decoration: none;
+          :global(.vtex-button) {
+            border-radius: 4px;
+            background: var(--Cobalto-800, #2643a8);
+            display: flex;
+            width: auto;
+            height: 44px;
+            padding: 12.371px 14.845px;
+            justify-content: center;
+            align-items: center;
+            gap: 6.186px;
+
+            :global(.vtex-button__label) {
+              color: #fff;
+              text-align: center;
+              font-family: 'Source Sans Pro SemiBold', sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 14.845px; /* 74.226% */
+              letter-spacing: 0.4px;
+              text-transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //autenticação
+
+  :global(.vtex_my-authentication_authenticationScreen_container) {
+    :global(.vtex-my-authentication-1-x-loginSessionsBox_title),
+    :global(.vtex-my-authentication-1-x-maskedPassword_title) {
+      color: #1d1d1d;
+      font-family: 'Mulish Bold', sans-serif;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    :global(.vtex-my-authentication-1-x-loginSessionsBox_content),
+    :global(.vtex-my-authentication-1-x-maskedPassword_content) {
+      color: var(--Bombay-700, #6e6e73);
+      font-family: 'Mulish';
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    :global(.vtex-my-authentication-1-x-box_footer) {
+      :global(.vtex-button) {
+        border-radius: 4px;
+        background: var(--Cobalto-800, #2643a8);
+        display: flex;
+        height: 44px;
+        padding: 12.371px 14.845px;
+        justify-content: center;
+        align-items: center;
+        gap: 6.186px;
+        align-self: stretch;
+        margin-left: 1rem;
+        cursor: pointer;
+
+        :global(.vtex-button__label) {
+          color: #fff !important;
+          text-align: center;
+          font-family: 'Source Sans Pro SemiBold', sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 14.845px; /* 74.226% */
+          letter-spacing: 0.4px;
+          text-transform: none;
+        }
+      }
+    }
+
+    :global(.vtex_my-authentication_createPassword_text) {
+      color: var(--Bombay-700, #6e6e73);
+      font-family: 'Mulish', sans-serif;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      span {
+        color: #2643a8;
+        font-family: 'Mulish SemiBold', sans-serif;
+        font-weight: 600;
+      }
+    }
+
+    :global(.vtex-input__label) {
+      color: var(--Cinza-37, #373737);
+      font-family: 'Source Sans Pro';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 137.5% */
+      letter-spacing: 0.32px;
+    }
+
+    :global(.vtex-styleguide-9-x-input) {
+      font-family: 'Mulish';
+    }
+
+    :global(.vtex_my-authentication_resendCodeButton_container) {
+      :global(.vtex-button):hover {
+        background-color: #fff;
+      }
+
+      :global(.vtex-button__label) {
+        color: #2643a8;
+        font-family: 'Mulish';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: none;
+      }
+    }
+
+    :global(.vtex_my-authentication_passValidation_title) {
+      color: #1d1d1d;
+      font-family: 'Mulish Bold';
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    :global(.vtex_my-authentication_passValidation_minLength),
+    :global(.vtex_my-authentication_passValidation_number),
+    :global(.vtex-my-authentication-1-x-passValidation_lower),
+    :global(.vtex-my-authentication-1-x-passValidation_upper) {
+      color: var(--Bombay-700, #6e6e73);
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  :global(.vtex_my-authentication_loginSession_currSessionText) {
+    color: #2643a8;
+    font-family: 'Mulish Bold';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  :global(.vtex-my-authentication-1-x-box_content) {
+    div {
+      color: var(--Bombay-700, #6e6e73);
+      font-family: 'Mulish';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  :global(.vtex-my-authentication-1-x-loginSession_device) {
+    color: #1d1d1d;
+    font-family: 'Mulish Bold' !important;
+    font-size: 17px !important;
+    font-style: normal;
+    font-weight: 700 !important;
+    line-height: normal;
+  }
+
+  :global(.vtex-my-authentication-1-x-box_container) {
+    :global(.vtex_my-authentication_box_footer) {
+      :global(.vtex-button) {
+        border: 1px solid #2643a8;
+        border-radius: 4px;
+        transition: all 0.3s;
+        margin-left: 16px;
+
+        &:hover {
+          background-color: #2643a8;
+
+          :global(.vtex-button__label) {
+            color: #fff;
+          }
+        }
+
+        :global(.vtex-button__label) {
+          color: var(--Cobalto-800, #2643a8);
+          text-align: center;
+          font-family: 'Source Sans Pro SemiBold', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 14.845px; /* 74.226% */
+          letter-spacing: 0.4px;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    .menu {
+      padding: 0 24px;
+    }
+
+    .profile__header {
+      margin-top: 30px;
+    }
+
+    .userInfo {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .boxContainer {
+      .boxContainerFooter {
+        :global(.vtex-button) {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    :global(.vtex-pageHeader__container) {
+      padding-top: 3rem;
+
+      :global(.vtex-pageHeader__title) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    :global(.vtex-account__page-body.vtex-my-account-1-x-addressList) {
+      margin-top: 24px;
+      :global(.flex.items-center.h-100.c-muted-2) {
+        span:global(.t-heading-4.mt0) {
+          font-size: 26px !important;
+          white-space: break-spaces !important;
+        }
+      }
+    }
+
+    .addressBox {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

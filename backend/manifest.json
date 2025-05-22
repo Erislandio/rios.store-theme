@@ -1,9 +1,9 @@
 {
-  "vendor": "weonne",
-  "name": "graphql-example",
-  "version": "0.0.0",
-  "title": "GraphQL Example",
-  "description": "GraphQL Example",
+  "vendor": "romazi",
+  "name": "service",
+  "version": "0.1.1",
+  "title": "Romazi Service",
+  "description": "Romazi Service",
   "mustUpdateAt": "2023-03-10",
   "builders": {
     "docs": "0.x",
@@ -14,7 +14,28 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "httpstat.us",
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
         "path": "/*"
       }
     }

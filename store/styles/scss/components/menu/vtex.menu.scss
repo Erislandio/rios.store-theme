@@ -1,0 +1,21 @@
+.styledLink--offers {
+  color: #f0f6fe;
+  font-family: 'Source Sans Pro SemiBold', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.styledLinkContainer--offers {
+  margin: 0 15px;
+}
+
+@media (min-width: 1025px) {
+  .styledLinkContainer--offers {
+    margin: 0 8px !important;
+  }
+  .styledLink--offers {
+    font-size: 16px;
+  }
+}
