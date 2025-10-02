@@ -23,7 +23,6 @@
     "@types/react-modal": "^3.16.0",
     "@vtex/test-tools": "^3.4.3",
     "@vtex/tsconfig": "^0.4.4",
-    "romazi.components": "https://eduardo--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@1.7.2+build1744206810/public/@types/romazi.components",
     "typescript": "3.9.7",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.30.2/public/@types/vtex.add-to-cart-button",
     "vtex.breadcrumb": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.5/public/@types/vtex.breadcrumb",

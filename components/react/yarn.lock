@@ -4633,10 +4633,6 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-"romazi.components@https://eduardo--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@1.7.2+build1744206810/public/@types/romazi.components":
-  version "1.7.2"
-  resolved "https://eduardo--romazi.myvtex.com/_v/private/typings/linked/v1/romazi.components@1.7.2+build1744206810/public/@types/romazi.components#a2f6010605fd9f81d766fbc7837df9509935451d"
-
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"

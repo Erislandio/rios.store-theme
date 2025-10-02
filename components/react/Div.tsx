@@ -5,16 +5,16 @@ import { useDevice } from 'vtex.device-detector'
 interface DivProps {
   flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
   alignItems?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
-  justifyContent: 'space-between' | 'center' | 'flex-start' | 'flex-end'
+  justifyContent?: 'space-between' | 'center' | 'flex-start' | 'flex-end'
   width?: string
   background?: string
   gap?: string
-  className?: string // Adicionando a prop className
+  className?: string
   children?: React.ReactNode
-  preserveMobileLayout: boolean
-  padding: string
-  paddingMobile: string
-  flexDirectionMobile: string
+  preserveMobileLayout?: boolean
+  padding?: string
+  paddingMobile?: string
+  flexDirectionMobile?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
 }
 
 const CSS_HANDLES = ['divContainer'] as const
@@ -25,10 +25,10 @@ const Div: StoreFrontFC<DivProps> = ({
   width = 'auto',
   background = 'transparent',
   gap = '0',
-  className,
+  className = '',
   children,
   justifyContent = 'flex-start',
-  preserveMobileLayout,
+  preserveMobileLayout = false,
   padding = '0px',
   paddingMobile = '',
   flexDirectionMobile = 'column',
@@ -38,31 +38,21 @@ const Div: StoreFrontFC<DivProps> = ({
 
   const style: React.CSSProperties = {
     display: 'flex',
-    flexDirection,
+    flexDirection: isMobile
+      ? (!preserveMobileLayout && flexDirectionMobile) || flexDirectionMobile || 'column'
+      : flexDirection,
     alignItems,
     width,
     background,
     gap,
     justifyContent,
-    padding,
-  }
-
-  if (!preserveMobileLayout && isMobile) {
-    style.flexDirection = 'column'
-  }
-
-  if (flexDirectionMobile && isMobile) {
-    style.flexDirection = flexDirectionMobile as any
-  }
-
-  if (isMobile) {
-    style.padding = paddingMobile || padding
+    padding: isMobile ? paddingMobile || padding : padding,
   }
 
   return (
     <div
       style={style}
-      className={applyModifiers(handles.divContainer, className || '')}
+      className={applyModifiers(handles.divContainer, className)}
     >
       {children}
     </div>
@@ -75,7 +65,7 @@ Div.schema = {
   properties: {
     flexDirection: {
       type: 'string',
-      enum: ['row', 'column'],
+      enum: ['row', 'column', 'row-reverse', 'column-reverse'],
       default: 'row',
     },
     alignItems: {
@@ -109,6 +99,7 @@ Div.schema = {
     },
     preserveMobileLayout: {
       type: 'boolean',
+      default: false,
     },
     padding: {
       type: 'string',
@@ -120,7 +111,7 @@ Div.schema = {
     },
     flexDirectionMobile: {
       type: 'string',
-      enum: ['row', 'column'],
+      enum: ['row', 'column', 'row-reverse', 'column-reverse'],
       default: 'column',
     },
   },
