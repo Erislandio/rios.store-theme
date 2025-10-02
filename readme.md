@@ -1,10 +1,10 @@
-# Weonne Template Base
+# Ponto da Moda
 
 Este repositório contém o template base para iniciar um projeto VTEX-IO do zero, simplificando o setup inicial e agilizando o desenvolvimento de soluções na plataforma VTEX.
 
 ## Descrição
 
-O **Weonne Template Base** oferece uma estrutura inicial com suporte para várias features da plataforma VTEX, como backend, checkout, componentes customizados e a store. Ele serve como ponto de partida para a construção de lojas online robustas, escaláveis e altamente personalizáveis.
+O **Ponto da Moda** oferece uma estrutura inicial com suporte para várias features da plataforma VTEX, como backend, checkout, componentes customizados e a store. Ele serve como ponto de partida para a construção de lojas online robustas, escaláveis e altamente personalizáveis.
 
 ### Features
 
