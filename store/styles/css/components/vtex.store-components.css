@@ -46,3 +46,31 @@
 .searchBarContainer :global(.vtex-store-components-3-x-suffixWrapper) {
   display: none;
 }
+
+.imageElement--carousel {
+  max-height: unset !important;
+}
+
+.discountInsideContainer {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  transform: rotate(0.052deg);
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  z-index: 9999;
+  right: 1rem;
+  background: var(--red-600, #dc2626);
+  position: absolute;
+  color: var(--white, #fff);
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: var(--white, #fff);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  top: 0.5rem !important;
+  line-height: 140%; /* 16.8px */
+}

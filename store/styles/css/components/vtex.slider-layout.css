@@ -7,3 +7,9 @@
 .sliderLayoutContainer--carousel .paginationDot--carousel--isActive {
   background-color: #FCD200;
 }
+
+.sliderLayoutContainer--shelf {
+  max-width: 1316px;
+  padding: 0px 1rem;
+  margin: 0 auto;
+}

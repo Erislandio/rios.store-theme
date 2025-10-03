@@ -1,11 +1,50 @@
 {
   "product-summary.shelf#default": {
+    "title": "Card de produto",
     "children": [
-      "product-summary-image#custom"
+      "product-summary-image#custom",
+      "custom-div#summary",
+      "add-to-cart-button#summary"
     ]
   },
-  "product-summary-image#custom": {
+  "custom-div#summary": {
+    "title": "Div customizada",
     "props": {
+      "customClass": "vtex-summary__info",
+      "blockClass": "summary"
+    },
+    "children": [
+      "product-summary-name",
+      "custom-div#summary-divider",
+      "product-selling-price#summary",
+      "product-installments#summary"
+    ]
+  },
+  "product-installments#summary": {
+    "title": "product-installments",
+    "props": {
+      "blockClass": "summary",
+      "message": "ou {installmentsNumber}x de {installmentValue} no cartão de crédito sem juros"
+    }
+  },
+  "custom-div#summary-divider": {
+    "props": {
+      "blockClass": [
+        "divider"
+      ]
+    }
+  },
+  "add-to-cart-button#summary": {
+    "props": {
+      "customPixelEventName": "add-to-cart-button",
+      "customPixelEventId": "add-to-cart-button",
+      "blockClass": "summary"
+    }
+  },
+  "product-summary-image#custom": {
+    "title": "product-summary-image",
+    "props": {
+      "blockClass": "custom",
       "height": 525,
       "width": 313,
       "aspectRatio": "3:4",
@@ -14,6 +53,13 @@
         "index": 1
       },
       "fetchpriority": "byPosition"
+    }
+  },
+  "product-selling-price#summary": {
+    "title": "product-selling-price",
+    "props": {
+      "blockClass": "summary",
+      "message": "{sellingPriceValue} à vista"
     }
   }
 }

@@ -24,5 +24,8 @@
   },
   "custom-category-list": {
     "component": "CustomCategoryList"
+  },
+  "custom-middle-banners": {
+    "component": "MiddleBanners"
   }
 }

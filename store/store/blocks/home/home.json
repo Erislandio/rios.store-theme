@@ -6,8 +6,33 @@
       "__fold__.experimentalLazyAssets",
       "__fold__",
       "custom-category-list#category-list",
-      "list-context.product-list#prateleira1"
+      "rich-text#shelf-title",
+      "list-context.product-list#prateleira1",
+      "custom-middle-banners#middle-banners"
     ]
+  },
+
+  "custom-middle-banners#middle-banners": {
+    "title": "Banners do meio",
+    "props": {
+      "items": [
+        {
+          "__editorItemTitle": "Banner 1",
+          "image": "assets/middle1.jpg",
+          "link": "/"
+        },
+        {
+          "__editorItemTitle": "Banner 2",
+          "image": "assets/middle2.jpg",
+          "link": "/"
+        },
+         {
+           "__editorItemTitle": "Banner 3",
+           "image": "assets/middle3.jpg",
+           "link": "/"
+         }
+      ]
+    }
   },
 
   "custom-category-list#category-list": {
@@ -83,6 +108,17 @@
       "orderBy": "OrderByTopSaleDESC"
     }
   },
+
+  "rich-text#shelf-title": {
+    "title": "Titulo da prateleira",
+    "props": {
+      "blockClass": [
+        "shelf-title"
+      ],
+      "text": "Promoções da Semana"
+    }
+  },
+
   "slider-layout#shelf-default": {
     "props": {
       "itemsPerPage": {
@@ -92,6 +128,8 @@
       },
       "infinite": true,
       "fullWidth": false,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "desktopOnly",
       "blockClass": ["shelf"]
     }
   }
