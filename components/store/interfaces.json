@@ -10,5 +10,19 @@
   "custom-menu": {
     "component": "Menu",
     "composition": "children"
+  },
+  "custom-login-button": {
+    "component": "CustomLoginButton",
+    "composition": "children"
+  },
+  "custom-minicart-button": {
+    "component": "CustomMinicartButton",
+    "composition": "children"
+  },
+  "custom-deals": {
+    "component": "CustomDeals"
+  },
+  "custom-category-list": {
+    "component": "CustomCategoryList"
   }
 }

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
 
@@ -21,6 +21,7 @@ type MainMenu = {
 
 type Props = {
   items: MainMenu[]
+  delay?: any // opcional - tempo em ms
 }
 
 const CSS_HANDLES = [
@@ -37,51 +38,142 @@ const CSS_HANDLES = [
   'submenuItemUl',
 ] as const
 
-const ArrowIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-    >
-      <path
-        d="M10 16L14 12L10 8"
-        stroke="black"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+const ArrowIcon: React.FC<{ color?: string }> = ({ color = 'black' }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M10 16L14 12L10 8"
+      stroke={color}
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
+const Submenu: React.FC<{
+  menu: MenuItem
+  mainItem: MainMenu
+  handles: Record<string, string>
+}> = ({ menu, mainItem, handles }) => (
+  <div className={handles.submenu}>
+    <ul className={handles.submenuItemUl}>
+      {menu.subMenu.map((sub) => (
+        <li key={sub.__editorItemTitle} className={handles.submenuItem}>
+          <Link to={sub.href} className={handles.submenuItemLink}>
+            {sub.__editorItemTitle}
+          </Link>
+        </li>
+      ))}
+    </ul>
+    <div className={handles.submenuImageContainer}>
+      <img
+        loading="lazy"
+        src={mainItem.image}
+        alt={mainItem.__editorItemTitle}
+        width={316}
+        height={452}
+        className={handles.submenuImage}
       />
-    </svg>
+    </div>
+  </div>
+)
+
+const DropdownItem: React.FC<{
+  menu: MenuItem
+  menuIndex: number
+  mainItem: MainMenu
+  mainIndex: number
+  activeSubMenu: number | null
+  setActiveMenu: (index: number | null) => void
+  setActiveSubMenu: (index: number | null) => void
+  handles: Record<string, string>
+  delay: any
+}> = ({
+  menu,
+  menuIndex,
+  mainItem,
+  mainIndex,
+  activeSubMenu,
+  setActiveMenu,
+  setActiveSubMenu,
+  handles,
+  delay,
+}) => {
+  const timeoutRef = useRef<any>(null)
+
+  const isActive = activeSubMenu === menuIndex
+  const arrowColor = isActive ? 'white' : 'black'
+
+  const handleEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    timeoutRef.current = setTimeout(() => {
+      setActiveSubMenu(menuIndex)
+      setActiveMenu(mainIndex)
+    }, delay)
+  }
+
+  const handleLeave = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    timeoutRef.current = setTimeout(() => {
+      setActiveSubMenu(null)
+    }, delay)
+  }
+
+  return (
+    <div
+      key={menu.__editorItemTitle}
+      className={handles.dropdownItem}
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
+      {menu.href ? (
+        <Link to={menu.href} className={handles.menuLabel}>
+          {menu.__editorItemTitle}
+          <ArrowIcon color={arrowColor} />
+        </Link>
+      ) : (
+        <>
+          <span className={handles.menuLabel}>
+            {menu.__editorItemTitle}
+            <ArrowIcon color={arrowColor} />
+          </span>
+          {isActive && (
+            <Submenu menu={menu} mainItem={mainItem} handles={handles} />
+          )}
+        </>
+      )}
+    </div>
   )
 }
 
-const ArrowIconWhite = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-    >
-      <path
-        d="M10 16L14 12L10 8"
-        stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  )
-}
-
-const Menu: StoreFrontFC<Props> = ({ items }) => {
+const Menu: StoreFrontFC<Props> = ({ items, delay = 200 }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
 
   const [activeMenu, setActiveMenu] = useState<number | null>(null)
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null)
+
+  const menuTimeoutRef = useRef<any>(null)
+
+  const handleMenuEnter = (index: number) => {
+    if (menuTimeoutRef.current) clearTimeout(menuTimeoutRef.current)
+    menuTimeoutRef.current = setTimeout(() => {
+      setActiveMenu(index)
+    }, delay as any)
+  }
+
+  const handleMenuLeave = () => {
+    if (menuTimeoutRef.current) clearTimeout(menuTimeoutRef.current)
+    menuTimeoutRef.current = setTimeout(() => {
+      setActiveMenu(null)
+      setActiveSubMenu(null)
+    }, delay as any)
+  }
 
   return (
     <nav className={handles.menuContainer}>
@@ -89,11 +181,8 @@ const Menu: StoreFrontFC<Props> = ({ items }) => {
         <div
           key={mainItem.__editorItemTitle}
           className={handles.menuItem}
-          onMouseEnter={() => setActiveMenu(mainIndex)}
-          onMouseLeave={() => {
-            setActiveMenu(null)
-            setActiveSubMenu(null)
-          }}
+          onMouseEnter={() => handleMenuEnter(mainIndex)}
+          onMouseLeave={handleMenuLeave}
         >
           <span className={handles.menuLabel}>
             {mainItem.__editorItemTitle}
@@ -106,68 +195,18 @@ const Menu: StoreFrontFC<Props> = ({ items }) => {
             )}
           >
             {mainItem.menu.map((menu, menuIndex) => (
-              <div
+              <DropdownItem
                 key={menu.__editorItemTitle}
-                className={handles.dropdownItem}
-                onMouseEnter={() => {
-                  setActiveSubMenu(menuIndex)
-                  setActiveMenu(mainIndex)
-                }}
-                onMouseLeave={() => {
-                  setActiveSubMenu(null)
-                }}
-              >
-                {menu.href ? (
-                  <Link to={menu.href} className={handles.menuLabel}>
-                    {menu.__editorItemTitle}
-                    {activeSubMenu === menuIndex ? (
-                      <ArrowIconWhite />
-                    ) : (
-                      <ArrowIcon />
-                    )}
-                  </Link>
-                ) : (
-                  <Fragment>
-                    <span className={handles.menuLabel}>
-                      {menu.__editorItemTitle}{' '}
-                      {activeSubMenu === menuIndex ? (
-                        <ArrowIconWhite />
-                      ) : (
-                        <ArrowIcon />
-                      )}
-                    </span>
-                    <div className={handles.submenu}>
-                      {activeSubMenu === menuIndex ? (
-                        <Fragment>
-                          <ul className={handles.submenuItemUl}>
-                            {menu.subMenu.map((sub) => (
-                              <li className={handles.submenuItem}>
-                                <Link
-                                  key={sub.__editorItemTitle}
-                                  to={sub.href}
-                                  className={handles.submenuItemLink}
-                                >
-                                  {sub.__editorItemTitle}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                          <div className={handles.submenuImageContainer}>
-                            <img
-                              loading="lazy"
-                              src={mainItem.image}
-                              alt={mainItem.__editorItemTitle}
-                              width={316}
-                              height={452}
-                              className={handles.submenuImage}
-                            />
-                          </div>
-                        </Fragment>
-                      ) : null}
-                    </div>
-                  </Fragment>
-                )}
-              </div>
+                menu={menu}
+                menuIndex={menuIndex}
+                mainItem={mainItem}
+                mainIndex={mainIndex}
+                activeSubMenu={activeSubMenu}
+                setActiveMenu={setActiveMenu}
+                setActiveSubMenu={setActiveSubMenu}
+                handles={handles}
+                delay={delay}
+              />
             ))}
           </div>
         </div>
@@ -197,6 +236,9 @@ Menu.schema = {
           image: {
             title: 'Image URL',
             type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
           },
           menu: {
             title: 'Menu',
@@ -230,6 +272,11 @@ Menu.schema = {
           },
         },
       },
+    },
+    delay: {
+      title: 'Delay (ms)',
+      type: 'number',
+      default: 200,
     },
   },
 }

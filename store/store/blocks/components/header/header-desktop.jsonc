@@ -1,5 +1,6 @@
 {
   "header-layout.desktop#desktop": {
+    "title": "Header Desktop",
     "children": [
       "custom-top-bar#default",
       "sticky-layout#desktop"
@@ -9,6 +10,7 @@
     "title": "Top Bar"
   },
   "sticky-layout#desktop": {
+    "title": "Sticky Header",
     "props": {
       "blockClass": "sticky-header"
     },
@@ -21,7 +23,7 @@
     "props": {
       "alignItems": "center",
       "width": "100%",
-      "gap": "3.5rem",
+      "gap": "2.5rem",
       "padding": "0px",
       "background": "#FCD200",
       "justifyContent": "space-between",
@@ -33,360 +35,14 @@
     "children": [
       "logo#desktop",
       "custom-menu#default",
-      "search-bar",
-      "flex-layout.row#header-right-components"
+      "search-bar#default",
+      "custom-login-button#default",
+      "custom-minicart-button#default"
     ]
   },
-  "custom-menu#default": {
-    "props": {
-      "items": [
-        {
-          "__editorItemTitle": "Feminino",
-          "image": "assets/menu.png",
-          "menu": [
-            {
-              "__editorItemTitle": "Novidades",
-              "subMenu": [
-                {
-                  "__editorItemTitle": "Vestidos",
-                  "href": "/feminino/roupas"
-                },
-                {
-                  "__editorItemTitle": "Blusas",
-                  "href": "/feminino/calcados"
-                },
-                {
-                  "__editorItemTitle": "Calças",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Shorts e Bermudas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Saias",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Macacões",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Jaquetas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Fitness",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "All jeans",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Ver tudo",
-                  "href": "/feminino"
-                }
-              ]
-            },
-            {
-              "__editorItemTitle": "Roupas",
-              "subMenu": [
-                {
-                  "__editorItemTitle": "Vestidos",
-                  "href": "/feminino/roupas"
-                },
-                {
-                  "__editorItemTitle": "Blusas",
-                  "href": "/feminino/calcados"
-                },
-                {
-                  "__editorItemTitle": "Calças",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Shorts e Bermudas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Saias",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Macacões",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Jaquetas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Fitness",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "All jeans",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Ver tudo",
-                  "href": "/feminino"
-                }
-              ]
-            },
-            {
-              "__editorItemTitle": "Plus Size",
-              "subMenu": [
-                {
-                  "__editorItemTitle": "Vestidos",
-                  "href": "/feminino/roupas"
-                },
-                {
-                  "__editorItemTitle": "Blusas",
-                  "href": "/feminino/calcados"
-                },
-                {
-                  "__editorItemTitle": "Calças",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Shorts e Bermudas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Saias",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Macacões",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Jaquetas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Fitness",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "All jeans",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Ver tudo",
-                  "href": "/feminino"
-                }
-              ]
-            },
-            {
-              "__editorItemTitle": "Intimo e Essenciais",
-              "subMenu": [
-                {
-                  "__editorItemTitle": "Vestidos",
-                  "href": "/feminino/roupas"
-                },
-                {
-                  "__editorItemTitle": "Blusas",
-                  "href": "/feminino/calcados"
-                },
-                {
-                  "__editorItemTitle": "Calças",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Shorts e Bermudas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Saias",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Macacões",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Jaquetas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Fitness",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "All jeans",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Ver tudo",
-                  "href": "/feminino"
-                }
-              ]
-            },
-            {
-              "__editorItemTitle": "Ver tudo",
-              "href": "/feminino"
-            }
-          ]
-        },
-        {
-          "__editorItemTitle": "Masculino",
-          "image": "assets/menu.png",
-          "menu": [
-            {
-              "__editorItemTitle": "Novidades",
-              "subMenu": [
-                {
-                  "__editorItemTitle": "Vestidos",
-                  "href": "/feminino/roupas"
-                },
-                {
-                  "__editorItemTitle": "Blusas",
-                  "href": "/feminino/calcados"
-                },
-                {
-                  "__editorItemTitle": "Calças",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Shorts e Bermudas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Saias",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Macacões",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Jaquetas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Fitness",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "All jeans",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Ver tudo",
-                  "href": "/feminino"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__editorItemTitle": "Beleza",
-          "image": "assets/menu.png",
-          "menu": [
-            {
-              "__editorItemTitle": "Novidades",
-              "subMenu": [
-                {
-                  "__editorItemTitle": "Vestidos",
-                  "href": "/feminino/roupas"
-                },
-                {
-                  "__editorItemTitle": "Blusas",
-                  "href": "/feminino/calcados"
-                },
-                {
-                  "__editorItemTitle": "Calças",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Shorts e Bermudas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Saias",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Macacões",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Jaquetas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Fitness",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "All jeans",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Ver tudo",
-                  "href": "/feminino"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__editorItemTitle": "Casa",
-          "image": "assets/menu.png",
-          "menu": [
-            {
-              "__editorItemTitle": "Novidades",
-              "subMenu": [
-                {
-                  "__editorItemTitle": "Vestidos",
-                  "href": "/feminino/roupas"
-                },
-                {
-                  "__editorItemTitle": "Blusas",
-                  "href": "/feminino/calcados"
-                },
-                {
-                  "__editorItemTitle": "Calças",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Shorts e Bermudas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Saias",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Macacões",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Jaquetas",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Fitness",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "All jeans",
-                  "href": "/feminino/acessorios"
-                },
-                {
-                  "__editorItemTitle": "Ver tudo",
-                  "href": "/feminino"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
+
   "flex-layout.row#main-header": {
+    "title": "Header",
     "props": {
       "blockClass": [
         "main-header",
@@ -396,23 +52,36 @@
       "fullWidth": true
     },
     "children": [
-      "flex-layout.col#logo-desktop",
-      "search-bar",
-      "flex-layout.row#header-right-components"
+      "logo#desktop",
+      "search-bar#default",
+      "custom-login-button#default",
+      "custom-minicart-button#default"
     ]
   },
-  "flex-layout.row#header-right-components": {
+  "search-bar#default": {
+    "title": "Search Bar",
     "props": {
-      "blockClass": "header-right-components",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true
-    },
+      "placeholder": "Busque por produto, categoria ou marca..."
+    }
+  },
+  "custom-login-button#default": {
+    "title": "Login",
     "children": [
-      "login"
+      "login#default"
     ]
   },
-  "login": {
+
+  "custom-minicart-button#default": {
+    "title": "Minicart",
+    "children": [
+      "minicart.v2#custom"
+    ]
+  },
+
+  "login#default": {
+    "title": "Login componente",
     "props": {
+      "optionsTitle": "Olá! Seja bem vindo (a)!",
       "emailAndPasswordTitle": "Entrar",
       "accessCodeTitle": "Código de acesso",
       "emailPlaceholder": "E-mail",
@@ -430,15 +99,8 @@
       ]
     }
   },
-  "flex-layout.col#logo-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": [
-      "logo#desktop"
-    ]
-  },
   "logo#desktop": {
+    "title": "Logo",
     "props": {
       "title": "Logo",
       "href": "/",
@@ -446,12 +108,5 @@
       "width": "112",
       "height": "50"
     }
-  },
-  "custom-div#menus": {
-    "props": {
-      "className": "div-menu",
-      "alignItems": "center"
-    },
-    "children": []
   }
 }

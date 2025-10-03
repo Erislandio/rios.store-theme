@@ -1,0 +1,9 @@
+.sliderLayoutContainer--carousel .paginationDotsContainer--carousel {
+  bottom: 20px;
+}
+.sliderLayoutContainer--carousel .paginationDot--carousel {
+  background-color: #D9D9D9;
+}
+.sliderLayoutContainer--carousel .paginationDot--carousel--isActive {
+  background-color: #FCD200;
+}

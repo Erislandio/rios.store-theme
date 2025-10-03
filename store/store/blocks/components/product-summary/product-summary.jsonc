@@ -1,0 +1,19 @@
+{
+  "product-summary.shelf#default": {
+    "children": [
+      "product-summary-image#custom"
+    ]
+  },
+  "product-summary-image#custom": {
+    "props": {
+      "height": 525,
+      "width": 313,
+      "aspectRatio": "3:4",
+      "hoverImage": {
+        "criteria": "index",
+        "index": 1
+      },
+      "fetchpriority": "byPosition"
+    }
+  }
+}

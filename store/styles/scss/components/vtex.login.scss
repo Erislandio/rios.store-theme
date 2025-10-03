@@ -1,0 +1,24 @@
+.container {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.box {
+  right: -41px !important;
+  min-width: 12rem !important;
+}
+
+.formTitle {
+  color: var(--Azul, #00579c);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+}
+
+.content {
+  padding: 16px 20px;
+}

@@ -1,0 +1,47 @@
+{
+  "list-context.image-list#main-banner": {
+    "title": "Banner home",
+    "children": [
+      "slider-layout#main-banner"
+    ],
+    "props": {
+      "height": "700px",
+      "preload": true,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      },
+      "images": [
+        {
+          "image": "assets/image.png",
+          "mobileImage": "assets/image.png"
+        },
+        {
+          "image": "assets/image.png",
+          "mobileImage": "assets/image.png"
+        },
+        {
+          "image": "assets/image.png",
+          "mobileImage": "assets/image.png"
+        },
+        {
+          "image": "assets/image.png",
+          "mobileImage": "assets/image.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#main-banner": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always",
+      "blockClass": "carousel"
+    }
+  }
+}
