@@ -8,8 +8,36 @@
       "custom-category-list#category-list",
       "rich-text#shelf-title",
       "list-context.product-list#prateleira1",
-      "custom-middle-banners#middle-banners"
+      "custom-middle-banners#middle-banners",
+      "rich-text#shelf-title-2",
+      "list-context.product-list#prateleira2",
+      "custom-footer-banners#default"
     ]
+  },
+
+  "custom-footer-banners#default": {
+    "props": {
+      "items": [
+        {
+          "__editorItemTitle": "Premium",
+          "image": "assets/banner3-1.png",
+          "subTitle": "Banho",
+          "link": "/"
+        },
+        {
+          "__editorItemTitle": "& Beleza",
+          "image": "assets/banner3-2.png",
+          "link": "/",
+          "subTitle": "Cuidado, amor"
+        },
+        {
+          "__editorItemTitle": "Perfeito",
+          "image": "assets/banner3-3.png",
+          "link": "/",
+          "subTitle": "Sono"
+        }
+      ]
+    }
   },
 
   "custom-middle-banners#middle-banners": {
@@ -17,20 +45,26 @@
     "props": {
       "items": [
         {
-          "__editorItemTitle": "Banner 1",
+          "__editorItemTitle": "Moda íntima",
           "image": "assets/middle1.jpg",
-          "link": "/"
+          "link": "/",
+          "subTitle": "Loucos por",
+          "textLink": "Comprar >"
         },
         {
-          "__editorItemTitle": "Banner 2",
+          "__editorItemTitle": "Jeans",
           "image": "assets/middle2.jpg",
-          "link": "/"
+          "link": "/",
+          "subTitle": "Loucos por",
+          "textLink": "Comprar >"
         },
-         {
-           "__editorItemTitle": "Banner 3",
-           "image": "assets/middle3.jpg",
-           "link": "/"
-         }
+        {
+          "__editorItemTitle": "Sarja",
+          "image": "assets/middle3.jpg",
+          "link": "/",
+          "subTitle": "Loucos por",
+          "textLink": "Comprar >"
+        }
       ]
     }
   },
@@ -109,13 +143,28 @@
     }
   },
 
+  "list-context.product-list#prateleira2": {
+    "title": "Prateleira 2",
+    "blocks": ["product-summary.shelf#default"],
+    "children": ["slider-layout#shelf-default"],
+    "props": {
+      "blockClass": "shelf"
+    }
+  },
+
   "rich-text#shelf-title": {
     "title": "Titulo da prateleira",
     "props": {
-      "blockClass": [
-        "shelf-title"
-      ],
+      "blockClass": ["shelf-title"],
       "text": "Promoções da Semana"
+    }
+  },
+
+  "rich-text#shelf-title-2": {
+    "title": "Titulo da prateleira 2",
+    "props": {
+      "blockClass": ["shelf-title"],
+      "text": "Destaques"
     }
   },
 

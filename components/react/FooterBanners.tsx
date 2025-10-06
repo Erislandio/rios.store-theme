@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCssHandles } from 'vtex.css-handles'
+import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
 
 interface Props {
@@ -25,11 +25,11 @@ const CSS_HANDLES = [
   'middleBannersItemContent',
 ] as const
 
-const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
+const FooterBanners: StoreFrontFC<Props> = ({ items = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
 
   return (
-    <section className={handles.middleBanners}>
+    <section className={applyModifiers(handles.middleBanners, '3-banners')}>
       <div className={handles.middleBannersWrapper}>
         {items.slice(0, 3).map((item, index) => (
           <Link
@@ -39,8 +39,8 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
           >
             {item.image && (
               <img
-                width={422}
-                height={400}
+                width={index === 1 ? 628 : 320}
+                height={380}
                 loading="lazy"
                 className={handles.middleBannersItemIcon}
                 src={item.image}
@@ -54,9 +54,6 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
               <h3 className={handles.middleBannersItemTitle}>
                 {item.__editorItemTitle}
               </h3>
-              <span className={handles.middleBannersItemDescription}>
-                {item.textLink ?? 'Comprar >'}
-              </span>
             </div>
           </Link>
         ))}
@@ -65,9 +62,9 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
   )
 }
 
-MiddleBanners.schema = {
-  title: 'Banner Meio',
-  description: 'Componente de banner do meio',
+FooterBanners.schema = {
+  title: '3 Banners',
+  description: 'Componente de 3 banners',
   type: 'object',
   properties: {
     items: {
@@ -76,9 +73,9 @@ MiddleBanners.schema = {
       maxItems: 3,
       minItems: 3,
       items: {
-        type: 'object',
         maxItems: 3,
         minItems: 3,
+        type: 'object',
         properties: {
           __editorItemTitle: {
             title: 'Label',
@@ -91,11 +88,6 @@ MiddleBanners.schema = {
           link: {
             title: 'Link',
             type: 'string',
-          },
-          textLink: {
-            title: 'Texto do link',
-            type: 'string',
-            default: 'Comprar',
           },
           image: {
             title: 'Image URL',
@@ -110,4 +102,4 @@ MiddleBanners.schema = {
   },
 }
 
-export default MiddleBanners
+export default FooterBanners

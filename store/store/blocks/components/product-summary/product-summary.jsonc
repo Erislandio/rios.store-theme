@@ -2,6 +2,7 @@
   "product-summary.shelf#default": {
     "title": "Card de produto",
     "children": [
+      "custom-product-summary-badge",
       "product-summary-image#custom",
       "custom-div#summary",
       "add-to-cart-button#summary"

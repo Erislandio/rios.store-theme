@@ -27,5 +27,11 @@
   },
   "custom-middle-banners": {
     "component": "MiddleBanners"
+  },
+  "custom-product-summary-badge": {
+    "component": "CustomProductSummaryBadge"
+  },
+  "custom-footer-banners": {
+    "component": "FooterBanners"
   }
 }
