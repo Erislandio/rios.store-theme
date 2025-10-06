@@ -31,7 +31,11 @@
   "custom-product-summary-badge": {
     "component": "CustomProductSummaryBadge"
   },
+
   "custom-footer-banners": {
     "component": "FooterBanners"
+  },
+  "custom-brand-banners": {
+    "component": "BrandBanners"
   }
 }

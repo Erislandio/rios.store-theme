@@ -2,6 +2,7 @@ import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
 import { SliderLayout } from 'vtex.slider-layout'
+import useDatalayer from './hooks/useDatalayer'
 
 interface Props {
   title?: string
@@ -23,6 +24,7 @@ const CSS_HANDLES = [
 
 const CustomCategoryList: StoreFrontFC<Props> = ({ items, title }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
+  const { pushToDataLayer } = useDatalayer()
 
   return (
     <section className={handles.categoryListContainer}>
@@ -36,7 +38,17 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items, title }) => {
       >
         {items?.map((item, index) => (
           <div className={handles.categoryListItems} key={index}>
-            <Link to={item.link} className={handles.categoryListItemLink}>
+            <Link
+              to={item.link}
+              className={handles.categoryListItemLink}
+              onClick={() =>
+                pushToDataLayer({
+                  event: 'category_click',
+                  category_name: item.__editorItemTitle,
+                  category_link: item.link,
+                })
+              }
+            >
               <img
                 width={422}
                 height={603}

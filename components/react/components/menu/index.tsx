@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
+import useDatalayer from '../../hooks/useDatalayer'
 
 type SubMenuItem = {
   __editorItemTitle: string
@@ -103,26 +104,25 @@ const DropdownItem: React.FC<{
   setActiveMenu,
   setActiveSubMenu,
   handles,
-  delay,
 }) => {
-  const timeoutRef = useRef<any>(null)
-
   const isActive = activeSubMenu === menuIndex
   const arrowColor = isActive ? 'white' : 'black'
 
+  const { pushToDataLayer } = useDatalayer()
+
   const handleEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    timeoutRef.current = setTimeout(() => {
-      setActiveSubMenu(menuIndex)
-      setActiveMenu(mainIndex)
-    }, delay)
+    setActiveSubMenu(menuIndex)
+    setActiveMenu(mainIndex)
+    pushToDataLayer({
+      event: 'menuItemHover',
+      menuItemTitle: menu.__editorItemTitle,
+      menuItemLink: menu.href,
+      menuPosition: `${mainIndex + 1}-${menuIndex + 1}`,
+    })
   }
 
   const handleLeave = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current)
-    timeoutRef.current = setTimeout(() => {
-      setActiveSubMenu(null)
-    }, delay)
+    setActiveSubMenu(null)
   }
 
   return (
@@ -133,7 +133,18 @@ const DropdownItem: React.FC<{
       onMouseLeave={handleLeave}
     >
       {menu.href ? (
-        <Link to={menu.href} className={handles.menuLabel}>
+        <Link
+          to={menu.href}
+          className={handles.menuLabel}
+          onClick={() =>
+            pushToDataLayer({
+              event: 'menuItemClick',
+              menuItemTitle: menu.__editorItemTitle,
+              menuItemLink: menu.href,
+              menuPosition: `${mainIndex + 1}-${menuIndex + 1}`,
+            })
+          }
+        >
           {menu.__editorItemTitle}
           <ArrowIcon color={arrowColor} />
         </Link>
@@ -154,25 +165,23 @@ const DropdownItem: React.FC<{
 
 const Menu: StoreFrontFC<Props> = ({ items, delay = 200 }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
+  const { pushToDataLayer } = useDatalayer()
 
   const [activeMenu, setActiveMenu] = useState<number | null>(null)
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null)
 
-  const menuTimeoutRef = useRef<any>(null)
-
   const handleMenuEnter = (index: number) => {
-    if (menuTimeoutRef.current) clearTimeout(menuTimeoutRef.current)
-    menuTimeoutRef.current = setTimeout(() => {
-      setActiveMenu(index)
-    }, delay as any)
+    setActiveMenu(index)
+    pushToDataLayer({
+      event: 'mainMenuHover',
+      mainMenuTitle: items[index].__editorItemTitle,
+      mainMenuPosition: index + 1,
+    })
   }
 
   const handleMenuLeave = () => {
-    if (menuTimeoutRef.current) clearTimeout(menuTimeoutRef.current)
-    menuTimeoutRef.current = setTimeout(() => {
-      setActiveMenu(null)
-      setActiveSubMenu(null)
-    }, delay as any)
+    setActiveMenu(null)
+    setActiveSubMenu(null)
   }
 
   return (

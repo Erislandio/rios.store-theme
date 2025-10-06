@@ -5,6 +5,7 @@ import { useDevice } from 'vtex.device-detector'
 import { useRuntime } from 'vtex.render-runtime'
 import { Button, Spinner } from 'vtex.styleguide'
 import { ConditionalLayout } from './ConditionalLayout'
+import useDatalayer from './hooks/useDatalayer'
 import PROFILE from './queries/profile.gql'
 
 export const ProfileIcon = () => (
@@ -55,6 +56,7 @@ const CustomLoginButton: StoreFrontFC<{
   const { navigate } = useRuntime()
   const [isLoading, setLoading] = useState(false)
   const [isLoading2, setLoading2] = useState(false)
+  const { pushToDataLayer } = useDatalayer()
 
   const { data, loading } = useQuery<{
     profile: { email: string; firstName: string; lastName: string }
@@ -66,7 +68,10 @@ const CustomLoginButton: StoreFrontFC<{
     <div style={{ position: 'relative' }}>
       <button
         className={handles.customLoginButton}
-        onClick={() => setOpen(!isOpen)}
+        onClick={() => {
+          setOpen(!isOpen)
+          pushToDataLayer({ event: 'login_button_click' })
+        }}
       >
         <ConditionalLayout conditional={loading}>
           <Spinner size={20} />
@@ -134,6 +139,7 @@ const CustomLoginButton: StoreFrontFC<{
             <Button
               isLoading={isLoading}
               onClick={() => {
+                pushToDataLayer({ event: 'login_button_dropdown_click_enter' })
                 setLoading(true)
                 navigate({ to: `/login?returnUrl=${window.location.href}` })
               }}
@@ -150,6 +156,7 @@ const CustomLoginButton: StoreFrontFC<{
             <Button
               isLoading={isLoading2}
               onClick={() => {
+                pushToDataLayer({ event: 'login_button_dropdown_click_register' })
                 setLoading2(true)
                 navigate({ to: `/login?returnUrl=${window.location.href}` })
               }}

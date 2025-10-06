@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
+import useDatalayer from './hooks/useDatalayer'
 
 interface Props {
   items?: Array<{
@@ -27,6 +28,7 @@ const CSS_HANDLES = [
 
 const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
+  const { pushToDataLayer } = useDatalayer()
 
   return (
     <section className={handles.middleBanners}>
@@ -36,6 +38,12 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
             key={index}
             className={handles.middleBannersItem}
             to={item.link ?? '#'}
+            onClick={() => pushToDataLayer({
+              event: 'bannerClick',
+              bannerTitle: item.__editorItemTitle,
+              bannerLink: item.link,
+              bannerPosition: index + 1,
+            })}
           >
             {item.image && (
               <img

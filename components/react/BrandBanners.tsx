@@ -5,12 +5,10 @@ import useDatalayer from './hooks/useDatalayer'
 
 interface Props {
   items?: Array<{
-    __editorItemTitle?: string
-    description?: string
+    icon?: string
     link?: string
-    textLink?: string
+    __editorItemTitle?: string
     image?: string
-    subTitle: string
   }>
   backgroundColor?: string
 }
@@ -26,12 +24,12 @@ const CSS_HANDLES = [
   'middleBannersItemContent',
 ] as const
 
-const FooterBanners: StoreFrontFC<Props> = ({ items = [] }) => {
+const BrandBanners: StoreFrontFC<Props> = ({ items = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
   return (
-    <section className={applyModifiers(handles.middleBanners, '3-banners')}>
+    <section className={applyModifiers(handles.middleBanners, 'brand')}>
       <div className={handles.middleBannersWrapper}>
         {items.slice(0, 3).map((item, index) => (
           <Link
@@ -39,16 +37,15 @@ const FooterBanners: StoreFrontFC<Props> = ({ items = [] }) => {
             className={handles.middleBannersItem}
             to={item.link ?? '#'}
             onClick={() => pushToDataLayer({
-              event: 'bannerClick',
-              bannerTitle: item.__editorItemTitle,
-              bannerLink: item.link,
-              bannerPosition: index + 1,
+              event: 'banner_click',
+              banner_name: item.__editorItemTitle,
+              banner_link: item.link
             })}
           >
             {item.image && (
               <img
-                width={index === 1 ? 628 : 320}
-                height={380}
+                width={422}
+                height={400}
                 loading="lazy"
                 className={handles.middleBannersItemIcon}
                 src={item.image}
@@ -56,12 +53,16 @@ const FooterBanners: StoreFrontFC<Props> = ({ items = [] }) => {
               />
             )}
             <div className={handles.middleBannersItemContent}>
-              <span className={handles.middleBannersItemsubTitle}>
-                {item.subTitle}
-              </span>
-              <h3 className={handles.middleBannersItemTitle}>
-                {item.__editorItemTitle}
-              </h3>
+              {item.icon ? (
+                <img
+                  width={120}
+                  height={60}
+                  loading="lazy"
+                  className={handles.middleBannersItemIcon}
+                  src={item.icon}
+                  alt={item.__editorItemTitle || `Icon ${index + 1}`}
+                />
+              ) : null}
             </div>
           </Link>
         ))}
@@ -70,9 +71,9 @@ const FooterBanners: StoreFrontFC<Props> = ({ items = [] }) => {
   )
 }
 
-FooterBanners.schema = {
-  title: '3 Banners',
-  description: 'Componente de 3 banners',
+BrandBanners.schema = {
+  title: 'Banner Marcas',
+  description: 'Componente de banner de marcas',
   type: 'object',
   properties: {
     items: {
@@ -81,24 +82,32 @@ FooterBanners.schema = {
       maxItems: 3,
       minItems: 3,
       items: {
+        type: 'object',
         maxItems: 3,
         minItems: 3,
-        type: 'object',
         properties: {
           __editorItemTitle: {
             title: 'Label',
-            type: 'string',
-          },
-          subTitle: {
-            title: 'Titulo topo',
             type: 'string',
           },
           link: {
             title: 'Link',
             type: 'string',
           },
+          textLink: {
+            title: 'Texto do link',
+            type: 'string',
+            default: 'Comprar',
+          },
           image: {
             title: 'Image URL',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          icon: {
+            title: 'Icon URL',
             type: 'string',
             widget: {
               'ui:widget': 'image-uploader',
@@ -110,4 +119,4 @@ FooterBanners.schema = {
   },
 }
 
-export default FooterBanners
+export default BrandBanners

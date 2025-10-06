@@ -50,7 +50,8 @@ const Div: StoreFrontFC<DivProps> = ({
     background,
     gap,
     justifyContent,
-    padding: isMobile ? paddingMobile || padding : padding,
+    ...(padding ? { padding } : {}),
+    ...(isMobile && paddingMobile ? { padding: paddingMobile } : {}),
   }
 
   return (
