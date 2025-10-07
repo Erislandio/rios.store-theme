@@ -13,11 +13,16 @@
 }
 
 .sliderLayoutContainer--shelf {
-  max-width: 1316px;
-  padding: 0px 1rem;
+  max-width: 1280px;
+  padding: 0px 1rem !important;
   margin: 0 auto;
 }
 
+.slide--shelf {
+  margin-bottom: 0px;
+}
+
+.sliderLayoutContainer--footer,
 .sliderLayoutContainer--shelf {
   .sliderLeftArrow {
     border-radius: 200px;
@@ -41,5 +46,17 @@
     .caretIcon {
       width: 18px;
     }
+  }
+}
+
+.sliderLayoutContainer--footer {
+  max-width: 1280px;
+  padding: 0px 1rem;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding-bottom: 3rem;
+
+  .paginationDot--carousel--isActive {
+    background-color: #00579C;
   }
 }

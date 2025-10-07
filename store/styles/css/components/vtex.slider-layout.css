@@ -9,11 +9,16 @@
 }
 
 .sliderLayoutContainer--shelf {
-  max-width: 1316px;
-  padding: 0px 1rem;
+  max-width: 1280px;
+  padding: 0px 1rem !important;
   margin: 0 auto;
 }
 
+.slide--shelf {
+  margin-bottom: 0px;
+}
+
+.sliderLayoutContainer--footer .sliderLeftArrow,
 .sliderLayoutContainer--shelf .sliderLeftArrow {
   border-radius: 200px;
   border: 1px solid #eaeaea;
@@ -21,9 +26,11 @@
   min-width: 48px;
   min-height: 48px;
 }
+.sliderLayoutContainer--footer .sliderLeftArrow .caretIcon,
 .sliderLayoutContainer--shelf .sliderLeftArrow .caretIcon {
   width: 18px;
 }
+.sliderLayoutContainer--footer .sliderRightArrow,
 .sliderLayoutContainer--shelf .sliderRightArrow {
   border-radius: 200px;
   border: 1px solid #eaeaea;
@@ -31,6 +38,18 @@
   min-width: 48px;
   min-height: 48px;
 }
+.sliderLayoutContainer--footer .sliderRightArrow .caretIcon,
 .sliderLayoutContainer--shelf .sliderRightArrow .caretIcon {
   width: 18px;
+}
+
+.sliderLayoutContainer--footer {
+  max-width: 1280px;
+  padding: 0px 1rem;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding-bottom: 3rem;
+}
+.sliderLayoutContainer--footer .paginationDot--carousel--isActive {
+  background-color: #00579C;
 }

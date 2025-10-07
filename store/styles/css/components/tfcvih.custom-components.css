@@ -1,5 +1,5 @@
 .divContainer--container {
-  max-width: 1316px;
+  max-width: 1280px;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
   margin-left: auto;
@@ -261,7 +261,7 @@
 .customMinicartButton {
   background-color: transparent;
   border: none;
-  padding: 10px;
+  padding: 0px;
   cursor: pointer;
   padding-right: 0px;
   position: relative;
@@ -288,7 +288,7 @@
 }
 
 .customDeals {
-  max-width: 1316px;
+  max-width: 1280px;
   padding: 0px 1rem;
   margin: 60px auto;
 }
@@ -324,7 +324,7 @@
 }
 
 .categoryListContainer {
-  max-width: 1316px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0px 1rem;
   margin-bottom: 60px;
@@ -387,7 +387,7 @@
   border: 1px solid #eaeaea;
   background: #fff !important;
   top: 10%;
-  left: -4rem !important;
+  left: -2rem !important;
   min-width: 48px;
   min-height: 48px;
 }
@@ -406,7 +406,7 @@
   top: 10%;
   min-width: 48px;
   min-height: 48px;
-  right: -4rem !important;
+  right: -2rem !important;
 }
 .categoryListContainer .sliderRightArrow .caretIcon {
   width: 15px;
@@ -428,7 +428,7 @@
 }
 
 .middleBanners {
-  max-width: 1316px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0px 1rem;
   margin-bottom: 60px;
@@ -504,10 +504,28 @@
   gap: 5px;
 }
 
+.middleBanners--3-banners {
+  margin-bottom: 1rem;
+}
 .middleBanners--3-banners .middleBannersWrapper {
   display: flex;
+  margin-bottom: 1rem;
 }
 .middleBanners--3-banners .middleBannersWrapper .middleBannersItemContent {
   width: 100%;
   text-align: center;
+}
+
+.middleBanners--brand .middleBannersWrapper {
+  margin: 0px auto !important;
+}
+.middleBanners--brand .middleBannersItemIcon {
+  width: auto;
+  height: auto;
+}
+
+.divContainer--footer-banner-1 {
+  max-width: 1280px !important;
+  padding: 0px 1rem !important;
+  margin: 60px auto !important;
 }

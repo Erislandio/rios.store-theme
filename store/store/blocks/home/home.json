@@ -10,12 +10,64 @@
       "list-context.product-list#prateleira1",
       "custom-middle-banners#middle-banners",
       "rich-text#shelf-title-2",
+      "__fold__",
       "list-context.product-list#prateleira2",
-      "custom-footer-banners#default"
+      "custom-footer-banners#default",
+      "list-context.image-list#main-banner-footer",
+      "rich-text#shelf-title-3",
+      "custom-brand-banners#default",
+      "rich-text#shelf-title-4",
+      "__fold__",
+      "list-context.product-list#prateleira3",
+      "custom-div#footer-banner-1"
     ]
   },
 
+  "custom-div#footer-banner-1": {
+    "title": "Banner do rodapé 1",
+    "props": {
+      "blockClass": ["footer-banner-1"]
+    },
+    "children": ["image#banner--footer"]
+  },
+
+  "image#banner--footer": {
+    "title": "Banner do rodapé",
+    "props": {
+      "src": "assets/banner--footer.jpg",
+      "alt": "Banner do rodapé",
+      "link": "/"
+    }
+  },
+
+  "custom-brand-banners#default": {
+    "title": "Marcas",
+    "props": {
+      "items": [
+        {
+          "__editorItemTitle": "Marca 1",
+          "image": "assets/image1.png",
+          "link": "/",
+          "icon": "assets/1.png"
+        },
+        {
+          "__editorItemTitle": "Marca 2",
+          "image": "assets/image2.png",
+          "link": "/",
+          "icon": "assets/2.png"
+        },
+        {
+          "__editorItemTitle": "Marca 3",
+          "image": "assets/image3.png",
+          "link": "/",
+          "icon": "assets/3.png"
+        }
+      ]
+    }
+  },
+
   "custom-footer-banners#default": {
+    "title": "Banners do rodapé",
     "props": {
       "items": [
         {
@@ -70,6 +122,7 @@
   },
 
   "custom-category-list#category-list": {
+    "title": "Categorias",
     "props": {
       "title": "MARCA DE ROUPAS COM EXCELÊNCIA EM CADA COSTURA E ACABAMENTO.",
       "items": [
@@ -108,6 +161,7 @@
   },
 
   "custom-deals#custom-deals": {
+    "title": "Ofertas personalizadas",
     "props": {
       "items": [
         {
@@ -152,6 +206,15 @@
     }
   },
 
+  "list-context.product-list#prateleira3": {
+    "title": "Prateleira 2",
+    "blocks": ["product-summary.shelf#default"],
+    "children": ["slider-layout#shelf-default"],
+    "props": {
+      "blockClass": "shelf"
+    }
+  },
+
   "rich-text#shelf-title": {
     "title": "Titulo da prateleira",
     "props": {
@@ -163,12 +226,29 @@
   "rich-text#shelf-title-2": {
     "title": "Titulo da prateleira 2",
     "props": {
-      "blockClass": ["shelf-title"],
+      "blockClass": ["shelf-title", "brands"],
       "text": "Destaques"
     }
   },
 
+  "rich-text#shelf-title-4": {
+    "title": "Titulo da prateleira 3",
+    "props": {
+      "blockClass": ["shelf-title", "brands"],
+      "text": "Chegou agora"
+    }
+  },
+
+  "rich-text#shelf-title-3": {
+    "title": "Titulo marcas",
+    "props": {
+      "blockClass": ["shelf-title"],
+      "text": "Conheca nossas marcas"
+    }
+  },
+
   "slider-layout#shelf-default": {
+    "title": "Layout da prateleira",
     "props": {
       "itemsPerPage": {
         "desktop": 4,
