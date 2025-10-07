@@ -1,0 +1,212 @@
+{
+  "footer": {
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
+  },
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#footer-1",
+      "flex-layout.row#bottem"
+    ]
+  },
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#footer-1",
+      "flex-layout.row#bottem"
+    ]
+  },
+  "flex-layout.row#bottem": {
+    "title": "Footer 2",
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "footer--bottom",
+        "container"
+      ]
+    },
+    "children": [
+      "rich-text#powered",
+      "image#weonne",
+      "image#vtex"
+    ]
+  },
+  "image#weonne": {
+    "title": "Logo Weonne",
+    "props": {
+      "blockClass": [
+        "logo-weonne"
+      ]
+    }
+  },
+  "image#vtex": {
+    "title": "Logo Vtex",
+    "props": {
+      "blockClass": [
+        "logo-vtex"
+      ],
+      "src": ""
+    }
+  },
+  "rich-text#powered": {
+    "title": "Powered",
+    "props": {
+      "blockClass": [
+        "Powered"
+      ],
+      "text": "Powered by"
+    }
+  },
+  "flex-layout.row#footer-1": {
+    "title": "Footer",
+    "props": {
+      "blockClass": [
+        "footer",
+        "container"
+      ]
+    },
+    "children": [
+      "custom-footer#footer-2"
+    ]
+  },
+  "custom-footer#footer-2": {
+    "props": {
+      "institucionals": [
+        {
+          "url": "/quem-somos",
+          "__editorItemTitle": "Quem Somos"
+        },
+        {
+          "url": "/nossas-lojas",
+          "__editorItemTitle": "Nossas lojas"
+        }
+      ],
+      "departaments": [
+        {
+          "slug": "informatica",
+          "id": 1,
+          "url": "/informatica",
+          "__editorItemTitle": "Informática"
+        },
+        {
+          "slug": "beleza-e-saude",
+          "id": 90,
+          "url": "/beleza-e-saude",
+          "__editorItemTitle": "Beleza e Saúde"
+        },
+        {
+          "slug": "escritorio-e-papelaria",
+          "id": 4,
+          "url": "/escritorio-e-papelaria",
+          "__editorItemTitle": "Escritório e Papelaria"
+        },
+        {
+          "slug": "electrodomesticos",
+          "id": 7,
+          "url": "/electrodomesticos",
+          "__editorItemTitle": "Electrodomésticos"
+        },
+        {
+          "slug": "smartphones-e-tablets",
+          "id": 8,
+          "url": "/smartphones-e-tablets",
+          "__editorItemTitle": "Smartphones e Tablets"
+        },
+        {
+          "slug": "energia",
+          "id": 9,
+          "url": "/energia",
+          "__editorItemTitle": "Energia"
+        },
+        {
+          "slug": "imagem-e-som",
+          "id": 10,
+          "url": "/imagem-e-som",
+          "__editorItemTitle": "Imagem e Som"
+        },
+        {
+          "slug": "jogos-consolas-e-desporto",
+          "id": 11,
+          "url": "/jogos-consolas-e-desporto",
+          "__editorItemTitle": "Jogos, Consolas e Desporto"
+        }
+      ],
+      "duvidas": [
+        {
+          "url": "/area-tecnica",
+          "__editorItemTitle": "Assistência Técnica"
+        },
+        {
+          "url": "/faq",
+          "__editorItemTitle": "FAQ"
+        },
+        {
+          "url": "/fale-connosco",
+          "__editorItemTitle": "Fale Connosco"
+        },
+        {
+          "url": "/pos-venda",
+          "__editorItemTitle": "Pós-venda"
+        },
+        {
+          "url": "/termos-e-condicoes",
+          "__editorItemTitle": "Termos e Condições"
+        },
+        {
+          "url": "/formas-de-pagamento",
+          "__editorItemTitle": "Formas de Pagamento"
+        },
+        {
+          "url": "/hp",
+          "__editorItemTitle": "Tinteiros e Toners"
+        },
+        {
+          "url": "/certificacoes",
+          "__editorItemTitle": "Certificações"
+        }
+      ],
+      "suporte": [
+        {
+          "url": "none",
+          "__editorItemTitle": "Segunda a Sexta-Feira. das 8h às 17h"
+        },
+        {
+          "url": "tel:222670000",
+          "__editorItemTitle": "222 670 000"
+        },
+        {
+          "url": "tel:923167000",
+          "__editorItemTitle": "923 167 000"
+        },
+        {
+          "url": "https://api.whatsapp.com/send/?phone=244940370723&text&type=phone_number&app_absent=0",
+          "__editorItemTitle": "940 370 723",
+          "newTab": true
+        },
+        {
+          "url": "mailto=cliente.online@ncrangola.com",
+          "__editorItemTitle": "cliente.online@ncrangola.com"
+        }
+      ],
+      "formasPagamento": [
+
+      ],
+      "redesSociais": [
+
+      ],
+      "siteSeguro": [
+        {
+          "__editorItemTitle": "PCI",
+          "url": "https://secure.vtex.com/?an=ncrangola"
+
+        },
+        {
+          "__editorItemTitle": "Iso",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

@@ -5,7 +5,7 @@
       "items": [
         {
           "__editorItemTitle": "Feminino",
-          "image": "assets/menu.png",
+          "image": "/arquivos/menu.png",
           "menu": [
             {
               "__editorItemTitle": "Novidades",
@@ -148,7 +148,7 @@
         },
         {
           "__editorItemTitle": "Masculino",
-          "image": "assets/menu.png",
+          "image": "/arquivos/menu.png",
           "menu": [
             {
               "__editorItemTitle": "Novidades",
@@ -229,7 +229,7 @@
         },
         {
           "__editorItemTitle": "Beleza",
-          "image": "assets/menu.png",
+          "image": "/arquivos/menu.png",
           "menu": [
             {
               "__editorItemTitle": "Maquiagem",
@@ -298,7 +298,7 @@
         },
         {
           "__editorItemTitle": "Casa",
-          "image": "assets/menu.png",
+          "image": "/arquivos/menu.png",
           "menu": [
             {
               "__editorItemTitle": "Cama, Mesa e Banho",

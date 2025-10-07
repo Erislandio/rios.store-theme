@@ -5,6 +5,10 @@
   backdrop-filter: blur(3.5px);
   border: 1px solid var(--gray-100, #f4f4f5);
 
+  .element {
+    padding: 0px;
+  }
+
   :global(.vtex-summary__info) {
     position: absolute !important;
     bottom: 0px !important;
@@ -80,6 +84,7 @@
   }
 
   .imageNormal {
+    scale: 1.5;
     height: auto !important;
   }
 }

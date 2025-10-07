@@ -46,8 +46,8 @@
     "title": "product-summary-image",
     "props": {
       "blockClass": "custom",
-      "height": 525,
-      "width": 313,
+      "height": 780,
+      "width": 450,
       "aspectRatio": "3:4",
       "hoverImage": {
         "criteria": "index",

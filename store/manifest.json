@@ -1,5 +1,5 @@
 {
-  "vendor": "tfcvih",
+  "vendor": "pontodamoda",
   "name": "store-theme",
   "version": "0.0.1",
   "mustUpdateAt": "2023-01-11",
@@ -67,7 +67,7 @@
     "vtex.store-graphql": "2.x",
     "vtex.similar-products-variants": "0.x",
     "vtex.list-context": "0.x",
-    "tfcvih.custom-components": "0.x"
+    "pontodamoda.custom-components": "0.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",

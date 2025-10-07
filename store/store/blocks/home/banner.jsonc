@@ -14,32 +14,32 @@
       },
       "images": [
         {
-          "image": "assets/image.png",
-          "mobileImage": "assets/image.png",
+          "image": "/arquivos/image.png",
+          "mobileImage": "/arquivos/image.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "assets/image.png",
-          "mobileImage": "assets/image.png",
+          "image": "/arquivos/image.png",
+          "mobileImage": "/arquivos/image.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "assets/image.png",
-          "mobileImage": "assets/image.png",
+          "image": "/arquivos/image.png",
+          "mobileImage": "/arquivos/image.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "assets/image.png",
-          "mobileImage": "assets/image.png",
+          "image": "/arquivos/image.png",
+          "mobileImage": "/arquivos/image.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,
@@ -63,24 +63,24 @@
       },
       "images": [
         {
-          "image": "assets/footer.png",
-          "mobileImage": "assets/footer.png",
+          "image": "/arquivos/footer.png",
+          "mobileImage": "/arquivos/footer.png",
           "width": "1300px",
           "height": "300px",
           "experimentalSetExplicitDimensions": true,
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "assets/footer.png",
-          "mobileImage": "assets/footer.png",
+          "image": "/arquivos/footer.png",
+          "mobileImage": "/arquivos/footer.png",
           "width": "1368",
           "height": "300px",
           "experimentalSetExplicitDimensions": true,
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "assets/footer.png",
-          "mobileImage": "assets/footer.png",
+          "image": "/arquivos/footer.png",
+          "mobileImage": "/arquivos/footer.png",
           "width": "1368",
           "height": "300px",
           "experimentalSetExplicitDimensions": true,

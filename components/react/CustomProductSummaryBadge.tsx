@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+import { ProductSummaryContext } from 'vtex.product-summary-context'
 
 const Icon = () => (
   <svg
@@ -18,7 +19,15 @@ const Icon = () => (
 const CSS_HANDLES = ['customProductSummaryBadge'] as const
 
 export default function CustomProductSummaryBadge() {
+  const { product } = ProductSummaryContext.useProductSummary()
+
+  const hasColorVariation = product?.skuSpecifications?.some(
+    (spec) => spec?.field?.name?.toLowerCase() === 'cor'
+  )
+
   const { handles } = useCssHandles(CSS_HANDLES)
+
+  if (!hasColorVariation) return null
 
   return (
     <div className={handles.customProductSummaryBadge}>

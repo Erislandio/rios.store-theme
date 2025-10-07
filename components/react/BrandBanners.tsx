@@ -58,7 +58,10 @@ const BrandBanners: StoreFrontFC<Props> = ({ items = [] }) => {
                   width={120}
                   height={60}
                   loading="lazy"
-                  className={handles.middleBannersItemIcon}
+                  style={{
+                    objectFit: 'cover'
+                  }}
+                  className={applyModifiers(handles.middleBannersItemIcon, 'icon')}
                   src={item.icon}
                   alt={item.__editorItemTitle || `Icon ${index + 1}`}
                 />
