@@ -42,6 +42,7 @@
     "component": "CustomInstagram"
   },
   "custom-footer": {
-    "component": "Footer"
+    "component": "Footer",
+    "composition": "children"
   }
 }

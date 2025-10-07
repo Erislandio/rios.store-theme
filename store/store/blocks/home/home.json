@@ -81,7 +81,7 @@
     "props": {
       "blockClass": ["footer-banner-1"]
     },
-    "children": ["image#banner--footer"]
+    "children": ["image#banner--footer-2"]
   },
 
   "image#banner--footer-2": {
@@ -245,6 +245,7 @@
     "blocks": ["product-summary.shelf#default"],
     "children": ["slider-layout#shelf-default"],
     "props": {
+      "hideUnavailableItems": true,
       "blockClass": "shelf",
       "orderBy": "OrderByTopSaleAsc"
     }
@@ -255,7 +256,9 @@
     "blocks": ["product-summary.shelf#default"],
     "children": ["slider-layout#shelf-default"],
     "props": {
-      "blockClass": "shelf"
+      "hideUnavailableItems": true,
+      "blockClass": "shelf",
+      "orderBy": "OrderByTopSaleDesc"
     }
   },
 
@@ -264,7 +267,9 @@
     "blocks": ["product-summary.shelf#default"],
     "children": ["slider-layout#shelf-default"],
     "props": {
-      "blockClass": "shelf"
+      "hideUnavailableItems": true,
+      "blockClass": "shelf",
+      "orderBy": "OrderByReleaseDateDESC"
     }
   },
 

@@ -16,7 +16,10 @@ export interface FooterLink {
 }
 
 export interface Props {
+  atendimento: FooterLink[]
   institucionals: FooterLink[]
+  servicos: FooterLink[]
+  voceNoPonto: FooterLink[]
   duvidas: FooterLink[]
   suporte: FooterLink[]
   formasPagamento: FooterLink[]
@@ -34,28 +37,37 @@ const CSS_HANDLES = [
   'footerContainerH4',
   'footerContainerBottom',
   'footerContainerLink',
+  'newsletterFormDescription',
+  'newsletterForm',
+  'newsletterFormTitle',
 ] as const
 
 const Footer: StoreFrontFC<Props> = ({
   logo,
+  atendimento,
   institucionals,
+  servicos,
+  voceNoPonto,
   duvidas,
   suporte,
   redesSociais,
   formasPagamento,
   siteSeguro,
+  children,
 }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
-
   const { isMobile } = useDevice()
 
   if (isMobile) {
     return (
       <FooterMobile
         logo={logo}
+        atendimento={atendimento}
+        institucionals={institucionals}
+        servicos={servicos}
+        voceNoPonto={voceNoPonto}
         duvidas={duvidas}
         formasPagamento={formasPagamento}
-        institucionals={institucionals}
         redesSociais={redesSociais}
         siteSeguro={siteSeguro}
         suporte={suporte}
@@ -64,131 +76,77 @@ const Footer: StoreFrontFC<Props> = ({
   }
 
   return (
-    <section className={handles.footerContainer}>
-      <div>
-        <img alt="NCR" src={logo} className={handles.footerContainerLogo} />
-        <h4 className={applyModifiers(handles.footerContainerH4, 'siteSeguro')}>
-          Site Seguro
-        </h4>
-        <ul
-          className={applyModifiers(handles.footerContainerUl, 'site-seguro')}
+    <div>
+      <section className={handles.footerContainer}>
+        {/* Logo + Newsletter + Site Seguro */}
+        <div className={handles.footerContainerLogo}>
+          <div className={handles.newsletterForm}>
+            <h4 className={handles.newsletterFormTitle}>Newsletter</h4>
+            <p className={handles.newsletterFormDescription}>
+              Receba as nossas novidades!
+            </p>
+            {children}
+          </div>
+        </div>
+
+        <div
+          className={applyModifiers(
+            handles.footerContainerWrapper,
+            'atendimento'
+          )}
         >
-          {siteSeguro.map((item) => (
-            <li
-              key={item.__editorItemTitle}
-              className={handles.footerContainerLi}
-            >
-              <Link
-                className={handles.footerContainerLink}
-                to={item.url}
-                fetchPage
+          <h4 className={handles.footerContainerH4}>Atendimento</h4>
+          <ul className={handles.footerContainerUl}>
+            {atendimento.map((item, index, array) => (
+              <li
+                key={item.__editorItemTitle}
+                className={handles.footerContainerLi}
               >
-                {item.image ? (
-                  <img
-                    src={item.image}
-                    alt={item.__editorItemTitle}
-                    title={item.__editorItemTitle}
-                    loading="lazy"
-                  />
-                ) : null}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div
-        className={applyModifiers(handles.footerContainerWrapper, 'duvidas')}
-      >
-        <h4 className={handles.footerContainerH4}>Dúvidas</h4>
-        <ul className={handles.footerContainerUl}>
-          {duvidas.map((item) => (
-            <li
-              key={item.__editorItemTitle}
-              className={handles.footerContainerLi}
-            >
-              <Link
-                className={handles.footerContainerLink}
-                target={item.newTab ? '_blank' : ''}
-                to={item.url}
-                fetchPage
-                rel="noreferrer"
-              >
-                {item.icon ? (
-                  <img
-                    loading="eager"
-                    src={item.icon}
-                    alt={item.__editorItemTitle}
-                    title={item.__editorItemTitle}
-                  />
-                ) : null}
-                {item.__editorItemTitle}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div
-        className={applyModifiers(
-          handles.footerContainerWrapper,
-          'institucional'
-        )}
-      >
-        <h4 className={handles.footerContainerH4}>Institucional</h4>
-        <ul className={handles.footerContainerUl}>
-          {institucionals.map((item) => (
-            <li
-              key={item.__editorItemTitle}
-              className={handles.footerContainerLi}
-            >
-              <Link
-                className={handles.footerContainerLink}
-                target={item.newTab ? '_blank' : ''}
-                to={item.url}
-                fetchPage
-                rel="noreferrer"
-              >
-                {item.icon ? (
-                  <img
-                    loading="eager"
-                    src={item.icon}
-                    alt={item.__editorItemTitle}
-                    title={item.__editorItemTitle}
-                  />
-                ) : null}
-                {item.__editorItemTitle}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div
-        className={applyModifiers(handles.footerContainerWrapper, 'suporte')}
-      >
-        <h4 className={handles.footerContainerH4}>Suporte</h4>
-        <ul className={handles.footerContainerUl}>
-          {suporte.map((item) => (
-            <li
-              key={item.__editorItemTitle}
-              className={handles.footerContainerLi}
-            >
-              {item.url === 'none' ? (
-                <span
+                <Link
                   className={applyModifiers(
                     handles.footerContainerLink,
-                    'none'
+                    item.url.includes('mailto:')
+                      ? 'email'
+                      : index === array.length - 1
+                      ? 'last'
+                      : ''
                   )}
+                  target={item.newTab ? '_blank' : ''}
+                  to={item.url}
+                  fetchPage
+                  rel="noreferrer"
                 >
-                  {item.icon ? (
+                  {item.icon && (
                     <img
-                      loading="eager"
+                      loading="lazy"
                       src={item.icon}
                       alt={item.__editorItemTitle}
                       title={item.__editorItemTitle}
+                      width={20}
+                      height={20}
                     />
-                  ) : null}
+                  )}
                   {item.__editorItemTitle}
-                </span>
-              ) : (
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Institucional */}
+        <div
+          className={applyModifiers(
+            handles.footerContainerWrapper,
+            'institucional'
+          )}
+        >
+          <h4 className={handles.footerContainerH4}>Institucional</h4>
+          <ul className={handles.footerContainerUl}>
+            {institucionals.map((item) => (
+              <li
+                key={item.__editorItemTitle}
+                className={handles.footerContainerLi}
+              >
                 <Link
                   className={handles.footerContainerLink}
                   target={item.newTab ? '_blank' : ''}
@@ -196,88 +154,205 @@ const Footer: StoreFrontFC<Props> = ({
                   fetchPage
                   rel="noreferrer"
                 >
-                  {item.icon ? (
+                  {item.icon && (
+                    <img
+                      loading="lazy"
+                      src={item.icon}
+                      alt={item.__editorItemTitle}
+                      title={item.__editorItemTitle}
+                      width={20}
+                      height={20}
+                    />
+                  )}
+                  {item.__editorItemTitle}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Serviços */}
+        <div
+          className={applyModifiers(handles.footerContainerWrapper, 'servicos')}
+        >
+          <h4 className={handles.footerContainerH4}>Serviços</h4>
+          <ul className={handles.footerContainerUl}>
+            {servicos.map((item) => (
+              <li
+                key={item.__editorItemTitle}
+                className={handles.footerContainerLi}
+              >
+                <Link
+                  className={handles.footerContainerLink}
+                  target={item.newTab ? '_blank' : ''}
+                  to={item.url}
+                  fetchPage
+                  rel="noreferrer"
+                >
+                  {item.icon && (
+                    <img
+                      loading="lazy"
+                      src={item.icon}
+                      width={20}
+                      height={20}
+                      alt={item.__editorItemTitle}
+                      title={item.__editorItemTitle}
+                    />
+                  )}
+                  {item.__editorItemTitle}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Você no Ponto */}
+        <div
+          className={applyModifiers(
+            handles.footerContainerWrapper,
+            'voceNoPonto'
+          )}
+        >
+          <h4 className={handles.footerContainerH4}>Você no Ponto</h4>
+          <ul className={handles.footerContainerUl}>
+            {voceNoPonto.map((item) => (
+              <li
+                key={item.__editorItemTitle}
+                className={handles.footerContainerLi}
+              >
+                <Link
+                  className={handles.footerContainerLink}
+                  target={item.newTab ? '_blank' : ''}
+                  to={item.url}
+                  fetchPage
+                  rel="noreferrer"
+                >
+                  {item.icon && (
                     <img
                       loading="eager"
                       src={item.icon}
                       alt={item.__editorItemTitle}
                       title={item.__editorItemTitle}
                     />
-                  ) : null}
+                  )}
                   {item.__editorItemTitle}
                 </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div
-        className={applyModifiers(handles.footerContainerWrapper, 'pagamentos')}
-      >
-        <h4 className={handles.footerContainerH4}>Formas de Pagamento</h4>
-        <ul className={handles.footerContainerUl}>
-          {formasPagamento.map((item) => (
-            <li
-              key={item.__editorItemTitle}
-              className={handles.footerContainerLi}
-            >
-              {item.image ? (
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <section className={handles.footerContainerBottom}>
+        <div
+          className={applyModifiers(
+            handles.footerContainerWrapper,
+            'pagamento'
+          )}
+        >
+          <h4 className={handles.footerContainerH4}>Pagamentos</h4>
+          <ul className={handles.footerContainerUl}>
+            {formasPagamento.map((item) => (
+              <li
+                key={item.__editorItemTitle}
+                className={handles.footerContainerLi}
+              >
                 <img
-                  src={item.image}
-                  alt={item.__editorItemTitle}
                   loading="lazy"
+                  src={item.icon}
+                  alt={item.__editorItemTitle}
                   title={item.__editorItemTitle}
                 />
-              ) : null}
-            </li>
-          ))}
-        </ul>
-        <h4
-          className={applyModifiers(handles.footerContainerH4, 'redesSociais')}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div
+          className={applyModifiers(handles.footerContainerWrapper, 'seguranca')}
         >
-          Redes Sociais
-        </h4>
-        <ul
-          className={applyModifiers(handles.footerContainerUl, 'redesSociais')}
-        >
-          {redesSociais.map((item) => (
-            <li
-              key={item.__editorItemTitle}
-              className={handles.footerContainerLi}
-            >
-              <Link
-                className={handles.footerContainerLink}
-                target={item.newTab ? '_blank' : ''}
-                to={item.url}
-                fetchPage
-                rel="noreferrer"
+          <h4 className={handles.footerContainerH4}>Segurança </h4>
+          <ul
+            className={applyModifiers(
+              handles.footerContainerUl,
+              'redes-sociais'
+            )}
+          >
+            {siteSeguro.map((item) => (
+              <li
+                key={item.__editorItemTitle}
+                className={handles.footerContainerLi}
               >
-                {item.image ? (
-                  <img
-                    src={item.image}
-                    alt={item.__editorItemTitle}
-                    title={item.__editorItemTitle}
-                    width={32}
-                    loading="eager"
-                    height={32}
-                  />
-                ) : null}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+                <Link
+                  className={handles.footerContainerLink}
+                  to={item.url}
+                  target={item.newTab ? '_blank' : ''}
+                  fetchPage
+                  rel="noreferrer"
+                >
+                  {item.image && (
+                    <img
+                      loading="lazy"
+                      src={item.image}
+                      alt={item.__editorItemTitle}
+                      title={item.__editorItemTitle}
+                    />
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div
+          className={applyModifiers(handles.footerContainerWrapper, 'siga-nos')}
+        >
+          <h4 className={handles.footerContainerH4}>Siga-nos</h4>
+          <ul
+            className={applyModifiers(
+              handles.footerContainerUl,
+              'redes-sociais'
+            )}
+          >
+            {redesSociais.map((item) => (
+              <li
+                key={item.__editorItemTitle}
+                className={handles.footerContainerLi}
+              >
+                <Link
+                  className={handles.footerContainerLink}
+                  to={item.url}
+                  target={item.newTab ? '_blank' : ''}
+                  fetchPage
+                  rel="noreferrer"
+                >
+                  {item.image && (
+                    <img
+                      loading="lazy"
+                      src={item.image}
+                      alt={item.__editorItemTitle}
+                      title={item.__editorItemTitle}
+                      width={20}
+                      height={20}
+                    />
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </div>
   )
 }
 
 Footer.defaultProps = {
-  duvidas: [],
-  formasPagamento: [],
+  atendimento: [],
   institucionals: [],
+  servicos: [],
+  voceNoPonto: [],
+  duvidas: [],
+  suporte: [],
+  formasPagamento: [],
   redesSociais: [],
   siteSeguro: [],
-  suporte: [],
   logo: '',
 }
 
@@ -293,9 +368,120 @@ Footer.schema = {
         'ui:widget': 'image-uploader',
       },
     },
+    atendimento: {
+      type: 'array',
+      title: 'Atendimento',
+      items: {
+        type: 'object',
+        properties: {
+          __editorItemTitle: {
+            title: 'title',
+            type: 'string',
+            default: '',
+          },
+          icon: {
+            type: 'string',
+            title: 'Icone',
+            default: '',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          url: {
+            type: 'string',
+            title: 'Link',
+            default: '',
+          },
+          newTab: {
+            type: 'boolean',
+            title: 'Abrir em uma nova guia?',
+            default: false,
+          },
+          open: {
+            type: 'boolean',
+            title: 'Aberto no mobile?',
+            default: false,
+          },
+        },
+      },
+    },
     institucionals: {
       type: 'array',
       title: 'Institucional',
+      items: {
+        type: 'object',
+        properties: {
+          __editorItemTitle: {
+            title: 'title',
+            type: 'string',
+            default: '',
+          },
+          icon: {
+            type: 'string',
+            title: 'Icone',
+            default: '',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          url: {
+            type: 'string',
+            title: 'Link',
+            default: '',
+          },
+          newTab: {
+            type: 'boolean',
+            title: 'Abrir em uma nova guia?',
+            default: false,
+          },
+          open: {
+            type: 'boolean',
+            title: 'Aberto no mobile?',
+            default: false,
+          },
+        },
+      },
+    },
+    servicos: {
+      type: 'array',
+      title: 'Serviços',
+      items: {
+        type: 'object',
+        properties: {
+          __editorItemTitle: {
+            title: 'title',
+            type: 'string',
+            default: '',
+          },
+          icon: {
+            type: 'string',
+            title: 'Icone',
+            default: '',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          url: {
+            type: 'string',
+            title: 'Link',
+            default: '',
+          },
+          newTab: {
+            type: 'boolean',
+            title: 'Abrir em uma nova guia?',
+            default: false,
+          },
+          open: {
+            type: 'boolean',
+            title: 'Aberto no mobile?',
+            default: false,
+          },
+        },
+      },
+    },
+    voceNoPonto: {
+      type: 'array',
+      title: 'Você no Ponto',
       items: {
         type: 'object',
         properties: {

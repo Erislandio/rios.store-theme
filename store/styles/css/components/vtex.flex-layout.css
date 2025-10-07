@@ -1,0 +1,10 @@
+.flexRowContent--container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.flexRow--container {
+  width: 100%;
+}

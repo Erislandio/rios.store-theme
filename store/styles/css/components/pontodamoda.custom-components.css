@@ -570,3 +570,98 @@
   border-radius: 8px;
   object-fit: cover;
 }
+
+.footerContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footerContainer .footerContainerLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.footerContainer .newsletterForm {
+  min-width: 300px;
+}
+.footerContainer .footerContainerLink--last,
+.footerContainer .footerContainerLink--email {
+  font-size: 12px !important;
+}
+.footerContainer .footerContainerLink,
+.footerContainer .newsletterFormDescription {
+  color: var(--gray-600, #52525b);
+  /* text-sm/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  margin: 0px;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+.footerContainer .footerContainerWrapper {
+  max-width: 260px;
+}
+.footerContainer .footerContainerUl {
+  margin: 0px;
+  padding: 0px;
+}
+.footerContainer .footerContainerUl .footerContainerLi {
+  list-style: none;
+}
+
+.footerContainerH4,
+.newsletterFormTitle {
+  color: var(--gray-800, #27272a);
+  margin: 0px;
+  margin-bottom: 6px;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+}
+
+.footerContainerBottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 60px 0px;
+}
+
+.footerContainerUl {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footerContainerLi {
+  list-style: none;
+}
+
+.footerContainerUl--redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.footerContainerUl--redes-sociais .footerContainerLink {
+  min-width: 30px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00579c;
+  border-radius: 50%;
+}
+.footerContainerUl--redes-sociais .footerContainerLink :global(.vtex-render-runtime-8-x-lazyload) {
+  width: 100%;
+  height: 100%;
+  max-width: 25px;
+  max-height: 25px;
+}
+.footerContainerUl--redes-sociais .footerContainerLink:hover {
+  opacity: 0.8;
+}

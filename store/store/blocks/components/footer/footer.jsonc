@@ -71,140 +71,173 @@
       "custom-footer#footer-2"
     ]
   },
-  "custom-footer#footer-2": {
+  "newsletter-form#default": {
+    "props": {},
+    "children": [
+      "newsletter-input-name",
+      "newsletter-input-email#custom",
+      "newsletter-submit#custom"
+    ]
+  },
+  "newsletter-input-name": {
     "props": {
-      "institucionals": [
-        {
-          "url": "/quem-somos",
-          "__editorItemTitle": "Quem Somos"
-        },
+      "placeholderText": "Nome",
+      "blockClass": [
+        "input-name"
+      ]
+    }
+  },
+  "newsletter-submit#custom": {
+    "props": {
+      "submitButtonLabel": "Cadastrar",
+      "blockClass": [
+        "submit"
+      ]
+    }
+  },
+  "newsletter-input-email#custom": {
+    "props": {
+      "placeholderText": "E-mail",
+      "blockClass": [
+        "input-email"
+      ]
+    }
+  },
+  "custom-footer#footer-2": {
+    "children": [
+      "newsletter-form#default"
+    ],
+    "props": {
+      "atendimento": [
         {
           "url": "/nossas-lojas",
-          "__editorItemTitle": "Nossas lojas"
-        }
-      ],
-      "departaments": [
-        {
-          "slug": "informatica",
-          "id": 1,
-          "url": "/informatica",
-          "__editorItemTitle": "Informática"
+          "__editorItemTitle": "Nossas Lojas"
         },
         {
-          "slug": "beleza-e-saude",
-          "id": 90,
-          "url": "/beleza-e-saude",
-          "__editorItemTitle": "Beleza e Saúde"
+          "url": "/fale-conosco",
+          "__editorItemTitle": "Fale Conosco"
         },
         {
-          "slug": "escritorio-e-papelaria",
-          "id": 4,
-          "url": "/escritorio-e-papelaria",
-          "__editorItemTitle": "Escritório e Papelaria"
+          "url": "tel:+5585996171019",
+          "__editorItemTitle": "(85) 99617-1019",
+          "icon": "assets/icons/whats.svg"
         },
         {
-          "slug": "electrodomesticos",
-          "id": 7,
-          "url": "/electrodomesticos",
-          "__editorItemTitle": "Electrodomésticos"
+          "url": "mailto:atendimento@lojaspontodamoda.com.br",
+          "__editorItemTitle": "atendimento@lojaspontodamoda.com.br",
+          "icon": "assets/icons/email.svg"
         },
-        {
-          "slug": "smartphones-e-tablets",
-          "id": 8,
-          "url": "/smartphones-e-tablets",
-          "__editorItemTitle": "Smartphones e Tablets"
-        },
-        {
-          "slug": "energia",
-          "id": 9,
-          "url": "/energia",
-          "__editorItemTitle": "Energia"
-        },
-        {
-          "slug": "imagem-e-som",
-          "id": 10,
-          "url": "/imagem-e-som",
-          "__editorItemTitle": "Imagem e Som"
-        },
-        {
-          "slug": "jogos-consolas-e-desporto",
-          "id": 11,
-          "url": "/jogos-consolas-e-desporto",
-          "__editorItemTitle": "Jogos, Consolas e Desporto"
-        }
-      ],
-      "duvidas": [
-        {
-          "url": "/area-tecnica",
-          "__editorItemTitle": "Assistência Técnica"
-        },
-        {
-          "url": "/faq",
-          "__editorItemTitle": "FAQ"
-        },
-        {
-          "url": "/fale-connosco",
-          "__editorItemTitle": "Fale Connosco"
-        },
-        {
-          "url": "/pos-venda",
-          "__editorItemTitle": "Pós-venda"
-        },
-        {
-          "url": "/termos-e-condicoes",
-          "__editorItemTitle": "Termos e Condições"
-        },
-        {
-          "url": "/formas-de-pagamento",
-          "__editorItemTitle": "Formas de Pagamento"
-        },
-        {
-          "url": "/hp",
-          "__editorItemTitle": "Tinteiros e Toners"
-        },
-        {
-          "url": "/certificacoes",
-          "__editorItemTitle": "Certificações"
-        }
-      ],
-      "suporte": [
         {
           "url": "none",
-          "__editorItemTitle": "Segunda a Sexta-Feira. das 8h às 17h"
+          "__editorItemTitle": "Segunda a Sexta de 09h às 17h / Sábados de 10h às 14h"
+        }
+      ],
+      "institucionals": [
+        {
+          "url": "/sobre-nos",
+          "__editorItemTitle": "Sobre Nós"
         },
         {
-          "url": "tel:222670000",
-          "__editorItemTitle": "222 670 000"
+          "url": "/trabalhe-conosco",
+          "__editorItemTitle": "Trabalhe Conosco"
         },
         {
-          "url": "tel:923167000",
-          "__editorItemTitle": "923 167 000"
+          "url": "/mapa-do-site",
+          "__editorItemTitle": "Mapa do site"
         },
         {
-          "url": "https://api.whatsapp.com/send/?phone=244940370723&text&type=phone_number&app_absent=0",
-          "__editorItemTitle": "940 370 723",
-          "newTab": true
+          "url": "/projetos",
+          "__editorItemTitle": "Projetos"
         },
         {
-          "url": "mailto=cliente.online@ncrangola.com",
-          "__editorItemTitle": "cliente.online@ncrangola.com"
+          "url": "/parceiros",
+          "__editorItemTitle": "Parceiros"
+        }
+      ],
+      "servicos": [
+        {
+          "url": "/formas-de-pagamento",
+          "__editorItemTitle": "Formas de pagamento"
+        },
+        {
+          "url": "/troca-e-devolucao",
+          "__editorItemTitle": "Troca e devolução"
+        },
+        {
+          "url": "/cupons-e-descontos",
+          "__editorItemTitle": "Cupons e descontos"
+        },
+        {
+          "url": "/retirada-em-loja",
+          "__editorItemTitle": "Retirada em loja"
+        },
+        {
+          "url": "/tipos-de-entrega",
+          "__editorItemTitle": "Tipos de entrega"
+        }
+      ],
+      "voceNoPonto": [
+        {
+          "url": "/cartao-ponto-da-moda",
+          "__editorItemTitle": "Cartão Ponto da Moda"
+        },
+        {
+          "url": "/clube-de-vantagens",
+          "__editorItemTitle": "Clube de vantagens"
+        },
+        {
+          "url": "/cupons-de-desconto",
+          "__editorItemTitle": "Cupons de desconto"
+        },
+        {
+          "url": "/politica-de-entrega",
+          "__editorItemTitle": "Política de Entrega"
         }
       ],
       "formasPagamento": [
-
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/pagamentos.png",
+          "image": "assets/pagamentos.png"
+        }
       ],
       "redesSociais": [
-
+        {
+          "image": "assets/icons/facebook.svg",
+          "url": "https://www.facebook.com/lojaspontodamoda",
+          "__editorItemTitle": "Facebook"
+        },
+        {
+          "image": "assets/icons/you.svg",
+          "url": "https://www.facebook.com/lojaspontodamoda",
+          "__editorItemTitle": "Facebook"
+        },
+        {
+          "image": "assets/icons/insta.svg",
+          "url": "https://www.facebook.com/lojaspontodamoda",
+          "__editorItemTitle": "Facebook"
+        },
+        {
+          "image": "assets/icons/pint.svg",
+          "url": "https://www.facebook.com/lojaspontodamoda",
+          "__editorItemTitle": "Facebook"
+        },
+        {
+          "image": "assets/icons/tik.svg",
+          "url": "https://www.facebook.com/lojaspontodamoda",
+          "__editorItemTitle": "Facebook"
+        },
+        {
+          "image": "assets/icons/spot.svg",
+          "url": "https://www.facebook.com/lojaspontodamoda",
+          "__editorItemTitle": "Facebook"
+        }
       ],
       "siteSeguro": [
         {
           "__editorItemTitle": "PCI",
-          "url": "https://secure.vtex.com/?an=ncrangola"
-
-        },
-        {
-          "__editorItemTitle": "Iso",
-          "url": "#"
+          "icon": "assets/seguro.png",
+          "image": "assets/seguro.png"
         }
       ]
     }
