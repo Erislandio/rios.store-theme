@@ -14,11 +14,16 @@
   .topBarMessage {
     display: block;
     text-align: center;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 12px;
+    }
   }
 }
 
 .divContainer--main-header {
   position: relative;
+  flex-direction: row !important;
 }
 
 .menuContainer {
@@ -362,6 +367,12 @@
 
   .sliderTrack {
     gap: 1rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .sliderTrack {
+      gap: 0;
+    }
   }
 
   .categoryListTitle {
@@ -740,4 +751,8 @@
       opacity: 0.8;
     }
   }
+}
+
+.menuContainer--mobile {
+  position: fixed;
 }

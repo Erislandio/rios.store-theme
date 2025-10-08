@@ -8,3 +8,9 @@
 .flexRow--container {
   width: 100%;
 }
+
+.flexRowContent--footer--bottom{
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}

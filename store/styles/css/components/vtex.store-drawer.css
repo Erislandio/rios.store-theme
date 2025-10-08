@@ -1,0 +1,22 @@
+.openIconContainer--menu-mobile {
+  padding-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+.openIconContainer--menu-mobile .drawerTriggerContainer--menu-mobile {
+  min-width: 47px;
+  background-color: transparent;
+  border: none;
+  min-width: 50px;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.opened--menu-mobile {
+  top: 182px !important;
+  width: 100% !important;
+}
+.opened--menu-mobile .closeIconButton {
+  display: none;
+}

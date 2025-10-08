@@ -15,6 +15,12 @@
   background: #e8be00;
   padding: 5px 12px;
 }
+@media screen and (max-width: 1024px) {
+  .searchBarContainer {
+    width: calc(100vw - 2rem);
+    margin: 0 auto;
+  }
+}
 .searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder,
 .searchBarContainer :global(.vtex-styleguide-9-x-input) {
   color: var(--gray-800, #27272a);
@@ -23,6 +29,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 16.8px */
+}
+@media screen and (max-width: 1024px) {
+  .searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder,
+  .searchBarContainer :global(.vtex-styleguide-9-x-input) {
+    font-size: 0.875rem;
+    line-height: 140%; /* 14px */
+  }
 }
 .searchBarContainer :global(.vtex-input-prefix__group) {
   border: none;
@@ -45,6 +58,11 @@
 }
 .searchBarContainer :global(.vtex-store-components-3-x-suffixWrapper) {
   display: none;
+}
+
+.sizeMobile {
+  padding: 0px;
+  min-width: unset;
 }
 
 .imageElement--carousel {

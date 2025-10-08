@@ -44,5 +44,9 @@
   "custom-footer": {
     "component": "Footer",
     "composition": "children"
+  },
+  "custom-menu-button": {
+    "component": "CustomMenuButton",
+    "composition": "children"
   }
 }

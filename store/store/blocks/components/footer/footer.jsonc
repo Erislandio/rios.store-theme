@@ -1,17 +1,20 @@
 {
   "footer": {
+    "title": "Footer",
     "blocks": [
       "footer-layout.desktop",
       "footer-layout.mobile"
     ]
   },
   "footer-layout.desktop": {
+    "title": "Footer Desktop",
     "children": [
       "flex-layout.row#footer-1",
       "flex-layout.row#bottem"
     ]
   },
   "footer-layout.mobile": {
+    "title": "Footer Mobile",
     "children": [
       "flex-layout.row#footer-1",
       "flex-layout.row#bottem"
@@ -28,39 +31,69 @@
       ]
     },
     "children": [
-      "rich-text#powered",
-      "image#weonne",
-      "image#vtex"
+      "image#ximenes",
+      "rich-text#copyright",
+      "custom-div#auaha"
     ]
   },
-  "image#weonne": {
-    "title": "Logo Weonne",
+  "custom-div#auaha": {
+    "title": "Logos footer",
+    "children": [
+      "image#auaha",
+      "image#vtex"
+    ],
     "props": {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "gap": "8px",
       "blockClass": [
-        "logo-weonne"
+        "auaha-vtex"
+      ]
+    }
+  },
+  "image#ximenes": {
+    "props": {
+      "width": 139,
+      "height": 24,
+      "src": "assets/ximenes.png",
+      "blockClass": [
+        "logo-ximenes"
+      ]
+    }
+  },
+  "image#auaha": {
+    "title": "Logo Auaha",
+    "props": {
+      "src": "assets/icons/auaha.svg",
+      "width": 44,
+      "height": 16,
+      "blockClass": [
+        "logo-auaha"
       ]
     }
   },
   "image#vtex": {
     "title": "Logo Vtex",
     "props": {
+      "width": 44,
+      "height": 16,
       "blockClass": [
         "logo-vtex"
       ],
-      "src": ""
+      "src": "assets/icons/vtex.svg"
     }
   },
-  "rich-text#powered": {
-    "title": "Powered",
+  "rich-text#copyright": {
+    "title": "Copyright",
     "props": {
       "blockClass": [
-        "Powered"
+        "copyright"
       ],
-      "text": "Powered by"
+      "text": "Copyright © 2025-lojaspontodamoda.com.br. Todos os direitos reservados. Os preços, promoções, condições de pagamento, frete e produtos são válidos exclusivamente para compras realizadas via internet. Fotos meramente ilustrativas. Nome da Empresa Ltda. Me CNPJ: 11.111.111/0001-11 - Endereço: Rua da Rua, 00 - São Paulo - SP"
     }
   },
   "flex-layout.row#footer-1": {
-    "title": "Footer",
+    "title": "Footer Conteudo",
     "props": {
       "blockClass": [
         "footer",
@@ -72,6 +105,7 @@
     ]
   },
   "newsletter-form#default": {
+    "title": "Newsletter",
     "props": {},
     "children": [
       "newsletter-input-name",
@@ -104,6 +138,7 @@
     }
   },
   "custom-footer#footer-2": {
+    "title": "Custom Footer",
     "children": [
       "newsletter-form#default"
     ],

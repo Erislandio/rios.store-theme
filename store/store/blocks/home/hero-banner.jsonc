@@ -15,7 +15,7 @@
       "images": [
         {
           "image": "/arquivos/image.png",
-          "mobileImage": "/arquivos/image.png",
+          "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,
@@ -23,7 +23,7 @@
         },
         {
           "image": "/arquivos/image.png",
-          "mobileImage": "/arquivos/image.png",
+          "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,
@@ -31,7 +31,7 @@
         },
         {
           "image": "/arquivos/image.png",
-          "mobileImage": "/arquivos/image.png",
+          "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,
@@ -39,7 +39,7 @@
         },
         {
           "image": "/arquivos/image.png",
-          "mobileImage": "/arquivos/image.png",
+          "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
           "experimentalSetExplicitDimensions": true,

@@ -16,6 +16,7 @@ interface DivProps {
   paddingMobile?: string
   flexDirectionMobile?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
   customClass?: string
+  id?: string
 }
 
 const CSS_HANDLES = ['divContainer'] as const
@@ -34,6 +35,7 @@ const Div: StoreFrontFC<DivProps> = ({
   paddingMobile = '',
   flexDirectionMobile = 'column',
   customClass,
+  id = ''
 }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { isMobile } = useDevice()
@@ -57,6 +59,7 @@ const Div: StoreFrontFC<DivProps> = ({
   return (
     <div
       style={style}
+      id={id}
       className={`${applyModifiers(handles.divContainer, className)} ${
         customClass || ''
       }`}

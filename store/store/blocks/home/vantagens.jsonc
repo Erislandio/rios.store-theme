@@ -1,0 +1,29 @@
+{
+  "custom-deals#custom-deals": {
+    "title": "Ofertas personalizadas",
+    "props": {
+      "items": [
+        {
+          "icon": "assets/icons/frete.svg",
+          "__editorItemTitle": "Entrega em até 48h",
+          "description": "Para Fortaleza"
+        },
+        {
+          "icon": "assets/icons/bar.svg",
+          "__editorItemTitle": "Cupons Ativos",
+          "description": "Conheça e aproveite!"
+        },
+        {
+          "icon": "assets/icons/card.svg",
+          "__editorItemTitle": "Pontocard",
+          "description": "Muitas Vantagens"
+        },
+        {
+          "icon": "assets/icons/stores.svg",
+          "__editorItemTitle": "Nossas Lojas",
+          "description": "Visite nossas filiais"
+        }
+      ]
+    }
+  }
+}

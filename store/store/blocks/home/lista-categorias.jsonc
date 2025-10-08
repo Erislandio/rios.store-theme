@@ -1,0 +1,40 @@
+{
+  "custom-category-list#category-list": {
+    "title": "Categorias",
+    "props": {
+      "title": "MARCA DE ROUPAS COM EXCELÊNCIA EM CADA COSTURA E ACABAMENTO.",
+      "items": [
+        {
+          "__editorItemTitle": "Saias",
+          "link": "/saias",
+          "imageUrl": "arquivos/categoria1.png"
+        },
+        {
+          "__editorItemTitle": "Sobreposição",
+          "link": "/saias",
+          "imageUrl": "arquivos/categoria2.png"
+        },
+        {
+          "__editorItemTitle": "Calças",
+          "link": "/calcas",
+          "imageUrl": "arquivos/categoria3.png"
+        },
+        {
+          "__editorItemTitle": "Saias",
+          "link": "/saias",
+          "imageUrl": "arquivos/menu.png"
+        },
+        {
+          "__editorItemTitle": "Sobreposição",
+          "link": "/saias",
+          "imageUrl": "arquivos/categoria2.png"
+        },
+        {
+          "__editorItemTitle": "Calças",
+          "link": "/calcas",
+          "imageUrl": "arquivos/categoria3.png"
+        }
+      ]
+    }
+  }
+}

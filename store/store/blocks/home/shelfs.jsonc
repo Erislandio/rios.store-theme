@@ -1,0 +1,99 @@
+{
+  "list-context.product-list#prateleirav1": {
+    "title": "Prateleira 1",
+    "blocks": [
+      "product-summary.shelf#default"
+    ],
+    "children": [
+      "slider-layout#shelf-default"
+    ],
+    "props": {
+      "hideUnavailableItems": true,
+      "blockClass": "shelf",
+      "orderBy": "OrderByReleaseDateDESC"
+    }
+  },
+  "list-context.product-list#prateleira2": {
+    "title": "Prateleira 2",
+    "blocks": [
+      "product-summary.shelf#default"
+    ],
+    "children": [
+      "slider-layout#shelf-default"
+    ],
+    "props": {
+      "hideUnavailableItems": true,
+      "blockClass": "shelf",
+      "orderBy": "OrderByScoreDESC"
+    }
+  },
+  "list-context.product-list#prateleira3": {
+    "title": "Prateleira 2",
+    "blocks": [
+      "product-summary.shelf#default"
+    ],
+    "children": [
+      "slider-layout#shelf-default"
+    ],
+    "props": {
+      "hideUnavailableItems": true,
+      "blockClass": "shelf",
+      "orderBy": "OrderByReleaseDateDESC"
+    }
+  },
+  "rich-text#shelf-title": {
+    "title": "Titulo da prateleira",
+    "props": {
+      "blockClass": [
+        "shelf-title"
+      ],
+      "text": "Promoções da Semana"
+    }
+  },
+  "rich-text#shelf-title-2": {
+    "title": "Titulo da prateleira 2",
+    "props": {
+      "blockClass": [
+        "shelf-title",
+        "brands"
+      ],
+      "text": "Destaques"
+    }
+  },
+  "rich-text#shelf-title-4": {
+    "title": "Titulo da prateleira 3",
+    "props": {
+      "blockClass": [
+        "shelf-title",
+        "brands"
+      ],
+      "text": "Chegou agora"
+    }
+  },
+  "rich-text#shelf-title-3": {
+    "title": "Titulo marcas",
+    "props": {
+      "blockClass": [
+        "shelf-title"
+      ],
+      "text": "Conheca nossas marcas"
+    }
+  },
+  "slider-layout#shelf-default": {
+    "title": "Layout da prateleira",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "phone": 2
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": [
+        "shelf"
+      ]
+    }
+  }
+}

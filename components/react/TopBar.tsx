@@ -12,7 +12,14 @@ interface Props {
 
 const CSS_HANDLES = ['topBarContainer', 'topBarMessage'] as const
 
-const TopBar: StoreFrontFC<Props> = ({ message, color, cuponCode, highlightText, backgroundColor, textColor }) => {
+const TopBar: StoreFrontFC<Props> = ({
+  message,
+  color,
+  cuponCode,
+  highlightText,
+  backgroundColor,
+  textColor,
+}) => {
   const { handles } = useCssHandles(CSS_HANDLES)
 
   return (

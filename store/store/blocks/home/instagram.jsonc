@@ -1,0 +1,37 @@
+{
+  "custom-instagram-feed#default": {
+    "title": "Feed do Instagram",
+    "props": {
+      "blockClass": [
+        "instagram-feed"
+      ],
+      "items": [
+        {
+          "__editorItemTitle": "Imagem 1",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/b0195ce3-75cb-410b-88af-40f00032f7de___8fbfd3d007a28c632fbb7a0436d14beb.png",
+          "link": "https://www.instagram.com/pontadamodaoficial/"
+        },
+        {
+          "__editorItemTitle": "Imagem 2",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/47506af7-e5ba-43dc-aff5-b053f83b40a9___14936eb77aba52ddbc3fdf3dbf6a282e.png",
+          "link": "https://www.instagram.com/pontadamodaoficial/"
+        },
+        {
+          "__editorItemTitle": "Imagem 3",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/18d0cac2-3f97-4777-bc30-11fd0ae70dab___2fad5d15272d8609ca527d001ae6aa95.png",
+          "link": "https://www.instagram.com/pontadamodaoficial/"
+        },
+        {
+          "__editorItemTitle": "Imagem 4",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/fd00a1c9-6c8d-41b3-8c7f-2e5c5a6c3546___8e6d33ea5b266ddaf9e3025088949476.png",
+          "link": "https://www.instagram.com/pontadamodaoficial/"
+        },
+        {
+          "__editorItemTitle": "Imagem 5",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/bad3b030-531f-4eab-94f9-2d55c889d16c___e11a9623680430e361c1bc8f3731c8a3.png",
+          "link": "https://www.instagram.com/pontadamodaoficial/"
+        }
+      ]
+    }
+  }
+}

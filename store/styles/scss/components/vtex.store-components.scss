@@ -15,6 +15,11 @@
   background: #e8be00;
   padding: 5px 12px;
 
+  @media screen and (max-width: 1024px) {
+    width: calc(100vw - 2rem);
+    margin: 0 auto;
+  }
+
   :global(.vtex-styleguide-9-x-input)::placeholder,
   :global(.vtex-styleguide-9-x-input) {
     color: var(--gray-800, #27272a);
@@ -24,6 +29,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 140%; /* 16.8px */
+
+    @media screen and (max-width: 1024px) {
+      font-size: 0.875rem;
+      line-height: 140%; /* 14px */
+    }
   }
 
   :global(.vtex-input-prefix__group) {
@@ -51,6 +61,11 @@
   :global(.vtex-store-components-3-x-suffixWrapper) {
     display: none;
   }
+}
+
+.sizeMobile {
+  padding: 0px;
+  min-width: unset;
 }
 
 .imageElement--carousel {

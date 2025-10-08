@@ -1,0 +1,118 @@
+{
+  "custom-middle-banners#middle-banners": {
+    "title": "Banners do meio",
+    "props": {
+      "items": [
+        {
+          "__editorItemTitle": "Moda íntima",
+          "image": "assets/middle1.jpg",
+          "link": "/",
+          "subTitle": "Loucos por",
+          "textLink": "Comprar >"
+        },
+        {
+          "__editorItemTitle": "Jeans",
+          "image": "arquivos/middle2.jpg",
+          "link": "/",
+          "subTitle": "Loucos por",
+          "textLink": "Comprar >"
+        },
+        {
+          "__editorItemTitle": "Sarja",
+          "image": "arquivos/middle3.jpg",
+          "link": "/",
+          "subTitle": "Loucos por",
+          "textLink": "Comprar >"
+        }
+      ]
+    }
+  },
+  "custom-brand-banners#default": {
+    "title": "Marcas",
+    "props": {
+      "items": [
+        {
+          "__editorItemTitle": "Marca 1",
+          "image": "assets/marca-1.png",
+          "link": "/",
+          "icon": "assets/limite.png"
+        },
+        {
+          "__editorItemTitle": "Marca 2",
+          "image": "assets/marca-2.png",
+          "link": "/",
+          "icon": "assets/mx.png"
+        },
+        {
+          "__editorItemTitle": "Marca 3",
+          "image": "assets/marca-3.png",
+          "link": "/",
+          "icon": "assets/xis.png"
+        }
+      ]
+    }
+  },
+  "custom-footer-banners#default": {
+    "title": "Banners do rodapé",
+    "props": {
+      "items": [
+        {
+          "__editorItemTitle": "Premium",
+          "image": "arquivos/banner3-1.png",
+          "subTitle": "Banho",
+          "link": "/"
+        },
+        {
+          "__editorItemTitle": "& Beleza",
+          "image": "arquivos/banner3-2.png",
+          "link": "/",
+          "subTitle": "Cuidado, amor"
+        },
+        {
+          "__editorItemTitle": "Perfeito",
+          "image": "arquivos/banner3-3.png",
+          "link": "/",
+          "subTitle": "Sono"
+        }
+      ]
+    }
+  },
+  "custom-div#footer-banner-1": {
+    "title": "Banner do rodapé 1",
+    "props": {
+      "blockClass": [
+        "footer-banner-1"
+      ]
+    },
+    "children": [
+      "image#banner--footer"
+    ]
+  },
+  "image#banner--footer": {
+    "title": "Banner do rodapé",
+    "props": {
+      "src": "arquivos/banner--footer.jpg",
+      "alt": "Banner do rodapé",
+      "link": "/"
+    }
+  },
+  "custom-div#footer-banner-2": {
+    "title": "Banner do rodapé 1",
+    "props": {
+      "blockClass": [
+        "footer-banner-1"
+      ]
+    },
+    "children": [
+      "image#banner--footer-2"
+    ]
+  },
+  "image#banner--footer-2": {
+    "title": "Banner do rodapé",
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/9cb1c3fb-dd65-4f7d-80b1-1408b270139c___cb6fa0a534146f06f9bb4005b3bb889f.png",
+      "alt": "Banner do rodapé",
+      "link": "/"
+    }
+  }
+}

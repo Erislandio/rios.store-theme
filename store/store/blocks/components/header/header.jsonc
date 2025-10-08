@@ -3,14 +3,14 @@
     "title": "Header",
     "blocks": [
       "header-layout.desktop#desktop",
-      "header-layout.mobile"
+      "header-layout.mobile#mobile"
     ]
   },
   "header.full": {
     "title": "Header",
     "blocks": [
       "header-layout.desktop#desktop",
-      "header-layout.mobile"
+      "header-layout.mobile#mobile"
     ]
   }
 }

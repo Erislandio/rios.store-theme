@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
 import useDatalayer from '../../hooks/useDatalayer'
+import CustomMenuMobile from './MenuMobile'
 
-type SubMenuItem = {
+export type SubMenuItem = {
   __editorItemTitle: string
   href: string
 }
 
-type MenuItem = {
+export type MenuItem = {
   __editorItemTitle: string
   subMenu: SubMenuItem[]
   href?: string
 }
 
-type MainMenu = {
+export type MainMenu = {
   __editorItemTitle: string
   image: string
   menu: MenuItem[]
@@ -169,6 +171,12 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200 }) => {
 
   const [activeMenu, setActiveMenu] = useState<number | null>(null)
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null)
+
+  const { isMobile } = useDevice()
+
+  if (isMobile) {
+    return <CustomMenuMobile departments={items} others={[]} />
+  }
 
   const handleMenuEnter = (index: number) => {
     setActiveMenu(index)

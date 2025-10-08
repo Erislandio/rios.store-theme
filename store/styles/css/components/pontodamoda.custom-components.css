@@ -15,9 +15,15 @@
   display: block;
   text-align: center;
 }
+@media screen and (max-width: 1024px) {
+  .topBarContainer .topBarMessage {
+    font-size: 12px;
+  }
+}
 
 .divContainer--main-header {
   position: relative;
+  flex-direction: row !important;
 }
 
 .menuContainer {
@@ -331,6 +337,11 @@
 }
 .categoryListContainer .sliderTrack {
   gap: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .categoryListContainer .sliderTrack {
+    gap: 0;
+  }
 }
 .categoryListContainer .categoryListTitle {
   color: var(--black, #000);
@@ -664,4 +675,8 @@
 }
 .footerContainerUl--redes-sociais .footerContainerLink:hover {
   opacity: 0.8;
+}
+
+.menuContainer--mobile {
+  position: fixed;
 }

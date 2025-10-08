@@ -273,7 +273,7 @@ const Footer: StoreFrontFC<Props> = ({
           <ul
             className={applyModifiers(
               handles.footerContainerUl,
-              'redes-sociais'
+              'site-seguro'
             )}
           >
             {siteSeguro.map((item) => (
@@ -357,7 +357,7 @@ Footer.defaultProps = {
 }
 
 Footer.schema = {
-  title: 'Categorias',
+  title: 'Footer',
   type: 'object',
   properties: {
     logo: {
