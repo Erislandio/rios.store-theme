@@ -1,0 +1,11 @@
+{
+  profile {
+    id
+    firstName
+    lastName
+    email
+    document
+    phone
+    birthDate
+  }
+}

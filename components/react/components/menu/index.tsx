@@ -175,7 +175,7 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200 }) => {
   const { isMobile } = useDevice()
 
   if (isMobile) {
-    return <CustomMenuMobile departments={items} others={[]} />
+    return <CustomMenuMobile departments={items} />
   }
 
   const handleMenuEnter = (index: number) => {

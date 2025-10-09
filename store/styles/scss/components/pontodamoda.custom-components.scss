@@ -22,7 +22,6 @@
 }
 
 .divContainer--main-header {
-  position: relative;
   flex-direction: row !important;
 }
 
@@ -357,6 +356,17 @@
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .customDealsWrapper {
+      width: 100vw;
+      overflow: scroll;
+
+      .customDealsItem {
+        min-width: 200px;
+      }
+    }
+  }
 }
 
 .categoryListContainer {
@@ -385,6 +395,10 @@
     line-height: 140%; /* 33.6px */
     margin-top: 0px;
     margin-bottom: 60px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   .categoryListItemImage {
@@ -754,5 +768,186 @@
 }
 
 .menuContainer--mobile {
-  position: fixed;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  height: 1000vh;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.submenuUl {
+}
+
+.menuCardContainer {
+  padding: 0px 20px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: var(--white, #fff);
+
+  /* text-sm/Bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+  text-decoration: none;
+  background: var(--Azul, #00579c);
+}
+
+.profileContainerTitle {
+  color: var(--black, #000);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  margin: 0px;
+  font-weight: 300;
+  line-height: 100%; /* 19.6px */
+}
+
+.profileContainer {
+  padding: 10px 20px;
+  background: var(--gray-100, #f4f4f5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .profileContainerLink {
+    color: var(--black, #000);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 19.6px */
+    text-decoration: none;
+  }
+}
+
+.menuContainer--mobile {
+  .menuItemUl {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+
+    .drawerButton {
+      padding: 1rem;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: transparent;
+      width: 100%;
+    }
+  }
+
+  .submenuItemsWrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 99999;
+    height: 100vh;
+    background-color: #fff;
+
+    .backButton {
+      padding: 1rem;
+      border: none;
+      border-bottom: 1px solid #eaeaea;
+      color: var(--gray-800, #27272a);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      background: var(--gray-100, #f4f4f5);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    .submenuUl {
+      padding: 0px;
+      list-style: none;
+
+      .collapsibleMenu {
+        padding: 1rem 0px;
+        border-bottom: 1px solid #eaeaea;
+
+        .submenuItem {
+          padding: 0px !important;
+        }
+      }
+
+      :global(.vtex__icon-caret-down),
+      :global(.vtex__icon-caret-up) {
+        padding-right: 1rem;
+      }
+
+      .collapsibleMenuTitle {
+        display: block;
+        padding-left: 1rem;
+      }
+
+      .submenuLi {
+        .menuLink {
+          padding: 1rem;
+          display: block;
+          text-decoration: none;
+          color: var(--MT---Secundria, #424242);
+          font-family: Inter;
+          font-size: 14px;
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 19.6px */
+        }
+      }
+
+      .collapsibleMenu--open {
+        .collapsibleMenuTitle {
+          color: #00579c;
+        }
+
+        :global(.vtex__icon-caret-down),
+        :global(.vtex__icon-caret-up) {
+          color: #00579c;
+        }
+      }
+
+      .submenuItems {
+        padding-left: 0px;
+        padding-top: 0px;
+        border-top: 1px solid #eaeaea;
+        margin-top: 1rem;
+
+        .submenuItem {
+          padding: 1rem 0px;
+          border-bottom: 1px solid #eaeaea;
+
+          &:last-child {
+            border: none;
+          }
+
+          .menuLink {
+            display: flex;
+            padding-left: 2rem;
+            color: var(--MT---Secundria, #424242);
+            font-family: Inter;
+            font-size: 14px;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
+          }
+        }
+      }
+    }
+  }
 }
