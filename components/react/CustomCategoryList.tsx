@@ -19,59 +19,67 @@ const CSS_HANDLES = [
   'categoryListTitle',
   'categoryListItems',
   'categoryListItemImage',
+  'categoryListItem',
   'categoryListItemLink',
   'categoryListItemTitle',
 ] as const
 
-const CustomCategoryList: StoreFrontFC<Props> = ({ items, title }) => {
+const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
   const { isMobile } = useDevice()
+
+  const itemToRender =
+    items.map((item, index) => (
+      <div
+        className={handles.categoryListItems}
+        key={index}
+      >
+        <Link
+          to={item.link}
+          className={handles.categoryListItemLink}
+          onClick={() =>
+            pushToDataLayer({
+              event: 'category_click',
+              category_name: item.__editorItemTitle,
+              category_link: item.link,
+            })
+          }
+        >
+          <img
+            width={isMobile ? 240 : 422}
+            height={isMobile ? 342 : 603}
+            loading="lazy"
+            src={item.imageUrl}
+            alt={item.__editorItemTitle}
+            className={handles.categoryListItemImage}
+          />
+          <h5 className={handles.categoryListItemTitle}>
+            {item.__editorItemTitle}
+          </h5>
+        </Link>
+      </div>
+    )) || null
 
   return (
     <section className={handles.categoryListContainer}>
       <h2 className={handles.categoryListTitle}>{title}</h2>
       <SliderLayout
-        itemsPerPage={{ desktop: 3, tablet: 2, phone: 1 }}
+        itemsPerPage={{ desktop: 3, tablet: 3, phone: 1 }}
         centerMode={{
           desktop: 'disabled',
           tablet: 'to-the-left',
           phone: 'to-the-left',
           mobile: 'to-the-left',
         }}
+        infinite
+        fullWidth
+        centerModeSlidesGap={16}
         showNavigationArrows="desktopOnly"
         showPaginationDots="never"
-        fullWidth
         navigationStep={'page'}
-        infinite
       >
-        {items?.map((item, index) => (
-          <div className={handles.categoryListItems} key={index} style={{}}>
-            <Link
-              to={item.link}
-              className={handles.categoryListItemLink}
-              onClick={() =>
-                pushToDataLayer({
-                  event: 'category_click',
-                  category_name: item.__editorItemTitle,
-                  category_link: item.link,
-                })
-              }
-            >
-              <img
-                width={isMobile ? 240 : 422}
-                height={isMobile ? 342 : 603}
-                loading="lazy"
-                src={item.imageUrl}
-                alt={item.__editorItemTitle}
-                className={handles.categoryListItemImage}
-              />
-              <h5 className={handles.categoryListItemTitle}>
-                {item.__editorItemTitle}
-              </h5>
-            </Link>
-          </div>
-        )) || null}
+        {itemToRender}
       </SliderLayout>
     </section>
   )

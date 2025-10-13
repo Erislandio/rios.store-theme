@@ -48,5 +48,13 @@
   "custom-menu-button": {
     "component": "CustomMenuButton",
     "composition": "children"
+  },
+  "custom-minicart-badge": {
+    "component": "CustomMinicartBadge",
+    "composition": "children"
+  },
+  "custom-shipping-bar": {
+    "component": "CustomShippingBar",
+    "composition": "children"
   }
 }

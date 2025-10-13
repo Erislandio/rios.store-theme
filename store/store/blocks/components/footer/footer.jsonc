@@ -55,7 +55,7 @@
     "props": {
       "width": 139,
       "height": 24,
-      "src": "assets/ximenes.png",
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/a9c39dd3-dba3-4628-928f-9b4f10acde71___b38fc60600d267e302b9442f2b5a4e40.png",
       "blockClass": [
         "logo-ximenes"
       ]
@@ -232,8 +232,8 @@
       "formasPagamento": [
         {
           "__editorItemTitle": "PAGAMENTOS",
-          "icon": "assets/pagamentos.png",
-          "image": "assets/pagamentos.png"
+          "icon": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f04873c4-7567-40cf-a3ca-2e9d0fafe5f6___6bc15945f266d63651854c7200c62eb1.png",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f04873c4-7567-40cf-a3ca-2e9d0fafe5f6___6bc15945f266d63651854c7200c62eb1.png"
         }
       ],
       "redesSociais": [
@@ -271,8 +271,8 @@
       "siteSeguro": [
         {
           "__editorItemTitle": "PCI",
-          "icon": "assets/seguro.png",
-          "image": "assets/seguro.png"
+          "icon": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/29f4a99f-639f-4252-8049-40d6abb63cf7___2634d3919884e72a2ee58894c8223ce0.png",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/29f4a99f-639f-4252-8049-40d6abb63cf7___2634d3919884e72a2ee58894c8223ce0.png"
         }
       ]
     }

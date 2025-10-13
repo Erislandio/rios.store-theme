@@ -5,21 +5,21 @@
       "items": [
         {
           "__editorItemTitle": "Moda íntima",
-          "image": "assets/middle1.jpg",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/e1d8bd41-3a8a-4805-b8ab-65f086b3ab54___0188c2837149297cdc51d4fd9ad925ef.jpg",
           "link": "/",
           "subTitle": "Loucos por",
           "textLink": "Comprar >"
         },
         {
           "__editorItemTitle": "Jeans",
-          "image": "arquivos/middle2.jpg",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/542a125b-e023-47be-8064-2df9ffd2c2c6___99b1f9fa09ed3bfbef252a98a8c80961.jpg",
           "link": "/",
           "subTitle": "Loucos por",
           "textLink": "Comprar >"
         },
         {
           "__editorItemTitle": "Sarja",
-          "image": "arquivos/middle3.jpg",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/542a125b-e023-47be-8064-2df9ffd2c2c6___99b1f9fa09ed3bfbef252a98a8c80961.jpg",
           "link": "/",
           "subTitle": "Loucos por",
           "textLink": "Comprar >"
@@ -33,21 +33,21 @@
       "items": [
         {
           "__editorItemTitle": "Marca 1",
-          "image": "assets/marca-1.png",
-          "link": "/",
-          "icon": "assets/limite.png"
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/03d2e5e6-3089-4be1-8b94-0c430e8cd42f___2b59aa325a4dde0652d473b2a8c161d2.png",
+          "icon": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/8e4c9770-90d7-4bcd-ae90-26b2cc4f2ad3___7b3bf4e52310de0a37c53a6921dc2418.png",
+          "link": "/"
         },
         {
           "__editorItemTitle": "Marca 2",
-          "image": "assets/marca-2.png",
+          "icon": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/e76d4c1d-1783-4563-9e52-acb4dbce0841___3e62e321c54a5279293a0f4f2c93a45a.png",
           "link": "/",
-          "icon": "assets/mx.png"
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/a1a0cfb1-bedb-41c0-864e-cdbef2886f3e___c9d63779be3dc75d163af7818a03f781.png"
         },
         {
           "__editorItemTitle": "Marca 3",
-          "image": "assets/marca-3.png",
+          "icon": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/034c49a7-77ea-43cc-b2a9-7de39d5b78b0___bbfc8e330998ed7d27be2dfb2ababb63.png",
           "link": "/",
-          "icon": "assets/xis.png"
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/e710af8f-6529-4ae3-b877-1e0c236a4091___3790d3f84f5e990bc833b80a475ae574.png"
         }
       ]
     }
@@ -77,6 +77,42 @@
       ]
     }
   },
+  "responsive-layout.desktop#home-banners": {
+    "title": "banners [Desktop]",
+    "children": [
+      "custom-div#footer-banner-1"
+    ]
+  },
+  "responsive-layout.tablet#home-banners": {
+    "title": "banners [Tablet]",
+    "children": [
+      "custom-div#footer-banner-1"
+    ]
+  },
+  "responsive-layout.phone#home-banners": {
+    "title": "banners [MObile]",
+    "children": [
+      "custom-div#footer-banner-1-mobile"
+    ]
+  },
+  "responsive-layout.desktop#home-banners-2": {
+    "title": "Banners Footer [Desktop]",
+    "children": [
+      "custom-div#footer-banner-2"
+    ]
+  },
+  "responsive-layout.tablet#home-banners-2": {
+    "title": "Banners Footer [Tablet]",
+    "children": [
+      "custom-div#footer-banner-2"
+    ]
+  },
+  "responsive-layout.phone#home-banners-2": {
+    "title": "Banners Footer [MObile]",
+    "children": [
+      "custom-div#footer-banner-2-mobile"
+    ]
+  },
   "custom-div#footer-banner-1": {
     "title": "Banner do rodapé 1",
     "props": {
@@ -88,10 +124,37 @@
       "image#banner--footer"
     ]
   },
+  "custom-div#footer-banner-1-mobile": {
+    "title": "Banner do rodapé 1",
+    "props": {
+      "blockClass": [
+        "footer-banner-1"
+      ]
+    },
+    "children": [
+      "image#banner--footer--mobile"
+    ]
+  },
   "image#banner--footer": {
     "title": "Banner do rodapé",
     "props": {
       "src": "arquivos/banner--footer.jpg",
+      "alt": "Banner do rodapé",
+      "link": "/"
+    }
+  },
+  "image#banner--footer--mobile": {
+    "title": "Banner do rodapé [Mobile]",
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/dfac76ef-3715-40bb-8d7a-30465a84f72b___8efbdd24524872ce33bbf4f3e83e388c.png",
+      "alt": "Banner do rodapé",
+      "link": "/"
+    }
+  },
+  "image#banner--footer--mobile-2": {
+    "title": "Banner do rodapé [Mobile]",
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/83b8df34-46a3-43f7-a32e-eb18b64b065b___68dfa4edbe3ed6d3fd41db6eb542852e.png",
       "alt": "Banner do rodapé",
       "link": "/"
     }
@@ -105,6 +168,17 @@
     },
     "children": [
       "image#banner--footer-2"
+    ]
+  },
+  "custom-div#footer-banner-2-mobile": {
+    "title": "Banner do rodapé 1",
+    "props": {
+      "blockClass": [
+        "footer-banner-1"
+      ]
+    },
+    "children": [
+      "image#banner--footer--mobile-2"
     ]
   },
   "image#banner--footer-2": {

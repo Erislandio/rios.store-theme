@@ -2,12 +2,12 @@
   "vendor": "pontodamoda",
   "name": "service",
   "version": "0.1.1",
-  "title": "Romazi Service",
-  "description": "Romazi Service",
+  "title": "pontodamoda Service",
+  "description": "pontodamoda Service",
   "mustUpdateAt": "2023-03-10",
   "builders": {
     "docs": "0.x",
-    "graphql": "1.x",
+    "graphql": "2.x",
     "node": "6.x"
   },
   "policies": [
@@ -40,5 +40,17 @@
       }
     }
   ],
+  "settingsSchema": {
+    "title": "Custom Components",
+    "description": "Custom Components settings",
+    "type": "object",
+    "properties": {
+      "shippingBar": {
+        "title": "Valor barra de frete",
+        "type": "number",
+        "default": 250
+      }
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

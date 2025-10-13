@@ -2,6 +2,18 @@
   "custom-menu#default": {
     "title": "Menu",
     "props": {
+      "others": [
+        {
+          "__editorItemTitle": "Encontre uma loja",
+          "icon": "assets/icons/stores.svg",
+          "href": "/lojas"
+        },
+        {
+          "__editorItemTitle": "Fale conosco",
+          "icon": "assets/icons/card.svg",
+          "href": "/fale-conosco"
+        }
+      ],
       "items": [
         {
           "__editorItemTitle": "Feminino",

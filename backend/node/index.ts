@@ -23,9 +23,28 @@ declare global {
     postalCode: string
     regionId: string
     userAddress: VtexPostalCodeResponse
+    shippingBar: number
   }
 }
 export default new Service({
   clients,
   routes,
+  graphql: {
+    resolvers: {
+      Query: {
+        getShippingBar: async (_, __, ctx) => {
+
+          const settings = await ctx.clients.apps.getAppSettings(process.env.VTEX_APP_ID ?? '') as {
+            shippingBar: number
+          }
+
+          if (settings.shippingBar) {
+            return settings.shippingBar
+          }
+
+          return null
+        },
+      },
+    }
+  }
 })

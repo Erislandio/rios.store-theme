@@ -35,6 +35,11 @@
 .container:hover .image--custom {
   display: block !important;
 }
+@media screen and (max-width: 1024px) {
+  .container :global(.vtex-summary__info) {
+    display: flex !important;
+  }
+}
 .container .nameContainer {
   padding: 0px;
   text-align: left;

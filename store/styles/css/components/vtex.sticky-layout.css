@@ -3,6 +3,8 @@
   background-color: rgb(252, 210, 0) !important;
 }
 
-.container--sticky-header {
-  padding-bottom: 12px;
+@media screen and (max-width: 1024px) {
+  .container--sticky-header {
+    padding-bottom: 12px;
+  }
 }

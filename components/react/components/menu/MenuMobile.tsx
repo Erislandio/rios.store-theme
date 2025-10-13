@@ -27,6 +27,7 @@ const CSS_HANDLES = [
   'allDepartamentWrapperLevel2',
   'menuContainerItem',
   'childrenContainer',
+  'menuOthers',
   'menuItemUl',
   'menuItemLi',
   'submenuUl',
@@ -35,6 +36,7 @@ const CSS_HANDLES = [
   'profileContainer',
   'menuCardContainer',
   'collapsibleMenu',
+  'menuOthersIcon',
   'drawerButton',
   'allDepartamentBottomDevider',
 ] as const
@@ -157,8 +159,14 @@ const ArrowIcon = () => (
 
 export default function CustomMenuMobile({
   departments,
+  others,
 }: {
   departments: MainMenu[]
+  others: {
+    __editorItemTitle: string
+    icon: string
+    href: string
+  }[]
 }) {
   const { handles } = useCssHandles(CSS_HANDLES)
   const [isOpen, setIsOpen] = useState(false)
@@ -252,6 +260,27 @@ export default function CustomMenuMobile({
             </li>
           ))}
         </ul>
+        <div className={handles.menuOthers}>
+          {others.map((item) => (
+            <Link
+              key={item.__editorItemTitle}
+              to={item.href}
+              className={applyModifiers(handles.menuLink, 'others')}
+            >
+              {item.icon && (
+                <img
+                  className={handles.menuOthersIcon}
+                  src={item.icon}
+                  alt={item.__editorItemTitle}
+                  width={20}
+                  height={20}
+                  loading="lazy"
+                />
+              )}
+              {item.__editorItemTitle}
+            </Link>
+          ))}
+        </div>
       </section>
     </Fragment>
   )

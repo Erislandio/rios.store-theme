@@ -19,6 +19,7 @@
   .searchBarContainer {
     width: calc(100vw - 2rem);
     margin: 0 auto;
+    max-width: unset;
   }
 }
 .searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder,
@@ -93,4 +94,9 @@
   font-weight: 700;
   top: 0.5rem !important;
   line-height: 140%; /* 16.8px */
+}
+
+.imageElement--logo-ximenes {
+  width: auto !important;
+  height: auto !important;
 }

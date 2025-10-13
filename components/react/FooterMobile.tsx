@@ -16,6 +16,9 @@ const CSS_HANDLES = [
   'footerContainerLink',
   'footerContainerImage',
   'footerContainerImageContent',
+  'newsletterForm',
+  'newsletterFormTitle',
+  'newsletterFormDescription',
 ] as const
 
 function Accordion({
@@ -97,32 +100,31 @@ function Accordion({
 }
 
 export default function FooterMobile({
-  logo,
   redesSociais,
   institucionals,
-  duvidas,
   formasPagamento,
   siteSeguro,
-  suporte,
+  children,
+  atendimento,
+  voceNoPonto,
+  servicos,
 }: Props) {
   const { handles } = useCssHandles(CSS_HANDLES)
 
   return (
     <section className={applyModifiers(handles.footerContainer, 'mobile')}>
-      <div className={handles.footerContainerImage}>
-        <img
-          alt="NCR"
-          src={logo}
-          className={handles.footerContainerImageContent}
-          width={154}
-          height={38}
-        />
+      <div className={handles.newsletterForm}>
+        <h4 className={handles.newsletterFormTitle}>Newsletter</h4>
+        <p className={handles.newsletterFormDescription}>
+          Receba as nossas novidades!
+        </p>
+        {children}
       </div>
       <Accordion
-        id="redesSociais"
-        menuItems={redesSociais}
+        id="atendimento"
+        menuItems={atendimento}
         open
-        title="Redes Sociais"
+        title="Atendimento"
       />
       <Accordion
         id="institucional"
@@ -132,18 +134,33 @@ export default function FooterMobile({
       />
       <Accordion
         id="duvidas"
-        menuItems={duvidas}
+        menuItems={servicos}
         open={false}
-        title="Dúvidas"
+        title="Serviços"
       />
       <Accordion
-        id="formasPagamento"
-        menuItems={formasPagamento}
-        open
-        title="Formas de pagamento"
+        id="suporte"
+        menuItems={voceNoPonto}
+        open={false}
+        title="Você no Ponto"
       />
-      <Accordion id="suporte" menuItems={suporte} open title="Suporte" />
-      <h4 className={handles.footerContainerH4}>Site Seguro</h4>
+      <ul
+        className={applyModifiers(handles.footerContainerUl, 'formasPagamento')}
+      >
+        {formasPagamento.map((item) => (
+          <li
+            key={item.__editorItemTitle}
+            className={handles.footerContainerLi}
+          >
+            <img
+              alt={item.__editorItemTitle}
+              width={300}
+              height={30}
+              src={item.image}
+            />
+          </li>
+        ))}
+      </ul>
       <ul className={applyModifiers(handles.footerContainerUl, 'siteSeguro')}>
         {siteSeguro.map((item) => (
           <li
@@ -157,25 +174,49 @@ export default function FooterMobile({
               fetchPage
               rel="noreferrer"
             >
-              {item.image ? (
-                <img alt="NCR" src={item.image} />
-              ) : (
-                <Fragment>
-                  {item.icon ? (
-                    <img
-                      loading="eager"
-                      src={item.icon}
-                      alt={item.__editorItemTitle}
-                      title={item.__editorItemTitle}
-                    />
-                  ) : null}
-                  {item.__editorItemTitle}
-                </Fragment>
-              )}
+              <img
+                alt={item.__editorItemTitle}
+                loading="lazy"
+                src={item.image}
+              />
             </Link>
           </li>
         ))}
       </ul>
+      <div
+        className={applyModifiers(handles.footerContainerWrapper, 'siga-nos')}
+      >
+        <h4 className={handles.footerContainerH4}>Siga-nos</h4>
+        <ul
+          className={applyModifiers(handles.footerContainerUl, 'redes-sociais')}
+        >
+          {redesSociais.map((item) => (
+            <li
+              key={item.__editorItemTitle}
+              className={handles.footerContainerLi}
+            >
+              <Link
+                className={handles.footerContainerLink}
+                to={item.url}
+                target={item.newTab ? '_blank' : ''}
+                fetchPage
+                rel="noreferrer"
+              >
+                {item.image && (
+                  <img
+                    loading="lazy"
+                    src={item.image}
+                    alt={item.__editorItemTitle}
+                    title={item.__editorItemTitle}
+                    width={20}
+                    height={20}
+                  />
+                )}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }

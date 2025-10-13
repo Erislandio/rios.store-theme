@@ -19,9 +19,13 @@
       "rich-text#shelf-title-4",
       "__fold__",
       "list-context.product-list#prateleira3",
-      "custom-div#footer-banner-1",
+      "responsive-layout.desktop#home-banners",
+      "responsive-layout.tablet#home-banners",
+      "responsive-layout.phone#home-banners",
       "custom-instagram-feed#default",
-      "custom-div#footer-banner-2"
+      "responsive-layout.desktop#home-banners-2",
+      "responsive-layout.tablet#home-banners-2",
+      "responsive-layout.phone#home-banners-2"
     ]
   }
 }

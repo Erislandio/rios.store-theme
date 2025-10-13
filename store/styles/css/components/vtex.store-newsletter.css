@@ -40,3 +40,8 @@
   background: var(--Primria-700, #00579c);
   color: #fcd200 !important;
 }
+
+.defaultErrorMessage {
+  color: tomato;
+  font-size: 12px;
+}

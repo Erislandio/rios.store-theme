@@ -1,5 +1,6 @@
 import React from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
 import useDatalayer from './hooks/useDatalayer'
 
@@ -30,6 +31,8 @@ const FooterBanners: StoreFrontFC<Props> = ({ items = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
+  const { isMobile } = useDevice()
+
   return (
     <section className={applyModifiers(handles.middleBanners, '3-banners')}>
       <div className={handles.middleBannersWrapper}>
@@ -38,23 +41,36 @@ const FooterBanners: StoreFrontFC<Props> = ({ items = [] }) => {
             key={index}
             className={handles.middleBannersItem}
             to={item.link ?? '#'}
-            onClick={() => pushToDataLayer({
-              event: 'bannerClick',
-              bannerTitle: item.__editorItemTitle,
-              bannerLink: item.link,
-              bannerPosition: index + 1,
-            })}
+            onClick={() =>
+              pushToDataLayer({
+                event: 'bannerClick',
+                bannerTitle: item.__editorItemTitle,
+                bannerLink: item.link,
+                bannerPosition: index + 1,
+              })
+            }
           >
-            {item.image && (
-              <img
-                width={index === 1 ? 628 : 320}
-                height={380}
-                loading="lazy"
-                className={handles.middleBannersItemIcon}
-                src={item.image}
-                alt={item.__editorItemTitle || `Image ${index + 1}`}
-              />
-            )}
+            {isMobile
+              ? item.image && (
+                  <img
+                    width={358}
+                    height={index === 1 ? 212 : 425}
+                    loading="lazy"
+                    className={handles.middleBannersItemIcon}
+                    src={item.image}
+                    alt={item.__editorItemTitle || `Image ${index + 1}`}
+                  />
+                )
+              : item.image && (
+                  <img
+                    width={index === 1 ? 628 : 320}
+                    height={448}
+                    loading="lazy"
+                    className={handles.middleBannersItemIcon}
+                    src={item.image}
+                    alt={item.__editorItemTitle || `Image ${index + 1}`}
+                  />
+                )}
             <div className={handles.middleBannersItemContent}>
               <span className={handles.middleBannersItemsubTitle}>
                 {item.subTitle}
@@ -99,6 +115,13 @@ FooterBanners.schema = {
           },
           image: {
             title: 'Image URL',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          mobileImage: {
+            title: 'Image URL Mobile',
             type: 'string',
             widget: {
               'ui:widget': 'image-uploader',

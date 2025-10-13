@@ -41,6 +41,12 @@
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    :global(.vtex-summary__info) {
+      display: flex !important;
+    }
+  }
+
   .nameContainer {
     padding: 0px;
     text-align: left;
@@ -60,7 +66,6 @@
       line-height: 140%; /* 19.6px */
     }
   }
-
 
   :global(.vtex-button) {
     border-radius: 67px;
@@ -83,7 +88,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
-
 
     :global(.vtex-button__label) {
       display: none;

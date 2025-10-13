@@ -1,0 +1,31 @@
+.summaryItemLabel {
+  color: var(--MT---Secundria, #424242);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+}
+
+.price {
+  color: var(--MT---Secundria, #424242);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+}
+
+.summarySmallContent {
+  .summaryItemContainer:last-child {
+    .price,
+    .summaryItemLabel {
+      color: var(--black, #000);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 22.4px */
+    }
+  }
+}

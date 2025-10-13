@@ -35,4 +35,8 @@
   text-align: left;
   max-width: 215px;
   margin-left: 12px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 150px;
+  }
 }

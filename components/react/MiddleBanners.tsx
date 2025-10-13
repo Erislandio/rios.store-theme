@@ -1,6 +1,8 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
+import { SliderLayout } from 'vtex.slider-layout'
 import useDatalayer from './hooks/useDatalayer'
 
 interface Props {
@@ -29,46 +31,63 @@ const CSS_HANDLES = [
 const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
+  const { isMobile } = useDevice()
+
+  const itemToRender = items.slice(0, 3).map((item, index) => (
+    <Link
+      key={index}
+      className={handles.middleBannersItem}
+      to={item.link ?? '#'}
+      onClick={() =>
+        pushToDataLayer({
+          event: 'bannerClick',
+          bannerTitle: item.__editorItemTitle,
+          bannerLink: item.link,
+          bannerPosition: index + 1,
+        })
+      }
+    >
+      {item.image && (
+        <img
+          width={422}
+          height={400}
+          loading="lazy"
+          className={handles.middleBannersItemIcon}
+          src={item.image}
+          alt={item.__editorItemTitle || `Image ${index + 1}`}
+        />
+      )}
+      <div className={handles.middleBannersItemContent}>
+        <span className={handles.middleBannersItemsubTitle}>
+          {item.subTitle}
+        </span>
+        <h3 className={handles.middleBannersItemTitle}>
+          {item.__editorItemTitle}
+        </h3>
+        <span className={handles.middleBannersItemDescription}>
+          {item.textLink ?? 'Comprar >'}
+        </span>
+      </div>
+    </Link>
+  ))
 
   return (
     <section className={handles.middleBanners}>
-      <div className={handles.middleBannersWrapper}>
-        {items.slice(0, 3).map((item, index) => (
-          <Link
-            key={index}
-            className={handles.middleBannersItem}
-            to={item.link ?? '#'}
-            onClick={() => pushToDataLayer({
-              event: 'bannerClick',
-              bannerTitle: item.__editorItemTitle,
-              bannerLink: item.link,
-              bannerPosition: index + 1,
-            })}
-          >
-            {item.image && (
-              <img
-                width={422}
-                height={400}
-                loading="lazy"
-                className={handles.middleBannersItemIcon}
-                src={item.image}
-                alt={item.__editorItemTitle || `Image ${index + 1}`}
-              />
-            )}
-            <div className={handles.middleBannersItemContent}>
-              <span className={handles.middleBannersItemsubTitle}>
-                {item.subTitle}
-              </span>
-              <h3 className={handles.middleBannersItemTitle}>
-                {item.__editorItemTitle}
-              </h3>
-              <span className={handles.middleBannersItemDescription}>
-                {item.textLink ?? 'Comprar >'}
-              </span>
-            </div>
-          </Link>
-        ))}
-      </div>
+      {isMobile ? (
+        <SliderLayout
+          itemsPerPage={{ desktop: 3, tablet: 3, phone: 1 }}
+          showNavigationArrows="never"
+          showPaginationDots="always"
+          navigationStep={'page'}
+          centerModeSlidesGap={16}
+        >
+          {itemToRender}
+        </SliderLayout>
+      ) : (
+        <div className={handles.middleBannersWrapper}>
+          <>{itemToRender}</>
+        </div>
+      )}
     </section>
   )
 }
@@ -107,6 +126,13 @@ MiddleBanners.schema = {
           },
           image: {
             title: 'Image URL',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          mobileImage: {
+            title: 'Image URL Mobile',
             type: 'string',
             widget: {
               'ui:widget': 'image-uploader',

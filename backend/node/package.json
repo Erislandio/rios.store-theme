@@ -11,7 +11,7 @@
   "devDependencies": {
     "@types/jest": "^27.5.2",
     "@types/node": "^12.0.0",
-    "@vtex/api": "6.48.0",
+    "@vtex/api": "6.50.1",
     "@vtex/tsconfig": "^0.6.0",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",

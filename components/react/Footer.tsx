@@ -26,6 +26,7 @@ export interface Props {
   redesSociais: FooterLink[]
   siteSeguro: FooterLink[]
   logo: string
+  children?: React.ReactNode
 }
 
 const CSS_HANDLES = [
@@ -61,6 +62,7 @@ const Footer: StoreFrontFC<Props> = ({
   if (isMobile) {
     return (
       <FooterMobile
+        children={children}
         logo={logo}
         atendimento={atendimento}
         institucionals={institucionals}
@@ -267,14 +269,14 @@ const Footer: StoreFrontFC<Props> = ({
           </ul>
         </div>
         <div
-          className={applyModifiers(handles.footerContainerWrapper, 'seguranca')}
+          className={applyModifiers(
+            handles.footerContainerWrapper,
+            'seguranca'
+          )}
         >
           <h4 className={handles.footerContainerH4}>Segurança </h4>
           <ul
-            className={applyModifiers(
-              handles.footerContainerUl,
-              'site-seguro'
-            )}
+            className={applyModifiers(handles.footerContainerUl, 'site-seguro')}
           >
             {siteSeguro.map((item) => (
               <li

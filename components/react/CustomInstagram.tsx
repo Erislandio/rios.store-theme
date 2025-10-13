@@ -1,6 +1,8 @@
 import React from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
+import { SliderLayout } from 'vtex.slider-layout'
 import useDatalayer from './hooks/useDatalayer'
 
 interface Props {
@@ -35,6 +37,9 @@ const CustomInstagram: StoreFrontFC<Props> = ({
 }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
+  const { isMobile } = useDevice()
+
+  const elementsToShow = isMobile ? items.slice(0, 100) : items.slice(0, 5)
 
   return (
     <section className={applyModifiers(handles.customInstagram, 'instagram')}>
@@ -54,33 +59,85 @@ const CustomInstagram: StoreFrontFC<Props> = ({
       >
         {instagram}
       </a>
-      <div className={handles.customInstagramWrapper}>
-        {items.slice(0, 5).map((item, index) => (
-          <Link
-            onClick={() =>
-              pushToDataLayer({
-                event: 'instagram_image_click',
-                image_name: item.__editorItemTitle,
-                image_link: item.link,
-              })
-            }
-            key={index}
-            className={handles.customInstagramItem}
-            to={item.link ?? '#'}
+      {isMobile ? (
+        <div
+          style={{
+            marginTop: isMobile ? '16px' : '0px',
+          }}
+        >
+          <SliderLayout
+            infinite
+            fullWidth
+            showNavigationArrows="never"
+            showPaginationDots="never"
+            centerMode={{
+              phone: 'to-the-left',
+              mobile: 'to-the-left',
+              tablet: 'disabled',
+            }}
+            itemsPerPage={{
+              phone: 1,
+              mobile: 1,
+              tablet: 3,
+            }}
+            centerModeSlidesGap={16}
           >
-            {item.image && (
-              <img
-                width={247}
-                height={309}
-                loading="lazy"
-                className={handles.customInstagramItemIcon}
-                src={item.image}
-                alt={item.__editorItemTitle || `Image ${index + 1}`}
-              />
-            )}
-          </Link>
-        ))}
-      </div>
+            {elementsToShow.map((item, index) => (
+              <Link
+                onClick={() =>
+                  pushToDataLayer({
+                    event: 'instagram_image_click',
+                    image_name: item.__editorItemTitle,
+                    image_link: item.link,
+                  })
+                }
+                key={index}
+                className={handles.customInstagramItem}
+                to={item.link ?? '#'}
+              >
+                {item.image && (
+                  <img
+                    width={247}
+                    height={309}
+                    loading="lazy"
+                    className={handles.customInstagramItemIcon}
+                    src={item.image}
+                    alt={item.__editorItemTitle || `Image ${index + 1}`}
+                  />
+                )}
+              </Link>
+            ))}
+          </SliderLayout>
+        </div>
+      ) : (
+        <div className={handles.customInstagramWrapper}>
+          {elementsToShow.map((item, index) => (
+            <Link
+              onClick={() =>
+                pushToDataLayer({
+                  event: 'instagram_image_click',
+                  image_name: item.__editorItemTitle,
+                  image_link: item.link,
+                })
+              }
+              key={index}
+              className={handles.customInstagramItem}
+              to={item.link ?? '#'}
+            >
+              {item.image && (
+                <img
+                  width={247}
+                  height={309}
+                  loading="lazy"
+                  className={handles.customInstagramItemIcon}
+                  src={item.image}
+                  alt={item.__editorItemTitle || `Image ${index + 1}`}
+                />
+              )}
+            </Link>
+          ))}
+        </div>
+      )}
     </section>
   )
 }

@@ -85,10 +85,15 @@
       "itemsPerPage": {
         "desktop": 4,
         "tablet": 4,
-        "phone": 2
+        "phone": 1
       },
-      "infinite": true,
-      "fullWidth": false,
+      "centerMode":{
+        "desktop": "disabled",
+        "tablet": "disabled",
+        "phone": "to-the-left",
+        "mobile": "to-the-left"
+      },
+      "centerModeSlidesGap": 1,
       "showPaginationDots": "never",
       "showNavigationArrows": "desktopOnly",
       "blockClass": [

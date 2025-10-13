@@ -23,3 +23,13 @@
   font-weight: 500;
   line-height: 140%; /* 16.8px */
 }
+
+.paragraph--copyright {
+  color: var(--gray-600, #52525b);
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 16.8px */
+}

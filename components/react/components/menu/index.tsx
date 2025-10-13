@@ -25,6 +25,11 @@ export type MainMenu = {
 type Props = {
   items: MainMenu[]
   delay?: any // opcional - tempo em ms
+  others?: {
+    __editorItemTitle: string
+    icon: string
+    href: string
+  }[]
 }
 
 const CSS_HANDLES = [
@@ -165,7 +170,7 @@ const DropdownItem: React.FC<{
   )
 }
 
-const Menu: StoreFrontFC<Props> = ({ items, delay = 200 }) => {
+const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
@@ -175,7 +180,7 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200 }) => {
   const { isMobile } = useDevice()
 
   if (isMobile) {
-    return <CustomMenuMobile departments={items} />
+    return <CustomMenuMobile departments={items} others={others ?? []} />
   }
 
   const handleMenuEnter = (index: number) => {
@@ -236,6 +241,30 @@ Menu.schema = {
   title: 'Menu',
   type: 'object',
   properties: {
+    others: {
+      title: 'Outros items [mobile]',
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          __editorItemTitle: {
+            title: 'Label',
+            type: 'string',
+          },
+          icon: {
+            title: 'Icon URL',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          href: {
+            title: 'Link URL',
+            type: 'string',
+          },
+        },
+      },
+    },
     items: {
       title: 'Menu Items',
       type: 'array',

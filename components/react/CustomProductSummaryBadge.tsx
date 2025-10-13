@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { ProductSummaryContext } from 'vtex.product-summary-context'
 
 const Icon = () => (
@@ -19,6 +20,7 @@ const Icon = () => (
 const CSS_HANDLES = ['customProductSummaryBadge'] as const
 
 export default function CustomProductSummaryBadge() {
+  const { isMobile } = useDevice()
   const { product } = ProductSummaryContext.useProductSummary()
 
   const hasColorVariation = product?.skuSpecifications?.some(
@@ -31,7 +33,7 @@ export default function CustomProductSummaryBadge() {
 
   return (
     <div className={handles.customProductSummaryBadge}>
-      Variação de cores
+      {isMobile ? '' : ' Variação de cores'}
       <Icon />
     </div>
   )
