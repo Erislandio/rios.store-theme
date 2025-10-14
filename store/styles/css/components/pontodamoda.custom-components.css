@@ -1050,3 +1050,8 @@
 .divContainer--minicart-item {
   border-bottom: 1px solid #dedede;
 }
+
+.divContainer--minicart-close-button-wrapper {
+  display: flex;
+  justify-content: center !important;
+}

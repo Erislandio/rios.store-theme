@@ -24,9 +24,11 @@
   display: none;
 }
 
-.drawer {
-  width: 100% !important;
-  max-width: 100% !important;
+@media screen and (max-width: 768px) {
+  .drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 .minicartCheckoutButton :global(.vtex-button) {

@@ -20,10 +20,30 @@ export default function CustomShippingBar() {
   const { orderForm } = OrderForm.useOrderForm() as { orderForm: OrderFormType }
   const { handles } = useCssHandles(cssHandles)
 
-  const { data } = useQuery<{ getShippingBar: number }>(SHIPPING_BAR, {
+  const { data, loading } = useQuery<{ getShippingBar: number }>(SHIPPING_BAR, {
     ssr: false,
     fetchPolicy: 'no-cache',
   })
+
+  if (loading) {
+    return (
+      <div className={handles.customShippingBar}>
+        <div className={handles.customShippingBar__message}>
+          <span>Carregando...</span>
+        </div>
+        <div className={handles.customShippingBar__progress}>
+          <div
+            className={handles.customShippingBar__total}
+            style={{ width: '0%' }}
+            aria-valuenow={0}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            role="progressbar"
+          />
+        </div>
+      </div>
+    )
+  }
 
   if (!data?.getShippingBar) {
     return null

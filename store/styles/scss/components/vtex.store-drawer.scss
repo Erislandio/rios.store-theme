@@ -22,3 +22,22 @@
     display: none;
   }
 }
+
+.closeIconButton--close-drawer-minicart-button {
+  color: var(--MT---Secundria, #424242);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
