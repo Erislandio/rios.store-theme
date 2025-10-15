@@ -8,3 +8,44 @@
 @import 'empty';
 @import 'summary';
 @import 'mobile';
+
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #fff;
+  color: inherit;
+  font-family: Inter;
+  height: 100%;
+  width: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
