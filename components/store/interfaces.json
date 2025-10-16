@@ -60,5 +60,9 @@
   "custom-contact-form": {
     "component": "ContactForm",
     "composition": "children"
+  },
+
+  "custom-stores": {
+    "component": "CustomStores"
   }
 }
