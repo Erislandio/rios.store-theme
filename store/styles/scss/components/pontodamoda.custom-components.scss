@@ -1394,3 +1394,104 @@
     line-height: normal;
   }
 }
+
+.customStoresContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 1rem 60px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+
+    .storeInfo {
+      flex-direction: column;
+    }
+
+    .storeLinks {
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  .storeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .storeInfo {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 20p;
+    align-items: center;
+  }
+
+  .storeDescription {
+    margin: 0px;
+    color: var(--gray-500, #71717a);
+
+    /* text-sm/Regular */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+  }
+
+  .storeLinks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .storeLink {
+    border-radius: 8px;
+    background: var(--Secundria, #00579c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0px 20px;
+    color: var(--white, #fff);
+
+    /* text-sm/Bold */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 140%; /* 19.6px */
+    gap: 10px;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .storeLink--whatsapp {
+    border-radius: 8px;
+    background: var(--green-500, #22c55e);
+  }
+
+  .storeCard {
+    display: flex;
+    flex-direction: column;
+
+    .storeName {
+      color: var(--gray-700, #3f3f46);
+
+      margin: 0px;
+      /* text-base/Bold */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 22.4px */
+    }
+  }
+}

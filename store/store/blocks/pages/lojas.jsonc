@@ -1,0 +1,85 @@
+{
+  "store.custom#lojas": {
+    "children": [
+      "custom-stores#default"
+    ]
+  },
+  "custom-stores#default": {
+    "props": {
+      "title": "Nossas Lojas",
+      "description": "Encontre nossas lojas físicas e conheça nossos produtos pessoalmente.",
+      "stores": [
+        {
+          "name": "Loja Centro",
+          "description": "Rua Principal, 123 - Centro, Cidade - Estado",
+          "phone": "(11) 1234-5678",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/7fd8bd33-fa68-44d3-8149-91f47d1e0045___eb36b0b2e41d46e3603bb8ae8caa9a21.png",
+          "link": "https://www.exemplo.com/loja-centro",
+          "whatsapp": "https://wa.me/551112345678",
+          "label": "Fale conosco",
+          "openingHours": "Segunda a Sexta: 9h às 18h"
+        },
+        {
+          "name": "Loja Centro",
+          "description": "Rua Principal, 123 - Centro, Cidade - Estado",
+          "phone": "(11) 1234-5678",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/7fd8bd33-fa68-44d3-8149-91f47d1e0045___eb36b0b2e41d46e3603bb8ae8caa9a21.png",
+          "link": "https://www.exemplo.com/loja-centro",
+          "whatsapp": "https://wa.me/551112345678",
+          "label": "Fale conosco",
+          "openingHours": "Segunda a Sexta: 9h às 18h"
+        },
+        {
+          "name": "Loja Centro",
+          "description": "Rua Principal, 123 - Centro, Cidade - Estado",
+          "phone": "(11) 1234-5678",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/7fd8bd33-fa68-44d3-8149-91f47d1e0045___eb36b0b2e41d46e3603bb8ae8caa9a21.png",
+          "link": "https://www.exemplo.com/loja-centro",
+          "whatsapp": "https://wa.me/551112345678",
+          "label": "Fale conosco",
+          "openingHours": "Segunda a Sexta: 9h às 18h"
+        },
+        {
+          "name": "Loja Centro",
+          "description": "Rua Principal, 123 - Centro, Cidade - Estado",
+          "phone": "(11) 1234-5678",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/7fd8bd33-fa68-44d3-8149-91f47d1e0045___eb36b0b2e41d46e3603bb8ae8caa9a21.png",
+          "link": "https://www.exemplo.com/loja-centro",
+          "whatsapp": "https://wa.me/551112345678",
+          "label": "Fale conosco",
+          "openingHours": "Segunda a Sexta: 9h às 18h"
+        },
+        {
+          "name": "Loja Centro",
+          "description": "Rua Principal, 123 - Centro, Cidade - Estado",
+          "phone": "(11) 1234-5678",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/7fd8bd33-fa68-44d3-8149-91f47d1e0045___eb36b0b2e41d46e3603bb8ae8caa9a21.png",
+          "link": "https://www.exemplo.com/loja-centro",
+          "whatsapp": "https://wa.me/551112345678",
+          "label": "Fale conosco",
+          "openingHours": "Segunda a Sexta: 9h às 18h"
+        },
+        {
+          "name": "Loja Centro",
+          "description": "Rua Principal, 123 - Centro, Cidade - Estado",
+          "phone": "(11) 1234-5678",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/7fd8bd33-fa68-44d3-8149-91f47d1e0045___eb36b0b2e41d46e3603bb8ae8caa9a21.png",
+          "link": "https://www.exemplo.com/loja-centro",
+          "whatsapp": "https://wa.me/551112345678",
+          "label": "Fale conosco",
+          "openingHours": "Segunda a Sexta: 9h às 18h"
+        },
+        {
+          "name": "Loja Centro",
+          "description": "Rua Principal, 123 - Centro, Cidade - Estado",
+          "phone": "(11) 1234-5678",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/7fd8bd33-fa68-44d3-8149-91f47d1e0045___eb36b0b2e41d46e3603bb8ae8caa9a21.png",
+          "link": "https://www.exemplo.com/loja-centro",
+          "whatsapp": "https://wa.me/551112345678",
+          "label": "Fale conosco",
+          "openingHours": "Segunda a Sexta: 9h às 18h"
+        }
+      ]
+    }
+  }
+}

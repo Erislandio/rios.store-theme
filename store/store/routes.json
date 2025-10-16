@@ -4,5 +4,9 @@
     "title": "Contato",
     "description": "Página de contato",
     "keywords": "contato, fale conosco, suporte"
+  },
+  "store.custom#lojas": {
+    "path": "/lojas",
+    "title": "Nossas Lojas"
   }
 }
