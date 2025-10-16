@@ -4,11 +4,15 @@
 
 #header-vtex-io {
   align-items: center;
-  display: flex  !important;
+  display: flex !important;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1332px;
   padding: 10px 1rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0;
+  }
 
   .checkout-steps {
     align-items: center;
@@ -17,7 +21,7 @@
 
     .step {
       align-items: center;
-      background-color: #D4D4D8;
+      background-color: #d4d4d8;
       border: none;
       border-radius: 50%;
       display: flex;
@@ -28,27 +32,36 @@
       width: 50px;
 
       &.active {
-        background-color: #00579C;
+        background-color: #00579c;
         font-weight: 600;
 
         svg {
-          color: #D4D4D8;
+          color: #d4d4d8;
 
           path {
-            fill: #D4D4D8;
+            fill: #d4d4d8;
           }
         }
 
         & + span.step--line {
-          background-color: #00579C !important;
+          background-color: #00579c !important;
         }
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 40px;
+        width: 40px;
       }
     }
 
     span.step--line {
-      background-color: #D4D4D8;
+      background-color: #d4d4d8;
       min-height: 4px;
       min-width: 50px;
+
+      @media screen and (max-width: 768px) {
+        min-width: 15px !important;
+      }
     }
   }
 }

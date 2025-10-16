@@ -13,8 +13,8 @@
       background: #fff;
       border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
       border-radius: 2px;
-      margin-bottom: 40px;
-      padding: 40px 20px;
+      margin-bottom: 10px;
+      padding: 30px 20px;
 
       table {
         tbody {
@@ -27,10 +27,15 @@
 
           .product-name {
             max-width: 150px;
+
+            small.seller.muted {
+              display: none !important;
+            }
           }
 
           .product-name a {
             color: var(--COLOR-PRETO, #000);
+            display: block;
             font-family: Inter;
             font-size: 14px;
             font-style: normal;
@@ -54,6 +59,12 @@
           }
 
           td.quantity {
+            .item-quantity-change {
+              left: unset !important;
+              position: relative !important;
+              top: unset !important;
+            }
+
             align-items: center;
             border: 1px solid var(--Neutras-03, #ccc);
             border-radius: 1px;
@@ -172,8 +183,47 @@
       font-weight: 600;
       line-height: 22px; /* 157.143% */
       margin: 0;
-      min-width: 110px;
+      min-width: 180px;
       padding: 12px 40px;
+      text-transform: none;
+    }
+
+    .ship-postalCode {
+      span.help.error {
+        display: none;
+      }
+    }
+
+    label[for='ship-postalCode'] {
+      display: none;
+    }
+
+    p.ship-postalCode {
+      &::before {
+        content: 'CEP';
+        display: block;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 22px; /* 157.143% */
+      }
+    }
+
+    input#ship-postalCode {
+      min-height: 48px;
+    }
+
+    button#cart-shipping-calculate {
+      background: var(--Neutras-01, #1b1b1b);
+      color: var(--Neutras-05, #fff);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      height: auto;
+      line-height: 22px; /* 157.143% */
+      margin: 0;
+      padding: 12px;
       text-transform: none;
     }
 
@@ -266,6 +316,10 @@
           padding: 0;
           padding-bottom: 1rem;
           text-align: left;
+
+          @media screen and (max-width: 768px) {
+            font-size: 18px;
+          }
         }
 
         td.monetary {
@@ -278,6 +332,10 @@
           padding: 0;
           padding-bottom: 1rem;
           text-align: right;
+
+          @media screen and (max-width: 768px) {
+            font-size: 18px;
+          }
         }
 
         td.empty {
@@ -289,6 +347,10 @@
           td.info {
             padding-bottom: 0;
             padding-top: 1rem;
+
+            @media screen and (max-width: 768px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -354,12 +416,35 @@
       font-family: Inter;
       font-size: 12px;
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       line-height: normal;
       line-height: inherit;
       min-height: 46px;
       min-width: 160px;
       text-shadow: none;
+    }
+  }
+
+  div#custom-share-button {
+    margin-bottom: 40px;
+
+    button {
+      align-items: center;
+      color: var(--COLOR-PRETO, #000);
+      display: flex;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      gap: 0.5rem;
+      justify-content: flex-start;
+      line-height: normal;
+    }
+  }
+
+  .cart-fixed {
+    div#custom-share-button {
+      display: none !important;
     }
   }
 }

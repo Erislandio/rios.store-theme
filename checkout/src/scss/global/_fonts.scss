@@ -1,92 +1,139 @@
-/* @font-face {
-  font-family: 'Source Sans Pro';
-  src: url(assets/fonts/SourceSansPro-Regular.otf);
-  font-weight: normal;
-  font-style: normal;
-} */
-
+/* cyrillic-ext */
 @font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: normal;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6267779b-648d-453d-8a00-8fea1da5c6b1___5e1d162e634a102d7da8db597825a764.otf");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro Bold';
-  font-style: normal;
-  font-weight: 700;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/e314b633-75d3-433a-8b76-b34e56af5c9a___1a2a157bfd94b250884c09f1bd57a0bb.otf");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro SemiBold';
-  font-weight: 600;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f49a9c8a-b54b-4eb7-90b2-5ee35f6dd538___78667e5e4b54fea9bb8552482b39cf2e.otf");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro Light';
-  font-weight: 300;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c50afd3d-18c8-4d2d-8442-a0dc6de854fb___779f3bf41b852b5582d41cd866ca3ddc.otf");
-}
-
-@font-face {
-  font-family: Mulish;
-  font-weight: 400;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/6be2200a-1f16-436d-8132-a59abebd0e6d___5416a925ffafb775c6bffd116d87deb0.ttf");
-}
-
-@font-face {
-  font-family: 'Mulish SemiBold';
-  font-weight: 600;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/fd06959c-aaec-41b9-bb79-08ef1e3c0413___a4e6f571273de05494ef24d6fb65c885.ttf");
-}
-
-@font-face {
-  font-family: 'Mulish Bold';
-  font-weight: 700;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/f274b963-fa4c-4867-a5f9-f6445215fae1___b7fa867b7522c7629eca3c4b9f31d3c8.ttf");
-}
-
-@font-face {
-  font-family: 'Mulish ExtraBold';
-  font-weight: 900;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/05fbbb27-0fc2-4831-b7dc-8a784b61f3fb___2000e3092f7d4527368cb41d357fe356.ttf");
-}
-
-@font-face {
-  font-family: Nunito;
-  font-weight: 400;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/43967844-427a-4967-ac62-4b06b1317e03___b83ce9c59c73ade26bb7871143fd76bb.ttf");
-}
-
-@font-face {
-  font-family: Lato;
-  font-weight: 400;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/2ae8e611-9670-49f5-ac28-8fe22d05e90d___122dd68d69fe9587e062d20d9ff5de2a.ttf");
-}
-
-@font-face {
-  font-family: REM;
-  font-weight: 400;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/c376f5c1-0175-4149-b16e-3e1f210bfe74___98f8435cdad21310dc9f8b41523d4e7a.ttf");
-}
-
-@font-face {
-  font-family: 'REM SemiBold';
-  font-weight: 500;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/b855e9cf-639b-4660-999e-b497741a7372___a7a2028ccae3f31bbed15f3d034188a3.ttf");
-}
-
-@font-face {
-  font-family: 'Futura Bk BT';
-  font-weight: 500;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/69763557-b323-4fd8-adff-04350260b8a9___ead5c28b0b3c60d481994292f7418a7d.ttf");
-}
-
-@font-face {
+  font-display: swap;
   font-family: Inter;
-  font-weight: 400;
-  src: url("https://romazi.vtexassets.com/assets/vtex.file-manager-graphql/images/e39db220-60f3-4ffb-85fa-4d8a1aa575e6___37dcabff629c3690303739be2e0b3524.ttf");
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwkT9mI1F55MKw.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwAT9mI1F55MKw.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwgT9mI1F55MKw.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwcT9mI1F55MKw.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+/* vietnamese */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwsT9mI1F55MKw.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwoT9mI1F55MKw.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwQT9mI1F54.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvvYwYZ8UA3J58.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvmYwYZ8UA3J58.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvuYwYZ8UA3J58.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvhYwYZ8UA3J58.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+
+/* vietnamese */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvtYwYZ8UA3J58.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvsYwYZ8UA3J58.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwYZ8UA3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

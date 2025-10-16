@@ -1,0 +1,152 @@
+div#shipping-data {
+  .shipping-data {
+    background: var(--COLOR-BRANCO, #fff);
+    border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+    border-radius: 2px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 10px;
+    }
+
+    label[for='ship-postalCode'] {
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 8px;
+    }
+
+    .accordion-toggle {
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    span.help.error {
+      font-size: 12px;
+    }
+
+    .ship-postalCode {
+      input#ship-postalCode {
+        background: var(--COLOR-BRANCO, #fff);
+        border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+        border-radius: 2px;
+        box-shadow: none !important;
+        color: var(--COLOR-PRETO, #000);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        line-height: normal;
+        max-width: unset;
+        min-height: 35px;
+        padding: 10px;
+        width: 100%;
+      }
+    }
+  }
+
+  .address-summary-BRA {
+    color: var(--COLOR-PRETO, #000);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .shipping-container {
+    .vtex-omnishipping-1-x-shippingSectionTitle.delivery-address-title,
+    .vtex-omnishipping-1-x-shippingSectionTitle {
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    label {
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 5px;
+    }
+
+    input {
+      background: var(--COLOR-BRANCO, #fff);
+      border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+      border-radius: 2px;
+      box-shadow: none !important;
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      height: auto;
+      line-height: normal;
+      max-width: unset;
+      min-height: 35px;
+      padding: 10px;
+    }
+  }
+
+  .shp-summary-group-price.vtex-omnishipping-1-x-SummaryItemPrice {
+    color: var(--COLOR-PRETO, #000);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  a#open-shipping {
+    color: var(--Azul, #00579c);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  p.btn-go-to-payment-wrapper {
+    button {
+      background: var(--Azul, #00579c);
+      border-radius: 0;
+      color: var(--Neutras-05, #fff);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      justify-content: center;
+      line-height: 22px; /* 157.143% */
+      padding: 12px 40px;
+    }
+  }
+
+  .vtex-omnishipping-1-x-address {
+    @media screen and (max-width: 1024px) {
+      & > div {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin: 0;
+        }
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

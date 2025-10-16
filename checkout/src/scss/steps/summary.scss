@@ -1,0 +1,148 @@
+.client-pre-email {
+  border: none;
+
+  label[for='client-pre-email'] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: center;
+    margin: 42px 0;
+
+    span {
+      &[data-i18n='clientProfileData.preemail'] {
+        color: var(--COLOR-PRETO, #000);
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    small {
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .client-email {
+    align-items: center;
+    display: flex;
+    float: none;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 42px;
+    max-width: 400px;
+    width: 400px;
+
+    input {
+      background: var(--secundrias-02, #fff);
+      border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+      border-radius: 0;
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      height: auto;
+      line-height: normal;
+      min-height: 35px;
+      padding: 10px 30px;
+
+      &::placeholder {
+        color: var(--COLOR-PRETO, #000);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    .btn-success {
+      background: var(--Azul, #00579c);
+      border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+      color: var(--secundrias-02, #fff);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      height: auto;
+      left: unset;
+      line-height: normal;
+      min-height: 38px;
+      min-width: 100px;
+      position: relative;
+      right: unset;
+      top: unset;
+    }
+  }
+
+  .emailInfo {
+    background: #fff;
+    border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 10px;
+
+    .icon-ok::before {
+      color: #000;
+      font-size: 1rem;
+    }
+
+    h3[data-i18n='clientProfileData.whyPreEmail'] {
+      color: #478847;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+    }
+
+    ul.unstyled {
+      li {
+        span {
+          color: var(--COLOR-PRETO, #000);
+          font-family: Inter;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  .link-cart {
+    display: flex;
+    float: none;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 65.81196581196582%;
+
+    &::before {
+      color: var(--COLOR-PRETO, #000);
+      content: 'Finalizar compra';
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    a#orderform-to-cart {
+      color: var(--COLOR-PRETO, #000);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

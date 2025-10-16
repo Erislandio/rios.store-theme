@@ -1,0 +1,31 @@
+.cart-template {
+  .empty-cart-title {
+    color: var(--COLOR-PRETO, #000);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  a#cart-choose-products {
+    background: var(--Azul, #00579c);
+    border-radius: 0;
+    color: var(--Neutras-05, #fff);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 22px; /* 157.143% */
+    padding: 12px 40px;
+  }
+
+  p[data-i18n='cart.emptyMessage'] {
+    color: var(--COLOR-PRETO, #000);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

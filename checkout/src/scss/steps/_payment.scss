@@ -1,0 +1,235 @@
+div#payment-data {
+  span[data-i18n='paymentData.payment'] {
+    color: var(--COLOR-PRETO, #000);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .accordion-group {
+    background: var(--COLOR-BRANCO, #fff);
+    border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+    border-radius: 2px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 10px;
+    }
+  }
+
+  form.form-step.box-new {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.shipping-bar-section {
+  padding: 1rem 0;
+}
+
+.giftCarDTitle {
+  background: none !important;
+  color: #4f4f4f !important;
+  font-size: 18px !important;
+  margin-bottom: 0.5em;
+}
+
+.shipping-label,
+.giftCardApplied {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.giftCardApplied {
+  color: #71be25;
+  font-weight: bold;
+}
+
+.gift-card-section {
+  float: right;
+}
+
+.CardForm {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+  max-width: 500px;
+  padding: 30px;
+
+  select {
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+}
+
+/* Ícone de ambiente seguro */
+.SecurityEnvironmentIcon {
+  align-items: center;
+  color: #4caf50;
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.icon-lock {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Estilos para campos de entrada */
+
+input[type='text'],
+input[type='tel'] {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  min-height: 40px;
+  padding: 10px;
+  width: 100%;
+}
+
+span.payment-group-item-text.BRA {
+  line-height: normal;
+}
+
+select.input-xlarge {
+  min-height: 40px;
+  width: 100%;
+}
+
+.payment-group {
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.payment-group-item {
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+
+  .payment-group-item-text {
+    color: var(--COLOR-PRETO, #000);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+/* Estilos para labels */
+.FormFieldLabel {
+  color: var(--COLOR-PRETO, #000);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Estilos para bandeiras de cartão */
+.PaymentCardFlags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card-flag-label {
+  cursor: pointer;
+}
+
+.card-flag {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.box-step-content .steps-view {
+  width: 100% !important;
+}
+
+.card-selected {
+  background-color: #e0f0ff;
+  border-color: #3498db;
+}
+
+/* Estilos para o campo de validade */
+.PaymentCardDueDate {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.payment-card-due-month,
+.payment-card-due-year {
+  flex: 1;
+}
+
+.payment-card-lash {
+  color: #999;
+  font-size: 20px;
+}
+
+/* Estilos para o botão de mudar número de pagamentos */
+.ChangeNumberOfPayments a {
+  color: #3498db;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.ChangeNumberOfPayments a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .CardForm {
+    padding: 20px;
+  }
+}
+
+.gift-card-section {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+td.quantity {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.full-cart .cart table tbody tr td.quantity input {
+  margin: 0;
+  max-width: 25px;
+  min-width: 50px;
+  width: auto;
+}

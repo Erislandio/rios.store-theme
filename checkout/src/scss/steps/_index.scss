@@ -17,6 +17,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-shadow: none !important;
 }
 
 html, body {
@@ -48,4 +49,16 @@ a {
 
 ul, ol {
   list-style: none;
+}
+
+
+input[type='tel'],
+input[type='text'],
+input[type='email'],
+select,
+textarea,
+button {
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
 }
