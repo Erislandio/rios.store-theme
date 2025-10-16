@@ -1,0 +1,39 @@
+{
+  "store.custom#contato": {
+    "children": ["custom-contact-form#default"]
+  },
+  "custom-contact-form#default": {
+    "props": {
+      "whatsAppLink": "https://api.whatsapp.com/send?phone=5511983155112&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.",
+      "subjectOptions": [
+        { "label": "Dúvidas sobre produtos" },
+        { "label": "Dúvidas sobre o pedido" },
+        { "label": "Outros" }
+      ],
+      "contacts": [
+        {
+          "label": "TELEFONE",
+          "text": "(11) 5666-6353",
+          "icon": "assets/icons/phone.svg"
+        },
+        {
+          "label": "WHATSAPP",
+          "text": "(11) 98315-5112",
+          "icon": "assets/icons/whats-2.svg"
+        },
+        {
+          "label": "EMAIL",
+          "text": "Clique aqui",
+          "link": "contato@ponto-da-moda.com.br",
+          "icon": "assets/icons/email-2.svg"
+        },
+         {
+           "label": "NOSSA LOJA",
+           "text": "Clique aqui",
+           "link": "/lojas",
+           "icon": "assets/icons/lojas.svg"
+         }
+      ]
+    }
+  }
+}

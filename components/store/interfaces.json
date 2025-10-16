@@ -56,5 +56,9 @@
   "custom-shipping-bar": {
     "component": "CustomShippingBar",
     "composition": "children"
+  },
+  "custom-contact-form": {
+    "component": "ContactForm",
+    "composition": "children"
   }
 }

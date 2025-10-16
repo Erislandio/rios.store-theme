@@ -1,1 +1,8 @@
-{}
+{
+  "store.custom#contato": {
+    "path": "/contato",
+    "title": "Contato",
+    "description": "Página de contato",
+    "keywords": "contato, fale conosco, suporte"
+  }
+}

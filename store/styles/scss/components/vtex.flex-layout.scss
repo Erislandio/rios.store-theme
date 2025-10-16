@@ -38,3 +38,9 @@
   background: #fafafa;
   box-shadow: 0 -7px 8px 0 rgba(0, 0, 0, 0.1);
 }
+
+:global(.vtex-render__container-id-default) {
+  @media screen and (max-width: 1024px) {
+    padding-top: 12px;
+  }
+}
