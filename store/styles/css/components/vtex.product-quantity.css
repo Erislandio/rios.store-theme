@@ -1,0 +1,55 @@
+.quantitySelectorContainer {
+  max-width: 100px;
+  margin: 0px;
+  min-width: 100px;
+}
+.quantitySelectorContainer .quantitySelectorTitle {
+  display: none;
+}
+.quantitySelectorContainer .quantityStepper {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 100px;
+  border: 1px solid var(--Cor-de-Fundo-Input, #eaeaea);
+  padding: 10px;
+}
+.quantitySelectorContainer :global(.vtex-numeric-stepper__input) {
+  width: 50px;
+  color: var(--black, #000);
+  /* text-sm/Regular */
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.quantitySelectorContainer :global(.vtex-numeric-stepper-container) {
+  min-width: 100px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background: var(--white, #fff);
+  padding: 7px 15px;
+}
+.quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button__text),
+.quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button__text) {
+  color: var(--gray-400, #a1a1aa);
+  /* text-sm/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+}
+.quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button),
+.quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button) {
+  width: auto !important;
+  border: none;
+  background-color: transparent;
+}
+.quantitySelectorContainer :global(.vtex-numeric-stepper__input) {
+  border: none;
+}

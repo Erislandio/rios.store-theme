@@ -64,5 +64,19 @@
 
   "custom-stores": {
     "component": "CustomStores"
+  },
+  "custom-product-info": {
+    "component": "CustomProductInfo",
+    "composition": "children"
+  },
+  "custom-product-description": {
+    "component": "CustomproductDescripiton"
+  },
+  "custom-share-button": {
+    "component": "CustomShareproduct"
+  },
+  "custom-buy-together": {
+    "component": "CustomCompreJunto",
+    "render": "client"
   }
 }

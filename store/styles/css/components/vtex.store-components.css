@@ -100,3 +100,237 @@
   width: auto !important;
   height: auto !important;
 }
+
+.productImagesContainer--list {
+  display: grid;
+  height: fit-content;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  position: sticky;
+  top: 100px;
+}
+.productImagesContainer--list .productImage {
+  cursor: pointer;
+}
+.productImagesContainer--list .productImage .productImageTag {
+  border-radius: 8px;
+}
+
+.productNameContainer .productBrand {
+  color: var(--black, #000);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+}
+
+.price_listPriceLabel--price {
+  display: none;
+}
+
+.price_listPrice--price .currencyContainer--price {
+  color: var(--gray-400, #a1a1aa);
+  /* text-xs/Regular */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+  text-decoration-line: line-through;
+}
+
+.price_sellingPriceContainer--price .price_sellingPriceLabel--price {
+  display: none;
+}
+.price_sellingPriceContainer--price .currencyContainer--price {
+  color: var(--black, #000);
+  /* text-xl/Bold */
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 30.8px */
+}
+
+.price_listPrice--price,
+.price_sellingPriceContainer--price {
+  padding: 0px;
+}
+
+.price_sellingPrice--price {
+  display: flex;
+  padding: 0px;
+}
+
+.skuSelectorContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 28px;
+}
+.skuSelectorContainer .skuSelectorNameContainer {
+  margin: 0px;
+}
+.skuSelectorContainer .skuSelectorOptionsList,
+.skuSelectorContainer .skuSelectorItem {
+  margin: 0px;
+}
+.skuSelectorContainer .skuSelectorOptionsList {
+  gap: 10px;
+}
+.skuSelectorContainer .frameAround {
+  display: none;
+}
+.skuSelectorContainer .skuSelectorItemTextValue {
+  padding: 0px;
+  color: var(--gray-500, #71717a);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+.skuSelectorContainer .skuSelectorInternalBox {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 200px;
+  border: 1px solid var(--gray-200, #e4e4e7);
+  opacity: 0.6;
+  background: var(--white, #fff);
+  transition: all 0.3s ease-in;
+}
+.skuSelectorContainer .skuSelectorInternalBox:hover {
+  opacity: 1;
+}
+.skuSelectorContainer .skuSelectorSubcontainer {
+  margin-bottom: 28px;
+}
+.skuSelectorContainer .skuSelectorItem--selected .skuSelectorInternalBox {
+  border-radius: 200px;
+  border: 1px solid var(--Secundria, #00579c);
+  background: var(--white, #fff);
+  opacity: 1;
+}
+.skuSelectorContainer .skuSelectorItem--selected .skuSelectorInternalBox .skuSelectorItemTextValue {
+  color: #00579c;
+}
+.skuSelectorContainer .skuSelectorName {
+  color: var(--black, #000);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  margin: 0px;
+}
+.skuSelectorContainer .skuSelectorSelectorImageValue,
+.skuSelectorContainer .skuSelectorNameSeparator {
+  display: none;
+}
+
+.carouselGaleryThumbs {
+  display: none;
+}
+
+.carouselGaleryCursor {
+  margin: 0px;
+  width: 100%;
+}
+
+.vtex-store-components-3-x-productImagesGallerySlide {
+  width: 100% !important;
+}
+
+.shippingContainer {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.shippingContainer :global(.vtex-input__label) {
+  font-size: 0px;
+}
+.shippingContainer :global(.vtex-input__label)::before {
+  content: "Calcule o frete";
+  color: var(--black, #000);
+  /* text-sm/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.shippingContainer :global(.vtex-input-prefix__group) {
+  border-radius: 8px;
+  min-height: 44px;
+  border: 1px solid var(--gray-200, #e4e4e7);
+}
+.shippingContainer :global(.vtex-address-form__postalCode) {
+  padding: 0px;
+  min-width: 100px;
+}
+.shippingContainer :global(.vtex-address-form-4-x-input) {
+  padding: 0px;
+  color: var(--gray-400, #000);
+  /* text-sm/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.shippingContainer :global(.vtex-address-form-4-x-input)::placeholder {
+  color: var(--gray-400, #a1a1aa);
+  /* text-sm/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.shippingContainer :global(.vtex-button) {
+  position: relative;
+  top: 14px;
+  border-radius: 8px;
+  background: var(--Secundria, #00579c);
+  min-height: 42px;
+  color: var(--white, #fff);
+  border: none;
+  /* text-sm/Bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+  max-width: 158px;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+.shippingContainer :global(.vtex-button):hover {
+  background: var(--Secundria-Hover, #002f53);
+}
+.shippingContainer :global(.vtex-button) :global(.vtex-button__label) {
+  font-size: 0px;
+}
+.shippingContainer :global(.vtex-button) :global(.vtex-button__label)::before {
+  content: "Calcular";
+  font-size: 14px;
+}
+.shippingContainer :global(.vtex-input__suffix),
+.shippingContainer :global(.vtex-address-form__postalCode-forgottenURL) {
+  display: none;
+}
+
+.shippingTableCell,
+.shippingTable {
+  padding: 0px;
+  color: var(--gray-400, #000);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.shippingTableCell {
+  padding: 8px 0px;
+}

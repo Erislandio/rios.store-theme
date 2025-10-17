@@ -35,7 +35,7 @@ const Div: StoreFrontFC<DivProps> = ({
   paddingMobile = '',
   flexDirectionMobile = 'column',
   customClass,
-  id = ''
+  id = '',
 }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { isMobile } = useDevice()

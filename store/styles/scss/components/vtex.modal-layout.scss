@@ -1,0 +1,89 @@
+.paper--product-zoom-modal {
+  max-width: 808px;
+  padding: 40px 40px 80px;
+
+  :global(.vtex-store-components-3-x-swiperCaret) {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    border: 1px solid #eaeaea;
+    background: #fff;
+    padding: 0px;
+
+    :global(.vtex-store-components-3-x-caretIcon) {
+      color: #000;
+      font-size: 10px;
+      width: 10px;
+    }
+  }
+
+  :global(.vtex-store-components-3-x-swiperCaretPrev) {
+    left: 2.5rem;
+  }
+
+  :global(.vtex-store-components-3-x-carouselGaleryCursor) {
+    padding: 0px;
+  }
+
+  :global(.vtex-store-components-3-x-swiperCaretNext) {
+    right: 2.5rem;
+  }
+
+  :global(.vtex-store-components-3-x-swiperBullet) {
+    background: #D9D9D9;
+  }
+
+  :global(.vtex-store-components-3-x-swiperBullet--active) {
+    background: #fcd200;
+  }
+}
+
+.headerContainer--product-zoom-header {
+  border: none;
+  margin-bottom: 40px;
+}
+
+.closeButton--product-zoom-header::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M18.6309 6L6.63086 18M6.63086 6L18.6309 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.closeIcon--product-zoom-header {
+  display: none;
+}
+
+.closeButton--product-zoom-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.closeButtonContainer--product-zoom-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.closeButton--product-zoom-header::before {
+  content: 'Fechar';
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}

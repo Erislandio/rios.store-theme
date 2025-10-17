@@ -40,7 +40,6 @@
       "custom-minicart-button#default"
     ]
   },
-
   "flex-layout.row#main-header": {
     "title": "Header",
     "props": {
@@ -62,7 +61,10 @@
     "title": "Search Bar",
     "props": {
       "placeholder": "Busque por produto, categoria ou marca..."
-    }
+    },
+    "blocks": [
+      "autocomplete-result-list.v2#custom"
+    ]
   },
   "custom-login-button#default": {
     "title": "Login",
@@ -70,14 +72,20 @@
       "login#default"
     ]
   },
-
+  "autocomplete-result-list.v2#custom": {
+    "props": {
+      "maxSuggestedProducts": 2
+    },
+    "blocks": [
+      "product-summary.shelf#default"
+    ]
+  },
   "custom-minicart-button#default": {
     "title": "Minicart",
     "children": [
       "minicart.v2#custom"
     ]
   },
-
   "login#default": {
     "title": "Login componente",
     "props": {
