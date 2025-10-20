@@ -13,6 +13,7 @@
     "test:coverage": "cd ./node && yarn test:coverage",
     "test:watch": "cd ./node && yarn test:watch"
   },
+
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",

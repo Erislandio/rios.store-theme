@@ -77,6 +77,10 @@
   },
   "custom-buy-together": {
     "component": "CustomCompreJunto",
-    "render": "client"
+    "render": "client",
+    "composition": "blocks",
+    "required": [
+      "product-summary.shelf"
+    ]
   }
 }

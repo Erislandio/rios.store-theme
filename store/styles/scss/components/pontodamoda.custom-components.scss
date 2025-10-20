@@ -1536,10 +1536,6 @@
   }
 }
 
-.divContainer--prices-row {
-  min-height: 70px;
-}
-
 .divContainer--add-to-cart-section {
   align-items: center;
   :global(.vtex-button) {
@@ -1547,9 +1543,13 @@
     height: 100%;
     background: var(--green-500, #22c55e);
     border: none;
-    padding: 0px;
+    padding: 10px;
     width: 100%;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (max-width: 1024px) {
+      padding: 10px 0px;
+    }
 
     &:hover {
       background: var(--green-600, #0f7033);
@@ -1586,7 +1586,7 @@
 .divContainer--product-infos {
   min-height: 1250px;
   max-width: 30%;
-
+  min-width: 450px;
 }
 
 .customProductDescriptionHeader {
@@ -1638,5 +1638,108 @@
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+.compreJunto {
+  max-width: 1280px;
+  padding: 60px 1rem;
+  margin: 0 auto;
+
+  :global(.vtex-store-components-3-x-installmentsPrice) {
+    display: none;
+  }
+
+  .compreJuntoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .compreJuntoTotals {
+    height: -webkit-fill-available;
+    padding: 40px;
+    border-radius: 8px;
+    background: var(--gray-100, #f4f4f5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 325px;
+
+    .compreJuntoTotalTitle {
+      color: var(--gray-700, #3f3f46);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      text-align: center;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      margin: 0px;
+    }
+
+    .compreJuntoTotalValue {
+      color: var(--gray-700, #3f3f46);
+      font-family: Inter;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 30.8px */
+      margin: 0px;
+      text-align: center;
+    }
+
+    :global(.vtex-button) {
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 8px;
+      border: none;
+      background: var(--green-500, #22c55e);
+      text-transform: none;
+
+      &:hover {
+        background: var(--green-600, #0f7033);
+      }
+
+      :global(.vtex-button__label) {
+        color: var(--white, #fff);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 19.6px */
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .divContainer--product-infos {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .divContainer--breadcrumb {
+    margin: 0px;
+  }
+
+  .divContainer--product-infos  {
+    padding: 0px 1rem !important;
+    min-height: unset !important;
+  }
+
+  .divContainer--product-main {
+    padding: 0px !important;
+    gap: 40px !important;
+  }
+}
+
+.compreJunto--mobile {
+  padding: 40px 0px;
+
+  .compreJuntoWrapper {
+    padding: 0px 1rem;
   }
 }

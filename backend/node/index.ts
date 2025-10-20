@@ -3,6 +3,7 @@ import { Service } from '@vtex/api'
 import { routes } from './routes'
 
 import { Clients } from './clients'
+import { resolvers } from './resolvers'
 
 const TIMEOUT_MS = 20000
 
@@ -10,7 +11,7 @@ const clients: ClientsConfig<Clients> = {
   implementation: Clients,
   options: {
     default: {
-      retries: 2,
+      retries: 3,
       timeout: TIMEOUT_MS,
     },
   },
@@ -30,21 +31,6 @@ export default new Service({
   clients,
   routes,
   graphql: {
-    resolvers: {
-      Query: {
-        getShippingBar: async (_, __, ctx) => {
-
-          const settings = await ctx.clients.apps.getAppSettings(process.env.VTEX_APP_ID ?? '') as {
-            shippingBar: number
-          }
-
-          if (settings.shippingBar) {
-            return settings.shippingBar
-          }
-
-          return null
-        },
-      },
-    }
-  }
+    resolvers,
+  },
 })

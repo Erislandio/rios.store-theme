@@ -1,3 +1,70 @@
 type Query {
   getShippingBar: Float @auth(scope: PUBLIC)
+  getBuyTogether(productId: String!): [ProductsByIdentifier] @auth(scope: PUBLIC)
+
+}
+
+type Mutation {
+  doNotCall: Boolean @auth(scope: PUBLIC)
+}
+
+type CommertialOffer {
+  Price: Float
+  ListPrice: Float
+  spotPrice: Float
+  PriceWithoutDiscount: Float
+  RewardValue: Int
+  PriceValidUntil: String
+  AvailableQuantity: Int
+  Tax: Int
+  taxPercentage: Int
+  CacheVersionUsedToCallCheckout: String
+}
+
+type Sellers {
+  sellerId: String
+  sellerName: String
+  addToCartLink: String
+  sellerDefault: Boolean
+  commertialOffer: CommertialOffer
+}
+
+type Images {
+  cacheId: String
+  imageId: String
+  imageLabel: String
+  imageTag: String
+  imageUrl: String
+  imageText: String
+}
+
+type Items {
+  itemId: String
+  name: String
+  nameComplete: String
+  complementName: String
+  ean: String
+  measurementUnit: String
+  unitMultiplier: Int
+  estimatedDateArrival: String
+  sellers: [Sellers]
+  images: [Images]
+}
+
+type ProductsByIdentifier {
+  brand: String
+  brandId: Int
+  cacheId: String
+  categoryId: String
+  description: String
+  link: String
+  linkText: String
+  productId: String
+  productName: String
+  productReference: String
+  titleTag: String
+  metaTagDescription: String
+  jsonSpecifications: String
+  releaseDate: String
+  items: [Items]
 }

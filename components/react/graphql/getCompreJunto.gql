@@ -1,0 +1,43 @@
+query getBuyTogether($productId: String!) {
+  getBuyTogether(productId: $productId) {
+    link
+    linkText
+    productId
+    productName
+    productReference
+    titleTag
+    items {
+      itemId
+      name
+      nameComplete
+      complementName
+      ean
+      images {
+        cacheId
+        imageId
+        imageLabel
+        imageTag
+        imageUrl
+        imageText
+      }
+      sellers {
+        sellerId
+        commertialOffer {
+          Price
+          ListPrice
+          spotPrice
+          PriceWithoutDiscount
+          RewardValue
+          PriceValidUntil
+          AvailableQuantity
+          Tax
+          taxPercentage
+          CacheVersionUsedToCallCheckout
+        }
+        sellerName
+        addToCartLink
+        sellerDefault
+      }
+    }
+  }
+}

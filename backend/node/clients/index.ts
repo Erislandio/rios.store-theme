@@ -1,12 +1,8 @@
 import { IOClients } from '@vtex/api'
-import { SessionClient } from './session-client'
-import Regions from './vtex-region'
+import Catalog from './catalog'
 
 export class Clients extends IOClients {
-  public get Regions() {
-    return this.getOrSet('Regions', Regions)
-  }
-  public get SessionClient() {
-    return this.getOrSet('SessionClient', SessionClient)
+  public get CustomCatalog() {
+    return this.getOrSet('CustomCatalog', Catalog)
   }
 }

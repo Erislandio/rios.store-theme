@@ -4247,14 +4247,6 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-"pontodamoda.custom-components@https://eris--pontodamoda.myvtex.com/_v/private/typings/linked/v1/pontodamoda.custom-components@0.0.1+build1760709580/public/@types/pontodamoda.custom-components":
-  version "0.0.1"
-  resolved "https://eris--pontodamoda.myvtex.com/_v/private/typings/linked/v1/pontodamoda.custom-components@0.0.1+build1760709580/public/@types/pontodamoda.custom-components#d19d9c69ff82d1881db24f5405d1833cc1d70a74"
-
-"pontodamoda.service@https://eris--pontodamoda.myvtex.com/_v/private/typings/linked/v1/pontodamoda.service@0.1.1+build1760708719/public/@types/pontodamoda.service":
-  version "0.1.1"
-  resolved "https://eris--pontodamoda.myvtex.com/_v/private/typings/linked/v1/pontodamoda.service@0.1.1+build1760708719/public/@types/pontodamoda.service#e8c20c7220feec6e2d11ed1c61fc8b180d5c713c"
-
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"

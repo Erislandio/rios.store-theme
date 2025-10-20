@@ -84,3 +84,85 @@
   scale: 1.5;
   height: auto !important;
 }
+
+.container--comprejunto {
+  border: none !important;
+  border-radius: 0px !important;
+}
+.container--comprejunto .imageNormal {
+  scale: 1 !important;
+  max-height: unset !important;
+  height: 100%;
+}
+.container--comprejunto .nameContainer {
+  margin: 0px;
+}
+.container--comprejunto .nameContainer {
+  max-height: unset;
+}
+.container--comprejunto .imageNormal {
+  border-radius: 8px;
+}
+@media screen and (max-width: 1024px) {
+  .container--comprejunto .imageNormal {
+    min-height: 220px;
+    object-fit: cover;
+  }
+}
+.container--comprejunto :global(.vtex-store-components-3-x-priceContainer) {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0px;
+  padding-bottom: 8px;
+}
+.container--comprejunto .price_sellingPriceContaine {
+  padding: 0px;
+}
+.container--comprejunto .price_listPriceContainer {
+  display: none;
+}
+.container--comprejunto .price_sellingPriceContainer {
+  margin-top: 8px;
+}
+.container--comprejunto .price_sellingPriceLabel,
+.container--comprejunto :global(.vtex-store-components-3-x-listPriceLabel) {
+  display: none;
+}
+.container--comprejunto .price_sellingPrice {
+  color: var(--black, #000);
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: var(--Cinza, #bcbcbc);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 30.8px */
+}
+.container--comprejunto .priceContainer {
+  min-height: 100px;
+  padding: 0px;
+  justify-content: flex-start;
+}
+.container--comprejunto .price_listPrice {
+  color: var(--gray-400, #a1a1aa);
+  /* text-xs/Regular */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+  text-decoration-line: line-through;
+}
+.container--comprejunto .productBrand {
+  color: var(--black, #000);
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: var(--Cinza, #bcbcbc);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  margin-top: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+}

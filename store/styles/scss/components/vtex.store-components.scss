@@ -303,6 +303,7 @@
   :global(.vtex-address-form__postalCode) {
     padding: 0px;
     min-width: 100px;
+    width: 100%;
   }
 
   :global(.vtex-address-form-4-x-input) {
@@ -379,4 +380,21 @@
 
 .shippingTableCell {
   padding: 8px 0px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .productImagesContainer {
+    .swiperCaret {
+      display: none;
+    }
+  }
+
+  .triggerContainer {
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
 }

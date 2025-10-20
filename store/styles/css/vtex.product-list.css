@@ -1,6 +1,7 @@
 .productImage {
   min-width: 70px;
   min-height: 84px;
+  object-fit: cover;
 }
 
 .productName {
