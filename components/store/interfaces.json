@@ -82,5 +82,12 @@
     "required": [
       "product-summary.shelf"
     ]
+  },
+  "custom-search-carousel": {
+    "component": "DepartmentCarousel",
+    "composition": "children"
+  },
+  "custom-icons": {
+    "component": "CustomIcons"
   }
 }
