@@ -80,3 +80,17 @@
   font-weight: 500;
   line-height: 140%; /* 22.4px */
 }
+
+.productListAvailableItemsMessage,
+.productListUnavailableItemsMessage {
+  color: var(--Contraste-Preto, #000);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.productListUnavailableItemsMessage {
+  color: tomato;
+}

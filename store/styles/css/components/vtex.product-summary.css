@@ -89,6 +89,10 @@
   border: none !important;
   border-radius: 0px !important;
 }
+.container--comprejunto:hover {
+  border: none;
+  box-shadow: none;
+}
 .container--comprejunto .imageNormal {
   scale: 1 !important;
   max-height: unset !important;

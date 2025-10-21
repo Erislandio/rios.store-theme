@@ -39,3 +39,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.openIconContainer--filter-drawer {
+  padding: 0px;
+  border-radius: 8px;
+  background: var(--Secundria, #00579c);
+}

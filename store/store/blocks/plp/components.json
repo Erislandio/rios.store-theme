@@ -1,0 +1,60 @@
+{
+  "custom-div#filter": {
+    "title": "Filter Container",
+    "props": {
+      "blockClass": ["filter-container", "container"],
+      "justifyContent": "space-between",
+      "alignItems": "center",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%"
+    },
+    "children": ["drawer#filters", "gallery-layout-switcher"]
+  },
+
+  "custom-div#search-info": {
+    "title": "Orderby Container",
+    "props": {
+      "blockClass": ["orderby-container", "container"],
+      "justifyContent": "space-between",
+      "alignItems": "center",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%"
+    },
+    "children": ["total-products.v2", "order-by.v2"]
+  },
+
+  "drawer#filters": {
+    "props": {
+      "blockClass": ["filter-drawer"],
+      "position": "left",
+      "closeOnOutsideClick": true
+    },
+    "children": ["filter-navigator.v3#custom"],
+    "blocks": ["drawer-trigger#filters"]
+  },
+
+  "drawer-trigger#filters": {
+    "props": {
+      "blockClass": ["filter"]
+    },
+    "children": ["rich-text#filters"]
+  },
+
+  "filter-navigator.v3#custom": {
+    "props": {
+      "blockClass": ["custom-filter-navigator"],
+      "layout": "responsive",
+      "closeOnOutsideClick": true
+    }
+  },
+
+  "rich-text#filters": {
+    "title": "Open Modal Text",
+    "props": {
+      "blockClass": ["open-drawer-filter"],
+      "text": "Filtrar"
+    }
+  }
+}

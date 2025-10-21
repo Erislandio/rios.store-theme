@@ -44,3 +44,13 @@
     padding-top: 12px;
   }
 }
+
+:global(.vtex-toast) {
+  background-color: #00579c;
+  padding: 0px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}

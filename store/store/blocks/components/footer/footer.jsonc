@@ -101,7 +101,7 @@
       ]
     },
     "children": [
-      "custom-footer#footer-2"
+      "custom-footer#footer-3"
     ]
   },
   "newsletter-form#default": {
@@ -137,7 +137,7 @@
       ]
     }
   },
-  "custom-footer#footer-2": {
+  "custom-footer#footer-3": {
     "title": "Custom Footer",
     "children": [
       "newsletter-form#default"
@@ -145,7 +145,7 @@
     "props": {
       "atendimento": [
         {
-          "url": "/nossas-lojas",
+          "url": "/lojas",
           "__editorItemTitle": "Nossas Lojas"
         },
         {

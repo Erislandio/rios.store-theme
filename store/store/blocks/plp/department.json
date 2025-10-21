@@ -1,0 +1,162 @@
+{
+  "search-result-layout#department": {
+    "blocks": [
+      "search-result-layout.desktop#department",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+
+  "search-result-layout.desktop#department": {
+    "children": [
+      "custom-div#breadcrumb-search",
+      "responsive-layout.desktop#department-banner",
+      "responsive-layout.tablet#department-banner",
+      "responsive-layout.phone#department-banner",
+      "custom-search-carousel#default",
+      "custom-div#filter",
+      "custom-div#search-info"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": false,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+
+  "custom-search-carousel#default": {
+    "title": "Search Carousel",
+    "props": {
+      "blockClass": ["search-carousel"],
+      "items": [
+        {
+          "__editorItemTitle": "Blusas",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f072f6db-d8cd-44aa-901d-884721d70bfc___7b46268988c2e09ef7eb90ed8b94e585.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Calças",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/4146cce2-1b8f-4ff4-a7d8-6fb63f462676___792fefc0a36f98ecd54861bb1c39776d.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Cropped",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/1728d594-f6c0-4aa6-b1e2-477704a0180d___b389eac116ffb0519b6ef0f7b2c1a847.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Saias",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/fc3eff7b-012d-4739-be45-e4b8149b074f___7ba33015b880b3c5a1fc6abd120be4d2.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Shorts",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/2b97434f-f30a-47f0-b723-4d80c976fe4a___9466275adb64c29e2d5121c1d7323edf.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Vestidos",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/25471314-4354-48aa-892a-749ba44d9f14___b90483985d29f801a325846ffd22d93d.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Essenciais",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/93566474-06cd-4640-84bc-cd910815d93a___e433696e1b3a4fbbdc7d6033e4038a52.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Blusas",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f072f6db-d8cd-44aa-901d-884721d70bfc___7b46268988c2e09ef7eb90ed8b94e585.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Calças",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/4146cce2-1b8f-4ff4-a7d8-6fb63f462676___792fefc0a36f98ecd54861bb1c39776d.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Cropped",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/1728d594-f6c0-4aa6-b1e2-477704a0180d___b389eac116ffb0519b6ef0f7b2c1a847.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Saias",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/fc3eff7b-012d-4739-be45-e4b8149b074f___7ba33015b880b3c5a1fc6abd120be4d2.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Shorts",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/2b97434f-f30a-47f0-b723-4d80c976fe4a___9466275adb64c29e2d5121c1d7323edf.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Vestidos",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/25471314-4354-48aa-892a-749ba44d9f14___b90483985d29f801a325846ffd22d93d.png",
+          "link": "#"
+        },
+        {
+          "__editorItemTitle": "Essenciais",
+          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/93566474-06cd-4640-84bc-cd910815d93a___e433696e1b3a4fbbdc7d6033e4038a52.png",
+          "link": "#"
+        }
+      ]
+    }
+  },
+
+  "custom-div#department-banner-desktop": {
+    "title": "Banner Department",
+    "props": {
+      "blockClass": ["department-banner"]
+    },
+    "children": ["search-title.v2", "image#search-banner-department"]
+  },
+
+  "custom-div#department-banner-mobile": {
+    "title": "Banner Department Mobile",
+    "props": {
+      "blockClass": ["department-banner"]
+    },
+    "children": [
+      "search-title.v2#department",
+      "image#search-banner-department-mobile"
+    ]
+  },
+
+  "search-title.v2#department": {
+    "props": {
+      "blockClass": ["department-title"]
+    }
+  },
+
+  "responsive-layout.desktop#department-banner": {
+    "title": "Department Banner Desktop",
+    "children": ["custom-div#department-banner-desktop"]
+  },
+
+  "responsive-layout.tablet#department-banner": {
+    "title": "Department Tablet Banner",
+    "children": ["custom-div#department-banner-desktop"]
+  },
+
+  "responsive-layout.phone#department-banner": {
+    "title": "Department Phone Banner",
+    "children": ["custom-div#department-banner-mobile"]
+  },
+
+  "image#search-banner-department": {
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/be404b27-a913-4051-8d0c-45905c4479db___c708df801f9b3d3e578324c282187b67.png",
+      "alt": "Banner Department",
+      "width": "1440",
+      "height": "300"
+    }
+  },
+  "image#search-banner-department-mobile": {
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/be404b27-a913-4051-8d0c-45905c4479db___c708df801f9b3d3e578324c282187b67.png",
+      "alt": "Banner Department",
+      "width": "1440",
+      "height": "300"
+    }
+  }
+}

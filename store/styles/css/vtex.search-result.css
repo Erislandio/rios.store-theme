@@ -1,0 +1,32 @@
+.searchResultContainer {
+  max-width: unset;
+  width: 100%;
+  padding: 0px;
+}
+.searchResultContainer .galleryLayoutSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.searchResultContainer .galleryLayoutSwitcher::before {
+  content: "Visualizar";
+  color: var(--black, #000);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  margin-right: 5px;
+}
+.searchResultContainer .galleryLayoutOptionButton {
+  padding: 0px;
+}
+.searchResultContainer .galleryLayoutOptionButton:hover {
+  opacity: 0.8;
+}
+.searchResultContainer .galleryLayoutOptionButton :global(.vtex-icon) {
+  fill: #d4d4d8;
+}
+.searchResultContainer .galleryLayoutOptionButton--selected :global(.vtex-icon) {
+  fill: #000;
+}

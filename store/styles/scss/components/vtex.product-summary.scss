@@ -104,6 +104,11 @@
   border: none !important;
   border-radius: 0px !important;
 
+  &:hover {
+    border: none;
+    box-shadow: none;
+  }
+
   .imageNormal {
     scale: 1 !important;
     max-height: unset !important;

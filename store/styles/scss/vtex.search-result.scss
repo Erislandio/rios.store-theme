@@ -1,0 +1,40 @@
+.searchResultContainer {
+  max-width: unset;
+  width: 100%;
+  padding: 0px;
+
+  .galleryLayoutSwitcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: 'Visualizar';
+      color: var(--black, #000);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      margin-right: 5px;
+    }
+  }
+
+  .galleryLayoutOptionButton {
+    padding: 0px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    :global(.vtex-icon) {
+      fill: #d4d4d8;
+    }
+  }
+
+  .galleryLayoutOptionButton--selected {
+    :global(.vtex-icon) {
+      fill: #000;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "custom-div#breadcrumb-search": {
+    "title": "Breadcrumb Container",
+    "props": {
+      "background": "#F4F4F5",
+      "padding": "8px 0",
+      "marginBottom": "24px",
+      "preserveMobileLayout": true,
+      "blockClass": ["breadcrumb", "search"]
+    },
+    "children": ["breadcrumb.search#search"]
+  },
+
+  "breadcrumb.search#search": {
+    "title": "Breadcrumb Search",
+    "props": {
+      "blockClass": ["breadcrumb-search"],
+      "showOnDesktop": true,
+      "showOnMobile": true
+    }
+  }
+}
