@@ -14,7 +14,7 @@
       "image#search-banner-department-mobile",
       "custom-search-carousel#default",
       "custom-div#breadcrumb-search",
-      "custom-div#filter-mobile",
+      "custom-div#filter-mobilev2",
       "search-content",
       "search-fetch-more",
       "rich-text#search-end-description"
@@ -26,7 +26,7 @@
     }
   },
 
-  "custom-div#filter-mobile": {
+  "custom-div#filter-mobilev2": {
     "title": "Filter Container",
     "props": {
       "blockClass": ["filter-container", "container"],
@@ -36,7 +36,7 @@
       "preserveMobileLayout": true,
       "width": "100%"
     },
-    "children": ["drawer#filters", "order-by.v2"]
+    "children": ["filter-navigator.v3#custom", "order-by.v2"]
   },
 
   "search-result-layout.desktop#department": {

@@ -2,7 +2,20 @@
   "custom-div#filter": {
     "title": "Filter Container",
     "props": {
-      "blockClass": ["filter-container", "container"],
+      "blockClass": ["filter-container", "container", "filter-search"],
+      "justifyContent": "space-between",
+      "alignItems": "center",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%"
+    },
+    "children": ["drawer#filters", "gallery-layout-switcher"]
+  },
+
+  "custom-div#filter-department": {
+    "title": "Filter Container",
+    "props": {
+      "blockClass": ["filter-container", "container", "filter-department"],
       "justifyContent": "space-between",
       "alignItems": "center",
       "flexDirectionMobile": "row",
@@ -44,6 +57,7 @@
 
   "filter-navigator.v3#custom": {
     "props": {
+      "navigationTypeOnMobile": "collapsible",
       "blockClass": ["custom-filter-navigator"],
       "layout": "responsive",
       "closeOnOutsideClick": true

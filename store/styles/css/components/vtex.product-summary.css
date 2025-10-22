@@ -4,6 +4,7 @@
   background: var(--white, #fff);
   backdrop-filter: blur(3.5px);
   border: 1px solid var(--gray-100, #f4f4f5);
+  max-width: unset !important;
 }
 .container .element {
   padding: 0px;

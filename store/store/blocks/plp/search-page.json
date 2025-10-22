@@ -1,12 +1,12 @@
 {
-  "search-result-layout": {
+  "search-result-layout#default": {
     "blocks": [
-      "search-result-layout.desktop",
-      "search-result-layout.mobile",
+      "search-result-layout.desktop#default",
+      "search-result-layout.mobile#default",
       "search-not-found-layout"
     ]
   },
-  "search-result-layout.desktop": {
+  "search-result-layout.desktop#default": {
     "children": [
       "custom-div#breadcrumb-search",
       "custom-div#filter",
@@ -18,6 +18,22 @@
       "blockClass": "searchResultContainer",
       "pagination": "show-more",
       "preventRouteChange": false,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "search-result-layout.mobile#default": {
+    "children": [
+      "custom-div#breadcrumb-search",
+      "custom-div#filter-mobilev2",
+      "search-content",
+      "search-fetch-more"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
       "defaultGalleryLayout": "grid"
     }
   }

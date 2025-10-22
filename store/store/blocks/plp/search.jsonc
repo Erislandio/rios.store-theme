@@ -100,23 +100,6 @@
       "search-content"
     ]
   },
-  "search-result-layout.mobile": {
-    "children": [
-      "custom-div#breadcrumb-search",
-      "custom-div#filter",
-      "custom-div#search-info",
-      "search-content",
-      "search-fetch-more"
-    ],
-    "props": {
-      "pagination": "show-more",
-      "mobileLayout": {
-        "mode1": "small",
-        "mode2": "normal"
-      },
-      "defaultGalleryLayout": "grid"
-    }
-  },
   "gallery-layout-switcher": {
     "children": [
       "gallery-layout-option#grid",

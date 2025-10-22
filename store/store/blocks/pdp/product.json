@@ -247,8 +247,8 @@
       "custom-product-info#custom",
       "custom-div#prices",
       "sku-selector",
-      "shipping-simulator",
       "availability-subscriber",
+      "shipping-simulator",
       "custom-share-button",
       "custom-product-description"
     ]
