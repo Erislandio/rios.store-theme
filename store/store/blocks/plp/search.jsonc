@@ -100,20 +100,13 @@
       "search-content"
     ]
   },
-  "search-content": {
-    "blocks": [
-      "gallery",
-      "not-found"
-    ]
-  },
   "search-result-layout.mobile": {
     "children": [
-      "flex-layout.row#searchinfomobile",
-      "flex-layout.row#searchbread",
-      "flex-layout.row#productCountMobile",
-      "flex-layout.row#fetchprevious",
-      "flex-layout.row#contentmobile",
-      "flex-layout.row#fetchmore"
+      "custom-div#breadcrumb-search",
+      "custom-div#filter",
+      "custom-div#search-info",
+      "search-content",
+      "search-fetch-more"
     ],
     "props": {
       "pagination": "show-more",
@@ -122,100 +115,6 @@
         "mode2": "normal"
       },
       "defaultGalleryLayout": "grid"
-    }
-  },
-  "flex-layout.row#contentmobile": {
-    "children": [
-      "search-content"
-    ],
-    "props": {
-      "preserveLayoutOnMobile": true
-    }
-  },
-  "flex-layout.row#searchinfomobile": {
-    "children": [
-      "flex-layout.col#orderByMobile",
-      "flex-layout.col#filterMobile",
-      "flex-layout.col#switcherMobile"
-    ],
-    "props": {
-      "preserveLayoutOnMobile": true,
-      "colSizing": "auto",
-      "colJustify": "around"
-    }
-  },
-  "flex-layout.col#orderByMobile": {
-    "children": [
-      "order-by.v2"
-    ],
-    "props": {
-      "blockClass": "orderByMobileCol"
-    }
-  },
-  "flex-layout.row#productCountMobile": {
-    "children": [
-      "total-products.v2"
-    ],
-    "props": {
-      "blockClass": "productCountMobileRow"
-    }
-  },
-  "flex-layout.col#filterMobile": {
-    "children": [
-      "filter-navigator.v3"
-    ],
-    "props": {
-      "blockClass": "filterMobileCol"
-    }
-  },
-  "flex-layout.col#switcherMobile": {
-    "children": [
-      "gallery-layout-switcher"
-    ],
-    "props": {
-      "verticalAlign": "middle"
-    }
-  },
-  "search-not-found-layout": {
-    "children": [
-      "flex-layout.row#searchbread",
-      "flex-layout.row#notfound"
-    ]
-  },
-  "flex-layout.row#notfound": {
-    "children": [
-      "not-found"
-    ],
-    "props": {
-      "fullWidth": true
-    }
-  },
-  "breadcrumb": {
-    "props": {
-      "showOnMobile": true
-    }
-  },
-  "gallery": {
-    "props": {
-      "layouts": [
-        {
-          "name": "grid",
-          "component": "GridSummary",
-          "itemsPerRow": {
-            "(min-width:1300px)": 4,
-            "desktop": 3,
-            "tablet": 3,
-            "phone": 2
-          }
-        },
-        {
-          "name": "list",
-          "component": "ListSummary",
-          "itemsPerRow": 1
-        }
-      ],
-      "ListSummary": "product-summary.shelf",
-      "GridSummary": "product-summary.shelf"
     }
   },
   "gallery-layout-switcher": {

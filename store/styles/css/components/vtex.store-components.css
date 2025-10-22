@@ -347,3 +347,6 @@
     display: none;
   }
 }
+.imageElement--department-banner-image {
+  width: 100%;
+}

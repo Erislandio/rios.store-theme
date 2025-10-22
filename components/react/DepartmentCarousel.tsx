@@ -1,5 +1,6 @@
 import React from 'react'
-import { useCssHandles } from 'vtex.css-handles'
+import { applyModifiers, useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
 import { SliderLayout } from 'vtex.slider-layout'
 
@@ -22,19 +23,32 @@ const DepartmentCarousel: StoreFrontFC<DepartmentCarouselProps> = ({
   items,
 }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
+  const { isMobile } = useDevice()
 
   return (
-    <section className={handles.departmentCarousel}>
+    <section
+      className={applyModifiers(
+        handles.departmentCarousel,
+        isMobile ? 'mobile' : 'desktop'
+      )}
+    >
       <SliderLayout
         fullWidth
         infinite
-        showNavigationArrows="always"
+        showNavigationArrows="desktopOnly"
         showPaginationDots="never"
         itemsPerPage={{
           desktop: 7,
           tablet: 5,
-          mobile: 3,
+          mobile: 2,
         }}
+        centerMode={{
+          desktop: 'disabled',
+          tablet: 'disabled',
+          phone: 'to-the-left',
+          mobile: 'to-the-left',
+        }}
+        centerModeSlidesGap={16}
       >
         {items.map((item, index) => (
           <div key={index} className={handles.departmentCarouselItem}>
@@ -49,7 +63,7 @@ const DepartmentCarousel: StoreFrontFC<DepartmentCarouselProps> = ({
                 src={item.imageUrl}
                 alt={item.__editorItemTitle}
                 width={140}
-                height={206}
+                height={isMobile ? 170 : 206}
                 loading="lazy"
               />
               <h4 className={handles.departmentCarouselItemTitle}>

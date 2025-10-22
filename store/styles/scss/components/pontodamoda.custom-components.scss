@@ -1815,3 +1815,28 @@
     object-fit: contain;
   }
 }
+
+.divContainer--filter-container {
+  padding-bottom: 24px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  border-bottom: 1px solid #E4E4E7;
+  max-width: calc(1280px - 2rem);
+
+  @media screen and (max-width: 1024px) {
+    padding: 14px 1rem !important;
+    border: none;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem !important;
+  }
+}
+
+.divContainer--orderby-container {
+  margin: 24px auto 24px;
+  width: 100%;
+}
+
+.departmentCarousel--search-carousel--mobile {
+  padding-bottom: 40px;
+}

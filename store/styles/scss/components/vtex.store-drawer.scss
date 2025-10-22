@@ -46,4 +46,8 @@
   padding: 0px;
   border-radius: 8px;
   background: var(--Secundria, #00579c);
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }

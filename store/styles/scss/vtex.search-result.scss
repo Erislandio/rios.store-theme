@@ -37,4 +37,146 @@
       fill: #000;
     }
   }
+
+  .totalProducts--layout {
+    padding: 0px;
+
+    .totalProductsMessage {
+      color: var(--black, #000);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      text-transform: none;
+    }
+  }
+
+  .orderByButton {
+    padding: 0px;
+
+    .orderByText {
+      color: var(--black, #000);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      text-transform: none;
+      line-height: 140%; /* 19.6px */
+
+      &::after {
+        content: ':';
+      }
+    }
+
+    .filterPopupTitle {
+      color: var(--gray-500, #71717a);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      /* text-sm/Regular */
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      text-transform: none;
+    }
+
+    .filterPopupArrowIcon {
+      .caretIcon {
+        display: none;
+      }
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cg clip-path='url(%23clip0_11907_637)'%3E%3Cpath d='M0 0.54187C0.0321936 0.38321 0.117101 0.240108 0.240967 0.135864C0.351529 0.0491717 0.48792 0.0020752 0.628418 0.0020752C0.768916 0.0020752 0.905307 0.0491717 1.01587 0.135864C1.05921 0.170916 1.10063 0.208365 1.13989 0.247925L4.42896 3.53186C4.46012 3.569 4.49532 3.60264 4.53394 3.63196C4.5477 3.59952 4.56549 3.56888 4.58691 3.54089C5.69091 2.43756 6.79524 1.33441 7.8999 0.231079C7.98283 0.134752 8.09241 0.0650502 8.21484 0.0308838C8.33727 -0.00328267 8.46706 -0.000524547 8.58789 0.0389404C8.6822 0.0699314 8.76779 0.122944 8.83765 0.193481C8.9075 0.264019 8.95967 0.350093 8.98975 0.444702C9.01982 0.539311 9.02705 0.639746 9.01074 0.737671C8.99443 0.835596 8.95511 0.928178 8.896 1.00793C8.85933 1.05362 8.81976 1.09716 8.77783 1.13806C7.54717 2.36806 6.31629 3.59769 5.08496 4.82703C4.95742 4.97732 4.78775 5.086 4.5979 5.13904H4.42188C4.23237 5.08588 4.06302 4.9772 3.93579 4.82703C2.72579 3.61503 1.5138 2.4049 0.299805 1.1969C0.154111 1.07334 0.0496696 0.908462 0 0.723999V0.54187Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_11907_637'%3E%3Crect width='9.02' height='5.133' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      width: 10px;
+      height: 10px;
+      padding: 0px;
+      margin-left: 0.5rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .orderByOptionItem {
+    font-family: Inter;
+    font-size: 14px;
+    color: var(--black, #000);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    text-transform: none;
+  }
+
+  .gallery--custom-gallery {
+    max-width: 1280px;
+    padding: 0px 1rem;
+    margin: 0 auto;
+
+    .galleryItem {
+      padding: 0px;
+      padding-bottom: 30px;
+
+      @media screen and (max-width: 1024px) {
+        min-height: 450px;
+        width: 100% !important;
+        max-width: unset !important;
+        padding-bottom: 0px !important;
+
+        :global(.vtex-button) {
+          top: 185px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .buttonShowMore {
+    :global(.vtex-button) {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 22.4px */
+      text-transform: none;
+      padding: 10px 24px;
+      background-color: #00579c;
+      border: none;
+
+      &:hover {
+        background-color: #004880;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .orderByOptionsContainer {
+      left: -30px;
+    }
+
+    .gallery--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .buttonShowMore--layout {
+      margin-top: 60px;
+    }
+  }
+}
+
+.orderBy--layout {
+  @media screen and (max-width: 1024px) {
+    padding: 0.7rem 27px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+
+    .orderByButton {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

@@ -1,26 +1,69 @@
 {
   "search-result-layout#department": {
+    "title": "Search Result Layout Department",
     "blocks": [
       "search-result-layout.desktop#department",
-      "search-result-layout.mobile",
+      "search-result-layout.mobile#department",
       "search-not-found-layout"
     ]
   },
 
-  "search-result-layout.desktop#department": {
+  "search-result-layout.mobile#department": {
+    "title": "Search Result Layout Mobile Department",
     "children": [
-      "custom-div#breadcrumb-search",
-      "responsive-layout.desktop#department-banner",
-      "responsive-layout.tablet#department-banner",
-      "responsive-layout.phone#department-banner",
+      "image#search-banner-department-mobile",
       "custom-search-carousel#default",
-      "custom-div#filter",
-      "custom-div#search-info"
+      "custom-div#breadcrumb-search",
+      "custom-div#filter-mobile",
+      "search-content",
+      "search-fetch-more",
+      "rich-text#search-end-description"
     ],
     "props": {
       "pagination": "show-more",
       "preventRouteChange": false,
       "defaultGalleryLayout": "grid"
+    }
+  },
+
+  "custom-div#filter-mobile": {
+    "title": "Filter Container",
+    "props": {
+      "blockClass": ["filter-container", "container"],
+      "justifyContent": "space-between",
+      "alignItems": "center",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%"
+    },
+    "children": ["drawer#filters", "order-by.v2"]
+  },
+
+  "search-result-layout.desktop#department": {
+    "title": "Search Result Layout Desktop Department",
+    "children": [
+      "custom-div#breadcrumb-search",
+      "responsive-layout.desktop#department-banner",
+      "responsive-layout.tablet#department-banner",
+      "custom-search-carousel#default",
+      "custom-div#filter",
+      "custom-div#search-info",
+      "search-content",
+      "search-fetch-more",
+      "rich-text#search-end-description"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": false,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+
+  "rich-text#search-end-description": {
+    "title": "Descricao da Departamento - Final da pagina",
+    "props": {
+      "blockClass": ["department-end-description"],
+      "text": "## Feminina\n\n Duis non quam et nisi tincidunt fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper, mauris nec feugiat fermentum, purus lacus suscipit felis, et facilisis justo lacus id risus. Sed at risus vel nulla consequat fermentum. Donec et orci mauris. Nullam tempor velit id mi luctus, a scelerisque libero accumsan. In hac habitasse platea dictumst. Cras ac nunc nec massa tristique fringilla. \n\n Mauris vitae quam in justo dictum sodales. In eget tortor a nunc vehicula tempor. Nam ac tincidunt ipsum, eget accumsan nisi. Praesent porta, magna vitae dapibus pharetra, erat eros efficitur nunc, in mattis lectus libero a velit. Nulla facilisi. Curabitur tincidunt, felis a elementum tincidunt, ex felis fermentum dui, eget pulvinar arcu eros eu eros. Vestibulum sollicitudin pretium velit, eget volutpat justo fermentum sit amet. Pellentesque in nulla in nisi dictum interdum."
     }
   },
 
@@ -145,6 +188,7 @@
 
   "image#search-banner-department": {
     "props": {
+      "blockClass": ["department-banner-image"],
       "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/be404b27-a913-4051-8d0c-45905c4479db___c708df801f9b3d3e578324c282187b67.png",
       "alt": "Banner Department",
       "width": "1440",
@@ -153,7 +197,8 @@
   },
   "image#search-banner-department-mobile": {
     "props": {
-      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/be404b27-a913-4051-8d0c-45905c4479db___c708df801f9b3d3e578324c282187b67.png",
+      "blockClass": ["department-banner-image"],
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/4f801db3-77e1-4413-a533-d2af24012fe5___235574e44d6fed3b9bc813d20eec2288.png",
       "alt": "Banner Department",
       "width": "1440",
       "height": "300"

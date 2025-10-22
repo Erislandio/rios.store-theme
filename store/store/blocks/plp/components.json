@@ -56,5 +56,39 @@
       "blockClass": ["open-drawer-filter"],
       "text": "Filtrar"
     }
+  },
+
+  "search-content": {
+    "title": "Search Content",
+    "props": {
+      "blockClass": ["custom-gallery"]
+    },
+    "blocks": ["gallery#custom", "not-found"]
+  },
+
+  "gallery#custom": {
+    "title": "Custom Gallery",
+    "props": {
+      "blockClass": ["custom-gallery"],
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 4,
+            "desktop": 4,
+            "tablet": 3,
+            "phone": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 2
+        }
+      ],
+      "ListSummary": "product-summary.shelf#default",
+      "GridSummary": "product-summary.shelf#default"
+    }
   }
 }
