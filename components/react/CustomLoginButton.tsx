@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useQuery } from 'react-apollo'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
-import { useRuntime } from 'vtex.render-runtime'
+import { Link, useRuntime } from 'vtex.render-runtime'
 import { Button, Spinner } from 'vtex.styleguide'
+
 import { ConditionalLayout } from './ConditionalLayout'
 import useDatalayer from './hooks/useDatalayer'
 import PROFILE from './queries/profile.gql'
@@ -17,7 +18,7 @@ export const ProfileIcon = () => (
       viewBox="0 0 17 20"
       fill="none"
     >
-      <g clip-path="url(#clip0_11700_2437)">
+      <g clipPath="url(#clip0_11700_2437)">
         <path
           d="M4.42189 9.61887C5.03914 9.63185 5.83547 10.3765 6.41086 10.6525C7.89861 11.366 9.36517 11.3001 10.8079 10.529C11.245 10.2955 12.0556 9.62199 12.5187 9.60953C15.8365 9.52288 16.8797 13.2055 16.9925 15.8037C17.0906 18.0552 16.1607 19.7784 13.6811 19.9331C10.2855 20.1448 6.66147 19.7707 3.24197 19.9305C-0.141501 19.5833 -0.283494 16.7299 0.210833 14.0565C0.608733 11.9046 1.84058 9.56335 4.42189 9.61836V9.61887Z"
           fill="#27272A"
@@ -79,11 +80,17 @@ const CustomLoginButton: StoreFrontFC<{
         </ConditionalLayout>
         <ConditionalLayout conditional={!isMobile && !loading}>
           {data?.profile?.email ? (
-            <span className={handles.customLoginButtonLabel}>
+            <Link
+              to="/account"
+              className={applyModifiers(
+                handles.customLoginButtonLabel,
+                'logged'
+              )}
+            >
               Olá <br />
               {data?.profile?.firstName ??
-                `${data?.profile?.email?.slice(0, 12)}...`}
-            </span>
+                `${data?.profile?.email?.slice(0, 15)}...`}
+            </Link>
           ) : (
             <div className={handles.customLoginButtonLabelWrapper}>
               <span className={handles.customLoginButtonLabel}>{label}</span>
@@ -156,7 +163,9 @@ const CustomLoginButton: StoreFrontFC<{
             <Button
               isLoading={isLoading2}
               onClick={() => {
-                pushToDataLayer({ event: 'login_button_dropdown_click_register' })
+                pushToDataLayer({
+                  event: 'login_button_dropdown_click_register',
+                })
                 setLoading2(true)
                 navigate({ to: `/login?returnUrl=${window.location.href}` })
               }}

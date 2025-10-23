@@ -166,6 +166,7 @@
   font-style: normal;
   font-weight: 300;
   width: 100%;
+  text-decoration: none;
 }
 
 .customLoginButtonLabelWrapper {
