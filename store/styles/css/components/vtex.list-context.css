@@ -10,3 +10,14 @@
   padding-bottom: 60px;
   flex-wrap: wrap;
 }
+
+.list--sobre-imagens-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .list--sobre-imagens-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1688,3 +1688,7 @@
     gap: 40px !important;
   }
 }
+
+.customLoginButtonLabel--logged {
+  font-weight: bold;
+}
