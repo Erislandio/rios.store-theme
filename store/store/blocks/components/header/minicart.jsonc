@@ -92,6 +92,11 @@
       "summary-totalizers#minicart"
     ],
     "props": {
+      "totalizers": [
+        "Items",
+        "Shipping",
+        "Discount"
+      ],
       "totalizersToShow": [
         "Items",
         "Shipping",
