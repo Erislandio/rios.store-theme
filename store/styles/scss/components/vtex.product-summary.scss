@@ -124,8 +124,15 @@
     max-height: unset;
   }
 
+  .imageWrapper,
+  .discountContainer,
+  .imageStackContainer {
+    width: 100%;
+  }
+
   .imageNormal {
     border-radius: 8px;
+    width: 100%;
 
     @media screen and (max-width: 1024px) {
       min-height: 220px;

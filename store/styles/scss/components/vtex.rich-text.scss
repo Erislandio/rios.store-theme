@@ -154,3 +154,101 @@
 .wrapper--open-drawer-filter {
   width: 100%;
 }
+
+.container--container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 1rem;
+}
+
+.heading--card-texto,
+.heading--sobre-texto {
+  margin: 0px;
+  text-align: center;
+  color: var(--black, #000);
+  text-align: center;
+
+  /* text-xl/Medium */
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 30.8px */
+  margin-bottom: 25px;
+}
+
+.wrapper--container {
+  width: 100%;
+}
+
+.heading--card-texto {
+  text-align: left;
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
+}
+
+.container--sobre-texto {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .paragraph--sobre-texto {
+    margin: 0px;
+    color: var(--gray-800, #27272a);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%; /* 36px */
+  }
+
+  .headingLevel1--title {
+    text-align: center;
+    margin: 0px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.container--share {
+  padding-bottom: 0px;
+}
+
+.paragraph--card-texto {
+  color: var(--gray-800, #27272a);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 36px */
+}
+
+.paragraph--image-label {
+  color: var(--Secundria, #00579c);
+
+  /* text-sm/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  &::before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M17.5 17.5L13.875 13.875M9.16667 6.66667V11.6667M6.66667 9.16667H11.6667M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z' stroke='%2300579C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

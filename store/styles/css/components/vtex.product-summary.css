@@ -105,8 +105,14 @@
 .container--comprejunto .nameContainer {
   max-height: unset;
 }
+.container--comprejunto .imageWrapper,
+.container--comprejunto .discountContainer,
+.container--comprejunto .imageStackContainer {
+  width: 100%;
+}
 .container--comprejunto .imageNormal {
   border-radius: 8px;
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
   .container--comprejunto .imageNormal {

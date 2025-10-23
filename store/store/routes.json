@@ -8,5 +8,10 @@
   "store.custom#lojas": {
     "path": "/lojas",
     "title": "Nossas Lojas"
+  },
+  "store.custom#sobre-nos": {
+    "path": "/sobre-nos",
+    "title": "Sobre Nós",
+    "description": "Conheça mais sobre a nossa empresa"
   }
 }

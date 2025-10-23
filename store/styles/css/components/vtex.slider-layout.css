@@ -8,6 +8,7 @@
   background-color: #fcd200;
 }
 
+.sliderLayoutContainer--container,
 .sliderLayoutContainer--shelf {
   max-width: 1280px;
   padding: 0px 1rem !important;
@@ -52,5 +53,16 @@
   padding-bottom: 3rem;
 }
 .sliderLayoutContainer--footer .paginationDot--carousel--isActive {
+  background-color: #00579C;
+}
+
+.imageElement--sobre {
+  border-radius: 1rem;
+}
+
+.sliderLayoutContainer--sobre {
+  padding-bottom: 5rem !important;
+}
+.sliderLayoutContainer--sobre .paginationDot--container--isActive {
   background-color: #00579C;
 }

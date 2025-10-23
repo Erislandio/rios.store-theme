@@ -1659,6 +1659,10 @@
     gap: 1rem;
   }
 
+  .compreJuntoItem {
+    max-width: 300px;
+  }
+
   .compreJuntoTotals {
     height: -webkit-fill-available;
     padding: 40px;
@@ -1856,6 +1860,16 @@
   }
 }
 
-.divContainer--filter-search  {
+.divContainer--filter-search {
   margin-top: 24px !important;
+}
+
+.divContainer--sobre-banners-1 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
 }

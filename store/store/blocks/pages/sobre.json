@@ -1,0 +1,374 @@
+{
+  "store.custom#sobre-nos": {
+    "children": [
+      "responsive-layout.desktop#sobre-banner",
+      "responsive-layout.tablet#sobre-banner",
+      "responsive-layout.phone#sobre-banner",
+      "rich-text#sobre",
+      "custom-div#sobre-banners-1",
+      "rich-text#sobre-2",
+      "custom-div#sobre-banners-2",
+      "rich-text#sobre-titel",
+      "custom-div#card-1",
+      "custom-div#card-2",
+      "custom-div#card-3",
+      "list-context.image-list#sobre",
+      "rich-text#share-sobre",
+      "list-context.image-list#sobre-2"
+    ]
+  },
+
+  "list-context.image-list#sobre-2": {
+    "title": "Lista de Imagens Sobre Nós 2",
+    "children": ["list-context-renderer#wrapped"],
+    "props": {
+      "blockClass": ["container", "sobre-imagens"],
+      "images": [
+        {
+          "loading": "eager",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/3c0bfdaf-0938-47d1-83d7-d1a0af8eebd8___9ac8001b18c9304a619e6a276041a590.png",
+          "description": "something something",
+          "width": "50px",
+          "height": "50px",
+          "link": {
+            "url": "#"
+          }
+        },
+        {
+          "loading": "eager",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/6eba38a5-947d-460f-a6b8-a7241d9ffb97___caabd79016d65dc098bcf878eda84495.png",
+          "description": "something something",
+          "width": "50px",
+          "height": "50px",
+          "link": {
+            "url": "#"
+          }
+        },
+        {
+          "loading": "eager",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/85f9523e-d583-4969-b3cc-7ad43353d947___2018d8119fb83935e6abc84cadaa0b2b.png",
+          "description": "something something",
+          "width": "50px",
+          "height": "50px",
+          "link": {
+            "url": "#"
+          }
+        },
+        {
+          "loading": "eager",
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/66995175-c1bf-4439-9b37-d025c4448490___61b12f4f3d9f02456ac38c8d7ed8e883.png",
+          "description": "something something",
+          "width": "50px",
+          "height": "50px",
+          "link": {
+            "url": "#"
+          }
+        }
+      ]
+    }
+  },
+
+  "list-context-renderer#wrapped": {
+    "props": {
+      "blockClass": ["sobre-imagens-list"],
+      "listElement": "ul",
+      "itemElement": "li"
+    }
+  },
+
+  "rich-text#share-sobre": {
+    "title": "Texto Share Sobre Nós",
+    "props": {
+      "blockClass": ["sobre-texto", "container", "share"],
+      "text": "### Siga-nos nas redes sociais"
+    }
+  },
+
+  "custom-div#card-1": {
+    "title": "Div Card 1",
+    "props": {
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "alignItems": "flex-start",
+      "width": "100%",
+      "blockClass": ["container", "card"],
+      "gap": "60px",
+      "padding": "0px 0px 60px",
+      "paddingMobile": "0px 0px 40px"
+    },
+    "children": ["rich-text#card-1", "image#card-1"]
+  },
+
+  "image#card-1": {
+    "title": "Imagem Card 1",
+    "props": {
+      "blockClass": ["card-imagem", "sobre-texto"],
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/27559050-3ed8-428a-a6e4-840c521bcb52___ffc0a71bdd40f0df54f3497572641e61.png",
+      "alt": "Imagem Card 1",
+      "title": "Imagem Card 1"
+    }
+  },
+
+  "custom-div#card-2": {
+    "title": "Div Card 2",
+    "props": {
+      "flexDirection": "row-reverse",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "width": "100%",
+      "blockClass": ["container", "card", "inverse"],
+      "gap": "60px",
+      "padding": "0px 0px 60px",
+      "paddingMobile": "0px 0px 40px"
+    },
+    "children": ["rich-text#card-2", "image#card-2"]
+  },
+
+  "custom-div#card-3": {
+    "title": "Div Card 3",
+    "props": {
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "width": "100%",
+      "blockClass": ["container", "card"],
+      "gap": "60px",
+      "padding": "0px 0px 60px",
+      "paddingMobile": "0px 0px 40px"
+    },
+    "children": ["rich-text#card-3", "image#card-3"]
+  },
+
+  "slider-layout#sobre": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always",
+      "blockClass": ["carousel", "container", "sobre"]
+    }
+  },
+
+  "list-context.image-list#sobre": {
+    "title": "Carousel",
+    "children": ["slider-layout#sobre"],
+    "props": {
+      "experimentalSetExplicitDimensions": true,
+      "height": "700px",
+      "preload": true,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      },
+      "images": [
+        {
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/59bf7fc8-2ee5-4a0c-a6e1-729ea1b2bbef___a804eff2d565f9457eb77280c0c4ac7a.png",
+          "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/59bf7fc8-2ee5-4a0c-a6e1-729ea1b2bbef___a804eff2d565f9457eb77280c0c4ac7a.png",
+          "width": "1368",
+          "height": "544px",
+          "experimentalSetExplicitDimensions": true,
+          "experimentalPreventLayoutShift": true
+        },
+        {
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/59bf7fc8-2ee5-4a0c-a6e1-729ea1b2bbef___a804eff2d565f9457eb77280c0c4ac7a.png",
+          "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/59bf7fc8-2ee5-4a0c-a6e1-729ea1b2bbef___a804eff2d565f9457eb77280c0c4ac7a.png",
+          "width": "1368",
+          "height": "544px",
+          "experimentalSetExplicitDimensions": true,
+          "experimentalPreventLayoutShift": true
+        },
+        {
+          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/59bf7fc8-2ee5-4a0c-a6e1-729ea1b2bbef___a804eff2d565f9457eb77280c0c4ac7a.png",
+          "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/59bf7fc8-2ee5-4a0c-a6e1-729ea1b2bbef___a804eff2d565f9457eb77280c0c4ac7a.png",
+          "width": "1368",
+          "height": "544px",
+          "experimentalSetExplicitDimensions": true,
+          "experimentalPreventLayoutShift": true
+        }
+      ]
+    }
+  },
+
+  "image#card-2": {
+    "title": "Imagem Card 2",
+    "props": {
+      "blockClass": ["card-imagem", "sobre-texto"],
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/136a3095-e2b9-45f0-9e80-3f8b6fa32fb9___1a2e3878248416d12d23e2ff481f03cc.png",
+      "alt": "Imagem Card 1",
+      "title": "Imagem Card 1"
+    }
+  },
+
+  "image#card-3": {
+    "title": "Imagem Card 3",
+    "props": {
+      "blockClass": ["card-imagem", "sobre-texto"],
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/882ad4f6-b1a4-4a1e-88a4-a373b8e47f80___5626419bfa841fa1e1a0c5e62ead82d2.png",
+      "alt": "Imagem Card 3",
+      "title": "Imagem Card 3"
+    }
+  },
+
+  "rich-text#card-1": {
+    "title": "Texto Card 1",
+    "props": {
+      "blockClass": ["card-texto"],
+      "text": "## Parceria \n\n Priorizamos a aprendizagem contínua para nos manter em constante evolução, e nos comprometemos com nossos clientes, colaboradores e parceiros, sempre com determinação para superar desafios. \n\n Nosso foco nas pessoas é o que nos torna uma empresa humana e acolhedora, enquanto a humildade nos permite reconhecer que sempre há espaço para melhorar."
+    }
+  },
+
+  "rich-text#card-2": {
+    "title": "Texto Card 2",
+    "props": {
+      "blockClass": ["card-texto"],
+      "text": "## Inovação \n\n Inovamos constantemente para oferecer as melhores soluções e, acima de tudo, agimos com respeito, criando um ambiente de confiança mútua."
+    }
+  },
+
+  "rich-text#card-3": {
+    "title": "Texto Card 3",
+    "props": {
+      "blockClass": ["card-texto"],
+      "text": "## Compromentimento \n\n Estamos comprometidos em alcançar resultados significativos, sempre com ética e responsabilidade."
+    }
+  },
+
+  "custom-div#sobre-banners-2": {
+    "title": "Div Banners Sobre Nós 2",
+    "props": {
+      "flexDirection": "row",
+      "justifyContent": "column",
+      "alignItems": "center",
+      "width": "100%",
+      "blockClass": ["container"],
+      "gap": "1rem"
+    },
+    "children": [
+      "responsive-layout.desktop#sobre-banner-2",
+      "responsive-layout.tablet#sobre-banner-2",
+      "responsive-layout.phone#sobre-banner-2"
+    ]
+  },
+
+  "responsive-layout.desktop#sobre-banner": {
+    "title": "Banner Sobre Nós Desktop",
+    "children": ["image#banner-sobre"]
+  },
+  "responsive-layout.tablet#sobre-banner": {
+    "title": "Banner Sobre Nós Tablet",
+    "children": ["image#banner-sobre"]
+  },
+  "responsive-layout.phone#sobre-banner": {
+    "title": "Banner Sobre Nós Mobile",
+    "children": ["image#banner-sobre-mobile"]
+  },
+
+  "responsive-layout.desktop#sobre-banner-2": {
+    "title": "Banner Sobre Nós Desktop",
+    "children": ["image#banner-sobre-2"]
+  },
+  "responsive-layout.tablet#sobre-banner-2": {
+    "title": "Banner Sobre Nós Tablet",
+    "children": ["image#banner-sobre-2"]
+  },
+  "responsive-layout.phone#sobre-banner-2": {
+    "title": "Banner Sobre Nós Mobile",
+    "children": ["image#banner-sobre-mobile-2"]
+  },
+
+  "image#banner-sobre-mobile": {
+    "title": "Banner mobile",
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/a2d26f41-5919-4404-813e-cb970d4c393a___9bf6ae3df29aa57566caa2319c278f2e.png",
+      "alt": "Banner Sobre Nós Mobile",
+      "title": "Banner Sobre Nós Mobile"
+    }
+  },
+
+  "image#banner-sobre-mobile-2": {
+    "title": "Banner mobile",
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/cf7d3bfc-de2b-420f-9878-9dce7aeeac05___5e35e48b760e25e65a103cab66d7ae9b.png",
+      "alt": "Banner Sobre Nós Mobile",
+      "title": "Banner Sobre Nós Mobile"
+    }
+  },
+
+  "image#banner-sobre": {
+    "title": "Banner desktop",
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/a2d26f41-5919-4404-813e-cb970d4c393a___9bf6ae3df29aa57566caa2319c278f2e.png",
+      "alt": "Banner Sobre Nós",
+      "title": "Banner Sobre Nós"
+    }
+  },
+
+  "image#banner-sobre-2": {
+    "title": "Banner desktop",
+    "props": {
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/daa3b6e2-6b75-4042-8a0d-6f92e37e1f9e___a0fcf74b921af6df2d2596286ec9e450.png",
+      "alt": "Banner Sobre Nós",
+      "title": "Banner Sobre Nós"
+    }
+  },
+
+  "rich-text#sobre": {
+    "title": "Texto Sobre Nós",
+    "props": {
+      "blockClass": ["sobre-texto", "container"],
+      "text": "# Nossa História\n\n Somos uma empresa de moda comprometida em proporcionar experiências únicas aos nossos clientes. Fundada em 1985 pela família Ximenes, acreditamos que a moda vai além da estética, sendo uma poderosa expressão de emoções, culturas, identidades e até mesmo de resistência. Com essa visão, nos consolidamos como uma das maiores varejistas do estado do Ceará."
+    }
+  },
+
+  "rich-text#sobre-titel": {
+    "title": "Nossos valores",
+    "props": {
+      "blockClass": ["sobre-texto", "container", "title"],
+      "text": "# Nossos valores"
+    }
+  },
+
+  "rich-text#sobre-2": {
+    "title": "Texto Sobre Nós 2",
+    "props": {
+      "blockClass": ["sobre-texto", "container"],
+      "text": "Atualmente, contamos com 14 lojas estrategicamente localizadas na capital, na região metropolitana e no interior do estado, além de um e-commerce que atende a todo o território nacional. Com um potencial de crescimento contínuo, nosso objetivo é expandir ainda mais nossa presença, inaugurando novas filiais e aprimorando nossa capacidade de atender você com excelência"
+    }
+  },
+
+  "custom-div#sobre-banners-1": {
+    "title": "Div Banners Sobre Nós 1",
+    "props": {
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "width": "100%",
+      "blockClass": ["sobre-banners-1", "container"],
+      "gap": "1rem"
+    },
+    "children": ["image#sobre-banner-1", "image#sobre-banner-2"]
+  },
+
+  "image#sobre-banner-1": {
+    "title": "Banner Sobre Nós 1",
+    "props": {
+      "blockClass": ["sobre-banner-1"],
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/a7b198ea-8fde-472b-b1f3-4d48c8431406___45045bdee39fe30231beba4d21fd4ad7.png",
+      "alt": "Banner Sobre Nós 1",
+      "title": "Banner Sobre Nós 1"
+    }
+  },
+  "image#sobre-banner-2": {
+    "title": "Banner Sobre Nós 2",
+    "props": {
+      "blockClass": ["sobre-banner-1"],
+      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/8ae9f4f8-49b6-4184-8436-ef19bfd8604f___2a759a183f0536c3b03c6c4524d47f66.png",
+      "alt": "Banner Sobre Nós 2",
+      "title": "Banner Sobre Nós 2"
+    }
+  }
+}

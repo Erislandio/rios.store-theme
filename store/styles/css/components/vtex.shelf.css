@@ -4,6 +4,9 @@
   padding: 0 1rem;
   padding-bottom: 60px;
 }
+.relatedProducts .slide {
+  padding: 0px 0.5rem;
+}
 .relatedProducts .title {
   color: var(--black, #000);
   text-align: center;
