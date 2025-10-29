@@ -3,7 +3,7 @@ mutation addToCart(
   $marketingData: MarketingDataInput
   $salesChannel: String
   $allowedOutdatedData: [String!]
-) {
+) @context(provider: "vtex.checkout-graphql") {
   addToCart(
     items: $items
     marketingData: $marketingData
@@ -18,6 +18,7 @@ mutation addToCart(
       value
     }
     items {
+      availability
       attachments {
         name
         content

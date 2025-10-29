@@ -213,12 +213,18 @@
     "children": [
       "vtex.store-components:product-name",
       "custom-product-info#custom",
-      "custom-div#prices",
-      "sku-selector#custom",
-      "custom-div#add-to-cart-section",
+      "product-grid#default",
       "shipping-simulator",
       "custom-share-button",
       "custom-product-description"
+    ]
+  },
+
+  "product-grid#default": {
+    "children": [
+      "custom-div#prices",
+      "sku-selector#custom",
+      "custom-div#add-to-cart-section"
     ]
   },
 

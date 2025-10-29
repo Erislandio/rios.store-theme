@@ -1762,3 +1762,165 @@
 .divContainer--header-mobile--wrapper {
   margin-bottom: 12px;
 }
+
+.productGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 28px;
+  column-gap: 1rem;
+  margin-bottom: 28px;
+}
+@media screen and (max-width: 1024px) {
+  .productGridContainer {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+  }
+}
+.productGridContainer .productGridContainerItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 16px;
+  background: var(--gray-100, #f4f4f5);
+  padding: 8px;
+  width: 100%;
+}
+.productGridContainer .productGridContainerItem .productGridContainerItemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 12px;
+}
+.productGridContainer .productGridContainerItem .productGridContainerItemImage {
+  border-radius: 8px;
+}
+.productGridContainer .productGridContainerItem .productGridContainerItemTitle {
+  color: var(--black, #000);
+  /* text-xs/Regular */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  margin: 0px;
+}
+.productGridContainer .productGridContainerItem .productGridContainerItemSelect {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: var(--white, #fff);
+  padding: 4px 6px;
+  color: var(--black, #000);
+  /* text-xs/Regular */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+
+.buyButton {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.buyButton .quantityStepper {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 100px;
+  border: 1px solid var(--Cor-de-Fundo-Input, #eaeaea);
+  padding: 10px;
+}
+.buyButton :global(.vtex-numeric-stepper__input) {
+  width: 50px;
+  color: var(--black, #000);
+  /* text-sm/Regular */
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.buyButton :global(.vtex-numeric-stepper-container) {
+  min-width: 100px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background: var(--white, #fff);
+  padding: 3px 15px;
+}
+.buyButton :global(.vtex-numeric-stepper__minus-button__text),
+.buyButton :global(.vtex-numeric-stepper__plus-button__text) {
+  color: var(--gray-400, #a1a1aa);
+  /* text-sm/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+}
+.buyButton :global(.vtex-numeric-stepper__plus-button),
+.buyButton :global(.vtex-numeric-stepper__minus-button) {
+  width: auto !important;
+  border: none;
+  background-color: transparent;
+}
+.buyButton :global(.vtex-numeric-stepper__input) {
+  border: none;
+}
+.buyButton :global(.vtex-button) {
+  border-radius: 8px;
+  height: 100%;
+  background: var(--green-500, #22c55e);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.buyButton :global(.vtex-button):hover {
+  background: var(--green-600, #0f7033);
+}
+.buyButton :global(.vtex-button) :global(.vtex-button__label) {
+  color: var(--white, #fff);
+  /* text-sm/Bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 19.6px */
+  text-transform: none;
+  text-transform: none;
+}
+
+.productGridContainerItem--unavailable {
+  opacity: 0.8;
+  cursor: not-allowed;
+  position: relative;
+}
+.productGridContainerItem--unavailable::before {
+  content: "x";
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  z-index: 99;
+  font-size: 12px;
+  color: var(--white, #fff);
+  background-color: tomato;
+  border-radius: 50%;
+  display: flex;
+  line-height: normal;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 4px;
+  border-radius: 50%;
+  top: -5px;
+  right: 0px;
+}

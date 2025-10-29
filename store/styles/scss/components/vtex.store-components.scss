@@ -211,9 +211,18 @@
     line-height: 150%; /* 18px */
   }
 
+  .skuSelectorItem {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+  }
+
   .skuSelectorInternalBox {
     min-width: 40px;
     min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
     border-radius: 200px;
     border: 1px solid var(--gray-200, #e4e4e7);
     opacity: 0.6;
