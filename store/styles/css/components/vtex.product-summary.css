@@ -19,6 +19,7 @@
   background-color: #fff !important;
   padding-bottom: 1rem !important;
   display: none !important;
+  opacity: 0.9;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 .container .productNameContainer {
@@ -81,9 +82,20 @@
 .container :global(.vtex-button) :global(.vtex-button__label) {
   display: none;
 }
+@media screen and (max-width: 768px) {
+  .container :global(.vtex-button) {
+    bottom: 12rem;
+    opacity: 1;
+  }
+}
 .container .imageNormal {
   scale: 1.5;
   height: auto !important;
+}
+@media screen and (max-width: 768px) {
+  .container .imageNormal {
+    scale: 2.1;
+  }
 }
 
 .container--comprejunto {

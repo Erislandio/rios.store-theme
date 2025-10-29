@@ -1,0 +1,76 @@
+query productRecommendations($slug: ID!) {
+  productRecommendations(identifier: { field: slug, value: $slug }, type: view)
+    @context(provider: "vtex.search-graphql") {
+    brand
+    brandId
+    cacheId
+    categoryId
+    description
+    link
+    linkText
+    productId
+    productName
+    productReference
+    titleTag
+    metaTagDescription
+    jsonSpecifications
+    releaseDate
+    clusterHighlights {
+      id
+      name
+    }
+    properties {
+      originalName
+      name
+    }
+    items {
+      itemId
+      name
+      nameComplete
+      complementName
+      ean
+      images {
+        cacheId
+        imageId
+        imageLabel
+        imageTag
+        imageUrl
+        imageText
+      }
+      measurementUnit
+      unitMultiplier
+      estimatedDateArrival
+      variations {
+        originalName
+        name
+      }
+      sellers {
+        sellerId
+        sellerName
+        addToCartLink
+        sellerDefault
+        commertialOffer {
+          Installments {
+            Value
+            InterestRate
+            TotalValuePlusInterestRate
+            NumberOfInstallments
+            PaymentSystemName
+            PaymentSystemGroupName
+            Name
+          }
+          Price
+          ListPrice
+          spotPrice
+          PriceWithoutDiscount
+          RewardValue
+          PriceValidUntil
+          AvailableQuantity
+          Tax
+          taxPercentage
+          CacheVersionUsedToCallCheckout
+        }
+      }
+    }
+  }
+}

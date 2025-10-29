@@ -9,7 +9,13 @@
       "custom-buy-together#custom",
       "product-reviews",
       "product-questions-and-answers",
-      "shelf.relatedProducts#custom-2"
+      "recommendation-shelf"
+    ]
+  },
+
+  "recommendation-shelf": {
+    "blocks": [
+      "product-summary.shelf#default"
     ]
   },
 
@@ -21,7 +27,7 @@
       "productList": {
         "arrows": true,
         "itemsPerPage": 4,
-        "minItemsPerPage": 1,
+        "minItemsPerPage": 0.5,
         "titleText": "Você vai gostar"
       }
     },

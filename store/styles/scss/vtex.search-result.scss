@@ -120,16 +120,11 @@
       padding-bottom: 30px;
 
       @media screen and (max-width: 1024px) {
-        min-height: 450px;
+        min-height: 390px;
         width: 100% !important;
         max-width: unset !important;
         padding-bottom: 0px !important;
         padding: 0px !important;
-
-        :global(.vtex-button) {
-          top: 185px;
-          opacity: 1;
-        }
       }
     }
   }

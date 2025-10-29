@@ -79,9 +79,7 @@
     "component": "CustomCompreJunto",
     "render": "client",
     "composition": "blocks",
-    "required": [
-      "product-summary.shelf"
-    ]
+    "required": ["product-summary.shelf"]
   },
   "custom-search-carousel": {
     "component": "DepartmentCarousel",
@@ -89,5 +87,10 @@
   },
   "custom-icons": {
     "component": "CustomIcons"
+  },
+  "recommendation-shelf": {
+    "component": "RecomendationShelf",
+    "composition": "blocks",
+    "required": ["product-summary.shelf"]
   }
 }
