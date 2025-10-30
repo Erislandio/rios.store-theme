@@ -1788,7 +1788,24 @@
     min-height: 48px;
 
     .caretIcon {
-      width: 20px;
+      width: 15px;
+    }
+  }
+
+  .sliderLeftArrow {
+    left: -4rem;
+
+    @media screen and (max-width: 1280px) {
+      left: -1rem;
+    }
+  }
+
+
+  .sliderRightArrow {
+    right: -4rem;
+
+    @media screen and (max-width: 1280px) {
+      right: -1rem;
     }
   }
 

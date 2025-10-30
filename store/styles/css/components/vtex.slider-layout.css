@@ -27,6 +27,13 @@
   background: #fff !important;
   min-width: 48px;
   min-height: 48px;
+  left: -3rem;
+}
+@media screen and (max-width: 1280px) {
+  .sliderLayoutContainer--footer .sliderLeftArrow,
+  .sliderLayoutContainer--shelf .sliderLeftArrow {
+    left: -1rem;
+  }
 }
 .sliderLayoutContainer--footer .sliderLeftArrow .caretIcon,
 .sliderLayoutContainer--shelf .sliderLeftArrow .caretIcon {
@@ -39,6 +46,13 @@
   background: #fff !important;
   min-width: 48px;
   min-height: 48px;
+  right: -3rem;
+}
+@media screen and (max-width: 1280px) {
+  .sliderLayoutContainer--footer .sliderRightArrow,
+  .sliderLayoutContainer--shelf .sliderRightArrow {
+    right: -1rem;
+  }
 }
 .sliderLayoutContainer--footer .sliderRightArrow .caretIcon,
 .sliderLayoutContainer--shelf .sliderRightArrow .caretIcon {

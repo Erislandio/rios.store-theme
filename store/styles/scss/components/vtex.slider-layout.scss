@@ -33,6 +33,12 @@
     min-width: 48px;
     min-height: 48px;
 
+    left: -3rem;
+
+    @media screen and (max-width: 1280px) {
+      left: -1rem;
+    }
+
     .caretIcon {
       width: 18px;
     }
@@ -44,6 +50,12 @@
     background: #fff !important;
     min-width: 48px;
     min-height: 48px;
+
+    right: -3rem;
+
+    @media screen and (max-width: 1280px) {
+      right: -1rem;
+    }
 
     .caretIcon {
       width: 18px;
