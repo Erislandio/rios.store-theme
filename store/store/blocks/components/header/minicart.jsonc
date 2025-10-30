@@ -44,7 +44,7 @@
       "blockClass": "minicart-footer"
     },
     "children": [
-      "minicart-summary#custom",
+      "custom-minicart-totals",
       "minicart-checkout-button#go-checkout",
       "custom-div#minicart-close-button-wrapper"
     ]

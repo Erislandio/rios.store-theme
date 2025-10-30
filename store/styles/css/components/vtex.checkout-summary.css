@@ -25,3 +25,14 @@
   font-weight: 700;
   line-height: 140%; /* 22.4px */
 }
+
+.summaryItemContainer--discount .summaryItemPrice,
+.summaryItemContainer--discount .summaryItemLabel {
+  color: #2cbf59;
+  /* text-sm/Medium */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+}

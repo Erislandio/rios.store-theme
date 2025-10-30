@@ -39,7 +39,7 @@ export default function MinicartTotals() {
           >
             <div className="vtex-checkout-summary-0-x-price">
               R${' '}
-              {Math.abs(totalValue / 100)
+              {Math.abs((totalValue + discountFromItems + discountValue) / 100)
                 .toFixed(2)
                 .replace('.', ',')}
             </div>
