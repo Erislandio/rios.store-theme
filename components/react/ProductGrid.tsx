@@ -218,7 +218,7 @@ export default function ProductGrid({
     return (
       <Fragment>
         <div className={handles.productGridContainer}>
-          {product.items.map((item) => (
+          {product?.items?.map((item) => (
             <Card key={item.ean} item={item} onChange={handleAddItem} />
           ))}
         </div>

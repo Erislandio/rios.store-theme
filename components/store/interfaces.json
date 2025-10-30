@@ -96,5 +96,8 @@
   "product-grid": {
     "component": "ProductGrid",
     "composition": "children"
+  },
+  "custom-minicart-totals": {
+    "component": "MinicartTotals"
   }
 }
