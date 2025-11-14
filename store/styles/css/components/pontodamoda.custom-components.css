@@ -31,6 +31,7 @@
 }
 
 .menuItem {
+  position: relative;
   cursor: pointer;
   padding: 0px 15px;
   min-height: 80px;
@@ -49,11 +50,11 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: 180px;
+  left: 0px;
   background: white;
   border: 1px solid #eee;
   flex-direction: column;
-  min-width: 360px;
+  min-width: 300px;
   z-index: 10;
   border-radius: 0 0 0 8px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
@@ -98,7 +99,7 @@
   display: flex;
   min-width: 300px;
   z-index: 20;
-  width: 51vw;
+  width: max-content;
   max-width: 960px;
   min-height: 300px;
 }
@@ -190,7 +191,7 @@
   border-radius: 8px;
   background: #fff;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1);
-  min-width: 360px;
+  min-width: 300px;
 }
 .customLoginButtonDropdown .customLoginButtonDropdownLabel {
   margin: 0px;
@@ -303,7 +304,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  overflow: scroll;
 }
 .customDeals .customDealsWrapper .customDealsItem {
   text-align: center;
@@ -311,6 +311,7 @@
 @media screen and (max-width: 768px) {
   .customDeals .customDealsWrapper .customDealsItem {
     min-width: 200px;
+    overflow: scroll;
   }
 }
 .customDeals .customDealsWrapper .customDealsItem .customDealsItemTitle {
@@ -1900,7 +1901,11 @@
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
-.buyButton :global(.vtex-button):hover {
+.buyButton :global(.vtex-button):disabled {
+  background: var(--gray-300, #d4d4d8);
+  cursor: not-allowed;
+}
+.buyButton :global(.vtex-button):hover:not(:disabled) {
   background: var(--green-600, #0f7033);
 }
 .buyButton :global(.vtex-button) :global(.vtex-button__label) {

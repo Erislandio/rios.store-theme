@@ -24,6 +24,7 @@
   display: flex;
   align-items: center;
   gap: 27px;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1024px) {
   .flexRowContent--footer--bottom {

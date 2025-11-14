@@ -369,6 +369,7 @@
 
   "sku-selector#custom": {
     "props": {
+      "showValueForVariation": "all",
       "variationsSpacing": 3,
       "showValueNameForImageVariation": true
     }

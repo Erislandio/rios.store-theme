@@ -101,8 +101,7 @@
 }
 
 .imageElement--logo-ximenes {
-  width: auto !important;
-  height: auto !important;
+  object-fit: none;
 }
 
 .productImagesContainer--list {
@@ -261,11 +260,17 @@
     line-height: 140%; /* 19.6px */
     margin: 0px;
   }
+}
 
-  .skuSelectorSelectorImageValue,
-  .skuSelectorNameSeparator {
-    display: none;
-  }
+.skuSelectorSelectorImageValue {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  color: #000;
+  line-height: 140%; /* 19.6px */
+  margin: 0px;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .carouselGaleryThumbs {

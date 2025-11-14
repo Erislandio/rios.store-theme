@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
+
 import useDatalayer from '../../hooks/useDatalayer'
 import CustomMenuMobile from './MenuMobile'
 
@@ -25,11 +26,11 @@ export type MainMenu = {
 type Props = {
   items: MainMenu[]
   delay?: any // opcional - tempo em ms
-  others?: {
+  others?: Array<{
     __editorItemTitle: string
     icon: string
     href: string
-  }[]
+  }>
 }
 
 const CSS_HANDLES = [
@@ -174,8 +175,8 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
-  const [activeMenu, setActiveMenu] = useState<number | null>(null)
-  const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null)
+  const [activeMenu, setActiveMenu] = useState<number | null>(0)
+  const [activeSubMenu, setActiveSubMenu] = useState<number | null>(0)
 
   const { isMobile } = useDevice()
 
@@ -193,8 +194,8 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
   }
 
   const handleMenuLeave = () => {
-    setActiveMenu(null)
-    setActiveSubMenu(null)
+    setActiveMenu(0)
+    setActiveSubMenu(0)
   }
 
   return (

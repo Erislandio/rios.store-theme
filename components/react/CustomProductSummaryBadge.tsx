@@ -29,7 +29,7 @@ export default function CustomProductSummaryBadge() {
 
   const { handles } = useCssHandles(CSS_HANDLES)
 
-  if (!hasColorVariation) return null
+  if (!hasColorVariation || product.items.length === 1) return null
 
   return (
     <div className={handles.customProductSummaryBadge}>
