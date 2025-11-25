@@ -176,7 +176,7 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
   const { pushToDataLayer } = useDatalayer()
 
   const [activeMenu, setActiveMenu] = useState<number | null>(0)
-  const [activeSubMenu, setActiveSubMenu] = useState<number | null>(0)
+  const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null)
 
   const { isMobile } = useDevice()
 
@@ -195,7 +195,7 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
 
   const handleMenuLeave = () => {
     setActiveMenu(0)
-    setActiveSubMenu(0)
+    setActiveSubMenu(null)
   }
 
   return (
