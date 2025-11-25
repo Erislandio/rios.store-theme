@@ -5,9 +5,16 @@
       "custom-product-summary-badge",
       "product-summary-image#custom",
       "custom-div#summary",
+      "custom-product-summary-wrapper#add-to-cart"
+    ]
+  },
+
+  "custom-product-summary-wrapper#add-to-cart": {
+    "children": [
       "add-to-cart-button#summary"
     ]
   },
+
   "custom-div#summary": {
     "title": "Div customizada",
     "props": {
