@@ -103,5 +103,8 @@
   "custom-product-summary-wrapper": {
     "component": "CustomProductSummaryWrapper",
     "composition": "children"
+  },
+  "tabela-medidas": {
+    "component": "TabelaMedidas"
   }
 }

@@ -23,13 +23,13 @@ export default function CustomProductSummaryBadge() {
   const { isMobile } = useDevice()
   const { product } = ProductSummaryContext.useProductSummary()
 
-  const hasColorVariation = product?.skuSpecifications?.some(
+  const hasColorVariation = product?.skuSpecifications?.filter(
     (spec) => spec?.field?.name?.toLowerCase() === 'cor'
   )
 
   const { handles } = useCssHandles(CSS_HANDLES)
 
-  if (!hasColorVariation || product.items.length === 1) return null
+  if (hasColorVariation.length <= 1) return null
 
   return (
     <div className={handles.customProductSummaryBadge}>
