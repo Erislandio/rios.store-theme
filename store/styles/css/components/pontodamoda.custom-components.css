@@ -306,6 +306,12 @@
   align-items: center;
   justify-content: space-around;
 }
+@media screen and (max-width: 1024px) {
+  .customDeals .customDealsWrapper {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+}
 .customDeals .customDealsWrapper .customDealsItem {
   text-align: center;
 }
