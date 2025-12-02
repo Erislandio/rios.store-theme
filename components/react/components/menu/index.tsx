@@ -21,6 +21,7 @@ export type MainMenu = {
   __editorItemTitle: string
   image: string
   menu: MenuItem[]
+  href: string
 }
 
 type Props = {
@@ -162,10 +163,10 @@ const DropdownItem: React.FC<{
             {menu.__editorItemTitle}
             <ArrowIcon color={arrowColor} />
           </span>
-          {isActive && (
-            <Submenu menu={menu} mainItem={mainItem} handles={handles} />
-          )}
         </>
+      )}
+      {isActive && (
+        <Submenu menu={menu} mainItem={mainItem} handles={handles} />
       )}
     </div>
   )
@@ -207,9 +208,23 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
           onMouseEnter={() => handleMenuEnter(mainIndex)}
           onMouseLeave={handleMenuLeave}
         >
-          <span className={handles.menuLabel}>
-            {mainItem.__editorItemTitle}
-          </span>
+          {mainItem.href ? (
+            <Link
+              to={mainItem.href}
+              className={handles.menuLabel}
+              style={{
+                textDecoration: 'none',
+                color: '#27272a',
+                cursor: 'pointer',
+              }}
+            >
+              {mainItem.__editorItemTitle}
+            </Link>
+          ) : (
+            <span className={handles.menuLabel}>
+              {mainItem.__editorItemTitle}
+            </span>
+          )}
 
           <div
             className={applyModifiers(
@@ -295,6 +310,10 @@ Menu.schema = {
               properties: {
                 __editorItemTitle: {
                   title: 'Label',
+                  type: 'string',
+                },
+                href: {
+                  title: 'Link URL',
                   type: 'string',
                 },
                 subMenu: {
