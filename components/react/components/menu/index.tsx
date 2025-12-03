@@ -73,7 +73,7 @@ const Submenu: React.FC<{
 }> = ({ menu, mainItem, handles }) => (
   <div className={handles.submenu}>
     <ul className={handles.submenuItemUl}>
-      {menu.subMenu.map((sub) => (
+      {menu?.subMenu?.map((sub) => (
         <li key={sub.__editorItemTitle} className={handles.submenuItem}>
           <Link to={sub.href} className={handles.submenuItemLink}>
             {sub.__editorItemTitle}
