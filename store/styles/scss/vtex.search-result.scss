@@ -409,3 +409,20 @@
     }
   }
 }
+
+
+.gallery--custom-gallery--list {
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  width: 100%;
+}
+
+.gallery--custom-gallery--grid {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.galleryItem {
+  max-width: unset !important;
+}
