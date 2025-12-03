@@ -11,7 +11,7 @@
   "search-result-layout.mobile#department": {
     "title": "Search Result Layout Mobile Department",
     "children": [
-      "image#search-banner-department-mobile",
+      "custom-category-banners",
       "custom-search-carousel#default",
       "custom-div#breadcrumb-search",
       "custom-div#filter-mobilev2",
@@ -43,8 +43,7 @@
     "title": "Search Result Layout Desktop Department",
     "children": [
       "custom-div#breadcrumb-search",
-      "responsive-layout.desktop#department-banner",
-      "responsive-layout.tablet#department-banner",
+      "custom-category-banners",
       "custom-search-carousel#default",
       "custom-div#filter",
       "custom-div#search-info",

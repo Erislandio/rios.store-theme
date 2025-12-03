@@ -106,5 +106,8 @@
   },
   "tabela-medidas": {
     "component": "TabelaMedidas"
+  },
+  "custom-category-banners": {
+    "component": "CustomDepartmentBanner"
   }
 }
