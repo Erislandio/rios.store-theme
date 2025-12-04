@@ -2057,3 +2057,9 @@
 .tabelaMedidasFooterImage :global(.vtex-render-runtime-8-x-lazyload) {
   width: 100%;
 }
+
+.recommendationShelfWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
