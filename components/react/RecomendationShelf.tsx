@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-apollo'
 import { useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { useProduct } from 'vtex.product-context'
 import type {
   Product,
@@ -14,9 +15,11 @@ import RECOMMENDATION_QUERY from './graphql/getRecommendations.gql'
 
 export default function RecomendationShelf() {
   const { product } = useProduct() as ProductContextState
+  const { isMobile } = useDevice()
   const { handles } = useCssHandles([
     'recommendationShelf',
     'recommendationShelfTitle',
+    'recommendationShelfWrapper',
   ] as const)
 
   const { data, loading } = useQuery<{ productRecommendations: Product[] }>(
@@ -32,6 +35,34 @@ export default function RecomendationShelf() {
 
   if (loading || !data?.productRecommendations?.length) {
     return null
+  }
+
+  if (data.productRecommendations.length < 4 && !isMobile) {
+    return (
+      <section className={handles.recommendationShelf}>
+        <h4 className={handles.recommendationShelfTitle}>Você vai gostar</h4>
+        <div className={handles.recommendationShelfWrapper}>
+          {data?.productRecommendations
+            ?.filter((item) =>
+              item.items.some(
+                (element) =>
+                  element.sellers[0].commertialOffer.AvailableQuantity
+              )
+            )
+            .map((item) => (
+              <ExtensionPoint
+                id="product-summary.shelf"
+                key={item.productId}
+                product={ProductSummaryCustom.mapCatalogProductToProductSummary(
+                  item,
+                  'FIRST_AVAILABLE',
+                  400
+                )}
+              />
+            ))}
+        </div>
+      </section>
+    )
   }
 
   return (
