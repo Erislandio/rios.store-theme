@@ -852,8 +852,16 @@
   padding-right: 1rem;
 }
 .menuContainer--mobile .submenuItemsWrapper .submenuUl .collapsibleMenuTitle {
-  display: block;
+  text-decoration: none;
+  color: #272727;
+  text-decoration: none;
+  color: var(--MT---Secundria, #424242);
+  font-family: Inter;
+  font-size: 14px;
   padding-left: 1rem;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
 }
 .menuContainer--mobile .submenuItemsWrapper .submenuUl .submenuLi .menuLink {
   padding: 1rem;
@@ -869,6 +877,7 @@
 }
 .menuContainer--mobile .submenuItemsWrapper .submenuUl .collapsibleMenu--open .collapsibleMenuTitle {
   color: #00579c;
+  text-decoration: none;
 }
 .menuContainer--mobile .submenuItemsWrapper .submenuUl .collapsibleMenu--open :global(.vtex__icon-caret-down),
 .menuContainer--mobile .submenuItemsWrapper .submenuUl .collapsibleMenu--open :global(.vtex__icon-caret-up) {

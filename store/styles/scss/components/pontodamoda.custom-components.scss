@@ -937,8 +937,16 @@
       }
 
       .collapsibleMenuTitle {
-        display: block;
+        text-decoration: none;
+        color: #272727;
+        text-decoration: none;
+        color: var(--MT---Secundria, #424242);
+        font-family: Inter;
+        font-size: 14px;
         padding-left: 1rem;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
       }
 
       .submenuLi {
@@ -959,6 +967,7 @@
       .collapsibleMenu--open {
         .collapsibleMenuTitle {
           color: #00579c;
+          text-decoration: none;
         }
 
         :global(.vtex__icon-caret-down),
@@ -2273,7 +2282,6 @@
 .tabelaMedidasFooterImage :global(.vtex-render-runtime-8-x-lazyload) {
   width: 100%;
 }
-
 
 .recommendationShelfWrapper {
   display: grid;
