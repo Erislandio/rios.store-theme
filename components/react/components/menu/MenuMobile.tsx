@@ -2,7 +2,8 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
 import { Collapsible } from 'vtex.styleguide'
-import { MainMenu, MenuItem } from './index'
+
+import type { MainMenu, MenuItem } from './index'
 import ProfileContainer from './ProfileContainer'
 
 const CSS_HANDLES = [
@@ -87,9 +88,15 @@ const CollapsibleMenu = ({ section }: { section: MenuItem }) => {
     >
       <Collapsible
         header={
-          <span className={handles.collapsibleMenuTitle}>
-            {section.__editorItemTitle}
-          </span>
+          section?.href ? (
+            <Link className={handles.collapsibleMenuTitle} to={section.href}>
+              {section.__editorItemTitle}
+            </Link>
+          ) : (
+            <span className={handles.collapsibleMenuTitle}>
+              {section.__editorItemTitle}
+            </span>
+          )
         }
         isOpen={isOpen}
         onClick={() => setIsOpen(!isOpen)}
@@ -119,7 +126,7 @@ const CardIcon = () => (
     viewBox="0 0 17 13"
     fill="none"
   >
-    <g clip-path="url(#clip0_11624_3394)">
+    <g clipPath="url(#clip0_11624_3394)">
       <path
         d="M0.139388 5.04907H16.8386L16.9599 5.24232C16.8575 7.15888 17.0891 9.21185 16.9599 11.112C16.8919 12.1133 16.2228 12.8345 15.2591 12.9509L1.76123 12.9531C0.838496 12.8776 0.141594 12.182 0.0260315 11.2407L0.0423514 5.13046L0.139829 5.04907H0.139388ZM3.09637 8.5971C2.61736 8.68622 2.62354 9.30825 2.66676 9.7002C2.72984 10.2699 3.29971 10.2759 3.7474 10.2231C4.30007 10.1581 4.3058 9.57061 4.25464 9.10909C4.19024 8.52799 3.54803 8.51253 3.09637 8.5971Z"
         fill="white"
@@ -162,11 +169,11 @@ export default function CustomMenuMobile({
   others,
 }: {
   departments: MainMenu[]
-  others: {
+  others: Array<{
     __editorItemTitle: string
     icon: string
     href: string
-  }[]
+  }>
 }) {
   const { handles } = useCssHandles(CSS_HANDLES)
   const [isOpen, setIsOpen] = useState(false)
@@ -245,12 +252,12 @@ export default function CustomMenuMobile({
                         key={section.__editorItemTitle}
                         className={handles.submenuLi}
                       >
-                        {section.href ? (
+                        {section?.href && section?.subMenu?.length ? (
+                          <CollapsibleMenu section={section} />
+                        ) : (
                           <Link to={section.href} className={handles.menuLink}>
                             {section.__editorItemTitle}
                           </Link>
-                        ) : (
-                          <CollapsibleMenu section={section} />
                         )}
                       </li>
                     ))}
