@@ -252,7 +252,7 @@ export default function CustomMenuMobile({
                         key={section.__editorItemTitle}
                         className={handles.submenuLi}
                       >
-                        {section?.href && section?.subMenu?.length ? (
+                        {section?.subMenu?.length ? (
                           <CollapsibleMenu section={section} />
                         ) : (
                           <Link to={section.href} className={handles.menuLink}>

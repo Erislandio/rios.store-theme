@@ -1,7 +1,10 @@
 import React from 'react'
-
 import { useQuery } from 'react-apollo'
 import { useCssHandles } from 'vtex.css-handles'
+import { Link } from 'vtex.render-runtime'
+import { Spinner } from 'vtex.styleguide'
+
+import PROFILE from '../../graphql/profile.gql'
 
 const CSS_HANDLES = [
   'profileContainer',
@@ -18,7 +21,7 @@ const ProfileIcon = () => (
     viewBox="0 0 17 21"
     fill="none"
   >
-    <g clip-path="url(#clip0_11624_3386)">
+    <g clipPath="url(#clip0_11624_3386)">
       <path
         d="M4.42192 10.572C5.03917 10.585 5.8355 11.3296 6.41089 11.6056C7.89864 12.3191 9.3652 12.2532 10.8079 11.4822C11.245 11.2486 12.0557 10.5751 12.5187 10.5627C15.8365 10.476 16.8797 14.1586 16.9926 16.7568C17.0906 19.0083 16.1607 20.7316 13.6812 20.8862C10.2855 21.0979 6.6615 20.7238 3.242 20.8836C-0.141471 20.5365 -0.283464 17.683 0.210864 15.0096C0.608763 12.8578 1.84061 10.5165 4.42192 10.5715V10.572Z"
         fill="black"
@@ -40,10 +43,6 @@ const ProfileIcon = () => (
     </defs>
   </svg>
 )
-
-import { Link } from 'vtex.render-runtime'
-import { Spinner } from 'vtex.styleguide'
-import PROFILE from '../../graphql/profile.gql'
 
 function renderProfile({
   email,
@@ -68,8 +67,6 @@ export default function ProfileContainer() {
   })
 
   const { handles } = useCssHandles(CSS_HANDLES)
-
-  console.log(data?.profile)
 
   return (
     <section className={handles.profileContainer}>
