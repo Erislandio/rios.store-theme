@@ -1,7 +1,7 @@
 {
   "vendor": "pontodamoda",
   "name": "store-theme",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "mustUpdateAt": "2023-01-11",
   "builders": {
     "styles": "2.x",
