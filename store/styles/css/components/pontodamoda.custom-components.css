@@ -2076,3 +2076,7 @@
 .categoryListItems {
   width: 100%;
 }
+
+.middleBanners--3-banners .middleBannersWrapper .middleBannersItem {
+  width: auto;
+}
