@@ -92,11 +92,6 @@
   scale: 1.5;
   height: auto !important;
 }
-@media screen and (max-width: 768px) {
-  .container .imageNormal {
-    scale: 2.1;
-  }
-}
 
 .container--comprejunto {
   border: none !important;

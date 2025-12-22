@@ -104,10 +104,6 @@
   .imageNormal {
     scale: 1.5;
     height: auto !important;
-
-    @media screen and (max-width: 768px) {
-      scale: 2.1;
-    }
   }
 }
 

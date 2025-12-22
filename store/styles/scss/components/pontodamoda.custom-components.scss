@@ -899,6 +899,9 @@
     z-index: 99999;
     height: 100vh;
     background-color: #fff;
+    height: 800px;
+    padding-bottom: 10rem;
+    overflow: scroll;
 
     .backButton {
       padding: 1rem;
@@ -921,6 +924,8 @@
     .submenuUl {
       padding: 0px;
       list-style: none;
+      height: 800px;
+      overflow: scroll;
 
       .collapsibleMenu {
         padding: 1rem 0px;

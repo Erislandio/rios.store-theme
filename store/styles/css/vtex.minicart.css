@@ -44,3 +44,12 @@
   text-transform: none;
   padding: 10px;
 }
+
+.minicartCheckoutButton--go-checkout :global(.vtex-button__label) {
+  font-size: 0px;
+}
+.minicartCheckoutButton--go-checkout :global(.vtex-button__label)::before {
+  font-size: 14px;
+  padding: 0.25rem;
+  content: "Finalizar pedido";
+}

@@ -51,3 +51,15 @@
     padding: 10px;
   }
 }
+
+.minicartCheckoutButton--go-checkout {
+  :global(.vtex-button__label) {
+    font-size: 0px;
+
+    &::before {
+      font-size: 14px;
+      padding: 0.25rem;
+      content: "Finalizar pedido";
+    }
+  }
+}
