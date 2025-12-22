@@ -1,10 +1,7 @@
 import React from 'react'
-import { useQuery } from 'react-apollo'
-
-import { OrderForm as OrderFormType } from 'vtex.checkout-graphql'
+import type { OrderForm as OrderFormType } from 'vtex.checkout-graphql'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { OrderForm } from 'vtex.order-manager'
-import SHIPPING_BAR from './graphql/getShippingBar.gql'
 
 const cssHandles = [
   'customShippingBar',
@@ -16,38 +13,11 @@ const cssHandles = [
   'customShippingBarItemsPrice',
 ] as const
 
-export default function CustomShippingBar() {
+const CustomShippingBar: StoreFrontFC<{ shippingValue: number }> = ({
+  shippingValue = 279,
+}) => {
   const { orderForm } = OrderForm.useOrderForm() as { orderForm: OrderFormType }
   const { handles } = useCssHandles(cssHandles)
-
-  const { data, loading } = useQuery<{ getShippingBar: number }>(SHIPPING_BAR, {
-    ssr: false,
-    fetchPolicy: 'no-cache',
-  })
-
-  if (loading) {
-    return (
-      <div className={handles.customShippingBar}>
-        <div className={handles.customShippingBar__message}>
-          <span>Carregando...</span>
-        </div>
-        <div className={handles.customShippingBar__progress}>
-          <div
-            className={handles.customShippingBar__total}
-            style={{ width: '0%' }}
-            aria-valuenow={0}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            role="progressbar"
-          />
-        </div>
-      </div>
-    )
-  }
-
-  if (!data?.getShippingBar) {
-    return null
-  }
 
   const total = orderForm.totalizers.find(
     (totalizer) => totalizer.id === 'Items'
@@ -55,7 +25,7 @@ export default function CustomShippingBar() {
 
   if (!total) return null
 
-  const threshold = data.getShippingBar * 100
+  const threshold = shippingValue
 
   if (!threshold || threshold <= 0) return null
 
@@ -144,3 +114,18 @@ export default function CustomShippingBar() {
     </div>
   )
 }
+
+CustomShippingBar.schema = {
+  title: 'Barra de FRETE',
+  description: 'Componente de Barra de frete',
+  type: 'object',
+  properties: {
+    shippingValue: {
+      type: 'number',
+      title: 'Valor da Barra de Frete',
+      default: 279,
+    },
+  },
+}
+
+export default CustomShippingBar

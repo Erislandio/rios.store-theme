@@ -1,17 +1,11 @@
 import React from 'react'
-import { useDevice } from 'vtex.device-detector'
 import { SearchPageContext } from 'vtex.search-page-context'
 
 interface Props {
-  desktopImage: string
-  mobileImage: string
+  image: string
 }
 
-const CustomDepartmentBanner: StoreFrontFC<Props> = ({
-  desktopImage,
-  mobileImage,
-}) => {
-  const { isMobile } = useDevice()
+const CustomDepartmentBanner: StoreFrontFC<Props> = ({ image }) => {
   const { searchQuery } = SearchPageContext.useSearchPage() as {
     searchQuery: {
       data: {
@@ -22,7 +16,7 @@ const CustomDepartmentBanner: StoreFrontFC<Props> = ({
     }
   }
 
-  if (!desktopImage || !mobileImage) {
+  if (!image) {
     return null
   }
 
@@ -46,7 +40,7 @@ const CustomDepartmentBanner: StoreFrontFC<Props> = ({
       </h1>
       <img
         title=""
-        src={isMobile ? mobileImage : desktopImage}
+        src={image}
         alt="Banner Department"
         className="vtex-store-components-3-x-imageElement vtex-store-components-3-x-imageElement--department-banner-image"
         loading="eager"
@@ -60,15 +54,8 @@ CustomDepartmentBanner.schema = {
   description: 'Componente de reguagem de vantagens',
   type: 'object',
   properties: {
-    mobileImage: {
-      title: 'Mobile image',
-      type: 'string',
-      widget: {
-        'ui:widget': 'image-uploader',
-      },
-    },
-    desktopImage: {
-      title: 'Mobile image',
+    image: {
+      title: 'Image',
       type: 'string',
       widget: {
         'ui:widget': 'image-uploader',

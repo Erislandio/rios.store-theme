@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
 import { Collapsible } from 'vtex.styleguide'
@@ -105,9 +105,9 @@ const CollapsibleMenu = ({ section }: { section: MenuItem }) => {
         caretColor="#000"
       >
         <ul className={handles.submenuItems}>
-          {section?.subMenu?.map((link: any) => (
+          {section?.subMenu?.map((link) => (
             <li key={link.__editorItemTitle} className={handles.submenuItem}>
-              <Link to={link.url} className={handles.menuLink}>
+              <Link to={link.href} className={handles.menuLink}>
                 {link.__editorItemTitle}
               </Link>
             </li>
@@ -178,14 +178,6 @@ export default function CustomMenuMobile({
   const { handles } = useCssHandles(CSS_HANDLES)
   const [isOpen, setIsOpen] = useState(false)
   const [openDept, setOpenDept] = useState<string | null>(null)
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'auto'
-    }
-  }, [isOpen])
 
   return (
     <Fragment>
