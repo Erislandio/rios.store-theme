@@ -167,6 +167,8 @@ const ArrowIcon = () => (
 export default function CustomMenuMobile({
   departments,
   others,
+  pontoCardUrl,
+  pontoCardText,
 }: {
   departments: MainMenu[]
   others: Array<{
@@ -174,6 +176,8 @@ export default function CustomMenuMobile({
     icon: string
     href: string
   }>
+  pontoCardUrl: string
+  pontoCardText: string
 }) {
   const { handles } = useCssHandles(CSS_HANDLES)
   const [isOpen, setIsOpen] = useState(false)
@@ -198,9 +202,14 @@ export default function CustomMenuMobile({
         style={{ display: isOpen ? 'block' : 'none' }}
       >
         <ProfileContainer />
-        <Link className={handles.menuCardContainer} to="/pontocard">
+        <Link
+          className={handles.menuCardContainer}
+          to={pontoCardUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           <CardIcon />
-          Cartão Ponto Card
+          {pontoCardText}
         </Link>
         <ul className={handles.menuItemUl}>
           {departments.map((dept) => (

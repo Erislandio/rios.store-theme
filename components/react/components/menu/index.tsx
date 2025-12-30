@@ -32,6 +32,8 @@ type Props = {
     icon: string
     href: string
   }>
+  pontoCardUrl: string
+  pontoCardText: string
 }
 
 const CSS_HANDLES = [
@@ -172,7 +174,13 @@ const DropdownItem: React.FC<{
   )
 }
 
-const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
+const Menu: StoreFrontFC<Props> = ({
+  items,
+  delay = 200,
+  others,
+  pontoCardText = 'Cartão Ponto Card',
+  pontoCardUrl = 'https://eventos.lojaspontodamoda.com.br/pontocard/',
+}) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
@@ -182,7 +190,14 @@ const Menu: StoreFrontFC<Props> = ({ items, delay = 200, others }) => {
   const { isMobile } = useDevice()
 
   if (isMobile) {
-    return <CustomMenuMobile departments={items} others={others ?? []} />
+    return (
+      <CustomMenuMobile
+        departments={items}
+        others={others ?? []}
+        pontoCardText={pontoCardText}
+        pontoCardUrl={pontoCardUrl}
+      />
+    )
   }
 
   const handleMenuEnter = (index: number) => {
@@ -257,6 +272,16 @@ Menu.schema = {
   title: 'Menu',
   type: 'object',
   properties: {
+    pontoCardUrl: {
+      title: 'URL ponto card',
+      type: 'string',
+      default: 'https://eventos.lojaspontodamoda.com.br/pontocard/',
+    },
+    pontoCardText: {
+      title: 'Texto ponto card',
+      type: 'string',
+      default: 'Cartão Ponto Card',
+    },
     others: {
       title: 'Outros items [mobile]',
       type: 'array',

@@ -117,7 +117,6 @@
 
     .galleryItem {
       padding: 0.5rem;
-      padding-bottom: 30px;
 
       @media screen and (max-width: 1024px) {
         min-height: 390px;
@@ -425,4 +424,14 @@
 
 .galleryItem {
   max-width: unset !important;
+}
+
+.galleryItem {
+  :global(.vtex-product-summary-2-x-imageNormal) {
+    @media screen and (max-width: 768px) {
+      position: relative;
+      top: 4rem;
+      scale: 2.1 !important;
+    }
+  }
 }

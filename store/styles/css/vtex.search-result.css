@@ -99,7 +99,6 @@
 }
 .searchResultContainer .gallery--custom-gallery .galleryItem {
   padding: 0.5rem;
-  padding-bottom: 30px;
 }
 @media screen and (max-width: 1024px) {
   .searchResultContainer .gallery--custom-gallery .galleryItem {
@@ -381,4 +380,12 @@
 
 .galleryItem {
   max-width: unset !important;
+}
+
+@media screen and (max-width: 768px) {
+  .galleryItem :global(.vtex-product-summary-2-x-imageNormal) {
+    position: relative;
+    top: 4rem;
+    scale: 2.1 !important;
+  }
 }

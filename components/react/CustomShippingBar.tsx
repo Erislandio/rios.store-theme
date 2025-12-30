@@ -19,19 +19,21 @@ const CustomShippingBar: StoreFrontFC<{ shippingValue: number }> = ({
   const { orderForm } = OrderForm.useOrderForm() as { orderForm: OrderFormType }
   const { handles } = useCssHandles(cssHandles)
 
-  const total = orderForm.totalizers.find(
+  const totalFull = orderForm.totalizers.find(
     (totalizer) => totalizer.id === 'Items'
   )?.value
 
-  if (!total) return null
+  if (!totalFull) return null
+
+  const total = totalFull / 100
 
   const threshold = shippingValue
 
   if (!threshold || threshold <= 0) return null
 
   const currencySymbol = orderForm.storePreferencesData?.currencySymbol ?? '$'
-  const formatPrice = (value: number) =>
-    `${currencySymbol}${(value / 100).toFixed(2)}`
+
+  const formatPrice = (value: number) => `${currencySymbol}${value.toFixed(2)}`
 
   const remaining = Math.max(threshold - total, 0)
   const percentage = Math.min(

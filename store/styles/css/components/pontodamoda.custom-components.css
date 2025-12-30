@@ -1591,12 +1591,13 @@
 
 .divContainer--department-banner {
   position: relative;
+  overflow: hidden;
 }
 .divContainer--department-banner :global(.vtex-search-result-3-x-galleryTitle--layout) {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: calc((100% - 1280px) / 2);
+  left: 0px;
   padding-left: 1rem;
   margin: 0px;
   color: #fff;
@@ -1607,6 +1608,11 @@
   line-height: normal;
   letter-spacing: 14.4px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .divContainer--department-banner :global(.vtex-search-result-3-x-galleryTitle--layout) {
+    font-size: 20px;
+  }
 }
 
 .divContainer--search {
