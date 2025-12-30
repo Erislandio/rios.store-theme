@@ -1,7 +1,7 @@
 {
   "vendor": "pontodamoda",
   "name": "custom-components",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "title": "React App Template",
   "builders": {
     "docs": "0.x",
