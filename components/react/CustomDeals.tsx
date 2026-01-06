@@ -19,7 +19,10 @@ const CSS_HANDLES = [
   'customDealsWrapper',
 ] as const
 
-const CustomDeals: StoreFrontFC<Props> = ({ items = [], backgroundColor = '#FAFAFA' }) => {
+const CustomDeals: StoreFrontFC<Props> = ({
+  items = [],
+  backgroundColor = '#FAFAFA',
+}) => {
   const { handles } = useCssHandles(CSS_HANDLES)
 
   return (
@@ -57,14 +60,6 @@ CustomDeals.schema = {
   description: 'Componente de reguagem de vantagens',
   type: 'object',
   properties: {
-    backgroundColor: {
-      title: 'Cor de fundo',
-      type: 'string',
-      default: '#FAFAFA',
-      widget: {
-        'ui:widget': 'color-picker',
-      },
-    },
     items: {
       title: 'Vantagens',
       type: 'array',
