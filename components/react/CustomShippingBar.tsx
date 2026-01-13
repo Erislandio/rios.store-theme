@@ -13,8 +13,12 @@ const cssHandles = [
   'customShippingBarItemsPrice',
 ] as const
 
-const CustomShippingBar: StoreFrontFC<{ shippingValue: number }> = ({
+const CustomShippingBar: StoreFrontFC<{
+  shippingValue: number
+  shippingLabel: string
+}> = ({
   shippingValue = 279,
+  shippingLabel = '*Apenas para fretes para o estado do Ceará',
 }) => {
   const { orderForm } = OrderForm.useOrderForm() as { orderForm: OrderFormType }
   const { handles } = useCssHandles(cssHandles)
@@ -92,7 +96,7 @@ const CustomShippingBar: StoreFrontFC<{ shippingValue: number }> = ({
                 'disclaimer'
               )}
             >
-              *Apenas para fretes para o estado do Ceará
+              {shippingLabel}
             </span>
           </div>
         )}
@@ -122,6 +126,11 @@ CustomShippingBar.schema = {
   description: 'Componente de Barra de frete',
   type: 'object',
   properties: {
+    shippingLabel: {
+      type: 'string',
+      title: 'Label da Barra de Frete',
+      default: '*Apenas para fretes para o estado do Ceará',
+    },
     shippingValue: {
       type: 'number',
       title: 'Valor da Barra de Frete',
