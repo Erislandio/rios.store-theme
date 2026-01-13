@@ -385,7 +385,5 @@
 @media screen and (max-width: 768px) {
   .galleryItem :global(.vtex-product-summary-2-x-imageNormal) {
     position: relative;
-    top: 4rem;
-    scale: 2.1 !important;
   }
 }
