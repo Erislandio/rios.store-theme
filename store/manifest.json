@@ -1,7 +1,7 @@
 {
-  "vendor": "pontodamoda",
+  "vendor": "gruporios",
   "name": "store-theme",
-  "version": "0.7.1",
+  "version": "0.0.1",
   "mustUpdateAt": "2023-01-11",
   "builders": {
     "styles": "2.x",
@@ -69,7 +69,7 @@
     "vtex.store-graphql": "2.x",
     "vtex.similar-products-variants": "0.x",
     "vtex.list-context": "0.x",
-    "pontodamoda.custom-components": "0.x"
+    "gruporios.store-components": "0.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",

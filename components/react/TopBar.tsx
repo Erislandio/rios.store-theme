@@ -1,50 +1,126 @@
 import React from 'react'
-import { useCssHandles } from 'vtex.css-handles'
+import { applyModifiers, useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
+import { Link } from 'vtex.render-runtime'
 
 interface Props {
+  items: {
+    text: string
+    color?: string
+    icon?: string
+    link?: string
+    newTab?: boolean
+  }[]
   message: string
   color?: string
-  cuponCode?: string
-  highlightText: string
   backgroundColor?: string
   textColor?: string
+  icon?: string
 }
 
-const CSS_HANDLES = ['topBarContainer', 'topBarMessage'] as const
+const CSS_HANDLES = [
+  'topBarContainer',
+  'topBarMessage',
+  'topBarContainerItems',
+  'topBarMessageLink',
+  'topBarMessageIcon',
+  'topBarContainerWrapper',
+] as const
 
 const TopBar: StoreFrontFC<Props> = ({
   message,
-  color,
-  cuponCode,
-  highlightText,
   backgroundColor,
   textColor,
+  items = [],
+  icon = '',
 }) => {
+  const { isMobile } = useDevice()
   const { handles } = useCssHandles(CSS_HANDLES)
+
+  if (isMobile && message) {
+    return (
+      <section
+        className={applyModifiers(handles.topBarContainer, 'mobile')}
+        style={{ backgroundColor: backgroundColor || '#1b1b1b' }}
+      >
+        <p
+          className={handles.topBarMessage}
+          style={{ color: textColor || '#FFFFFF' }}
+        >
+          {icon && (
+            <img
+              src={icon}
+              alt={message ?? 'Mensagem barra topo'}
+              className={handles.topBarMessageIcon}
+              width={15}
+              height={15}
+              loading="eager"
+            />
+          )}
+          {message}
+        </p>
+      </section>
+    )
+  }
 
   return (
     <section
       className={handles.topBarContainer}
-      style={{ backgroundColor: backgroundColor || '#00579C' }}
+      style={{ backgroundColor: backgroundColor || '#1b1b1b' }}
     >
-      <span
-        className={handles.topBarMessage}
-        style={{ color: textColor || '#FFFFFF' }}
-      >
-        <b style={{ color: color || '#FCD200' }}>{highlightText}</b> {message}{' '}
-        <b style={{ color: color || '#FCD200' }}>{cuponCode}</b>
-      </span>
+      <div className={handles.topBarContainerWrapper}>
+        <div className={handles.topBarContainerItems}>
+          {items.map((item, index) => (
+            <Link
+              key={index}
+              to={item.link}
+              target={item.newTab ? '_blank' : '_self'}
+              rel="noopener noreferrer"
+              className={handles.topBarMessageLink}
+              style={{ color: item.color || '#FFFFFF' }}
+            >
+              {item.icon && (
+                <img
+                  src={item.icon}
+                  alt={item.text ?? 'Ícone'}
+                  className={handles.topBarMessageIcon}
+                  width={15}
+                  height={15}
+                  loading="eager"
+                />
+              )}
+              {item.text}
+            </Link>
+          ))}
+        </div>
+        {message ? (
+          <p
+            className={handles.topBarMessage}
+            style={{ color: textColor || '#FFFFFF' }}
+          >
+            {icon && (
+              <img
+                src={icon}
+                alt={message ?? 'Mensagem barra topo'}
+                className={handles.topBarMessageIcon}
+                width={15}
+                height={15}
+                loading="eager"
+              />
+            )}
+            {message}
+          </p>
+        ) : null}
+      </div>
     </section>
   )
 }
 
 TopBar.defaultProps = {
-  message: 'para compras acima de R$ 120,00 - uso o cupom',
-  color: '#FCD200',
-  cuponCode: 'MEUFRETE',
-  highlightText: 'Ganhe Frete Grátis',
-  backgroundColor: '#00579C',
+  message: '',
+  backgroundColor: '#1b1b1b',
   textColor: '#FFFFFF',
+  items: [],
 }
 
 TopBar.schema = {
@@ -52,20 +128,51 @@ TopBar.schema = {
   description: 'Componente de barra no topo',
   type: 'object',
   properties: {
+    items: {
+      title: 'Itens',
+      description: 'Itens da barra',
+      type: 'array',
+      default: [],
+      items: {
+        type: 'object',
+        properties: {
+          message: {
+            title: 'Texto',
+            type: 'string',
+          },
+          color: {
+            title: 'Cor da fonte em destaque',
+            description: 'Cor da fonte em HEX',
+            type: 'string',
+            default: '#FFFFFF',
+          },
+          icon: {
+            title: 'Ícone',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          link: {
+            title: 'Link',
+            type: 'string',
+          },
+          newTab: {
+            title: 'Nova aba',
+            type: 'boolean',
+            default: false,
+          },
+        },
+      },
+    },
     message: {
-      title: 'Mensagem',
+      title: 'Mensagem Direita',
       description: 'Mensagem a ser exibida na barra',
       type: 'string',
-      default: 'para compras acima de R$ 120,00 - uso o cupom',
+      default: 'Frete Grátis acima de R$ 199,90',
     },
     color: {
       title: 'Cor da fonte em destaque',
-      description: 'Cor da fonte em HEX',
-      type: 'string',
-      default: '#FFFFFF',
-    },
-    textColor: {
-      title: 'Cor da fonte',
       description: 'Cor da fonte em HEX',
       type: 'string',
       default: '#FFFFFF',
@@ -74,19 +181,15 @@ TopBar.schema = {
       title: 'Cor de fundo',
       description: 'Cor de fundo em HEX',
       type: 'string',
-      default: '#00579C',
+      default: '#1b1b1b',
     },
-    highlightText: {
-      title: 'Texto em destaque',
-      description: 'Texto em destaque a ser exibido na barra',
+    icon: {
+      title: 'Ícone',
+      description: 'Ícone a ser exibido na barra',
       type: 'string',
-      default: 'Ganhe Frete Grátis',
-    },
-    cuponCode: {
-      title: 'Cupom de desconto',
-      description: 'Cupom de desconto a ser exibido na barra',
-      type: 'string',
-      default: 'MEUFRETE',
+      widget: {
+        'ui:widget': 'image-uploader',
+      },
     },
   },
 }

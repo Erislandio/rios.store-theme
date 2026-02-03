@@ -1,496 +1,55 @@
-.sizeDesktop {
-  padding: 0px;
-  max-width: unset;
-  display: block;
-}
-
-.logoLink {
-  min-width: 120px;
+.openIconContainer {
+  display: none;
 }
 
 .searchBarContainer {
-  max-width: 486px;
-  width: 100vw;
-  border-radius: 8px;
-  background: #e8be00;
-  padding: 5px 12px;
+  padding: 0px;
 
-  @media screen and (max-width: 1024px) {
-    width: calc(100vw - 2rem);
-    margin: 0 auto;
-    max-width: unset;
+  :global(.vtex-input) {
+    background: #8c8c8c;
   }
 
-  :global(.vtex-styleguide-9-x-input)::placeholder,
-  :global(.vtex-styleguide-9-x-input) {
-    color: var(--gray-800, #27272a);
+  :global(.vtex-input) {
+    :global(.vtex-input-prefix__group) {
+      border: none;
+      border-radius: 0px;
+    }
 
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 16.8px */
+    .suffixWrapper {
+      min-width: 40px;
+    }
 
-    @media screen and (max-width: 1024px) {
-      font-size: 0.875rem;
-      line-height: 140%; /* 14px */
+    :global(.vtex-input__suffix) {
+      border-radius: 0px;
+      padding: 0px;
+      background-color: #f1f1f1;
     }
   }
 
-  :global(.vtex-input-prefix__group) {
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   :global(.vtex-styleguide-9-x-input) {
-    background-color: transparent;
+    color: #8c8c8c;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #f1f1f1;
   }
 
-  :global(.vtex-input__suffix) {
-    background-color: transparent;
-    padding: 0px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Cpath d='M21.6614 20.003C21.8782 20.2198 22 20.5138 22 20.8204C22 21.1271 21.8782 21.4211 21.6614 21.6379C21.4446 21.8547 21.1505 21.9766 20.8439 21.9766C20.5373 21.9766 20.2432 21.8547 20.0264 21.6379L14.3724 15.9839C14.2555 15.8755 14.106 15.8088 13.9472 15.7941C13.7884 15.7795 13.6292 15.8177 13.4944 15.9029C13.3375 16.0175 13.1735 16.122 13.0034 16.2159C11.1796 17.2558 9.04024 17.5981 6.98301 17.1793C4.92578 16.7605 3.09057 15.609 1.81846 13.9388C0.546353 12.2687 -0.0761156 10.1935 0.0667199 8.09893C0.209555 6.00436 1.10798 4.03288 2.59504 2.5509C4.0821 1.06892 6.05664 0.177228 8.15168 0.0415591C10.2467 -0.0941102 12.3198 0.535475 13.9855 1.81329C15.6513 3.0911 16.7965 4.93023 17.2083 6.98889C17.6201 9.04754 17.2705 11.1857 16.2244 13.0059C16.1366 13.165 16.0387 13.3183 15.9314 13.4649C15.8429 13.5996 15.8023 13.7601 15.8161 13.9206C15.8299 14.0811 15.8973 14.2323 16.0074 14.3499L21.6614 20.003ZM8.70738 15.0409C9.96467 15.0409 11.1937 14.6681 12.2391 13.9696C13.2845 13.2711 14.0993 12.2783 14.5805 11.1167C15.0616 9.95507 15.1875 8.67689 14.9422 7.44375C14.697 6.21061 14.0915 5.07791 13.2025 4.18887C12.3134 3.29983 11.1807 2.69438 9.94758 2.44909C8.71444 2.2038 7.43626 2.3297 6.27467 2.81085C5.11308 3.29199 4.12025 4.10678 3.42173 5.15219C2.72321 6.19759 2.35038 7.42666 2.35038 8.68395C2.35038 10.3699 3.02015 11.9868 4.21232 13.179C5.40449 14.3712 7.02139 15.0409 8.70738 15.0409Z' fill='%2327272A'/%3E%3C/svg%3E");
+  .searchBarIcon {
+    background-color: #f1f1f1;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.91886 0C9.04611 0.00761363 9.17336 0.0142121 9.30062 0.0228409C10.4256 0.0969469 11.4959 0.379159 12.5113 0.867954C13.3737 1.28315 14.1413 1.83336 14.8303 2.49676C15.8235 3.45354 16.5571 4.57579 16.9981 5.88585C17.1903 6.45636 17.3176 7.0416 17.3895 7.63952C17.4458 8.10547 17.4717 8.57346 17.4585 9.04246C17.4266 10.1774 17.1832 11.2641 16.7142 12.2991C16.3629 13.0741 15.9056 13.7827 15.3636 14.4375C15.3479 14.4563 15.3327 14.475 15.3175 14.4943C15.315 14.4974 15.314 14.5014 15.3104 14.5085C15.3484 14.5486 15.3864 14.5908 15.426 14.6309C16.8202 16.0257 18.2154 17.4195 19.6076 18.8168C19.7414 18.9514 19.855 19.1067 19.9767 19.2528C19.9858 19.264 19.9873 19.2818 19.9919 19.297C19.9929 19.3006 19.9919 19.3051 19.9919 19.3092C19.9919 19.4046 20.0147 19.5087 19.9843 19.5929C19.9549 19.6746 19.8707 19.7371 19.8094 19.8071C19.7546 19.8696 19.7085 19.9533 19.639 19.9848C19.5696 20.0157 19.4748 19.9858 19.3931 19.9964C19.2446 20.0162 19.128 19.9685 19.0266 19.8604C18.9521 19.7807 18.8644 19.7132 18.7868 19.6361C17.8595 18.7097 16.9322 17.7834 16.006 16.8561C15.5426 16.3927 15.0807 15.9277 14.6189 15.4628C14.5778 15.4212 14.5418 15.3745 14.4997 15.3252C14.4419 15.3729 14.3836 15.4212 14.3243 15.4694C13.2277 16.3622 11.9957 16.9769 10.6137 17.2829C10.1118 17.3941 9.60379 17.4586 9.09022 17.4763C7.55406 17.5296 6.10054 17.2043 4.73067 16.5084C3.93876 16.1064 3.2234 15.5953 2.5917 14.9699C1.34858 13.7396 0.550077 12.2645 0.18657 10.554C0.0811174 10.0571 0.0218003 9.55359 0.0101397 9.045C0.00811174 8.96988 0.00354889 8.89526 0 8.82014C0 8.78766 0 8.75517 0 8.72269C0.00202793 8.6968 0.00456285 8.67041 0.0060838 8.64452C0.0172374 8.42373 0.0207863 8.20242 0.0405587 7.98213C0.103932 7.27204 0.251971 6.5797 0.484676 5.90564C0.920682 4.64279 1.60917 3.53628 2.54252 2.58254C3.24115 1.86839 4.04167 1.29432 4.94208 0.861356C5.95199 0.375606 7.01716 0.0974545 8.13557 0.0228409C8.26688 0.0142121 8.39819 0.00761363 8.52949 0C8.65928 0 8.78907 0 8.91886 0ZM8.75764 16.3272C12.8267 16.3394 16.258 12.9873 16.2975 8.82979C16.3381 4.60016 12.9276 1.18874 8.75257 1.17098C4.59327 1.15321 1.20307 4.54534 1.15592 8.65112C1.10725 12.9183 4.56539 16.3302 8.75713 16.3272H8.75764Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-  }
-
-  :global(.vtex-store-components-3-x-suffixWrapper) {
-    display: none;
-  }
-}
-
-.sizeMobile {
-  padding: 0px;
-  min-width: unset;
-}
-
-.imageElement--carousel {
-  width: 100vw;
-  height: auto !important;
-  max-height: unset !important;
-}
-
-.discountInsideContainer {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  transform: rotate(0.052deg);
-  padding: 5px 10px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  z-index: 9999;
-  right: 1rem;
-  background: var(--red-600, #dc2626);
-  position: absolute;
-
-  color: var(--white, #fff);
-  -webkit-text-stroke-width: 0.4px;
-  -webkit-text-stroke-color: var(--white, #fff);
-  font-family: Inter;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  top: 0.5rem !important;
-  line-height: 140%; /* 16.8px */
-}
-
-.imageElement--logo-ximenes {
-  object-fit: none;
-}
-
-.productImagesContainer--list {
-  display: grid;
-  height: fit-content;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  position: sticky;
-  top: 100px;
-
-  .productImage {
-    cursor: pointer;
-
-    .productImageTag {
-      border-radius: 8px;
-    }
-  }
-}
-
-.productNameContainer {
-  .productBrand {
-    color: var(--black, #000);
-
-    font-family: Inter;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 30.8px */
-  }
-}
-
-.price_listPriceLabel--price {
-  display: none;
-}
-
-.price_listPrice--price {
-  .currencyContainer--price {
-    color: var(--gray-400, #a1a1aa);
-
-    /* text-xs/Regular */
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 16.8px */
-    text-decoration-line: line-through;
-  }
-}
-
-.price_sellingPriceContainer--price {
-  .price_sellingPriceLabel--price {
-    display: none;
-  }
-
-  .currencyContainer--price {
-    color: var(--black, #000);
-
-    /* text-xl/Bold */
-    font-family: Inter;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%; /* 30.8px */
-  }
-}
-
-.price_listPrice--price,
-.price_sellingPriceContainer--price {
-  padding: 0px;
-}
-
-.price_sellingPrice--price {
-  display: flex;
-  padding: 0px;
-}
-
-.skuSelectorContainer {
-  display: flex;
-  flex-direction: column-reverse;
-  margin-top: 28px;
-
-  .skuSelectorNameContainer {
-    margin: 0px;
-  }
-
-  .skuSelectorOptionsList,
-  .skuSelectorItem {
-    margin: 0px;
-  }
-
-  .skuSelectorOptionsList {
-    gap: 10px;
-  }
-
-  .frameAround {
-    display: none;
-  }
-
-  .skuSelectorItemTextValue {
+    background-size: 20px;
     padding: 0px;
-    color: var(--gray-500, #71717a);
-
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 18px */
-  }
-
-  .skuSelectorItem {
-    min-width: 40px;
-    min-height: 40px;
-    max-width: 40px;
-    max-height: 40px;
-  }
-
-  .skuSelectorInternalBox {
-    min-width: 40px;
-    min-height: 40px;
-    max-width: 40px;
-    max-height: 40px;
-    border-radius: 200px;
-    border: 1px solid var(--gray-200, #e4e4e7);
-    opacity: 0.6;
-    background: var(--white, #fff);
-
-    transition: all 0.3s ease-in;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  .skuSelectorSubcontainer {
-    margin-bottom: 28px;
-  }
-
-  .skuSelectorItem--selected {
-    .skuSelectorInternalBox {
-      border-radius: 200px;
-      border: 1px solid var(--Secundria, #00579c);
-      background: var(--white, #fff);
-      opacity: 1;
-
-      .skuSelectorItemTextValue {
-        color: #00579c;
-      }
-    }
-  }
-
-  .skuSelectorName {
-    color: var(--black, #000);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 19.6px */
-    margin: 0px;
-  }
-}
-
-.skuSelectorSelectorImageValue {
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  color: #000;
-  line-height: 140%; /* 19.6px */
-  margin: 0px;
-  text-transform: capitalize;
-  font-weight: bold;
-}
-
-.carouselGaleryThumbs {
-  display: none;
-}
-
-.carouselGaleryCursor {
-  margin: 0px;
-  width: 100%;
-}
-
-.vtex-store-components-3-x-productImagesGallerySlide {
-  width: 100% !important;
-}
-
-.shippingContainer {
-  margin-top: 28px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  :global(.vtex-input__label) {
-    font-size: 0px;
-
-    &::before {
-      content: 'Calcule o frete';
-      color: var(--black, #000);
-
-      /* text-sm/Regular */
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 19.6px */
-    }
-  }
-
-  :global(.vtex-input-prefix__group) {
-    border-radius: 8px;
-    min-height: 44px;
-    border: 1px solid var(--gray-200, #e4e4e7);
-  }
-
-  :global(.vtex-address-form__postalCode) {
-    padding: 0px;
-    min-width: 100px;
+    display: flex;
     width: 100%;
   }
 
-  :global(.vtex-address-form-4-x-input) {
-    &::placeholder {
-      color: var(--gray-400, #a1a1aa);
-
-      /* text-sm/Regular */
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 19.6px */
-    }
-
-    padding: 0px;
-    color: var(--gray-400, #000);
-
-    /* text-sm/Regular */
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    text-align: center;
-    font-weight: 400;
-    line-height: 140%; /* 19.6px */
-  }
-
-  :global(.vtex-button) {
-    position: relative;
-    top: 14px;
-    border-radius: 8px;
-    background: var(--Secundria, #00579c);
-    min-height: 42px;
-    color: var(--white, #fff);
-    border: none;
-    /* text-sm/Bold */
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%; /* 19.6px */
-    max-width: 158px;
-    text-transform: none;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background: var(--Secundria-Hover, #002f53);
-    }
-
-    :global(.vtex-button__label) {
-      font-size: 0px;
-
-      &::before {
-        content: 'Calcular';
-        font-size: 14px;
-      }
-    }
-  }
-
-  :global(.vtex-input__suffix),
-  :global(.vtex-address-form__postalCode-forgottenURL) {
+  .closeIcon,
+  .searchIcon {
     display: none;
   }
 }
 
-.shippingTableCell,
-.shippingTable {
+.sizeDesktop {
   padding: 0px;
-  color: var(--gray-400, #000);
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.shippingTableCell {
-  padding: 8px 0px;
-}
-
-@media screen and (max-width: 1024px) {
-  .productImagesContainer {
-    .swiperCaret {
-      display: none;
-    }
-  }
-
-  .triggerContainer {
-    width: 100%;
-  }
-
-  .swiper-pagination {
-    display: none;
-  }
-}
-
-.imageElement--department-banner-image {
-  width: 100%;
-}
-
-.subscriberContainer {
-  .title {
-    color: var(--black, #000);
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  :global(.vtex-styleguide-9-x-input)::placeholder {
-    color: #71717a;
-  }
-
-  :global(.vtex-styleguide-9-x-input)::placeholder,
-  :global(.vtex-styleguide-9-x-input) {
-    color: var(--black, #000);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-  }
-}
-
-.unavailable {
-  .diagonalCross {
-    background-image: none;
-    width: 15px;
-    height: 15px;
-    min-width: 15px;
-    min-height: 15px;
-    background-color: #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px;
-
-    &::before {
-      content: 'x';
-      color: #fff;
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-    }
-  }
-}
-
-.skuSelectorItem--pp {
-  order: 1;
-}
-
-.skuSelectorItem--p {
-  order: 2;
-}
-
-.skuSelectorItem--m {
-  order: 3;
-}
-
-.skuSelectorItem--g {
-  order: 4;
-}
-
-.skuSelectorItem--gg {
-  order: 5;
-}
-
-.skuSelectorItem--xgg {
-  order: 6;
 }

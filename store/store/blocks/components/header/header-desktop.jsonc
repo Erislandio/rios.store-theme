@@ -1,22 +1,43 @@
 {
   "header-layout.desktop#desktop": {
     "title": "Header Desktop",
-    "children": [
-      "custom-top-bar#default",
-      "sticky-layout#desktop"
-    ]
+    "children": ["custom-top-bar#default", "sticky-layout#desktop"]
   },
   "custom-top-bar#default": {
-    "title": "Top Bar"
+    "title": "Top Bar",
+    "props": {
+      "message": "Frete Grátis acima de R$ 199,90",
+      "icon": "assets/icons/truck.svg",
+      "backgroundColor": "#1b1b1b",
+      "textColor": "#FFFFFF",
+      "items": [
+        {
+          "text": "Loja Física",
+          "link": null,
+          "newTab": false,
+          "icon": "assets/icons/pin.svg"
+        },
+        {
+          "text": "Ver Blog",
+          "link": "/",
+          "newTab": true,
+          "icon": "assets/icons/pen.svg"
+        },
+        {
+          "text": "Comprar Atacado",
+          "link": "/",
+          "newTab": false,
+          "icon": "assets/icons/cart.svg"
+        }
+      ]
+    }
   },
   "sticky-layout#desktop": {
     "title": "Sticky Header",
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": [
-      "custom-div#main-header"
-    ]
+    "children": ["custom-div#main-header"]
   },
   "custom-div#main-header": {
     "title": "Header",
@@ -25,66 +46,51 @@
       "width": "100%",
       "gap": "2.5rem",
       "padding": "0px",
-      "background": "#FCD200",
+      "background": "#fff",
       "justifyContent": "space-between",
-      "blockClass": [
-        "main-header",
-        "container"
-      ]
+      "blockClass": ["main-header", "container"]
     },
-    "children": [
-      "logo#desktop",
-      "custom-menu#default",
-      "search-bar#default",
-      "custom-login-button#default",
-      "custom-minicart-button#default"
-    ]
+    "children": ["logo#desktop", "custom-menu#default", "custom-div#actions"]
   },
-  "flex-layout.row#main-header": {
-    "title": "Header",
+
+  "custom-div#actions": {
+    "title": "Header Actions",
     "props": {
-      "blockClass": [
-        "main-header",
-        "container"
-      ],
-      "verticalAlign": "center",
-      "fullWidth": true
+      "alignItems": "center",
+      "width": "100%",
+      "gap": "1.5rem",
+      "padding": "0px",
+      "background": "#fff",
+      "justifyContent": "space-between",
+      "blockClass": ["main-header--actions"]
     },
     "children": [
-      "logo#desktop",
       "search-bar#default",
       "custom-login-button#default",
       "custom-minicart-button#default"
     ]
   },
+
   "search-bar#default": {
     "title": "Search Bar",
     "props": {
-      "placeholder": "Busque por produto, categoria ou marca..."
+      "placeholder": "Busque aqui"
     },
-    "blocks": [
-      "autocomplete-result-list.v2#custom"
-    ]
+    "blocks": ["autocomplete-result-list.v2#custom"]
   },
   "custom-login-button#default": {
     "title": "Login",
-    "children": [
-      "login#default"
-    ]
+    "children": ["login#default"]
   },
   "autocomplete-result-list.v2#custom": {
     "props": {
       "maxSuggestedProducts": 2
     },
-    "blocks": [
-      "product-summary.shelf#default"
-    ]
+    "blocks": ["product-summary.shelf#default"]
   },
   "custom-minicart-button#default": {
     "title": "Minicart",
-    "children": [
-      "minicart.v2#custom"
-    ]
+    "children": ["minicart.v2#custom"]
   },
   "login#default": {
     "title": "Login componente",
@@ -97,8 +103,12 @@
       "showPasswordVerificationIntoTooltip": true,
       "accountOptionLinks": [
         {
+          "__editorItemTitle": "Meus dados",
+          "path": "/account/#/profile"
+        },
+        {
           "__editorItemTitle": "Meus pedidos",
-          "path": "/account/#/my-orders"
+          "path": "/account/#/orders"
         },
         {
           "__editorItemTitle": "Alterar senha",
@@ -110,7 +120,7 @@
   "logo#desktop": {
     "title": "Logo",
     "props": {
-      "title": "Logo",
+      "title": "Rios Store",
       "href": "/",
       "url": "assets/icons/logo.svg",
       "width": "112",

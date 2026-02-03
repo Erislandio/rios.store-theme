@@ -70,9 +70,8 @@ const ArrowIcon: React.FC<{ color?: string }> = ({ color = 'black' }) => (
 
 const Submenu: React.FC<{
   menu: MenuItem
-  mainItem: MainMenu
   handles: Record<string, string>
-}> = ({ menu, mainItem, handles }) => (
+}> = ({ menu, handles }) => (
   <div className={handles.submenu}>
     <ul className={handles.submenuItemUl}>
       {menu?.subMenu?.map((sub) => (
@@ -83,16 +82,6 @@ const Submenu: React.FC<{
         </li>
       ))}
     </ul>
-    <div className={handles.submenuImageContainer}>
-      <img
-        loading="lazy"
-        src={mainItem.image}
-        alt={mainItem.__editorItemTitle}
-        width={316}
-        height={452}
-        className={handles.submenuImage}
-      />
-    </div>
   </div>
 )
 
@@ -109,7 +98,6 @@ const DropdownItem: React.FC<{
 }> = ({
   menu,
   menuIndex,
-  mainItem,
   mainIndex,
   activeSubMenu,
   setActiveMenu,
@@ -167,9 +155,7 @@ const DropdownItem: React.FC<{
           </span>
         </>
       )}
-      {isActive && (
-        <Submenu menu={menu} mainItem={mainItem} handles={handles} />
-      )}
+      {isActive && <Submenu menu={menu} handles={handles} />}
     </div>
   )
 }
@@ -325,40 +311,6 @@ Menu.schema = {
             type: 'string',
             widget: {
               'ui:widget': 'image-uploader',
-            },
-          },
-          menu: {
-            title: 'Menu',
-            type: 'array',
-            items: {
-              type: 'object',
-              properties: {
-                __editorItemTitle: {
-                  title: 'Label',
-                  type: 'string',
-                },
-                href: {
-                  title: 'Link URL',
-                  type: 'string',
-                },
-                subMenu: {
-                  title: 'Sub Menu',
-                  type: 'array',
-                  items: {
-                    type: 'object',
-                    properties: {
-                      __editorItemTitle: {
-                        title: 'Label',
-                        type: 'string',
-                      },
-                      href: {
-                        title: 'Link URL',
-                        type: 'string',
-                      },
-                    },
-                  },
-                },
-              },
             },
           },
         },

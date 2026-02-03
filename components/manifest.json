@@ -1,8 +1,8 @@
 {
-  "vendor": "pontodamoda",
-  "name": "custom-components",
-  "version": "0.6.3",
-  "title": "React App Template",
+  "vendor": "gruporios",
+  "name": "store-components",
+  "version": "0.0.1",
+  "title": "Custom Components",
   "builders": {
     "docs": "0.x",
     "react": "3.x",
@@ -73,7 +73,7 @@
     "vtex.checkout-graphql": "0.x",
     "vtex.session-client": "1.x",
     "vtex.store-graphql": "2.x",
-    "pontodamoda.service": "0.x",
+    "gruporios.service": "0.x",
     "vtex.format-currency": "0.x",
     "vtex.order-items": "0.x"
   },

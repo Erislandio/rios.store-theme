@@ -1,9 +1,9 @@
 {
-  "vendor": "pontodamoda",
+  "vendor": "gruporios",
   "name": "service",
   "version": "0.1.1",
-  "title": "pontodamoda Service",
-  "description": "pontodamoda Service",
+  "title": "rios.store Service",
+  "description": "rios.store Service",
   "mustUpdateAt": "2023-03-10",
   "builders": {
     "docs": "0.x",

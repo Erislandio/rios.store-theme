@@ -1,38 +1,22 @@
 import React, { useState } from 'react'
-import { useQuery } from 'react-apollo'
-import { applyModifiers, useCssHandles } from 'vtex.css-handles'
-import { useDevice } from 'vtex.device-detector'
-import { Link, useRuntime } from 'vtex.render-runtime'
-import { Button, Spinner } from 'vtex.styleguide'
+import { useCssHandles } from 'vtex.css-handles'
 
 import { ConditionalLayout } from './ConditionalLayout'
 import useDatalayer from './hooks/useDatalayer'
-import PROFILE from './queries/profile.gql'
 
 export const ProfileIcon = () => (
   <div style={{ minWidth: 25, minHeight: 25 }}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="17"
+      width="20"
       height="20"
-      viewBox="0 0 17 20"
+      viewBox="0 0 20 20"
       fill="none"
     >
-      <g clipPath="url(#clip0_11700_2437)">
-        <path
-          d="M4.42189 9.61887C5.03914 9.63185 5.83547 10.3765 6.41086 10.6525C7.89861 11.366 9.36517 11.3001 10.8079 10.529C11.245 10.2955 12.0556 9.62199 12.5187 9.60953C15.8365 9.52288 16.8797 13.2055 16.9925 15.8037C17.0906 18.0552 16.1607 19.7784 13.6811 19.9331C10.2855 20.1448 6.66147 19.7707 3.24197 19.9305C-0.141501 19.5833 -0.283494 16.7299 0.210833 14.0565C0.608733 11.9046 1.84058 9.56335 4.42189 9.61836V9.61887Z"
-          fill="#27272A"
-        />
-        <path
-          d="M4.92897 1.37253C7.2316 -0.854589 11.085 -0.285874 12.6549 2.46119C14.4001 5.51544 12.2602 9.40304 8.7008 9.60697C4.17397 9.86642 1.68855 4.5067 4.92897 1.37253Z"
-          fill="#27272A"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_11700_2437">
-          <rect width="17" height="20" fill="white" />
-        </clipPath>
-      </defs>
+      <path
+        d="M0.761594 20.0003C0.691915 19.9927 0.62172 19.9881 0.553073 19.9773C0.284679 19.9338 0.135515 19.7837 0.0952555 19.5183C0.0875134 19.4676 0.0813197 19.4164 0.0813197 19.3657C0.0813197 18.8964 0.0797713 18.4272 0.0828681 17.958C0.0880296 17.2326 0.20829 16.5247 0.401843 15.8265C0.691399 14.783 1.13528 13.8123 1.77994 12.9358C2.48138 11.982 3.3583 11.2223 4.37768 10.6199C4.96402 10.2736 5.57306 9.97602 6.22959 9.7829C6.25282 9.77624 6.27553 9.76702 6.29824 9.75933C6.13617 9.64664 5.9741 9.54111 5.81978 9.42534C5.19938 8.96073 4.72814 8.37163 4.36787 7.69187C4.06954 7.12839 3.87289 6.53058 3.80167 5.89846C3.62153 4.3033 4.05251 2.89101 5.13899 1.69643C5.92301 0.833788 6.90935 0.312824 8.05828 0.0940911C8.21209 0.0648925 8.36642 0.0372307 8.52074 0.0100811C8.5512 0.00495857 8.58216 0.00290955 8.61313 0.00290955C8.82578 0.0023973 9.03895 0.00956888 9.25108 0.000860529C9.47406 -0.00836007 9.68309 0.0587454 9.89729 0.0956278C10.4201 0.185273 10.926 0.332802 11.3962 0.581246C12.8341 1.34092 13.7482 2.50835 14.1152 4.08303C14.4538 5.53373 14.0961 7.196 13.212 8.39007C12.8171 8.92333 12.3263 9.35363 11.7652 9.70759C11.7482 9.71835 11.7322 9.72911 11.7064 9.74601C11.7812 9.77214 11.8468 9.79468 11.9118 9.81722C12.8099 10.1297 13.6347 10.581 14.4011 11.1373C15.4386 11.8903 16.2649 12.8272 16.8631 13.9588C17.2409 14.6734 17.5047 15.4285 17.6838 16.2148C17.8392 16.8986 17.915 17.5907 17.9094 18.292C17.9068 18.6014 17.9114 18.9108 17.913 19.2202C17.913 19.2463 17.9171 19.2729 17.9192 19.2991V19.5204C17.9145 19.5337 17.9094 19.5465 17.9063 19.5598C17.866 19.7376 17.7638 19.8687 17.5935 19.9373C17.5166 19.9686 17.4309 19.9793 17.3493 19.9998L0.761594 20.0003ZM16.7749 18.8396C16.7764 18.8119 16.779 18.7914 16.7785 18.7714C16.7754 18.5194 16.7764 18.2679 16.7676 18.0159C16.7444 17.3776 16.6546 16.748 16.4925 16.1297C16.139 14.7805 15.4587 13.6217 14.4285 12.6705C13.6899 11.9887 12.8481 11.4641 11.9273 11.0615C11.0364 10.6717 10.1058 10.4488 9.13031 10.4258C8.55842 10.4119 7.99222 10.4673 7.43633 10.6025C5.80533 10.999 4.41123 11.8109 3.24527 13.004C2.43905 13.8292 1.89194 14.8081 1.56677 15.91C1.30457 16.7977 1.2096 17.707 1.22044 18.629C1.22148 18.6992 1.22044 18.7699 1.22044 18.8401L16.7749 18.8396ZM13.0881 5.21972C13.0834 5.11522 13.0798 5.01123 13.0731 4.90673C13.0685 4.83963 13.0602 4.77201 13.0514 4.70542C12.9374 3.82434 12.5745 3.05851 11.9588 2.41461C10.7066 1.10426 8.75404 0.773854 7.13955 1.59449C5.56893 2.39258 4.68427 4.12196 4.96402 5.85441C5.11834 6.80925 5.54106 7.63142 6.2714 8.27328C7.43065 9.29267 8.77159 9.59285 10.2503 9.13182C11.9417 8.6042 13.0855 6.99981 13.0881 5.21972Z"
+        fill="#1B1B1B"
+      />
     </svg>
   </div>
 )
@@ -47,23 +31,10 @@ const CSS_HANDLES = [
   'customLoginButtonDropdowndescription',
 ] as const
 
-const CustomLoginButton: StoreFrontFC<{
-  label: string
-  bottomLabel: string
-}> = ({ label, bottomLabel }) => {
+const CustomLoginButton: StoreFrontFC = () => {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const { isMobile } = useDevice()
   const [isOpen, setOpen] = useState(false)
-  const { navigate } = useRuntime()
-  const [isLoading, setLoading] = useState(false)
-  const [isLoading2, setLoading2] = useState(false)
   const { pushToDataLayer } = useDatalayer()
-
-  const { data, loading } = useQuery<{
-    profile: { email: string; firstName: string; lastName: string }
-  }>(PROFILE, {
-    ssr: false,
-  })
 
   return (
     <div style={{ position: 'relative' }}>
@@ -74,107 +45,10 @@ const CustomLoginButton: StoreFrontFC<{
           pushToDataLayer({ event: 'login_button_click' })
         }}
       >
-        <ConditionalLayout conditional={loading}>
-          <Spinner size={20} />
-          <ProfileIcon />
-        </ConditionalLayout>
-        <ConditionalLayout conditional={!isMobile && !loading}>
-          {data?.profile?.email ? (
-            <Link
-              to="/account"
-              className={applyModifiers(
-                handles.customLoginButtonLabel,
-                'logged'
-              )}
-            >
-              Olá <br />
-              {data?.profile?.firstName ??
-                `${data?.profile?.email?.slice(0, 15)}...`}
-            </Link>
-          ) : (
-            <div className={handles.customLoginButtonLabelWrapper}>
-              <span className={handles.customLoginButtonLabel}>{label}</span>
-              <b className={handles.customLoginButtonLabelBold}>
-                {bottomLabel}
-              </b>
-            </div>
-          )}
+        <ConditionalLayout conditional={true}>
           <ProfileIcon />
         </ConditionalLayout>
       </button>
-      {isOpen && !data?.profile && (
-        <div
-          className={handles.customLoginButtonDropdown}
-          style={{
-            position: 'absolute',
-            top: '56px',
-            right: 0,
-            background: 'white',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            zIndex: 1000,
-          }}
-        >
-          <h5 className={handles.customLoginButtonDropdownLabel}>
-            Olá! seja bem-vindo(a)!
-          </h5>
-          <p className={handles.customLoginButtonDropdowndescription}>
-            <b
-              className={applyModifiers(
-                handles.customLoginButtonDropdowndescription,
-                'bold'
-              )}
-            >
-              Entre
-            </b>{' '}
-            ou{' '}
-            <b
-              className={applyModifiers(
-                handles.customLoginButtonDropdowndescription,
-                'bold'
-              )}
-            >
-              cadastre-se
-            </b>{' '}
-            para acessar seus pedidos e comprar mais rápido.
-          </p>
-          <div
-            className={applyModifiers(
-              handles.customLoginButtonLabelWrapper,
-              'entrar'
-            )}
-          >
-            <Button
-              isLoading={isLoading}
-              onClick={() => {
-                pushToDataLayer({ event: 'login_button_dropdown_click_enter' })
-                setLoading(true)
-                navigate({ to: `/login?returnUrl=${window.location.href}` })
-              }}
-            >
-              Entrar
-            </Button>
-          </div>
-          <div
-            className={applyModifiers(
-              handles.customLoginButtonLabelWrapper,
-              'cadastrar'
-            )}
-          >
-            <Button
-              isLoading={isLoading2}
-              onClick={() => {
-                pushToDataLayer({
-                  event: 'login_button_dropdown_click_register',
-                })
-                setLoading2(true)
-                navigate({ to: `/login?returnUrl=${window.location.href}` })
-              }}
-            >
-              Cadastre-se
-            </Button>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
@@ -188,20 +62,6 @@ CustomLoginButton.schema = {
   title: 'Login',
   description: 'Botão de login personalizado',
   type: 'object',
-  properties: {
-    label: {
-      title: 'Label',
-      description: 'Texto do botão de login',
-      type: 'string',
-      default: 'Bem vindo!',
-    },
-    bottomLabel: {
-      title: 'Label inferior',
-      description: 'Texto do botão de login',
-      type: 'string',
-      default: 'Entre ou cadastre-se',
-    },
-  },
 }
 
 export default CustomLoginButton
