@@ -2,7 +2,6 @@
   "store.home": {
     "blocks": [
       "list-context.image-list#main-banner",
-      "custom-deals#custom-deals",
       "__fold__.experimentalLazyAssets",
       "__fold__",
       "custom-category-list#category-list",

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
@@ -9,31 +9,27 @@ import CustomMenuMobile from './MenuMobile'
 export type SubMenuItem = {
   __editorItemTitle: string
   href: string
+  isTitle?: boolean
+  seeAll?: boolean
 }
 
 export type MenuItem = {
   __editorItemTitle: string
-  subMenu: SubMenuItem[]
   href?: string
+  newTab?: boolean
+  subMenu?: SubMenuItem[]
 }
 
 export type MainMenu = {
   __editorItemTitle: string
-  image: string
   menu: MenuItem[]
+  image?: string
   href: string
 }
 
 type Props = {
   items: MainMenu[]
-  delay?: any // opcional - tempo em ms
-  others?: Array<{
-    __editorItemTitle: string
-    icon: string
-    href: string
-  }>
-  pontoCardUrl: string
-  pontoCardText: string
+  delay: any // opcional - tempo em ms
 }
 
 const CSS_HANDLES = [
@@ -44,149 +40,82 @@ const CSS_HANDLES = [
   'dropdownItem',
   'submenu',
   'submenuItemLink',
+  'submenuWrapper',
   'submenuItem',
   'submenuImage',
   'submenuImageContainer',
+  'dropdownItemWrapper',
   'submenuItemUl',
+  'menuLabelWrapper',
+  'menuImageContainerWrapper',
+  'menuImageContainer',
+  'menuLabelWrapperContainer',
 ] as const
-
-const ArrowIcon: React.FC<{ color?: string }> = ({ color = 'black' }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-  >
-    <path
-      d="M10 16L14 12L10 8"
-      stroke={color}
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
-
-const Submenu: React.FC<{
-  menu: MenuItem
-  handles: Record<string, string>
-}> = ({ menu, handles }) => (
-  <div className={handles.submenu}>
-    <ul className={handles.submenuItemUl}>
-      {menu?.subMenu?.map((sub) => (
-        <li key={sub.__editorItemTitle} className={handles.submenuItem}>
-          <Link to={sub.href} className={handles.submenuItemLink}>
-            {sub.__editorItemTitle}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-)
 
 const DropdownItem: React.FC<{
   menu: MenuItem
-  menuIndex: number
-  mainItem: MainMenu
-  mainIndex: number
-  activeSubMenu: number | null
-  setActiveMenu: (index: number | null) => void
-  setActiveSubMenu: (index: number | null) => void
   handles: Record<string, string>
-  delay: any
-}> = ({
-  menu,
-  menuIndex,
-  mainIndex,
-  activeSubMenu,
-  setActiveMenu,
-  setActiveSubMenu,
-  handles,
-}) => {
-  const isActive = activeSubMenu === menuIndex
-  const arrowColor = isActive ? 'white' : 'black'
-
-  const { pushToDataLayer } = useDatalayer()
-
-  const handleEnter = () => {
-    setActiveSubMenu(menuIndex)
-    setActiveMenu(mainIndex)
-    pushToDataLayer({
-      event: 'menuItemHover',
-      menuItemTitle: menu.__editorItemTitle,
-      menuItemLink: menu.href,
-      menuPosition: `${mainIndex + 1}-${menuIndex + 1}`,
-    })
-  }
-
-  const handleLeave = () => {
-    setActiveSubMenu(null)
-  }
-
+}> = ({ menu, handles }) => {
   return (
-    <div
-      key={menu.__editorItemTitle}
-      className={handles.dropdownItem}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-    >
-      {menu.href ? (
-        <Link
-          to={menu.href}
-          className={handles.menuLabel}
-          onClick={() =>
-            pushToDataLayer({
-              event: 'menuItemClick',
-              menuItemTitle: menu.__editorItemTitle,
-              menuItemLink: menu.href,
-              menuPosition: `${mainIndex + 1}-${menuIndex + 1}`,
-            })
-          }
-        >
-          {menu.__editorItemTitle}
-          <ArrowIcon color={arrowColor} />
-        </Link>
-      ) : (
-        <>
-          <span className={handles.menuLabel}>
-            {menu.__editorItemTitle}
-            <ArrowIcon color={arrowColor} />
-          </span>
-        </>
-      )}
-      {isActive && <Submenu menu={menu} handles={handles} />}
+    <div key={menu.__editorItemTitle} className={handles.dropdownItem}>
+      <div className={handles.dropdownItemWrapper}>
+        <div className={handles.menuLabelWrapper}>
+          {menu.href ? (
+            <Link
+              to={menu.href}
+              className={applyModifiers(handles.menuLabel, 'title')}
+            >
+              {menu.__editorItemTitle}
+            </Link>
+          ) : (
+            <h6 className={applyModifiers(handles.menuLabel, 'title')}>
+              {menu.__editorItemTitle}
+            </h6>
+          )}
+          {menu.subMenu?.map((subMenu) => (
+            <Link
+              to={subMenu.href}
+              className={applyModifiers(
+                handles.menuLabel,
+                subMenu.isTitle ? 'title' : subMenu.seeAll ? 'seeAll' : 'item'
+              )}
+            >
+              {subMenu.__editorItemTitle}
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
 
-const Menu: StoreFrontFC<Props> = ({
-  items,
-  delay = 200,
-  others,
-  pontoCardText = 'Cartão Ponto Card',
-  pontoCardUrl = 'https://eventos.lojaspontodamoda.com.br/pontocard/',
-}) => {
+const Menu: StoreFrontFC<Props> = ({ items }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
-  const [activeMenu, setActiveMenu] = useState<number | null>(0)
-  const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null)
+  const [activeMenu, setActiveMenu] = useState<number | null>(null)
+  const timeoutRef = useRef<any>(null)
 
   const { isMobile } = useDevice()
 
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
+    }
+  }, [])
+
   if (isMobile) {
-    return (
-      <CustomMenuMobile
-        departments={items}
-        others={others ?? []}
-        pontoCardText={pontoCardText}
-        pontoCardUrl={pontoCardUrl}
-      />
-    )
+    return <CustomMenuMobile departments={items} />
   }
 
   const handleMenuEnter = (index: number) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+      timeoutRef.current = null
+    }
+
     setActiveMenu(index)
     pushToDataLayer({
       event: 'mainMenuHover',
@@ -196,8 +125,9 @@ const Menu: StoreFrontFC<Props> = ({
   }
 
   const handleMenuLeave = () => {
-    setActiveMenu(0)
-    setActiveSubMenu(null)
+    timeoutRef.current = setTimeout(() => {
+      setActiveMenu(null)
+    }, 300)
   }
 
   return (
@@ -209,44 +139,55 @@ const Menu: StoreFrontFC<Props> = ({
           onMouseEnter={() => handleMenuEnter(mainIndex)}
           onMouseLeave={handleMenuLeave}
         >
-          {mainItem.href ? (
-            <Link
-              to={mainItem.href}
-              className={handles.menuLabel}
-              style={{
-                textDecoration: 'none',
-                color: '#27272a',
-                cursor: 'pointer',
-              }}
-            >
-              {mainItem.__editorItemTitle}
-            </Link>
-          ) : (
-            <span className={handles.menuLabel}>
-              {mainItem.__editorItemTitle}
-            </span>
-          )}
-
-          <div
-            className={applyModifiers(
-              handles.dropdown,
-              activeMenu === mainIndex ? 'active' : ''
+          <div className={handles.menuLabelWrapperContainer}>
+            {mainItem.href ? (
+              <Link
+                to={mainItem.href}
+                className={handles.menuLabel}
+                style={{
+                  textDecoration: 'none',
+                  color: '#27272a',
+                  cursor: 'pointer',
+                }}
+              >
+                {mainItem.__editorItemTitle}
+              </Link>
+            ) : (
+              <h5 className={handles.menuLabel}>
+                {mainItem.__editorItemTitle}
+              </h5>
             )}
-          >
-            {mainItem.menu.map((menu, menuIndex) => (
-              <DropdownItem
-                key={menu.__editorItemTitle}
-                menu={menu}
-                menuIndex={menuIndex}
-                mainItem={mainItem}
-                mainIndex={mainIndex}
-                activeSubMenu={activeSubMenu}
-                setActiveMenu={setActiveMenu}
-                setActiveSubMenu={setActiveSubMenu}
-                handles={handles}
-                delay={delay}
-              />
-            ))}
+
+            <div className={handles.menuImageContainerWrapper}>
+              {mainItem.menu.length > 0 && (
+                <div
+                  className={applyModifiers(
+                    handles.dropdown,
+                    activeMenu === mainIndex ? 'active' : ''
+                  )}
+                >
+                  <div className={handles.submenu}>
+                    <div className={handles.submenuWrapper}>
+                      {mainItem.menu.map((menu) => (
+                        <DropdownItem
+                          key={menu.__editorItemTitle}
+                          menu={menu}
+                          handles={handles}
+                        />
+                      ))}
+                    </div>
+                    <div className={handles.menuImageContainer}>
+                      {mainItem.image && (
+                        <img
+                          src={mainItem.image}
+                          alt={mainItem.__editorItemTitle}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       ))}
@@ -258,40 +199,6 @@ Menu.schema = {
   title: 'Menu',
   type: 'object',
   properties: {
-    pontoCardUrl: {
-      title: 'URL ponto card',
-      type: 'string',
-      default: 'https://eventos.lojaspontodamoda.com.br/pontocard/',
-    },
-    pontoCardText: {
-      title: 'Texto ponto card',
-      type: 'string',
-      default: 'Cartão Ponto Card',
-    },
-    others: {
-      title: 'Outros items [mobile]',
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          __editorItemTitle: {
-            title: 'Label',
-            type: 'string',
-          },
-          icon: {
-            title: 'Icon URL',
-            type: 'string',
-            widget: {
-              'ui:widget': 'image-uploader',
-            },
-          },
-          href: {
-            title: 'Link URL',
-            type: 'string',
-          },
-        },
-      },
-    },
     items: {
       title: 'Menu Items',
       type: 'array',
@@ -311,6 +218,63 @@ Menu.schema = {
             type: 'string',
             widget: {
               'ui:widget': 'image-uploader',
+            },
+          },
+          menu: {
+            title: 'Menu',
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                isTitle: {
+                  title: 'é titulo',
+                  type: 'boolean',
+                },
+                __editorItemTitle: {
+                  title: 'Label',
+                  type: 'string',
+                },
+                href: {
+                  title: 'Link URL',
+                  type: 'string',
+                },
+                newTab: {
+                  title: 'Abrir em nova aba?',
+                  type: 'boolean',
+                  default: false,
+                },
+                subMenu: {
+                  title: 'Submenu',
+                  type: 'array',
+                  items: {
+                    type: 'object',
+                    properties: {
+                      isTitle: {
+                        title: 'é titulo?',
+                        type: 'boolean',
+                      },
+                      __editorItemTitle: {
+                        title: 'Label',
+                        type: 'string',
+                      },
+                      href: {
+                        title: 'Link URL',
+                        type: 'string',
+                      },
+                      newTab: {
+                        title: 'Abrir em nova aba?',
+                        type: 'boolean',
+                        default: false,
+                      },
+                      seeAll: {
+                        title: 'é Ver todos?',
+                        type: 'boolean',
+                        default: false,
+                      },
+                    },
+                  },
+                },
+              },
             },
           },
         },

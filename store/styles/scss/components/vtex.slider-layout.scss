@@ -1,0 +1,20 @@
+.paginationDotsContainer--carousel {
+  bottom: 2rem;
+
+  .paginationDot--carousel {
+    min-width: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    width: 20px !important;
+    padding: 0px;
+    min-height: 4px;
+    height: 4px !important;
+
+    &--isActive {
+      background-color: #000;
+      min-width: 40px !important;
+      width: 40px !important;
+    }
+  }
+}

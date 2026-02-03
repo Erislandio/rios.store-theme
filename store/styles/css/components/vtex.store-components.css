@@ -44,3 +44,15 @@
 .sizeDesktop {
   padding: 0px;
 }
+
+.imageElementLink--carousel {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.imageElement--carousel {
+  width: 100vw;
+  height: auto !important;
+  max-height: unset !important;
+}

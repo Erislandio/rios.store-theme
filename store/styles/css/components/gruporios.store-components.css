@@ -35,6 +35,9 @@
   font-size: 12px;
   line-height: 22px;
 }
+.topBarContainer .topBarContainerWrapper .topBarContainerItems .topBarMessageLink:hover {
+  text-decoration: underline;
+}
 .topBarContainer .topBarMessage {
   margin: 0px;
   display: flex;
@@ -107,27 +110,100 @@
   gap: 2rem;
 }
 .menuContainer .dropdown {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  display: flex;
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100vw;
   background-color: #fff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.menuContainer .dropdown .submenu {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 1rem;
+}
+.menuContainer .dropdown .submenu .submenuWrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
 }
 .menuContainer .dropdown--active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.menuContainer .dropdown .menuLabelWrapperContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 1rem;
 }
 .menuContainer .menuLabel {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1rem;
+  margin: 0px;
   color: #1b1b1b;
+  cursor: pointer;
+}
+.menuContainer .menuLabel:hover {
+  text-decoration: underline;
+}
+.menuContainer .menuLabelWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.menuContainer .menuLabel--title {
+  margin-top: 0px;
+}
+.menuContainer .menuLabel--item {
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block;
+  text-transform: none;
+  font-size: 14px;
+}
+.menuContainer .menuLabel--item:hover {
+  text-decoration: underline;
+}
+.menuContainer .menuLabel--seeAll {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  margin-top: 1.5rem;
+}
+.menuContainer .menuLabel--seeAll:hover {
+  text-decoration: underline;
+}
+.menuContainer .menuLabel--title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
 }
 
 .divContainer--main-header {
   padding: 0.5rem 1rem !important;
+}
+
+.dropdownItem {
+  margin: 0px;
 }

@@ -75,7 +75,7 @@ const MenuIcon = () => (
   </svg>
 )
 
-const CollapsibleMenu = ({ section }: { section: MenuItem }) => {
+export const CollapsibleMenu = ({ section }: { section: MenuItem }) => {
   const [isOpen, setIsOpen] = useState(false)
   const { handles } = useCssHandles(CSS_HANDLES)
 
@@ -104,50 +104,11 @@ const CollapsibleMenu = ({ section }: { section: MenuItem }) => {
         align="right"
         caretColor="#000"
       >
-        <ul className={handles.submenuItems}>
-          {section?.subMenu?.map((link) => (
-            <li key={link.__editorItemTitle} className={handles.submenuItem}>
-              <Link to={link.href} className={handles.menuLink}>
-                {link.__editorItemTitle}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div />
       </Collapsible>
     </div>
   )
 }
-
-const CardIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="17"
-    height="13"
-    viewBox="0 0 17 13"
-    fill="none"
-  >
-    <g clipPath="url(#clip0_11624_3394)">
-      <path
-        d="M0.139388 5.04907H16.8386L16.9599 5.24232C16.8575 7.15888 17.0891 9.21185 16.9599 11.112C16.8919 12.1133 16.2228 12.8345 15.2591 12.9509L1.76123 12.9531C0.838496 12.8776 0.141594 12.182 0.0260315 11.2407L0.0423514 5.13046L0.139829 5.04907H0.139388ZM3.09637 8.5971C2.61736 8.68622 2.62354 9.30825 2.66676 9.7002C2.72984 10.2699 3.29971 10.2759 3.7474 10.2231C4.30007 10.1581 4.3058 9.57061 4.25464 9.10909C4.19024 8.52799 3.54803 8.51253 3.09637 8.5971Z"
-        fill="white"
-      />
-      <path
-        d="M1.64235 0.9604L15.2981 0.953125C16.1644 1.05816 16.8608 1.7584 16.9521 2.65825C16.9755 2.89015 16.9945 3.57947 16.9561 3.78818C16.9451 3.84911 16.9235 3.89504 16.8692 3.92596L0.0818204 3.90731C0.0434467 3.87639 0.0297733 3.83547 0.0209517 3.78818C-0.0147755 3.59403 0.00110327 2.9629 0.0183053 2.74192C0.0902009 1.81069 0.744318 1.08908 1.64235 0.9604Z"
-        fill="white"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_11624_3394">
-        <rect
-          width="17"
-          height="12"
-          fill="white"
-          transform="translate(0 0.953125)"
-        />
-      </clipPath>
-    </defs>
-  </svg>
-)
 
 const ArrowIcon = () => (
   <svg
@@ -166,18 +127,8 @@ const ArrowIcon = () => (
 
 export default function CustomMenuMobile({
   departments,
-  others,
-  pontoCardUrl,
-  pontoCardText,
 }: {
   departments: MainMenu[]
-  others: Array<{
-    __editorItemTitle: string
-    icon: string
-    href: string
-  }>
-  pontoCardUrl: string
-  pontoCardText: string
 }) {
   const { handles } = useCssHandles(CSS_HANDLES)
   const [isOpen, setIsOpen] = useState(false)
@@ -202,15 +153,6 @@ export default function CustomMenuMobile({
         style={{ display: isOpen ? 'block' : 'none' }}
       >
         <ProfileContainer />
-        <Link
-          className={handles.menuCardContainer}
-          to={pontoCardUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <CardIcon />
-          {pontoCardText}
-        </Link>
         <ul className={handles.menuItemUl}>
           {departments.map((dept) => (
             <li key={dept.__editorItemTitle} className={handles.menuItemLi}>
@@ -247,48 +189,11 @@ export default function CustomMenuMobile({
                     </svg>
                     {dept.__editorItemTitle}
                   </button>
-                  <ul className={handles.submenuUl}>
-                    {dept.menu?.map((section) => (
-                      <li
-                        key={section.__editorItemTitle}
-                        className={handles.submenuLi}
-                      >
-                        {section?.subMenu?.length ? (
-                          <CollapsibleMenu section={section} />
-                        ) : (
-                          <Link to={section.href} className={handles.menuLink}>
-                            {section.__editorItemTitle}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               )}
             </li>
           ))}
         </ul>
-        <div className={handles.menuOthers}>
-          {others.map((item) => (
-            <Link
-              key={item.__editorItemTitle}
-              to={item.href}
-              className={applyModifiers(handles.menuLink, 'others')}
-            >
-              {item.icon && (
-                <img
-                  className={handles.menuOthersIcon}
-                  src={item.icon}
-                  alt={item.__editorItemTitle}
-                  width={20}
-                  height={20}
-                  loading="lazy"
-                />
-              )}
-              {item.__editorItemTitle}
-            </Link>
-          ))}
-        </div>
       </section>
     </Fragment>
   )

@@ -6,23 +6,778 @@
       "items": [
         {
           "__editorItemTitle": "Lançamentos",
-          "menu": []
+          "image": "https://gruporios.vteximg.com.br/arquivos/banner.png",
+          "menu": [
+            {
+              "__editorItemTitle": "Sutiãs",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Sutiãs sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Calcinhas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Fio dental",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Tanga",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cintura Alta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Caleçon",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cinta modeladora",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Conjuntos",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Conjunto com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Conjunto sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Pijamas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Camiseta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Baby doll",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Camisola",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Robe",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Pijama longo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Bodies",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Meias",
+                  "isTitle": true,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sexy Shop",
+                  "isTitle": true,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "isTitle": true,
+              "href": "",
+              "seeAll": true
+            }
+          ]
         },
         {
           "__editorItemTitle": "Feminino",
-          "menu": []
+          "image": "https://gruporios.vteximg.com.br/arquivos/banner.png",
+          "menu": [
+            {
+              "__editorItemTitle": "Sutiãs",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Sutiãs sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Calcinhas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Fio dental",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Tanga",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cintura Alta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Caleçon",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cinta modeladora",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Conjuntos",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Conjunto com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Conjunto sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Pijamas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Camiseta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Baby doll",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Camisola",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Robe",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Pijama longo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Bodies",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Meias",
+                  "isTitle": true,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sexy Shop",
+                  "isTitle": true,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "isTitle": true,
+              "href": "",
+              "seeAll": true
+            }
+          ]
         },
         {
           "__editorItemTitle": "Plus Size",
-          "menu": []
+          "image": "https://gruporios.vteximg.com.br/arquivos/banner.png",
+          "menu": [
+            {
+              "__editorItemTitle": "Sutiãs",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Sutiãs sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Calcinhas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Fio dental",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Tanga",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cintura Alta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Caleçon",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cinta modeladora",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Conjuntos",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Conjunto com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Conjunto sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Pijamas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Camiseta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Baby doll",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Camisola",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Robe",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Pijama longo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Bodies",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Meias",
+                  "isTitle": true,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sexy Shop",
+                  "isTitle": true,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "isTitle": true,
+              "href": "",
+              "seeAll": true
+            }
+          ]
         },
         {
           "__editorItemTitle": "Masculino",
-          "menu": []
+          "image": "https://gruporios.vteximg.com.br/arquivos/banner.png",
+          "menu": [
+            {
+              "__editorItemTitle": "Sutiãs",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Sutiãs sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Calcinhas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Fio dental",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Tanga",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cintura Alta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Caleçon",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cinta modeladora",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Conjuntos",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Conjunto com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Conjunto sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Pijamas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Camiseta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Baby doll",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Camisola",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Robe",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Pijama longo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Bodies",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Meias",
+                  "isTitle": true,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sexy Shop",
+                  "isTitle": true,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "isTitle": true,
+              "href": "",
+              "seeAll": true
+            }
+          ]
         },
         {
           "__editorItemTitle": "Promoção",
-          "menu": []
+          "image": "https://gruporios.vteximg.com.br/arquivos/banner.png",
+          "menu": [
+            {
+              "__editorItemTitle": "Sutiãs",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Sutiãs sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sutiãs com aro",
+                  "isTitle": false,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Calcinhas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Fio dental",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Tanga",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cintura Alta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Caleçon",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Cinta modeladora",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Conjuntos",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Conjunto com bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Conjunto sem bojo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Pijamas",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Camiseta",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Baby doll",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Camisola",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Robe",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Pijama longo",
+                  "isTitle": false,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Ver todos",
+                  "isTitle": false,
+                  "href": "",
+                  "seeAll": true
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Bodies",
+              "isTitle": true,
+              "href": "",
+              "subMenu": [
+                {
+                  "__editorItemTitle": "Meias",
+                  "isTitle": true,
+                  "href": ""
+                },
+                {
+                  "__editorItemTitle": "Sexy Shop",
+                  "isTitle": true,
+                  "href": ""
+                }
+              ]
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "isTitle": true,
+              "href": "",
+              "seeAll": true
+            }
+          ]
         }
       ]
     }

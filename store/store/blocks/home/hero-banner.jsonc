@@ -1,9 +1,7 @@
 {
   "list-context.image-list#main-banner": {
     "title": "Banner home",
-    "children": [
-      "slider-layout#main-banner"
-    ],
+    "children": ["slider-layout#main-banner"],
     "props": {
       "experimentalSetExplicitDimensions": true,
       "height": "700px",
@@ -14,7 +12,7 @@
       },
       "images": [
         {
-          "image": "/arquivos/image.png",
+          "image": "/arquivos/full-bannerv2.png",
           "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
@@ -22,7 +20,7 @@
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "/arquivos/image.png",
+          "image": "/arquivos/full-bannerv2.png",
           "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
@@ -30,7 +28,7 @@
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "/arquivos/image.png",
+          "image": "/arquivos/full-bannerv2.png",
           "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
@@ -38,7 +36,7 @@
           "experimentalPreventLayoutShift": true
         },
         {
-          "image": "/arquivos/image.png",
+          "image": "/arquivos/full-bannerv2.png",
           "mobileImage": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/95e5027a-f33a-4f02-97ea-6deb43711f72___85eb9bfe9d75e61f3e3e350312f6cb16.png",
           "width": "1368",
           "height": "499px",
@@ -50,9 +48,7 @@
   },
   "list-context.image-list#main-banner-footer": {
     "title": "Banner home [FOOTER]",
-    "children": [
-      "slider-layout#main-banner--footer"
-    ],
+    "children": ["slider-layout#main-banner--footer"],
     "props": {
       "experimentalSetExplicitDimensions": true,
       "height": "700px",
@@ -114,10 +110,7 @@
       "infinite": true,
       "showNavigationArrows": "desktopOnly",
       "showPaginationDots": "always",
-      "blockClass": [
-        "carousel",
-        "footer"
-      ]
+      "blockClass": ["carousel", "footer"]
     }
   }
 }
