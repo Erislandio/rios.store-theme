@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { ConditionalLayout } from './ConditionalLayout'
@@ -33,7 +33,6 @@ const CSS_HANDLES = [
 
 const CustomLoginButton: StoreFrontFC = () => {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const [isOpen, setOpen] = useState(false)
   const { pushToDataLayer } = useDatalayer()
 
   return (
@@ -41,7 +40,6 @@ const CustomLoginButton: StoreFrontFC = () => {
       <button
         className={handles.customLoginButton}
         onClick={() => {
-          setOpen(!isOpen)
           pushToDataLayer({ event: 'login_button_click' })
         }}
       >

@@ -25,6 +25,7 @@ const CSS_HANDLES = [
   'middleBannersItemDescription',
   'middleBannersWrapper',
   'middleBannersItemsubTitle',
+  'fade',
   'middleBannersItemContent',
 ] as const
 
@@ -49,8 +50,8 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
     >
       {item.image && (
         <img
-          width={422}
-          height={400}
+          width={502}
+          height={562}
           loading="lazy"
           className={handles.middleBannersItemIcon}
           src={item.image}
@@ -58,16 +59,14 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
         />
       )}
       <div className={handles.middleBannersItemContent}>
-        <span className={handles.middleBannersItemsubTitle}>
-          {item.subTitle}
-        </span>
         <h3 className={handles.middleBannersItemTitle}>
           {item.__editorItemTitle}
         </h3>
         <span className={handles.middleBannersItemDescription}>
-          {item.textLink ?? 'Comprar >'}
+          {item.textLink ?? 'Comprar'}
         </span>
       </div>
+      <div className={handles.fade}></div>
     </Link>
   ))
 

@@ -109,5 +109,9 @@
   },
   "custom-category-banners": {
     "component": "CustomDepartmentBanner"
+  },
+  "custom-chosse-by": {
+    "component": "ChosseBy",
+    "composition": "children"
   }
 }

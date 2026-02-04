@@ -63,5 +63,6 @@
 .imageElement--carousel {
   width: 100vw;
   height: auto !important;
+  display: flex;
   max-height: unset !important;
 }

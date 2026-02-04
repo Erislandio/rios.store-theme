@@ -5,9 +5,8 @@
       "__fold__.experimentalLazyAssets",
       "__fold__",
       "custom-category-list#category-list",
-      "rich-text#shelf-title",
-      "list-context.product-list#prateleirav1",
       "custom-middle-banners#middle-banners",
+      "custom-chosse-by#default2",
       "rich-text#shelf-title-2",
       "__fold__",
       "list-context.product-list#prateleira2",
@@ -26,5 +25,49 @@
       "responsive-layout.tablet#home-banners-2",
       "responsive-layout.phone#home-banners-2"
     ]
+  },
+  "custom-chosse-by#default2": {
+    "title": "Escolha por",
+    "props": {
+      "title": "Compre por tamanho",
+      "items": [
+        {
+          "link": "/categoria/1",
+          "__editorItemTitle": "PP"
+        },
+        {
+          "link": "/categoria/2",
+          "__editorItemTitle": "P"
+        },
+        {
+          "link": "/categoria/3",
+          "__editorItemTitle": "M"
+        },
+        {
+          "link": "/categoria/3",
+          "__editorItemTitle": "G"
+        },
+        {
+          "link": "/categoria/3",
+          "__editorItemTitle": "GG"
+        },
+        {
+          "link": "/categoria/3",
+          "__editorItemTitle": "48"
+        },
+        {
+          "link": "/categoria/3",
+          "__editorItemTitle": "50"
+        },
+        {
+          "link": "/categoria/3",
+          "__editorItemTitle": "52"
+        },
+        {
+          "link": "/categoria/3",
+          "__editorItemTitle": "54"
+        }
+      ]
+    }
   }
 }

@@ -16,3 +16,35 @@
   min-width: 40px !important;
   width: 40px !important;
 }
+
+.sliderRightArrow--carousel {
+  right: 5rem;
+}
+
+.sliderLeftArrow--carousel {
+  left: 5rem;
+}
+
+.sliderLeftArrow {
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.37464 12.0609C2.48976 12.1394 2.60739 12.1945 2.69415 12.2813C5.99351 15.5784 9.28871 18.8788 12.5889 22.1742C12.8717 22.4564 13.0536 22.7628 12.9852 23.1719C12.86 23.9142 11.9824 24.2515 11.3868 23.7881C11.2884 23.7121 11.2033 23.6186 11.1157 23.5301C7.56854 19.9809 4.0214 16.4317 0.474267 12.8824C-0.158078 12.2496 -0.158078 11.7536 0.474267 11.1208C4.04309 7.54986 7.61358 3.97894 11.1791 0.404681C11.4527 0.13083 11.7514 -0.0461722 12.1476 0.010602C12.9043 0.119142 13.2571 1.01667 12.7808 1.61948C12.704 1.71716 12.6106 1.80149 12.5222 1.88999C9.24033 5.17454 5.95848 8.45908 2.67663 11.7436C2.59738 11.8229 2.52146 11.9064 2.37464 12.0609Z' fill='black'/%3E%3C/svg%3E%0A") !important;
+  width: 25px;
+  height: 25px;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.sliderLeftArrow .caretIcon {
+  display: none;
+}
+
+.sliderRightArrow {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='24' viewBox='0 0 13 24' fill='none'%3E%3Cpath d='M10.625 11.9391C10.5098 11.8606 10.3922 11.8055 10.3055 11.7187C7.00609 8.42162 3.71089 5.12121 0.410688 1.82581C0.127885 1.54361 -0.0539767 1.23719 0.01443 0.828087C0.139564 0.0858492 1.01717 -0.251456 1.61281 0.211921C1.71125 0.287898 1.79634 0.381408 1.88393 0.469909C5.43107 4.01912 8.9782 7.56834 12.5253 11.1176C13.1577 11.7504 13.1577 12.2464 12.5253 12.8792C8.95651 16.4501 5.38602 20.0211 1.82053 23.5953C1.54691 23.8692 1.24825 24.0462 0.851994 23.9894C0.09535 23.8809 -0.257528 22.9833 0.218816 22.3805C0.295565 22.2828 0.388998 22.1985 0.477426 22.11C3.75928 18.8255 7.04113 15.5409 10.323 12.2564C10.4022 12.1771 10.4781 12.0936 10.625 11.9391Z' fill='black'/%3E%3C/svg%3E") !important;
+  width: 25px;
+  height: 25px;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.sliderRightArrow .caretIcon {
+  display: none;
+}

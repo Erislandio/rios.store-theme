@@ -31,10 +31,7 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
 
   const itemToRender =
     items.map((item, index) => (
-      <div
-        className={handles.categoryListItems}
-        key={index}
-      >
+      <div className={handles.categoryListItems} key={index}>
         <Link
           to={item.link}
           className={handles.categoryListItemLink}
@@ -47,8 +44,8 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
           }
         >
           <img
-            width={isMobile ? 240 : 422}
-            height={isMobile ? 342 : 603}
+            width={isMobile ? 170 : 220}
+            height={isMobile ? 170 : 220}
             loading="lazy"
             src={item.imageUrl}
             alt={item.__editorItemTitle}
@@ -65,7 +62,7 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
     <section className={handles.categoryListContainer}>
       <h2 className={handles.categoryListTitle}>{title}</h2>
       <SliderLayout
-        itemsPerPage={{ desktop: 3, tablet: 3, phone: 1 }}
+        itemsPerPage={{ desktop: 7, tablet: 5, phone: 1 }}
         centerMode={{
           desktop: 'disabled',
           tablet: 'to-the-left',

@@ -4,25 +4,25 @@
     "props": {
       "items": [
         {
-          "__editorItemTitle": "Moda íntima",
-          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/c2d52843-39df-4e7c-9997-b56d2c435895___09065b7fc261f2cf30be3aed2d874a70.png",
+          "__editorItemTitle": "Moda fitness",
+          "image": "/arquivos/bannerv2.png",
           "link": "/",
-          "subTitle": "Loucos por",
-          "textLink": "Comprar >"
+          "subTitle": "Moda fitness",
+          "textLink": "Comprar"
         },
         {
-          "__editorItemTitle": "Jeans",
-          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/e1d8bd41-3a8a-4805-b8ab-65f086b3ab54___0188c2837149297cdc51d4fd9ad925ef.jpg",
+          "__editorItemTitle": "Conjuntos de renda",
+          "image": "/arquivos/banner2.png",
           "link": "/",
-          "subTitle": "Loucos por",
-          "textLink": "Comprar >"
+          "subTitle": "Conjuntos de renda",
+          "textLink": "Comprar"
         },
         {
-          "__editorItemTitle": "Sarja",
-          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/542a125b-e023-47be-8064-2df9ffd2c2c6___99b1f9fa09ed3bfbef252a98a8c80961.jpg",
+          "__editorItemTitle": "Pijamas",
+          "image": "/arquivos/banner3.png",
           "link": "/",
-          "subTitle": "Loucos por",
-          "textLink": "Comprar >"
+          "subTitle": "Pijamas",
+          "textLink": "Comprar"
         }
       ]
     }
@@ -79,61 +79,41 @@
   },
   "responsive-layout.desktop#home-banners": {
     "title": "banners [Desktop]",
-    "children": [
-      "custom-div#footer-banner-1"
-    ]
+    "children": ["custom-div#footer-banner-1"]
   },
   "responsive-layout.tablet#home-banners": {
     "title": "banners [Tablet]",
-    "children": [
-      "custom-div#footer-banner-1"
-    ]
+    "children": ["custom-div#footer-banner-1"]
   },
   "responsive-layout.phone#home-banners": {
     "title": "banners [MObile]",
-    "children": [
-      "custom-div#footer-banner-1-mobile"
-    ]
+    "children": ["custom-div#footer-banner-1-mobile"]
   },
   "responsive-layout.desktop#home-banners-2": {
     "title": "Banners Footer [Desktop]",
-    "children": [
-      "custom-div#footer-banner-2"
-    ]
+    "children": ["custom-div#footer-banner-2"]
   },
   "responsive-layout.tablet#home-banners-2": {
     "title": "Banners Footer [Tablet]",
-    "children": [
-      "custom-div#footer-banner-2"
-    ]
+    "children": ["custom-div#footer-banner-2"]
   },
   "responsive-layout.phone#home-banners-2": {
     "title": "Banners Footer [MObile]",
-    "children": [
-      "custom-div#footer-banner-2-mobile"
-    ]
+    "children": ["custom-div#footer-banner-2-mobile"]
   },
   "custom-div#footer-banner-1": {
     "title": "Banner do rodapé 1",
     "props": {
-      "blockClass": [
-        "footer-banner-1"
-      ]
+      "blockClass": ["footer-banner-1"]
     },
-    "children": [
-      "image#banner--footer"
-    ]
+    "children": ["image#banner--footer"]
   },
   "custom-div#footer-banner-1-mobile": {
     "title": "Banner do rodapé 1",
     "props": {
-      "blockClass": [
-        "footer-banner-1"
-      ]
+      "blockClass": ["footer-banner-1"]
     },
-    "children": [
-      "image#banner--footer--mobile"
-    ]
+    "children": ["image#banner--footer--mobile"]
   },
   "image#banner--footer": {
     "title": "Banner do rodapé",
@@ -162,24 +142,16 @@
   "custom-div#footer-banner-2": {
     "title": "Banner do rodapé 1",
     "props": {
-      "blockClass": [
-        "footer-banner-1"
-      ]
+      "blockClass": ["footer-banner-1"]
     },
-    "children": [
-      "image#banner--footer-2"
-    ]
+    "children": ["image#banner--footer-2"]
   },
   "custom-div#footer-banner-2-mobile": {
     "title": "Banner do rodapé 1",
     "props": {
-      "blockClass": [
-        "footer-banner-1"
-      ]
+      "blockClass": ["footer-banner-1"]
     },
-    "children": [
-      "image#banner--footer--mobile-2"
-    ]
+    "children": ["image#banner--footer--mobile-2"]
   },
   "image#banner--footer-2": {
     "title": "Banner do rodapé",

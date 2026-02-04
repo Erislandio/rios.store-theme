@@ -2,37 +2,77 @@
   "custom-category-list#category-list": {
     "title": "Categorias",
     "props": {
-      "title": "MARCA DE ROUPAS COM EXCELÊNCIA EM CADA COSTURA E ACABAMENTO.",
+      "title": "Escolha por ocasião",
       "items": [
         {
-          "__editorItemTitle": "Saias",
-          "link": "/saias",
-          "imageUrl": "arquivos/categoria1.png"
+          "__editorItemTitle": "Aumenta os seios",
+          "link": "#",
+          "imageUrl": "/arquivos/cat1.png"
         },
         {
-          "__editorItemTitle": "Sobreposição",
-          "link": "/saias",
-          "imageUrl": "arquivos/categoria2.png"
+          "__editorItemTitle": "Confortável",
+          "link": "#",
+          "imageUrl": "/arquivos/cat2.png"
         },
         {
-          "__editorItemTitle": "Calças",
-          "link": "/calcas",
-          "imageUrl": "arquivos/categoria3.png"
+          "__editorItemTitle": "Meternidade",
+          "link": "#",
+          "imageUrl": "/arquivos/cat4.png"
         },
         {
-          "__editorItemTitle": "Saias",
-          "link": "/saias",
-          "imageUrl": "arquivos/menu.png"
+          "__editorItemTitle": "Modela o corpo",
+          "link": "#",
+          "imageUrl": "/arquivos/cat5.png"
         },
         {
-          "__editorItemTitle": "Sobreposição",
-          "link": "/saias",
-          "imageUrl": "arquivos/categoria2.png"
+          "__editorItemTitle": "Não marca",
+          "link": "#",
+          "imageUrl": "/arquivos/cat6.png"
         },
         {
-          "__editorItemTitle": "Calças",
-          "link": "/calcas",
-          "imageUrl": "arquivos/categoria3.png"
+          "__editorItemTitle": "Sensualidade",
+          "link": "#",
+          "imageUrl": "/arquivos/cat7.png"
+        },
+        {
+          "__editorItemTitle": "Dias Quentes",
+          "link": "#",
+          "imageUrl": "/arquivos/cat6.png"
+        },
+        {
+          "__editorItemTitle": "Aumenta os seios",
+          "link": "#",
+          "imageUrl": "/arquivos/cat1.png"
+        },
+        {
+          "__editorItemTitle": "Confortável",
+          "link": "#",
+          "imageUrl": "/arquivos/cat2.png"
+        },
+        {
+          "__editorItemTitle": "Meternidade",
+          "link": "#",
+          "imageUrl": "/arquivos/cat4.png"
+        },
+        {
+          "__editorItemTitle": "Modela o corpo",
+          "link": "#",
+          "imageUrl": "/arquivos/cat5.png"
+        },
+        {
+          "__editorItemTitle": "Não marca",
+          "link": "#",
+          "imageUrl": "/arquivos/cat6.png"
+        },
+        {
+          "__editorItemTitle": "Sensualidade",
+          "link": "#",
+          "imageUrl": "/arquivos/cat7.png"
+        },
+        {
+          "__editorItemTitle": "Dias Quentes",
+          "link": "#",
+          "imageUrl": "/arquivos/cat6.png"
         }
       ]
     }
