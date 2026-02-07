@@ -1,0 +1,266 @@
+.container {
+  border-radius: 0px;
+}
+
+.element {
+  padding: 0px;
+}
+
+.imageContainer {
+  overflow: hidden;
+}
+
+.imageNormal {
+  min-height: 420px !important;
+  height: auto !important;
+  scale: 1.4;
+
+  @media screen and (max-width: 768px) {
+    scale: 1.25;
+    min-height: 200px !important;
+  }
+}
+
+.SKUSelectorContainer {
+  :global(.vtex-store-components-3-x-skuSelectorSubcontainer) {
+    margin-bottom: 8px;
+    margin-top: 12px;
+  }
+
+  :global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) {
+    display: none !important;
+  }
+
+  :global(.vtex-store-components-3-x-skuSelectorTextContainer) {
+    display: none;
+  }
+
+  :global(.vtex-store-components-3-x-skuSelectorNameContainer) {
+    margin: 0px;
+  }
+
+  :global(.vtex-store-components-3-x-skuSelectorOptionsList) {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  :global(.vtex-store-components-3-x-skuSelectorSubcontainer--cor) {
+    .valueWrapper {
+      display: none;
+    }
+
+    .frameAround {
+      display: none;
+    }
+
+    .skuSelectorItem {
+      margin: 0px;
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      min-height: 16px;
+      border-radius: 50%;
+      opacity: 0.7;
+      border: 1px solid #dedede;
+    }
+
+    .skuSelectorInternalBox {
+      border: none;
+    }
+
+    .skuSelectorItem--selected {
+      opacity: 1;
+    }
+  }
+}
+
+.skuSelectorItem--animalprint {
+  background-color: #8b5a2b;
+}
+.skuSelectorItem--vermelho {
+  background-color: #c62828;
+}
+.skuSelectorItem--nude {
+  background-color: #e3c1a0;
+}
+.skuSelectorItem--fantastico {
+  background-color: #7b1fa2;
+}
+.skuSelectorItem--goiaba {
+  background-color: #d8435e;
+}
+.skuSelectorItem--sandia {
+  background-color: #e53935;
+}
+.skuSelectorItem--marrom {
+  background-color: #5d4037;
+}
+.skuSelectorItem--preto {
+  background-color: #000000;
+}
+.skuSelectorItem--chumbo {
+  background-color: #424242;
+}
+.skuSelectorItem--mescla {
+  background-color: #bdbdbd;
+}
+.skuSelectorItem--azul {
+  background-color: #1e88e5;
+}
+.skuSelectorItem--marinho {
+  background-color: #0d1b2a;
+}
+.skuSelectorItem--azul-marinho {
+  background-color: #0d1b2a;
+}
+.skuSelectorItem--royal {
+  background-color: #4169e1;
+}
+.skuSelectorItem--azul-royal {
+  background-color: #4169e1;
+}
+.skuSelectorItem--azul-claro {
+  background-color: #90caf9;
+}
+.skuSelectorItem--rubi {
+  background-color: #9b111e;
+}
+.skuSelectorItem--pink {
+  background-color: #e91e63;
+}
+.skuSelectorItem--rosa {
+  background-color: #f48fb1;
+}
+.skuSelectorItem--romance {
+  background-color: #f8bbd0;
+}
+.skuSelectorItem--amarelo {
+  background-color: #fdd835;
+}
+.skuSelectorItem--branco {
+  background-color: #ffffff;
+}
+.skuSelectorItem--pavao {
+  background-color: #006d5b;
+}
+.skuSelectorItem--bege {
+  background-color: #f5f5dc;
+}
+.skuSelectorItem--chocolate {
+  background-color: #4e342e;
+}
+.skuSelectorItem--coral {
+  background-color: #ff7043;
+}
+.skuSelectorItem--satin {
+  background-color: #b099ac;
+}
+.skuSelectorItem--rubro {
+  background-color: #b71c1c;
+}
+.skuSelectorItem--florence {
+  background-color: #8e24aa;
+}
+.skuSelectorItem--jaipur {
+  background-color: #f57c00;
+}
+.skuSelectorItem--chiclete {
+  background-color: #ff4081;
+}
+.skuSelectorItem--tame {
+  background-color: #c5a880;
+}
+.skuSelectorItem--frutilly {
+  background-color: #ff5252;
+}
+.skuSelectorItem--frutily {
+  background-color: #ff5252;
+}
+.skuSelectorItem--fluor {
+  background-color: #76ff03;
+}
+.skuSelectorItem--roxo {
+  background-color: #6a1b9a;
+}
+.skuSelectorItem--tamy {
+  background-color: #d7b899;
+}
+.skuSelectorItem--castanho {
+  background-color: #6d4c41;
+}
+.skuSelectorItem--cinza {
+  background-color: #9e9e9e;
+}
+.skuSelectorItem--verde {
+  background-color: #43a047;
+}
+.skuSelectorItem--neon {
+  background-color: #39ff14;
+}
+.skuSelectorItem--laranja {
+  background-color: #fb8c00;
+}
+.skuSelectorItem--colorido {
+  background-color: #ff00ff;
+}
+.skuSelectorItem--sortido {
+  background-color: #00bcd4;
+}
+.skuSelectorItem--marfim {
+  background-color: #fffff0;
+}
+.skuSelectorItem--ferrugem {
+  background-color: #b7410e;
+}
+.skuSelectorItem--prata {
+  background-color: #c0c0c0;
+}
+.skuSelectorItem--lilas {
+  background-color: #ce93d8;
+}
+.skuSelectorItem--ovelha {
+  background-color: #f0ede5;
+}
+.skuSelectorItem--verdeteos {
+  background-color: #2e8b57;
+}
+
+.skuSelectorItem--azulclaro {
+  background-color: #90caf9;
+}
+
+.nameContainer {
+  padding: 0px;
+  margin-top: 8px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  height: 27px;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    height: 20px;
+    margin-top: 0px;
+  }
+
+  .brandName {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.clearLink {
+  position: relative;
+}

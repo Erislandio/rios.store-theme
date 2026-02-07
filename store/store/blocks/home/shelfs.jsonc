@@ -1,12 +1,8 @@
 {
   "list-context.product-list#prateleirav1": {
     "title": "Prateleira 1",
-    "blocks": [
-      "product-summary.shelf#default"
-    ],
-    "children": [
-      "slider-layout#shelf-default"
-    ],
+    "blocks": ["product-summary.shelf#default"],
+    "children": ["slider-layout#shelf-default"],
     "props": {
       "hideUnavailableItems": true,
       "blockClass": "shelf",
@@ -15,12 +11,8 @@
   },
   "list-context.product-list#prateleira2": {
     "title": "Prateleira 2",
-    "blocks": [
-      "product-summary.shelf#default"
-    ],
-    "children": [
-      "slider-layout#shelf-default"
-    ],
+    "blocks": ["product-summary.shelf#default"],
+    "children": ["slider-layout#shelf-default"],
     "props": {
       "hideUnavailableItems": true,
       "blockClass": "shelf",
@@ -29,12 +21,8 @@
   },
   "list-context.product-list#prateleira3": {
     "title": "Prateleira 2",
-    "blocks": [
-      "product-summary.shelf#default"
-    ],
-    "children": [
-      "slider-layout#shelf-default"
-    ],
+    "blocks": ["product-summary.shelf#default"],
+    "children": ["slider-layout#shelf-default"],
     "props": {
       "hideUnavailableItems": true,
       "blockClass": "shelf",
@@ -44,39 +32,31 @@
   "rich-text#shelf-title": {
     "title": "Titulo da prateleira",
     "props": {
-      "blockClass": [
-        "shelf-title"
-      ],
+      "blockClass": ["shelf-title"],
       "text": "Promoções da Semana"
     }
   },
   "rich-text#shelf-title-2": {
     "title": "Titulo da prateleira 2",
     "props": {
-      "blockClass": [
-        "shelf-title",
-        "brands"
-      ],
-      "text": "Destaques"
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["shelf-title", "brands"],
+      "text": "## As queridinhas mais vendidas"
     }
   },
   "rich-text#shelf-title-4": {
     "title": "Titulo da prateleira 3",
     "props": {
-      "blockClass": [
-        "shelf-title",
-        "brands"
-      ],
+      "blockClass": ["shelf-title", "brands"],
       "text": "Chegou agora"
     }
   },
   "rich-text#shelf-title-3": {
-    "title": "Titulo marcas",
+    "title": "Prateleira 2",
     "props": {
-      "blockClass": [
-        "shelf-title"
-      ],
-      "text": "Conheca nossas marcas"
+      "blockClass": ["shelf-title"],
+      "text": "## VEM QUE TEM DESCONTO"
     }
   },
   "slider-layout#shelf-default": {
@@ -84,21 +64,12 @@
     "props": {
       "itemsPerPage": {
         "desktop": 4,
-        "tablet": 4,
-        "phone": 1
+        "tablet": 3,
+        "phone": 2
       },
-      "centerMode":{
-        "desktop": "disabled",
-        "tablet": "disabled",
-        "phone": "to-the-left",
-        "mobile": "to-the-left"
-      },
-      "centerModeSlidesGap": 1,
       "showPaginationDots": "never",
-      "showNavigationArrows": "desktopOnly",
-      "blockClass": [
-        "shelf"
-      ]
+      "showNavigationArrows": "always",
+      "blockClass": ["shelf"]
     }
   }
 }

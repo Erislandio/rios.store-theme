@@ -223,6 +223,8 @@
 
 .divContainer--main-header {
   padding: 0.5rem 1rem !important;
+  flex-direction: row !important;
+  align-items: center;
 }
 
 .dropdownItem {
@@ -236,6 +238,20 @@
   margin-top: 40px;
   margin-bottom: 40px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .categoryListItems {
+    width: 100%;
+    padding: 1rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 0px;
+    }
+  }
+
   .categoryListTitle {
     text-align: center;
     color: var(--Neutras-01, #1b1b1b);
@@ -246,6 +262,11 @@
     text-transform: uppercase;
     margin-bottom: 32px;
     margin-top: 0px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
   }
 
   .categoryListItemImage {
@@ -321,92 +342,115 @@
   margin-top: 40px;
   margin-bottom: 40px;
 
+  @media screen and (max-width: 1024px) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
   .middleBannersWrapper {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
-    .middleBannersItem {
-      position: relative;
-      overflow: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
+  .middleBannersItem {
+    position: relative;
+    overflow: hidden;
 
-        height: 215px;
-        opacity: 0;
-        visibility: hidden;
-        background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 93.15%);
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        z-index: 1;
-      }
-
-      &:hover {
-        &::before {
-          opacity: 0.4;
-          visibility: visible;
-        }
-
-        .middleBannersItemContent {
-          opacity: 1;
-          visibility: visible;
-          transform: translate(-50%, 0);
-        }
-      }
+    @media screen and (max-width: 1024px) {
+      min-width: 300px !important;
     }
 
-    .middleBannersItemIcon {
-      width: 100%;
-      height: 100%;
-    }
-
-    .middleBannersItemTitle {
-      color: var(--Neutras-05, #fff);
-      font-family: 'Fira Sans', sans-serif;
-      font-size: 1rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      text-transform: uppercase;
-      margin: 0px;
-      margin-bottom: 12px;
-    }
-
-    .middleBannersItemContent {
-      z-index: 9;
+    &::before {
+      content: '';
       position: absolute;
-      left: 50%;
-      top: 83%;
-      transform: translate(-50%, 20px);
-      text-align: center;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 215px;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+      background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 93.15%);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1;
     }
 
-    .middleBannersItemDescription {
-      display: flex;
-      padding: 12px 32px 12px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      background: var(--Neutras-01, #1b1b1b);
-      color: var(--Neutras-05, #fff);
+    &:hover {
+      &::before {
+        opacity: 0.4;
+        visibility: visible;
+      }
 
-      font-family: Poppins;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 24px; /* 150% */
-      width: fit-content;
-      margin: 0 auto;
+      .middleBannersItemContent {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+      }
     }
+  }
+
+  .middleBannersItemIcon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .middleBannersItemTitle {
+    color: var(--Neutras-05, #fff);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 12px;
+  }
+
+  .middleBannersItemContent {
+    z-index: 9;
+    position: absolute;
+    left: 50%;
+    top: 83%;
+    transform: translate(-50%, 20px);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+    @media screen and (max-width: 1024px) {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translate(-50%, -50%) !important;
+    }
+  }
+
+  .middleBannersItemDescription {
+    display: flex;
+    padding: 12px 32px 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--Neutras-01, #1b1b1b);
+    color: var(--Neutras-05, #fff);
+
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    width: fit-content;
+    margin: 0 auto;
   }
 }
 
@@ -426,6 +470,12 @@
     text-transform: uppercase;
     margin: 0px;
     margin-bottom: 32px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
   }
 
   .chosseByItems {
@@ -464,9 +514,145 @@
       line-height: normal;
       text-transform: uppercase;
 
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+        min-width: 48px;
+        font-size: 24px;
+        min-height: 48px;
+        opacity: 1;
+      }
+
       &:hover {
         opacity: 1;
       }
     }
+  }
+}
+
+.comboPriceContainer {
+  padding: 4px 8px;
+  margin-top: 8px;
+  background: var(--Neutras-04, #f1f1f1);
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
+
+.customProductSummaryBadge {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+.customProductSummaryBadge__new {
+  color: var(--Neutras-05, #fff);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  padding: 4px;
+  background-color: #000;
+}
+
+.customProductSummaryBadge__discount {
+  color: var(--Neutras-05, #fff);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  padding: 4px 8px;
+  min-width: 40px;
+  background: var(--Primria-01, #c00146);
+}
+
+.divContainer--price-container {
+  min-height: 48px;
+  margin-top: 8px;
+}
+
+.middleBanners--buyMorePayLess {
+  margin-top: 40px;
+
+  .middleBannersTitle {
+    display: block;
+    text-align: center;
+    color: var(--Neutras-01, #1b1b1b);
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .middleBannersWrapper {
+    gap: 2rem;
+  }
+
+  .middleBannersItemContent {
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 100%;
+    transform: translate(-50%, calc(-40% - 10px)) !important;
+  }
+
+  .middleBannersItemTitle {
+    position: relative;
+    top: -12px;
+    background-color: #000;
+    padding: 12px 20px;
+    color: var(--Neutras-05, #fff);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 144.444% */
+    text-decoration: none;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 0 auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .middleBannersItemsubTitle {
+    color: var(--Tercirio-03, #fbf7f3);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0px;
+    line-height: 18px; /* 128.571% */
+  }
+}
+
+.divContainer--footer-banner-1 {
+  max-width: 1440px;
+  padding: 0px 1rem !important;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  :global(.vtex-render-runtime-8-x-lazyload) {
+    width: 100%;
   }
 }

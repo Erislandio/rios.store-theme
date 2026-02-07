@@ -71,7 +71,7 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
         }}
         infinite
         fullWidth
-        centerModeSlidesGap={16}
+        centerModeSlidesGap={4}
         showNavigationArrows="desktopOnly"
         showPaginationDots="never"
         navigationStep={'page'}

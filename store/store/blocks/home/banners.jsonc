@@ -118,7 +118,7 @@
   "image#banner--footer": {
     "title": "Banner do rodapé",
     "props": {
-      "src": "arquivos/banner--footer.jpg",
+      "src": "/arquivos/plus.png",
       "alt": "Banner do rodapé",
       "link": "/"
     }

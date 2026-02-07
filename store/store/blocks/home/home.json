@@ -3,29 +3,60 @@
     "blocks": [
       "list-context.image-list#main-banner",
       "__fold__.experimentalLazyAssets",
-      "__fold__",
       "custom-category-list#category-list",
+      "__fold__",
       "custom-middle-banners#middle-banners",
       "custom-chosse-by#default2",
       "rich-text#shelf-title-2",
       "__fold__",
       "list-context.product-list#prateleira2",
-      "custom-footer-banners#default",
-      "list-context.image-list#main-banner-footer",
-      "rich-text#shelf-title-3",
-      "custom-brand-banners#default",
-      "rich-text#shelf-title-4",
-      "__fold__",
-      "list-context.product-list#prateleira3",
+      "custom-buy-more-pay-less#default",
       "responsive-layout.desktop#home-banners",
       "responsive-layout.tablet#home-banners",
       "responsive-layout.phone#home-banners",
-      "custom-instagram-feed#default",
-      "responsive-layout.desktop#home-banners-2",
-      "responsive-layout.tablet#home-banners-2",
-      "responsive-layout.phone#home-banners-2"
+      "rich-text#shelf-title-3",
+      "__fold__",
+      "list-context.product-list#prateleira3",
+      "custom-instagram-feed#default"
     ]
   },
+
+  "custom-buy-more-pay-less#default": {
+    "title": "Compre mais pague menos",
+    "props": {
+      "title": "Compre mais pague menos",
+      "items": [
+        {
+          "__editorItemTitle": "Combo de calcinhas",
+          "image": "/arquivos/b1.png",
+          "items": [
+            "1 calcinha por 10,00",
+            "3 calcinhas por 25,00",
+            "5 calcinhas por 40,00"
+          ]
+        },
+        {
+          "__editorItemTitle": "Combo de cuecas",
+          "image": "/arquivos/b2.png",
+          "items": [
+            "1 cueca por 10,00",
+            "3 cuecas por 25,00",
+            "5 cuecas por 40,00"
+          ]
+        },
+        {
+          "__editorItemTitle": "Combo de Pijamas",
+          "image": "/arquivos/b3.png",
+          "items": [
+            "1 pijama por 10,00",
+            "3 pijamas por 18,00",
+            "5 pijamas por 25,00"
+          ]
+        }
+      ]
+    }
+  },
+
   "custom-chosse-by#default2": {
     "title": "Escolha por",
     "props": {

@@ -2,7 +2,6 @@ import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
-import { SliderLayout } from 'vtex.slider-layout'
 import useDatalayer from './hooks/useDatalayer'
 
 interface Props {
@@ -50,8 +49,8 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
     >
       {item.image && (
         <img
-          width={502}
-          height={562}
+          width={isMobile ? 369 : 502}
+          height={isMobile ? 417 : 562}
           loading="lazy"
           className={handles.middleBannersItemIcon}
           src={item.image}
@@ -72,21 +71,9 @@ const MiddleBanners: StoreFrontFC<Props> = ({ items = [] }) => {
 
   return (
     <section className={handles.middleBanners}>
-      {isMobile ? (
-        <SliderLayout
-          itemsPerPage={{ desktop: 3, tablet: 3, phone: 1 }}
-          showNavigationArrows="never"
-          showPaginationDots="always"
-          navigationStep={'page'}
-          centerModeSlidesGap={16}
-        >
-          {itemToRender}
-        </SliderLayout>
-      ) : (
-        <div className={handles.middleBannersWrapper}>
-          <>{itemToRender}</>
-        </div>
-      )}
+      <div className={handles.middleBannersWrapper}>
+        <>{itemToRender}</>
+      </div>
     </section>
   )
 }

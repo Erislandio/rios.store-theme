@@ -4,30 +4,45 @@
     "children": [
       "custom-product-summary-badge",
       "product-summary-image#custom",
-      "custom-div#summary",
-      "custom-product-summary-wrapper#add-to-cart"
+      "product-summary-sku-selector#summary",
+      "product-summary-name",
+      "custom-div#summary-price-container",
+      "custom-combo-price"
     ]
+  },
+
+  "custom-div#summary-price-container": {
+    "props": {
+      "flexDirection": "column",
+      "alignItems": "flex-start",
+      "justifyContent": "flex-end",
+      "width": "100%",
+      "blockClass": ["price-container"]
+    },
+    "children": ["product-list-price#summary", "product-selling-price#summary"]
+  },
+
+  "product-list-price#summary": {
+    "title": "product-list-price",
+    "props": {
+      "blockClass": "summary",
+      "message": "{listPriceValue}"
+    }
   },
 
   "custom-product-summary-wrapper#add-to-cart": {
-    "children": [
-      "add-to-cart-button#summary"
-    ]
+    "children": ["add-to-cart-button#summary"]
   },
 
-  "custom-div#summary": {
-    "title": "Div customizada",
+  "product-summary-sku-selector#summary": {
     "props": {
-      "customClass": "vtex-summary__info",
-      "blockClass": "summary"
-    },
-    "children": [
-      "product-summary-name",
-      "custom-div#summary-divider",
-      "product-selling-price#summary",
-      "product-installments#summary"
-    ]
+      "showVariationsLabels": ["false"],
+      "sortVariationsByLabel": true,
+      "maxItems": 5,
+      "thumbnailImage": "imageLabel"
+    }
   },
+
   "product-installments#summary": {
     "title": "product-installments",
     "props": {
@@ -37,9 +52,7 @@
   },
   "custom-div#summary-divider": {
     "props": {
-      "blockClass": [
-        "divider"
-      ]
+      "blockClass": ["divider"]
     }
   },
   "add-to-cart-button#summary": {
@@ -53,21 +66,29 @@
     "title": "product-summary-image",
     "props": {
       "blockClass": "custom",
-      "height": 780,
-      "width": 450,
+      "height": {
+        "desktop": 1000,
+        "phone": 500,
+        "mobile": 500
+      },
+      "width": {
+        "desktop": 1000,
+        "phone": 500,
+        "mobile": 500
+      },
       "aspectRatio": "3:4",
       "hoverImage": {
         "criteria": "index",
         "index": 1
       },
-      "fetchpriority": "byPosition"
+      "fetchpriority": "high"
     }
   },
   "product-selling-price#summary": {
     "title": "product-selling-price",
     "props": {
       "blockClass": "summary",
-      "message": "{sellingPriceValue} à vista"
+      "message": "{sellingPriceValue}"
     }
   }
 }

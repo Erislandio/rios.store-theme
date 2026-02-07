@@ -52,3 +52,21 @@
     display: none;
   }
 }
+
+.sliderLayoutContainer--shelf {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 0.5rem;
+  }
+}
+
+.sliderLayoutContainer--shelf {
+  margin-bottom: 40px;
+}
+
+.slideChildrenContainer--shelf {
+  padding: 0px 10px;
+}

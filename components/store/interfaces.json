@@ -113,5 +113,13 @@
   "custom-chosse-by": {
     "component": "ChosseBy",
     "composition": "children"
+  },
+  "custom-combo-price": {
+    "component": "CustomComboPrice",
+    "composition": "children"
+  },
+  "custom-buy-more-pay-less": {
+    "component": "BuyMorePayLess",
+    "composition": "children"
   }
 }
