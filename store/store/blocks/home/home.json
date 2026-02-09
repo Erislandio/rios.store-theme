@@ -17,8 +17,80 @@
       "rich-text#shelf-title-3",
       "__fold__",
       "list-context.product-list#prateleira3",
-      "custom-instagram-feed#default"
+      "rich-text#shelf-title-4",
+      "custom-choise-by-style#default",
+      "custom-blog#default"
     ]
+  },
+
+  "custom-choise-by-style#default": {
+    "title": "Escolha por estilo",
+    "props": {
+      "title": "Escolha por estilo",
+      "items": [
+        {
+          "link": "#",
+          "__editorItemTitle": "linha conforto",
+          "image": "/arquivos/t1.png",
+          "actionLabel": "Comprar",
+          "actionLink": "#"
+        },
+        {
+          "link": "#",
+          "__editorItemTitle": "Fitness",
+          "image": "/arquivos/t2.png",
+          "actionLabel": "Comprar",
+          "actionLink": "#"
+        },
+        {
+          "link": "#",
+          "__editorItemTitle": "Linha plus size",
+          "image": "/arquivos/t3.png",
+          "actionLabel": "Comprar",
+          "actionLink": "#"
+        },
+        {
+          "link": "#",
+          "__editorItemTitle": "Calcinha absorvente",
+          "image": "/arquivos/t4.png",
+          "actionLabel": "Comprar",
+          "actionLink": "#"
+        }
+      ]
+    }
+  },
+
+  "custom-blog#default": {
+    "title": "Blog",
+    "props": {
+      "title": "Blog",
+      "items": [
+        {
+          "__editorItemTitle": "Blog 1",
+          "image": "/arquivos/t1.png",
+          "title": "AS ULTIMAS PARA CONFORTO",
+          "description": "Há mais de 19 anos, na cidade maravilhosa, nascia a RIOS, uma empresa de lingerie com fabricação própria...",
+          "actionLabel": "Ler matéria",
+          "actionLink": "#"
+        },
+        {
+          "__editorItemTitle": "Blog 2",
+          "image": "/arquivos/t2.png",
+          "title": "AS ULTIMAS PARA CONFORTO",
+          "description": "Há mais de 19 anos, na cidade maravilhosa, nascia a RIOS, uma empresa de lingerie com fabricação própria...",
+          "actionLabel": "Ler matéria",
+          "actionLink": "#"
+        },
+        {
+          "__editorItemTitle": "Blog 3",
+          "image": "/arquivos/t3.png",
+          "title": "AS ULTIMAS PARA CONFORTO",
+          "description": "Há mais de 19 anos, na cidade maravilhosa, nascia a RIOS, uma empresa de lingerie com fabricação própria...",
+          "actionLabel": "Ler matéria",
+          "actionLink": "#"
+        }
+      ]
+    }
   },
 
   "custom-buy-more-pay-less#default": {

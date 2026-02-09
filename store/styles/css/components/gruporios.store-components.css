@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .divContainer--container {
   max-width: 1440px;
   margin: 0 auto;
@@ -605,4 +606,54 @@
 }
 .divContainer--footer-banner-1 :global(.vtex-render-runtime-8-x-lazyload) {
   width: 100%;
+}
+
+.choiseByStyleContainer {
+  max-width: 1440px;
+  padding: 0px 1rem !important;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  column-gap: 40px;
+}
+@media screen and (max-width: 1025px) {
+  .choiseByStyleContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.choiseByStyleContainer .choiseByStyleImage {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.choiseByStyleContainer .choiseByStyleTitle {
+  text-align: center;
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 16px;
+  margin: 12px 0px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-transform: uppercase;
+}
+.choiseByStyleContainer .choiseByStyleLink {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  color: var(--Neutras-05, #fff);
+  /* BotãoMenor/Botão Menor */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-decoration: none;
+  padding: 8px 24px;
+  background-color: #000;
+}
+.choiseByStyleContainer .choiseByStyleLink:hover {
+  text-decoration: underline;
 }

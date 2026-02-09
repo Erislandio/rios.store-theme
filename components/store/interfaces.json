@@ -121,5 +121,13 @@
   "custom-buy-more-pay-less": {
     "component": "BuyMorePayLess",
     "composition": "children"
+  },
+  "custom-choise-by-style": {
+    "component": "ChoiseByStyle",
+    "composition": "children"
+  },
+  "custom-blog": {
+    "component": "Blog",
+    "composition": "children"
   }
 }

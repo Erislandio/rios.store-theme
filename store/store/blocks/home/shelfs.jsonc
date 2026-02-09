@@ -46,10 +46,17 @@
     }
   },
   "rich-text#shelf-title-4": {
-    "title": "Titulo da prateleira 3",
+    "title": "Titulo da prateleira 4",
     "props": {
       "blockClass": ["shelf-title", "brands"],
-      "text": "Chegou agora"
+      "text": "## ESCOLHA POR ESTILO"
+    }
+  },
+  "rich-text#shelf-title-5": {
+    "title": "Titulo Quem somos",
+    "props": {
+      "blockClass": ["shelf-title", "brands", "quem-somos"],
+      "text": "## NÓS SOMOS A RIOS"
     }
   },
   "rich-text#shelf-title-3": {
