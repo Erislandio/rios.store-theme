@@ -67,6 +67,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  padding: 0px;
 }
 .customLoginButton:hover {
   opacity: 0.8;
@@ -205,6 +206,11 @@
   padding: 0.5rem 1rem !important;
   flex-direction: row !important;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .divContainer--main-header {
+    padding-bottom: 0px !important;
+  }
 }
 
 .dropdownItem {

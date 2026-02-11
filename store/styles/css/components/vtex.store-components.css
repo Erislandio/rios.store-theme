@@ -61,3 +61,7 @@
 .discountInsideContainer {
   display: none;
 }
+
+.logoContainer {
+  padding: 0px;
+}

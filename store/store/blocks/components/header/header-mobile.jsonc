@@ -89,7 +89,8 @@
       "flexDirection": "row",
       "preserveMobileLayout": true,
       "flexDirectionMobile": "row",
-      "gap": "12px"
+      "gap": "1rem",
+      "alignItems": "center"
     },
     "children": ["drawer#menu", "drawer#search"]
   },
@@ -99,6 +100,7 @@
       "blockClass": ["header-mobile--icons"],
       "flexDirection": "row",
       "preserveMobileLayout": true,
+      "alignItems": "center",
       "flexDirectionMobile": "row",
       "gap": "12px"
     },
