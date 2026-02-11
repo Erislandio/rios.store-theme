@@ -18,8 +18,53 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["custom-div#main-header-mobile-2", "search-bar#default"]
+    "children": ["custom-div#main-header-mobile-2"]
   },
+
+  "drawer#search": {
+    "props": {
+      "blockClass": "drawer-search"
+    },
+    "children": ["search-bar#default"],
+    "blocks": ["drawer-trigger#search"]
+  },
+
+  "drawer-trigger#search": {
+    "props": {
+      "isFullWidth": true,
+      "blockClass": "drawer-search"
+    },
+    "children": ["custom-icons#search"]
+  },
+
+  "custom-icons#search": {
+    "props": {
+      "icon": "search"
+    }
+  },
+
+  "drawer#menu": {
+    "props": {
+      "isFullWidth": true,
+      "blockClass": "drawer-menu"
+    },
+    "children": ["custom-menu#default"],
+    "blocks": ["drawer-trigger#menu"]
+  },
+
+  "drawer-trigger#menu": {
+    "props": {
+      "blockClass": "drawer-menu"
+    },
+    "children": ["custom-icons#menu"]
+  },
+
+  "custom-icons#menu": {
+    "props": {
+      "icon": "menu"
+    }
+  },
+
   "custom-div#main-header-mobile-2": {
     "title": "Header",
     "props": {
@@ -32,8 +77,33 @@
       "blockClass": ["main-header", "container"]
     },
     "children": [
-      "custom-menu#default",
+      "custom-div#search-menu-search",
       "logo#desktop",
+      "custom-div#header-mobile-icons"
+    ]
+  },
+
+  "custom-div#search-menu-search": {
+    "props": {
+      "blockClass": ["header-mobile--icons"],
+      "flexDirection": "row",
+      "preserveMobileLayout": true,
+      "flexDirectionMobile": "row",
+      "gap": "12px"
+    },
+    "children": ["drawer#menu", "drawer#search"]
+  },
+
+  "custom-div#header-mobile-icons": {
+    "props": {
+      "blockClass": ["header-mobile--icons"],
+      "flexDirection": "row",
+      "preserveMobileLayout": true,
+      "flexDirectionMobile": "row",
+      "gap": "12px"
+    },
+    "children": [
+      "custom-login-button#default",
       "custom-minicart-button#default"
     ]
   }

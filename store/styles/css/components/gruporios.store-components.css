@@ -657,3 +657,76 @@
 .choiseByStyleContainer .choiseByStyleLink:hover {
   text-decoration: underline;
 }
+
+.BlogContainer {
+  background: var(--Neutras-04, #f1f1f1);
+  padding: 60px 0px;
+  margin: 32px 0px 40px;
+}
+.BlogContainer .BlogTitle {
+  text-align: center;
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-bottom: 32px;
+}
+.BlogContainer .BlogWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 1rem !important;
+}
+@media screen and (max-width: 768px) {
+  .BlogContainer .BlogWrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
+  }
+}
+.BlogContainer .BlogWrapper .BlogItemImage {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.BlogContainer .BlogWrapper .BlogItemTitle {
+  margin: 12px 0px;
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-transform: uppercase;
+}
+.BlogContainer .BlogWrapper .BlogItemDescription {
+  color: var(--Neutras-02, #8c8c8c);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.BlogContainer .BlogWrapper .BlogItemAction {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-transform: none;
+  text-decoration: none;
+  padding: 8px 24px;
+  background-color: #000;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+.BlogContainer .BlogWrapper .BlogItemAction:hover {
+  text-decoration: underline;
+}
