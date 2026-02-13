@@ -105,26 +105,27 @@ export default function FooterMobile({
   formasPagamento,
   siteSeguro,
   children,
-  atendimento,
-  voceNoPonto,
-  servicos,
+  departaments,
+  ajudas,
 }: Props) {
   const { handles } = useCssHandles(CSS_HANDLES)
 
   return (
     <section className={applyModifiers(handles.footerContainer, 'mobile')}>
       <div className={handles.newsletterForm}>
-        <h4 className={handles.newsletterFormTitle}>Newsletter</h4>
+        <h4 className={handles.newsletterFormTitle}>
+          Fique por dentro das nossas novidades
+        </h4>
         <p className={handles.newsletterFormDescription}>
-          Receba as nossas novidades!
+          Cadastre-se, receba, use e #abuserios
         </p>
         {children}
       </div>
       <Accordion
-        id="atendimento"
-        menuItems={atendimento}
+        id="departaments"
+        menuItems={departaments}
         open
-        title="Atendimento"
+        title="Categorias em destaques"
       />
       <Accordion
         id="institucional"
@@ -133,16 +134,10 @@ export default function FooterMobile({
         title="Institucional"
       />
       <Accordion
-        id="duvidas"
-        menuItems={servicos}
+        id="ajudas"
+        menuItems={ajudas}
         open={false}
-        title="Serviços"
-      />
-      <Accordion
-        id="suporte"
-        menuItems={voceNoPonto}
-        open={false}
-        title="Você no Ponto"
+        title="Links de Ajuda"
       />
       <ul
         className={applyModifiers(handles.footerContainerUl, 'formasPagamento')}

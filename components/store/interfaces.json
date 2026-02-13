@@ -38,9 +38,6 @@
   "custom-brand-banners": {
     "component": "BrandBanners"
   },
-  "custom-instagram-feed": {
-    "component": "CustomInstagram"
-  },
   "custom-footer": {
     "component": "Footer",
     "composition": "children"

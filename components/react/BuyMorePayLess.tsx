@@ -1,14 +1,19 @@
 import React from 'react'
 import { applyModifiers, useCssHandles } from 'vtex.css-handles'
+import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
-import useDatalayer from './hooks/useDatalayer'
+import { SliderLayout } from 'vtex.slider-layout'
 
 interface Props {
   items?: Array<{
     link?: string
     __editorItemTitle?: string
     image?: string
-    items?: string[]
+    items: Array<{
+      __editorItemTitle?: string
+      value?: string
+      quantity?: string
+    }>
   }>
   title?: string
 }
@@ -23,11 +28,87 @@ const CSS_HANDLES = [
   'middleBannersWrapper',
   'middleBannersItemsubTitle',
   'middleBannersItemContent',
+
+  'middleBannersWrapperMobile',
 ] as const
 
 const BuyMorePayLess: StoreFrontFC<Props> = ({ items = [], title }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const { pushToDataLayer } = useDatalayer()
+  const { isMobile } = useDevice()
+
+  console.log(items)
+
+  if (isMobile) {
+    return (
+      <section
+        className={applyModifiers(handles.middleBanners, 'buyMorePayLess')}
+      >
+        <h2 className={handles.middleBannersTitle}>{title}</h2>
+        <div className={handles.middleBannersWrapperMobile}>
+          <SliderLayout
+            infinite
+            itemsPerPage={2}
+            showNavigationArrows="always"
+            showPaginationDots="never"
+          >
+            {items.map((item, index) => (
+              <Link
+                key={index}
+                className={handles.middleBannersItem}
+                style={{
+                  minWidth: 'unset',
+                }}
+                to={item.link ?? '#'}
+              >
+                {item.image && (
+                  <img
+                    width={170}
+                    height={175}
+                    loading="lazy"
+                    className={handles.middleBannersItemIcon}
+                    src={item.image}
+                    alt={item.__editorItemTitle || `Image ${index + 1}`}
+                  />
+                )}
+                <div className={handles.middleBannersItemContent}>
+                  <Link
+                    to={item.link}
+                    className={handles.middleBannersItemTitle}
+                  >
+                    {item.__editorItemTitle}
+                  </Link>
+                  {item.items?.slice(0, 3)?.map((item, index) => (
+                    <p
+                      key={index}
+                      className={handles.middleBannersItemsubTitle}
+                    >
+                      <strong
+                        className={applyModifiers(
+                          handles.middleBannersItemsubTitle,
+                          'quantity'
+                        )}
+                      >
+                        {item.quantity}
+                      </strong>{' '}
+                      {item.__editorItemTitle}{' '}
+                      <strong
+                        className={applyModifiers(
+                          handles.middleBannersItemsubTitle,
+                          'value'
+                        )}
+                      >
+                        {item.value}
+                      </strong>
+                    </p>
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </SliderLayout>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section
@@ -35,18 +116,11 @@ const BuyMorePayLess: StoreFrontFC<Props> = ({ items = [], title }) => {
     >
       <h2 className={handles.middleBannersTitle}>{title}</h2>
       <div className={handles.middleBannersWrapper}>
-        {items.slice(0, 3).map((item, index) => (
+        {items.map((item, index) => (
           <Link
             key={index}
             className={handles.middleBannersItem}
             to={item.link ?? '#'}
-            onClick={() =>
-              pushToDataLayer({
-                event: 'banner_click',
-                banner_name: item.__editorItemTitle,
-                banner_link: item.link,
-              })
-            }
           >
             {item.image && (
               <img
@@ -64,7 +138,7 @@ const BuyMorePayLess: StoreFrontFC<Props> = ({ items = [], title }) => {
               </Link>
               {item.items?.slice(0, 3)?.map((item, index) => (
                 <p key={index} className={handles.middleBannersItemsubTitle}>
-                  {item}
+                  {item.__editorItemTitle} {item.value} {item.quantity}
                 </p>
               ))}
             </div>
@@ -124,7 +198,20 @@ BuyMorePayLess.schema = {
             title: 'Combos',
             type: 'array',
             items: {
-              type: 'string',
+              properties: {
+                __editorItemTitle: {
+                  title: 'Label',
+                  type: 'string',
+                },
+                value: {
+                  type: 'string',
+                  title: 'Valor',
+                },
+                quantity: {
+                  type: 'string',
+                  title: 'Quantidade',
+                },
+              },
             },
           },
         },

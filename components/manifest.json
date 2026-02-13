@@ -77,9 +77,6 @@
     "vtex.format-currency": "0.x",
     "vtex.order-items": "0.x"
   },
-  "peerDependencies": {
-    "vtex.reviews-and-ratings": "3.x"
-  },
   "settingsSchema": {
     "title": "Custom Components",
     "description": "Custom Components settings",

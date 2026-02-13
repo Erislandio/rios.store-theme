@@ -18,6 +18,7 @@ export type MenuItem = {
   href?: string
   newTab?: boolean
   subMenu?: SubMenuItem[]
+  icon?: string
 }
 
 export type MainMenu = {
@@ -29,6 +30,8 @@ export type MainMenu = {
 
 type Props = {
   items: MainMenu[]
+  others: MenuItem[]
+  contacts: MenuItem[]
   delay: any // opcional - tempo em ms
 }
 
@@ -89,7 +92,7 @@ const DropdownItem: React.FC<{
   )
 }
 
-const Menu: StoreFrontFC<Props> = ({ items }) => {
+const Menu: StoreFrontFC<Props> = ({ items, others, contacts }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
@@ -107,7 +110,13 @@ const Menu: StoreFrontFC<Props> = ({ items }) => {
   }, [])
 
   if (isMobile) {
-    return <CustomMenuMobile departments={items} />
+    return (
+      <CustomMenuMobile
+        departments={items}
+        others={others}
+        contacts={contacts}
+      />
+    )
   }
 
   const handleMenuEnter = (index: number) => {
@@ -276,6 +285,64 @@ Menu.schema = {
                 },
               },
             },
+          },
+        },
+      },
+    },
+    others: {
+      title: 'Outros links',
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          __editorItemTitle: {
+            title: 'Label',
+            type: 'string',
+          },
+          href: {
+            title: 'Link URL',
+            type: 'string',
+          },
+          icon: {
+            title: 'Icone',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          newTab: {
+            title: 'Abrir em nova aba?',
+            type: 'boolean',
+            default: false,
+          },
+        },
+      },
+    },
+    contacts: {
+      title: 'Contatos',
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          __editorItemTitle: {
+            title: 'Label',
+            type: 'string',
+          },
+          href: {
+            title: 'Link URL',
+            type: 'string',
+          },
+          icon: {
+            title: 'Icone',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader',
+            },
+          },
+          newTab: {
+            title: 'Abrir em nova aba?',
+            type: 'boolean',
+            default: false,
           },
         },
       },
