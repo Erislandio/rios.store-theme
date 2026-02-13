@@ -1,0 +1,17 @@
+.flexRow--footer--bottom {
+  background-color: #f1f1f1;
+}
+.flexRow--footer--bottom :global(.vtex-store-components-3-x-container) {
+  padding: 0px m !important;
+}
+
+.flexRowContent--footer--bottom {
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  max-width: 1440px;
+  padding: 0px 1rem;
+  margin: 0 auto;
+}
+.flexRowContent--footer--bottom :global(.vtex-store-components-3-x-container) {
+  padding: 0px m !important;
+}

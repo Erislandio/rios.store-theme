@@ -8,8 +8,8 @@
     },
     "children": [
       "custom-minicart-badge",
-      "custom-shipping-bar",
-      "minicart-base-content#custom"
+      "minicart-base-content#custom",
+      "custom-shipping-bar"
     ]
   },
   "rich-text#test": {
@@ -23,9 +23,7 @@
     }
   },
   "minicart-base-content#custom": {
-    "blocks": [
-      "minicart-empty-state"
-    ],
+    "blocks": ["minicart-empty-state"],
     "children": [
       "minicart-product-list#custom",
       "flex-layout.row#minicart-footer"
@@ -35,9 +33,7 @@
     "props": {
       "blockClass": "minicart-footer"
     },
-    "children": [
-      "flex-layout.col#minicart-footer"
-    ]
+    "children": ["flex-layout.col#minicart-footer"]
   },
   "flex-layout.col#minicart-footer": {
     "props": {
@@ -54,9 +50,7 @@
       "width": "100%",
       "blockClass": "minicart-close-button-wrapper"
     },
-    "children": [
-      "drawer-close-button#close-button"
-    ]
+    "children": ["drawer-close-button#close-button"]
   },
   "drawer-close-button#close-button": {
     "props": {
@@ -67,41 +61,23 @@
   "minicart-checkout-button#go-checkout": {
     "props": {
       "finishShoppingButtonLink": "/checkout/#/cart",
-      "blockClass": [
-        "go-checkout"
-      ]
+      "blockClass": ["go-checkout"]
     }
   },
   "minicart-product-list#custom": {
-    "blocks": [
-      "product-list#custom"
-    ]
+    "blocks": ["product-list#custom"]
   },
   "product-list#minicart": {
-    "blocks": [
-      "product-list-content-mobile"
-    ]
+    "blocks": ["product-list-content-mobile"]
   },
   "minicart-summary#custom": {
-    "blocks": [
-      "checkout-summary.compact#minicart"
-    ]
+    "blocks": ["checkout-summary.compact#minicart"]
   },
   "checkout-summary.compact#minicart": {
-    "children": [
-      "summary-totalizers#minicart"
-    ],
+    "children": ["summary-totalizers#minicart"],
     "props": {
-      "totalizers": [
-        "Items",
-        "Shipping",
-        "Discount"
-      ],
-      "totalizersToShow": [
-        "Items",
-        "Shipping",
-        "Discount"
-      ]
+      "totalizers": ["Items", "Shipping", "Discount"],
+      "totalizersToShow": ["Items", "Shipping", "Discount"]
     }
   },
   "summary-totalizers#minicart": {
@@ -111,8 +87,7 @@
     }
   },
   "minicart-empty-state": {
-    "children": [
-    ]
+    "children": []
   },
   "icon-cart#minicart-empty-state": {
     "props": {

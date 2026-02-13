@@ -2,7 +2,40 @@
   "custom-menu#default": {
     "title": "Menu",
     "props": {
-      "others": [],
+      "others": [
+        {
+          "__editorItemTitle": "Loja Física",
+          "href": "#",
+          "icon": "assets/icons/pin.svg"
+        },
+        {
+          "__editorItemTitle": "Ver blog",
+          "href": "#",
+          "icon": "assets/icons/pen.svg"
+        },
+        {
+          "__editorItemTitle": "Comprar atacado",
+          "href": "#",
+          "icon": "assets/icons/cart.svg"
+        }
+      ],
+      "contacts": [
+        {
+          "__editorItemTitle": "11 5666-6353",
+          "href": "tel:+551156666353",
+          "icon": "assets/icons/phonew.svg"
+        },
+        {
+          "__editorItemTitle": "11 98315-5112",
+          "href": "https://wa.me/5511983155112",
+          "icon": "assets/icons/whatsw.svg"
+        },
+        {
+          "__editorItemTitle": "contato@riosmodaintima.com.br",
+          "href": "mailto:contato@riosmodaintima.com.br",
+          "icon": "assets/icons/emailw.svg"
+        }
+      ],
       "items": [
         {
           "__editorItemTitle": "Lançamentos",

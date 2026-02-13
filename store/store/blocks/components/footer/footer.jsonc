@@ -1,54 +1,33 @@
 {
   "footer": {
     "title": "Footer",
-    "blocks": [
-      "footer-layout.desktop",
-      "footer-layout.mobile"
-    ]
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
   },
   "footer-layout.desktop": {
     "title": "Footer Desktop",
-    "children": [
-      "flex-layout.row#footer-1",
-      "flex-layout.row#bottem"
-    ]
+    "children": ["custom-footer#footer-3", "flex-layout.row#bottem"]
   },
   "footer-layout.mobile": {
     "title": "Footer Mobile",
-    "children": [
-      "flex-layout.row#footer-1",
-      "flex-layout.row#bottem"
-    ]
+    "children": ["custom-footer#footer-3", "flex-layout.row#bottem"]
   },
   "flex-layout.row#bottem": {
     "title": "Footer 2",
     "props": {
       "preventHorizontalStretch": true,
       "preventVerticalStretch": true,
-      "blockClass": [
-        "footer--bottom",
-        "container"
-      ]
+      "blockClass": ["footer--bottom", "container"]
     },
-    "children": [
-      "image#ximenes",
-      "rich-text#copyright",
-      "custom-div#auaha"
-    ]
+    "children": ["rich-text#copyright", "custom-div#auaha"]
   },
   "custom-div#auaha": {
     "title": "Logos footer",
-    "children": [
-      "image#auaha",
-      "image#vtex"
-    ],
+    "children": ["image#auaha", "image#vtex"],
     "props": {
       "alignItems": "center",
       "justifyContent": "center",
       "gap": "8px",
-      "blockClass": [
-        "auaha-vtex"
-      ]
+      "blockClass": ["auaha-vtex"]
     }
   },
   "image#ximenes": {
@@ -56,9 +35,7 @@
       "width": 139,
       "height": 24,
       "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/a9c39dd3-dba3-4628-928f-9b4f10acde71___b38fc60600d267e302b9442f2b5a4e40.png",
-      "blockClass": [
-        "logo-ximenes"
-      ]
+      "blockClass": ["logo-ximenes"]
     }
   },
   "image#auaha": {
@@ -67,9 +44,7 @@
       "src": "assets/icons/auaha.svg",
       "width": 44,
       "height": 16,
-      "blockClass": [
-        "logo-auaha"
-      ]
+      "blockClass": ["logo-auaha"]
     }
   },
   "image#vtex": {
@@ -77,32 +52,23 @@
     "props": {
       "width": 44,
       "height": 16,
-      "blockClass": [
-        "logo-vtex"
-      ],
+      "blockClass": ["logo-vtex"],
       "src": "assets/icons/vtex.svg"
     }
   },
   "rich-text#copyright": {
     "title": "Copyright",
     "props": {
-      "blockClass": [
-        "copyright"
-      ],
-      "text": "Copyright © 2025-lojaspontodamoda.com.br. Todos os direitos reservados. Os preços, promoções, condições de pagamento, frete e produtos são válidos exclusivamente para compras realizadas via internet. Fotos meramente ilustrativas. Nome da Empresa Ltda. Me CNPJ: 11.111.111/0001-11 - Endereço: Rua da Rua, 00 - São Paulo - SP"
+      "blockClass": ["copyright"],
+      "text": "© 2020 XXXXXXXXXX | Todos os direitos reservados | CNPJ: XX.XXX.XXX/0001-XX | Rua XXXXXXXXXXX XXXXX, XXX - São Paulo - SP"
     }
   },
   "flex-layout.row#footer-1": {
     "title": "Footer Conteudo",
     "props": {
-      "blockClass": [
-        "footer",
-        "container"
-      ]
+      "blockClass": ["footer", "container"]
     },
-    "children": [
-      "custom-footer#footer-3"
-    ]
+    "children": ["custom-footer#footer-3"]
   },
   "newsletter-form#default": {
     "title": "Newsletter",
@@ -116,55 +82,49 @@
   "newsletter-input-name": {
     "props": {
       "placeholderText": "Nome",
-      "blockClass": [
-        "input-name"
-      ]
+      "blockClass": ["input-name"]
     }
   },
   "newsletter-submit#custom": {
     "props": {
       "submitButtonLabel": "Cadastrar",
-      "blockClass": [
-        "submit"
-      ]
+      "blockClass": ["submit"]
     }
   },
   "newsletter-input-email#custom": {
     "props": {
       "placeholderText": "E-mail",
-      "blockClass": [
-        "input-email"
-      ]
+      "blockClass": ["input-email"]
     }
   },
   "custom-footer#footer-3": {
     "title": "Custom Footer",
-    "children": [
-      "newsletter-form#default"
-    ],
+    "children": ["newsletter-form#default"],
     "props": {
-      "atendimento": [
+      "contacts": [
         {
+          "__editorItemTitle": "Telefone",
+          "url": "tel:(11) 5666-6353",
+          "linkText": "(11) 5666-6353",
+          "icon": "assets/icons/tel-footer.svg"
+        },
+        {
+          "__editorItemTitle": "Whatsapp",
+          "url": "https://wa.me/551198315-5112",
+          "linkText": "(11) 98315-5112",
+          "icon": "assets/icons/whats-footer.svg"
+        },
+        {
+          "__editorItemTitle": "Email",
+          "url": "mailto:contato@riosmodaintima.com.br",
+          "linkText": "clique aqui",
+          "icon": "assets/icons/email-footer.png"
+        },
+        {
+          "__editorItemTitle": "Nossas Lojas",
           "url": "/lojas",
-          "__editorItemTitle": "Nossas Lojas"
-        },
-        {
-          "url": "/contato",
-          "__editorItemTitle": "Fale Conosco"
-        },
-        {
-          "url": "tel:+5585996171019",
-          "__editorItemTitle": "(85) 99617-1019",
-          "icon": "assets/icons/whats.svg"
-        },
-        {
-          "url": "mailto:atendimento@lojaspontodamoda.com.br",
-          "__editorItemTitle": "atendimento@lojaspontodamoda.com.br",
-          "icon": "assets/icons/email.svg"
-        },
-        {
-          "url": "none",
-          "__editorItemTitle": "Segunda a Sexta de 09h às 17h / Sábados de 10h às 14h"
+          "linkText": "clique aqui",
+          "icon": "assets/icons/loja-footer.png"
         }
       ],
       "institucionals": [
@@ -189,90 +149,186 @@
           "__editorItemTitle": "Parceiros"
         }
       ],
-      "servicos": [
+
+      "departaments": [
         {
-          "url": "/formas-de-pagamento",
-          "__editorItemTitle": "Formas de pagamento"
+          "url": "/sutia",
+          "__editorItemTitle": "Sutiã"
         },
         {
-          "url": "/troca-e-devolucao",
-          "__editorItemTitle": "Troca e devolução"
+          "url": "/calcinha",
+          "__editorItemTitle": "Calcinha"
         },
         {
-          "url": "/cupons-e-descontos",
-          "__editorItemTitle": "Cupons e descontos"
+          "url": "/conjunto",
+          "__editorItemTitle": "Conjunto"
         },
         {
-          "url": "/retirada-em-loja",
-          "__editorItemTitle": "Retirada em loja"
+          "url": "/pijamas",
+          "__editorItemTitle": "Pijamas"
         },
         {
-          "url": "/tipos-de-entrega",
-          "__editorItemTitle": "Tipos de entrega"
+          "url": "/bodies",
+          "__editorItemTitle": "Bodies"
+        },
+        {
+          "url": "/meia",
+          "__editorItemTitle": "Meia"
+        },
+        {
+          "url": "/sexshop",
+          "__editorItemTitle": "SexShop"
+        },
+        {
+          "url": "/acessorios",
+          "__editorItemTitle": "Acessórios"
+        },
+        {
+          "url": "/sutia",
+          "__editorItemTitle": "Sutiã"
+        },
+        {
+          "url": "/calcinha",
+          "__editorItemTitle": "Calcinha"
+        },
+        {
+          "url": "/conjunto",
+          "__editorItemTitle": "Conjunto"
+        },
+        {
+          "url": "/pijamas",
+          "__editorItemTitle": "Pijamas"
+        },
+        {
+          "url": "/bodies",
+          "__editorItemTitle": "Bodies"
+        },
+        {
+          "url": "/meia",
+          "__editorItemTitle": "Meia"
+        },
+        {
+          "url": "/sexshop",
+          "__editorItemTitle": "SexShop"
+        },
+        {
+          "url": "/acessorios",
+          "__editorItemTitle": "Acessórios"
         }
       ],
-      "voceNoPonto": [
-        {
-          "url": "/cartao-ponto-da-moda",
-          "__editorItemTitle": "Cartão Ponto da Moda"
-        },
-        {
-          "url": "/clube-de-vantagens",
-          "__editorItemTitle": "Clube de vantagens"
-        },
-        {
-          "url": "/cupons-de-desconto",
-          "__editorItemTitle": "Cupons de desconto"
-        },
-        {
-          "url": "/politica-de-entrega",
-          "__editorItemTitle": "Política de Entrega"
-        }
-      ],
+
       "formasPagamento": [
         {
           "__editorItemTitle": "PAGAMENTOS",
-          "icon": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f04873c4-7567-40cf-a3ca-2e9d0fafe5f6___6bc15945f266d63651854c7200c62eb1.png",
-          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f04873c4-7567-40cf-a3ca-2e9d0fafe5f6___6bc15945f266d63651854c7200c62eb1.png"
+          "icon": "assets/icons/visa.svg",
+          "image": "assets/icons/visa.svg"
+        },
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/icons/american.svg",
+          "image": "assets/icons/american.svg"
+        },
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/icons/dinners.svg",
+          "image": "assets/icons/dinners.svg"
+        },
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/icons/mastercard.svg",
+          "image": "assets/icons/mastercard.svg"
+        },
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/icons/bitcoin.svg",
+          "image": "assets/icons/bitcoin.svg"
+        },
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/icons/jcb.svg",
+          "image": "assets/icons/jcb.svg"
+        },
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/icons/discovery.svg",
+          "image": "assets/icons/discovery.svg"
+        },
+        {
+          "__editorItemTitle": "PAGAMENTOS",
+          "icon": "assets/icons/paypal.svg",
+          "image": "assets/icons/paypal.svg"
+        }
+      ],
+
+      "ajudas": [
+        {
+          "url": "/como-comprar",
+          "__editorItemTitle": "Como Comprar"
+        },
+        {
+          "url": "/trocas-e-devolucoes",
+          "__editorItemTitle": "Trocas e Devoluções"
+        },
+        {
+          "url": "/entrega-e-frete",
+          "__editorItemTitle": "Entrega e Frete"
+        },
+        {
+          "url": "/fale-conosco",
+          "__editorItemTitle": "Fale Conosco"
+        },
+        {
+          "url": "/compre-pelo-whatsapp",
+          "__editorItemTitle": "Compre pelo Whatsapp"
         }
       ],
       "redesSociais": [
         {
-          "image": "assets/icons/facebook.svg",
-          "url": "https://www.facebook.com/lojaspontodamoda",
+          "image": "assets/icons/Frame3.png",
+          "url": "#",
           "__editorItemTitle": "Facebook"
         },
         {
-          "image": "assets/icons/you.svg",
-          "url": "https://www.facebook.com/lojaspontodamoda",
+          "image": "assets/icons/Frame4.png",
+          "url": "#",
           "__editorItemTitle": "Facebook"
         },
         {
-          "image": "assets/icons/insta.svg",
-          "url": "https://www.facebook.com/lojaspontodamoda",
+          "image": "assets/icons/Frame5.png",
+          "url": "#",
           "__editorItemTitle": "Facebook"
         },
         {
-          "image": "assets/icons/pint.svg",
-          "url": "https://www.facebook.com/lojaspontodamoda",
+          "image": "assets/icons/Frame6.png",
+          "url": "#",
           "__editorItemTitle": "Facebook"
         },
         {
-          "image": "assets/icons/tik.svg",
-          "url": "https://www.facebook.com/lojaspontodamoda",
-          "__editorItemTitle": "Facebook"
-        },
-        {
-          "image": "assets/icons/spot.svg",
-          "url": "https://www.facebook.com/lojaspontodamoda",
+          "image": "assets/icons/Frame7.png",
+          "url": "#",
           "__editorItemTitle": "Facebook"
         }
       ],
       "siteSeguro": [
         {
           "__editorItemTitle": "PCI",
-          "icon": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/29f4a99f-639f-4252-8049-40d6abb63cf7___2634d3919884e72a2ee58894c8223ce0.png",
-          "image": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/29f4a99f-639f-4252-8049-40d6abb63cf7___2634d3919884e72a2ee58894c8223ce0.png"
+          "icon": "assets/icons/google.svg",
+          "image": "assets/icons/google.svg"
+        },
+        {
+          "__editorItemTitle": "PCI",
+          "icon": "assets/icons/lets-encrypt.svg",
+          "image": "assets/icons/lets-encrypt.svg"
+        },
+        {
+          "__editorItemTitle": "PCI",
+          "icon": "assets/icons/ebit.svg",
+          "image": "assets/icons/ebit.svg"
+        },
+        {
+          "__editorItemTitle": "PCI",
+          "icon": "assets/icons/vtex-pci.png",
+          "image": "assets/icons/vtex-pci.png"
         }
       ]
     }

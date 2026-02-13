@@ -126,7 +126,7 @@
   "image#banner--footer--mobile": {
     "title": "Banner do rodapé [Mobile]",
     "props": {
-      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/dfac76ef-3715-40bb-8d7a-30465a84f72b___8efbdd24524872ce33bbf4f3e83e388c.png",
+      "src": "/arquivos/banner-mobile-1.png",
       "alt": "Banner do rodapé",
       "link": "/"
     }
@@ -134,7 +134,7 @@
   "image#banner--footer--mobile-2": {
     "title": "Banner do rodapé [Mobile]",
     "props": {
-      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/83b8df34-46a3-43f7-a32e-eb18b64b065b___68dfa4edbe3ed6d3fd41db6eb542852e.png",
+      "src": "/arquivos/banner-mobile-1.png",
       "alt": "Banner do rodapé",
       "link": "/"
     }
@@ -156,7 +156,7 @@
   "image#banner--footer-2": {
     "title": "Banner do rodapé",
     "props": {
-      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/9cb1c3fb-dd65-4f7d-80b1-1408b270139c___cb6fa0a534146f06f9bb4005b3bb889f.png",
+      "src": "/arquivos/banner-desktop-2.png",
       "alt": "Banner do rodapé",
       "link": "/"
     }

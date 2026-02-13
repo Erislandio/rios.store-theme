@@ -19,8 +19,19 @@
       "list-context.product-list#prateleira3",
       "rich-text#shelf-title-4",
       "custom-choise-by-style#default",
-      "custom-blog#default"
+      "custom-blog#default",
+      "rich-text#sobre-nos"
     ]
+  },
+
+  "rich-text#sobre-nos": {
+    "title": "Sobre nós",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["sobre-nos"],
+      "text": "### Nós somos a RIOS \n\n Há mais de 19 anos, na cidade maravilhosa, nascia a RIOS, uma empresa de lingerie com fabricação própria e que rapidamente encantou a mulher brasileira. \n Com uma das mais completas linhas de roupa íntima feminina e masculina, a empresa veio para atender o maior desejo das mulheres: estar ainda mais lindas e confiantes. \n Para isso, as peças são produzidas através de uma tecnologia de ponta e elaboradas para aquelas que sabem usar a moda com personalidade e estão sempre conectadas ao mundo."
+    }
   },
 
   "custom-choise-by-style#default": {
@@ -102,27 +113,63 @@
           "__editorItemTitle": "Combo de calcinhas",
           "image": "/arquivos/b1.png",
           "items": [
-            "1 calcinha por 10,00",
-            "3 calcinhas por 25,00",
-            "5 calcinhas por 40,00"
+            {
+              "__editorItemTitle": "calcinha por",
+              "quantity": "1",
+              "value": "10,00"
+            },
+            {
+              "__editorItemTitle": "calcinhas por",
+              "quantity": "3",
+              "value": "25,00"
+            },
+            {
+              "__editorItemTitle": "calcinhas por",
+              "quantity": "5",
+              "value": "40,00"
+            }
           ]
         },
         {
           "__editorItemTitle": "Combo de cuecas",
           "image": "/arquivos/b2.png",
           "items": [
-            "1 cueca por 10,00",
-            "3 cuecas por 25,00",
-            "5 cuecas por 40,00"
+            {
+              "__editorItemTitle": "cueca por",
+              "quantity": "1",
+              "value": "10,00"
+            },
+            {
+              "__editorItemTitle": "cuecas por",
+              "quantity": "3",
+              "value": "25,00"
+            },
+            {
+              "__editorItemTitle": "cuecas por",
+              "quantity": "5",
+              "value": "40,00"
+            }
           ]
         },
         {
           "__editorItemTitle": "Combo de Pijamas",
           "image": "/arquivos/b3.png",
           "items": [
-            "1 pijama por 10,00",
-            "3 pijamas por 18,00",
-            "5 pijamas por 25,00"
+            {
+              "__editorItemTitle": "pijama por",
+              "quantity": "1",
+              "value": "10,00"
+            },
+            {
+              "__editorItemTitle": "pijamas por",
+              "quantity": "3",
+              "value": "18,00"
+            },
+            {
+              "__editorItemTitle": "pijamas por",
+              "quantity": "5",
+              "value": "25,00"
+            }
           ]
         }
       ]

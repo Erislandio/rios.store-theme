@@ -46,7 +46,7 @@
   "drawer#menu": {
     "props": {
       "isFullWidth": true,
-      "blockClass": "drawer-menu"
+      "blockClass": ["drawer-search", "drawer-menu"]
     },
     "children": ["custom-menu#default"],
     "blocks": ["drawer-trigger#menu"]

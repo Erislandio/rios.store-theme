@@ -1,0 +1,211 @@
+.container {
+  :global(.vtex-button) {
+    // vamos abrir o login com componente custom
+    display: none;
+  }
+}
+
+.box {
+  top: 14px !important;
+  right: -12px !important;
+}
+
+.formTitle {
+  color: var(--Primria-04, #800232);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 10px; /* 71.429% */
+}
+
+.optionsList {
+  padding: 0px 1.5rem;
+
+  .accessCodeOptionBtn {
+    border-radius: 5px;
+    border: 1px solid var(--Primria-01, #c00146);
+    background: var(--Neutras-05, #fff);
+
+    :global(.vtex-button) {
+      color: var(--Primria-01, #c00146);
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 10px;
+      background-color: transparent;
+
+      :global(.vtex-button__label) {
+        padding: 0px;
+        text-transform: none;
+      }
+    }
+  }
+
+  .googleOptionBtn {
+    border-radius: 5px;
+    border: 1px solid #0080ee;
+    background: var(--Neutras-04, #f1f1f1);
+
+    .oauthLabel {
+      text-transform: none;
+    }
+
+    :global(.vtex-button) {
+      color: #0080ee;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 10px;
+      background-color: transparent;
+
+      :global(.vtex-button__label) {
+        padding: 0px;
+        text-transform: none;
+      }
+    }
+  }
+
+  .facebookOptionBtn {
+    border-radius: 5px;
+    background: #415893;
+
+    .oauthLabel {
+      text-transform: none;
+    }
+
+    :global(.vtex-button) {
+      color: #fff;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      padding: 5px;
+      line-height: 10px;
+      background-color: transparent;
+
+      svg {
+        display: none;
+      }
+
+      :global(.vtex-button__label) {
+        padding: 0px;
+        text-transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 0 10 20' fill='none'%3E%3Cpath d='M9.97611 6.77441C9.91677 7.13908 9.84211 7.50279 9.80287 7.86937C9.72726 8.56807 9.67174 9.26869 9.60474 10.0124H6.67689V20H2.2473V10.0363H0.00188443C0.00188443 8.97293 -0.00864374 7.95838 0.0200701 6.94478C0.0229415 6.85194 0.272751 6.69689 0.414406 6.69019C0.981026 6.66052 1.55147 6.67774 2.15734 6.67774C2.15734 5.94554 2.13341 5.24875 2.16308 4.55388C2.20328 3.60728 2.30569 2.65015 2.78234 1.81937C3.34226 0.84501 4.28407 0.357832 5.36946 0.19512C6.09687 0.0860078 6.83673 0.0429366 7.57181 0.0151799C8.36239 -0.0144911 9.15585 0.00848076 9.97419 0.00848076V3.33354C9.8067 3.33354 9.62197 3.32684 9.4382 3.3345C8.76247 3.36417 8.08578 3.39001 7.41005 3.43595C6.97647 3.46562 6.65966 3.83986 6.65009 4.34331C6.63574 5.10423 6.64626 5.8661 6.64626 6.69593H9.8938C9.92155 6.72177 9.94835 6.74761 9.97611 6.77346V6.77441Z' fill='white'/%3E%3C/svg%3E");
+          content: '';
+          width: 10px;
+          height: 20px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  :global(.vtex-input-prefix__group) {
+    padding: 12px 0px;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 0px;
+    min-height: 48px;
+
+    :global(.vtex-styleguide-9-x-input) {
+      color: var(--Neutras-01, #1b1b1b);
+      font-family: Poppins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  .formFooter {
+    .sendButton {
+      :global(.vtex-button) {
+        border: none;
+        display: flex;
+        padding: 9px 0px;
+        justify-content: center;
+        border-radius: 0px;
+        background-color: #000;
+
+        :global(.vtex-button__label) {
+          color: var(--Neutras-05, #fff);
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 10px;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  .backButton {
+    :global(.vtex-button) {
+      border: none;
+      display: flex;
+      padding: 9px 0px;
+      justify-content: center;
+      border-radius: 0px;
+      border: 1px solid #000;
+      background-color: #fff;
+
+      .arrowBackIcon {
+        display: none;
+      }
+
+      :global(.vtex-button__label) {
+        color: var(--Neutras-01, #1b1b1b);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 10px;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.contentAlwaysWithOptions {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 1rem;
+  margin: 60px;
+  border-radius: 0px;
+  background: #fff;
+  margin: 0 auto;
+  border: 1px solid #dedede;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: fit-content;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .optionsList,
+  .contentForm {
+    padding: 0px;
+    width: 100%;
+  }
+}
