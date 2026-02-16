@@ -75,19 +75,8 @@
     "vtex.store-graphql": "2.x",
     "gruporios.service": "0.x",
     "vtex.format-currency": "0.x",
-    "vtex.order-items": "0.x"
-  },
-  "settingsSchema": {
-    "title": "Custom Components",
-    "description": "Custom Components settings",
-    "type": "object",
-    "properties": {
-      "shippingBar": {
-        "title": "Valor barra de frete",
-        "type": "number",
-        "default": 250
-      }
-    }
+    "vtex.order-items": "0.x",
+    "vtex.checkout-resources": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

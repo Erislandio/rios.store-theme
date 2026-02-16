@@ -1,8 +1,28 @@
 {
   "header-layout.desktop#desktop": {
     "title": "Header Desktop",
-    "children": ["custom-top-bar#default", "sticky-layout#desktop"]
+    "children": [
+      "custom-top-bar#default",
+      "sticky-layout#desktop",
+      "custom-exit-intent-modal#default",
+      "custom-newsletter-modal#default"
+    ]
   },
+
+  "custom-newsletter-modal#default": {
+    "props": {},
+    "children": ["newsletter-form#default"]
+  },
+
+  "custom-exit-intent-modal#default": {
+    "props": {
+      "title": "Não vá embora!",
+      "text": "Veja o que preparamos para você!",
+      "collectionId": "189"
+    },
+    "blocks": ["product-summary.shelf#modal"]
+  },
+
   "custom-top-bar#default": {
     "title": "Top Bar",
     "props": {

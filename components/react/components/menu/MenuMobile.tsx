@@ -168,8 +168,6 @@ export default function CustomMenuMobile({
 }) {
   const { handles } = useCssHandles(CSS_HANDLES)
 
-  console.log(departments, others, contacts)
-
   return (
     <section className={applyModifiers(handles.menuContainer, 'mobile')}>
       <div className={handles.menuItems}>

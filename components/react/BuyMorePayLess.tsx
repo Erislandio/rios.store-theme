@@ -36,8 +36,6 @@ const BuyMorePayLess: StoreFrontFC<Props> = ({ items = [], title }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { isMobile } = useDevice()
 
-  console.log(items)
-
   if (isMobile) {
     return (
       <section

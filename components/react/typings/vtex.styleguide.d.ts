@@ -282,9 +282,22 @@ declare module 'vtex.styleguide' {
     value?: number
   }
 
+  interface ModalProps {
+    centered?: boolean
+    isOpen?: boolean
+    onClose: () => void
+    title?: string | React.ReactNode
+    children?: React.ReactNode
+    bottomBar?: React.ReactNode
+    container?: React.RefObject<any>
+    showCloseButton?: boolean
+    closeOnOverlayClick?: boolean
+  }
+
   export const Input: React.FC<InputProps>
   export const Textarea: React.FC<TextareaProps>
   export const RadioGroup: React.FC<RadioGroupProps>
   export const CheckboxGroup: React.FC<CheckboxGroupProps>
   export const NumericStepper: React.FC<NumericStepperProps>
+  export const Modal: React.FC<ModalProps>
 }

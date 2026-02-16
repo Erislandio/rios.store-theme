@@ -16,10 +16,7 @@ const cssHandles = [
 const CustomShippingBar: StoreFrontFC<{
   shippingValue: number
   shippingLabel: string
-}> = ({
-  shippingValue = 279,
-  shippingLabel = '*Apenas para fretes para o estado do Ceará',
-}) => {
+}> = ({ shippingValue = 279 }) => {
   const { orderForm } = OrderForm.useOrderForm() as { orderForm: OrderFormType }
   const { handles } = useCssHandles(cssHandles)
 
@@ -45,8 +42,6 @@ const CustomShippingBar: StoreFrontFC<{
     threshold ? Math.round((total / threshold) * 100) : 100
   )
 
-  const isShippingBarFree = remaining <= 0
-
   return (
     <div className={handles.customShippingBar}>
       <div className={handles.customShippingBar__message}>
@@ -61,18 +56,10 @@ const CustomShippingBar: StoreFrontFC<{
             >
               frete grátis
             </b>
-            <span
-              className={applyModifiers(
-                handles.customShippingBar__remaining,
-                'disclaimer'
-              )}
-            >
-              *Apenas para fretes para o estado do Ceará
-            </span>
           </div>
         ) : (
           <div className={handles.customShippingBar__remaining}>
-            Faltam apenas{' '}
+            Faltam{' '}
             <b
               className={applyModifiers(
                 handles.customShippingBar__remaining,
@@ -81,23 +68,7 @@ const CustomShippingBar: StoreFrontFC<{
             >
               {formatPrice(remaining)}
             </b>{' '}
-            para ganhar{' '}
-            <b
-              className={applyModifiers(
-                handles.customShippingBar__remaining,
-                'bold'
-              )}
-            >
-              frete grátis
-            </b>
-            <span
-              className={applyModifiers(
-                handles.customShippingBar__remaining,
-                'disclaimer'
-              )}
-            >
-              {shippingLabel}
-            </span>
+            para ganhar frete grátis
           </div>
         )}
       </div>
@@ -113,10 +84,18 @@ const CustomShippingBar: StoreFrontFC<{
           aria-valuemax={100}
           role="progressbar"
         />
+        <div
+          className={handles.customShippingBarItemsPrice}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <span>{formatPrice(threshold)}</span>
+          <span>{formatPrice(total)}</span>
+        </div>
       </div>
-      <span className={handles.customShippingBar__progress_price}>
-        {isShippingBarFree ? null : formatPrice(remaining)}
-      </span>
     </div>
   )
 }
@@ -129,7 +108,7 @@ CustomShippingBar.schema = {
     shippingLabel: {
       type: 'string',
       title: 'Label da Barra de Frete',
-      default: '*Apenas para fretes para o estado do Ceará',
+      default: '',
     },
     shippingValue: {
       type: 'number',

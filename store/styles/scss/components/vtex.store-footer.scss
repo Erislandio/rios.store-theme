@@ -1,0 +1,13 @@
+.footerLayout {
+  overflow: hidden !important;
+}
+
+:global(.vtex-toast) {
+  background-color: #000;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}

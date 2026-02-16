@@ -10,6 +10,16 @@
       "custom-combo-price"
     ]
   },
+  "product-summary.shelf#modal": {
+    "title": "Card de produto",
+    "children": [
+      "custom-product-summary-badge",
+      "product-summary-image#custom",
+      "product-summary-name",
+      "custom-div#summary-price-container",
+      "custom-combo-price"
+    ]
+  },
 
   "custom-div#summary-price-container": {
     "props": {

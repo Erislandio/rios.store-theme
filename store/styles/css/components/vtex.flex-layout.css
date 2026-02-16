@@ -15,3 +15,16 @@
 .flexRowContent--footer--bottom :global(.vtex-store-components-3-x-container) {
   padding: 0px m !important;
 }
+
+@media screen and (max-width: 1024px) {
+  .flexRow--footer--bottom {
+    padding-bottom: 40px;
+  }
+}
+.flexRowContent--minicart-footer {
+  padding: 1rem 0.5rem;
+}
+
+.flexRow--minicart-footer {
+  box-shadow: none;
+}

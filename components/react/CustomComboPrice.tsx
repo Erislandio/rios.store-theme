@@ -1,15 +1,12 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { ProductSummaryContext } from 'vtex.product-summary-context'
 
 export default function CustomComboPrice() {
   const { handles } = useCssHandles([
     'comboPriceContainer',
     'comboPriceText',
   ] as const)
-  const { product } = ProductSummaryContext.useProductSummary()
-
-  console.log(product)
+  // const { product } = ProductSummaryContext.useProductSummary()
 
   return (
     <div className={handles.comboPriceContainer}>

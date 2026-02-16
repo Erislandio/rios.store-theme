@@ -126,5 +126,18 @@
   "custom-blog": {
     "component": "Blog",
     "composition": "children"
+  },
+  "custom-coupon": {
+    "component": "Coupon",
+    "composition": "children"
+  },
+  "custom-exit-intent-modal": {
+    "component": "ExitIntentModal",
+    "composition": "blocks",
+    "required": ["product-summary.shelf"]
+  },
+  "custom-newsletter-modal": {
+    "component": "NewsletterModal",
+    "composition": "children"
   }
 }

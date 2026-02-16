@@ -1,0 +1,80 @@
+query search($collectionId: String!) {
+  productSearch(collection: $collectionId)
+    @context(provider: "vtex.search-graphql") {
+    products {
+      brand
+      brandId
+      cacheId
+      categoryId
+      description
+      link
+      linkText
+      productId
+      productName
+      productReference
+      titleTag
+      metaTagDescription
+      jsonSpecifications
+      releaseDate
+      productClusters {
+        id
+        name
+      }
+      properties {
+        originalName
+        name
+      }
+      specification
+      skuSpecifications {
+        field {
+          originalName
+          name
+        }
+        values {
+          originalName
+          name
+        }
+      }
+      items {
+        itemId
+        variations {
+          originalName
+          name
+        }
+        images {
+          cacheId
+          imageId
+          imageLabel
+          imageTag
+          imageUrl
+          imageText
+        }
+        name
+        nameComplete
+        complementName
+        ean
+        measurementUnit
+        unitMultiplier
+        estimatedDateArrival
+        sellers {
+          sellerId
+          sellerName
+          addToCartLink
+          sellerDefault
+          commertialOffer {
+            Price
+            ListPrice
+            spotPrice
+            PriceWithoutDiscount
+            RewardValue
+            PriceValidUntil
+            AvailableQuantity
+            Tax
+            taxPercentage
+            CacheVersionUsedToCallCheckout
+          }
+        }
+      }
+    }
+  }
+}

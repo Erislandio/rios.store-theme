@@ -179,3 +179,17 @@
   padding: 0px;
   width: 100%;
 }
+
+:global(.vtex-product-list-0-x-quantitySelectorButton) svg {
+  display: none;
+}
+
+:global(.vtex-product-list-0-x-inputContainer) input {
+  color: var(--Neutras-01, #1b1b1b);
+  /* Textos/Texto Regular */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}

@@ -15,6 +15,7 @@ const CSS_HANDLES = [
   'footerContainerBottom',
   'footerContainerLink',
   'footerContainerImage',
+  'footerCollapsableIcon',
   'footerContainerImageContent',
   'newsletterForm',
   'newsletterFormTitle',
@@ -40,7 +41,14 @@ function Accordion({
       <Collapsible
         align="right"
         caretColor="#fff"
-        header={<h4 className={handles.footerContainerH4}>{title}</h4>}
+        header={
+          <h4 className={handles.footerContainerH4}>
+            {title}
+            <span className={handles.footerCollapsableIcon}>
+              {isOpen ? '-' : '+'}
+            </span>
+          </h4>
+        }
         onClick={() => setOpen(!isOpen)}
         isOpen={isOpen}
       >
@@ -107,6 +115,7 @@ export default function FooterMobile({
   children,
   departaments,
   ajudas,
+  contacts,
 }: Props) {
   const { handles } = useCssHandles(CSS_HANDLES)
 
@@ -127,6 +136,72 @@ export default function FooterMobile({
         open
         title="Categorias em destaques"
       />
+      <div
+        className={applyModifiers(handles.footerContainerWrapper, 'contacts')}
+      >
+        <h4 className={handles.footerContainerH4}>Contatos</h4>
+        <ul className={handles.footerContainerUl}>
+          {contacts.map((item, index, array) => (
+            <li
+              key={item.__editorItemTitle}
+              className={handles.footerContainerLi}
+            >
+              <Link
+                className={applyModifiers(
+                  handles.footerContainerLink,
+                  item.url.includes('mailto:')
+                    ? 'email'
+                    : index === array.length - 1
+                    ? 'last'
+                    : ''
+                )}
+                target={item.newTab ? '_blank' : ''}
+                to={item.url}
+                fetchPage
+                rel="noreferrer"
+              >
+                {item.icon && (
+                  <img
+                    loading="lazy"
+                    src={item.icon}
+                    alt={item.__editorItemTitle}
+                    title={item.__editorItemTitle}
+                    width={52}
+                    height={52}
+                  />
+                )}
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                  }}
+                >
+                  <b
+                    className={applyModifiers(
+                      handles.footerContainerLink,
+                      'title'
+                    )}
+                  >
+                    {item.__editorItemTitle}
+                  </b>
+                  <span
+                    className={`${applyModifiers(
+                      handles.footerContainerLink,
+                      'description'
+                    )} ${applyModifiers(
+                      handles.footerContainerLink,
+                      item.linkText.includes('aqui') ? 'here' : ''
+                    )}`}
+                  >
+                    {item.linkText}
+                  </span>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
       <Accordion
         id="institucional"
         menuItems={institucionals}
@@ -139,49 +214,10 @@ export default function FooterMobile({
         open={false}
         title="Links de Ajuda"
       />
-      <ul
-        className={applyModifiers(handles.footerContainerUl, 'formasPagamento')}
-      >
-        {formasPagamento.map((item) => (
-          <li
-            key={item.__editorItemTitle}
-            className={handles.footerContainerLi}
-          >
-            <img
-              alt={item.__editorItemTitle}
-              width={300}
-              height={30}
-              src={item.image}
-            />
-          </li>
-        ))}
-      </ul>
-      <ul className={applyModifiers(handles.footerContainerUl, 'siteSeguro')}>
-        {siteSeguro.map((item) => (
-          <li
-            key={item.__editorItemTitle}
-            className={handles.footerContainerLi}
-          >
-            <Link
-              className={handles.footerContainerLink}
-              target={item.newTab ? '_blank' : ''}
-              to={item.url}
-              fetchPage
-              rel="noreferrer"
-            >
-              <img
-                alt={item.__editorItemTitle}
-                loading="lazy"
-                src={item.image}
-              />
-            </Link>
-          </li>
-        ))}
-      </ul>
       <div
         className={applyModifiers(handles.footerContainerWrapper, 'siga-nos')}
       >
-        <h4 className={handles.footerContainerH4}>Siga-nos</h4>
+        <h4 className={handles.footerContainerH4}>Siga-nos nas redes</h4>
         <ul
           className={applyModifiers(handles.footerContainerUl, 'redes-sociais')}
         >
@@ -203,10 +239,65 @@ export default function FooterMobile({
                     src={item.image}
                     alt={item.__editorItemTitle}
                     title={item.__editorItemTitle}
-                    width={20}
-                    height={20}
+                    width={42}
+                    height={42}
                   />
                 )}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div
+        className={applyModifiers(
+          handles.footerContainerWrapper,
+          'formasPagamento'
+        )}
+      >
+        <h4 className={handles.footerContainerH4}>Formas de Pagamento</h4>
+        <ul
+          className={applyModifiers(
+            handles.footerContainerUl,
+            'formasPagamento'
+          )}
+        >
+          {formasPagamento.map((item) => (
+            <li
+              key={item.__editorItemTitle}
+              className={handles.footerContainerLi}
+            >
+              <img
+                alt={item.__editorItemTitle}
+                width={300}
+                height={30}
+                src={item.image}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div
+        className={applyModifiers(handles.footerContainerWrapper, 'siteSeguro')}
+      >
+        <h4 className={handles.footerContainerH4}>Site Seguro</h4>
+        <ul className={applyModifiers(handles.footerContainerUl, 'siteSeguro')}>
+          {siteSeguro.map((item) => (
+            <li
+              key={item.__editorItemTitle}
+              className={handles.footerContainerLi}
+            >
+              <Link
+                className={handles.footerContainerLink}
+                target={item.newTab ? '_blank' : ''}
+                to={item.url}
+                fetchPage
+                rel="noreferrer"
+              >
+                <img
+                  alt={item.__editorItemTitle}
+                  loading="lazy"
+                  src={item.image}
+                />
               </Link>
             </li>
           ))}
