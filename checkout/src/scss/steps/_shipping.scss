@@ -1,16 +1,17 @@
 div#shipping-data {
   .shipping-data {
-    background: var(--COLOR-BRANCO, #fff);
-    border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+    background: var(--color-branco, #fff);
+    border: 1px solid var(--color-cinza-claro, #d6d6d6);
     border-radius: 2px;
+    padding: 10px;
 
-    @media screen and (max-width: 1024px) {
-      padding: 10px;
+    @media screen and (min-width: 1025px) {
+      padding: 0;
     }
 
     label[for='ship-postalCode'] {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -19,8 +20,8 @@ div#shipping-data {
     }
 
     .accordion-toggle {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -32,29 +33,32 @@ div#shipping-data {
     }
 
     .ship-postalCode {
+      /* stylelint-disable selector-id-pattern */
       input#ship-postalCode {
-        background: var(--COLOR-BRANCO, #fff);
-        border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+        background: var(--color-branco, #fff);
+        border: 1px solid var(--color-cinza-claro, #d6d6d6);
         border-radius: 2px;
         box-shadow: none !important;
-        color: var(--COLOR-PRETO, #000);
-        font-family: Inter;
+        color: var(--color-preto, #000);
+        font-family: Poppins, sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
         height: auto;
         line-height: normal;
+        margin: 0;
         max-width: unset;
         min-height: 35px;
         padding: 10px;
         width: 100%;
       }
+      /* stylelint-enable selector-id-pattern */
     }
   }
 
   .address-summary-BRA {
-    color: var(--COLOR-PRETO, #000);
-    font-family: Inter;
+    color: var(--color-preto, #000);
+    font-family: Poppins, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -64,8 +68,8 @@ div#shipping-data {
   .shipping-container {
     .vtex-omnishipping-1-x-shippingSectionTitle.delivery-address-title,
     .vtex-omnishipping-1-x-shippingSectionTitle {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -73,22 +77,22 @@ div#shipping-data {
     }
 
     label {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      margin-bottom: 5px;
+      margin: 0;
     }
 
     input {
-      background: var(--COLOR-BRANCO, #fff);
-      border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+      background: var(--color-branco, #fff);
+      border: 1px solid var(--color-cinza-claro, #d6d6d6);
       border-radius: 2px;
       box-shadow: none !important;
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -101,8 +105,8 @@ div#shipping-data {
   }
 
   .shp-summary-group-price.vtex-omnishipping-1-x-SummaryItemPrice {
-    color: var(--COLOR-PRETO, #000);
-    font-family: Inter;
+    color: var(--color-preto, #000);
+    font-family: Poppins, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -110,8 +114,9 @@ div#shipping-data {
   }
 
   a#open-shipping {
-    color: var(--Azul, #00579c);
-    font-family: Inter;
+    border-color: #000;
+    color: var(--azul, #000);
+    font-family: Poppins, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
@@ -120,10 +125,10 @@ div#shipping-data {
 
   p.btn-go-to-payment-wrapper {
     button {
-      background: var(--Azul, #00579c);
+      background: var(--azul, #000);
       border-radius: 0;
-      color: var(--Neutras-05, #fff);
-      font-family: Inter;
+      color: var(--neutras-05, #fff);
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
@@ -134,19 +139,33 @@ div#shipping-data {
   }
 
   .vtex-omnishipping-1-x-address {
-    @media screen and (max-width: 1024px) {
-      & > div {
-        display: flex;
-        flex-direction: column;
+    & > div {
+      display: flex;
+      flex-direction: column;
 
-        p {
-          margin: 0;
-        }
+      p {
+        margin: 0;
+      }
 
-        input {
-          width: 100%;
-        }
+      input {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 1025px) {
+        flex-direction: row;
       }
     }
   }
+}
+
+a.srp-address-title.link.pointer.blue.f5 {
+  color: #c00146;
+}
+
+select.srp-delivery-select {
+  border: 1px solid var(--color-cinza-claro, #000);
+}
+
+.vtex-omnishipping-1-x-address > div {
+  display: block !important;
 }

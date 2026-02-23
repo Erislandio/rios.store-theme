@@ -10,13 +10,15 @@ export const Cart = {
     this.addShareButton()
   },
   addShareButton() {
-    $(window).on('orderFormUpdated.vtex', function (_, orderForm) {
-      const container = $('.summary-template-holder')
+    $(window).on(
+      'orderFormUpdated.vtex',
+      function handleOrderFormUpdated(_, orderForm) {
+        const container = $('.summary-template-holder')
 
-      if (!orderForm?.items?.length) return
+        if (!orderForm?.items?.length) return
 
-      if (container.length && $('#custom-share-button').length === 0) {
-        container.prepend(`
+        if (container.length && $('#custom-share-button').length === 0) {
+          container.prepend(`
             <div class="share" id="custom-share-button">
               <button class="share-button">
                 <span>
@@ -35,20 +37,25 @@ export const Cart = {
             </div>
           `)
 
-        setTimeout(() => {
-          $('.share-button').on('click', () => {
-            const text = `Olha a minha sacola na https://www.lojaspontodamoda.com.br/checkout?orderFormId=${orderForm.orderFormId}`
+          setTimeout(() => {
+            $('.share-button').on('click', () => {
+              const text = `Olha a minha sacola na https://www.lojaspontodamoda.com.br/checkout?orderFormId=${orderForm.orderFormId}`
 
-            navigator.clipboard
-              .writeText(text)
-              .then(() => alert('Link copiado para a área de transferência!'))
-              .catch(() =>
-                alert('Não foi possível copiar o link. Tente novamente!')
-              )
-          })
-        }, 1000)
+              navigator.clipboard
+                .writeText(text)
+                .then(() => {
+                  console.info('Link copiado para a área de transferência!')
+                })
+                .catch(() => {
+                  console.error(
+                    'Não foi possível copiar o link. Tente novamente!'
+                  )
+                })
+            })
+          }, 1000)
+        }
       }
-    })
+    )
   },
   activeStepBar(): void {
     $(window).on('ready hashchange', () => {

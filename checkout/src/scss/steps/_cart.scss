@@ -11,8 +11,7 @@
   .cart-template {
     .cart {
       background: #fff;
-      border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
-      border-radius: 2px;
+      border: 1px solid var(--color-cinza-claro, #d6d6d6);
       margin-bottom: 10px;
       padding: 30px 20px;
 
@@ -24,10 +23,10 @@
             min-width: 80px;
             width: 60px;
 
-            @media screen and (max-width: 768px) {
-              height: auto;
-              min-height: unset;
-              min-width: unset;
+            @media screen and (min-width: 769px) {
+              height: 79.672px;
+              min-height: 60px;
+              min-width: 80px;
             }
           }
 
@@ -40,9 +39,9 @@
           }
 
           .product-name a {
-            color: var(--COLOR-PRETO, #000);
+            color: var(--color-preto, #000);
             display: block;
-            font-family: Inter;
+            font-family: Poppins, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -56,8 +55,8 @@
           .product-price,
           .product-price *,
           span.shipping-estimate-date {
-            color: var(--COLOR-PRETO, #000);
-            font-family: Inter;
+            color: var(--color-preto, #000);
+            font-family: Poppins, sans-serif;
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -66,8 +65,7 @@
 
           td.quantity {
             align-items: center;
-            border: 1px solid var(--Neutras-03, #ccc);
-            border-radius: 1px;
+            border: 1px solid var(--neutras-03, #ccc);
             display: flex;
             height: 40px;
             justify-content: space-between;
@@ -87,7 +85,7 @@
               background-color: transparent !important;
               border: none;
               box-shadow: none;
-              font-family: Inter;
+              font-family: Poppins, sans-serif;
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -99,15 +97,13 @@
 
               i {
                 &::before {
-                  color: var(--Neutras-00, #000);
+                  color: var(--neutras-00, #000);
                   content: '';
-                  font-family: Inter;
+                  font-family: Poppins, sans-serif;
                   font-size: 14px;
                   font-style: normal;
                   font-weight: 400;
-                  leading-trim: both;
                   line-height: 18px; /* 128.571% */
-                  text-edge: cap;
                 }
 
                 &.icon-plus-sign::before {
@@ -144,8 +140,8 @@
         thead {
           tr {
             th {
-              color: var(--COLOR-PRETO, #000);
-              font-family: Inter;
+              color: var(--color-preto, #000);
+              font-family: Poppins, sans-serif;
               font-size: 12px;
               font-style: normal;
               font-weight: 400;
@@ -159,8 +155,8 @@
 
   .summary-template-holder {
     h2.srp-main-title {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -169,8 +165,8 @@
     }
 
     .srp-description {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -183,9 +179,9 @@
     }
 
     #shipping-calculate-link {
-      background: var(--Neutras-01, #1b1b1b);
-      color: var(--Neutras-05, #fff);
-      font-family: Inter;
+      background: var(--neutras-01, #1b1b1b);
+      color: var(--neutras-05, #fff);
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
@@ -210,30 +206,35 @@
       &::before {
         content: 'CEP';
         display: block;
-        font-family: Inter;
+        font-family: Poppins, sans-serif;
         font-size: 14px;
         font-style: normal;
         line-height: 22px; /* 157.143% */
       }
     }
 
+    /* stylelint-disable selector-id-pattern */
     input#ship-postalCode {
+      margin: 0;
       min-height: 48px;
     }
 
     button#cart-shipping-calculate {
-      background: var(--Neutras-01, #1b1b1b);
-      color: var(--Neutras-05, #fff);
-      font-family: Inter;
+      background: var(--neutras-01, #1b1b1b);
+      border-radius: 0;
+      color: var(--neutras-05, #fff);
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
       height: auto;
       line-height: 22px; /* 157.143% */
       margin: 0;
+      margin-left: 0.5rem;
       padding: 12px;
       text-transform: none;
     }
+    /* stylelint-enable selector-id-pattern */
 
     .cart-totalizers {
       margin: 0;
@@ -262,13 +263,13 @@
           width: 100%;
 
           input#cart-coupon {
-            border-radius: 0;
-            font-family: Inter;
+            font-family: Poppins, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
             height: 100%;
             line-height: 22px; /* 157.143% */
+            margin: 0;
             padding: 10px;
             width: 100%;
           }
@@ -283,25 +284,23 @@
 
           button#cart-coupon-add {
             align-items: center;
-            background: #00579c !important;
+            background: #000 !important;
             border: none;
             border-radius: 0;
-            border-radius: 6px;
-            color: var(--Neutras-05, #fff);
+            color: var(--neutras-05, #fff);
             display: flex;
-            font-family: Inter;
+            font-family: Poppins, sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
             height: 40px;
             line-height: 22px; /* 157.143% */
-            padding: 1rem;
             padding: 20px;
             text-shadow: none;
 
             &:hover {
-              background: var(--Neutras-05, #002f55);
-              border-color: #002f55;
+              background: var(--neutras-05, #000);
+              border-color: #000;
               color: #fff;
             }
           }
@@ -310,8 +309,7 @@
 
       .accordion-group {
         background: #fff;
-        border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
-        border-radius: 2px;
+        border: 1px solid var(--color-cinza-claro, #d6d6d6);
         margin: 26px 0;
 
         .accordion-body {
@@ -319,8 +317,8 @@
         }
 
         td.info {
-          color: var(--COLOR-PRETO, #000);
-          font-family: Inter;
+          color: var(--color-preto, #000);
+          font-family: Poppins, sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -328,14 +326,14 @@
           padding: 1rem 0;
           text-align: left;
 
-          @media screen and (max-width: 768px) {
-            font-size: 18px;
+          @media screen and (min-width: 769px) {
+            font-size: 14px;
           }
         }
 
         td.monetary {
-          color: var(--COLOR-PRETO, #000);
-          font-family: Inter;
+          color: var(--color-preto, #000);
+          font-family: Poppins, sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 600;
@@ -343,8 +341,8 @@
           padding: 1rem 0;
           text-align: right;
 
-          @media screen and (max-width: 768px) {
-            font-size: 18px;
+          @media screen and (min-width: 769px) {
+            font-size: 14px;
           }
         }
 
@@ -358,8 +356,8 @@
             padding-bottom: 0;
             padding-top: 1rem;
 
-            @media screen and (max-width: 768px) {
-              font-size: 18px;
+            @media screen and (min-width: 769px) {
+              font-size: 14px;
             }
           }
         }
@@ -367,10 +365,10 @@
 
       .link-coupon-add {
         background: #fff;
-        border: 1px solid var(--Neutras-01, #1b1b1b);
-        color: var(--Neutras-00, #000);
+        border: 1px solid var(--neutras-01, #1b1b1b);
+        color: var(--neutras-00, #000);
         display: block;
-        font-family: Inter;
+        font-family: Poppins, sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -379,8 +377,8 @@
         text-decoration: none;
 
         &:hover {
-          background: var(--Neutras-05, #00579c);
-          border-color: #00579c;
+          background: var(--neutras-05, #000);
+          border-color: #000;
           color: #fff;
         }
 
@@ -401,12 +399,10 @@
       a {
         align-items: center;
         background: #fff;
-        border: 1px solid var(--Neutras-01, #1b1b1b);
-        border-radius: 8px;
-        color: var(--COLOR-PRETO, #000);
-        display: block;
+        border: 1px solid var(--neutras-01, #1b1b1b);
+        color: var(--color-preto, #000);
         display: flex;
-        font-family: Inter;
+        font-family: Poppins, sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 700;
@@ -422,15 +418,14 @@
     }
 
     a#cart-to-orderform {
-      background: var(--Azul, #00579c);
-      border-radius: 8px;
-      color: var(--COLOR-PRETO, #fff);
+      background: var(--azul, #000);
+      border-radius: 0;
+      color: var(--color-preto, #fff);
       display: block;
-      font-family: Inter;
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 500;
-      line-height: normal;
       line-height: inherit;
       min-height: 46px;
       min-width: 160px;
@@ -443,9 +438,9 @@
 
     button {
       align-items: center;
-      color: var(--COLOR-PRETO, #000);
+      color: var(--color-preto, #000);
       display: flex;
-      font-family: Inter;
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -495,4 +490,114 @@
 
 .full-cart .cart table tbody tr + tr {
   border: none;
+}
+
+a.srp-address-title {
+  color: #000;
+}
+
+.mini-cart .summary-cart-template-holder {
+  height: auto !important;
+}
+
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-company-ie
+  input[type='tel'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-company-ie
+  input[type='text'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-company-ie
+  input[type='email'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-company-document
+  input[type='tel'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-company-document
+  input[type='text'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-company-document
+  input[type='email'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-phone
+  input[type='tel'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-phone
+  input[type='text'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-phone
+  input[type='email'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-document
+  input[type='tel'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-document
+  input[type='text'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-document
+  input[type='email'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-first-name
+  input[type='tel'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-first-name
+  input[type='text'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-first-name
+  input[type='email'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-last-name
+  input[type='tel'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-last-name
+  input[type='text'],
+.container-order-form
+  .step.accordion-group.client-profile-data
+  fieldset
+  p.client-last-name
+  input[type='email'] {
+  width: 100% !important;
+}
+
+.clearfix.pull-right.cart-links.cart-links-bottom {
+  display: flex;
+}
+
+.client-pre-email .client-email {
+  max-width: 800px;
+  width: 100% !important;
 }

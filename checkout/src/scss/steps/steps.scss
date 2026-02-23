@@ -27,8 +27,8 @@
   .form-step.box-info {
     .client-profile-email {
       * {
-        color: var(--COLOR-PRETO, #000);
-        font-family: Inter;
+        color: var(--color-preto, #000);
+        font-family: Poppins, sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -39,8 +39,8 @@
 
   .client-profile-summary {
     * {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -48,33 +48,23 @@
     }
   }
 
-  &::before {
-    color: var(--COLOR-PRETO, #000);
-    content: 'Finalizar compra';
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 20px 0 42px;
-  }
-
   h1#orderform-title {
     display: none !important;
   }
 
   .step.accordion-group.client-profile-data {
-    background: var(--COLOR-BRANCO, #fff);
-    border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+    background: var(--color-branco, #fff);
+    border: 1px solid var(--color-cinza-claro, #d6d6d6);
     border-radius: 2px;
+    padding: 10px;
 
-    @media screen and (max-width: 1024px) {
-      padding: 10px;
+    @media screen and (min-width: 1025px) {
+      padding: 0;
     }
 
     span[data-i18n='clientProfileData.identification'] {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -93,16 +83,15 @@
         &.client-last-name {
           margin: 0;
           margin-bottom: 10px;
-          width: 49%;
+          width: 100%;
 
-          @media screen and (max-width: 1024px) {
-            margin: 0 !important;
-            width: 100%;
+          @media screen and (min-width: 1025px) {
+            width: 49%;
 
             input[type='tel'],
             input[type='text'],
             input[type='email'] {
-              width: 100% !important;
+              width: auto;
             }
           }
         }
@@ -121,8 +110,8 @@
       }
 
       h5.corporate-title {
-        color: var(--COLOR-PRETO, #000);
-        font-family: Inter;
+        color: var(--color-preto, #000);
+        font-family: Poppins, sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -134,9 +123,9 @@
       }
 
       label {
-        color: var(--COLOR-PRETO, #000);
+        color: var(--color-preto, #000);
         display: block;
-        font-family: Inter;
+        font-family: Poppins, sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -168,16 +157,16 @@
     background-color: tomato;
     border-radius: 4px 10px;
     color: #fff;
-    font-family: Inter;
+    font-family: Poppins, sans-serif;
     font-size: 12px;
     padding: 4px;
     text-decoration: none;
   }
 
   .newsletter-text {
-    color: var(--COLOR-PRETO, #000);
+    color: var(--color-preto, #000);
     display: block;
-    font-family: Inter;
+    font-family: Poppins, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -186,10 +175,10 @@
 
   p.submit.btn-submit-wrapper {
     button {
-      background: var(--Azul, #00579c);
+      background: var(--azul, #000);
       border-radius: 0;
-      color: var(--Neutras-05, #fff);
-      font-family: Inter;
+      color: var(--neutras-05, #fff);
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
@@ -201,8 +190,8 @@
 }
 
 .cart-fixed {
-  background: var(--COLOR-BRANCO, #fff);
-  border: 1px solid var(--COLOR-CINZA-CLARO, #d6d6d6);
+  background: var(--color-branco, #fff);
+  border: 1px solid var(--color-cinza-claro, #d6d6d6);
   border-radius: 2px;
   height: auto !important;
   padding: 10px;
@@ -226,13 +215,13 @@
       }
 
       .product-name {
-        color: var(--COLOR-PRETO, #000);
+        color: var(--color-preto, #000);
         float: none;
-        font-family: Inter;
-        font-size: 14px;
+        font-family: Poppins, sans-serif;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 24px; /* 171.429% */
+        line-height: normal; /* 171.429% */
         white-space: normal;
         width: 100%;
       }
@@ -260,8 +249,8 @@
   }
 
   a#orderform-minicart-to-cart {
-    color: var(--COLOR-PRETO, #000);
-    font-family: Inter;
+    color: var(--color-preto, #000);
+    font-family: Poppins, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -274,8 +263,8 @@
 
   table.table {
     td.info {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -283,8 +272,8 @@
     }
 
     td.monetary {
-      color: var(--COLOR-PRETO, #000);
-      font-family: Inter;
+      color: var(--color-preto, #000);
+      font-family: Poppins, sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -296,7 +285,7 @@
       td.monetary,
       td.info {
         color: #478847;
-        font-family: Inter;
+        font-family: Poppins, sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -312,8 +301,8 @@
   h2[data-i18n='totalizers.summary'] {
     background-color: transparent;
     border: none;
-    color: var(--COLOR-PRETO, #000);
-    font-family: Inter;
+    color: var(--color-preto, #000);
+    font-family: Poppins, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -324,10 +313,10 @@
     margin: 0;
 
     button {
-      background: var(--Azul, #00579c);
+      background: var(--azul, #000);
       border-radius: 0;
-      color: var(--Neutras-05, #fff);
-      font-family: Inter;
+      color: var(--neutras-05, #fff);
+      font-family: Poppins, sans-serif;
       font-size: 14px;
       font-style: normal;
       justify-content: center;

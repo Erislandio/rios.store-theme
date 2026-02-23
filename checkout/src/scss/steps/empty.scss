@@ -1,17 +1,17 @@
 .cart-template {
   .empty-cart-title {
-    color: var(--COLOR-PRETO, #000);
-    font-family: Inter;
+    color: var(--color-preto, #000);
+    font-family: Poppins, sans-serif;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
 
   a#cart-choose-products {
-    background: var(--Azul, #00579c);
+    background: var(--azul, #000);
     border-radius: 0;
-    color: var(--Neutras-05, #fff);
-    font-family: Inter;
+    color: var(--neutras-05, #fff);
+    font-family: Poppins, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -21,8 +21,8 @@
   }
 
   p[data-i18n='cart.emptyMessage'] {
-    color: var(--COLOR-PRETO, #000);
-    font-family: Inter;
+    color: var(--color-preto, #000);
+    font-family: Poppins, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

@@ -275,7 +275,10 @@
       "preserveMobileLayout": true,
       "flexDirectionMobile": "row"
     },
-    "children": ["custom-div#prices-col", "condition-layout.product#tabela-medidas"]
+    "children": [
+      "custom-div#prices-col",
+      "condition-layout.product#tabela-medidas"
+    ]
   },
 
   "condition-layout.product#tabela-medidas": {
@@ -315,14 +318,10 @@
     "props": {
       "blockClass": "medidas-drawer"
     },
-    "children": [
-      "modal-header#medidas-header",
-      "tabela-medidas"
-    ]
+    "children": ["modal-header#medidas-header", "tabela-medidas"]
   },
 
   "modal-header#medidas-header": {
-
     "props": {
       "blockClass": "medidas-header",
       "showCloseButton": true

@@ -9,7 +9,6 @@
 @import 'summary';
 @import 'mobile';
 
-
 /* CSS Reset */
 *,
 *::before,
@@ -20,21 +19,29 @@
   text-shadow: none !important;
 }
 
-html, body {
+html,
+body {
   background: #fff;
   color: inherit;
-  font-family: Inter;
+  font-family: Poppins, sans-serif;
   height: 100%;
   width: 100%;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   height: auto;
   max-width: 100%;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   background: none;
   border: none;
   color: inherit;
@@ -47,10 +54,10 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
-
 
 input[type='tel'],
 input[type='text'],
@@ -59,6 +66,10 @@ select,
 textarea,
 button {
   color: #000;
-  font-family: Inter;
+  font-family: Poppins, sans-serif;
   font-size: 12px;
+}
+
+body#checkoutMainContainer {
+  padding: 0 !important;
 }
