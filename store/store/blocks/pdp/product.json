@@ -205,9 +205,11 @@
       "blockClass": "product-infos"
     },
     "children": [
+      "custom-product-summary-badge-pdp",
       "vtex.store-components:product-name",
+      "custom-product-info",
+      "custom-combo-price-pdp",
       "product-grid#default",
-      "add-to-list-btn",
       "custom-share-button",
       "custom-product-description"
     ]
@@ -217,7 +219,8 @@
     "children": [
       "custom-div#prices",
       "sku-selector#custom",
-      "custom-div#add-to-cart-section"
+      "custom-div#add-to-cart-section",
+      "add-to-list-btn"
     ]
   },
 
@@ -253,7 +256,6 @@
     },
     "children": [
       "vtex.store-components:product-name",
-      "custom-product-info#custom",
       "custom-div#prices",
       "sku-selector#custom",
       "availability-subscriber",
@@ -375,11 +377,6 @@
       "blockClass": "list-price",
       "textDecoration": "line-through"
     }
-  },
-
-  "custom-product-info#custom": {
-    "title": "Custom Product Info",
-    "children": ["add-to-list-btn"]
   },
 
   "sku-selector#custom": {

@@ -78,5 +78,8 @@
     "vtex.order-items": "0.x",
     "vtex.checkout-resources": "0.x"
   },
+  "peerDependencies": {
+    "vtex.reviews-and-ratings": "3.x"
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -5,16 +5,16 @@ import { usePixel } from 'vtex.pixel-manager'
 import { useProduct } from 'vtex.product-context'
 import type { ProductContextState } from 'vtex.product-context/react/ProductContextProvider'
 
-import RATING from './graphql/getShippingBar.gql'
+import RATING from './graphql/getStars.gql'
 
 const CSS_HANDLES = ['productInfo', 'productInfoAvailable', 'stars'] as const
 
 const EmptyStar = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="15"
-    height="15"
-    viewBox="0 0 15 15"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
     fill="none"
     className="vtex-icon"
   >
@@ -28,9 +28,9 @@ const EmptyStar = () => (
 const FulStar = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="14"
-    height="15"
-    viewBox="0 0 14 15"
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
     fill="none"
     className="vtex-icon"
   >
@@ -41,11 +41,7 @@ const FulStar = () => (
   </svg>
 )
 
-export default function CustomProductInfo({
-  children,
-}: {
-  children?: React.ReactNode
-}) {
+export default function CustomProductInfo() {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { product, buyButton } = useProduct() as ProductContextState
 
@@ -87,7 +83,6 @@ export default function CustomProductInfo({
 
   return (
     <section className={handles.productInfo}>
-      <p className={handles.productInfoAvailable}>Disponível: Loja 01</p>
       <p className={handles.productInfoAvailable}>
         ref: {product?.productReference}
       </p>
@@ -95,8 +90,8 @@ export default function CustomProductInfo({
         {stars.map((star, index) =>
           star === 1 ? <FulStar key={index} /> : <EmptyStar key={index} />
         )}
+        ({rating})
       </div>
-      {children}
     </section>
   )
 }

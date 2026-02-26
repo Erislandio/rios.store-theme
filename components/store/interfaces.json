@@ -139,5 +139,13 @@
   "custom-newsletter-modal": {
     "component": "NewsletterModal",
     "composition": "children"
+  },
+  "custom-combo-price-pdp": {
+    "component": "CustomComboPricePDP",
+    "composition": "children"
+  },
+  "custom-product-summary-badge-pdp": {
+    "component": "CustomProductSummaryBadgePDP",
+    "composition": "children"
   }
 }

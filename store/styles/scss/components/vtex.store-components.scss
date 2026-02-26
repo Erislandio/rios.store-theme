@@ -115,6 +115,43 @@
     gap: 12px;
   }
 
+  .skuSelectorItemTextValue {
+    padding: 0px;
+    color: var(--Neutras-01, #1b1b1b);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 157.143% */
+  }
+
+  .frameAround {
+    display: none;
+  }
+
+  .skuSelectorInternalBox {
+    border: none;
+  }
+
+  .skuSelectorSubcontainer--tamanho {
+    .skuSelectorItem--selected {
+      border-radius: 1px;
+      border: 1px solid var(--Primria-03, #d7cfc5);
+      background: var(--Neutras-03, #ccc);
+    }
+  }
+
+  .skuSelectorItem {
+    margin: 0px;
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    min-height: 26px;
+    border-radius: 1px;
+    border: 1px solid var(--Primria-03, #d7cfc5);
+    background: var(--Neutras-05, #fff);
+  }
+
   .skuSelectorSelectorImageValue,
   .skuSelectorNameSeparator,
   .skuSelectorName,
@@ -338,4 +375,156 @@
 }
 
 .price_className--price-pdp {
+}
+
+.subscriberContainer {
+  margin-top: 1rem;
+
+  .title {
+    font-size: 1rem;
+    color: var(--Neutras-00, #000);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0px;
+    line-height: 28px; /* 140% */
+  }
+
+  .subscribeLabel {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+  }
+
+  .form {
+    margin: 0px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+
+    :global(.vtex-input-prefix__group) {
+      border: 1px solid #333;
+      border-radius: 0px;
+    }
+
+    :global(.vtex-styleguide-9-x-input)::placeholder,
+    :global(.vtex-styleguide-9-x-input) {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+
+  .submit {
+    margin: 0px;
+    :global(.vtex-button) {
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:not(:disabled) {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+:global(.vtex-wish-list-1-x-wishlistIconContainer) {
+  :global(.vtex-button) {
+    background-color: transparent !important;
+
+    width: 100%;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    :global(.vtex-wish-list-1-x-outline) {
+      background-image: none;
+      white-space: nowrap;
+      background: transparent !important;
+
+      &::before {
+        content: 'Adicionar a lista de desejos';
+        color: var(--Neutras-02, #8c8c8c);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 157.143% */
+        text-transform: uppercase;
+      }
+    }
+
+    :global(.vtex-wish-list-1-x-fill) {
+      background-image: none;
+      white-space: nowrap;
+      background: transparent !important;
+
+      &::before {
+        content: 'Remover da lista de desejos';
+        color: var(--Neutras-02, #8c8c8c);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 157.143% */
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  :global(.vtex-button__label) {
+    padding: 0px;
+    width: 100%;
+  }
+}
+
+.price_sellingPriceContainer--price-pdp {
+  .price_sellingPriceLabel--price-pdp {
+    display: none;
+  }
+
+  .currencyContainer--price-pdp {
+    color: var(--Primria-01, #c00146);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+  }
+}
+
+.price_sellingPrice--price-pdp {
+  padding: 0px;
+  display: flex;
+}
+
+.price_listPriceContainer--price-pdp {
+  .price_listPriceLabel--price-pdp {
+    display: none;
+  }
+
+  .price_listPrice--price-pdp {
+    padding: 0px;
+    color: var(--Neutras-02, #8c8c8c);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    text-decoration-line: line-through;
+  }
 }

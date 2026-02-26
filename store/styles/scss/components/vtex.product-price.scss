@@ -22,3 +22,25 @@
   line-height: 18px; /* 128.571% */
   text-decoration-line: line-through;
 }
+
+.installments--pdp {
+  color: var(--Neutras-00, #000);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+
+.productNameContainer {
+  .productBrand {
+    color: var(--Neutras-00, #000);
+
+    /* H6/H6 Regular */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+  }
+}

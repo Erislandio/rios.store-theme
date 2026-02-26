@@ -119,8 +119,6 @@ export default function CustomproductDescripiton() {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { product } = useProduct() as ProductContextState
 
-  console.log(product)
-
   return (
     <section className={handles.customProductDescription}>
       <h4 className={handles.customProductDescriptionHeader}>Descrição</h4>
