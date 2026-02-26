@@ -22,6 +22,8 @@ import { ProductSummaryCustom } from 'vtex.product-summary'
 import { ExtensionPoint } from 'vtex.render-runtime'
 import SEARCH from './queries/search.gql'
 
+const EXIT_INTENT_KEY = 'exit-intent-modal-shown'
+
 const ExitIntentModal: StoreFrontFC<Props> = ({
   title = 'Espere! Não vá embora ainda!',
   text = 'Temos ofertas especiais esperando por você. Confira nossos lançamentos!',
@@ -41,10 +43,18 @@ const ExitIntentModal: StoreFrontFC<Props> = ({
   })
 
   useEffect(() => {
+    const alreadyShown = localStorage.getItem(EXIT_INTENT_KEY)
+
+    if (alreadyShown) {
+      return
+    }
+
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0 && !hasTriggered) {
         setIsOpen(true)
         setHasTriggered(true)
+
+        localStorage.setItem(EXIT_INTENT_KEY, 'true')
       }
     }
 

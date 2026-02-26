@@ -24,8 +24,6 @@
     "@types/react-modal": "^3.16.0",
     "@vtex/test-tools": "^3.4.3",
     "@vtex/tsconfig": "^0.4.4",
-    "gruporios.service": "https://eris--gruporios.myvtex.com/_v/private/typings/linked/v1/gruporios.service@0.1.1+build1770917453/public/@types/gruporios.service",
-    "gruporios.store-components": "https://eris--gruporios.myvtex.com/_v/private/typings/linked/v1/gruporios.store-components@0.0.1+build1771253625/public/@types/gruporios.store-components",
     "typescript": "3.9.7",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.31.0/public/@types/vtex.add-to-cart-button",
     "vtex.breadcrumb": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.5/public/@types/vtex.breadcrumb",

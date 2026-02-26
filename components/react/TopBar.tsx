@@ -136,7 +136,7 @@ TopBar.schema = {
       items: {
         type: 'object',
         properties: {
-          message: {
+          text: {
             title: 'Texto',
             type: 'string',
           },

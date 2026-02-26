@@ -4,7 +4,6 @@
       "custom-div#breadcrumb",
       "__fold__.experimentalLazyAssets",
       "custom-div#product-main",
-      "rich-text#image-label",
       "__fold__",
       "custom-buy-together#custom",
       "product-reviews",
@@ -53,7 +52,7 @@
     "title": "Breadcrumb Container",
     "props": {
       "background": "#F4F4F5",
-      "padding": "8px 0",
+      "padding": "0",
       "marginBottom": "24px",
       "preserveMobileLayout": true,
       "blockClass": ["breadcrumb"]
@@ -207,9 +206,8 @@
     },
     "children": [
       "vtex.store-components:product-name",
-      "custom-product-info#custom",
       "product-grid#default",
-      "shipping-simulator",
+      "add-to-list-btn",
       "custom-share-button",
       "custom-product-description"
     ]
@@ -242,7 +240,7 @@
       "addToCartFeedback": "customEvent",
       "customPixelEventName": "add-to-cart-button",
       "customPixelEventId": "add-to-cart-button",
-      "text": "Comprar"
+      "text": "Adicionar à sacola"
     }
   },
 
@@ -259,7 +257,7 @@
       "custom-div#prices",
       "sku-selector#custom",
       "availability-subscriber",
-      "shipping-simulator",
+      "add-to-list-btn",
       "custom-share-button",
       "custom-product-description"
     ]
@@ -275,10 +273,7 @@
       "preserveMobileLayout": true,
       "flexDirectionMobile": "row"
     },
-    "children": [
-      "custom-div#prices-col",
-      "condition-layout.product#tabela-medidas"
-    ]
+    "children": ["custom-div#prices-col"]
   },
 
   "condition-layout.product#tabela-medidas": {
@@ -302,7 +297,7 @@
       "label": "Ver medidas",
       "blockClass": "medidas-trigger"
     },
-    "children": ["rich-text#open-modal", "modal-layout#medidas"]
+    "children": ["rich-text#open-modal"]
   },
 
   "rich-text#open-modal": {
@@ -346,7 +341,7 @@
       "flexDirectionMobile": "row",
       "preserveMobileLayout": true
     },
-    "children": ["product-price#price", "product-price-savings#pdp"]
+    "children": ["product-price#price"]
   },
 
   "product-price-savings#pdp": {
@@ -368,7 +363,7 @@
   "product-price#price": {
     "title": "Product Price",
     "props": {
-      "blockClass": "price",
+      "blockClass": "price-pdp",
       "fontSize": 8,
       "fontWeight": "bold",
       "color": "#DC1C1C"

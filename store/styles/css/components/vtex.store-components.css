@@ -65,3 +65,244 @@
 .logoContainer {
   padding: 0px;
 }
+
+.productImagesContainer--list {
+  display: grid;
+  position: sticky;
+  top: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.quantitySelectorContainer {
+  margin: 0px;
+}
+.quantitySelectorContainer .quantitySelectorTitle {
+  display: none;
+}
+
+.skuSelectorContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dedede;
+}
+.skuSelectorContainer :global(.vtex-store-components-3-x-skuSelectorSubcontainer) {
+  margin-bottom: 8px;
+  margin-top: 12px;
+}
+.skuSelectorContainer .skuSelectorNameContainer {
+  margin: 0px;
+}
+.skuSelectorContainer .skuSelectorOptionsList {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.skuSelectorContainer .skuSelectorSelectorImageValue,
+.skuSelectorContainer .skuSelectorNameSeparator,
+.skuSelectorContainer .skuSelectorName,
+.skuSelectorContainer .skuSelectorTextContainer {
+  color: var(--Neutras-00, #000);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .valueWrapper {
+  display: none;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .frameAround {
+  display: none;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem {
+  margin: 0px;
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  opacity: 0.7;
+  border: 1px solid #dedede;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorInternalBox {
+  border: none;
+  display: none;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--selected {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--selected .skuSelectorInternalBox {
+  display: none;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--selected::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M4.71119 6.14936C5.01267 5.55954 5.372 5.02849 5.77599 4.52413C6.63005 3.45833 7.64877 2.55028 8.77073 1.7429C9.64764 1.11186 10.576 0.555482 11.5483 0.064637C11.6194 0.0288286 11.689 -0.0117092 11.774 0.0031547C11.878 0.0210589 11.9569 0.0740959 11.9873 0.1724C12.0234 0.290297 11.9808 0.384548 11.8808 0.462583C11.4258 0.816275 10.9996 1.1997 10.5953 1.6044C8.27065 3.93093 6.60755 6.61082 5.75492 9.72243C5.75063 9.73865 5.74277 9.75419 5.73956 9.77074C5.7167 9.88391 5.6549 9.96431 5.53203 9.99302C5.41308 10.0207 5.32628 9.96836 5.24949 9.88999C4.78085 9.40995 4.31185 8.93059 3.84321 8.4509C2.60909 7.18781 1.37498 5.92505 0.141227 4.6623C0.129082 4.6498 0.117652 4.63696 0.104793 4.62514C0.00870688 4.53832 -0.0298703 4.43529 0.0254951 4.31671C0.0790745 4.20186 0.185162 4.16808 0.310895 4.16875C0.578077 4.17044 0.845617 4.16909 1.11316 4.16909C1.63002 4.16909 2.14688 4.17281 2.66374 4.16672C2.81913 4.16504 2.93236 4.21064 3.03451 4.32381C3.55066 4.89336 4.07324 5.45752 4.59367 6.02336C4.62868 6.06119 4.66404 6.09903 4.71119 6.14936Z' fill='white'/%3E%3C/svg%3E");
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--branco.skuSelectorItem--selected::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M4.71119 6.14936C5.01267 5.55954 5.372 5.02849 5.77599 4.52413C6.63005 3.45833 7.64877 2.55028 8.77073 1.7429C9.64764 1.11186 10.576 0.555482 11.5483 0.064637C11.6194 0.0288286 11.689 -0.0117092 11.774 0.0031547C11.878 0.0210589 11.9569 0.0740959 11.9873 0.1724C12.0234 0.290297 11.9808 0.384548 11.8808 0.462583C11.4258 0.816275 10.9996 1.1997 10.5953 1.6044C8.27065 3.93093 6.60755 6.61082 5.75492 9.72243C5.75063 9.73865 5.74277 9.75419 5.73956 9.77074C5.7167 9.88391 5.6549 9.96431 5.53203 9.99302C5.41308 10.0207 5.32628 9.96836 5.24949 9.88999C4.78085 9.40995 4.31185 8.93059 3.84321 8.4509C2.60909 7.18781 1.37498 5.92505 0.141227 4.6623C0.129082 4.6498 0.117652 4.63696 0.104793 4.62514C0.00870688 4.53832 -0.0298703 4.43529 0.0254951 4.31671C0.0790745 4.20186 0.185162 4.16808 0.310895 4.16875C0.578077 4.17044 0.845617 4.16909 1.11316 4.16909C1.63002 4.16909 2.14688 4.17281 2.66374 4.16672C2.81913 4.16504 2.93236 4.21064 3.03451 4.32381C3.55066 4.89336 4.07324 5.45752 4.59367 6.02336C4.62868 6.06119 4.66404 6.09903 4.71119 6.14936Z' fill='%23000'/%3E%3C/svg%3E");
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--animalprint {
+  background-color: #8b5a2b;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--vermelho {
+  background-color: #c62828;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--nude {
+  background-color: #e3c1a0;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--fantastico {
+  background-color: #7b1fa2;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--goiaba {
+  background-color: #d8435e;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--sandia {
+  background-color: #e53935;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--marrom {
+  background-color: #5d4037;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--preto {
+  background-color: #000000;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--chumbo {
+  background-color: #424242;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--mescla {
+  background-color: #bdbdbd;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--azul {
+  background-color: #1e88e5;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--marinho {
+  background-color: #0d1b2a;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--azul-marinho {
+  background-color: #0d1b2a;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--royal {
+  background-color: #4169e1;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--azul-royal {
+  background-color: #4169e1;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--azul-claro {
+  background-color: #90caf9;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--rubi {
+  background-color: #9b111e;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--pink {
+  background-color: #e91e63;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--rosa {
+  background-color: #f48fb1;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--romance {
+  background-color: #f8bbd0;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--amarelo {
+  background-color: #fdd835;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--branco {
+  background-color: #ffffff;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--pavao {
+  background-color: #006d5b;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--bege {
+  background-color: #f5f5dc;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--chocolate {
+  background-color: #4e342e;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--coral {
+  background-color: #ff7043;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--satin {
+  background-color: #b099ac;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--rubro {
+  background-color: #b71c1c;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--florence {
+  background-color: #8e24aa;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--jaipur {
+  background-color: #f57c00;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--chiclete {
+  background-color: #ff4081;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--tame {
+  background-color: #c5a880;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--frutilly {
+  background-color: #ff5252;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--frutily {
+  background-color: #ff5252;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--fluor {
+  background-color: #76ff03;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--roxo {
+  background-color: #6a1b9a;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--tamy {
+  background-color: #d7b899;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--castanho {
+  background-color: #6d4c41;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--cinza {
+  background-color: #9e9e9e;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--verde {
+  background-color: #43a047;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--neon {
+  background-color: #39ff14;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--laranja {
+  background-color: #fb8c00;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--colorido {
+  background-color: #ff00ff;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--sortido {
+  background-color: #00bcd4;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--marfim {
+  background-color: #fffff0;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--ferrugem {
+  background-color: #b7410e;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--prata {
+  background-color: #c0c0c0;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--lilas {
+  background-color: #ce93d8;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--ovelha {
+  background-color: #f0ede5;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--verdeteos {
+  background-color: #b6d2dd;
+}
+.skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--azulclaro {
+  background-color: #90caf9;
+}
