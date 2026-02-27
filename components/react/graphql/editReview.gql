@@ -1,0 +1,5 @@
+mutation editReview($id: String!, $review: EditReviewInput!) {
+  editReview(id: $id, review: $review) {
+    id
+  }
+}

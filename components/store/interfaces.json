@@ -154,5 +154,8 @@
   },
   "custom-new-review": {
     "component": "NewReview"
+  },
+  "custom-institucional-page": {
+    "component": "InstitucionalPage"
   }
 }

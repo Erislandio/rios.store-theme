@@ -5,6 +5,7 @@ import { useProduct } from 'vtex.product-context'
 import { ProductContextState } from 'vtex.product-context/react/ProductTypes'
 import { useRuntime } from 'vtex.render-runtime'
 import { Button, Input, Modal, Textarea, withToast } from 'vtex.styleguide'
+import EDIT_REVIEW from './graphql/editReview.gql'
 import NEW_REVIEW from './graphql/newReview.gql'
 import PROFILE from './graphql/profile.gql'
 
@@ -93,6 +94,8 @@ function NewReview({
     text?: string
   }>({})
 
+  const [editReview] = useMutation(EDIT_REVIEW)
+
   const { data: profileData, loading: profileLoading } = useQuery<ProfileData>(
     PROFILE,
     {
@@ -102,14 +105,27 @@ function NewReview({
 
   const isLoggedIn = !profileLoading && !!profileData?.profile
 
-  const [submitReview, { loading: submitting }] = useMutation(NEW_REVIEW, {
-    onCompleted: () => {
+  const [submitReview, { loading: submitting }] = useMutation<{
+    newReview: { id: string }
+  }>(NEW_REVIEW, {
+    onCompleted: (response) => {
       showToast({
         message: 'Avaliação enviada com sucesso! Aguarde a aprovação.',
       })
       setIsOpen(false)
       setForm(INITIAL_FORM)
       setErrors({})
+      setTimeout(() => {
+        editReview({
+          variables: {
+            id: response.newReview.id,
+            review: {
+              sku: selectedItem?.itemId ?? '',
+              productId: product?.productId ?? '',
+            },
+          },
+        })
+      }, 3000)
     },
     onError: () => {
       showToast({ message: 'Erro ao enviar avaliação. Tente novamente.' })
@@ -159,13 +175,13 @@ function NewReview({
       variables: {
         review: {
           id: '',
-          productId: product?.productId ?? '',
+          productId: 'x',
           rating: form.rating,
           title: form.title,
           text: form.text,
           reviewerName: form.reviewerName,
           reviewDateTime: now,
-          sku: selectedItem?.itemId ?? '',
+          sku: '',
           approved: false,
         },
       },

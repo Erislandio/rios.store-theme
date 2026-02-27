@@ -9,9 +9,14 @@
     "path": "/lojas",
     "title": "Nossas Lojas"
   },
-  "store.custom#sobre-nos": {
-    "path": "/sobre-nos",
+  "store.custom#sobre": {
+    "path": "/sobre",
     "title": "Sobre Nós",
     "description": "Conheça mais sobre a nossa empresa"
+  },
+  "store.custom#politica-de-privacidade": {
+    "path": "/politica-de-privacidade",
+    "title": "Política de Privacidade",
+    "description": "Política de Privacidade"
   }
 }

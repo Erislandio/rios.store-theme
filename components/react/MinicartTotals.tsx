@@ -20,13 +20,15 @@ export default function MinicartTotals() {
     orderForm: OrderForm
   }
 
+  console.log(orderForm)
+
   return (
     <Fragment>
       <OrderCouponProviderInput />
       <div className={handles.minicartSummary}>
         <div className={handles.summarySmallContent}>
           <span className={handles.summaryItemLabel}>Total do pedido</span>
-          <FormattedPrice value={orderForm.value} />
+          <FormattedPrice value={orderForm.value / 100} />
         </div>
       </div>
     </Fragment>

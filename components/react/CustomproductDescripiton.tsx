@@ -121,6 +121,24 @@ export default function CustomproductDescripiton() {
 
   return (
     <section className={handles.customProductDescription}>
+      <style>
+        {`
+          .gruporios-store-components-0-x-customProductDescriptionContent h3, 
+          .gruporios-store-components-0-x-customProductDescriptionContent h2 {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #000;
+          }
+
+          .gruporios-store-components-0-x-customProductDescriptionContent p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #000;
+          }
+        `}
+      </style>
       <h4 className={handles.customProductDescriptionHeader}>Descrição</h4>
       <div
         className={handles.customProductDescriptionContent}

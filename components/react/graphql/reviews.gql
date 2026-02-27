@@ -1,5 +1,5 @@
 query reviewsByProductId($productId: String!) {
-  reviewsByProductId(productId: $productId, orderBy: "") {
+  reviewsByProductId(productId: $productId, to: 100, from: 0) {
     data {
       id
       rating

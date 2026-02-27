@@ -5,6 +5,10 @@
   background: var(--Neutras-04, #f1f1f1);
   width: 100%;
 
+  @media screen and (max-width: 1024px) {
+    display: none !important;
+  }
+
   .term,
   .link {
     color: var(--Neutras-01, #1b1b1b);
@@ -63,7 +67,6 @@
   .container {
     display: flex;
     align-items: center;
-    margin-top: 12px;
   }
 
   .arrow--1 {

@@ -9,7 +9,6 @@ import type {
 } from 'vtex.product-context/react/ProductTypes'
 import { ProductSummaryCustom } from 'vtex.product-summary'
 import { ExtensionPoint } from 'vtex.render-runtime'
-import { SliderLayout } from 'vtex.slider-layout'
 
 import RECOMMENDATION_QUERY from './graphql/getRecommendations.gql'
 
@@ -37,10 +36,12 @@ export default function RecomendationShelf() {
     return null
   }
 
-  if (data.productRecommendations.length < 4 && !isMobile) {
+  if (isMobile) {
     return (
       <section className={handles.recommendationShelf}>
-        <h4 className={handles.recommendationShelfTitle}>Você vai gostar</h4>
+        <h4 className={handles.recommendationShelfTitle}>
+          VOCÊ VIU E AMOU! #LEVA
+        </h4>
         <div className={handles.recommendationShelfWrapper}>
           {data?.productRecommendations
             ?.filter((item) =>
@@ -49,6 +50,7 @@ export default function RecomendationShelf() {
                   element.sellers[0].commertialOffer.AvailableQuantity
               )
             )
+            .slice(0, 4)
             .map((item) => (
               <ExtensionPoint
                 id="product-summary.shelf"
@@ -67,29 +69,18 @@ export default function RecomendationShelf() {
 
   return (
     <section className={handles.recommendationShelf}>
-      <h4 className={handles.recommendationShelfTitle}>Você vai gostar</h4>
-      <SliderLayout
-        showNavigationArrows="desktopOnly"
-        itemsPerPage={{
-          desktop: 4,
-          tablet: 2,
-          phone: 1,
-        }}
-        centerMode={{
-          desktop: 'disabled',
-          tablet: 'disabled',
-          phone: 'to-the-left',
-          mobile: 'to-the-left',
-        }}
-        centerModeSlidesGap={16}
-        showPaginationDots="never"
-      >
+      <h4 className={handles.recommendationShelfTitle}>
+        VOCÊ VIU E AMOU! #LEVA
+      </h4>
+
+      <div className={handles.recommendationShelfWrapper}>
         {data?.productRecommendations
           ?.filter((item) =>
             item.items.some(
               (element) => element.sellers[0].commertialOffer.AvailableQuantity
             )
           )
+          .slice(0, 8)
           .map((item) => (
             <ExtensionPoint
               id="product-summary.shelf"
@@ -101,7 +92,7 @@ export default function RecomendationShelf() {
               )}
             />
           ))}
-      </SliderLayout>
+      </div>
     </section>
   )
 }

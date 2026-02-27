@@ -1,0 +1,37 @@
+{
+  "store.custom#sobre": {
+    "children": ["custom-institucional-page#sobre"]
+  },
+
+  "custom-institucional-page#sobre": {
+    "title": "Página Institucional",
+    "props": {
+      "bannerDesktop": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/0a191db1-2d04-42bc-9eeb-b9dfea244c5e___0ef2ec2fadf38ed74c5acea3766178c9.png",
+      "bannerMobile": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/77e104f8-0468-4d4f-9857-13bf483f36cb___67a0ff614c1b6a38cb60b3a6db3759fc.png",
+      "title": "SOBRE A RIOS",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta nisi at est sollicitudin, vitae finibus purus sagittis. Nulla ut tortor et elit imperdiet eleifend vitae quis arcu. Vivamus ac mi nec mauris molestie pharetra in nec magna. Cras lacinia at leo sed sollicitudin. Vivamus scelerisque diam eget sem venenatis ullamcorper. Pellentesque aliquet interdum libero ac eleifend. Aenean in enim sit amet arcu sagittis feugiat eu quis ex. Suspendisse scelerisque vestibulum sem non sagittis. <br /><br /> Fusce in ex blandit risus finibus tincidunt. Nulla a ultricies diam. Vestibulum sodales, ex eget porta faucibus, nisl sapien ultricies dui, id eleifend ligula ante hendrerit leo. Etiam porttitor blandit nisl id facilisis. In eget pellentesque tortor. Fusce vel mauris eros. Quisque posuere at massa sit amet dignissim. Donec mattis est eu augue hendrerit aliquet. <br /><br /> Fusce laoreet blandit leo et auctor. Vivamus id nisi leo. Donec ullamcorper at odio eu volutpat. Pellentesque fermentum nunc interdum euismod efficitur. Nam id sapien risus. Nam in venenatis urna. Suspendisse diam dolor, auctor in leo ut, fringilla tempor elit. Vivamus leo leo, placerat vel erat eget, ullamcorper finibus augue. Curabitur quis enim tortor. In vehicula, eros vel ultricies condimentum, mauris sapien sollicitudin eros, quis tempor ligula neque nec lectus. Etiam non diam libero. <br /><br /> In pretium porttitor tempor. Quisque hendrerit at mauris sit amet pulvinar. Aliquam erat volutpat. Etiam sollicitudin risus elementum, pellentesque risus eget, laoreet tellus. Integer blandit ultricies blandit. Quisque ut magna imperdiet, laoreet massa a, porttitor tortor. Praesent mollis cursus mauris non commodo. Suspendisse non facilisis neque. Sed facilisis in elit in posuere. Cras orci tellus, porttitor a leo ut, porta condimentum nibh. Quisque sollicitudin orci gravida sollicitudin luctus.",
+      "breadcrumbs": [
+        { "label": "Home", "link": "/" },
+        { "label": "Quem somos" }
+      ]
+    }
+  },
+
+  "store.custom#politica-de-privacidade": {
+    "children": ["custom-institucional-page#politica-de-privacidade"]
+  },
+
+  "custom-institucional-page#politica-de-privacidade": {
+    "title": "Página Institucional",
+    "props": {
+      "bannerDesktop": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/4de4a8cf-6315-4047-87dc-0391b75412df___d126205ec876407b72d7d5b9b28b6ffb.png",
+      "bannerMobile": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/77e104f8-0468-4d4f-9857-13bf483f36cb___67a0ff614c1b6a38cb60b3a6db3759fc.png",
+      "title": "POLÍTICA DE PRIVACIDADE",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta nisi at est sollicitudin, vitae finibus purus sagittis. Nulla ut tortor et elit imperdiet eleifend vitae quis arcu. Vivamus ac mi nec mauris molestie pharetra in nec magna. Cras lacinia at leo sed sollicitudin. Vivamus scelerisque diam eget sem venenatis ullamcorper. Pellentesque aliquet interdum libero ac eleifend. Aenean in enim sit amet arcu sagittis feugiat eu quis ex. Suspendisse scelerisque vestibulum sem non sagittis. <br /><br /> Fusce in ex blandit risus finibus tincidunt. Nulla a ultricies diam. Vestibulum sodales, ex eget porta faucibus, nisl sapien ultricies dui, id eleifend ligula ante hendrerit leo. Etiam porttitor blandit nisl id facilisis. In eget pellentesque tortor. Fusce vel mauris eros. Quisque posuere at massa sit amet dignissim. Donec mattis est eu augue hendrerit aliquet. <br /><br /> Fusce laoreet blandit leo et auctor. Vivamus id nisi leo. Donec ullamcorper at odio eu volutpat. Pellentesque fermentum nunc interdum euismod efficitur. Nam id sapien risus. Nam in venenatis urna. Suspendisse diam dolor, auctor in leo ut, fringilla tempor elit. Vivamus leo leo, placerat vel erat eget, ullamcorper finibus augue. Curabitur quis enim tortor. In vehicula, eros vel ultricies condimentum, mauris sapien sollicitudin eros, quis tempor ligula neque nec lectus. Etiam non diam libero. <br /><br /> In pretium porttitor tempor. Quisque hendrerit at mauris sit amet pulvinar. Aliquam erat volutpat. Etiam sollicitudin risus elementum, pellentesque risus eget, laoreet tellus. Integer blandit ultricies blandit. Quisque ut magna imperdiet, laoreet massa a, porttitor tortor. Praesent mollis cursus mauris non commodo. Suspendisse non facilisis neque. Sed facilisis in elit in posuere. Cras orci tellus, porttitor a leo ut, porta condimentum nibh. Quisque sollicitudin orci gravida sollicitudin luctus.",
+      "breadcrumbs": [
+        { "label": "Home", "link": "/" },
+        { "label": "Política de Privacidade" }
+      ]
+    }
+  }
+}

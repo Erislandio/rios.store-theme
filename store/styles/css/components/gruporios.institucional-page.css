@@ -1,0 +1,104 @@
+/* ============================================================
+   INSTITUCIONAL PAGE
+   ============================================================ */
+.institucionalWrapper {
+  width: 100%;
+}
+
+.institucionalBreadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--Neutras-04, #f1f1f1);
+  width: 100%;
+  max-width: unset;
+}
+
+.institucionalBreadcrumbLink {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+  text-decoration: none;
+}
+.institucionalBreadcrumbLink:hover {
+  color: #1b1b1b;
+  text-decoration: underline;
+}
+
+.institucionalBreadcrumbSeparator {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  color: #999;
+}
+
+.institucionalBreadcrumbCurrent {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1b1b1b;
+}
+
+.institucionalBanner {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.institucionalBanner.institucionalBanner--desktop {
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  .institucionalBanner.institucionalBanner--desktop {
+    display: none;
+  }
+}
+.institucionalBanner.institucionalBanner--mobile {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .institucionalBanner.institucionalBanner--mobile {
+    display: block;
+  }
+}
+
+.institucionalContent {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .institucionalContent {
+    padding: 32px 1rem;
+  }
+}
+
+.institucionalTitle {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1b1b1b;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .institucionalTitle {
+    font-size: 20px;
+  }
+}
+
+.institucionalText {
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.8;
+  margin: 0;
+}
+@media screen and (max-width: 1024px) {
+  .institucionalText {
+    font-size: 14px;
+  }
+}

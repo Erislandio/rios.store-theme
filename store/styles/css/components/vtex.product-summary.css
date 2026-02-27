@@ -23,9 +23,17 @@
   }
 }
 
+.SKUSelectorContainer .skuSelectorItem--selected::before {
+  display: none !important;
+}
+.SKUSelectorContainer .skuSelectorContainer {
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none !important;
+}
 .SKUSelectorContainer :global(.vtex-store-components-3-x-skuSelectorSubcontainer) {
-  margin-bottom: 8px;
-  margin-top: 12px;
+  margin-bottom: 8px !important;
+  margin-top: 12px !important;
 }
 .SKUSelectorContainer :global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) {
   display: none !important;
@@ -51,10 +59,10 @@
 }
 .SKUSelectorContainer :global(.vtex-store-components-3-x-skuSelectorSubcontainer--cor) .skuSelectorItem {
   margin: 0px;
-  width: 16px;
-  min-width: 16px;
-  height: 16px;
-  min-height: 16px;
+  width: 16px !important;
+  min-width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
   border-radius: 50%;
   opacity: 0.7;
   border: 1px solid #dedede;
@@ -288,7 +296,7 @@
 .nameContainer .brandName {
   color: #000;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 16px Im !important;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;

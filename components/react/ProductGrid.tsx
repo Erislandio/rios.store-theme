@@ -167,7 +167,7 @@ export default function ProductGrid({
       const newOrderForm = await response.json()
 
       setOrderForm({
-        ...orderForm,
+        ...newOrderForm,
         items: newOrderForm.items.map((customItem: any) => ({
           ...customItem,
           imageUrls: {
@@ -198,10 +198,9 @@ export default function ProductGrid({
     ])
   }
 
-  const isValid =
-    product?.properties?.find(
-      (propertie) => propertie?.name?.toLowerCase() === 'atacado'
-    )?.values[0] === 'sim'
+  const isValid = product?.clusterHighlights?.find(
+    (propertie) => propertie?.name?.toLowerCase() === 'atacado'
+  )
 
   if (isValid) {
     const priceElement = React.Children.toArray(children).find((child) => {
@@ -235,7 +234,7 @@ export default function ProductGrid({
             disabled={loading || items.every((item) => item.quantity === 0)}
             onClick={() => addToCart()}
           >
-            Comprar
+            Adicionar à sacola
           </Button>
         </div>
       </Fragment>

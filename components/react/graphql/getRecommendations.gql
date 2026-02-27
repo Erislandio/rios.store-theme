@@ -43,6 +43,7 @@ query productRecommendations($slug: ID!) {
       variations {
         originalName
         name
+        values
       }
       sellers {
         sellerId

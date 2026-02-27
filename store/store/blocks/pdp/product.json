@@ -219,6 +219,7 @@
     "children": [
       "custom-div#prices",
       "sku-selector#custom",
+      "modal-trigger#medidas",
       "custom-div#add-to-cart-section",
       "add-to-list-btn"
     ]
@@ -256,8 +257,10 @@
     },
     "children": [
       "vtex.store-components:product-name",
+      "custom-product-info",
       "custom-div#prices",
       "sku-selector#custom",
+      "modal-trigger#medidas",
       "availability-subscriber",
       "add-to-list-btn",
       "custom-share-button",
@@ -278,28 +281,13 @@
     "children": ["custom-div#prices-col"]
   },
 
-  "condition-layout.product#tabela-medidas": {
-    "props": {
-      "conditions": [
-        {
-          "subject": "categoryTree",
-          "arguments": {
-            "id": "1"
-          }
-        }
-      ],
-      "Then": "modal-trigger#medidas",
-      "Else": "flex-layout.row"
-    }
-  },
-
   "modal-trigger#medidas": {
     "title": "Modal Trigger - Medidas",
     "props": {
       "label": "Ver medidas",
       "blockClass": "medidas-trigger"
     },
-    "children": ["rich-text#open-modal"]
+    "children": ["rich-text#open-modal", "modal-layout#medidas"]
   },
 
   "rich-text#open-modal": {

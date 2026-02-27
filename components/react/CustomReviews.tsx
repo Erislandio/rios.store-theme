@@ -144,7 +144,7 @@ export default function CustomReviews() {
     },
     skip: !product?.productId,
     ssr: false,
-    fetchPolicy: 'cache-and-network',
+    fetchPolicy: 'network-only',
   })
 
   const reviews = data?.reviewsByProductId?.data ?? []
@@ -238,9 +238,15 @@ export default function CustomReviews() {
       )}
 
       {!loading && !error && reviews.length === 0 && (
-        <p className={handles.reviewsEmpty}>
-          Nenhuma avaliação encontrada para este produto.
-        </p>
+        <div className={handles.reviewsSummary}>
+          <div className={handles.reviewsSummaryRating}>
+            0.0
+            <div className={handles.reviewsSummaryStars}>
+              <Stars rating={0} cssHandles={handles} />
+            </div>
+          </div>
+          <span className={handles.reviewsSummaryCount}>0 avaliações</span>
+        </div>
       )}
     </div>
   )
