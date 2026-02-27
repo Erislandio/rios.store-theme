@@ -1,20 +1,20 @@
 import React from 'react'
-import { SearchPageContext } from 'vtex.search-page-context'
+import { useDevice } from 'vtex.device-detector'
 
 interface Props {
   image: string
+  mobileImage: string
+  showImageMobile: boolean
+  showImageDesktop: boolean
 }
 
-const CustomDepartmentBanner: StoreFrontFC<Props> = ({ image }) => {
-  const { searchQuery } = SearchPageContext.useSearchPage() as {
-    searchQuery: {
-      data: {
-        searchMetadata: {
-          titleTag: string
-        }
-      }
-    }
-  }
+const CustomDepartmentBanner: StoreFrontFC<Props> = ({
+  image,
+  mobileImage,
+  showImageMobile,
+  showImageDesktop,
+}) => {
+  const { isMobile } = useDevice()
 
   if (!image) {
     return null
@@ -35,16 +35,25 @@ const CustomDepartmentBanner: StoreFrontFC<Props> = ({ image }) => {
         padding: '0px',
       }}
     >
-      <h1 className="vtex-search-result-3-x-galleryTitle--layout t-heading-1">
-        {searchQuery?.data?.searchMetadata?.titleTag ?? ''}
-      </h1>
-      <img
-        title=""
-        src={image}
-        alt="Banner Department"
-        className="vtex-store-components-3-x-imageElement vtex-store-components-3-x-imageElement--department-banner-image"
-        loading="eager"
-      />
+      {isMobile
+        ? showImageMobile && (
+            <img
+              title=""
+              src={mobileImage}
+              alt="Banner Department"
+              className="vtex-store-components-3-x-imageElement vtex-store-components-3-x-imageElement--department-banner-image"
+              loading="eager"
+            />
+          )
+        : showImageDesktop && (
+            <img
+              title=""
+              src={image}
+              alt="Banner Department"
+              className="vtex-store-components-3-x-imageElement vtex-store-components-3-x-imageElement--department-banner-image"
+              loading="eager"
+            />
+          )}
     </div>
   )
 }
@@ -60,6 +69,23 @@ CustomDepartmentBanner.schema = {
       widget: {
         'ui:widget': 'image-uploader',
       },
+    },
+    mobileImage: {
+      title: 'Mobile Image',
+      type: 'string',
+      widget: {
+        'ui:widget': 'image-uploader',
+      },
+    },
+    showImageMobile: {
+      title: 'Show Image Mobile',
+      type: 'boolean',
+      default: true,
+    },
+    showImageDesktop: {
+      title: 'Show Image Desktop',
+      type: 'boolean',
+      default: true,
     },
   },
 }

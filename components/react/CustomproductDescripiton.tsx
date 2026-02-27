@@ -129,6 +129,7 @@ export default function CustomproductDescripiton() {
             font-weight: 500;
             line-height: 1.5;
             color: #000;
+            font-family: "Poppins", sans-serif;
           }
 
           .gruporios-store-components-0-x-customProductDescriptionContent p {
@@ -136,6 +137,23 @@ export default function CustomproductDescripiton() {
             font-weight: 400;
             line-height: 1.5;
             color: #000;
+            font-family: "Poppins", sans-serif;
+          }
+
+          .gruporios-store-components-0-x-customProductDescriptionContent strong {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: #000;
+            font-family: "Poppins", sans-serif;
+          }
+
+          .gruporios-store-components-0-x-customProductDescriptionContent li {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #000;
+            font-family: "Poppins", sans-serif;
           }
         `}
       </style>

@@ -11,11 +11,11 @@
   "search-result-layout.mobile#department": {
     "title": "Search Result Layout Mobile Department",
     "children": [
-      "custom-category-banners",
+      "custom-category-banners#custom",
       "custom-search-carousel#default",
       "custom-div#breadcrumb-search",
       "custom-div#filter-mobilev2",
-      "search-content",
+      "search-content#default",
       "search-fetch-more",
       "rich-text#search-end-description"
     ],
@@ -36,18 +36,17 @@
       "preserveMobileLayout": true,
       "width": "100%"
     },
-    "children": ["filter-navigator.v3#custom", "order-by.v2"]
+    "children": ["order-by.v2"]
   },
 
   "search-result-layout.desktop#department": {
     "title": "Search Result Layout Desktop Department",
     "children": [
       "custom-div#breadcrumb-search",
-      "custom-category-banners",
+      "custom-category-banners#custom",
       "custom-search-carousel#default",
-      "custom-div#filter",
-      "custom-div#search-info",
-      "search-content",
+      "custom-div#filter-and-products",
+      "filter-navigator.v3#custom",
       "search-fetch-more",
       "rich-text#search-end-description"
     ],
@@ -56,6 +55,37 @@
       "preventRouteChange": false,
       "defaultGalleryLayout": "grid"
     }
+  },
+
+  "custom-div#filter-and-products": {
+    "title": "Filter and Products Container",
+    "props": {
+      "blockClass": ["filter-and-products", "container"],
+      "justifyContent": "space-between",
+      "alignItems": "flex-start",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%",
+      "gap": "1rem"
+    },
+    "children": [
+      "filter-navigator.v3#custom",
+      "custom-div#search-content-desktop"
+    ]
+  },
+
+  "custom-div#search-content-desktop": {
+    "props": {
+      "blockClass": ["search-content-desktop-col"],
+      "justifyContent": "flex-start",
+      "alignItems": "flex-start",
+      "flexDirectionMobile": "row",
+      "flexDirection": "column",
+      "preserveMobileLayout": true,
+      "width": "100%",
+      "gap": "55px"
+    },
+    "children": ["custom-div#search-info", "search-content#default"]
   },
 
   "rich-text#search-end-description": {
@@ -70,78 +100,7 @@
     "title": "Search Carousel",
     "props": {
       "blockClass": ["search-carousel"],
-      "items": [
-        {
-          "__editorItemTitle": "Blusas",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f072f6db-d8cd-44aa-901d-884721d70bfc___7b46268988c2e09ef7eb90ed8b94e585.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Calças",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/4146cce2-1b8f-4ff4-a7d8-6fb63f462676___792fefc0a36f98ecd54861bb1c39776d.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Cropped",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/1728d594-f6c0-4aa6-b1e2-477704a0180d___b389eac116ffb0519b6ef0f7b2c1a847.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Saias",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/fc3eff7b-012d-4739-be45-e4b8149b074f___7ba33015b880b3c5a1fc6abd120be4d2.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Shorts",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/2b97434f-f30a-47f0-b723-4d80c976fe4a___9466275adb64c29e2d5121c1d7323edf.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Vestidos",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/25471314-4354-48aa-892a-749ba44d9f14___b90483985d29f801a325846ffd22d93d.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Essenciais",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/93566474-06cd-4640-84bc-cd910815d93a___e433696e1b3a4fbbdc7d6033e4038a52.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Blusas",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/f072f6db-d8cd-44aa-901d-884721d70bfc___7b46268988c2e09ef7eb90ed8b94e585.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Calças",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/4146cce2-1b8f-4ff4-a7d8-6fb63f462676___792fefc0a36f98ecd54861bb1c39776d.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Cropped",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/1728d594-f6c0-4aa6-b1e2-477704a0180d___b389eac116ffb0519b6ef0f7b2c1a847.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Saias",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/fc3eff7b-012d-4739-be45-e4b8149b074f___7ba33015b880b3c5a1fc6abd120be4d2.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Shorts",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/2b97434f-f30a-47f0-b723-4d80c976fe4a___9466275adb64c29e2d5121c1d7323edf.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Vestidos",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/25471314-4354-48aa-892a-749ba44d9f14___b90483985d29f801a325846ffd22d93d.png",
-          "link": "#"
-        },
-        {
-          "__editorItemTitle": "Essenciais",
-          "imageUrl": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/93566474-06cd-4640-84bc-cd910815d93a___e433696e1b3a4fbbdc7d6033e4038a52.png",
-          "link": "#"
-        }
-      ]
+      "items": []
     }
   },
 
@@ -201,6 +160,15 @@
       "alt": "Banner Department",
       "width": "1440",
       "height": "300"
+    }
+  },
+  "custom-category-banners#custom": {
+    "props": {
+      "image": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/cf020d39-c96c-4561-b488-31a519ea7cb2___c0af3cc517588d682b995cc25de18e88.png",
+      "mobileImage": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/cf020d39-c96c-4561-b488-31a519ea7cb2___c0af3cc517588d682b995cc25de18e88.png",
+      "blockClass": ["department-banner"],
+      "showImageMobile": true,
+      "showImageDesktop": true
     }
   }
 }

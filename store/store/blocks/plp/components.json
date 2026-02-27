@@ -22,7 +22,7 @@
       "preserveMobileLayout": true,
       "width": "100%"
     },
-    "children": ["drawer#filters", "gallery-layout-switcher"]
+    "children": ["gallery-layout-switcher"]
   },
 
   "custom-div#search-info": {
@@ -35,7 +35,37 @@
       "preserveMobileLayout": true,
       "width": "100%"
     },
-    "children": ["total-products.v2", "order-by.v2"]
+    "children": ["custom-div#search-info-first", "custom-div#search-info-last"]
+  },
+
+  "custom-div#search-info-first": {
+    "title": "Orderby Container ",
+    "props": {
+      "blockClass": ["orderby-container--first"],
+      "justifyContent": "flex-start",
+      "alignItems": "center",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%",
+      "gap": "104px",
+      "padding": "0px"
+    },
+    "children": ["search-title.v2", "total-products.v2"]
+  },
+
+  "custom-div#search-info-last": {
+    "title": "Orderby Container ",
+    "props": {
+      "blockClass": ["orderby-container--last"],
+      "justifyContent": "flex-end",
+      "alignItems": "center",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%",
+      "padding": "0px",
+      "gap": "1rem"
+    },
+    "children": ["order-by.v2", "gallery-layout-switcher"]
   },
 
   "drawer#filters": {
@@ -72,15 +102,15 @@
     }
   },
 
-  "search-content": {
+  "search-content#default": {
     "title": "Search Content",
     "props": {
       "blockClass": ["custom-gallery"]
     },
-    "blocks": ["gallery#custom", "not-found"]
+    "blocks": ["gallery#customv2", "not-found"]
   },
 
-  "gallery#custom": {
+  "gallery#customv2": {
     "title": "Custom Gallery",
     "props": {
       "blockClass": ["custom-gallery"],
@@ -89,8 +119,8 @@
           "name": "grid",
           "component": "GridSummary",
           "itemsPerRow": {
-            "(min-width:1300px)": 4,
-            "desktop": 4,
+            "(min-width:1300px)": 3,
+            "desktop": 3,
             "tablet": 3,
             "phone": 2
           }
