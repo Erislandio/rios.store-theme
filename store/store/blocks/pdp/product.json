@@ -6,8 +6,8 @@
       "custom-div#product-main",
       "__fold__",
       "custom-buy-together#custom",
-      "product-reviews",
-      "product-questions-and-answers",
+      "custom-reviews",
+      "custom-new-review",
       "recommendation-shelf"
     ]
   },

@@ -123,15 +123,15 @@
       "showPasswordVerificationIntoTooltip": true,
       "accountOptionLinks": [
         {
-          "__editorItemTitle": "Meus dados",
+          "label": "Meus dados",
           "path": "/account/#/profile"
         },
         {
-          "__editorItemTitle": "Meus pedidos",
+          "label": "Meus pedidos",
           "path": "/account/#/orders"
         },
         {
-          "__editorItemTitle": "Alterar senha",
+          "label": "Alterar senha",
           "path": "/account/#/authentication"
         }
       ]

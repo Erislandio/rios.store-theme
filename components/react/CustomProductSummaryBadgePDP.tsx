@@ -26,11 +26,11 @@ export default function CustomProductSummaryBadgePDP() {
 
   const isNew = product?.productClusters?.filter(
     (cluster) => cluster?.name?.toLowerCase() === 'lançamentos'
-  ) as any
+  ) as any[]
 
   return (
     <div className={handles.customProductSummaryBadgePdp}>
-      {isNew && (
+      {isNew?.length > 0 && (
         <span className={handles.customProductSummaryBadgePdp__new}>Novo</span>
       )}
       {discountPercent && (

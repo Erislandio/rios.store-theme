@@ -1,0 +1,17 @@
+query reviewsByProductId($productId: String!) {
+  reviewsByProductId(productId: $productId, orderBy: "") {
+    data {
+      id
+      rating
+      title
+      text
+      reviewerName
+      reviewDateTime
+    }
+    range {
+      total
+      from
+      to
+    }
+  }
+}

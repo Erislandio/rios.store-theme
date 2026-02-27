@@ -31,37 +31,31 @@ const CSS_HANDLES = [
 
 const PlusIcon = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width="21"
+    height="21"
+    viewBox="0 0 21 21"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="lucide lucide-plus-icon lucide-plus"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M5 12h14" />
-    <path d="M12 5v14" />
+    <path
+      d="M20.4002 12.6399H12.8402V20.3999H7.56022V12.6399H0.000214934V7.75994H7.56022V-5.8651e-05H12.8402V7.75994H20.4002V12.6399Z"
+      fill="#1B1B1B"
+    />
   </svg>
 )
 
 export const EquaIcon = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width="22"
+    height="15"
+    viewBox="0 0 22 15"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="lucide lucide-equal-icon lucide-equal"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <line x1="5" x2="19" y1="9" y2="9" />
-    <line x1="5" x2="19" y1="15" y2="15" />
+    <path
+      d="M21.8002 -1.95503e-05V4.87998H0.000156283V-1.95503e-05H21.8002ZM21.8002 9.59998V14.48H0.000156283V9.59998H21.8002Z"
+      fill="#1B1B1B"
+    />
   </svg>
 )
 
@@ -217,9 +211,7 @@ function CompreJunto({ showToast }: { showToast?: (message: string) => void }) {
           ))}
         </div>
         <div className={handles.compreJuntoTotals}>
-          <h5 className={handles.compreJuntoTotalTitle}>
-            Comprando junto você paga no total:
-          </h5>
+          <h5 className={handles.compreJuntoTotalTitle}>COMPRE JUNTO</h5>
           {!simulated ? (
             <p className={handles.compreJuntoTotalValue}>
               <Spinner />
@@ -239,7 +231,7 @@ function CompreJunto({ showToast }: { showToast?: (message: string) => void }) {
                 disabled={isLoading}
                 onClick={() => addToCart()}
               >
-                Compre junto
+                Adicionar à sacola
               </Button>
             </section>
           )}
@@ -257,7 +249,7 @@ function CompreJunto({ showToast }: { showToast?: (message: string) => void }) {
             product={ProductSummaryCustom.mapCatalogProductToProductSummary(
               product as any,
               'FIRST_AVAILABLE',
-              400
+              800
             )}
           />
         </div>
@@ -272,7 +264,7 @@ function CompreJunto({ showToast }: { showToast?: (message: string) => void }) {
                 product={ProductSummaryCustom.mapCatalogProductToProductSummary(
                   product as any,
                   'FIRST_AVAILABLE',
-                  400
+                  800
                 )}
               />
             </div>
@@ -282,9 +274,7 @@ function CompreJunto({ showToast }: { showToast?: (message: string) => void }) {
           <EquaIcon />
         </div>
         <div className={handles.compreJuntoTotals}>
-          <h5 className={handles.compreJuntoTotalTitle}>
-            Comprando junto você paga no total:
-          </h5>
+          <h5 className={handles.compreJuntoTotalTitle}>COMPRE JUNTO</h5>
           {!simulated ? (
             <p className={handles.compreJuntoTotalValue}>
               <Spinner />
@@ -304,7 +294,7 @@ function CompreJunto({ showToast }: { showToast?: (message: string) => void }) {
                 disabled={isLoading}
                 onClick={() => addToCart()}
               >
-                Compre junto
+                Adicionar à sacola
               </Button>
             </section>
           )}

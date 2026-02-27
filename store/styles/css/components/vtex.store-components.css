@@ -220,7 +220,7 @@
   background-color: #0d1b2a;
 }
 .skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--azul-marinho {
-  background-color: #0d1b2a;
+  background-color: #0f1845;
 }
 .skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--royal {
   background-color: #4169e1;
@@ -232,7 +232,7 @@
   background-color: #90caf9;
 }
 .skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--rubi {
-  background-color: #9b111e;
+  background-color: #b20932;
 }
 .skuSelectorContainer .skuSelectorSubcontainer--cor .skuSelectorItem--pink {
   background-color: #e91e63;
@@ -432,6 +432,7 @@
 :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button__label) {
   padding: 0px;
   width: 100%;
+  justify-content: flex-start;
 }
 
 .price_sellingPriceContainer--price-pdp .price_sellingPriceLabel--price-pdp {
@@ -463,4 +464,23 @@
   font-weight: 400;
   line-height: 18px; /* 128.571% */
   text-decoration-line: line-through;
+}
+
+.skuSelectorItem--sortido {
+  background: linear-gradient(270deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #5f27cd) !important;
+  background-size: 400% 400%;
+  animation: sortidoGradient 6s ease infinite;
+  color: #fff;
+}
+
+@keyframes sortidoGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

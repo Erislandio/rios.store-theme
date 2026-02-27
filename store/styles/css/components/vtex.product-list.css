@@ -100,3 +100,7 @@
 .productListAvailableItemsMessage {
   display: none;
 }
+
+.removeButton {
+  padding: 0.5rem;
+}

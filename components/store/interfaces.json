@@ -147,5 +147,12 @@
   "custom-product-summary-badge-pdp": {
     "component": "CustomProductSummaryBadgePDP",
     "composition": "children"
+  },
+  "custom-reviews": {
+    "component": "CustomReviews",
+    "composition": "children"
+  },
+  "custom-new-review": {
+    "component": "NewReview"
   }
 }
