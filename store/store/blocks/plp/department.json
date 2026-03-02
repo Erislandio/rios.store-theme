@@ -12,17 +12,63 @@
     "title": "Search Result Layout Mobile Department",
     "children": [
       "custom-category-banners#custom",
+      "custom-category-list#default",
       "custom-search-carousel#default",
       "custom-div#breadcrumb-search",
       "custom-div#filter-mobilev2",
       "search-content#default",
       "search-fetch-more",
-      "rich-text#search-end-description"
+      "custom-department-description#default"
     ],
     "props": {
       "pagination": "show-more",
       "preventRouteChange": false,
       "defaultGalleryLayout": "grid"
+    }
+  },
+
+  "custom-department-description#default": {
+    "props": {
+      "title": "Feminino",
+      "description": "A moda íntima feminina é uma peça chave para o dia a dia, oferecendo conforto e estilo. Na Riachuelo, você encontra uma variedade de modelos, como sutiãs, calcinhas, conjuntos, bodies, pijamas e meias, para todos os gostos e ocasiões. Nossas peças são desenvolvidas com materiais de alta qualidade, proporcionando um toque suave na pele e um caimento perfeito. Além disso, contamos com uma linha completa de moda praia, com biquínis, maiôs e saídas de praia, para você arrasar no verão. Descubra a coleção completa e renove seu guarda-roupa com as tendências da estação A moda íntima feminina é uma peça chave para o dia a dia, oferecendo conforto e estilo. Na Riachuelo, você encontra uma variedade de modelos, como sutiãs, calcinhas, conjuntos, bodies, pijamas e meias, para todos os gostos e ocasiões. Nossas peças são desenvolvidas com materiais de alta qualidade, proporcionando um toque suave na pele e um caimento perfeito. Além disso, contamos com uma linha completa de moda praia, com biquínis, maiôs e saídas de praia, para você arrasar no verão. Descubra a coleção completa e renove seu guarda-roupa com as tendências da estação A moda íntima feminina é uma peça chave para o dia a dia, oferecendo conforto e estilo. Na Riachuelo, você encontra uma variedade de modelos, como sutiãs, calcinhas, conjuntos, bodies, pijamas e meias, para todos os gostos e ocasiões. Nossas peças são desenvolvidas com materiais de alta qualidade, proporcionando um toque suave na pele e um caimento perfeito. Além disso, contamos com uma linha completa de moda praia, com biquínis, maiôs e saídas de praia, para você arrasar no verão. Descubra a coleção completa e renove seu guarda-roupa com as tendências da estação."
+    }
+  },
+
+  "custom-category-list#default": {
+    "title": "Custom Category List",
+    "props": {
+      "items": [
+        {
+          "__editorItemTitle": "Sutiãs",
+          "link": "/category-link",
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/c39589a6-2d82-4fb4-a737-aa5a876196e6___14c2c65aad763e96419a30f22e54048c.svg"
+        },
+        {
+          "__editorItemTitle": "Calcinhas",
+          "link": "/category-link",
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/52d99ce8-ed20-40d2-a240-05fa2138036a___766ebc5257984597861b2ca1c1dfe2f9.svg"
+        },
+        {
+          "__editorItemTitle": "Conjuntos",
+          "link": "/category-link",
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/9794f409-7f2e-4dc6-ba07-4ac8505fc10e___b6fc6cbbebd99675288eaa35ea8e98fb.svg"
+        },
+        {
+          "__editorItemTitle": "Pijamas",
+          "link": "/category-link",
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/1db5d9dd-8a86-4fa1-bdfa-748d41b9549f___9fd6aaaadc8c091a116fd044ee88c95a.svg"
+        },
+        {
+          "__editorItemTitle": "Bodies",
+          "link": "/category-link",
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/c39589a6-2d82-4fb4-a737-aa5a876196e6___14c2c65aad763e96419a30f22e54048c.svg"
+        },
+        {
+          "__editorItemTitle": "Meias",
+          "link": "/category-link",
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/4d74ac62-3c26-415b-b8ea-d9c4acf961c6___563ac65c4de39e5aec84841587db4905.svg"
+        }
+      ]
     }
   },
 
@@ -44,11 +90,10 @@
     "children": [
       "custom-div#breadcrumb-search",
       "custom-category-banners#custom",
+      "custom-category-list#default",
       "custom-search-carousel#default",
       "custom-div#filter-and-products",
-      "filter-navigator.v3#custom",
-      "search-fetch-more",
-      "rich-text#search-end-description"
+      "custom-department-description#default"
     ],
     "props": {
       "pagination": "show-more",
@@ -75,6 +120,7 @@
   },
 
   "custom-div#search-content-desktop": {
+    "title": "Search Content Desktop",
     "props": {
       "blockClass": ["search-content-desktop-col"],
       "justifyContent": "flex-start",
@@ -85,7 +131,11 @@
       "width": "100%",
       "gap": "55px"
     },
-    "children": ["custom-div#search-info", "search-content#default"]
+    "children": [
+      "custom-div#search-info",
+      "search-content#default",
+      "search-fetch-more"
+    ]
   },
 
   "rich-text#search-end-description": {
@@ -107,6 +157,7 @@
   "custom-div#department-banner-desktop": {
     "title": "Banner Department",
     "props": {
+      "width": "100%",
       "blockClass": ["department-banner"]
     },
     "children": ["search-title.v2", "image#search-banner-department"]
@@ -115,6 +166,7 @@
   "custom-div#department-banner-mobile": {
     "title": "Banner Department Mobile",
     "props": {
+      "width": "100%",
       "blockClass": ["department-banner"]
     },
     "children": [

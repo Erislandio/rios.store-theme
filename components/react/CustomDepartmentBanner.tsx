@@ -28,7 +28,7 @@ const CustomDepartmentBanner: StoreFrontFC<Props> = ({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'stretch',
-        width: 'auto',
+        width: '100%',
         background: 'transparent',
         gap: '0px',
         justifyContent: 'flex-start',
@@ -43,6 +43,7 @@ const CustomDepartmentBanner: StoreFrontFC<Props> = ({
               alt="Banner Department"
               className="vtex-store-components-3-x-imageElement vtex-store-components-3-x-imageElement--department-banner-image"
               loading="eager"
+              width={'100%'}
             />
           )
         : showImageDesktop && (
@@ -52,6 +53,7 @@ const CustomDepartmentBanner: StoreFrontFC<Props> = ({
               alt="Banner Department"
               className="vtex-store-components-3-x-imageElement vtex-store-components-3-x-imageElement--department-banner-image"
               loading="eager"
+              width={'100%'}
             />
           )}
     </div>

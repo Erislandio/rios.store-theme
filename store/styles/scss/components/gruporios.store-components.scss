@@ -237,14 +237,18 @@
 }
 
 .categoryListContainer {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 0px 1rem;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  background-color: #f1f1f1;
+  width: 100%;
 
   .slideChildrenContainer {
     padding: 0px 0.5rem;
+  }
+
+  .sliderLayoutContainer {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 12px 1rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -254,11 +258,6 @@
 
   .categoryListItems {
     width: 100%;
-    padding: 1rem;
-
-    @media screen and (max-width: 768px) {
-      padding: 0px;
-    }
   }
 
   .categoryListTitle {
@@ -278,17 +277,15 @@
     }
   }
 
-  .categoryListItemImage {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease;
-  }
-
   .categoryListItemLink {
     text-decoration: none;
     text-align: center;
     opacity: 0.9;
     color: var(--Neutras-01, #1b1b1b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       opacity: 1;
@@ -300,11 +297,11 @@
     margin: 0px;
     margin-top: 12px;
 
-    color: var(--Neutras-01, #1b1b1b);
+    color: var(--Neutras-02, #8c8c8c);
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 22px; /* 157.143% */
     text-transform: uppercase;
   }
@@ -2979,4 +2976,71 @@
 
 .divContainer--filter-and-products {
   margin-top: 20px !important;
+}
+
+.departmentDescriptionContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 2rem;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 32px 1rem;
+  }
+
+  .departmentDescriptionTitle {
+    color: var(--Neutras-01, #1b1b1b);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 122.222% */
+    text-transform: uppercase;
+  }
+
+  .departmentDescriptionContent {
+    position: relative;
+  }
+
+  .departmentDescriptionOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    pointer-events: none;
+  }
+
+  .departmentDescriptionText {
+    color: var(--Neutras-01, #1b1b1b);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 153.846% */
+  }
+
+  .departmentDescriptionToggle {
+    margin-top: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--Neutras-01, #1b1b1b);
+    text-transform: uppercase;
+    padding: 0px;
+
+    color: var(--Neutras-01, #1b1b1b);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }

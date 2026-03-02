@@ -1,6 +1,5 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { useDevice } from 'vtex.device-detector'
 import { Link } from 'vtex.render-runtime'
 import { SliderLayout } from 'vtex.slider-layout'
 import useDatalayer from './hooks/useDatalayer'
@@ -24,10 +23,9 @@ const CSS_HANDLES = [
   'categoryListItemTitle',
 ] as const
 
-const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
+const CustomCategoryList: StoreFrontFC<Props> = ({ items = [] }) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
-  const { isMobile } = useDevice()
 
   const itemToRender =
     items.map((item, index) => (
@@ -44,8 +42,8 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
           }
         >
           <img
-            width={isMobile ? 170 : 220}
-            height={isMobile ? 170 : 220}
+            width={40}
+            height={40}
             loading="lazy"
             src={item.imageUrl}
             alt={item.__editorItemTitle}
@@ -60,7 +58,6 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [], title }) => {
 
   return (
     <section className={handles.categoryListContainer}>
-      <h2 className={handles.categoryListTitle}>{title}</h2>
       <SliderLayout
         itemsPerPage={{ desktop: 7, tablet: 5, phone: 1 }}
         centerMode={{

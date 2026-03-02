@@ -9,10 +9,8 @@
   "search-result-layout.desktop#default": {
     "children": [
       "custom-div#breadcrumb-search",
-      "custom-div#filter",
-      "custom-div#search-info",
-      "search-content#default",
-      "search-fetch-more"
+      "custom-search-carousel#default",
+      "custom-div#filter-and-products"
     ],
     "props": {
       "blockClass": "searchResultContainer",

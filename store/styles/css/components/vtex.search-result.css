@@ -100,12 +100,18 @@
   font-weight: 600;
   line-height: 140%; /* 22.4px */
   text-transform: none;
-  padding: 10px 24px;
-  background-color: #00579c;
+  padding: 8px 24px;
+  background-color: #000;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  border-radius: 0px;
+  transition: all 0.3s ease-in-out;
 }
 .searchResultContainer .buttonShowMore :global(.vtex-button):hover {
-  background-color: #004880;
+  background-color: #c00146;
 }
 @media screen and (max-width: 1024px) {
   .searchResultContainer .orderByOptionsContainer {
@@ -144,6 +150,10 @@
   text-transform: none;
 }
 
+.filter__container--custom-filter-navigator--title {
+  margin-bottom: 45px;
+}
+
 .sidebar,
 .filters--layout {
   width: 100%;
@@ -160,9 +170,13 @@
     padding: 0px;
   }
 }
+.sidebar :global(.vtex-checkbox__inner-container),
+.filters--layout :global(.vtex-checkbox__inner-container) {
+  border: 1px solid var(--Primria-03, #d7cfc5);
+}
 .sidebar .filter--custom-filter-navigator,
 .filters--layout .filter--custom-filter-navigator {
-  padding: 1rem;
+  padding: 0px;
 }
 .sidebar .filterBreadcrumbsItemName,
 .filters--layout .filterBreadcrumbsItemName {
@@ -185,27 +199,45 @@
 }
 .sidebar .filterTemplateOverflow--custom-filter-navigator,
 .filters--layout .filterTemplateOverflow--custom-filter-navigator {
-  padding: 0px 1rem;
+  padding: 0px;
+  margin-top: 1rem;
 }
 .sidebar :global(.vtex-checkbox__label),
 .filters--layout :global(.vtex-checkbox__label) {
-  color: var(--gray-700, #3f3f46);
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 19.6px */
+  line-height: 22px; /* 157.143% */
 }
 .sidebar .filterContent--custom-filter-navigator,
 .filters--layout .filterContent--custom-filter-navigator {
   margin-bottom: 32px;
+  overflow-y: scroll;
+}
+.sidebar .filterContent--custom-filter-navigator::-webkit-scrollbar,
+.filters--layout .filterContent--custom-filter-navigator::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar .filterContent--custom-filter-navigator::-webkit-scrollbar-track,
+.filters--layout .filterContent--custom-filter-navigator::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar .filterContent--custom-filter-navigator::-webkit-scrollbar-thumb,
+.filters--layout .filterContent--custom-filter-navigator::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
 }
 .sidebar .filterTitleSpan--custom-filter-navigator,
 .filters--layout .filterTitleSpan--custom-filter-navigator {
-  color: var(--gray-700, #3f3f46);
-  font-size: 16px;
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 22.4px */
+  font-weight: 600;
+  line-height: 22px; /* 157.143% */
+  text-transform: uppercase;
 }
 .sidebar .accordionFilterItemIcon,
 .sidebar .filterIcon--custom-filter-navigator,
@@ -255,10 +287,12 @@
   transform: rotate(180deg);
 }
 .sidebar :global(.vtex-slider__selector),
+.filters--layout :global(.vtex-slider__selector) {
+  background-color: #c00146;
+}
 .sidebar :global(.vtex-slider__base-internal),
-.filters--layout :global(.vtex-slider__selector),
 .filters--layout :global(.vtex-slider__base-internal) {
-  background-color: #fcd200;
+  background-color: #000;
 }
 
 .accordionFilterContainer--faixas-de-preco .filterTitleSpan {
@@ -267,10 +301,37 @@
 
 :global(.vtex-slider__values-container) {
   color: var(--gray-700, #3f3f46);
+  justify-content: flex-start;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
   line-height: 140%; /* 22.4px */
+}
+
+:global(.vtex-slider__left-value),
+:global(.vtex-slider__right-value) {
+  color: var(--gray-700, #3f3f46);
+  justify-content: flex-start;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  line-height: 140%; /* 22.4px */
+}
+
+.filter__container {
+  border: none;
 }
 
 .sidebar {
@@ -395,4 +456,202 @@
 
 .galleryItem--custom-gallery--list :global(.vtex-product-summary-2-x-container) {
   max-width: unset !important;
+}
+
+.filter__container--cor :global(.vtex-checkbox__container) {
+  display: none !important;
+}
+.filter__container--cor :global(.vtex-checkbox__label) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.filter__container--cor :global(.vtex-checkbox__label)::before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  min-width: 25px;
+  min-height: 25px;
+  display: block;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--animalprint :global(.vtex-checkbox__label)::before {
+  background-color: #8b5a2b;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--vermelho :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterItem--custom-filter-navigator--vermelho :global(.vtex-checkbox__label)::before {
+  background-color: #c62828;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--nude :global(.vtex-checkbox__label)::before {
+  background-color: #e3c1a0;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--fantastico :global(.vtex-checkbox__label)::before {
+  background-color: #7b1fa2;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--goiaba :global(.vtex-checkbox__label)::before {
+  background-color: #d8435e;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--sandia :global(.vtex-checkbox__label)::before {
+  background-color: #e53935;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--marrom :global(.vtex-checkbox__label)::before {
+  background-color: #5d4037;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--preto :global(.vtex-checkbox__label)::before {
+  background-color: #000000;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--chumbo :global(.vtex-checkbox__label)::before {
+  background-color: #424242;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--mescla :global(.vtex-checkbox__label)::before {
+  background-color: #bdbdbd;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--azul :global(.vtex-checkbox__label)::before {
+  background-color: #1e88e5;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--marinho :global(.vtex-checkbox__label)::before {
+  background-color: #0d1b2a;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--azul-marinho :global(.vtex-checkbox__label)::before {
+  background-color: #0f1845;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--royal :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterItem--custom-filter-navigator--azul-royal :global(.vtex-checkbox__label)::before {
+  background-color: #4169e1;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--azul-claro :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterItem--custom-filter-navigator--azulclaro :global(.vtex-checkbox__label)::before {
+  background-color: #90caf9;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--rubi :global(.vtex-checkbox__label)::before {
+  background-color: #b20932;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--pink :global(.vtex-checkbox__label)::before {
+  background-color: #e91e63;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--rosa :global(.vtex-checkbox__label)::before {
+  background-color: #f48fb1;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--romance :global(.vtex-checkbox__label)::before {
+  background-color: #f8bbd0;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--amarelo :global(.vtex-checkbox__label)::before {
+  background-color: #fdd835;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--branco :global(.vtex-checkbox__label)::before {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--pavao :global(.vtex-checkbox__label)::before {
+  background-color: #006d5b;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--bege :global(.vtex-checkbox__label)::before {
+  background-color: #f5f5dc;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--chocolate :global(.vtex-checkbox__label)::before {
+  background-color: #4e342e;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--coral :global(.vtex-checkbox__label)::before {
+  background-color: #ff7043;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--satin :global(.vtex-checkbox__label)::before {
+  background-color: #b099ac;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--rubro :global(.vtex-checkbox__label)::before {
+  background-color: #b71c1c;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--florence :global(.vtex-checkbox__label)::before {
+  background-color: #8e24aa;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--jaipur :global(.vtex-checkbox__label)::before {
+  background-color: #f57c00;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--chiclete :global(.vtex-checkbox__label)::before {
+  background-color: #ff4081;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--tame :global(.vtex-checkbox__label)::before {
+  background-color: #c5a880;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--frutilly :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterItem--custom-filter-navigator--frutily :global(.vtex-checkbox__label)::before {
+  background-color: #ff5252;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--fluor :global(.vtex-checkbox__label)::before {
+  background-color: #76ff03;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--roxo :global(.vtex-checkbox__label)::before {
+  background-color: #6a1b9a;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--tamy :global(.vtex-checkbox__label)::before {
+  background-color: #d7b899;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--castanho :global(.vtex-checkbox__label)::before {
+  background-color: #6d4c41;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--cinza :global(.vtex-checkbox__label)::before {
+  background-color: #9e9e9e;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--verde :global(.vtex-checkbox__label)::before {
+  background-color: #43a047;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--neon :global(.vtex-checkbox__label)::before {
+  background-color: #39ff14;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--laranja :global(.vtex-checkbox__label)::before {
+  background-color: #fb8c00;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--colorido :global(.vtex-checkbox__label)::before {
+  background-color: #ff00ff;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--sortido :global(.vtex-checkbox__label)::before {
+  background-color: #00bcd4;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--marfim :global(.vtex-checkbox__label)::before {
+  background-color: #fffff0;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--ferrugem :global(.vtex-checkbox__label)::before {
+  background-color: #b7410e;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--prata :global(.vtex-checkbox__label)::before {
+  background-color: #c0c0c0;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--lilas :global(.vtex-checkbox__label)::before {
+  background-color: #ce93d8;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--ovelha :global(.vtex-checkbox__label)::before {
+  background-color: #f0ede5;
+}
+.filter__container--cor .filterItem--custom-filter-navigator--verdeteos :global(.vtex-checkbox__label)::before {
+  background-color: #b6d2dd;
+}
+
+.filter__container--tamanho .filterContent--custom-filter-navigator {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.filter__container--tamanho .filterItem {
+  border-radius: 1px;
+  width: 26px;
+  min-height: 26px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--Primria-03, #d7cfc5);
+  background: var(--Neutras-05, #fff);
+}
+.filter__container--tamanho .filterItem :global(.vtex-checkbox__line-container) {
+  margin: 0px;
+}
+.filter__container--tamanho .filterItem :global(.vtex-checkbox__container) {
+  display: none !important;
+}
+
+.filterItem--custom-filter-navigator--selected :global(.vtex-checkbox__inner-container) {
+  border: none;
+  background-color: #000;
 }

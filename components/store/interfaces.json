@@ -157,5 +157,8 @@
   },
   "custom-institucional-page": {
     "component": "InstitucionalPage"
+  },
+  "custom-department-description": {
+    "component": "CustomDepartmentdescription"
   }
 }
