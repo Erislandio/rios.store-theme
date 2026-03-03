@@ -343,8 +343,15 @@
 .sidebar .filter__container--priceRange .filterTitle {
   display: none;
 }
+.sidebar .filterAccordionBreadcrumbs {
+  padding: 1rem;
+}
+.sidebar .filterBreadcrumbsContent {
+  padding: 0px;
+}
 .sidebar .filterBreadcrumbsText--custom-filter-navigator {
   color: var(--Contraste-Preto, #000);
+  text-transform: uppercase;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -365,37 +372,31 @@
   line-height: 140%; /* 22.4px */
 }
 
-@media screen and (max-width: 1024px) {
-  .orderBy--layout {
-    padding: 0.7rem 27px;
-    border-radius: 8px;
-    border: 1px solid #e8e8e8;
-  }
-  .orderBy--layout .orderByButton {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
 .filterClearButtonWrapper :global(.vtex-button) {
-  background-color: tomato;
-  border: none;
-  color: #fff;
+  background-color: transparent;
+  border-radius: 0px;
+  border: 1px solid #000;
+  color: #000;
   font-size: 14px;
   font-style: normal;
   text-transform: none;
 }
+.filterClearButtonWrapper :global(.vtex-button):hover {
+  background-color: #000;
+  color: #fff;
+}
 
 .filterApplyButtonWrapper :global(.vtex-button) {
-  background-color: #00579c;
+  background-color: #000;
   border: none;
   color: #fff;
+  border-radius: 0px;
   font-size: 14px;
   font-style: normal;
   text-transform: none;
 }
 .filterApplyButtonWrapper :global(.vtex-button):hover {
-  background-color: #004880;
+  background-color: #000;
 }
 
 .gallery--custom-gallery--list {
@@ -458,15 +459,18 @@
   max-width: unset !important;
 }
 
+.accordionFilterOpen--cor :global(.vtex-checkbox__container),
 .filter__container--cor :global(.vtex-checkbox__container) {
   display: none !important;
 }
+.accordionFilterOpen--cor :global(.vtex-checkbox__label),
 .filter__container--cor :global(.vtex-checkbox__label) {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
 }
+.accordionFilterOpen--cor :global(.vtex-checkbox__label)::before,
 .filter__container--cor :global(.vtex-checkbox__label)::before {
   width: 20px;
   height: 20px;
@@ -477,161 +481,338 @@
   min-height: 25px;
   display: block;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--animalprint :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--animalprint :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--animalprint :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--animalprint :global(.vtex-checkbox__label)::before {
   background-color: #8b5a2b;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--vermelho :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--vermelho :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--vermelho :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--vermelho :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--vermelho :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--vermelho :global(.vtex-checkbox__label)::before {
   background-color: #c62828;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--nude :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--nude :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--nude :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--nude :global(.vtex-checkbox__label)::before {
   background-color: #e3c1a0;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--fantastico :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--fantastico :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--fantastico :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--fantastico :global(.vtex-checkbox__label)::before {
   background-color: #7b1fa2;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--goiaba :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--goiaba :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--goiaba :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--goiaba :global(.vtex-checkbox__label)::before {
   background-color: #d8435e;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--sandia :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--sandia :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--sandia :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--sandia :global(.vtex-checkbox__label)::before {
   background-color: #e53935;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--marrom :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--marrom :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--marrom :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--marrom :global(.vtex-checkbox__label)::before {
   background-color: #5d4037;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--preto :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--preto :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--preto :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--preto :global(.vtex-checkbox__label)::before {
   background-color: #000000;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--chumbo :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--chumbo :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--chumbo :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--chumbo :global(.vtex-checkbox__label)::before {
   background-color: #424242;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--mescla :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--mescla :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--mescla :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--mescla :global(.vtex-checkbox__label)::before {
   background-color: #bdbdbd;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--azul :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--azul :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--azul :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--azul :global(.vtex-checkbox__label)::before {
   background-color: #1e88e5;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--marinho :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--marinho :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--marinho :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--marinho :global(.vtex-checkbox__label)::before {
   background-color: #0d1b2a;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--azul-marinho :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--azul-marinho :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--azul-marinho :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--azul-marinho :global(.vtex-checkbox__label)::before {
   background-color: #0f1845;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--royal :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--royal :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--azul-royal :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--royal :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--royal :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--azul-royal :global(.vtex-checkbox__label)::before {
   background-color: #4169e1;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--azul-claro :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--azul-claro :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--azulclaro :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--azul-claro :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--azul-claro :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--azulclaro :global(.vtex-checkbox__label)::before {
   background-color: #90caf9;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--rubi :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--rubi :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--rubi :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--rubi :global(.vtex-checkbox__label)::before {
   background-color: #b20932;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--pink :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--pink :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--pink :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--pink :global(.vtex-checkbox__label)::before {
   background-color: #e91e63;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--rosa :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--rosa :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--rosa :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--rosa :global(.vtex-checkbox__label)::before {
   background-color: #f48fb1;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--romance :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--romance :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--romance :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--romance :global(.vtex-checkbox__label)::before {
   background-color: #f8bbd0;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--amarelo :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--amarelo :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--amarelo :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--amarelo :global(.vtex-checkbox__label)::before {
   background-color: #fdd835;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--branco :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--branco :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--branco :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--branco :global(.vtex-checkbox__label)::before {
   background-color: #ffffff;
   border: 1px solid #ddd;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--pavao :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--pavao :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--pavao :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--pavao :global(.vtex-checkbox__label)::before {
   background-color: #006d5b;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--bege :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--bege :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--bege :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--bege :global(.vtex-checkbox__label)::before {
   background-color: #f5f5dc;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--chocolate :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--chocolate :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--chocolate :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--chocolate :global(.vtex-checkbox__label)::before {
   background-color: #4e342e;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--coral :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--coral :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--coral :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--coral :global(.vtex-checkbox__label)::before {
   background-color: #ff7043;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--satin :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--satin :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--satin :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--satin :global(.vtex-checkbox__label)::before {
   background-color: #b099ac;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--rubro :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--rubro :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--rubro :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--rubro :global(.vtex-checkbox__label)::before {
   background-color: #b71c1c;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--florence :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--florence :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--florence :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--florence :global(.vtex-checkbox__label)::before {
   background-color: #8e24aa;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--jaipur :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--jaipur :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--jaipur :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--jaipur :global(.vtex-checkbox__label)::before {
   background-color: #f57c00;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--chiclete :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--chiclete :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--chiclete :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--chiclete :global(.vtex-checkbox__label)::before {
   background-color: #ff4081;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--tame :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--tame :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--tame :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--tame :global(.vtex-checkbox__label)::before {
   background-color: #c5a880;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--frutilly :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--frutilly :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--frutily :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--frutilly :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--frutilly :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--frutily :global(.vtex-checkbox__label)::before {
   background-color: #ff5252;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--fluor :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--fluor :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--fluor :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--fluor :global(.vtex-checkbox__label)::before {
   background-color: #76ff03;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--roxo :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--roxo :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--roxo :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--roxo :global(.vtex-checkbox__label)::before {
   background-color: #6a1b9a;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--tamy :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--tamy :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--tamy :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--tamy :global(.vtex-checkbox__label)::before {
   background-color: #d7b899;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--castanho :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--castanho :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--castanho :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--castanho :global(.vtex-checkbox__label)::before {
   background-color: #6d4c41;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--cinza :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--cinza :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--cinza :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--cinza :global(.vtex-checkbox__label)::before {
   background-color: #9e9e9e;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--verde :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--verde :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--verde :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--verde :global(.vtex-checkbox__label)::before {
   background-color: #43a047;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--neon :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--neon :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--neon :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--neon :global(.vtex-checkbox__label)::before {
   background-color: #39ff14;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--laranja :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--laranja :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--laranja :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--laranja :global(.vtex-checkbox__label)::before {
   background-color: #fb8c00;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--colorido :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--colorido :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--colorido :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--colorido :global(.vtex-checkbox__label)::before {
   background-color: #ff00ff;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--sortido :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--sortido :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--sortido :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--sortido :global(.vtex-checkbox__label)::before {
   background-color: #00bcd4;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--marfim :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--marfim :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--marfim :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--marfim :global(.vtex-checkbox__label)::before {
   background-color: #fffff0;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--ferrugem :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--ferrugem :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--ferrugem :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--ferrugem :global(.vtex-checkbox__label)::before {
   background-color: #b7410e;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--prata :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--prata :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--prata :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--prata :global(.vtex-checkbox__label)::before {
   background-color: #c0c0c0;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--lilas :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--lilas :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--lilas :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--lilas :global(.vtex-checkbox__label)::before {
   background-color: #ce93d8;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--ovelha :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--ovelha :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--ovelha :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--ovelha :global(.vtex-checkbox__label)::before {
   background-color: #f0ede5;
 }
+.accordionFilterOpen--cor .filterAccordionItemBox--verdeteos :global(.vtex-checkbox__label)::before,
+.accordionFilterOpen--cor .filterItem--custom-filter-navigator--verdeteos :global(.vtex-checkbox__label)::before,
+.filter__container--cor .filterAccordionItemBox--verdeteos :global(.vtex-checkbox__label)::before,
 .filter__container--cor .filterItem--custom-filter-navigator--verdeteos :global(.vtex-checkbox__label)::before {
   background-color: #b6d2dd;
 }
 
+.accordionFilterOpen--custom-filter-navigator--tamanho {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding-bottom: 1rem;
+}
+.accordionFilterOpen--custom-filter-navigator--tamanho .filterAccordionItemBox {
+  border-radius: 1px;
+  width: 26px;
+  min-height: 26px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--Primria-03, #d7cfc5);
+  background: var(--Neutras-05, #fff);
+}
+.accordionFilterOpen--custom-filter-navigator--tamanho .filterAccordionItemBox :global(.vtex-checkbox__line-container) {
+  margin: 0px;
+}
+.accordionFilterOpen--custom-filter-navigator--tamanho .filterAccordionItemBox :global(.vtex-checkbox__container) {
+  display: none !important;
+}
+
+.filterAccordionItemBox--tamanho .accordionFilterItemOptions,
+.filterAccordionItemBox--tamanho .filterContent--custom-filter-navigator,
+.filter__container--tamanho .accordionFilterItemOptions,
 .filter__container--tamanho .filterContent--custom-filter-navigator {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
 }
+.filterAccordionItemBox--tamanho .filterItem,
 .filter__container--tamanho .filterItem {
   border-radius: 1px;
   width: 26px;
@@ -644,9 +825,11 @@
   border: 1px solid var(--Primria-03, #d7cfc5);
   background: var(--Neutras-05, #fff);
 }
+.filterAccordionItemBox--tamanho .filterItem :global(.vtex-checkbox__line-container),
 .filter__container--tamanho .filterItem :global(.vtex-checkbox__line-container) {
   margin: 0px;
 }
+.filterAccordionItemBox--tamanho .filterItem :global(.vtex-checkbox__container),
 .filter__container--tamanho .filterItem :global(.vtex-checkbox__container) {
   display: none !important;
 }
@@ -654,4 +837,58 @@
 .filterItem--custom-filter-navigator--selected :global(.vtex-checkbox__inner-container) {
   border: none;
   background-color: #000;
+}
+
+.orderByButton .orderByText {
+  display: block !important;
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 32px; /* 266.667% */
+}
+.orderByButton .filterPopupTitle {
+  color: var(--Neutras-01, #1b1b1b);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .filters--layout {
+    max-width: unset;
+    margin-bottom: 20px;
+  }
+  .filters--layout .filterPopupButton {
+    max-width: 150px;
+    margin: 0 auto;
+    border-radius: 0px;
+    padding: 4px 1rem;
+    border-radius: 1px;
+    background: var(--Neutras-04, #f1f1f1);
+  }
+  .filters--layout .filterPopupButton .filterPopupTitle {
+    color: var(--Primria-01, #c00146);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 266.667% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .filters--layout .filterPopupButton .filterPopupTitle::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M0.00104324 2.74178C0.161703 2.37821 0.449116 2.27441 0.832507 2.27545C3.85113 2.28432 6.86975 2.2791 9.88889 2.28432C10.0709 2.28432 10.1487 2.24207 10.205 2.05429C10.5576 0.873335 11.7073 -0.0514994 13.1422 0.00222755C14.2997 0.0455221 15.4405 0.924975 15.7697 2.10436C15.8083 2.24259 15.8635 2.28432 16.0059 2.2838C17.1055 2.27754 18.2051 2.27858 19.3042 2.28119C19.7971 2.28223 20.1127 2.70005 19.9515 3.12778C19.856 3.38129 19.6312 3.52839 19.3219 3.52891C18.2354 3.53047 17.1488 3.5336 16.0623 3.52578C15.887 3.52473 15.8114 3.56386 15.7582 3.74695C15.404 4.97015 14.2387 5.82717 12.9691 5.81883C11.6791 5.81048 10.5357 4.9472 10.1899 3.70835C10.1481 3.55864 10.0793 3.52578 9.93375 3.5263C6.88227 3.53099 3.83131 3.5263 0.779824 3.53465C0.400605 3.53569 0.142403 3.40581 0.00104324 3.05423V2.74178ZM12.9738 1.25255C12.0536 1.25568 11.3181 1.99743 11.3223 2.91861C11.3265 3.82415 12.0693 4.56641 12.9753 4.56954C13.884 4.57267 14.6414 3.81684 14.6403 2.90766C14.6393 1.99221 13.8918 1.24942 12.9738 1.25255Z' fill='%23C00146'/%3E%3Cpath d='M0.00104324 16.9544C0.140838 16.6002 0.399562 16.4724 0.779302 16.474C3.82453 16.4828 6.87027 16.4782 9.9155 16.4823C10.0741 16.4823 10.1487 16.4479 10.1956 16.2799C10.5347 15.0614 11.6932 14.1955 12.9717 14.1898C14.2496 14.1841 15.4233 15.0578 15.7665 16.2836C15.8093 16.4369 15.8672 16.4839 16.0273 16.4828C17.1337 16.475 18.24 16.4755 19.3459 16.4802C19.8263 16.4823 20.1304 16.9419 19.9332 17.3581C19.808 17.6226 19.5843 17.7285 19.2989 17.728C18.2124 17.7269 17.1253 17.7306 16.0388 17.7243C15.8792 17.7233 15.815 17.7645 15.7613 17.9277C15.3925 19.0477 14.6283 19.7341 13.4651 19.9652C13.4276 19.9725 13.3916 19.9876 13.3551 19.9996H12.5742C12.5413 19.9584 12.4918 19.9688 12.4485 19.9595C11.3275 19.7138 10.5722 19.0492 10.2092 17.9627C10.144 17.7681 10.0704 17.7233 9.87951 17.7238C6.86401 17.73 3.84852 17.7238 0.833029 17.7332C0.449116 17.7342 0.165354 17.6247 0.00156486 17.2668L0.00104324 16.9544ZM12.9878 18.7561C13.8965 18.7529 14.6372 18.0128 14.6398 17.1062C14.6424 16.196 13.8887 15.4386 12.98 15.4391C12.0667 15.4391 11.3223 16.1871 11.3223 17.1041C11.3223 18.0211 12.0661 18.7597 12.9878 18.7561Z' fill='%23C00146'/%3E%3Cpath d='M0.00104324 9.84835C0.152835 9.49156 0.423035 9.36846 0.806426 9.3742C1.87314 9.39037 2.9409 9.37732 4.00762 9.38254C4.13437 9.38306 4.18444 9.34603 4.21835 9.22345C4.56679 7.96686 5.69767 7.10671 7.00381 7.09784C8.29899 7.08897 9.45334 7.95226 9.80231 9.20362C9.84508 9.35646 9.9155 9.38306 10.0579 9.38254C13.1162 9.37837 16.1744 9.37941 19.2327 9.37993C19.3104 9.37993 19.3902 9.37576 19.4664 9.38828C19.7804 9.43835 20.0089 9.72681 19.9901 10.0419C19.9718 10.3496 19.723 10.6021 19.4111 10.6266C19.3401 10.6323 19.2682 10.6292 19.1962 10.6292C16.151 10.6292 13.1057 10.6308 10.06 10.6256C9.9035 10.6256 9.84143 10.6652 9.79761 10.8212C9.45282 12.0532 8.28908 12.9181 7.00485 12.9108C5.71227 12.9035 4.5621 12.0365 4.222 10.805C4.18444 10.6689 4.13124 10.6245 3.98779 10.6256C2.92734 10.6323 1.86636 10.6183 0.805905 10.635C0.421992 10.6407 0.152835 10.5155 0 10.1608V9.84835H0.00104324ZM7.01372 11.6615C7.93125 11.6615 8.67247 10.9182 8.67091 9.9991C8.66934 9.08939 7.93699 8.35495 7.02363 8.34764C6.10923 8.34034 5.35548 9.08574 5.3534 9.9991C5.35131 10.913 6.09932 11.6615 7.01372 11.6615Z' fill='%23C00146'/%3E%3C/svg%3E");
+  }
 }

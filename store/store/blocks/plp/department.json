@@ -12,10 +12,9 @@
     "title": "Search Result Layout Mobile Department",
     "children": [
       "custom-category-banners#custom",
-      "custom-category-list#default",
       "custom-search-carousel#default",
-      "custom-div#breadcrumb-search",
-      "custom-div#filter-mobilev2",
+      "custom-div#orderby-and-counting-products",
+      "filter-navigator.v3#custom",
       "search-content#default",
       "search-fetch-more",
       "custom-department-description#default"
@@ -34,7 +33,21 @@
     }
   },
 
-  "custom-category-list#default": {
+  "custom-div#orderby-and-counting-products": {
+    "title": "Custom Order By and Counting Products",
+    "props": {
+      "blockClass": ["orderby-and-counting-products", "container"],
+      "justifyContent": "space-between",
+      "alignItems": "center",
+      "flexDirectionMobile": "row",
+      "preserveMobileLayout": true,
+      "width": "100%",
+      "margin": "8px 0px"
+    },
+    "children": ["total-products.v2", "order-by.v2"]
+  },
+
+  "custom-search-carousel#default": {
     "title": "Custom Category List",
     "props": {
       "items": [
@@ -61,12 +74,12 @@
         {
           "__editorItemTitle": "Bodies",
           "link": "/category-link",
-          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/c39589a6-2d82-4fb4-a737-aa5a876196e6___14c2c65aad763e96419a30f22e54048c.svg"
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/4d74ac62-3c26-415b-b8ea-d9c4acf961c6___563ac65c4de39e5aec84841587db4905.svg"
         },
         {
           "__editorItemTitle": "Meias",
           "link": "/category-link",
-          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/4d74ac62-3c26-415b-b8ea-d9c4acf961c6___563ac65c4de39e5aec84841587db4905.svg"
+          "imageUrl": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/01b6073a-9ff9-4e87-9c29-9c0d73394edd___1e7353678bf6908489b8fc4dd21279e4.svg"
         }
       ]
     }
@@ -90,7 +103,6 @@
     "children": [
       "custom-div#breadcrumb-search",
       "custom-category-banners#custom",
-      "custom-category-list#default",
       "custom-search-carousel#default",
       "custom-div#filter-and-products",
       "custom-department-description#default"
@@ -143,14 +155,6 @@
     "props": {
       "blockClass": ["department-end-description"],
       "text": "## Feminina\n\n Duis non quam et nisi tincidunt fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper, mauris nec feugiat fermentum, purus lacus suscipit felis, et facilisis justo lacus id risus. Sed at risus vel nulla consequat fermentum. Donec et orci mauris. Nullam tempor velit id mi luctus, a scelerisque libero accumsan. In hac habitasse platea dictumst. Cras ac nunc nec massa tristique fringilla. \n\n Mauris vitae quam in justo dictum sodales. In eget tortor a nunc vehicula tempor. Nam ac tincidunt ipsum, eget accumsan nisi. Praesent porta, magna vitae dapibus pharetra, erat eros efficitur nunc, in mattis lectus libero a velit. Nulla facilisi. Curabitur tincidunt, felis a elementum tincidunt, ex felis fermentum dui, eget pulvinar arcu eros eu eros. Vestibulum sollicitudin pretium velit, eget volutpat justo fermentum sit amet. Pellentesque in nulla in nisi dictum interdum."
-    }
-  },
-
-  "custom-search-carousel#default": {
-    "title": "Search Carousel",
-    "props": {
-      "blockClass": ["search-carousel"],
-      "items": []
     }
   },
 
@@ -208,7 +212,7 @@
   "image#search-banner-department-mobile": {
     "props": {
       "blockClass": ["department-banner-image"],
-      "src": "https://pontodamoda.vtexassets.com/assets/vtex.file-manager-graphql/images/4f801db3-77e1-4413-a533-d2af24012fe5___235574e44d6fed3b9bc813d20eec2288.png",
+      "src": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/aabe1c1d-d114-4fd4-b48a-0fb80c072680___9fd3a6b5a5e14919a8ad6b9e5b78260e.png",
       "alt": "Banner Department",
       "width": "1440",
       "height": "300"
@@ -217,7 +221,7 @@
   "custom-category-banners#custom": {
     "props": {
       "image": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/cf020d39-c96c-4561-b488-31a519ea7cb2___c0af3cc517588d682b995cc25de18e88.png",
-      "mobileImage": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/cf020d39-c96c-4561-b488-31a519ea7cb2___c0af3cc517588d682b995cc25de18e88.png",
+      "mobileImage": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/aabe1c1d-d114-4fd4-b48a-0fb80c072680___9fd3a6b5a5e14919a8ad6b9e5b78260e.png",
       "blockClass": ["department-banner"],
       "showImageMobile": true,
       "showImageDesktop": true

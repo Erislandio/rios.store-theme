@@ -21,8 +21,8 @@
   },
   "search-result-layout.mobile#default": {
     "children": [
-      "custom-div#breadcrumb-search",
-      "custom-div#filter-mobilev2",
+      "custom-div#orderby-and-counting-products",
+      "filter-navigator.v3#custom",
       "search-content#default",
       "search-fetch-more"
     ],
