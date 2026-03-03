@@ -74,6 +74,7 @@ export default function CustomProductInfo() {
     },
     ssr: false,
     skip: !product?.productId,
+    fetchPolicy: 'network-only',
   })
 
   const rating = data?.averageRatingByProductId?.average ?? 0
