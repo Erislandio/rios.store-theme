@@ -23,7 +23,10 @@ const CSS_HANDLES = [
   'categoryListItemTitle',
 ] as const
 
-const CustomCategoryList: StoreFrontFC<Props> = ({ items = [] }) => {
+const CustomCategoryList: StoreFrontFC<Props> = ({
+  title = '',
+  items = [],
+}) => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const { pushToDataLayer } = useDatalayer()
 
@@ -42,8 +45,8 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [] }) => {
           }
         >
           <img
-            width={40}
-            height={40}
+            width={170}
+            height={220}
             loading="lazy"
             src={item.imageUrl}
             alt={item.__editorItemTitle}
@@ -58,6 +61,7 @@ const CustomCategoryList: StoreFrontFC<Props> = ({ items = [] }) => {
 
   return (
     <section className={handles.categoryListContainer}>
+      <h2 className={handles.categoryListTitle}>{title}</h2>
       <SliderLayout
         itemsPerPage={{ desktop: 7, tablet: 5, phone: 1 }}
         centerMode={{

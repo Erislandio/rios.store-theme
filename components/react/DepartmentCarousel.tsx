@@ -62,8 +62,8 @@ const DepartmentCarousel: StoreFrontFC<DepartmentCarouselProps> = ({
                 className={handles.departmentCarouselItemImage}
                 src={item.imageUrl}
                 alt={item.__editorItemTitle}
-                width={140}
-                height={isMobile ? 170 : 206}
+                width={40}
+                height={40}
                 loading="lazy"
               />
               <h4 className={handles.departmentCarouselItemTitle}>
