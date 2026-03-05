@@ -598,3 +598,22 @@
     padding: 0.5rem;
   }
 }
+
+.imageElement--not-found-image {
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+.searchBarContainer {
+  max-width: 619px;
+  margin: 0 auto;
+  padding: 0px 1rem;
+  margin-bottom: 40px;
+}
+
+.autoCompleteOuterContainer--not-found-search-bar {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  max-width: unset;
+}

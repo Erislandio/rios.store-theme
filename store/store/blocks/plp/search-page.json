@@ -34,5 +34,76 @@
       },
       "defaultGalleryLayout": "grid"
     }
+  },
+  "search-not-found-layout": {
+    "title": "Search Not Found Layout",
+    "props": {},
+    "children": ["custom-div#not-found"]
+  },
+  "custom-div#not-found": {
+    "props": {
+      "flexDirection": "column",
+      "width": "100%",
+      "height": "100%",
+      "blockClass": "not-found-container"
+    },
+    "children": [
+      "rich-text#not-found-title",
+      "image#not-found",
+      "rich-text#not-found-subtitle",
+      "search-bar#not-found",
+      "rich-text#shelf-title-not-found",
+      "list-context.product-list#prateleira-not-found"
+    ]
+  },
+
+  "list-context.product-list#prateleira-not-found": {
+    "title": "Prateleira 2",
+    "blocks": ["product-summary.shelf#default"],
+    "children": ["slider-layout#shelf-default"],
+    "props": {
+      "hideUnavailableItems": true,
+      "blockClass": "shelf",
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "rich-text#shelf-title-not-found": {
+    "title": "Titulo da prateleira",
+    "props": {
+      "textAlign": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": ["shelf-title", "brands"],
+      "text": "### As queridinhas mais vendidas"
+    }
+  },
+
+  "search-bar#not-found": {
+    "props": {
+      "placeholder": "Digite o que você procura...",
+      "blockClass": "not-found-search-bar"
+    }
+  },
+
+  "rich-text#not-found-subtitle": {
+    "props": {
+      "text": "Infelizmente sua busca não retornou nenhum resultado. Mas não se preocupe, você pode fazer uma nova busca abaixo e tentar novamente.",
+      "blockClass": "not-found-subtitle"
+    }
+  },
+
+  "image#not-found": {
+    "title": "Image Not Found",
+    "props": {
+      "src": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/52fbd9ad-61a3-424d-aeed-21871cc7c5c8___723ccb89a44d8865952e40f6d9c261d3.png",
+      "alt": "Not Found",
+      "blockClass": "not-found-image"
+    }
+  },
+
+  "rich-text#not-found-title": {
+    "props": {
+      "text": "Nenhum resultado encontrado :(",
+      "blockClass": "not-found-title"
+    }
   }
 }

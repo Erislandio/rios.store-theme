@@ -9,17 +9,13 @@
  */
 {
   "store.account": {
-    "blocks": [
-      "my-account"
-    ],
+    "blocks": ["my-account"],
     "parent": {
       "challenge": "challenge.profile"
     }
   },
   "store.login": {
-    "blocks": [
-      "login-content#default"
-    ]
+    "blocks": ["login-content#default"]
   },
   "login-content#default": {
     "props": {
@@ -29,26 +25,19 @@
     }
   },
   "store.product-review-form": {
-    "blocks": [
-      "product-review-form"
-    ]
+    "blocks": ["product-review-form"]
   },
   "store.not-found#product": {
-    "blocks": [
-      "rich-text#not-found"
-    ]
+    "blocks": ["rich-text#not-found"]
   },
   "store.not-found#search": {
     "blocks": [
-      "rich-text#not-found"
+      "rich-text#not-found-title",
+      "image#not-found",
+      "rich-text#not-found-subtitle",
+      "search-bar#not-found",
+      "rich-text#shelf-title-not-found",
+      "list-context.product-list#prateleira-not-found"
     ]
-  },
-  "rich-text#not-found": {
-    "props": {
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "text": "**PAGE NOT FOUND**",
-      "font": "t-heading-1"
-    }
   }
 }
