@@ -20,13 +20,12 @@
     }
   },
   "list-context.product-list#prateleira3": {
-    "title": "Prateleira 2",
+    "title": "Prateleira 3",
     "blocks": ["product-summary.shelf#default"],
     "children": ["slider-layout#shelf-default"],
     "props": {
-      "hideUnavailableItems": true,
-      "blockClass": "shelf",
-      "orderBy": "OrderByReleaseDateDESC"
+      "hideUnavailableItems": false,
+      "blockClass": "shelf"
     }
   },
   "rich-text#shelf-title": {

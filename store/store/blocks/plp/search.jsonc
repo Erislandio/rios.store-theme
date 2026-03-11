@@ -81,19 +81,21 @@
     "children": ["filter-navigator.v3", "search-content#default"]
   },
   "gallery-layout-switcher": {
-    "children": ["gallery-layout-option#grid", "gallery-layout-option#list"]
+    "children": ["gallery-layout-option#list", "gallery-layout-option#grid"]
   },
   "gallery-layout-option#grid": {
     "props": {
-      "name": "grid"
+      "name": "grid",
+      "blockClass": "grid"
     },
-    "children": ["custom-icons#grid-view"]
+    "children": ["custom-icons#list-view"]
   },
   "gallery-layout-option#list": {
     "props": {
-      "name": "list"
+      "name": "list",
+      "blockClass": "list"
     },
-    "children": ["custom-icons#list-view"]
+    "children": ["custom-icons#grid-view"]
   },
   "custom-icons#list-view": {
     "props": {

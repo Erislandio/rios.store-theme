@@ -3,13 +3,25 @@
     "title": "Card de produto",
     "children": [
       "custom-product-summary-badge",
-      "product-summary-image#custom",
+      "custom-div#summary-button-imagem",
       "product-summary-sku-selector#summary",
       "product-summary-name",
       "custom-div#summary-price-container",
       "custom-combo-price"
     ]
   },
+
+  "custom-div#summary-button-imagem": {
+    "props": {
+      "flexDirection": "column",
+      "alignItems": "center",
+      "justifyContent": "flex-start",
+      "width": "100%",
+      "blockClass": ["summary-image-button"]
+    },
+    "children": ["product-summary-image#custom", "add-to-cart-button#summary"]
+  },
+
   "product-summary.shelf#modal": {
     "title": "Card de produto",
     "children": [
@@ -69,7 +81,9 @@
     "props": {
       "customPixelEventName": "add-to-cart-button",
       "customPixelEventId": "add-to-cart-button",
-      "blockClass": "summary"
+      "blockClass": "summary",
+      "text": "conferir os detalhes",
+      "onClickBehavior": "go-to-product-page"
     }
   },
   "product-summary-image#custom": {

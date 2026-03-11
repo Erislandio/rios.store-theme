@@ -33,9 +33,7 @@
   }
 
   .galleryLayoutOptionButton--selected {
-    :global(.vtex-icon) {
-      fill: #000;
-    }
+    filter: brightness(0);
   }
 
   .totalProducts--layout {
@@ -114,7 +112,7 @@
     max-width: 1280px;
     padding: 0px 1rem;
     margin: 0 auto;
-    gap: 30px;
+    gap: 0.5rem;
   }
 
   .buttonShowMore {
@@ -273,24 +271,6 @@
     text-transform: uppercase;
   }
 
-  .accordionFilterItemIcon,
-  .filterIcon--custom-filter-navigator {
-    padding: 0px;
-    transform: none;
-    transition: all 0.3s ease-in-out;
-
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M18 15L12 9L6 15' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    width: 20px;
-    height: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    .caretIcon {
-      display: none;
-    }
-  }
-
   .filterAccordionItemBox {
     min-height: unset;
     border: none;
@@ -313,12 +293,6 @@
     text-underline-offset: auto;
     padding: 0px !important;
     text-underline-position: from-font;
-  }
-
-  .filterIsOpen--custom-filter-navigator {
-    .filterIcon--custom-filter-navigator {
-      transform: rotate(180deg);
-    }
   }
 
   :global(.vtex-slider__selector) {
@@ -459,14 +433,19 @@
 
 .gallery--custom-gallery--list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
 }
 
 .gallery--custom-gallery--grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100%;
+  gap: 0.5rem;
+
+  :global(.vtex-product-summary-2-x-imageNormal) {
+    scale: 2 !important;
+  }
 }
 
 .galleryItem {
@@ -1036,6 +1015,16 @@
     border: 1px solid var(--Primria-03, #d7cfc5);
     background: var(--Neutras-05, #fff);
 
+    &:hover {
+      background-color: #c00146;
+      border-color: #c00146;
+      color: #fff;
+
+      :global(.vtex-checkbox__label) {
+        color: #fff !important;
+      }
+    }
+
     :global(.vtex-checkbox__container) {
       display: none !important;
     }
@@ -1106,5 +1095,62 @@
         }
       }
     }
+  }
+}
+
+.selectedFilterItem {
+  :global(.vtex-checkbox__container) {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='22' height='22' rx='11' fill='%23E1A49E'/%3E%3Cg clip-path='url(%23clip0_6_5999)'%3E%3Cpath d='M14.675 7C14.7686 7.03357 14.8574 7.07269 14.9204 7.1562C15.028 7.29936 15.0266 7.49468 14.9123 7.63284C14.8857 7.66475 14.8565 7.69471 14.8271 7.72412C13.7612 8.79032 12.6949 9.85653 11.6282 10.9219C11.6046 10.9452 11.5729 10.9605 11.5452 10.9796C11.5452 10.9921 11.5446 11.0049 11.5444 11.0173C11.5707 11.0343 11.601 11.0473 11.6226 11.0689C12.698 12.1443 13.772 13.2211 14.8476 14.2961C14.9667 14.4152 15.0322 14.5469 14.9842 14.717C14.9098 14.9809 14.5909 15.0855 14.3742 14.917C14.3434 14.8932 14.3156 14.8654 14.2879 14.838C13.2158 13.7665 12.1441 12.695 11.0728 11.623C11.0509 11.6011 11.0357 11.5731 11.0173 11.5478C11.0046 11.5445 10.9918 11.5411 10.979 11.5378C10.9616 11.5667 10.9488 11.6005 10.9258 11.6235C9.85177 12.7003 8.77722 13.7762 7.7024 14.8521C7.54144 15.013 7.34912 15.043 7.179 14.9373C7.07882 14.8752 7.03691 14.7761 7 14.6723V14.5472C7.03302 14.4213 7.11628 14.3308 7.20564 14.2412C8.26493 13.1828 9.32282 12.1227 10.381 11.0631C10.4021 11.0418 10.4223 11.0198 10.4507 10.9899C10.4198 10.9638 10.3943 10.9449 10.3721 10.923C9.31672 9.86874 8.26187 8.81335 7.20536 7.75935C7.11572 7.66974 7.03302 7.57902 7 7.45306V7.32793C7.04662 7.15592 7.15485 7.0455 7.3283 7H7.45346C7.58168 7.03413 7.67409 7.11902 7.76539 7.21058C8.81885 8.26707 9.87369 9.32218 10.9272 10.3789C10.9502 10.402 10.9605 10.4378 10.9765 10.4675C10.9899 10.4616 11.0029 10.4558 11.0162 10.45C11.0373 10.4236 11.0559 10.3948 11.0798 10.3709C12.1346 9.3158 13.19 8.26125 14.244 7.20531C14.3334 7.11569 14.4242 7.03302 14.5501 7H14.6753H14.675Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_6_5999'%3E%3Crect width='8' height='8' fill='white' transform='translate(7 7)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  :global(.vtex-checkbox__box-wrapper),
+  :global(.vtex-checkbox__inner-container) {
+    display: none;
+  }
+}
+
+.filter__container
+  .filter--custom-filter-navigator
+  .filterItem--custom-filter-navigator--selected {
+  display: none;
+}
+
+.caretIcon {
+  display: none !important;
+}
+
+.filterIcon {
+  cursor: pointer;
+  &::before {
+    content: '+';
+    color: var(--Neutras-01, #1b1b1b);
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 110% */
+  }
+}
+
+.filterIsOpen .filterIcon {
+  &::before {
+    content: '-';
+  }
+}
+
+.filterTemplateOverflow {
+  .filterItem--custom-filter-navigator--selected {
+    display: none;
+  }
+}
+
+.filter__container--selectedFilters {
+  .filterItem--custom-filter-navigator--selected {
+    display: flex !important;
   }
 }

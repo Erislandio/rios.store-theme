@@ -2,60 +2,30 @@ import React from 'react'
 
 const GridIcon = () => (
   <svg
-    className="vtex-icon"
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
+    width="14"
     height="16"
-    viewBox="0 0 16 16"
+    viewBox="0 0 14 16"
     fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <rect className="vtex-icon" width="7" height="7" rx="1" fill="black" />
-    <rect
-      className="vtex-icon"
-      x="9"
-      width="7"
-      height="7"
-      rx="1"
-      fill="black"
-    />
-    <rect
-      className="vtex-icon"
-      y="9"
-      width="7"
-      height="7"
-      rx="1"
-      fill="black"
-    />
-    <rect
-      className="vtex-icon"
-      x="9"
-      y="9"
-      width="7"
-      height="7"
-      rx="1"
-      fill="black"
-    />
+    <rect width="4" height="16" rx="1" fill="#ddd" />
+    <rect x="5" width="4" height="16" rx="1" fill="#ddd" />
+    <rect x="10" width="4" height="16" rx="1" fill="#ddd" />
   </svg>
 )
 
 const ListIcon = () => (
   <svg
-    className="vtex-icon"
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
+    width="15"
     height="16"
-    viewBox="0 0 16 16"
+    viewBox="0 0 15 16"
     fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <rect className="vtex-icon" width="7" height="16" rx="1" fill="#D4D4D8" />
-    <rect
-      className="vtex-icon"
-      x="9"
-      width="7"
-      height="16"
-      rx="1"
-      fill="#D4D4D8"
-    />
+    <rect width="3" height="16" rx="1" fill="#ddd" />
+    <rect x="4" width="3" height="16" rx="1" fill="#ddd" />
+    <rect x="8" width="3" height="16" rx="1" fill="#ddd" />
+    <rect x="12" width="3" height="16" rx="1" fill="#ddd" />
   </svg>
 )
 

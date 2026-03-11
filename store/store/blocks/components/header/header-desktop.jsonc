@@ -5,8 +5,17 @@
       "custom-top-bar#default",
       "sticky-layout#desktop",
       "custom-exit-intent-modal#default",
-      "custom-newsletter-modal#default"
+      "custom-newsletter-modal#default",
+      "custom-whatsapp-button"
     ]
+  },
+
+  "custom-whatsapp-button": {
+    "props": {
+      "icon": "https://gruporios.vtexassets.com/assets/vtex.file-manager-graphql/images/9634308f-2c57-41e3-89db-255bf13511cd___96a97ae53476aa5b0a717b56e65efba2.png",
+      "number": "+5511999999999",
+      "active": true
+    }
   },
 
   "custom-newsletter-modal#default": {

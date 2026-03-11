@@ -23,6 +23,10 @@
   }
 }
 
+.SKUSelectorContainer {
+  position: relative;
+  left: 1px;
+}
 .SKUSelectorContainer .skuSelectorItem--selected::before {
   display: none !important;
 }
@@ -72,6 +76,7 @@
 }
 .SKUSelectorContainer :global(.vtex-store-components-3-x-skuSelectorSubcontainer--cor) .skuSelectorItem--selected {
   opacity: 1;
+  outline: 1px solid #c00146;
 }
 
 .skuSelectorItem--animalprint {
@@ -314,4 +319,20 @@
 
 .hoverImage {
   z-index: 99 !important;
+}
+
+.container {
+  position: relative;
+}
+.container :global(.vtex-button) {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.container:hover :global(.vtex-button) {
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
 }

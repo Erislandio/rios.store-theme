@@ -3,7 +3,7 @@
     "props": {
       "blockClass": ["header-mobile"]
     },
-    "children": ["custom-div#top-bar-mobile"]
+    "children": ["custom-div#top-bar-mobile", "custom-whatsapp-button"]
   },
   "custom-div#top-bar-mobile": {
     "props": {

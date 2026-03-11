@@ -160,5 +160,9 @@
   },
   "custom-department-description": {
     "component": "CustomDepartmentdescription"
+  },
+  "custom-whatsapp-button": {
+    "component": "WhatsappButton",
+    "composition": "children"
   }
 }

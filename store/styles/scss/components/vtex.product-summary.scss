@@ -23,6 +23,8 @@
 }
 
 .SKUSelectorContainer {
+  position: relative;
+  left: 1px;
   .skuSelectorItem--selected::before {
     display: none !important;
   }
@@ -84,6 +86,7 @@
 
     .skuSelectorItem--selected {
       opacity: 1;
+      outline: 1px solid #c00146;
     }
   }
 }
@@ -278,4 +281,24 @@
 
 .hoverImage {
   z-index: 99 !important;
+}
+
+.container {
+  position: relative;
+
+  :global(.vtex-button) {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    :global(.vtex-button) {
+      visibility: visible;
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }

@@ -390,24 +390,10 @@
 
         height: 215px;
         opacity: 0;
-        visibility: hidden;
         background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 93.15%);
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         transition: opacity 0.3s ease, visibility 0.3s ease;
         z-index: 1;
-      }
-
-      &:hover {
-        &::before {
-          opacity: 0.4;
-          visibility: visible;
-        }
-
-        .middleBannersItemContent {
-          opacity: 1;
-          visibility: visible;
-          transform: translate(-50%, 0);
-        }
       }
     }
 
@@ -432,16 +418,11 @@
       z-index: 9;
       position: absolute;
       left: 50%;
-      top: 83%;
+      top: 75%;
       transform: translate(-50%, 20px);
       text-align: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 
       @media screen and (max-width: 1024px) {
-        opacity: 1 !important;
-        visibility: visible !important;
         transform: translate(-50%, -50%) !important;
       }
     }
@@ -3061,6 +3042,16 @@
     margin: 0 auto;
   }
 
+  .departmentCarouselItem {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+      filter: brightness(0);
+    }
+  }
+
   .departmentCarouselItemTitle {
     margin-bottom: 0px;
     margin-top: 8px;
@@ -3090,4 +3081,12 @@
 .divContainer--orderby-and-counting-products {
   margin: 8px 0px;
   padding: 1rem !important;
+}
+
+.whatsapContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 9999;
 }
