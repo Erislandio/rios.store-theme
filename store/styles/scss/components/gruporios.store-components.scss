@@ -3090,3 +3090,11 @@
   cursor: pointer;
   z-index: 9999;
 }
+
+.divContainer--search-content-desktop-col {
+  margin-bottom: 40px;
+}
+
+.divContainer--product-main-images
+  :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+}

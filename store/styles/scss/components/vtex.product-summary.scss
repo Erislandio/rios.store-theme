@@ -287,18 +287,39 @@
   position: relative;
 
   :global(.vtex-button) {
-    visibility: hidden;
     position: absolute;
-    bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s ease-in-out;
+    bottom: 35%;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+    height: fit-content;
+    z-index: 9999;
+    border-radius: 0px;
+    border: none;
+
+    text-transform: none;
+    background: var(--Neutras-01, #1b1b1b);
+    color: var(--Neutras-05, #fff);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    width: fit-content;
+    margin: 0 auto;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &:hover {
     :global(.vtex-button) {
-      visibility: visible;
-      transition: all 0.3s ease-in-out;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
     }
   }
 }

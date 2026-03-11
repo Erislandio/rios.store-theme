@@ -89,6 +89,7 @@
       "blockClass": ["product-main-images"]
     },
     "children": [
+      "add-to-list-btn#images",
       "responsive-layout.desktop#product-images",
       "responsive-layout.tablet#product-images",
       "responsive-layout.phone#product-images"
@@ -372,6 +373,11 @@
       "showValueForVariation": "all",
       "variationsSpacing": 3,
       "showValueNameForImageVariation": true
+    }
+  },
+  "add-to-list-btn#images": {
+    "props": {
+      "blockClass": ["images"]
     }
   }
 }

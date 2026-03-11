@@ -82,7 +82,7 @@
       "customPixelEventName": "add-to-cart-button",
       "customPixelEventId": "add-to-cart-button",
       "blockClass": "summary",
-      "text": "conferir os detalhes",
+      "text": "confira os detalhes",
       "onClickBehavior": "go-to-product-page"
     }
   },
