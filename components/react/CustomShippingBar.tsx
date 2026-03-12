@@ -32,9 +32,11 @@ const CustomShippingBar: StoreFrontFC<{
 
   if (!threshold || threshold <= 0) return null
 
-  const currencySymbol = orderForm.storePreferencesData?.currencySymbol ?? '$'
-
-  const formatPrice = (value: number) => `${currencySymbol}${value.toFixed(2)}`
+  const formatPrice = (value: number) =>
+    value.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })
 
   const remaining = Math.max(threshold - total, 0)
   const percentage = Math.min(

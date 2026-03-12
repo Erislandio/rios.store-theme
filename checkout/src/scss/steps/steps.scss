@@ -137,6 +137,7 @@
       input[type='text'],
       input[type='email'] {
         border-color: #d6d6d6;
+        border-radius: 0;
         box-shadow: none !important;
         min-height: 35px;
         padding: 0 1rem;
@@ -147,6 +148,7 @@
 
   .radio input[type='radio'],
   .checkbox input[type='checkbox'] {
+    border-radius: 0;
     height: 15px;
     position: relative;
     top: -3px;
