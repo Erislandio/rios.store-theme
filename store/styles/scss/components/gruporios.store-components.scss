@@ -1767,6 +1767,7 @@
 }
 
 .divContainer--product-main {
+  position: relative;
   margin-top: 20px;
   padding-bottom: 20px;
 
@@ -3093,8 +3094,4 @@
 
 .divContainer--search-content-desktop-col {
   margin-bottom: 40px;
-}
-
-.divContainer--product-main-images
-  :global(.vtex-wish-list-1-x-wishlistIconContainer) {
 }

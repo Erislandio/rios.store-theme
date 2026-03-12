@@ -310,6 +310,10 @@
     margin: 0 auto;
     white-space: nowrap;
 
+    @media screen and (max-width: 1024px) {
+      display: none !important;
+    }
+
     &:hover {
       opacity: 1;
     }

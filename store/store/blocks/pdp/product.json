@@ -209,11 +209,18 @@
       "custom-product-summary-badge-pdp",
       "vtex.store-components:product-name",
       "custom-product-info",
+      "add-to-list-btn#mobile",
       "custom-combo-price-pdp",
       "product-grid#default",
       "custom-share-button",
       "custom-product-description"
     ]
+  },
+
+  "add-to-list-btn#mobile": {
+    "props": {
+      "blockClass": ["mobile"]
+    }
   },
 
   "product-grid#default": {
@@ -259,6 +266,7 @@
     "children": [
       "vtex.store-components:product-name",
       "custom-product-info",
+      "add-to-list-btn#mobile",
       "custom-div#prices",
       "sku-selector#custom",
       "modal-trigger#medidas",

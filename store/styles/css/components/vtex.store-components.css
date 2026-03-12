@@ -3,7 +3,7 @@
 }
 
 .searchBarContainer {
-  padding: 0px;
+  padding: 0px !important;
 }
 .searchBarContainer :global(.vtex-input) {
   background: #8c8c8c;
@@ -68,10 +68,11 @@
 
 .productImagesContainer--list {
   display: grid;
-  position: sticky;
-  top: 100px;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+.productImagesContainer--list .productImage {
+  cursor: pointer;
 }
 
 .quantitySelectorContainer {
@@ -402,7 +403,7 @@
 :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button) :global(.vtex-wish-list-1-x-outline) {
   background-image: none;
   white-space: nowrap;
-  background: transparent !important;
+  background: transparent;
 }
 :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button) :global(.vtex-wish-list-1-x-outline)::before {
   content: "Adicionar a lista de desejos";
@@ -417,7 +418,7 @@
 :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button) :global(.vtex-wish-list-1-x-fill) {
   background-image: none;
   white-space: nowrap;
-  background: transparent !important;
+  background: transparent;
 }
 :global(.vtex-wish-list-1-x-wishlistIconContainer) :global(.vtex-button) :global(.vtex-wish-list-1-x-fill)::before {
   content: "Remover da lista de desejos";
@@ -538,4 +539,28 @@
   display: flex;
   width: 100%;
   max-width: unset;
+}
+
+.resultsList {
+  max-width: 300px;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  left: 32px;
+  height: 400px;
+  overflow-y: scroll;
+}
+@media (min-width: 1024px) {
+  .resultsList {
+    height: 100vh;
+  }
+}
+.resultsList .resultsItemName,
+.resultsList .resultsItem {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
 }

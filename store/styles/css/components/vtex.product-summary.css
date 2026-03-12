@@ -347,6 +347,11 @@
   margin: 0 auto;
   white-space: nowrap;
 }
+@media screen and (max-width: 1024px) {
+  .container :global(.vtex-button) {
+    display: none !important;
+  }
+}
 .container :global(.vtex-button):hover {
   opacity: 1;
 }

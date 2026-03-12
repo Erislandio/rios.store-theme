@@ -1574,6 +1574,7 @@
 }
 
 .divContainer--product-main {
+  position: relative;
   margin-top: 20px;
   padding-bottom: 20px;
 }

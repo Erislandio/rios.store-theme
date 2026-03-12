@@ -104,8 +104,7 @@
     "title": "Search Bar",
     "props": {
       "placeholder": "Busque aqui"
-    },
-    "blocks": ["autocomplete-result-list.v2#custom"]
+    }
   },
   "custom-login-button#default": {
     "title": "Login",

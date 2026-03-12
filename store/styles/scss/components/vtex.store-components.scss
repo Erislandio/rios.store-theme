@@ -3,7 +3,7 @@
 }
 
 .searchBarContainer {
-  padding: 0px;
+  padding: 0px !important;
 
   :global(.vtex-input) {
     background: #8c8c8c;
@@ -77,10 +77,12 @@
 
 .productImagesContainer--list {
   display: grid;
-  position: sticky;
-  top: 100px;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+
+  .productImage {
+    cursor: pointer;
+  }
 }
 
 .quantitySelectorContainer {
@@ -454,7 +456,7 @@
     :global(.vtex-wish-list-1-x-outline) {
       background-image: none;
       white-space: nowrap;
-      background: transparent !important;
+      background: transparent;
 
       &::before {
         content: 'Adicionar a lista de desejos';
@@ -471,7 +473,7 @@
     :global(.vtex-wish-list-1-x-fill) {
       background-image: none;
       white-space: nowrap;
-      background: transparent !important;
+      background: transparent;
 
       &::before {
         content: 'Remover da lista de desejos';
@@ -615,4 +617,28 @@
   display: flex;
   width: 100%;
   max-width: unset;
+}
+
+.resultsList {
+  max-width: 300px;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  left: 32px;
+  height: 400px;
+  overflow-y: scroll;
+
+  @media (min-width: 1024px) {
+    height: 100vh;
+  }
+
+  .resultsItemName,
+  .resultsItem {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+  }
 }
