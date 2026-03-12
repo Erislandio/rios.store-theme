@@ -3095,3 +3095,314 @@
 .divContainer--search-content-desktop-col {
   margin-bottom: 40px;
 }
+
+.productKit {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #d8dbd6;
+
+  .productKitItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d8dbd6;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .productKitSizeSelectorTitle {
+      color: var(--Neutras-00, #000);
+      font-family: Poppins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .productKitSizeSelectorOptions {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 14px;
+    }
+
+    .productKitSizeOption {
+      border-radius: 1px;
+      border: 1px solid var(--Primria-03, #d7cfc5);
+      background: var(--Neutras-05, #fff);
+      cursor: pointer;
+      min-width: 26px;
+      min-height: 26px;
+
+      color: var(--Neutras-01, #1b1b1b);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px; /* 157.143% */
+
+      &:hover {
+        border: 1px solid var(--Primria-03, #d7cfc5);
+        background: var(--Primria-03, #d7cfc5);
+      }
+
+      &--unavailable {
+        opacity: 0.8;
+        color: rgba(215, 207, 197, 0.4);
+        cursor: not-allowed;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M19.1876 0C19.4214 0.0839258 19.6434 0.181724 19.8009 0.390498C20.0701 0.748396 20.0666 1.23669 19.7808 1.5821C19.7142 1.66187 19.6413 1.73678 19.5678 1.8103C16.9029 4.47581 14.2373 7.14132 11.5704 9.80475C11.5114 9.86301 11.4323 9.90116 11.363 9.94902C11.363 9.98023 11.3616 10.0121 11.3609 10.0433C11.4268 10.0857 11.5024 10.1183 11.5565 10.1724C14.245 12.8608 16.93 15.5526 19.6191 18.2403C19.9167 18.5379 20.0805 18.8673 19.9605 19.2925C19.7745 19.9521 18.9773 20.2136 18.4355 19.7926C18.3585 19.733 18.2891 19.6636 18.2197 19.5949C15.5396 16.9162 12.8602 14.2376 10.1821 11.5575C10.1273 11.5027 10.0892 11.4326 10.0434 11.3695C10.0114 11.3612 9.97953 11.3529 9.94762 11.3445C9.90391 11.4167 9.872 11.5013 9.81441 11.5589C7.12943 14.2507 4.44306 16.9405 1.75599 19.6303C1.35359 20.0326 0.872793 20.1075 0.447497 19.8432C0.197038 19.6879 0.0922746 19.4403 0 19.1809V18.868C0.0825615 18.5531 0.2907 18.327 0.514101 18.103C3.16231 15.4569 5.80706 12.8067 8.45249 10.1578C8.50522 10.1044 8.55587 10.0496 8.62663 9.97468C8.54962 9.90948 8.4858 9.86232 8.43029 9.80752C5.79179 7.17184 3.15468 4.53338 0.513408 1.89839C0.289312 1.67435 0.0825615 1.44755 0 1.13265V0.819837C0.116557 0.389804 0.387137 0.113751 0.820758 0H1.13366C1.45419 0.085313 1.68523 0.297555 1.91348 0.526443C4.54713 3.16768 7.18424 5.80544 9.81788 8.44737C9.87546 8.50494 9.90113 8.59442 9.94137 8.66863C9.97468 8.65407 10.0073 8.6395 10.0406 8.62493C10.0933 8.55904 10.1398 8.48691 10.1995 8.42726C12.8366 5.78949 15.4751 3.15311 18.1101 0.513265C18.3335 0.289232 18.5604 0.0825386 18.8754 0H19.1883H19.1876Z' fill='%23D7CFC5' fill-opacity='0.4'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      &--selected {
+        border: 1px solid var(--Primria-03, #d7cfc5);
+        background: var(--Primria-03, #d7cfc5);
+      }
+    }
+  }
+
+  .productKitItemQuantity {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: var(--Neutras-00, #000);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+  }
+
+  .productKitItemName {
+    margin: 0px;
+    margin-bottom: 20px;
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+
+  .productKitColorSelector {
+    margin-top: 20px;
+
+    .productKitColorSelectorTitle {
+      color: var(--Neutras-00, #000);
+      font-family: Poppins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .productKitColorSelectorOptions {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 14px;
+    }
+
+    .productKitColorOption {
+      min-width: 22px;
+      min-height: 22px;
+      border-radius: 50%;
+      border: none;
+      padding: 0px;
+      margin: 0px;
+      cursor: pointer;
+      color: transparent;
+      font-size: 0px;
+      display: block;
+
+      &--selected {
+        outline: 1px solid var(--Primria-03, #800232);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+          content: '';
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M4.71119 6.14936C5.01267 5.55954 5.372 5.02849 5.77599 4.52413C6.63005 3.45833 7.64877 2.55028 8.77073 1.7429C9.64764 1.11186 10.576 0.555482 11.5483 0.064637C11.6194 0.0288286 11.689 -0.0117092 11.774 0.0031547C11.878 0.0210589 11.9569 0.0740959 11.9873 0.1724C12.0234 0.290297 11.9808 0.384548 11.8808 0.462583C11.4258 0.816275 10.9996 1.1997 10.5953 1.6044C8.27065 3.93093 6.60755 6.61082 5.75492 9.72243C5.75063 9.73865 5.74277 9.75419 5.73956 9.77074C5.7167 9.88391 5.6549 9.96431 5.53203 9.99302C5.41308 10.0207 5.32628 9.96836 5.24949 9.88999C4.78085 9.40995 4.31185 8.93059 3.84321 8.4509C2.60909 7.18781 1.37498 5.92505 0.141227 4.6623C0.129082 4.6498 0.117652 4.63696 0.104793 4.62514C0.00870688 4.53832 -0.0298703 4.43529 0.0254951 4.31671C0.0790745 4.20186 0.185162 4.16808 0.310895 4.16875C0.578077 4.17044 0.845617 4.16909 1.11316 4.16909C1.63002 4.16909 2.14688 4.17281 2.66374 4.16672C2.81913 4.16504 2.93236 4.21064 3.03451 4.32381C3.55066 4.89336 4.07324 5.45752 4.59367 6.02336C4.62868 6.06119 4.66404 6.09903 4.71119 6.14936Z' fill='white'/%3E%3C/svg%3E");
+          width: 100%;
+          background-position: center;
+          background-position: center center;
+          display: block;
+          width: 15px;
+          height: 15px;
+          background-repeat: no-repeat;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      &--PRETO {
+        background-color: #000;
+      }
+
+      &--animalprint {
+        background-color: #8b5a2b;
+      }
+      &--vermelho {
+        background-color: #c62828;
+      }
+      &--nude {
+        background-color: #e3c1a0;
+      }
+      &--fantastico {
+        background-color: #7b1fa2;
+      }
+      &--goiaba {
+        background-color: #d8435e;
+      }
+      &--sandia {
+        background-color: #e53935;
+      }
+      &--marrom {
+        background-color: #5d4037;
+      }
+      &--preto {
+        background-color: #000000;
+      }
+      &--chumbo {
+        background-color: #424242;
+      }
+      &--mescla {
+        background-color: #bdbdbd;
+      }
+      &--azul {
+        background-color: #1e88e5;
+      }
+      &--marinho {
+        background-color: #0d1b2a;
+      }
+      &--azul-marinho {
+        background-color: #0f1845;
+      }
+      &--royal {
+        background-color: #4169e1;
+      }
+      &--azul-royal {
+        background-color: #4169e1;
+      }
+      &--azul-claro {
+        background-color: #90caf9;
+      }
+      &--rubi {
+        background-color: #b20932;
+      }
+      &--pink {
+        background-color: #e91e63;
+      }
+      &--rosa {
+        background-color: #f48fb1;
+      }
+      &--romance {
+        background-color: #f8bbd0;
+      }
+      &--amarelo {
+        background-color: #fdd835;
+      }
+      &--branco {
+        background-color: #ffffff;
+      }
+      &--pavao {
+        background-color: #006d5b;
+      }
+      &--bege {
+        background-color: #f5f5dc;
+      }
+      &--chocolate {
+        background-color: #4e342e;
+      }
+      &--coral {
+        background-color: #ff7043;
+      }
+      &--satin {
+        background-color: #b099ac;
+      }
+      &--rubro {
+        background-color: #b71c1c;
+      }
+      &--florence {
+        background-color: #8e24aa;
+      }
+      &--jaipur {
+        background-color: #f57c00;
+      }
+      &--chiclete {
+        background-color: #ff4081;
+      }
+      &--tame {
+        background-color: #c5a880;
+      }
+      &--frutilly {
+        background-color: #ff5252;
+      }
+      &--frutily {
+        background-color: #ff5252;
+      }
+      &--fluor {
+        background-color: #76ff03;
+      }
+      &--roxo {
+        background-color: #6a1b9a;
+      }
+      &--tamy {
+        background-color: #d7b899;
+      }
+      &--castanho {
+        background-color: #6d4c41;
+      }
+      &--cinza {
+        background-color: #9e9e9e;
+      }
+      &--verde {
+        background-color: #43a047;
+      }
+      &--neon {
+        background-color: #39ff14;
+      }
+      &--laranja {
+        background-color: #fb8c00;
+      }
+      &--colorido {
+        background-color: #ff00ff;
+      }
+      &--sortido {
+        background-color: #00bcd4;
+      }
+      &--marfim {
+        background-color: #fffff0;
+      }
+      &--ferrugem {
+        background-color: #b7410e;
+      }
+      &--prata {
+        background-color: #c0c0c0;
+      }
+      &--lilas {
+        background-color: #ce93d8;
+      }
+      &--ovelha {
+        background-color: #f0ede5;
+      }
+      &--verdeteos {
+        background-color: #b6d2dd;
+      }
+
+      &--azulclaro {
+        background-color: #90caf9;
+      }
+    }
+  }
+}

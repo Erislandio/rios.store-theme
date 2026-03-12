@@ -1,7 +1,6 @@
 type Query {
   getShippingBar: Float @auth(scope: PUBLIC)
   getBuyTogether(productId: String!): [ProductsByIdentifier] @auth(scope: PUBLIC)
-
 }
 
 type Mutation {

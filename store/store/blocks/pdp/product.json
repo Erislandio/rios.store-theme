@@ -211,10 +211,15 @@
       "custom-product-info",
       "add-to-list-btn#mobile",
       "custom-combo-price-pdp",
-      "product-grid#default",
+      "custom-product-kit#default",
       "custom-share-button",
       "custom-product-description"
     ]
+  },
+
+  "custom-product-kit#default": {
+    "blocks": ["custom-div#prices", "modal-trigger#medidas"],
+    "children": ["product-grid#default"]
   },
 
   "add-to-list-btn#mobile": {

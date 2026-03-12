@@ -76,6 +76,9 @@
   },
   "quantity-selector#custom": {
     "props": {
+      "showLabel": false,
+      "showUnit": false,
+      "showQuantity": true,
       "mode": "stepper"
     }
   }

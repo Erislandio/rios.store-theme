@@ -164,5 +164,11 @@
   "custom-whatsapp-button": {
     "component": "WhatsappButton",
     "composition": "children"
+  },
+  "custom-product-kit": {
+    "component": "ProductKit",
+    "render": "client",
+    "composition": "children",
+    "allowed": ["custom-div", "modal-trigger"]
   }
 }

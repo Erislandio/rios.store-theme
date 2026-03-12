@@ -444,7 +444,7 @@
   gap: 0.5rem;
 
   :global(.vtex-product-summary-2-x-imageNormal) {
-    scale: 2 !important;
+    min-height: 300px !important;
   }
 }
 
