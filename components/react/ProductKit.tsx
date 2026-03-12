@@ -214,7 +214,7 @@ function ProductKit({
     )
   }
 
-  if (!data?.productRecommendations?.length || true === true) {
+  if (!data?.productRecommendations?.length) {
     return <>{children}</>
   }
 
