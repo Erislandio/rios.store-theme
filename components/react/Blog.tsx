@@ -104,29 +104,29 @@ Blog.defaultProps = {
 
 Blog.schema = {
   title: 'Blog',
+  type: 'object',
   properties: {
     title: {
       type: 'string',
       title: 'Título',
       description: 'Título',
-      required: true,
     },
     items: {
+      title: 'Itens',
       type: 'array',
       items: {
+        title: 'Item',
         type: 'object',
         properties: {
           __editorItemTitle: {
             type: 'string',
             title: 'Title',
             description: 'Title',
-            required: true,
           },
           image: {
             type: 'string',
             title: 'Image',
             description: 'Image',
-            required: true,
             widget: {
               'ui:widget': 'image-uploader',
             },
@@ -135,13 +135,11 @@ Blog.schema = {
             type: 'string',
             title: 'Título',
             description: 'Título',
-            required: true,
           },
           description: {
             type: 'string',
             title: 'Descrição',
             description: 'Descrição',
-            required: true,
           },
           actionLabel: {
             type: 'string',

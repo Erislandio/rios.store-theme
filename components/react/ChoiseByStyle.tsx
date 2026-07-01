@@ -66,23 +66,24 @@ ChoiseByStyle.defaultProps = {
 
 ChoiseByStyle.schema = {
   title: 'Escolha por Estilo',
+  type: 'object',
   properties: {
     items: {
+      title: 'Itens',
       type: 'array',
       items: {
+        title: 'Item',
         type: 'object',
         properties: {
           __editorItemTitle: {
             type: 'string',
             title: 'Title',
             description: 'Title',
-            required: true,
           },
           image: {
             type: 'string',
             title: 'Image',
             description: 'Image',
-            required: true,
             widget: {
               'ui:widget': 'image-uploader',
             },
@@ -91,7 +92,6 @@ ChoiseByStyle.schema = {
             type: 'string',
             title: 'Título',
             description: 'Título',
-            required: true,
           },
           actionLabel: {
             type: 'string',
